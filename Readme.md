@@ -32,7 +32,9 @@ You will want to `yarn` the development dependencies such as webpack first.
 Afterwards there is two important commands to run
 
   * `yarn watch` - This will run the webpack bundler in watch mode, updating bundles as you change the source.
-  * `yarn webext` - This will run the webextension in a development profile using the `web-ext` tool from mozilla (which you need to install separately).
+  * `yarn webext` - This will run the webextension in a development profile using the [`web-ext` tool from mozilla](https://www.npmjs.com/package/web-ext) (which you need to install separately).
+  
+Alternative, you can also `yarn build`, which then builds an *unsigned* zip that you can then install permanently in a browser that does not enforce signing (i.e. Nightly or the Unbranded Firefox).
 
 Before submitting patches, please make sure you run eslint, if this isn't done automatically, and eslint does not report any open issues. Code contributions should favor typescript code over javascript code. External dependencies that would ship with the final product (including all npm/yarn packages) should be kept to a bare minimum.
 
