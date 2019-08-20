@@ -179,7 +179,7 @@ export class Tooltip {
     this.name.textContent = item.destFull;
     this.from.textContent = item.usable;
     this.size.textContent = item.fmtSize;
-    this.date.textContent = new Date(item.date).toLocaleString();
+    this.date.textContent = new Date(item.startDate).toLocaleString();
 
     const running = item.state === DownloadState.RUNNING;
     const hidden = this.eta.classList.contains("hidden");

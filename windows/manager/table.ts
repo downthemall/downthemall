@@ -114,7 +114,7 @@ export class DownloadItem extends EventEmitter {
 
   public destFull: string;
 
-  public date: number;
+  public startDate: number;
 
   public sessionId: number;
 
