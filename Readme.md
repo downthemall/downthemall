@@ -31,9 +31,9 @@ You will want to `yarn` the development dependencies such as webpack first.
 
 Afterwards there is two important commands to run
 
-  * `yarn watch` - This will run the webpack bundler in watch mode, updating bundles as you run them.
-  * `yarn webext` - This will run the webextension in a development profile using the `web-ext` tool from mozilla.
+  * `yarn watch` - This will run the webpack bundler in watch mode, updating bundles as you change the source.
+  * `yarn webext` - This will run the webextension in a development profile using the `web-ext` tool from mozilla (which you need to install separately).
 
-Before submitting patches, please make sure you run eslint, if this isn't done automatically, and eslint does not report any open issues. Code contributions should favor typecript code over javascript code. External dependencies that would ship with the final product (including all npm/yarn packages) should be kept to a bare minimum.
+Before submitting patches, please make sure you run eslint, if this isn't done automatically, and eslint does not report any open issues. Code contributions should favor typescript code over javascript code. External dependencies that would ship with the final product (including all npm/yarn packages) should be kept to a bare minimum.
 
 The code base is comparatively large for a WebExtension, with over 10K sloc of typescript and over 14K sloc total.
