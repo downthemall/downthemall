@@ -3,6 +3,8 @@ DownThemAll! WE
 
 The DownThemAll! WebExtension.
 
+For those still on supported browser: [Non-WebExtension legacy code](https://github.com/downthemall/downthemall-legacy).
+
 About
 ---
 
