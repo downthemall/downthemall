@@ -46,6 +46,7 @@ export class Cell {
   }
 
   static makeCell(type: CellTypes, row: any, colid: number) {
+    /* eslint-disable @typescript-eslint/no-use-before-define */
     switch (type) {
     case CellTypes.TYPE_TEXT:
       return new TextCell(row, colid);
@@ -58,6 +59,7 @@ export class Cell {
     default:
       throw new Error(`Invalid cell type: ${type}`);
     }
+    /* eslint-enable @typescript-eslint/no-use-before-define */
   }
 
   getCellIcon() {

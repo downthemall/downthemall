@@ -37,6 +37,7 @@ import { downloads } from "../../lib/browser";
 
 const TREE_CONFIG_VERSION = 2;
 const RUNNING_TIMEOUT = 1000;
+const SIZES_TIMEOUT = 150;
 
 const COL_URL = 0;
 const COL_DOMAIN = 1;
@@ -234,6 +235,18 @@ export class DownloadItem extends EventEmitter {
     this.totalSize = Math.max(0, fileSize >= 0 ? fileSize : totalBytes);
   }
 
+  async updateSizes() {
+    if (!this.manId) {
+      return;
+    }
+    this.adoptSize((await downloads.search({id: this.manId})).pop());
+    if (this.isFiltered) {
+      this.owner.invalidateCell(this.filteredPosition, COL_PROGRESS);
+      this.owner.invalidateCell(this.filteredPosition, COL_PER);
+      this.owner.invalidateCell(this.filteredPosition, COL_SIZE);
+    }
+  }
+
   async updateStats() {
     if (this.state !== DownloadState.RUNNING) {
       return -1;
@@ -283,6 +296,8 @@ export class DownloadTable extends VirtualTable {
   public readonly showUrls: ShowUrlsWatcher;
 
   private runningTimer: any;
+
+  private sizesTimer: any;
 
   private readonly globalStats: Stats;
 
@@ -549,6 +564,12 @@ export class DownloadTable extends VirtualTable {
     }
     else {
       document.title = _("manager.title");
+    }
+  }
+
+  async updateSizes() {
+    for (const r of this.running) {
+      await r.updateSizes();
     }
   }
 
@@ -931,6 +952,8 @@ export class DownloadTable extends VirtualTable {
       if (!this.running.size && this.runningTimer) {
         clearInterval(this.runningTimer);
         this.runningTimer = null;
+        clearInterval(this.sizesTimer);
+        this.sizesTimer = null;
         $("#statusSpeedContainer").classList.add("hidden");
       }
       break;
@@ -945,7 +968,10 @@ export class DownloadTable extends VirtualTable {
       if (!this.runningTimer) {
         this.runningTimer = setInterval(
           this.updateRunning.bind(this), RUNNING_TIMEOUT);
+        this.sizesTimer = setInterval(
+          this.updateSizes.bind(this), SIZES_TIMEOUT);
         this.updateRunning();
+        this.updateSizes();
         $("#statusSpeedContainer").classList.remove("hidden");
       }
       break;
