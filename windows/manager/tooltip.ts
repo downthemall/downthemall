@@ -298,6 +298,9 @@ export class Tooltip {
     if (r.right > w) {
       r.offset(-clientWidth - 20, 0);
     }
+    if (r.left < 0) {
+      r.offset(-r.left, 0);
+    }
     if (r.bottom > h) {
       r.offset(0, -clientHeight - 20);
     }
