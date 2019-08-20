@@ -5,7 +5,7 @@ The core is open source, licensed under MIT with the interface licensed under GP
 This means that you can reuse code almost everywhere, while forks of DownThemAll! need
 to be licensed under the GPL-2.0. Forks need to use their own name and logo however.
 
-## DownTHemAll! source code
+## DownThemAll! source code
 
 Copyright © 2017-2019 by Nils Maier
 
