@@ -8,7 +8,6 @@ P1
 
 Musts.
 
-* github
 * packaging
   * signing
 
