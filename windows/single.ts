@@ -90,15 +90,22 @@ function displayError(err: string) {
 }
 
 async function downloadInternal(paused: boolean) {
-  const usable = $("#URL").value.trim();
-  const gen = new BatchGenerator(usable);
+  let usable = $("#URL").value.trim();
   let url;
   try {
     url = new URL(usable).toString();
   }
   catch (ex) {
-    return displayError("error.invalidURL");
+    try {
+      url = new URL(`https://${usable}`).toString();
+      $("#URL").value = usable = `https://${usable}`;
+    }
+    catch (ex) {
+      return displayError("error.invalidURL");
+    }
   }
+
+  const gen = new BatchGenerator(usable);
 
   const usableReferrer = $("#referrer").value.trim();
   let referrer;
