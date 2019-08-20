@@ -225,6 +225,11 @@ export class DownloadItem extends EventEmitter {
     this.emit("update");
   }
 
+  async queryState() {
+    const [state] = await downloads.search({id: this.manId});
+    return state;
+  }
+
   adoptSize(state: any) {
     const {
       bytesReceived,
@@ -239,7 +244,11 @@ export class DownloadItem extends EventEmitter {
     if (!this.manId) {
       return;
     }
-    this.adoptSize((await downloads.search({id: this.manId})).pop());
+    const state = await this.queryState();
+    if (!this.manId) {
+      return;
+    }
+    this.adoptSize(state);
     if (this.isFiltered) {
       this.owner.invalidateCell(this.filteredPosition, COL_PROGRESS);
       this.owner.invalidateCell(this.filteredPosition, COL_PER);
@@ -254,7 +263,11 @@ export class DownloadItem extends EventEmitter {
     let v = 0;
     try {
       if (this.manId) {
-        this.adoptSize((await downloads.search({id: this.manId})).pop());
+        const state = await this.queryState();
+        if (!this.manId) {
+          return -1;
+        }
+        this.adoptSize(state);
         if (!this.lastWritten) {
           this.lastWritten = Math.max(0, this.written);
           return -1;
