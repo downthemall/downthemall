@@ -1,0 +1,83 @@
+/* License: gpl-v2 */
+@import 'common.css';
+
+body {
+  margin-left: 2em;
+  margin-right: 2em;
+  width: auto;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  grid-template-columns: 1fr;
+  grid-auto-rows: max-content;
+  overflow: hidden;
+}
+
+#header {
+  margin-top: 1.5em;
+  margin-bottom: 3.5em;
+  min-height: 70px;
+  background: transparent url(/style/icon64.png) no-repeat 32px 50%;
+  background-size: 64px 64px;
+  padding-left: 128px;
+}
+
+#header p {
+  margin: 0;
+  margin-bottom: 1ex;
+}
+p.example {
+  font-family: monospace;
+  padding-left: 4ex;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi) {
+  #header {
+    background-image: url(../style/icon128.png);
+  }
+}
+
+#options {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-auto-rows: max-content;
+  grid-column-gap: 2em;
+  grid-row-gap: 1ex;
+  overflow-x: hidden;
+  overflow-y: auto;
+  justify-items: stretch;
+  align-items: center;
+}
+
+#options > * {
+  margin: 0;
+}
+
+#options > input {
+  display: block;
+}
+
+#options > div {
+  display: grid;
+  grid-template-columns: 2fr auto;
+  grid-column-gap: 1ex;
+  align-items: center;
+}
+
+#options > #maskOptions {
+  display: grid;
+  grid-template-columns: 2fr auto auto;
+}
+
+#options label {
+  display: block;
+}
+
+#maskOnce {
+  display: flex !important;
+  align-items: center;
+}
+
+h3 {
+  font-weight: normal;
+  font-style: italic;
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<!-- License: gpl-v2 -->
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    @import url("/uikit/css/virtualtable.css");
+    @import url("/uikit/css/modal.css");
+    @import url("/style/prefs.css");
+
+  </style>
+  <style>
+    .tab {
+      display: none;
+    }
+
+  </style>
+  <title data-i18n="prefs.title">DownThemAll! - Preferences</title>
+  <link rel="icon" href="/style/icon32.png">
+  <link rel="icon" sizes="16x16" href="/style/icon16.png">
+  <link rel="icon" sizes="32x32" href="/style/icon32.png">
+  <link rel="icon" sizes="64x64" href="/style/icon64.png">
+  <link rel="icon" sizes="96x96" href="/style/icon96.png">
+  <link rel="icon" sizes="128x128" href="/style/icon128.png">
+  <link rel="icon" sizes="256x256" href="/style/icon256.png">
+  <script defer src="/bundles/common.js"></script>
+  <script defer src="/bundles/prefs.js"></script>
+  <style id="icons"></style>
+</head>
+
+<body>
+  <input class="tab" type="radio" id="tabsel-general" name="tabs" checked>
+  <input class="tab" type="radio" id="tabsel-filters" name="tabs">
+  <input class="tab" type="radio" id="tabsel-network" name="tabs">
+
+  <nav id="tabs" aria-role="tablist">
+    <label id="tabel-general" for="tabsel-general" data-i18n="options-general">General</label>
+    <label id="tabel-filters" for="tabsel-filters" data-i18n="options-filters">Filters</label>
+    <label id="tabel-network" for="tabsel-network" data-i18n="options-network">Network</label>
+  </nav>
+
+  <article id="tab-general" class="tab">
+    <fieldset>
+      <legend data-i18n="pref.ui">UI</legend>
+      <label><input type="checkbox" id="pref-global-turbo"> <span data-i18n="pref-global-turbo">Global turbo</span></label>
+      <label><input type="checkbox" id="pref-finish-notification"> <span data-i18n="pref-finish-notification"></span></label>
+      <div style="margin-top: 1em;">
+        <button id="reset-confirmations" data-i18n="reset-confirmations"></button>
+        <button id="reset-layout" data-i18n="reset-layouts"></button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend data-i18n="pref.manager">Manager</legend>
+      <label><input type="checkbox" id="pref-tooltip"> <span data-i18n="pref-manager-tooltip"></span></label>
+      <label><input type="checkbox" id="pref-show-urls"> <span data-i18n="pref-show-urls"></span></label>
+    </fieldset>
+    <fieldset>
+      <legend data-i18n="pref.queueing">Queueing Downloads</legend>
+      <label><input type="checkbox" id="pref-queue-notification"> <span data-i18n="pref-queue-notification"></span></label>
+      <label><input type="checkbox" id="pref-open-manager-on-queue"> <span data-i18n="pref-open-manager-on-queue"></span></label>
+      <label><input type="checkbox" id="pref-text-links"> <span data-i18n="pref-text-links"></span></label>
+      <label><input type="checkbox" id="pref-add-paused"> <span data-i18n="pref-add-paused"></span></label>
+    </fieldset>
+    <fieldset id="pref-conflict-action">
+      <legend>When a file exists</legend>
+      <label><input type="radio" name="pref-conflict-action" value="overwrite"> <span>Overwrite</span></label>
+      <label><input type="radio" name="pref-conflict-action" value="uniquify"> <span>Rename</span></label>
+      <!--<label><input type="radio" name="pref-conflict-action" value="prompt"> <span>Prompt</span></label>-->
+    </fieldset>
+  </article>
+
+  <article id="tab-filters" class="tab">
+    <table id="filters" data-singleselect="true">
+      <tr>
+        <th data-hideable="false" id="colLabel" data-i18n="filter-label">Label</th>
+        <th data-hideable="false" id="colExpr" data-i18n="filter-expression" width="50%">Expression</th>
+        <th id="colTypes" data-i18n="filter-types" width="20%">Filter Types</th>
+      </tr>
+    </table>
+    <div id="filter-edit" class="hidden">
+      <label for="filter-edit-label" data-i18n="filter-label">Filter Label:</label>
+      <input id="filter-edit-label" minlength="1" maxlength="100">
+      <label for="filter-edit-expr" data-i18n="filter-expression">Filter Expression:</label>
+      <input id="filter-edit-expr" minlength="1">
+      <label data-i18n="filter-types">Types:</label>
+      <span>
+        <label><input type="checkbox" id="filter-edit-type-link"> <span data-i18n="filter-type-link"></span></label>
+        <label><input type="checkbox" id="filter-edit-type-media"> <span data-i18n="filter-type-media"></span></label>
+      </span>
+      <button id="filter-delete" class="hidden" data-i18n="delete">Delete</button>
+      <button id="filter-reset" class="hidden" data-i18n="reset">Reset</button>
+    </div>
+    <div id="filter-buttons" class="buttons">
+      <button id="filter-create-button" data-i18n="add-new">Add New</button>
+    </div>
+  </article>
+
+  <article id="tab-network" class="tab">
+    <fieldset>
+      <legend data-i18n="pref.netglobal"></legend>
+      <label><span data-i18n="pref-concurrent-downloads">Concurrent downloads</span> <input id="pref-concurrent-downloads" type="number" min="1" max="10"></label>
+    </fieldset>
+    <table id="limits" data-singleselect="true">
+      <tr>
+        <th data-hideable="false" id="colDomain" data-i18n="colDomain">Domain</th>
+        <th data-hideable="false" id="colConnection" data-i18n="colConnections" width="33%">Connections</th>
+      </tr>
+    </table>
+    <div id="limit-edit" class="hidden">
+      <label for="limit-edit-domain" data-i18n="colDomain">Domain</label>
+      <input id="limit-edit-domain" minlength="1">
+      <label for="limit-edit-concurrent" data-i18n="colConnections">Connections</label>
+      <div id="limit-concurrent-box" class="limit-selector">
+        <label>
+          <input type="radio" name="limit-edit-concurrent" id="limit-edit-concurrent-unlimited">
+          <span data-i18n="unlimited"></span>
+        </label>
+        <label>
+          <input type="radio" name="limit-edit-concurrent" id="limit-edit-concurrent-limited">
+          <span data-i18n="limited-to"></span>
+          <input type="number" min="1" max="16" id="limit-edit-concurrent-limit">
+        </label>
+      </div>
+      <div class="button-box">
+        <button id="limit-save" data-i18n="save"></button>
+        <button id="limit-delete" data-i18n="delete"></button>
+      </div>
+    </div>
+    <div id="limit-buttons" class="buttons">
+      <button id="limit-create" data-i18n="add-new">Add New</button>
+    </div>
+  </article>
+
+  <template id="create-filter-template">
+    <h1 data-i18n="filter-create.title"></h1>
+    <div id="filter-create">
+      <label for="filter-create-label" data-i18n="filter-label">Filter Label:</label>
+      <input id="filter-create-label" minlength="1" maxlength="100">
+      <label for="filter-create-expr" data-i18n="filter-expression">Filter Expression:</label>
+      <input id="filter-create-expr" minlength="1" style="min-width: 26em;">
+      <label data-i18n="filter-types">Types:</label>
+      <span>
+        <label><input type="checkbox" id="filter-create-type-link" checked> <span data-i18n="filter-type-link"></span></label>
+        <label><input type="checkbox" id="filter-create-type-media"> <span data-i18n="filter-type-media"></span></label>
+      </span>
+    </div>
+  </template>
+</body>
+
+</html>

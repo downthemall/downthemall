@@ -1,0 +1,67 @@
+{
+  "manifest_version": 2,
+  "name": "DownThemAll!",
+  "version": "4.0.1",
+
+  "description": "__MSG_extensionDescription__",
+  "homepage_url": "https://downthemall.org/",
+  "author": "Nils Maier",
+
+  "default_locale": "en",
+
+  "icons": {
+    "16": "style/icon16.png",
+    "32": "style/icon32.png",
+    "48": "style/icon48.png",
+    "64": "style/icon64.png",
+    "96": "style/icon96.png",
+    "128": "style/icon128.png",
+    "256": "style/icon256.png"
+  },
+
+  "permissions": [
+    "<all_urls>",
+    "contextMenus",
+    "menus",
+    "downloads",
+    "downloads.open",
+    "downloads.shelf",
+    "notifications",
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+
+  "background": {
+    "scripts": [
+      "bundles/common.js",
+      "bundles/background.js"
+    ]
+  },
+
+  "browser_action": {
+    "browser_style": false,
+    "default_icon": {
+      "16": "style/icon16.png",
+      "32": "style/icon32.png",
+      "48": "style/icon48.png",
+      "64": "style/icon64.png",
+      "96": "style/icon96.png",
+      "128": "style/icon128.png",
+      "256": "style/icon256.png"
+    },
+    "default_title": "DownThemAll!"
+  },
+
+  "options_ui": {
+    "open_in_tab": true,
+    "page": "/windows/prefs.html"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dtalite@downthemall.org",
+      "strict_min_version": "67.0"
+    }
+  }
+}

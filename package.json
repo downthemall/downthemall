@@ -1,0 +1,39 @@
+{
+  "name": "dtalite",
+  "version": "4.0.0",
+  "description": "DownThemAll! lite",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "util/build.py",
+    "build:bundles": "webpack",
+    "build:regexps": "node util/makexregexps.js > data/xregexps.json",
+    "stats": "cloc --vcs=git --exclude-lang=Markdown,SVG",
+    "test": "LANG=en mocha -r ts-node/register -r chai/register-expect tests",
+    "watch": "webpack --watch",
+    "webext": "web-ext run -i 'lib/*' -i '**/node_modules/**' --bc -p ../dtalite.p --keep-profile-changes"
+  },
+  "author": "Nils Maier",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "chai": "^4.1.2",
+    "eslint": "^6.1.0",
+    "mocha": "^6.2.0",
+    "ts-loader": "^6.0.4",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "xregexp": "^4.2.4"
+  },
+  "dependencies": {
+    "@types/psl": "^1.1.0",
+    "psl": "^1.3.0",
+    "webextension-polyfill": "^0.4.0"
+  }
+}

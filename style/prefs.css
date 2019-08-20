@@ -1,0 +1,141 @@
+/* License: gpl-v2 */
+@import 'common.css';
+
+html, body {
+  background: transparent !important;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+article {
+  margin: 1em;
+}
+
+#tabs {
+  display: flex;
+  background: url(icon64.png) 1em 0/32px 32px no-repeat, url(tile.png) repeat-x, var(--toolbar-bg-color);
+  padding-left: calc(2em + 32px);
+  color: white;
+}
+
+input.tab {
+  display: none;
+}
+
+#tabs > label{
+  display: inline-block;
+  cursor: pointer;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 1ex 1em;
+  border-top: 2px solid transparent;
+}
+
+.tab {
+  display: none;
+  flex-direction: column;
+}
+
+#tabsel-general:checked ~ #tab-general {
+  display: flex;
+}
+
+#tabsel-network:checked ~ #tab-network,
+#tabsel-filters:checked ~ #tab-filters {
+  display: grid;
+}
+
+#tabsel-general:checked ~ #tabs #tabel-general,
+#tabsel-filters:checked ~ #tabs #tabel-filters,
+#tabsel-network:checked ~ #tabs #tabel-network {
+  color: black !important;
+  background: white;
+  border-top: var(--toolbar-border-width) solid var(--toolbar-active-border-color);
+}
+
+#tabs > label {
+  transition: border-color 1s;
+  border-top: var(--toolbar-border-width) solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--toolbar-bg-color);
+}
+
+#tabs > label:hover:not(:checked) {
+  border-top: var(--toolbar-border-width) solid var(--toolbar-hover-border-color);
+  background: var(--toolbar-hover-background);
+}
+
+#tab-filters {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#filter-create,
+#filter-edit,
+#limit-edit {
+  margin: 1em;
+  display: grid;
+  grid-template-columns: auto 2fr;
+  grid-column-gap: 2ex;
+  grid-row-gap: 1ex;
+  align-items: center;
+  justify-items: stretch;
+}
+
+.button-box {
+  grid-row-end: span 2;
+}
+
+.buttons {
+  margin-top: 1ex;
+  text-align: center;
+}
+
+.buttons > button{
+  margin: 0 2em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+fieldset {
+  display: flex;
+  margin-bottom: 1em;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  box-shadow: 1px 1px 6px lightgray;
+  background: rgba(128, 128, 128, 0.05);
+  flex-direction: column;
+  max-width: 60em;
+  padding: 1.2em;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+#tab-network {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto auto;
+  overflow: hidden;
+}
+
+.virtualtable-container {
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  background: rgba(128, 128, 128, 0.05);
+  box-shadow: 1px 1px 6px lightgray;
+}

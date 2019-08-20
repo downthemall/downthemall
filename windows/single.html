@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<!-- License: gpl-v2 -->
+
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="single.title">DownThemAll! - Add a Link</title>
+  <style>
+    @import "/uikit/css/modal.css";
+    @import "/style/single.css";
+
+  </style>
+  <link rel="icon" href="/style/icon32.png">
+  <link rel="icon" sizes="16x16" href="/style/icon16.png">
+  <link rel="icon" sizes="32x32" href="/style/icon32.png">
+  <link rel="icon" sizes="64x64" href="/style/icon64.png">
+  <link rel="icon" sizes="96x96" href="/style/icon96.png">
+  <link rel="icon" sizes="128x128" href="/style/icon128.png">
+  <link rel="icon" sizes="256x256" href="/style/icon256.png">
+  <script defer src="/bundles/common.js"></script>
+  <script defer src="/bundles/single.js"></script>
+</head>
+
+<body>
+  <section id="header">
+    <h1 data-i18n="single.header">Add a link</h1>
+    <p data-i18n="single.batchexamples">Batch Examples:</p>
+    <p class="example">../mygallery[0:9]/photo[01:10][03:1:-1].jpg</p>
+  </section>
+  <section id="options">
+    <h2>Download</h2>
+    <input type="text" id="URL">
+    <h2>Custom Filename</h2>
+    <input type="text" id="filename">
+    <h3>Referring page</h3>
+    <input type="text" id="referrer">
+    <h3>Title</h3>
+    <input type="text" id="title">
+    <h3>Description</h3>
+    <input type="text" id="description">
+    <h3>Mask</h3>
+    <div id="maskOptions">
+      <input type="text" id="mask">
+      <button id="maskButton" class="icon-tags"></button>
+      <label id="maskOnce">
+        <input type="checkbox" id="maskOnceCheck">
+        <span data-i18n="useonlyonce">Use only once</span>
+      </label>
+    </div>
+  </section>
+  <section id="notification"></section>
+  <section id="buttons">
+    <button id="btnDownload" data-i18n="download.verb">Download</button>
+    <button id="btnPaused" data-i18n="addpaused">Add paused</button>
+    <button id="btnCancel" data-i18n="cancel">Cancel</button>
+  </section>
+
+  <template id="batch-template">
+    <h1 data-i18n="batch.title">Batch Download</h1>
+    <p data-i18n="batch.desc">The current url was detected as a potential batch download.</p>
+    <ul>
+      <li><span data-i18n="batch.items">Nomber of items:</span> <span class="batch-items"></span></p>
+      </li>
+      <li><span data-i18n="batch.preview">Preview:</span> <span class="batch-preview"></span></p>
+      </li>
+    </ul>
+    <em data-i18n="batch.question">Run this batch?</em>
+  </template>
+</body>
+
+</html>

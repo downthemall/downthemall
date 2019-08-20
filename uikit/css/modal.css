@@ -1,0 +1,52 @@
+/* License: MIT */
+
+.modal-container {
+  font: message-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100000;
+}
+
+.modal-dialog {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: white;
+  color: black;
+  min-width: 33%;
+  max-width: 80%;
+  border-radius: 4px;
+  box-shadow: 6px 6px 21px 5px rgba(0, 0, 0, 0.75);
+}
+
+.modal-dialog>* {
+  padding: 1em 3em;
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: right;
+  background: rgba(30, 30, 30, 0.2);
+  margin-top: 2em;
+  border-top: 1px solid rgba(30, 30, 30, 0.5);
+}
+
+.modal-footer>* {
+  margin-left: 1ex;
+}
+
+.modal-default {
+  font-weight: bold;
+}
+
+.modal-dismiss {
+  font-style: italic;
+}

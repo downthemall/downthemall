@@ -1,0 +1,71 @@
+{
+	"deffilter-all": {
+		"label": "All files",
+		"expr": "/.*/i",
+		"type": 3,
+		"active": false
+	},
+	"deffilter-arch": {
+		"label": "Archives",
+		"expr": "/\\.(?:z(?:ip|[0-9]{2})|r(?:ar|[0-9]{2})|jar|bz2|gz|tar|rpm|7z(?:ip)?|lzma|xz)$/i",
+		"type": 1,
+		"active": false,
+		"icon": "zip"
+	},
+	"deffilter-aud": {
+		"label": "Audio",
+		"expr": "/\\.(?:mp3|wav|og(?:g|a)|flac|midi?|rm|aac|wma|mka|ape)$/i",
+		"type": 1,
+		"active": false,
+		"icon": "mp3"
+	},
+	"deffilter-bin": {
+		"label": "Software",
+		"expr": "/\\.(?:exe|msi|dmg|bin|xpi|iso)$/i",
+		"type": 1,
+		"active": false,
+		"icon": "exe"
+	},
+	"deffilter-doc": {
+		"label": "Documents",
+		"expr": "/\\.(?:pdf|xlsx?|docx?|odf|odt|rtf|txt|nfo)$/i",
+		"type": 1,
+		"active": false,
+		"icon": "pdf"
+	},
+	"deffilter-img": {
+		"label": "Images",
+		"expr": "/\\.(?:jp(?:e?g|e|2)|gif|png|tiff?|bmp|ico)$/i",
+		"type": 3,
+		"active": false,
+		"icon": "jpg"
+	},
+	"deffilter-imggif": {
+		"label": "GIF",
+		"expr": "/\\.gif$/i",
+		"type": 2,
+		"active": false,
+		"icon": "gif"
+	},
+	"deffilter-imgjpg": {
+		"label": "JPEG",
+		"expr": "/\\.jp(e?g|e|2)$/i",
+		"type": 3,
+		"active": true,
+		"icon": "jpg"
+	},
+	"deffilter-imgpng": {
+		"label": "PNG",
+		"expr": "/\\.png$/i",
+		"type": 2,
+		"active": false,
+		"icon": "png"
+	},
+	"deffilter-vid": {
+		"label": "Videos",
+		"expr": "/\\.(?:mpeg|ra?m|avi|mp(?:g|e|4)|mov|divx|asf|qt|wmv|m\\dv|rv|vob|asx|ogm|ogv|webm|flv|mkv)$/i",
+		"type": 3,
+		"active": true,
+		"icon": "mkv"
+	}
+}

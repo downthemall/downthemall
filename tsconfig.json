@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "module": "commonjs",
+    "target": "esnext",
+    "noImplicitAny": true,
+    "allowJs": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "newLine": "lf",
+    "noEmitHelpers": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "sourceMap": true
+  }
+}

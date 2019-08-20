@@ -1,0 +1,249 @@
+/* License: MIT */
+
+@import 'contextmenu.css';
+
+table.virtualtable {
+  color: black;
+  background: white;
+  box-sizing: border-box;
+  border-spacing: 0px;
+  table-layout: fixed;
+  width: 100%;
+  vertical-align: middle;
+  font-size: 10pt;
+  line-height: 19px;
+}
+
+.virtualtable-container {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.virtualtable-container :focus {
+  outline: 0;
+}
+
+.virtualtable-head {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  width: 100%;
+}
+.virtualtable-head,
+.virtualtable-body {
+  border-bottom: 1px solid rgba(128,128,128,0.3);
+}
+
+table.virtualtable-columns {
+  width: unset;
+  flex: 2;
+}
+.virtualtable-columns-scrollspace {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+}
+.virtualtable-column-selection-grippy {
+  background: transparent;
+  text-align: center;
+  line-height: 24px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  flex: 0 0 auto;
+  color: darkgray;
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+}
+
+.virtualtable-column {
+  border: 1px solid transparent;
+  border-right: 1px solid lightgray;
+  text-align: left;
+  padding: 4pt 8px 4pt 8px;
+  overflow: hidden;
+}
+
+.virtualtable-column.last {
+  border-right: 1px solid transparent;
+}
+
+.virtualtable-column-container {
+  -webkit-user-select: none;
+  user-select: none;
+  display: flex;
+  white-space: nowrap;
+  justify-content: start;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+.virtualtable-column-content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.virtualtable-column-icon {
+  display: inline-block;
+  padding: 0;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.virtualtable-column-spacer {
+  flex: 1 1 auto;
+}
+
+.virtualtable-column-grippy {
+  display: inline-block;
+  width: 3px;
+  margin-right: -9px;
+  margin-left: 16px;
+  cursor: ew-resize;
+  z-index: 1000;
+}
+
+.virtualtable-body {
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.virtualtable-row:nth-child(odd) {
+  -webkit-user-select: none;
+  user-select: none;
+  background: rgba(128, 128, 128, 0.1);
+}
+
+:focus .virtualtable-row.virtualtable-selected {
+  background: rgba(29, 107, 179, 0.2);
+}
+
+:focus .virtualtable-row.virtualtable-selected:nth-child(odd) {
+  background: rgba(16, 83, 144, 0.2);
+}
+
+.virtualtable-row.virtualtable-selected {
+  background: rgba(29, 107, 179, 0.1);
+}
+
+.virtualtable-row.virtualtable-selected:nth-child(odd) {
+  background: rgba(16, 83, 144, 0.1);
+}
+
+.virtualtable-row.virtualtable-focused > td {
+  border-top: 1px dotted gray !important;
+  border-bottom: 1px dotted gray !important;
+}
+
+.virtualtable-cell {
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-right: 1px dotted darkgray;
+  padding: 2px 8px 2px 8px;
+  overflow: hidden;
+}
+
+.virtualtable-cell:last-child {
+  border-right: 1px solid transparent;
+}
+
+.virtualtable-cell-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.virtualtable-cell-container > * {
+  flex-grow: 1;
+}
+
+
+.virtualtable-icon,
+.virtualtable-cell-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.virtualtable-cell-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.virtualtable-icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  margin-right: 0.6ex;
+
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+}
+
+.virtualtable-progress {
+  height: 100%;
+}
+
+.virtualtable-progress-container {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  border: 1px solid gray;
+}
+
+.virtualtable-progress-bar {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 10px;
+  background: green;
+  background: repeating-linear-gradient(
+    60deg,
+    #009000,
+    #009000 16px,
+    #007f00 16px,
+    #007f00 32px
+  );
+}
+
+.virtualtable-progress-undetermined {
+  width: 100%;
+  background: yellow;
+  background: repeating-linear-gradient(
+    60deg,
+    #ffff00,
+    #ffff00 16px,
+    #dcdc4d 16px,
+    #dcdc4d 32px
+  );
+  background-position: -10px;
+  background-size: 200%;
+}
+
+spanElemanimated .virtualtable-progress-undetermined {
+  animation-name: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse {
+  from {
+    background-position: -36px;
+  }
+
+  to {
+    background-position: 0px;
+  }
+}

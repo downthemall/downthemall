@@ -1,0 +1,20 @@
+{
+	"global-turbo": false,
+	"concurrent": 4,
+	"queue-notification": true,
+	"finish-notification": true,
+	"open-manager-on-queue": true,
+	"text-links": true,
+	"add-paused": false,
+	"conflict-action": "uniquify",
+	"nagging": 0,
+	"nagging-next": 6,
+	"tooltip": true,
+	"show-urls": false,
+	"limits": [
+		{
+			"domain": "*",
+			"concurrent": -1
+		}
+	]
+}

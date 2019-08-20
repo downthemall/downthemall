@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<!-- License: gpl-v2 -->
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="manager.title">DownThemAll!</title>
+  <style>
+    @import "/uikit/css/virtualtable.css";
+    @import "/uikit/css/modal.css";
+    @import "/style/manager.css";
+
+  </style>
+  <link rel="icon" href="/style/icon32.png">
+  <link rel="icon" sizes="16x16" href="/style/icon16.png">
+  <link rel="icon" sizes="32x32" href="/style/icon32.png">
+  <link rel="icon" sizes="64x64" href="/style/icon64.png">
+  <link rel="icon" sizes="96x96" href="/style/icon96.png">
+  <link rel="icon" sizes="128x128" href="/style/icon128.png">
+  <link rel="icon" sizes="256x256" href="/style/icon256.png">
+  <script defer src="/bundles/common.js"></script>
+  <script defer src="/bundles/manager.js"></script>
+  <style id="icons">
+  </style>
+</head>
+
+<body>
+  <section id="toolbar">
+    <div class="button" id="btn-add" data-i18n="title=add-download"><span class="icon-add"></span></div>
+    <div class="thin-spacer"></div>
+    <div class="button" id="btn-resume" data-i18n="title=resume-download" data-key="ACCEL-KeyR"><span class="icon-go"></span></div>
+    <div class="button" id="btn-pause" data-i18n="title=pause-download" data-key="ACCEL-KeyP"><span class="icon-pause"></span></div>
+    <div class="button" id="btn-cancel" data-i18n="title=cancel-download" data-key="ACCEL-KeyC"><span class="icon-error"></span></div>
+    <div class="thin-spacer"></div>
+    <div class="button" id="btn-top" data-i18n="title=move-top" data-key="ALT-Home"><span class="icon-top"></span></div>
+    <div class="button" id="btn-up" data-i18n="title=move-up" data-key="ALT-PageUp"><span class="icon-up"></span></div>
+    <div class="button" id="btn-down" data-i18n="title=move-down" data-key="ALT-PageDown"><span class="icon-down"></span></div>
+    <div class="button" id="btn-bottom" data-i18n="title=move-bottom" data-key="ALT-End"><span class="icon-bottom"></span></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div id="donate" class="donate" aria-role="button"></div>
+  </section>
+  <div id="downloads">
+    <div id="loading"><span class="icon-info" style="display: inline-block; margin-right: 1em; color: royalblue;"></span> LOADING...</div>
+    <table id="items" data-hover="true">
+      <tr>
+        <th data-i18n="colNameURL" data-hideable="false" id="colURL"></th>
+        <th data-i18n="colDomain" id="colDomain"></th>
+        <th data-i18n="colProgress" data-hideable="false" id="colProgress"></th>
+        <th data-i18n="colPercent" data-hideable="false" id="colPercent"></th>
+        <th data-i18n="colSize" id="colSize"></th>
+        <th data-i18n="colETA" id="colETA"></th>
+        <th data-i18n="colSpeed" id="colSpeed"></th>
+        <th data-i18n="mask" id="colMask"></th>
+        <!--<th data-i18n="colSegments" id="colSegments"></th>-->
+      </tr>
+    </table>
+  </div>
+
+  <section id="nagging" class="hidden">
+    <span id="nagging-message"></span>
+    <button id="nagging-donate"><span class="icon-donate"></span> <span data-i18n="donate"></span></button>
+    <button id="nagging-later"><span data-i18n="ask-again-later"></span></button>
+    <button id="nagging-never"><span data-i18n="never-ask-again"></span></button>
+  </section>
+
+  <section id="status">
+    <div id="statusNetwork" class="icon-network-on"></div>
+    <div id="statusFilter"><span class="icon-find"></span><input type="text" id="filter" data-i18n="placeholder=search"></div>
+    <div span class="icon-incoming"></span> <span id="statusItems"></span></div>
+    <div class="icon-tacho hidden" id="statusSpeedContainer"><span id="statusSpeed"></span></div>
+    <div id="statusPrefs"><span class="icon-settings"></span></div>
+  </section>
+
+  <template id="table-context">
+    <ul id="table-context" class="table-context">
+      <li id="ctx-open-file" data-key="Enter" data-i18n="open-file" data-icon="icon-file">Open File</li>
+      <li id="ctx-open-directory" data-key="ACCEL-Enter" data-i18n="open-directory" data-icon="icon-folder">Open Directory</li>
+      <li>-</li>
+      <li id="ctx-resume" data-key="ACCEL-KeyR" data-i18n="resume-download" data-icon="icon-go">Resume</li>
+      <li id="ctx-pause" data-key="ACCEL-KeyP" data-i18n="pause-download" data-icon="icon-pause">Pause</li>
+      <li id="ctx-cancel" data-key="ACCEL-KeyC" data-i18n="cancel-download" data-icon="icon-error">Cancel</li>
+      <li>-</li>
+      <li id="ctx-force-download" data-key="ACCEL-SHIFT-KeyR" data-icon="icon-force" data-i18n="force-start">Force Start Now</li>
+      <li>-</li>
+      <li id="ctx-remove-complete" data-key="SHIFT-Delete" data-i18n="remove-complete-downloads" data-icon="icon-done" data-allow-click="true">Remove Complete
+        <ul class="table-context">
+          <li id="ctx-remove-complete-all" data-key="SHIFT-Delete" data-icon="icon-done" data-i18n="remove-all-complete-downloads">Remove all complete</li>
+          <li id="ctx-remove-complete-selected" data-icon="icon-done" data-i18n="remove-selected-complete-downloads">Remove selected complete</li>
+          <li>-</li>
+          <li id="ctx-remove-complete-domain" data-icon="icon-done" data-i18n="remove-domain-complete-downloads">Remove selected complete</li>
+          <li>-</li>
+        </ul>
+      </li>
+      <li id="ctx-remove-missing" data-key="ALT-Delete" data-i18n="remove-missing" data-icon="icon-missing">Clear Missing</li>
+      <li id="ctx-remove" data-key="Delete" data-i18n="remove-download" data-icon="icon-failed" data-allow-click="true">Remove
+        <ul class="table-context">
+          <li id="ctx-remove-selected" data-icon="icon-failed" data-key="Delete" data-i18n="remove-selected-downloads">Remove Selected</li>
+          <li id="ctx-remove-all" data-icon="icon-failed" data-i18n="remove-all-downloads">Remove All</li>
+          <li>-</li>
+          <li id="ctx-remove-domain" data-icon="icon-failed" data-i18n="remove-domain-downloads">Remove Domain</li>
+          <li id="ctx-remove-batch" data-icon="icon-failed" data-i18n="remove-batch-downloads">Remove Current Batch</li>
+          <li>-</li>
+          <li id="ctx-remove-failed" data-icon="icon-error" data-i18n="remove-failed-downloads">Remove Failed</li>
+          <li id="ctx-remove-paused" data-icon="icon-pause" data-i18n="remove-paused-downloads">Remove Paused</li>
+          <li>-</li>
+        </ul>
+      </li>
+      <li>-</li>
+      <li id="ctx-select-all" data-key="ACCEL-KeyA" data-i18n="select-all">Select All</li>
+      <li id="ctx-select-invert" data-key="ACCEL-KeyI" data-i18n="invert-selection">Invert Selection</li>
+      <li>-</li>
+      <li id="ctx-move-top" data-key="ALT-Home" data-i18n="move-top" data-icon="icon-top">Top</li>
+      <li id="ctx-move-up" data-key="ALT-PageUp" data-i18n="move-up" data-icon="icon-up">Up</li>
+      <li id="ctx-move-down" data-key="ALT-PageDown" data-i18n="move-down" data-icon="icon-down">down</li>
+      <li id="ctx-move-bottom" data-key="ALT-End" data-i18n="move-bottom" data-icon="icon-bottom">Bottom</li>
+    </ul>
+  </template>
+
+  <template id="removal-template">
+    <h1 class="removal-title" data-i18n="remove-downloads.title"></h1>
+    <p class="removal-text"></p>
+    <p>
+      <div><label><input type="checkbox" name="removal-remember" class="removal-remember"> <span data-i18n="remember"></span></label></div>
+      <div><em data-i18n="change-later-reminder">You can later change it in the Preferences</em></div>
+    </p>
+  </template>
+
+  <template id="menufilter-template">
+    <ul>
+      <li id="ctx-menufilter-seperator">-</li>
+      <li id="ctx-menufilter-invert" data-autohide="false">Invert</li>
+      <li id="ctx-menufilter-clear" data-autohide="false">Clear</li>
+      <li>-</li>
+      <li id="ctx-menufilter-sort-ascending" data-icon="icon-sort-asc">Sort ascending</li>
+      <li id="ctx-menufilter-sort-descending" data-icon="icon-sort-desc">Sort descending</li>
+    </ul>
+  </template>
+
+  <template id="tooltip-template">
+    <div id="tooltip">
+      <div id="tooltip-infos">
+        <div id="tooltip-icon"></div>
+        <div id="tooltip-name"></div>
+        <label data-i18n="tooltip-from"></label>
+        <div id="tooltip-from"></div>
+        <label data-i18n="tooltip-size"></label>
+        <div id="tooltip-size"></div>
+        <label data-i18n="tooltip-date"></label>
+        <div id="tooltip-date"></div>
+        <label data-i18n="tooltip-eta" id="tooltip-etalabel"></label>
+        <div id="tooltip-eta"></div>
+      </div>
+      <div id="tooltip-speedbox">
+        <canvas id="tooltip-speedbar"></canvas>
+        <label data-i18n="tooltip-speed-current"></label>
+        <div id="tooltip-current"></div>
+        <label data-i18n="tooltip-speed-average"></label>
+        <div id="tooltip-average"></div>
+      </div>
+      <div id="tooltip-progressbar">
+        <div id="tooltip-progress"></div>
+      </div>
+    </div>
+  </template>
+</body>
+
+</html>

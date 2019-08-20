@@ -1,0 +1,9 @@
+*.bundle.js*
+bundles/
+package-lock.json
+node_modules
+.DS_Store
+Thumbs.db
+web-ext-artifacts/
+uikit/modal.html
+.vscode

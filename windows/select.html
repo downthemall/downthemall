@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<!-- License: gpl-v2 -->
+
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="select.title">DownThemAll! - Select your links</title>
+  <style>
+    @import "/uikit/css/virtualtable.css";
+    @import "/uikit/css/modal.css";
+    @import "/style/select.css";
+
+  </style>
+  <link rel="icon" href="/style/icon32.png">
+  <link rel="icon" sizes="16x16" href="/style/icon16.png">
+  <link rel="icon" sizes="32x32" href="/style/icon32.png">
+  <link rel="icon" sizes="64x64" href="/style/icon64.png">
+  <link rel="icon" sizes="96x96" href="/style/icon96.png">
+  <link rel="icon" sizes="128x128" href="/style/icon128.png">
+  <link rel="icon" sizes="256x256" href="/style/icon256.png">
+  <script defer src="/bundles/common.js"></script>
+  <script defer src="/bundles/select.js"></script>
+  <style id="icons">
+  </style>
+</head>
+
+<body>
+  <section id="tabs" aria-role="tablist">
+    <div id="linksTab" class="tab" aria-role="tab"><span data-i18n="links" class="icon-link">Links</span></div>
+    <div id="mediaTab" class="tab" aria-role="tab"><span data-i18n="media" class="icon-picture">Media</span></div>
+    <div class="spacer"></div>
+    <div id="donate" class="donate" aria-role="button"></div>
+  </section>
+  <div id="selection">
+    <table id="items">
+      <tr>
+        <th data-hideable="false" id="colChecked"></th>
+        <th data-hideable="false" id="colDownload" data-i18n="download">Download</th>
+        <th id="colTitle" data-i18n="title">Title</th>
+        <th id="colDescription" data-i18n="description">Description</th>
+        <th id="colMask" data-i18n="mask">Mask</th>
+        <!--<th id="colReferrer" data-i18n="referrer">Referrer</th>-->
+      </tr>
+    </table>
+  </div>
+  <section id="filters" class="collapsable">
+    <h2>Filters</h2>
+    <div class="filters-container" id="linksFilters"></div>
+    <div class="filters-container" id="mediaFilters"></div>
+  </section>
+  <section id="options">
+    <h2 data-i18n="fastfiltering">Fast filtering</h2>
+    <input id="fast" data-i18n="placeholder=fastfilter.placeholder">
+    <label>
+      <input type="checkbox" id="fastDisableOthers">
+      <span data-i18n="disable-other-filters"></span>
+    </label>
+    <label>
+      <input type="checkbox" id="fastOnceCheck">
+      <span data-i18n="useonlyonce">Use only once</span>
+    </label>
+    <h2 data-i18n="mask">Mask</h2>
+    <input id="mask">
+    <button id="maskButton" class="icon-tags"></button>
+    <label>
+      <input type="checkbox" id="maskOnceCheck">
+      <span data-i18n="useonlyonce">Use only once</span>
+    </label>
+  </section>
+  <section id="notification"></section>
+  <section id="buttons">
+    <button id="btnDownload" data-i18n="download.verb">Download</button>
+    <button id="btnPaused" data-i18n="addpaused">Add paused</button>
+    <button id="btnCancel" data-i18n="cancel">Cancel</button>
+  </section>
+  <section id="status">
+    <div id="statusItems" data-i18n="noitems.label">No items selected</div>
+    <div id="statusPrefs"><span class="icon-settings"></span></div>
+  </section>
+  <template id="table-context">
+    <ul>
+      <li id="ctx-check-selected" data-icon="icon-done" data-i18n="check-selected-items">check Selected Items</li>
+      <li id="ctx-uncheck-selected" data-icon="icon-unchecked" data-i18n="uncheck-selected-items">Uncheck Selected Items</li>
+      <li id="ctx-toggle-selected" data-icon="icon-unchecked" data-i18n="toggle-selected-items">Toggle Check for Selected Items</li>
+      <li>-</li>
+      <li id="ctx-mask" data-icon="icon-tags" data-i18n="set-mask">Mask</li>
+      <li>-</li>
+      <li id="ctx-select-all" data-key="ACCEL-KeyA" data-i18n="select-all">Select All</li>
+      <li id="ctx-select-filtered" data-key="ACCEL-KeyF" data-i18n="select-checked">Select Checked</li>
+      <li id="ctx-select-invert" data-key="ACCEL-KeyI" data-i18n="invert-selection">Invert Selection</li>
+      <li>-</li>
+      <li id="ctx-open-selected" data-icon="icon-launch" data-key="ACCEL-KeyO">Open</li>
+    </ul>
+  </template>
+  <template id="paused-template">
+    <h1 data-i18n="add-paused.title">Rememeber this decision</h1>
+    <p data-i18n="add-paused.question">Do you want to remember this decision and from now on always add downloads paused?</p>
+    <p><em data-i18n="change-later-reminder">You can later change it in the Preferences</em></p>
+  </template>
+</body>
+
+</html>
