@@ -29,8 +29,8 @@ function toKeyText(key: string) {
 }
 
 export interface MenuPosition {
-  clientX: number,
-  clientY: number,
+  clientX: number;
+  clientY: number;
 }
 
 export class MenuItemBase {
@@ -137,6 +137,7 @@ export class SubMenuItem extends MenuItemBase {
     this.elem.setAttribute("aria-role", "menuitem");
     this.elem.setAttribute("aria-haspopup", "true");
 
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     this.menu = new ContextMenu();
 
     this.expandElem = document.createElement("span");
@@ -177,7 +178,7 @@ export class SubMenuItem extends MenuItemBase {
 
   entered(event: MouseEvent) {
     const {target} = event;
-    const htarget = <HTMLElement> target;
+    const htarget = target as HTMLElement;
     if (htarget.classList.contains("context-menu")) {
       return;
     }
@@ -307,7 +308,7 @@ export class ContextMenu extends EventEmitter {
       Math.abs(event.clientY - origEvent.clientY) < CLICK_DIFF) {
       return;
     }
-    let el = <HTMLElement> event.target;
+    let el = event.target as HTMLElement;
     while (el) {
       if (el.classList.contains("context-menu")) {
         return;
@@ -386,7 +387,7 @@ export class ContextMenu extends EventEmitter {
       el.parentElement.removeChild(el);
     }
     if (el.localName === "template") {
-      el = <HTMLElement> (<HTMLTemplateElement> el).content.firstElementChild;
+      el = (el as HTMLTemplateElement).content.firstElementChild as HTMLElement;
     }
     if (el.className) {
       this.elem.className = el.className;
@@ -408,24 +409,24 @@ export class ContextMenu extends EventEmitter {
           if (sub) {
             throw new Error("Already has a submenu");
           }
-          if ((<HTMLElement> sc).localName !== "ul") {
+          if ((sc as HTMLElement).localName !== "ul") {
             throw new Error("Not a valid submenu");
           }
           sub = sc;
           break;
         default:
-          throw new Error(`Invalid node: ${(<HTMLElement> sc).localName}`);
+          throw new Error(`Invalid node: ${(sc as HTMLElement).localName}`);
         }
       }
       const joined = text.join(" ").trim();
       let item = null;
-      const ce = <HTMLElement> child;
+      const ce = child as HTMLElement;
       if (joined === "-") {
         item = new MenuSeperatorItem(this, child.id);
       }
       else if (sub) {
         item = new SubMenuItem(this, child.id, joined, ce.dataset);
-        item.constructFromTemplate(<HTMLElement> sub);
+        item.constructFromTemplate(sub as HTMLElement);
       }
       else {
         item = new MenuItem(this, child.id, joined, ce.dataset);

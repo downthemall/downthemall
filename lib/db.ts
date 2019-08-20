@@ -51,7 +51,7 @@ export const DB = new class DB {
     const store = transaction.objectStore(STORE);
     const index = store.index("by_position");
     index.openCursor().onsuccess = event => {
-      const cursor = (<IDBRequest<IDBCursorWithValue>> event.target).result;
+      const cursor = (event.target as IDBRequest<IDBCursorWithValue>).result;
       if (!cursor) {
         resolve(items);
         return;

@@ -113,6 +113,7 @@ export class AnimationPool {
    *   Your newly bound function.
    */
   wrap(fn: Function) {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self = this;
     return function wrapped(...args: any[]) {
       return self.schedule(this, fn, ...args);

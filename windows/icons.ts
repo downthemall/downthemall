@@ -8,7 +8,7 @@ export class Icons extends Map {
 
   constructor(el: HTMLStyleElement) {
     super();
-    this.sheet = <CSSStyleSheet> el.sheet;
+    this.sheet = el.sheet as CSSStyleSheet;
     this.running = 0;
   }
 

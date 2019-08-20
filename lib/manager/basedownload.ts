@@ -95,14 +95,15 @@ export class BaseDownload {
   }
 
   assign(options: any) {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self: any = this;
     for (const prop of SAVEDPROPS) {
       if (prop in options) {
         self[prop] = options[prop];
       }
     }
-    this.uURL = <URLd> new URL(this.url);
-    this.uReferrer = <URLd> (this.referrer && new URL(this.referrer));
+    this.uURL = new URL(this.url) as URLd;
+    this.uReferrer = (this.referrer && new URL(this.referrer)) as URLd;
     this.startDate = new Date(options.startDate || Date.now());
     if (options.paused) {
       this.state = PAUSED;
@@ -133,6 +134,7 @@ export class BaseDownload {
   }
 
   toJSON() {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self: any = this;
     const rv: any = {};
     for (const prop of SAVEDPROPS) {

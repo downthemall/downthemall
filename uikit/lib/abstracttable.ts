@@ -67,6 +67,7 @@ export class AbstractTable extends EventEmitter {
    */
   // eslint-disable-next-line no-unused-vars
   setCellCheck(rowid: number, colid: number, value: boolean) {
+    // ignored
   }
 
   /**

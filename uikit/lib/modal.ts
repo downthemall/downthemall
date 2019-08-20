@@ -87,7 +87,7 @@ export default class ModalDialog {
     return el;
   }
 
-  get content() : DocumentFragment | HTMLElement {
+  get content(): DocumentFragment | HTMLElement {
     throw new Error("Not implemented");
   }
 
@@ -119,13 +119,14 @@ export default class ModalDialog {
   }
 
   shown() {
+    // ignored
   }
 
   focusDefault() {
     this._default && this._default.focus();
   }
 
-  convertValue(value: string) : any {
+  convertValue(value: string): any {
     return value;
   }
 
@@ -148,7 +149,7 @@ export default class ModalDialog {
       if (e.key !== "Enter") {
         return;
       }
-      const {localName} = <HTMLElement> e.target;
+      const {localName} = e.target as HTMLElement;
       if (localName === "textarea" && !e.metaKey) {
         return;
       }

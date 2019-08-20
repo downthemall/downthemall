@@ -7,7 +7,10 @@ import { API } from "../api";
 import { BaseDownload } from "./basedownload";
 
 type SID = {sid: number};
-type SIDS = {sids: number[], forced?: boolean};
+type SIDS = {
+  sids: number[];
+  forced?: boolean;
+};
 
 export class ManagerPort {
   private manager: any;

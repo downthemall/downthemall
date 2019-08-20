@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 "use strict";
 // License: MIT
 
@@ -169,6 +170,7 @@ export default class Renamer {
 
   toString() {
     const {mask} = this.d;
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self: any = this;
     // XXX flat
     return sanitizePath(mask.replace(REPLACE_EXPR, function(type: string) {
@@ -230,7 +232,7 @@ function makeHTMLMap() {
 
 export function hookButton(maskButton: HTMLElement) {
   let maskMap: HTMLElement;
-  maskButton.addEventListener("click", (evt : MouseEvent) => {
+  maskButton.addEventListener("click", (evt: MouseEvent) => {
     evt.preventDefault();
     evt.stopPropagation();
 

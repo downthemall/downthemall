@@ -1,9 +1,9 @@
 "use strict";
 // License: MIT
 
-const re_tokenize = /(0x[0-9a-f]+|[+-]?[0-9]+(?:\.[0-9]*(?:e[+-]?[0-9]+)?)?|\d+)/i;
-const re_hex = /^0x[0-9a-z]+$/i;
-const re_trimmore = /\s+/g;
+const RE_TOKENIZE = /(0x[0-9a-f]+|[+-]?[0-9]+(?:\.[0-9]*(?:e[+-]?[0-9]+)?)?|\d+)/i;
+const RE_HEX = /^0x[0-9a-z]+$/i;
+const RE_TRIMMORE = /\s+/g;
 
 type KeyFunc<T> = (v: T) => any;
 type CompareFunc<T> = (a: T, b: T) => number;
@@ -14,31 +14,29 @@ type CompareFunc<T> = (a: T, b: T) => number;
  * @param {*} b Second value
  * @returns {number} Comparision result
  */
-export function default_compare(a: any, b: any) {
+export function defaultCompare(a: any, b: any) {
   return a < b ? -1 : (a > b ? 1 : 0);
 }
 
 
 function parseToken(chunk: string) {
-  chunk = chunk.replace(re_trimmore, " ").trim();
-  if (re_hex.test(chunk)) {
+  chunk = chunk.replace(RE_TRIMMORE, " ").trim();
+  if (RE_HEX.test(chunk)) {
     return parseInt(chunk.slice(2), 16);
   }
   const val = parseFloat(chunk);
   return Number.isNaN(val) ? chunk : val;
 }
 
-
-function token_filter(str: string) {
+function filterTokens(str: string) {
   return str && str.trim();
 }
-
 
 function tokenize(val: any) {
   if (typeof val === "number") {
     return [[`${val}`], [val]];
   }
-  const tokens = `${val}`.split(re_tokenize).filter(token_filter);
+  const tokens = `${val}`.split(RE_TOKENIZE).filter(filterTokens);
   const numeric = tokens.map(parseToken);
   return [tokens, numeric];
 }
@@ -76,8 +74,8 @@ export function naturalCompare(a: any, b: any): number {
     if (xisnum) {
       // both are numbers
       // Compare the numbers and if they are the same, the tokens too
-      const res = default_compare(xnum, ynum) ||
-          default_compare(xTokens[i], yTokens[i]);
+      const res = defaultCompare(xnum, ynum) ||
+          defaultCompare(xTokens[i], yTokens[i]);
       if (!res) {
         continue;
       }
@@ -86,13 +84,13 @@ export function naturalCompare(a: any, b: any): number {
 
     // both must be stringey
     // Compare the actual tokens.
-    const res = default_compare(xTokens[i], yTokens[i]);
+    const res = defaultCompare(xTokens[i], yTokens[i]);
     if (!res) {
       continue;
     }
     return res;
   }
-  return default_compare(xTokenLen, yTokenLen);
+  return defaultCompare(xTokenLen, yTokenLen);
 }
 
 /**
@@ -114,19 +112,19 @@ export function naturalCaseCompare(a: any, b: any) {
  * @param {cmpf} [cmp] Compare function or default_compare
  * @returns {number} Comparison result
  */
-export function array_compare(a: any, b: any, cmp: CompareFunc<any>): number {
-  cmp = cmp || default_compare;
+export function arrayCompare(a: any, b: any, cmp: CompareFunc<any>): number {
+  cmp = cmp || defaultCompare;
   if (Array.isArray(a) && Array.isArray(b)) {
     const {length: alen} = a;
     const {length: blen} = b;
     const len = Math.min(alen, blen);
     for (let i = 0; i < len; ++i) {
-      const rv = array_compare(a[i], b[i], cmp);
+      const rv = arrayCompare(a[i], b[i], cmp);
       if (rv) {
         return rv;
       }
     }
-    return default_compare(alen, blen);
+    return defaultCompare(alen, blen);
   }
   return cmp(a, b);
 }
@@ -137,12 +135,12 @@ interface MapValue {
   value: any;
 }
 
-function mapped_compare(
-    fn: CompareFunc<any>, a: MapValue, b: MapValue) : number {
+function mappedCompare(
+    fn: CompareFunc<any>, a: MapValue, b: MapValue): number {
   const {key: ka} = a;
   const {key: kb} = b;
-  return array_compare(ka, kb, fn) ||
-  /* stable */ default_compare(a.index, b.index);
+  return arrayCompare(ka, kb, fn) ||
+  /* stable */ defaultCompare(a.index, b.index);
 }
 
 /**
@@ -169,8 +167,8 @@ function mapped_compare(
  * @returns {*[]} New sorted array
  */
 export function sort<T>(arr: T[], key?: KeyFunc<T>, cmp?: CompareFunc<T>) {
-  cmp = cmp || default_compare;
-  const carr = <MapValue[]> <unknown> arr;
+  cmp = cmp || defaultCompare;
+  const carr = arr as unknown as MapValue[];
   if (key) {
     arr.forEach((value, index) => {
       carr[index] = {value, key: key(value), index};
@@ -181,7 +179,7 @@ export function sort<T>(arr: T[], key?: KeyFunc<T>, cmp?: CompareFunc<T>) {
       carr[index] = {value, key: value, index};
     });
   }
-  arr.sort(mapped_compare.bind(null, cmp));
+  arr.sort(mappedCompare.bind(null, cmp));
   carr.forEach((i, idx) => {
     arr[idx] = i.value;
   });
@@ -198,7 +196,7 @@ export function sort<T>(arr: T[], key?: KeyFunc<T>, cmp?: CompareFunc<T>) {
  * @returns {*[]} New sorted array
  */
 export function sorted<T>(arr: T[], key?: KeyFunc<T>, cmp?: CompareFunc<T>) {
-  cmp = cmp || default_compare;
+  cmp = cmp || defaultCompare;
   let carr: MapValue[];
   if (key) {
     carr = arr.map((value, index) => {
@@ -210,6 +208,6 @@ export function sorted<T>(arr: T[], key?: KeyFunc<T>, cmp?: CompareFunc<T>) {
       return {value, key: value, index};
     });
   }
-  carr.sort(mapped_compare.bind(null, cmp));
+  carr.sort(mappedCompare.bind(null, cmp));
   return carr.map(v => v.value);
 }

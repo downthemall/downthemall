@@ -78,7 +78,7 @@ const SIZE_SCALE = 875;
 const SIZE_KILO = 1024;
 
 export const formatSize = memoize(function formatSize(
-    size: number, fractions: boolean = true) {
+    size: number, fractions = true) {
   const neg = size < 0;
   size = Math.abs(size);
   let i = 0;

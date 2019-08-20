@@ -12,6 +12,7 @@ try {
   };
 }
 catch (ex) {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const cr = require("crypto");
 
   return function(size: number) {

@@ -147,7 +147,10 @@ export class Tooltip {
     this.update = this.update.bind(this);
     this.item = item;
     const tmpl = (
-      <HTMLTemplateElement> document.querySelector("#tooltip-template"));
+      document.querySelector<HTMLTemplateElement>("#tooltip-template"));
+    if (!tmpl) {
+      throw new Error("template failed");
+    }
     const el = tmpl.content.firstElementChild;
     if (!el) {
       throw new Error("invalid template");
@@ -155,8 +158,9 @@ export class Tooltip {
     this.elem = localize(el.cloneNode(true) as HTMLElement);
     this.adjust(pos);
 
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const self: any = this;
     ELEMS.forEach(e => {
-      const self: any = this;
       self[e] = this.elem.querySelector(`#tooltip-${e}`);
     });
     document.body.appendChild(this.elem);

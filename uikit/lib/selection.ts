@@ -303,7 +303,7 @@ export class TableSelection extends EventEmitter {
       newSelection._add(pos, r.end + offset);
     }
     this.ranges.length = 0;
-    this.ranges.push.apply(this.ranges, newSelection.ranges);
+    this.ranges.push(...newSelection.ranges);
   }
 
   clear() {

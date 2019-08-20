@@ -63,6 +63,7 @@ export class EventEmitter {
   once(event: string, cb: (...args: any[]) => any) {
     const wrapped = (...args: any[]) => {
       try {
+        // eslint-disable-next-line prefer-spread
         return cb.apply(null, args);
       }
       finally {
@@ -102,6 +103,7 @@ export class EventEmitter {
     }
     for (const e of Array.from(handlers)) {
       try {
+        // eslint-disable-next-line prefer-spread
         handled = handled || !!e.apply(null, args);
       }
       catch (ex) {

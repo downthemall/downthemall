@@ -38,7 +38,7 @@ export class Broadcaster {
   }
 
   onkey(evt: KeyboardEvent) {
-    const {localName} = <HTMLElement> evt.target;
+    const {localName} = evt.target as HTMLElement;
     if (localName === "input" || localName === "textarea") {
       return undefined;
     }

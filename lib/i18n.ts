@@ -3,6 +3,50 @@
 
 import {memoize} from "./memoize";
 
+function load() {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const {i18n} = require("webextension-polyfill");
+
+    return i18n;
+  }
+  catch (ex) {
+    // We might be running under node for tests
+
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const messages = require("../_locales/en/messages.json");
+
+    const map = new Map();
+    for (const [k, v] of Object.entries<any>(messages)) {
+      const {placeholders = {}} = v;
+      let {message = ""} = v;
+      for (const [pname, pval] of Object.entries<any>(placeholders)) {
+        message = message.replace(`$${pname.toUpperCase()}$`, `${pval.content}$`);
+      }
+      map.set(k, message);
+    }
+
+    return {
+      getMessage(id: string, subst: string[]) {
+        const m = map.get(id);
+        if (typeof subst === undefined) {
+          return m;
+        }
+        if (!Array.isArray(subst)) {
+          subst = [subst];
+        }
+        return m.replace(/\$\d+\$/g, (r: string) => {
+          const idx = parseInt(r.substr(1, r.length - 2), 10) - 1;
+          return subst[idx] || "";
+        });
+      }
+    };
+  }
+}
+
+const i18n = load();
+const memoGetMessage = memoize(i18n.getMessage, 10 * 1000, 0);
+
 /**
  * Localize a message
  * @param {string} id Identifier of the string to localize
@@ -58,46 +102,5 @@ function localize(elem: HTMLElement) {
   return elem;
 }
 
-function load() {
-  try {
-    const {i18n} = require("webextension-polyfill");
-
-    return i18n;
-  }
-  catch (ex) {
-    // We might be running under node for tests
-
-    const messages = require("../_locales/en/messages.json");
-
-    const map = new Map();
-    for (const [k, v] of Object.entries<any>(messages)) {
-      const {placeholders = {}} = v;
-      let {message = ""} = v;
-      for (const [pname, pval] of Object.entries<any>(placeholders)) {
-        message = message.replace(`$${pname.toUpperCase()}$`, `${pval.content}$`);
-      }
-      map.set(k, message);
-    }
-
-    return {
-      getMessage(id: string, subst: string[]) {
-        const m = map.get(id);
-        if (typeof subst === undefined) {
-          return m;
-        }
-        if (!Array.isArray(subst)) {
-          subst = [subst];
-        }
-        return m.replace(/\$\d+\$/g, (r: string) => {
-          const idx = parseInt(r.substr(1, r.length - 2), 10) - 1;
-          return subst[idx] || "";
-        });
-      }
-    };
-  }
-}
-
-const i18n = load();
-const memoGetMessage = memoize(i18n.getMessage, 10 * 1000, 0);
 
 export {localize, _};

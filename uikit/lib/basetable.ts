@@ -79,7 +79,7 @@ export class BaseTable extends AbstractTable {
 
   [COLS]: Columns;
 
-  constructor(elem : any, config: any, version?: number) {
+  constructor(elem: any, config: any, version?: number) {
     config = (config && config.version === version && config) || {};
     super();
 
@@ -168,6 +168,7 @@ export class BaseTable extends AbstractTable {
   }
 
   init() {
+    // ignored
   }
 
   /* do not override unless you know what you're doing */
@@ -471,7 +472,7 @@ export class BaseTable extends AbstractTable {
   }
 
   isCheckClick(evt: MouseEvent) {
-    return /virtualtable-check/.test((<HTMLElement> evt.target).className) &&
+    return /virtualtable-check/.test((evt.target as HTMLElement).className) &&
       !evt.ctrlKey && !evt.shiftKey && !evt.metaKey;
   }
 

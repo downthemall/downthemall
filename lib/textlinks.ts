@@ -73,6 +73,7 @@ export class FakeLink {
   }
 
   getAttribute(attr: string) {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self: any = this;
     return (attr in self) ? self[attr] : null;
   }

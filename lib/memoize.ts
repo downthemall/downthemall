@@ -31,14 +31,14 @@ type MemoizeFun<T> = (...args: any[]) => T;
  *
  * @param {Function} func The function to be memoized
  * @param {Number} [limit] Optional. Cache size (default: 3000)
- * @param {Number} [num_args] Options. Number of arguments the function expects
+ * @param {Number} [numArgs] Options. Number of arguments the function expects
  * (default: func.length)
  * @returns {Function} Memoized function
  */
 export function memoize<T>(
-    func: MemoizeFun<T>, limit?: number, num_args?: number): MemoizeFun<T> {
+    func: MemoizeFun<T>, limit?: number, numArgs?: number): MemoizeFun<T> {
   const climit = limit && limit > 0 ? limit : DEFAULT_LIMIT;
-  num_args = num_args || func.length;
+  numArgs = numArgs || func.length;
 
   const cache = new Map();
   memoes.push(cache);
@@ -46,12 +46,12 @@ export function memoize<T>(
   const args: any[] = [];
   let key; let result;
 
-  switch (num_args) {
+  switch (numArgs) {
   case 0:
     throw new Error("memoize does not support functions without arguments");
 
   case 1:
-    return function memoize_one_arg(a: any) {
+    return function memoizeOne(a: any) {
       key = a.spec || a;
       if (cache.has(key)) {
         return cache.get(key);
@@ -66,7 +66,7 @@ export function memoize<T>(
     };
 
   case 2:
-    return function memoize_two_args(a: any, b: any) {
+    return function memoizeTwo(a: any, b: any) {
       args[0] = a; args[1] = b;
       key = JSON.stringify(args);
       args.length = 0;
@@ -84,7 +84,7 @@ export function memoize<T>(
     };
 
   case 3:
-    return function memoize_three_args(a: any, b: any, c: any) {
+    return function memoizeThree(a: any, b: any, c: any) {
       args[0] = a; args[1] = b; args[2] = c;
       key = JSON.stringify(args);
       args.length = 0;
@@ -102,7 +102,7 @@ export function memoize<T>(
     };
 
   case 4:
-    return function memoize_four_args(a: any, b: any, c: any, d: any) {
+    return function memoizeFour(a: any, b: any, c: any, d: any) {
       args[0] = a; args[1] = b; args[2] = c; args[3] = d;
       key = JSON.stringify(args);
       args.length = 0;

@@ -5,7 +5,7 @@ const RUNNING = Symbol();
 const LIMIT = Symbol();
 const ITEMS = Symbol();
 
-function nothing() {}
+function nothing() { /* ignored */ }
 
 type Wrapped<T> = (...args: any[]) => Promise<T>;
 
@@ -79,7 +79,7 @@ export class PromiseSerializer {
     return this.scheduled + this.running;
   }
 
-  static wrapNew<T>(limit: number, ctx: any, fn: Function) : Wrapped<T> {
+  static wrapNew<T>(limit: number, ctx: any, fn: Function): Wrapped<T> {
     return new PromiseSerializer(limit).wrap(ctx, fn);
   }
 

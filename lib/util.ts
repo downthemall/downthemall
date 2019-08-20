@@ -47,7 +47,21 @@ export function lazy<T>(object: any, name: string, fun: (...any: any[]) => T) {
   return object;
 }
 
-export function none() { }
+export function none() { /* ignored */ }
+
+export const sanitizePath = identity(function sanitizePath(path: string) {
+  return path.
+    replace(/:+/g, "ː").
+    replace(/\?+/g, "_").
+    replace(/\*+/g, "_").
+    replace(/<+/g, "◄").
+    replace(/>+/g, "▶").
+    replace(/"+/g, "'").
+    replace(/\|+/g, "¦").
+    replace(/#+/g, "♯").
+    replace(/[.\s]+$/g, "").
+    trim();
+});
 
 // XXX cleanup + test
 export const parsePath = memoize(function parsePath(path: string | URL) {
@@ -89,21 +103,6 @@ export const parsePath = memoize(function parsePath(path: string | URL) {
   };
 });
 
-export const sanitizePath = identity(function sanitizePath(path: string) {
-  return path.
-    replace(/:+/g, "ː").
-    replace(/\?+/g, "_").
-    replace(/\*+/g, "_").
-    replace(/<+/g, "◄").
-    replace(/>+/g, "▶").
-    replace(/"+/g, "'").
-    replace(/\|+/g, "¦").
-    replace(/#+/g, "♯").
-    replace(/[.\s]+$/g, "").
-    trim();
-});
-
-
 export class CoalescedUpdate<T> extends Set<T> {
   private readonly to: number;
 
@@ -141,7 +140,7 @@ export class CoalescedUpdate<T> extends Set<T> {
 export const hostToDomain = memoize(psl.get, 1000);
 
 export interface URLd extends URL {
-  domain: string
+  domain: string;
 }
 
 Object.defineProperty(URL.prototype, "domain", {
@@ -188,7 +187,8 @@ export function filterInSitu<T>(arr: T[], cb: (value: T) => boolean, tp?: any) {
  */
 export function mapInSitu<TRes, T>(arr: T[], cb: (value: T) => TRes, tp?: any) {
   tp = tp || null;
-  const carr = <TRes[]> <unknown> arr;
+  const carr = arr as unknown as TRes[];
+
   for (let i = 0, e = arr.length; i < e; i++) {
     carr[i] = cb.call(tp, arr[i], i, arr);
   }
@@ -209,7 +209,7 @@ export function filterMapInSitu<TRes, T>(
     mapStep: (value: T) => TRes,
     tp?: any) {
   tp = tp || null;
-  const carr = <TRes[]> <unknown> arr;
+  const carr = arr as unknown as TRes[];
 
   let i; let k; let e;
   for (i = 0, k = 0, e = arr.length; i < e; i++) {
@@ -238,7 +238,7 @@ export function mapFilterInSitu<TRes, T>(
     filterStep: (value: T) => boolean,
     tp?: any) {
   tp = tp || null;
-  const carr = <TRes[]> <unknown> arr;
+  const carr = arr as unknown as TRes[];
 
   let i; let k; let e;
   for (i = 0, k = 0, e = arr.length; i < e; i++) {

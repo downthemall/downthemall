@@ -12,8 +12,9 @@ import {
   MenuPosition,
 } from "../../uikit/lib/contextmenu";
 import {EventEmitter} from "../../lib/events";
-import {filters, Matcher} from "../../lib/filters";
-import {sort, default_compare, naturalCaseCompare} from "../../lib/sorting";
+// eslint-disable-next-line no-unused-vars
+import {filters, Matcher, Filter} from "../../lib/filters";
+import {sort, defaultCompare, naturalCaseCompare} from "../../lib/sorting";
 // eslint-disable-next-line no-unused-vars
 import {DownloadItem, DownloadTable} from "./table";
 import {formatSize} from "../../lib/formatters";
@@ -162,7 +163,10 @@ export class MenuFilter extends ItemFilter {
       if (!callback) {
         continue;
       }
-      this.toggleItem(<MenuItem> item);
+      if (!(item instanceof MenuItem)) {
+        continue;
+      }
+      this.toggleItem(item);
       callback.apply(this);
     }
   }
@@ -188,7 +192,10 @@ export class MenuFilter extends ItemFilter {
     if (!item) {
       return;
     }
-    this.toggleItem(<MenuItem> item);
+    if (!(item instanceof MenuItem)) {
+      return;
+    }
+    this.toggleItem(item);
     if (callback) {
       callback.call(this);
     }
@@ -300,7 +307,7 @@ export class SizeMenuFilter extends FixedMenuFilter {
 export class UrlMenuFilter extends MenuFilter {
   collection: FilteredCollection;
 
-  filters: Set<any>;
+  filters: Set<Filter>;
 
   domains: Set<string>;
 
@@ -364,7 +371,7 @@ export class UrlMenuFilter extends MenuFilter {
     }
     else {
       const exprs = Array.from(this.filters).map(f => Array.from(f)).flat();
-      this.matcher = new Matcher(<RegExp[]> exprs);
+      this.matcher = new Matcher(exprs);
     }
 
     this.collection.addFilter(this);
@@ -570,7 +577,7 @@ export class FilteredCollection extends EventEmitter {
    * @param {boolean} [natural] Sort naturally
    */
   sort(keyfn: (i: DownloadItem) => any, descending = false, natural = false) {
-    const cmp = natural ? naturalCaseCompare : default_compare;
+    const cmp = natural ? naturalCaseCompare : defaultCompare;
     let cmpfn = cmp;
     if (descending) {
       cmpfn = (a, b) => -cmp(a, b);

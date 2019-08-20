@@ -74,7 +74,7 @@ export const Limits = new class Limits extends EventEmitter {
     this.concurrent = await Prefs.get("concurrent", this.concurrent);
     const rawlimits = await Prefs.get("limits");
     this.limits = new Map(rawlimits.map((e: any) => [e.domain, new Limit(e)]));
-    this.load = <() => Promise<void>> <unknown> (() => {});
+    this.load = (() => {}) as unknown as () => Promise<void>;
     this.emit("changed");
   }
 

@@ -24,7 +24,7 @@ export class Dropdown extends EventEmitter {
     this.container.classList.add("dropdown");
 
     input = input.parentElement.replaceChild(this.container, input);
-    this.input = <HTMLInputElement> input;
+    this.input = input as HTMLInputElement;
     this.container.appendChild(this.input);
 
     this.select = document.createElement("select");
