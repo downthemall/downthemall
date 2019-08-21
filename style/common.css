@@ -173,12 +173,9 @@ section {
   text-align: end;
 }
 
-.virtualtable-container {
+.virtualtable {
   font: message-box;
-}
-
-*[data-platform="linux"] .virtualtable-container {
-  font-size: 12pt !important;
+  font-size: 12px;
 }
 
 .virtualtable-column {
