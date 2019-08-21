@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import json
 import os
+import sys
 
+from datetime import datetime
 from collections import OrderedDict
-from glob import glob
 from pathlib import Path
 from subprocess import check_call as run
 from zipfile import (ZipFile, ZipInfo, ZIP_DEFLATED, ZIP_STORED)
@@ -19,8 +20,10 @@ FILES = [
   "LICENSE.*",
 ]
 
+RELEASE_ID = "{DDC359D1-844A-42a7-9AA1-88A850A938A8}"
+
 UNCOMPRESSABLE = set((".png", ".jpg", ".zip", ".woff2"))
-LICENSED = set((".css", ".html", ".js"))
+LICENSED = set((".css", ".html", ".js", "*.ts"))
 IGNORED = set((".DS_Store", "Thumbs.db"))
 
 PERM_IGNORED_FX = set(("downloads.shelf",))
@@ -68,23 +71,48 @@ def build(out, manifest):
       print(file)
 
 
-def build_firefox():
+def build_firefox(args):
+  now = datetime.now().strftime("%Y%m%d%H%M%S")
   with open("manifest.json") as manip:
     infos = json.load(manip, object_pairs_hook=OrderedDict)
+
   version = infos.get("version")
+  if args.mode == "nightly":
+    version = infos["version"] = f"{version}.{now}"
+
+  version = infos.get("version")
+
+  if args.mode != "release":
+    infos["version_name"] = f"{version}-{args.mode}"
+    infos["browser_specific_settings"]["gecko"]["id"] = f"{args.mode}@downthemall.org"
+  else:
+    infos["browser_specific_settings"]["gecko"]["id"] = RELEASE_ID
+
+
   
   infos["permissions"] = [p for p in infos.get("permissions") if not p in PERM_IGNORED_FX]
-  out = Path("web-ext-artifacts") / f"dta-{version}-fx.zip"
+  out = Path("web-ext-artifacts") / f"dta-{version}-{args.mode}-fx.zip"
+  if not out.parent.exists():
+    out.parent.mkdir()
   if out.exists():
     out.unlink()
-  print(out)
-  build(out, json.dumps(infos).encode("utf-8"))
+  print("Output", out)
+  build(out, json.dumps(infos, indent=2).encode("utf-8"))
 
 def main():
+  from argparse import ArgumentParser
+  args = ArgumentParser()
+  args.add_argument("--mode",
+    type=str, default="dev", choices=["dev", "beta", "release", "nightly"])
+  args = args.parse_args(sys.argv[1:])
   check_licenses()
   for script in SCRIPTS:
-    run([script], shell=True)
-  build_firefox()
+    if os.name == "nt":
+      run(script.split(" "), shell=True)
+    else:
+      run([script], shell=True)
+  build_firefox(args)
+  print("DONE.")
 
 if __name__ == "__main__":
   main()
