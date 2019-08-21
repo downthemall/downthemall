@@ -91,19 +91,19 @@ export class PromiseSerializer {
     return rv;
   }
 
-  schedule<T>(fn: Function, ...args: any[]): Promise<T> {
+  schedule<T>(fn: Wrapped<T>, ...args: any[]): Promise<T> {
     return this.scheduleWithContext(null, fn, ...args);
   }
 
-  scheduleWithContext<T>(ctx: any, fn: Function, ...args: any[]): Promise<T> {
+  scheduleWithContext<T>(ctx: any, fn: Wrapped<T>, ...args: any[]): Promise<T> {
     return scheduleInternal.call(this, false, ctx, fn, ...args);
   }
 
-  prepend<T>(fn: Function, ...args: any[]): Promise<T> {
+  prepend<T>(fn: Wrapped<T>, ...args: any[]): Promise<T> {
     return this.prependWithContext(null, fn, ...args);
   }
 
-  prependWithContext<T>(ctx: any, fn: Function, ...args: any[]): Promise<T> {
+  prependWithContext<T>(ctx: any, fn: Wrapped<T>, ...args: any[]): Promise<T> {
     return scheduleInternal.call(this, true, ctx, fn, ...args);
   }
 

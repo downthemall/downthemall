@@ -165,17 +165,23 @@ Object.defineProperty(URL.prototype, "domain", {
  * @param {Object} tp
  * @returns {Array} Filtered array (identity)
  */
-export function filterInSitu<T>(arr: T[], cb: (value: T) => boolean, tp?: any) {
+export function filterInSitu<T>(
+    arr: (T | null | undefined)[], cb: (value: T) => boolean, tp?: any) {
   tp = tp || null;
   let i; let k; let e;
+  const carr = arr as unknown as T[];
   for (i = 0, k = 0, e = arr.length; i < e; i++) {
-    const a = arr[k] = arr[i]; // replace filtered items
-    if (a && cb.call(tp, a, i, arr)) {
+    const a = arr[i]; // replace filtered items
+    if (!a) {
+      continue;
+    }
+    if (cb.call(tp, a, i, arr)) {
+      carr[k] = a;
       k += 1;
     }
   }
-  arr.length = k; // truncate
-  return arr;
+  carr.length = k; // truncate
+  return carr;
 }
 
 /**

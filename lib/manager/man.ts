@@ -10,7 +10,7 @@ import { Bus, Port } from "../bus";
 import { sort } from "../sorting";
 import { Prefs } from "../prefs";
 import { _ } from "../i18n";
-import { CoalescedUpdate, mapFilterInSitu } from "../util";
+import { CoalescedUpdate, mapFilterInSitu, filterInSitu } from "../util";
 import { PromiseSerializer } from "../pserializer";
 import {Download} from "./download";
 import {ManagerPort} from "./port";
@@ -94,8 +94,14 @@ export class Manager extends EventEmitter {
     return this;
   }
 
-  checkMissing() {
-    this.items.forEach(item => item.maybeMissing());
+  async checkMissing() {
+    const serializer = new PromiseSerializer(2);
+    const missing = await Promise.all(this.items.map(
+      item => serializer.scheduleWithContext(item, item.maybeMissing)));
+    if (!(await Prefs.get("remove-missing-on-init"))) {
+      return;
+    }
+    this.remove(filterInSitu(missing, e => !!e));
   }
 
   onChanged(changes: {id: number}) {

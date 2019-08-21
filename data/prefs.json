@@ -11,6 +11,7 @@
 	"nagging-next": 6,
 	"tooltip": true,
 	"show-urls": false,
+	"remove-missing-on-init": false,
 	"limits": [
 		{
 			"domain": "*",

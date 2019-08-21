@@ -206,19 +206,22 @@ export class Download extends BaseDownload {
 
   async maybeMissing() {
     if (!this.manId) {
-      return;
+      return null;
     }
     const {manId: id} = this;
     try {
       const dls = await downloads.search({id});
       if (!dls.length) {
         this.setMissing();
+        return this;
       }
     }
     catch (ex) {
       console.error("oops", id, ex.toString(), ex);
       this.setMissing();
+      return this;
     }
+    return null;
   }
 
   adoptSize(state: any) {

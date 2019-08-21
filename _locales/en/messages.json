@@ -461,6 +461,10 @@
     "description": "",
     "message": "Show a notification when queueing new downloads"
   },
+  "pref-remove-missing-on-init": {
+    "description": "",
+    "message": "Remove missing downloads after a restart"
+  },
   "pref-show-urls": {
     "description": "",
     "message": "Show URLs instead of Names"
