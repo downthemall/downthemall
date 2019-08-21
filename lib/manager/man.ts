@@ -21,6 +21,8 @@ import { downloads } from "../browser";
 
 const AUTOSAVE_TIMEOUT = 2000;
 const DIRTY_TIMEOUT = 100;
+// eslint-disable-next-line no-magic-numbers
+const MISSING_TIMEOUT = 12 * 1000;
 
 export class Manager extends EventEmitter {
   private items: Download[];
@@ -88,7 +90,12 @@ export class Manager extends EventEmitter {
     });
     await this.resetScheduler();
     this.emit("inited");
+    setTimeout(() => this.checkMissing(), MISSING_TIMEOUT);
     return this;
+  }
+
+  checkMissing() {
+    this.items.forEach(item => item.maybeMissing());
   }
 
   onChanged(changes: {id: number}) {

@@ -14,8 +14,6 @@ import { Manager } from "./man";
 import { downloads } from "../browser";
 
 
-const MAYBE_SERIALIZER = new PromiseSerializer(1);
-
 const setShelfEnabled = downloads.setShelfEnabled || function() {
   // ignored
 };
@@ -34,10 +32,7 @@ export class Download extends BaseDownload {
   constructor(manager: Manager, options: any) {
     super(options);
     this.manager = manager;
-    if (this.manId) {
-      MAYBE_SERIALIZER.schedule(() => this.maybeMissing());
-    }
-    this.start = MAYBE_SERIALIZER.wrap(this, this.start);
+    this.start = PromiseSerializer.wrapNew(1, this, this.start);
     this.removed = false;
     this.position = -1;
   }
@@ -215,7 +210,8 @@ export class Download extends BaseDownload {
     }
     const {manId: id} = this;
     try {
-      if (!(await downloads.search({id})).length) {
+      const dls = await downloads.search({id});
+      if (!dls.length) {
         this.setMissing();
       }
     }
