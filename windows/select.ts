@@ -536,7 +536,7 @@ async function download(paused = false) {
         Keys.suppressed = false;
       }
     }
-    else if (!paused) {
+    if (!paused) {
       await Prefs.set("add-paused", false);
     }
     PORT.postMessage({
