@@ -126,8 +126,9 @@ export class Download extends BaseDownload {
       this.markDirty();
     }
     catch (ex) {
-      console.error("failed", ex.toString(), ex);
+      console.error("failed to start download", ex.toString(), ex);
       this.changeState(CANCELED);
+      this.error = ex.toString();
     }
   }
 
