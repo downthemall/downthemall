@@ -175,6 +175,10 @@ section {
   font: message-box;
 }
 
+*[data-platform="linux"] .virtualtable-container {
+  font-size: 12pt !important;
+}
+
 .virtualtable-column {
   cursor: pointer;
 }
@@ -184,11 +188,9 @@ section {
 }
 
 th.virtualtable {
-  font: caption;
   font-weight: bold;
 }
 td.virtualtable {
-  font: message-box;
   line-height: 16px;
   vertical-align: middle;
 }

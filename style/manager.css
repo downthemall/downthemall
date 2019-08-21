@@ -371,6 +371,9 @@ body > * {
   }
 }
 
+#nagging, #nagging * {
+  font-size: 10pt !important;
+}
 #nagging {
   border-top: 1px solid lightgray;
   display: grid;
@@ -383,7 +386,7 @@ body > * {
   min-height: 2em;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   #nagging-message {
     grid-column: 1 / -1;
   }
