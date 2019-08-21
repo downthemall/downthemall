@@ -49,7 +49,7 @@ export function lazy<T>(object: any, name: string, fun: (...any: any[]) => T) {
 
 export function none() { /* ignored */ }
 
-export const sanitizePath = identity(function sanitizePath(path: string) {
+export function sanitizePathGeneric(path: string) {
   return path.
     replace(/:+/g, "ː").
     replace(/\?+/g, "_").
@@ -61,7 +61,40 @@ export const sanitizePath = identity(function sanitizePath(path: string) {
     replace(/#+/g, "♯").
     replace(/[.\s]+$/g, "").
     trim();
-});
+}
+
+const REG_TRIMMORE = /^[\s.]+|[\s.]+$/g;
+const REG_RESERVED = new RegExp(
+  `^(?:${"CON, PRN, AUX, NUL, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9".split(", ").join("|")})(?:\\..*)$`,
+  "i");
+
+export function sanitizePathWindows(path: string) {
+  path = path.
+    replace(/:+/g, "ː").
+    replace(/\?+/g, "_").
+    replace(/\*+/g, "_").
+    replace(/<+/g, "◄").
+    replace(/>+/g, "▶").
+    replace(/"+/g, "'").
+    replace(/\|+/g, "¦").
+    replace(/#+/g, "♯").
+    replace(/[.\s]+$/g, "").
+    replace(REG_TRIMMORE, "");
+  // Legacy file names
+  if (REG_RESERVED.test(path)) {
+    path = `!${path}`;
+  }
+  return path;
+}
+
+// Cannot use browser.runtime here
+export const IS_WIN = typeof navigator !== "undefined" &&
+  navigator.platform &&
+  navigator.platform.includes("Win");
+
+
+export const sanitizePath = identity(
+  IS_WIN ? sanitizePathWindows : sanitizePathGeneric);
 
 // XXX cleanup + test
 export const parsePath = memoize(function parsePath(path: string | URL) {
