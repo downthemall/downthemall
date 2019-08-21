@@ -206,6 +206,7 @@ td.virtualtable {
 
 #status {
   font: status-bar;
+  font-size: 10pt;
   align-items: stretch;
   justify-items: center;
   background: linear-gradient(to bottom, rgba(128,128,128,0.1) 0%,rgba(0,0,0,0) 100%);
