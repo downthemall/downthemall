@@ -92,23 +92,29 @@ class Gatherer {
     this.schemes = new Set(options.schemes);
     this.transferable = options.transferable;
     this.collectLink = this.collectLink.bind(this);
-    this.collectImages = this.collectImages.bind(this);
+    this.collectImage = this.collectImage.bind(this);
     this.collectMedia = this.collectMedia.bind(this);
     Object.freeze(this);
   }
 
   collectLink(a: HTMLAnchorElement) {
-    const item = this.makeItem(a.href, a);
-    if (!item) {
+    try {
+      const item = this.makeItem(a.href, a);
+      if (!item) {
+        return item;
+      }
+      urlToUsable(item, item.url);
+      item.fileName = sanitize(a.getAttribute("download"));
+      item.description = extractDescription(a);
       return item;
     }
-    urlToUsable(item, item.url);
-    item.fileName = sanitize(a.getAttribute("download"));
-    item.description = extractDescription(a);
-    return item;
+    catch (ex) {
+      console.error("oopsed link", ex.toString(), ex);
+    }
+    return null;
   }
 
-  *collectImagesInternal(img: HTMLImageElement) {
+  *collectImageInternal(img: HTMLImageElement) {
     try {
       const src = img.currentSrc || img.src;
       const item = this.makeItem(src, img);
@@ -140,8 +146,8 @@ class Gatherer {
     }
   }
 
-  collectImages(img: HTMLImageElement) {
-    return [...this.collectImagesInternal(img)];
+  collectImage(img: HTMLImageElement) {
+    return [...this.collectImageInternal(img)];
   }
 
   collectMediaInternal(title: string | undefined | null, el: HTMLMediaElement) {
@@ -165,13 +171,19 @@ class Gatherer {
   }
 
   collectMedia(el: HTMLMediaElement) {
-    const item = this.collectMediaInternal(el.getAttribute("title"), el);
-    const rv = item ? [item] : [];
-    const title: string | undefined = item && item.title ||
+    try {
+      const item = this.collectMediaInternal(el.getAttribute("title"), el);
+      const rv = item ? [item] : [];
+      const title: string | undefined = item && item.title ||
       el.getAttribute("title");
-    rv.push(...Array.from(el.querySelectorAll("source")).
-      map(this.collectMediaInternal.bind(this, title)));
-    return rv;
+      rv.push(...Array.from(el.querySelectorAll("source")).
+        map(this.collectMediaInternal.bind(this, title)));
+      return rv;
+    }
+    catch (ex) {
+      console.log("oopsed media", ex.toString(), ex);
+    }
+    return [];
   }
 
   *findTexts() {
@@ -216,8 +228,14 @@ class Gatherer {
     if (!this.textLinks) {
       return [];
     }
-    return Array.from(this.findTextLinks()).
-      map(link => this.makeItem(link.href, link));
+    try {
+      return Array.from(this.findTextLinks()).
+        map(link => this.makeItem(link.href, link));
+    }
+    catch (ex) {
+      console.error("oopsed textlinks", ex.toString(), ex);
+    }
+    return [];
   }
 
   makeItem(surl: string, el: HTMLElement, title?: string | null): any {
@@ -285,7 +303,7 @@ function gather(msg: any, sender: any, callback: Function) {
         gatherer.collectTextLinks()),
       media: gatherer.makeUniqueItems(
         Array.from(document.querySelectorAll("img")).
-          flatMap(gatherer.collectImages),
+          flatMap(gatherer.collectImage),
         Array.from(document.querySelectorAll("video")).
           flatMap(gatherer.collectMedia),
         Array.from(document.querySelectorAll("audio")).
