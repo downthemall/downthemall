@@ -3,14 +3,6 @@ TODO
 
 aka a lot
 
-P1
-===
-
-Musts.
-
-* packaging
-  * signing
-
 P2
 ===
 
