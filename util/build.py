@@ -85,6 +85,8 @@ def build_firefox(args):
   if args.mode != "release":
     infos["version_name"] = f"{version}-{args.mode}"
     infos["browser_specific_settings"]["gecko"]["id"] = f"{args.mode}@downthemall.org"
+    infos["short_name"] = infos.get("name")
+    infos["name"] = f"{infos.get('name')} {args.mode}"
   else:
     infos["browser_specific_settings"]["gecko"]["id"] = RELEASE_ID
 
