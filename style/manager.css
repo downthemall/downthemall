@@ -276,9 +276,13 @@ body > * {
   flex-grow: 0 !important;
   cursor: pointer;
 }
-#statusNetwork:before {
-  font-weight: bold !important;
+
+@media (min-resolution: 144dpi) {
+  #statusNetwork:before {
+    font-weight: bold !important;
+  }
 }
+
 #statusNetwork.icon-network-off {
   color: crimson;
 }

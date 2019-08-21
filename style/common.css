@@ -104,8 +104,10 @@ html[data-platform="mac"] {
 .icon-server:before { content: '\f233'; } /* '' */
 .icon-question-light:before { content: '\f29c'; } /* '' */
 
-[class^="icon-file-"]:before, [class*=" icon-file-"]:before {
-  font-weight: bold !important;
+@media (min-resolution: 144dpi) {
+  [class^="icon-file-"]:before, [class*=" icon-file-"]:before {
+    font-weight: bold !important;
+  }
 }
 
 .icon-file-image {
