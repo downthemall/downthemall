@@ -208,7 +208,7 @@ td.virtualtable {
 
 #status {
   font: status-bar;
-  font-size: 10pt;
+  font-size: 12px;
   align-items: stretch;
   justify-items: center;
   background: linear-gradient(to bottom, rgba(128,128,128,0.1) 0%,rgba(0,0,0,0) 100%);
@@ -232,6 +232,8 @@ td.virtualtable {
 #status > * {
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #status > *:not(:last-child) {
   flex-grow: 3;
