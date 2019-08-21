@@ -56,6 +56,8 @@ P4
 
 Stuff that probably cannot be implemented due to WeberEension limitations.
 
+* Avoid downloads going "missing" after a browser restart.
+  * Firefox helpfully keeps different lists of downloads. One for newly added downloads, and other ones for "previous" downloads. Turns out the WebExtension API only ever queries the "new" list.
 * Segmented downloads
   * Cannot be done with WebExtensions - downloads API has no support and manually downloading, storing in temporary add-on storage and reassmbling the downloaded parts later is not only efficient but does not reliabliy work due to storage limitations.
 * Handle errors, 404 and such
