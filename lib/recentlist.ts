@@ -102,8 +102,8 @@ export const MASK = new RecentList("mask", [
   "*name*.*ext*",
   "*num*_*name*.*ext*",
   "*url*-*name*.*ext*",
-  "*name* (*text*).*ext*",
-  "*name* (*hh*-*mm*).*ext*"
+  "downthemall/*y*-*m*/*name*.*ext*",
+  "*name* (*text*).*ext*"
 ]);
 MASK.init().catch(console.error);
 
