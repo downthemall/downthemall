@@ -147,6 +147,7 @@ export class Manager extends EventEmitter {
       }
       catch (ex) {
         next.changeState(CANCELED);
+        next.error = ex.toString();
         console.error(ex.toString(), ex);
       }
     }
