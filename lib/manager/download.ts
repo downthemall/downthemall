@@ -90,10 +90,7 @@ export class Download extends BaseDownload {
         filename: this.dest.full,
         saveAs: false,
         url: this.url,
-        headers: [{
-          name: "X-DTA-Tag",
-          value: this.sessionId.toString(),
-        }],
+        headers: [],
       };
       if (this.postData) {
         options.body = this.postData;
