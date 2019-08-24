@@ -266,7 +266,6 @@ export class Manager extends EventEmitter {
   changedState(download: Download, oldState: number, newState: number) {
     if (oldState === RUNNING) {
       this.running.delete(download);
-      this.maybeNotifyFinished();
     }
     if (newState === QUEUED) {
       this.resetScheduler();
@@ -279,7 +278,7 @@ export class Manager extends EventEmitter {
       this.running.add(download);
     }
     else {
-      this.startNext();
+      this.startNext().catch(console.error);
     }
   }
 
