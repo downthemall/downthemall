@@ -46,6 +46,11 @@ body > * {
   background: rgb(246,246,246);
   color: black;
   transition: box-shadow 0.5s, background 1s;
+  font-size: 24px;
+  line-height: 24px;
+}
+#toolbar > .button > span:before {
+  display: block;
 }
 
 #toolbar > .button.disabled {
@@ -61,13 +66,6 @@ body > * {
 
 #toolbar > .button:active {
   box-shadow: 0px 0px 7px 2px rgba(220,220,220,0.75);
-}
-
-#toolbar > .button > span {
-  display: block;
-  flex-grow: 0;
-  width: 24px;
-  line-height: 24px;
 }
 
 #toolbar > .button > .icon-add {
