@@ -117,7 +117,7 @@ body > * {
 }
 @media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi) {
   #tabs {
-    background: url(icon64.png) 1em 0/32px 32px no-repeat, url(tile.png) repeat-x, var(--toolbar-bg-color);
+    background: url(icon64.png) 1em 50%/32px 32px no-repeat, url(tile.png) repeat-x, var(--toolbar-bg-color);
   }
 }
 
@@ -147,7 +147,7 @@ body > * {
   background: var(--toolbar-bg-color);
   color: white;
   min-width: 10em;
-  padding: 1.2ex;
+  padding: 1ex;
   padding-left: 1em;
   cursor: pointer;
   border: 0;

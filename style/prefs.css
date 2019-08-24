@@ -19,7 +19,7 @@ article {
 
 #tabs {
   display: flex;
-  background: url(icon64.png) 1em 0/32px 32px no-repeat, url(tile.png) repeat-x, var(--toolbar-bg-color);
+  background: url(icon64.png) 1em 50%/32px 32px no-repeat, url(tile.png) repeat-x, var(--toolbar-bg-color);
   padding-left: calc(2em + 32px);
   color: white;
 }
@@ -28,7 +28,7 @@ input.tab {
   display: none;
 }
 
-#tabs > label{
+#tabs > label {
   display: inline-block;
   cursor: pointer;
   font-size: 150%;
