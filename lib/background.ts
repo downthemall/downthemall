@@ -15,6 +15,7 @@ import {
   tabs,
   webNavigation as nav
 } from "./browser";
+import { Bus } from "./bus";
 
 const menus = typeof (_menus) !== "undefined" && _menus || _cmenus;
 
@@ -95,7 +96,7 @@ new class Action extends Handler {
   }
 }();
 
-new class Menus extends Handler {
+const menuHandler = new class Menus extends Handler {
   constructor() {
     super();
     this.onClicked = this.onClicked.bind(this);
@@ -268,6 +269,16 @@ new class Menus extends Handler {
     handler.call(this, info, tab).catch(console.error);
   }
 
+  async enumulate(action: string) {
+    const tab = await tabs.query({active: true});
+    if (!tab || !tab.length) {
+      return;
+    }
+    this.onClicked({
+      menuItemId: action
+    }, tab[0]);
+  }
+
   async onClickedDTARegularInternal(
       selectionOnly: boolean, info: any, tab: any) {
     try {
@@ -353,6 +364,12 @@ new class Menus extends Handler {
     await openPrefs();
   }
 }();
+
+Bus.on("do-regular", () => menuHandler.enumulate("DTARegular"));
+Bus.on("do-turbo", () => menuHandler.enumulate("DTATurbo"));
+Bus.on("do-single", () => API.singleRegular(null));
+Bus.on("open-manager", () => openManager(true));
+Bus.on("open-prefs", () => openPrefs());
 
 (async function init() {
   await Prefs.set("last-run", new Date());

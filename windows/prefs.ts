@@ -545,7 +545,7 @@ addEventListener("DOMContentLoaded", () => {
   localize(document.documentElement);
 
   // General
-  new BoolPref("pref-global-turbo", "global-turbo");
+  //new BoolPref("pref-global-turbo", "global-turbo");
   new BoolPref("pref-queue-notification", "queue-notification");
   new BoolPref("pref-finish-notification", "finish-notification");
   new BoolPref("pref-tooltip", "tooltip");

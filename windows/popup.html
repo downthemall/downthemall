@@ -1,0 +1,41 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    @import url(/style/popup.css);
+
+  </style>
+  <script defer src="/bundles/content-popup.js"></script>
+</head>
+
+<body>
+  <ul>
+    <li id="regular">
+      <img srcset="/style/button-regular.png, /style/button-regular@2x.png 2x">
+      <span data-i18n="dta.regular"></span>
+    </li>
+    <li id="turbo">
+      <img srcset="/style/button-turbo.png, /style/button-turbo@2x.png 2x">
+      <span data-i18n="dta.turbo">OneClick!</span>
+    </li>
+    <li class="sep">
+      <hr>
+    </li>
+    <li id="single">
+      <span class="icon icon-add"></span>
+      <span data-i18n="add-download"></span>
+    </li>
+    <li class="sep">
+      <hr>
+    </li>
+    <li id="manager">
+      <img srcset="/style/button-manager.png, /style/button-manager@2x.png 2x">
+      <span data-i18n="manager.short"></span>
+    </li>
+    <li id="prefs">
+      <span class="icon icon-settings"></span>
+      <span data-i18n="prefs.short">Preferences</span>
+    </li>
+  </ul>
+</body>

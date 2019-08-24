@@ -25,6 +25,7 @@ module.exports = {
     "select": "./windows/select.ts",
     "single": "./windows/single.ts",
     "prefs": "./windows/prefs.ts",
+    "content-popup": "./windows/popup.ts",
     "content-gather": "./scripts/gather.ts",
   },
   externals(context, request, callback) {

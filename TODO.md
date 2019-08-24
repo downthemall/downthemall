@@ -8,7 +8,6 @@ P2
 
 Planned for later.
 
-* Investigate using an action popup for the browser action
 * Soft errors and retry logic
   * Big caveat: When the server still responds, like 50x errors which would be recoverable, we actually have no way of knowing it did in respond in such a way. See P4 - Handle Errors remarks.
 * Delete files (well, as far as the browser allows)

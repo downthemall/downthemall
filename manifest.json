@@ -40,7 +40,8 @@
   },
 
   "browser_action": {
-    "browser_style": false,
+    "browser_style": true,
+    "default_popup": "windows/popup.html",
     "default_icon": {
       "16": "style/icon16.png",
       "32": "style/icon32.png",
