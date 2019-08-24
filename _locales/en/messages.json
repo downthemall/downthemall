@@ -183,6 +183,14 @@
     "description": "Download (verb/action)",
     "message": "Download"
   },
+  "dta-regular-all": {
+    "description": "",
+    "message": "DownThemAll! - All Tabs"
+  },
+  "dta-turbo-all": {
+    "description": "",
+    "message": "OneClick! - All Tabs"
+  },
   "dta.regular": {
     "description": "Regular dta action",
     "message": "DownThemAll!"
@@ -204,8 +212,8 @@
     "message": "Save Selection with DownThemAll!"
   },
   "dta.turbo": {
-    "description": "Turbo dta action (please keep the case of dTa!)",
-    "message": "dTa! One Click"
+    "description": "",
+    "message": "OneClick!"
   },
   "dta.turbo.image": {
     "description": "",

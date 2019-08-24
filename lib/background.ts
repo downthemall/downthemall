@@ -17,7 +17,10 @@ import {
 } from "./browser";
 import { Bus } from "./bus";
 
+
 const menus = typeof (_menus) !== "undefined" && _menus || _cmenus;
+
+const GATHER = "/bundles/content-gather.js";
 
 
 async function runContentJob(tab: any, file: string, msg: any) {
@@ -49,6 +52,14 @@ async function runContentJob(tab: any, file: string, msg: any) {
   }
 }
 
+type SelectionOptions = {
+  selectionOnly: boolean;
+  allTabs: boolean;
+  turbo: boolean;
+  tab: any;
+};
+
+
 class Handler {
   async processResults(turbo = false, results: any[]) {
     const links = this.makeUnique(results, "links");
@@ -64,6 +75,34 @@ class Handler {
           map((item: any) => finisher.finish(item)).
           filter((i: any) => i);
       }));
+  }
+
+  async performSelection(options: SelectionOptions) {
+    try {
+      const selectedTabs = options.allTabs ?
+        await tabs.query({
+          currentWindow: true,
+          discarded: false,
+          hidden: false}) as any[] :
+        [options.tab];
+
+      const textLinks = await Prefs.get("text-links", true);
+      const goptions = {
+        type: "DTA:gather",
+        selectionOnly: options.selectionOnly,
+        textLinks,
+        schemes: Array.from(ALLOWED_SCHEMES.values()),
+        transferable: TRANSFERABLE_PROPERTIES,
+      };
+
+      const results = await Promise.all(selectedTabs.
+        map((tab: any) => runContentJob(tab, GATHER, goptions)));
+
+      await this.processResults(options.turbo, results.flat());
+    }
+    catch (ex) {
+      console.error(ex.toString(), ex.stack, ex);
+    }
   }
 }
 
@@ -279,57 +318,58 @@ const menuHandler = new class Menus extends Handler {
     }, tab[0]);
   }
 
-  async onClickedDTARegularInternal(
-      selectionOnly: boolean, info: any, tab: any) {
-    try {
-      await this.processResults(
-        false,
-        await runContentJob(
-          tab, "/bundles/content-gather.js", {
-            type: "DTA:gather",
-            selectionOnly,
-            textLinks: await Prefs.get("text-links", true),
-            schemes: Array.from(ALLOWED_SCHEMES.values()),
-            transferable: TRANSFERABLE_PROPERTIES,
-          }));
-    }
-    catch (ex) {
-      console.error(ex);
-    }
+  async onClickedDTARegular(info: any, tab: any) {
+    return await this.performSelection({
+      selectionOnly: false,
+      allTabs: false,
+      turbo: false,
+      tab,
+    });
   }
 
-  async onClickedDTARegular(info: any, tab: any) {
-    return await this.onClickedDTARegularInternal(false, info, tab);
+  async onClickedDTARegularAll(info: any, tab: any) {
+    return await this.performSelection({
+      selectionOnly: false,
+      allTabs: true,
+      turbo: false,
+      tab,
+    });
   }
 
   async onClickedDTARegularSelection(info: any, tab: any) {
-    return await this.onClickedDTARegularInternal(true, info, tab);
-  }
-
-  async onClickedDTATurboInternal(selectionOnly: boolean, info: any, tab: any) {
-    try {
-      await this.processResults(
-        true,
-        await runContentJob(
-          tab, "/bundles/content-gather.js", {
-            type: "DTA:gather",
-            selectionOnly,
-            textLinks: await Prefs.get("text-links", true),
-            schemes: Array.from(ALLOWED_SCHEMES.values()),
-            transferable: TRANSFERABLE_PROPERTIES,
-          }));
-    }
-    catch (ex) {
-      console.error(ex);
-    }
+    return await this.performSelection({
+      selectionOnly: true,
+      allTabs: false,
+      turbo: false,
+      tab,
+    });
   }
 
   async onClickedDTATurbo(info: any, tab: any) {
-    return await this.onClickedDTATurboInternal(false, info, tab);
+    return await this.performSelection({
+      selectionOnly: false,
+      allTabs: false,
+      turbo: true,
+      tab,
+    });
+  }
+
+  async onClickedDTATurboAll(info: any, tab: any) {
+    return await this.performSelection({
+      selectionOnly: false,
+      allTabs: true,
+      turbo: true,
+      tab,
+    });
   }
 
   async onClickedDTATurboSelection(info: any, tab: any) {
-    return await this.onClickedDTATurboInternal(false, info, tab);
+    return await this.performSelection({
+      selectionOnly: true,
+      allTabs: false,
+      turbo: true,
+      tab,
+    });
   }
 
   async onClickedDTARegularLink(info: any, tab: any) {
@@ -366,7 +406,9 @@ const menuHandler = new class Menus extends Handler {
 }();
 
 Bus.on("do-regular", () => menuHandler.enumulate("DTARegular"));
+Bus.on("do-regular-all", () => menuHandler.enumulate("DTARegularAll"));
 Bus.on("do-turbo", () => menuHandler.enumulate("DTATurbo"));
+Bus.on("do-turbo-all", () => menuHandler.enumulate("DTATurboAll"));
 Bus.on("do-single", () => API.singleRegular(null));
 Bus.on("open-manager", () => openManager(true));
 Bus.on("open-prefs", () => openPrefs());
