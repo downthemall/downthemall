@@ -2,7 +2,7 @@
 // License: MIT
 
 import { Prefs } from "../prefs";
-import { parsePath } from "../util";
+import { parsePath, filterInSitu } from "../util";
 import {
   QUEUED, RUNNING, CANCELED, PAUSED, MISSING, DONE,
   FORCABLE, PAUSABLE, CANCELABLE,
@@ -17,6 +17,18 @@ import { downloads } from "../browser";
 const setShelfEnabled = downloads.setShelfEnabled || function() {
   // ignored
 };
+
+type Header = {name: string; value: string};
+interface Options {
+  conflictAction: string;
+  filename: string;
+  saveAs: boolean;
+  url: string;
+  method?: string;
+  body?: string;
+  incognito: boolean;
+  headers: Header[];
+}
 
 export class Download extends BaseDownload {
   public manager: Manager;
@@ -82,40 +94,46 @@ export class Download extends BaseDownload {
     if (this.state !== QUEUED) {
       throw new Error("invalid state");
     }
-    console.trace("starting", this.toString(), this.dest, this.mask);
+    console.trace("starting", this.toString(), this.toMsg());
     this.changeState(RUNNING);
     try {
-      const options: any = {
+      const options: Options = {
         conflictAction: await Prefs.get("conflict-action"),
         filename: this.dest.full,
         saveAs: false,
         url: this.url,
         headers: [],
+        incognito: this.private
       };
       if (this.postData) {
         options.body = this.postData;
         options.method = "POST";
       }
-      if (this.private) {
-        options.incognito = true;
-      }
-      /* XXX "forbidden"
-         Cannot be worked around with webRequest either
-         as those do not see downloads.
       if (this.referrer) {
         options.headers.push({
           name: "Referer",
           value: this.referrer
         });
       }
-      */
       if (this.manId) {
         this.manager.removeManId(this.manId);
       }
+
       setShelfEnabled(false);
       try {
-        this.manager.addManId(
-          this.manId = await downloads.download(options), this);
+        try {
+          this.manager.addManId(
+            this.manId = await downloads.download(options), this);
+        }
+        catch (ex) {
+          if (!this.referrer) {
+            throw ex;
+          }
+          // Re-attempt without referrer
+          filterInSitu(options.headers, h => h.name !== "Referer");
+          this.manager.addManId(
+            this.manId = await downloads.download(options), this);
+        }
       }
       finally {
         setShelfEnabled(true);
