@@ -57,8 +57,6 @@ Stuff that probably cannot be implemented due to WeberEension limitations.
   * Not supported by Firefox
 * Speed limiter
   * Cannot be done with the WebExtensions downloads API
-* Actually send referrers for downloads
-  * Cannot be done with WebExtensions - webRequest does not see Downloads
 * contenthandling aka video sniffing, request manipulation?
   * PITA and/or infeasible - Essentially cannot be done for a large part and the other prt is extemely inefficient
 * Checksums/Hashes?
