@@ -4,34 +4,23 @@
 import { localize } from "../lib/i18n";
 import { runtime } from "../lib/browser";
 
-const $ = document.querySelector.bind(document);
-
-
 addEventListener("DOMContentLoaded", () => {
   localize(document.documentElement);
 
-  $("#regular"). addEventListener("click", () => {
-    runtime.sendMessage("do-regular");
-    close();
-  });
-
-  $("#turbo"). addEventListener("click", () => {
-    runtime.sendMessage("do-turbo");
-    close();
-  });
-
-  $("#single"). addEventListener("click", () => {
-    runtime.sendMessage("do-single");
-    close();
-  });
-
-  $("#manager"). addEventListener("click", () => {
-    runtime.sendMessage("open-manager");
-    close();
-  });
-
-  $("#prefs"). addEventListener("click", () => {
-    runtime.sendMessage("open-prefs");
-    close();
+  document.body.addEventListener("click", e => {
+    let target = e.target as HTMLElement;
+    if (!target) {
+      return;
+    }
+    while (target) {
+      const {action} = target.dataset;
+      if (!action) {
+        target = target.parentElement as HTMLElement;
+        continue;
+      }
+      runtime.sendMessage(action);
+      close();
+      return;
+    }
   });
 });
