@@ -45,7 +45,7 @@ function load() {
 }
 
 const i18n = load();
-const memoGetMessage = memoize(i18n.getMessage, 10 * 1000, 0);
+const memoGetMessage = memoize(i18n.getMessage, 10 * 1000, 10);
 
 /**
  * Localize a message
