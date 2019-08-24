@@ -45,7 +45,8 @@ export class Port extends EventEmitter {
   }
 
   get id() {
-    return this.port.sender && this.port.sender.extensionId;
+    return this.port.sender && (
+      this.port.sender.id || this.port.sender.extensionId);
   }
 
   get isSelf() {
