@@ -184,12 +184,13 @@ export class Tooltip {
     this.from.textContent = item.usable;
     this.size.textContent = item.fmtSize;
     this.date.textContent = new Date(item.startDate).toLocaleString();
+    this.eta.textContent = item.fmtETA;
 
     const running = item.state === DownloadState.RUNNING;
-    const hidden = this.eta.classList.contains("hidden");
+    const hidden = this.speedbox.classList.contains("hidden");
 
     if (!running && !hidden) {
-      this.eta.classList.add("hidden");
+      this.eta.style.fontWeight = "bold";
       this.etalabel.classList.add("hidden");
       this.speedbox.classList.add("hidden");
       this.progressbar.classList.add("hidden");
@@ -199,14 +200,13 @@ export class Tooltip {
       return;
     }
     if (hidden) {
-      this.eta.classList.remove("hidden");
+      this.eta.style.fontWeight = "auto";
       this.etalabel.classList.remove("hidden");
       this.speedbox.classList.remove("hidden");
       this.progressbar.classList.remove("hidden");
       this.adjust(null);
     }
     this.progress.style.width = `${item.percent * 100}%`;
-    this.eta.textContent = item.fmtETA;
     this.current.textContent = formatSpeed(item.stats.current);
     this.average.textContent = formatSpeed(item.stats.avg);
     this.drawSpeeds();
