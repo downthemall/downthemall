@@ -19,11 +19,10 @@ import {sort, defaultCompare, naturalCaseCompare} from "../../lib/sorting";
 import {DownloadItem, DownloadTable} from "./table";
 import {formatSize} from "../../lib/formatters";
 import {_} from "../../lib/i18n";
+import {$} from "../winutil";
 import {StateTexts} from "./state";
 
 const TIMEOUT_SEARCH = 750;
-
-const $ = document.querySelector.bind(document);
 
 class ItemFilter {
   public readonly id: string;
@@ -119,8 +118,10 @@ export class MenuFilter extends ItemFilter {
   constructor(id: string) {
     super(id);
     this.items = new Map();
+    const tmpl = $<HTMLTemplateElement>("#menufilter-template").
+      content.cloneNode(true);
     this.menu = new ContextMenu(
-      $("#menufilter-template").content.cloneNode(true).firstElementChild);
+      (tmpl as HTMLElement).firstElementChild);
     this.menu.on("clicked", this.onclicked.bind(this));
     this.menu.on("ctx-menufilter-invert", () => this.invert());
     this.menu.on("ctx-menufilter-clear", () => this.clear());

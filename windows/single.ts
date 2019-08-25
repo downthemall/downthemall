@@ -12,9 +12,9 @@ import { Dropdown } from "./dropdown";
 import { Keys } from "./keys";
 import { hookButton } from "../lib/manager/renamer";
 import { runtime } from "../lib/browser";
+import { $ } from "./winutil";
 
 const PORT = runtime.connect(null, { name: "single" });
-const $ = document.querySelector.bind(document);
 
 let ITEM: any;
 let Mask: Dropdown;
@@ -28,11 +28,11 @@ class BatchModalDialog extends ModalDialog {
   }
 
   get content() {
-    const content = $("#batch-template").content.cloneNode(true);
+    const tmpl = $("#batch-template") as HTMLTemplateElement;
+    const content = tmpl.content.cloneNode(true) as DocumentFragment;
     localize(content);
-    const $$ = content.querySelector.bind(content);
-    $$(".batch-items").textContent = this.gen.length.toLocaleString();
-    $$(".batch-preview").textContent = this.gen.preview;
+    $(".batch-items", content).textContent = this.gen.length.toLocaleString();
+    $(".batch-preview", content).textContent = this.gen.preview;
     return content;
   }
 
@@ -73,11 +73,11 @@ function setItem(item: any) {
     usableReferrer = "",
     mask = ""
   } = item;
-  $("#URL").value = usable;
-  $("#filename").value = fileName;
-  $("#title").value = title;
-  $("#description").value = description;
-  $("#referrer").value = usableReferrer;
+  $<HTMLInputElement>("#URL").value = usable;
+  $<HTMLInputElement>("#filename").value = fileName;
+  $<HTMLInputElement>("#title").value = title;
+  $<HTMLInputElement>("#description").value = description;
+  $<HTMLInputElement>("#referrer").value = usableReferrer;
   if (mask) {
     Mask.value = mask;
   }
@@ -90,7 +90,7 @@ function displayError(err: string) {
 }
 
 async function downloadInternal(paused: boolean) {
-  let usable = $("#URL").value.trim();
+  let usable = $<HTMLInputElement>("#URL").value.trim();
   let url;
   try {
     url = new URL(usable).toString();
@@ -98,7 +98,7 @@ async function downloadInternal(paused: boolean) {
   catch (ex) {
     try {
       url = new URL(`https://${usable}`).toString();
-      $("#URL").value = usable = `https://${usable}`;
+      $<HTMLInputElement>("#URL").value = usable = `https://${usable}`;
     }
     catch (ex) {
       return displayError("error.invalidURL");
@@ -107,7 +107,7 @@ async function downloadInternal(paused: boolean) {
 
   const gen = new BatchGenerator(usable);
 
-  const usableReferrer = $("#referrer").value.trim();
+  const usableReferrer = $<HTMLInputElement>("#referrer").value.trim();
   let referrer;
   try {
     referrer = usableReferrer ? new URL(usableReferrer).toString() : "";
@@ -116,9 +116,9 @@ async function downloadInternal(paused: boolean) {
     return displayError("error.invalidReferrer");
   }
 
-  const fileName = $("#filename").value.trim();
-  const title = $("#title").value.trim();
-  const description = $("#description").value.trim();
+  const fileName = $<HTMLInputElement>("#filename").value.trim();
+  const title = $<HTMLInputElement>("#title").value.trim();
+  const description = $<HTMLInputElement>("#description").value.trim();
   const mask = Mask.value.trim();
   if (!mask) {
     return displayError("error.invalidMask");
@@ -183,7 +183,7 @@ async function downloadInternal(paused: boolean) {
     paused,
     items,
     mask,
-    maskOnce: $("#maskOnceCheck").checked,
+    maskOnce: $<HTMLInputElement>("#maskOnceCheck").checked,
   });
   return null;
 }

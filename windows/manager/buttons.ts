@@ -2,8 +2,7 @@
 // License: MIT
 
 import { EventEmitter } from "../../lib/events";
-
-const $ = document.querySelector.bind(document);
+import { $ } from "../winutil";
 
 export class Buttons extends EventEmitter {
   private readonly parent: HTMLElement;

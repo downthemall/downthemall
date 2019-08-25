@@ -5,8 +5,7 @@ import ModalDialog from "../../uikit/lib/modal";
 import { _, localize } from "../../lib/i18n";
 import { Prefs } from "../../lib/prefs";
 import { Keys } from "../keys";
-
-const $ = document.querySelector.bind(document);
+import { $ } from "../winutil";
 
 export default class RemovalModalDialog extends ModalDialog {
   private readonly text: string;
@@ -23,10 +22,11 @@ export default class RemovalModalDialog extends ModalDialog {
   }
 
   get content() {
-    const content = $("#removal-template").content.cloneNode(true);
+    const content = $<HTMLTemplateElement>("#removal-template").
+      content.cloneNode(true) as DocumentFragment;
     localize(content);
     this.check = content.querySelector(".removal-remember");
-    content.querySelector(".removal-text").textContent = this.text;
+    $(".removal-text", content).textContent = this.text;
     return content;
   }
 

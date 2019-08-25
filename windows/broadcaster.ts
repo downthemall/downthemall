@@ -1,9 +1,8 @@
 "use strict";
 // License: MIT
 
-import {Keys} from "./keys";
-
-const $ = document.querySelector.bind(document);
+import { Keys } from "./keys";
+import { $ } from "./winutil";
 
 export class Broadcaster {
   private readonly els: HTMLElement[];
@@ -38,7 +37,7 @@ export class Broadcaster {
   }
 
   onkey(evt: KeyboardEvent) {
-    const {localName} = evt.target as HTMLElement;
+    const { localName } = evt.target as HTMLElement;
     if (localName === "input" || localName === "textarea") {
       return undefined;
     }

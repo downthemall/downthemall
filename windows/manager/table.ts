@@ -34,6 +34,7 @@ import { Tooltip } from "./tooltip";
 import "../../lib/util";
 import { CellTypes } from "../../uikit/lib/constants";
 import { downloads } from "../../lib/browser";
+import { $ } from "../winutil";
 
 const TREE_CONFIG_VERSION = 2;
 const RUNNING_TIMEOUT = 1000;
@@ -52,8 +53,6 @@ const COL_SEGS = 8;
 const ICON_BASE_SIZE = 16;
 
 const TEXT_SIZE_UNKNOWM = _("size-unknown");
-
-const $ = document.querySelector.bind(document);
 
 const prettyNumber = (function() {
 const rv = new Intl.NumberFormat(undefined, {
@@ -403,7 +402,7 @@ export class DownloadTable extends VirtualTable {
     this.sids = new Map<number, DownloadItem>();
     this.icons = new Icons($("#icons"));
 
-    localize($("#table-context").content);
+    localize($<HTMLTemplateElement>("#table-context").content);
     const ctx = this.contextMenu = new ContextMenu("#table-context");
     Keys.adoptContext(ctx);
     Keys.adoptButtons($("#toolbar"));

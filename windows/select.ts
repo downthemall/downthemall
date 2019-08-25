@@ -16,9 +16,9 @@ import { sort, naturalCaseCompare } from "../lib/sorting";
 import { hookButton } from "../lib/manager/renamer";
 import { CellTypes } from "../uikit/lib/constants";
 import { runtime } from "../lib/browser";
+import { $ } from "./winutil";
 
 const PORT = runtime.connect(null, { name: "select" });
-const $ = document.querySelector.bind(document);
 
 const TREE_CONFIG_VERSION = 1;
 
@@ -52,7 +52,8 @@ function matched(item: any) {
 
 class PausedModalDialog extends ModalDialog {
   get content() {
-    const content = $("#paused-template").content.cloneNode(true);
+    const tmpl = $<HTMLTemplateElement>("#paused-template");
+    const content = tmpl.content.cloneNode(true) as DocumentFragment;
     localize(content);
     return content;
   }
@@ -154,7 +155,7 @@ class SelectionTable extends VirtualTable {
     super("#items", treeConfig, TREE_CONFIG_VERSION);
 
     this.checkClasser = new CheckClasser(NUM_FILTER_CLASSES);
-    this.icons = new Icons($("#icons"));
+    this.icons = new Icons($("#icons") as HTMLStyleElement);
     this.links = links;
     this.media = media;
     this.type = type;
@@ -181,7 +182,7 @@ class SelectionTable extends VirtualTable {
     this.linksFilters = $("#linksFilters");
     this.mediaFilters = $("#mediaFilters");
 
-    localize($("#table-context").content);
+    localize(($("#table-context") as HTMLTemplateElement).content);
     this.contextMenu = new ContextMenu("#table-context");
     Keys.adoptContext(this.contextMenu);
 
@@ -553,9 +554,9 @@ async function download(paused = false) {
       items,
       paused,
       mask,
-      maskOnce: $("#maskOnceCheck").checked,
+      maskOnce: $<HTMLInputElement>("#maskOnceCheck").checked,
       fast: FastFilter.value,
-      fastOnce: $("#fastOnceCheck").checked,
+      fastOnce: $<HTMLInputElement>("#fastOnceCheck").checked,
     });
   }
   catch (ex) {
@@ -670,7 +671,7 @@ addEventListener("DOMContentLoaded", function dom() {
   $("#fastDisableOthers").addEventListener("change", () => {
     PORT.postMessage({
       msg: "onlyfast",
-      fast: $("#fastDisableOthers").checked
+      fast: $<HTMLInputElement>("#fastDisableOthers").checked
     });
   });
 

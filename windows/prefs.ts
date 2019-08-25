@@ -11,12 +11,12 @@ import { TYPE_LINK, TYPE_MEDIA } from "../lib/constants";
 import { iconForPath, visible } from "../lib/windowutils";
 import { VirtualTable } from "../uikit/lib/table";
 import { Icons } from "./icons";
+import { $ } from "./winutil";
 
 const ICON_BASE_SIZE = 16;
 
-const $ = document.querySelector.bind(document);
 
-class UIPref<T> extends PrefWatcher {
+class UIPref<T extends HTMLElement> extends PrefWatcher {
   id: string;
 
   pref: string;
@@ -101,20 +101,22 @@ class OptionPref extends UIPref<HTMLElement> {
 }
 
 class CreateFilterDialog extends ModalDialog {
-  label: any;
+  label: HTMLInputElement;
 
-  expr: any;
+  expr: HTMLInputElement;
 
-  link: any;
+  link: HTMLInputElement;
 
-  media: any;
+  media: HTMLInputElement;
 
   get content() {
-    const rv = localize($("#create-filter-template").content.cloneNode(true));
-    this.label = rv.querySelector("#filter-create-label");
-    this.expr = rv.querySelector("#filter-create-expr");
-    this.link = rv.querySelector("#filter-create-type-link");
-    this.media = rv.querySelector("#filter-create-type-media");
+    const tmpl = $<HTMLTemplateElement>("#create-filter-template").
+      content.cloneNode(true) as DocumentFragment;
+    const rv = localize(tmpl);
+    this.label = $("#filter-create-label", rv);
+    this.expr = $("#filter-create-expr", rv);
+    this.link = $("#filter-create-type-link", rv);
+    this.media = $("#filter-create-type-media", rv);
     return rv;
   }
 

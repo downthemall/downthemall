@@ -61,7 +61,7 @@ const memoGetMessage = memoize(i18n.getMessage, 10 * 1000, 10);
  * @param {string[]} [subst] Message substituations
  * @returns {string} Localized message
  */
-function _(id: string, ...subst: any[]) {
+export function _(id: string, ...subst: any[]) {
   if (!subst.length) {
     return memoGetMessage(id);
   }
@@ -76,7 +76,7 @@ function _(id: string, ...subst: any[]) {
  * @param {Element} elem DOM to localize
  * @returns {Element} Passed in element (fluent)
  */
-function localize(elem: HTMLElement) {
+export function localize<T extends HTMLElement | DocumentFragment>(elem: T): T {
   for (const el of elem.querySelectorAll<HTMLElement>("*[data-i18n]")) {
     const {i18n: i} = el.dataset;
     if (!i) {
@@ -107,8 +107,5 @@ function localize(elem: HTMLElement) {
   for (const el of document.querySelectorAll("*[data-l18n]")) {
     console.error("wrong!", el);
   }
-  return elem;
+  return elem as T;
 }
-
-
-export {localize, _};
