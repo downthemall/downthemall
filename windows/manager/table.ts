@@ -188,7 +188,7 @@ export class DownloadItem extends EventEmitter {
       return this.eta;
     }
     if (this.error) {
-      return this.error;
+      return _(this.error) || this.error;
     }
     return StateTexts.get(this.state);
   }

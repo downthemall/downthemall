@@ -1,4 +1,32 @@
 {
+  "CRASH": {
+    "description": "",
+    "message": "Interal Browser Error"
+  },
+  "FILE_FAILED": {
+    "description": "",
+    "message": "File Access Error"
+  },
+  "NETWORK_FAILED": {
+    "description": "",
+    "message": "Network Failure"
+  },
+  "SERVER_BAD_CONTENT": {
+    "description": "",
+    "message": "Not Found"
+  },
+  "SERVER_FAILED": {
+    "description": "",
+    "message": "Server Error"
+  },
+  "SERVER_FORBIDDEN": {
+    "description": "",
+    "message": "Forbidden"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "description": "",
+    "message": "Unauthorized"
+  },
   "add-download": {
     "description": "Action for adding a download",
     "message": "Add Download"
