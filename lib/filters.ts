@@ -399,6 +399,7 @@ class Filters extends EventEmitter {
     const id = `custom-${uuid()}`;
     const filter = new Filter(this, id, {
       active: true,
+      custom: true,
       label,
       expr,
       type,
