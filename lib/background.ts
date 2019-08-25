@@ -119,7 +119,7 @@ new class Action extends Handler {
     }
     try {
       await this.processResults(
-        await Prefs.get("global-turbo"),
+        true,
         await runContentJob(
           tab, "/bundles/content-gather.js", {
             type: "DTA:gather",
@@ -413,8 +413,24 @@ Bus.on("do-single", () => API.singleRegular(null));
 Bus.on("open-manager", () => openManager(true));
 Bus.on("open-prefs", () => openPrefs());
 
+function adjustAction(globalTurbo: boolean) {
+  action.setPopup({
+    popup: globalTurbo ? "" : null
+  });
+  action.setIcon({
+    path: globalTurbo ? {
+      16: "/style/button-turbo.png",
+      32: "/style/button-turbo@2x.png",
+    } : null
+  });
+}
+
 (async function init() {
   await Prefs.set("last-run", new Date());
+  Prefs.get("global-turbo", false).then(v => adjustAction(v));
+  Prefs.on("global-turbo", (prefs, key, value) => {
+    adjustAction(value);
+  });
   await filters();
   await getManager();
 })().catch(ex => {
