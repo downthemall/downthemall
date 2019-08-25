@@ -39,6 +39,13 @@ let FastFilter: Dropdown;
 
 type DELTAS = {deltaLinks: any[]; deltaMedia: any[]};
 
+function cleaErrors() {
+  const not = $("#notification");
+  not.textContent = "";
+  not.style.display = "none";
+}
+
+
 function matched(item: any) {
   return item && item.matched && item.matched !== "unmanual";
 }
@@ -119,19 +126,19 @@ class SelectionTable extends VirtualTable {
 
   items: any[];
 
-  status: any;
+  status: HTMLElement;
 
-  linksTab: any;
+  linksTab: HTMLElement;
 
-  mediaTab: any;
+  mediaTab: HTMLElement;
 
-  linksFilters: any;
+  linksFilters: HTMLElement;
 
-  mediaFilters: any;
+  mediaFilters: HTMLElement;
 
   contextMenu: ContextMenu;
 
-  sortcol: any;
+  sortcol: number | null;
 
   sortasc: boolean;
 
@@ -420,6 +427,7 @@ class SelectionTable extends VirtualTable {
     else {
       this.status.textContent = _("numitems.label", [selected]);
     }
+    cleaErrors();
   }
 
   getRowClasses(rowid: number) {
@@ -620,6 +628,7 @@ function cancel() {
 async function init() {
   await Promise.all([MASK.init(), FASTFILTER.init()]);
   Mask = new Dropdown("#mask", MASK.values);
+  Mask.on("changed", cleaErrors);
   FastFilter = new Dropdown("#fast", FASTFILTER.values);
   FastFilter.on("changed", () => {
     PORT.postMessage({
