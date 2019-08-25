@@ -16,7 +16,7 @@ import { _ } from "./i18n";
 
 const MAX_BATCH = 10000;
 
-export const API = new class {
+export const API = new class API {
   async filter(arr: any, type: number) {
     return await (await filters()).filterItemsByType(arr, type);
   }

@@ -235,6 +235,48 @@ const menuHandler = new class Menus extends Handler {
       type: "separator"
     });
     menus.create({
+      id: "DTARegularAll",
+      contexts: ["all", "browser_action", "tools_menu"],
+      icons: {
+        16: "/style/button-regular.png",
+        32: "/style/button-regular@2x.png",
+      },
+      title: _("dta-regular-all"),
+    });
+    menus.create({
+      id: "DTATurboAll",
+      contexts: ["all", "browser_action", "tools_menu"],
+      icons: {
+        16: "/style/button-turbo.png",
+        32: "/style/button-turbo@2x.png",
+      },
+      title: _("dta-turbo-all"),
+    });
+    const sep2ctx = menus.ACTION_MENU_TOP_LEVEL_LIMIT === 6 ?
+      ["all", "tools_menu"] :
+      ["all", "browser_action", "tools_menu"];
+    menus.create({
+      id: "sep-2",
+      contexts: sep2ctx,
+      type: "separator"
+    });
+    menus.create({
+      id: "DTAAdd",
+      contexts: ["all", "browser_action", "tools_menu"],
+      icons: {
+        16: "/style/add.svg",
+        32: "/style/add.svg",
+        64: "/style/add.svg",
+        128: "/style/add.svg",
+      },
+      title: _("add-download"),
+    });
+    menus.create({
+      id: "sep-3",
+      contexts: ["all", "browser_action", "tools_menu"],
+      type: "separator"
+    });
+    menus.create({
       id: "DTAManager",
       contexts: ["all", "browser_action", "tools_menu"],
       icons: {
@@ -394,6 +436,10 @@ const menuHandler = new class Menus extends Handler {
 
   async onClickedDTATurboMedia(info: any, tab: any) {
     return await this.findSingleItem(tab, info.srcUrl, true);
+  }
+
+  onClickedDTAAdd() {
+    API.singleRegular(null);
   }
 
   async onClickedDTAManager() {
