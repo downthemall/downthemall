@@ -91,10 +91,14 @@ export const API = new class {
     if (!this.sanity(links, media)) {
       return false;
     }
-    const selected = makeUniqueItems([
-      await API.filter(links, TYPE_LINK),
-      await API.filter(media, TYPE_MEDIA),
-    ]);
+    const type = await Prefs.get("last-type", "links");
+    const items = await (async () => {
+      if (type === "links") {
+        return await API.filter(links, TYPE_LINK);
+      }
+      return await API.filter(media, TYPE_MEDIA);
+    })();
+    const selected = makeUniqueItems([items]);
     if (!selected.length) {
       return await this.regular(links, media);
     }

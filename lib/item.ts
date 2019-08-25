@@ -99,7 +99,7 @@ function transfer(e: any, other: any) {
 }
 
 
-export function makeUniqueItems(items: any, mapping?: Function) {
+export function makeUniqueItems(items: any[][], mapping?: Function) {
   const known = new Map();
   const unique = [];
   for (const itemlist of items) {
