@@ -18,7 +18,7 @@ const MAX_BATCH = 10000;
 
 export const API = new class {
   async filter(arr: any, type: number) {
-    return (await filters()).filterItemsByType(arr, type);
+    return await (await filters()).filterItemsByType(arr, type);
   }
 
   async queue(items: any, options: any) {

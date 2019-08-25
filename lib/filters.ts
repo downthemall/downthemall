@@ -6,11 +6,11 @@ import uuid from "./uuid";
 import "./objectoverlay";
 import { storage, i18n } from "./browser";
 import { EventEmitter } from "./events";
-import { Prefs } from "./prefs";
 import { TYPE_LINK, TYPE_MEDIA, TYPE_ALL } from "./constants";
 // eslint-disable-next-line no-unused-vars
 import { Overlayable } from "./objectoverlay";
 import * as DEFAULT_FILTERS from "../data/filters.json";
+import { FASTFILTER } from "./recentlist";
 
 const REG_ESCAPE = /[{}()[\]\\^$.]/g;
 const REG_FNMATCH = /[*?]/;
@@ -351,8 +351,6 @@ class Filters extends EventEmitter {
 
   private filters: Filter[];
 
-  private fastFilter: string | null;
-
   ignoreNext: boolean;
 
   private readonly typeMatchers: Map<number, Matcher>;
@@ -362,10 +360,8 @@ class Filters extends EventEmitter {
     this.typeMatchers = new Map();
     this.loaded = false;
     this.filters = [];
-    this.fastFilter = null;
     this.ignoreNext = false;
     this.regenerate();
-    Prefs.on("fast-filter", this.updateFastFilter.bind(this));
     storage.onChanged.addListener(async (changes: any) => {
       if (this.ignoreNext) {
         this.ignoreNext = false;
@@ -438,21 +434,12 @@ class Filters extends EventEmitter {
     return new FastFilter(this, value);
   }
 
-  getFastFilter() {
-    if (!this.fastFilter) {
-      throw new Error("Nothing stored");
+  async getFastFilter() {
+    await FASTFILTER.init();
+    if (!FASTFILTER.current) {
+      return null;
     }
-    return new FastFilter(this, this.fastFilter);
-  }
-
-  async setFastFilter(value: string) {
-    this.fastFilter = value || "";
-    await Prefs.set("fast-filter", this.fastFilter);
-  }
-
-  updateFastFilter(pref: any, key: string, value: string) {
-    this.fastFilter = value || null;
-    this.regenerate();
+    return new FastFilter(this, FASTFILTER.current);
   }
 
   regenerate() {
@@ -478,17 +465,6 @@ class Filters extends EventEmitter {
       }
       catch (ex) {
         console.error("Filter", current.label || "unknown", ex);
-      }
-    }
-    if (this.fastFilter) {
-      try {
-        const fastFilter = new FastFilter(this, this.fastFilter);
-        all.push(fastFilter);
-        links.push(fastFilter);
-        media.push(fastFilter);
-      }
-      catch (ex) {
-        console.error("fast filter", this.fastFilter, "is invalid", ex);
       }
     }
     this.typeMatchers.set(TYPE_ALL, new Matcher(all));
@@ -534,14 +510,17 @@ class Filters extends EventEmitter {
         defaultFilters[filter]);
       this.filters.push(new Filter(this, filter, current));
     }
-    this.fastFilter = await Prefs.get("fast-filter", null);
     this.loaded = true;
     this.regenerate();
   }
 
-  filterItemsByType(items: any[], type: number) {
+  async filterItemsByType(items: any[], type: number) {
     const matcher = this.typeMatchers.get(type);
+    const fast = await this.getFastFilter();
     return items.filter(function(item) {
+      if (fast && fast.matchItem(item)) {
+        return true;
+      }
       return matcher && matcher.matchItem(item);
     });
   }

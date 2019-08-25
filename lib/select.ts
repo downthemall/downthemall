@@ -88,7 +88,7 @@ export async function select(links: any[], media: any[]) {
     let fast: any = null;
     let onlyFast: false;
     try {
-      fast = fm.getFastFilter();
+      fast = await fm.getFastFilter();
     }
     catch (ex) {
       // ignored
