@@ -2,7 +2,11 @@
 // License: MIT
 
 import { localize } from "../lib/i18n";
-import { runtime } from "../lib/browser";
+
+declare let browser: any;
+declare let chrome: any;
+
+const runtime = browser !== "undefined" ? browser.runtime : chrome.runtime;
 
 addEventListener("DOMContentLoaded", () => {
   localize(document.documentElement);

@@ -3,12 +3,20 @@
 
 import {memoize} from "./memoize";
 
+
+declare let browser: any;
+declare let chrome: any;
+
 function load() {
   try {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const {i18n} = require("webextension-polyfill");
-
-    return i18n;
+    if (typeof browser !== "undefined" && browser.i18n) {
+      return browser.i18n;
+    }
+    if (typeof chrome !== "undefined" && chrome.i18n) {
+      return chrome.i18n;
+    }
+    throw new Error("not in a webext");
   }
   catch (ex) {
     // We might be running under node for tests

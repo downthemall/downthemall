@@ -3,8 +3,56 @@
 <head>
   <meta charset="utf-8">
   <style>
-    @import url(/style/popup.css);
+    html {
+      box-sizing: content-box !important;
+    }
 
+    ul {
+      margin: 1.5ex;
+      margin-right: 2ex;
+      padding: 0;
+      display: grid;
+      grid-template-columns: auto;
+      list-style-type: none;
+      min-width: 14em;
+    }
+
+    li {
+      display: flex;
+      margin: 0;
+      padding: 1ex;
+      font-size: 110%;
+      vertical-align: center;
+      align-items: center;
+      border-radius: 4px;
+    }
+
+    li.sep {
+      display: inline-block;
+      padding: 0;
+    }
+
+    li:not(.sep):hover {
+      background: Highlight;
+      color: HighlightText;
+    }
+
+    li>.icon,
+    li>img {
+      font-size: 16px;
+      line-height: 16px;
+      margin-right: 1ex;
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+
+    #single:not(:hover)>.icon-add {
+      color: var(--add-color);
+    }
+  </style>
+  <style>
+    @import url(/style/common.css);
   </style>
   <script defer src="/bundles/content-popup.js"></script>
 </head>
