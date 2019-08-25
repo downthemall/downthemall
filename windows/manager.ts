@@ -6,6 +6,8 @@ import {_, localize} from "../lib/i18n";
 import {Prefs} from "../lib/prefs";
 import PORT from "./manager/port";
 import { runtime } from "../lib/browser";
+import { Promised } from "../lib/util";
+import { PromiseSerializer } from "../lib/pserializer";
 
 const $ = document.querySelector.bind(document);
 
@@ -67,7 +69,9 @@ addEventListener("DOMContentLoaded", function dom() {
     }
   })();
 
+  const tabled = new Promised();
   const loaded = Promise.all([LOADED, platformed]);
+  const fullyloaded = Promise.all([LOADED, platformed, tabled]);
 
   localize(document.documentElement);
   $("#donate").addEventListener("click", () => {
@@ -85,18 +89,22 @@ addEventListener("DOMContentLoaded", function dom() {
         Table.init();
         const loading = $("#loading");
         loading.parentElement.removeChild(loading);
+        tabled.resolve();
       }
       Table.setItems(items);
     });
   });
-  PORT.on("dirty", async items => {
-    await loaded;
+
+  // Updates
+  const serializer = new PromiseSerializer(1);
+  PORT.on("dirty", serializer.wrap(this, async (items: any[]) => {
+    await fullyloaded;
     Table.updateItems(items);
-  });
-  PORT.on("removed", async sids => {
-    await loaded;
+  }));
+  PORT.on("removed", serializer.wrap(this, async (sids: number[]) => {
+    await fullyloaded;
     Table.removedItems(sids);
-  });
+  }));
 
   const statusNetwork = $("#statusNetwork");
   statusNetwork.addEventListener("click", () => {
