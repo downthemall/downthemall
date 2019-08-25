@@ -110,6 +110,9 @@ export const API = new class {
       await FASTFILTER.init();
       await FASTFILTER.push(selected.fast);
     }
+    if (typeof selected.type === "string") {
+      await Prefs.set("last-type", selected.type);
+    }
     const {items} = selected;
     delete selected.items;
     return await this.queue(items, selected);
