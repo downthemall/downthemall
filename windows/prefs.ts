@@ -550,6 +550,7 @@ addEventListener("DOMContentLoaded", () => {
   new BoolPref("pref-global-turbo", "global-turbo");
   new BoolPref("pref-queue-notification", "queue-notification");
   new BoolPref("pref-finish-notification", "finish-notification");
+  new BoolPref("pref-hide-context", "hide-context");
   new BoolPref("pref-tooltip", "tooltip");
   new BoolPref("pref-open-manager-on-queue", "open-manager-on-queue");
   new BoolPref("pref-text-links", "text-links");

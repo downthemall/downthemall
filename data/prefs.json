@@ -6,6 +6,7 @@
 	"open-manager-on-queue": true,
 	"text-links": true,
 	"add-paused": false,
+	"hide-context": false,
 	"conflict-action": "uniquify",
 	"nagging": 0,
 	"nagging-next": 6,

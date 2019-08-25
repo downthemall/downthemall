@@ -139,7 +139,14 @@ const menuHandler = new class Menus extends Handler {
   constructor() {
     super();
     this.onClicked = this.onClicked.bind(this);
-    menus.create({
+    const alls = new Map<string, string[]>();
+    const mcreate = (options: any) => {
+      if (options.contexts.includes("all")) {
+        alls.set(options.id, options.contexts);
+      }
+      return menus.create(options);
+    };
+    mcreate({
       id: "DTARegular",
       contexts: ["all", "browser_action", "tools_menu"],
       icons: {
@@ -148,7 +155,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta.regular"),
     });
-    menus.create({
+    mcreate({
       id: "DTATurbo",
       contexts: ["all", "browser_action", "tools_menu"],
       icons: {
@@ -157,7 +164,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta.turbo"),
     });
-    menus.create({
+    mcreate({
       id: "DTARegularLink",
       contexts: ["link"],
       icons: {
@@ -166,7 +173,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta.regular.link"),
     });
-    menus.create({
+    mcreate({
       id: "DTATurboLink",
       contexts: ["link"],
       icons: {
@@ -175,7 +182,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta.turbo.link"),
     });
-    menus.create({
+    mcreate({
       id: "DTARegularImage",
       contexts: ["image"],
       icons: {
@@ -184,7 +191,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta.regular.image"),
     });
-    menus.create({
+    mcreate({
       id: "DTATurboImage",
       contexts: ["image"],
       icons: {
@@ -193,7 +200,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta.turbo.image"),
     });
-    menus.create({
+    mcreate({
       id: "DTARegularMedia",
       contexts: ["video", "audio"],
       icons: {
@@ -202,7 +209,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta.regular.media"),
     });
-    menus.create({
+    mcreate({
       id: "DTATurboMedia",
       contexts: ["video", "audio"],
       icons: {
@@ -211,7 +218,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta.turbo.media"),
     });
-    menus.create({
+    mcreate({
       id: "DTARegularSelection",
       contexts: ["selection"],
       icons: {
@@ -220,7 +227,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta.regular.selection"),
     });
-    menus.create({
+    mcreate({
       id: "DTATurboSelection",
       contexts: ["selection"],
       icons: {
@@ -229,12 +236,12 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta.turbo.selection"),
     });
-    menus.create({
+    mcreate({
       id: "sep-1",
       contexts: ["all", "browser_action", "tools_menu"],
       type: "separator"
     });
-    menus.create({
+    mcreate({
       id: "DTARegularAll",
       contexts: ["all", "browser_action", "tools_menu"],
       icons: {
@@ -243,7 +250,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("dta-regular-all"),
     });
-    menus.create({
+    mcreate({
       id: "DTATurboAll",
       contexts: ["all", "browser_action", "tools_menu"],
       icons: {
@@ -255,12 +262,12 @@ const menuHandler = new class Menus extends Handler {
     const sep2ctx = menus.ACTION_MENU_TOP_LEVEL_LIMIT === 6 ?
       ["all", "tools_menu"] :
       ["all", "browser_action", "tools_menu"];
-    menus.create({
+    mcreate({
       id: "sep-2",
       contexts: sep2ctx,
       type: "separator"
     });
-    menus.create({
+    mcreate({
       id: "DTAAdd",
       contexts: ["all", "browser_action", "tools_menu"],
       icons: {
@@ -271,12 +278,12 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("add-download"),
     });
-    menus.create({
+    mcreate({
       id: "sep-3",
       contexts: ["all", "browser_action", "tools_menu"],
       type: "separator"
     });
-    menus.create({
+    mcreate({
       id: "DTAManager",
       contexts: ["all", "browser_action", "tools_menu"],
       icons: {
@@ -285,7 +292,7 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("manager.short"),
     });
-    menus.create({
+    mcreate({
       id: "DTAPrefs",
       contexts: ["all", "browser_action", "tools_menu"],
       icons: {
@@ -296,6 +303,29 @@ const menuHandler = new class Menus extends Handler {
       },
       title: _("prefs.short"),
     });
+    Object.freeze(alls);
+
+    const adjustMenus = (v: boolean) => {
+      for (const [id, contexts] of alls.entries()) {
+        const adjusted = v ?
+          contexts.filter(e => e !== "all") :
+          contexts;
+        menus.update(id, {
+          contexts: adjusted
+        });
+      }
+    };
+    Prefs.get("hide-context", false).then((v: boolean) => {
+      // This is the initial load, so no need to adjust when visible already
+      if (!v) {
+        return;
+      }
+      adjustMenus(v);
+    });
+    Prefs.on("hide-context", (prefs, key, value: boolean) => {
+      adjustMenus(value);
+    });
+
     menus.onClicked.addListener(this.onClicked);
   }
 

@@ -457,6 +457,10 @@
     "description": "",
     "message": "Browser button should be OneClick!"
   },
+  "pref-hide-context": {
+    "description": "",
+    "message": "Do not show general context menu items"
+  },
   "pref-manager-tooltip": {
     "description": "",
     "message": "Show tooltips in Manager tabs"
