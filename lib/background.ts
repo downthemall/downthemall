@@ -378,7 +378,10 @@ locale.then(() => {
         console.error("Invalid Handler for", menuItemId);
         return;
       }
-      handler.call(this, info, tab).catch(console.error);
+      const rv = handler.call(this, info, tab);
+      if (rv && rv.catch) {
+        rv.catch(console.error);
+      }
     }
 
     async enumulate(action: string) {
