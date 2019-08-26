@@ -52,7 +52,12 @@ class Localization {
           continue;
         }
         try {
-          this.strings.set(id, new Entry(entry));
+          if (entry.message.includes("$")) {
+            this.strings.set(id, new Entry(entry));
+          }
+          else {
+            this.strings.set(id, entry.message);
+          }
         }
         catch (ex) {
           this.strings.set(id, entry.message);
