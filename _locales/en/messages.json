@@ -1,4 +1,12 @@
 {
+  "language": {
+    "description": "lanuage name",
+    "message": "English (US)"
+  },
+  "language_code": {
+    "description": "language code",
+    "message": "en"
+  },
   "CRASH": {
     "description": "",
     "message": "Interal Browser Error"
