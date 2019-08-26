@@ -36,7 +36,7 @@ export class RecentList {
     this.pref = `savedlist-${pref}`;
     this.defaults = Array.from(defaults);
     this[LIST] = [];
-    this.limit = 5;
+    this.limit = 15;
   }
 
   get values() {
