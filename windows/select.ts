@@ -51,10 +51,9 @@ function matched(item: any) {
 }
 
 class PausedModalDialog extends ModalDialog {
-  get content() {
+  getContent() {
     const tmpl = $<HTMLTemplateElement>("#paused-template");
     const content = tmpl.content.cloneNode(true) as DocumentFragment;
-    localize(content);
     return content;
   }
 

@@ -116,7 +116,7 @@ class CreateFilterDialog extends ModalDialog {
     this.expr = $("#filter-create-expr", rv);
     this.link = $("#filter-create-type-link", rv);
     this.media = $("#filter-create-type-media", rv);
-    return Promise.resolve(rv);
+    return rv;
   }
 
   get buttons() {

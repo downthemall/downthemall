@@ -8,7 +8,7 @@ interface ModalButton {
   dismiss?: boolean;
 }
 
-export default class ModalDialog {
+export default abstract class ModalDialog {
   private _showing: any;
 
   private _dismiss: HTMLButtonElement | null;
@@ -87,9 +87,8 @@ export default class ModalDialog {
     return el;
   }
 
-  getContent(): Promise<DocumentFragment | HTMLElement> {
-    throw new Error("Not implemented");
-  }
+  abstract getContent():
+    Promise<DocumentFragment | HTMLElement> | HTMLElement | DocumentFragment;
 
   get buttons(): ModalButton[] {
     return [
@@ -205,7 +204,7 @@ export default class ModalDialog {
    */
   static async inform(title: string, text: string, oktext: string) {
     const dialog = new class extends ModalDialog {
-      get content() {
+      getContent() {
         const rv = document.createDocumentFragment();
         const h = document.createElement("h1");
         h.textContent = title || "Information";
@@ -241,7 +240,7 @@ export default class ModalDialog {
 
   static async confirm(title: string, text: string) {
     const dialog = new class extends ModalDialog {
-      get content() {
+      getContent() {
         const rv = document.createDocumentFragment();
         const h = document.createElement("h1");
         h.textContent = title || "Confirm";
@@ -280,7 +279,7 @@ export default class ModalDialog {
     const dialog = new class extends ModalDialog {
       _input: HTMLInputElement;
 
-      get content() {
+      getContent() {
         const rv = document.createDocumentFragment();
         const h = document.createElement("h1");
         h.textContent = title || "Confirm";

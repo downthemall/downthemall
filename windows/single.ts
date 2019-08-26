@@ -27,10 +27,9 @@ class BatchModalDialog extends ModalDialog {
     this.gen = gen;
   }
 
-  get content() {
+  getContent() {
     const tmpl = $("#batch-template") as HTMLTemplateElement;
     const content = tmpl.content.cloneNode(true) as DocumentFragment;
-    localize(content);
     $(".batch-items", content).textContent = this.gen.length.toLocaleString();
     $(".batch-preview", content).textContent = this.gen.preview;
     return content;
