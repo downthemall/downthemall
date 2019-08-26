@@ -98,9 +98,9 @@ export class BatchGenerator implements Generator {
 
   public readonly hasInvalid: boolean;
 
-  public readonly length: any;
+  public readonly length: number;
 
-  public readonly preview: any;
+  public readonly preview: string;
 
   constructor(str: string) {
     this.gens = [];

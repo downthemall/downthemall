@@ -1,15 +1,20 @@
 "use strict";
 // License: MIT
 
-interface ModalButton {
+export interface ModalButton {
   title: string;
   value: string;
   default?: boolean;
   dismiss?: boolean;
 }
 
+interface Promised {
+  resolve: Function;
+  reject: Function;
+}
+
 export default abstract class ModalDialog {
-  private _showing: any;
+  private _showing: Promised | null;
 
   private _dismiss: HTMLButtonElement | null;
 
@@ -107,7 +112,10 @@ export default abstract class ModalDialog {
     ];
   }
 
-  done(button: any) {
+  done(button: ModalButton) {
+    if (!this._showing) {
+      return;
+    }
     const value = this.convertValue(button.value);
     if (button.dismiss) {
       this._showing.reject(new Error(value));
@@ -130,7 +138,7 @@ export default abstract class ModalDialog {
   }
 
 
-  async show() {
+  async show(): Promise<any> {
     if (this._showing) {
       throw new Error("Double show");
     }

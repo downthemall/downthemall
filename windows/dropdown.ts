@@ -13,7 +13,7 @@ export class Dropdown extends EventEmitter {
 
   select: HTMLSelectElement;
 
-  constructor(el: string, options: any[] = []) {
+  constructor(el: string, options: string[] = []) {
     super();
     let input = document.querySelector(el);
     if (!input || !input.parentElement) {

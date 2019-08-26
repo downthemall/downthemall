@@ -13,9 +13,14 @@ import {
   browserAction as action,
   menus as _menus, contextMenus as _cmenus,
   tabs,
-  webNavigation as nav
+  webNavigation as nav,
+  // eslint-disable-next-line no-unused-vars
+  Tab,
+  // eslint-disable-next-line no-unused-vars
+  MenuClickInfo
 } from "./browser";
 import { Bus } from "./bus";
+import { filterInSitu } from "./util";
 
 
 const menus = typeof (_menus) !== "undefined" && _menus || _cmenus;
@@ -23,7 +28,7 @@ const menus = typeof (_menus) !== "undefined" && _menus || _cmenus;
 const GATHER = "/bundles/content-gather.js";
 
 
-async function runContentJob(tab: any, file: string, msg: any) {
+async function runContentJob(tab: Tab, file: string, msg: any) {
   try {
     const res = await tabs.executeScript(tab.id, {
       file,
@@ -56,7 +61,7 @@ type SelectionOptions = {
   selectionOnly: boolean;
   allTabs: boolean;
   turbo: boolean;
-  tab: any;
+  tab: Tab;
 };
 
 
@@ -71,9 +76,8 @@ class Handler {
     return makeUniqueItems(
       results.filter(e => e[what]).map(e => {
         const finisher = new Finisher(e);
-        return e[what].
-          map((item: any) => finisher.finish(item)).
-          filter((i: any) => i);
+        return filterInSitu(e[what].
+          map((item: any) => finisher.finish(item)), e => !!e);
       }));
   }
 
@@ -348,7 +352,7 @@ locale.then(() => {
       }
     }
 
-    async findSingleItem(tab: any, url: string, turbo = false) {
+    async findSingleItem(tab: Tab, url: string, turbo = false) {
       if (!url) {
         return;
       }
@@ -368,7 +372,7 @@ locale.then(() => {
       API[turbo ? "singleTurbo" : "singleRegular"](item);
     }
 
-    onClicked(info: any, tab: any) {
+    onClicked(info: MenuClickInfo, tab: Tab) {
       if (!tab.id) {
         return;
       }
@@ -378,7 +382,7 @@ locale.then(() => {
         console.error("Invalid Handler for", menuItemId);
         return;
       }
-      const rv = handler.call(this, info, tab);
+      const rv: Promise<void> | void = handler.call(this, info, tab);
       if (rv && rv.catch) {
         rv.catch(console.error);
       }
@@ -394,7 +398,7 @@ locale.then(() => {
       }, tab[0]);
     }
 
-    async onClickedDTARegular(info: any, tab: any) {
+    async onClickedDTARegular(info: MenuClickInfo, tab: Tab) {
       return await this.performSelection({
         selectionOnly: false,
         allTabs: false,
@@ -403,7 +407,7 @@ locale.then(() => {
       });
     }
 
-    async onClickedDTARegularAll(info: any, tab: any) {
+    async onClickedDTARegularAll(info: MenuClickInfo, tab: Tab) {
       return await this.performSelection({
         selectionOnly: false,
         allTabs: true,
@@ -412,7 +416,7 @@ locale.then(() => {
       });
     }
 
-    async onClickedDTARegularSelection(info: any, tab: any) {
+    async onClickedDTARegularSelection(info: MenuClickInfo, tab: Tab) {
       return await this.performSelection({
         selectionOnly: true,
         allTabs: false,
@@ -421,7 +425,7 @@ locale.then(() => {
       });
     }
 
-    async onClickedDTATurbo(info: any, tab: any) {
+    async onClickedDTATurbo(info: MenuClickInfo, tab: Tab) {
       return await this.performSelection({
         selectionOnly: false,
         allTabs: false,
@@ -430,7 +434,7 @@ locale.then(() => {
       });
     }
 
-    async onClickedDTATurboAll(info: any, tab: any) {
+    async onClickedDTATurboAll(info: MenuClickInfo, tab: Tab) {
       return await this.performSelection({
         selectionOnly: false,
         allTabs: true,
@@ -439,7 +443,7 @@ locale.then(() => {
       });
     }
 
-    async onClickedDTATurboSelection(info: any, tab: any) {
+    async onClickedDTATurboSelection(info: MenuClickInfo, tab: Tab) {
       return await this.performSelection({
         selectionOnly: true,
         allTabs: false,
@@ -448,28 +452,46 @@ locale.then(() => {
       });
     }
 
-    async onClickedDTARegularLink(info: any, tab: any) {
-      return await this.findSingleItem(tab, info.linkUrl, false);
+    async onClickedDTARegularLink(info: MenuClickInfo, tab: Tab) {
+      if (!info.linkUrl) {
+        return;
+      }
+      await this.findSingleItem(tab, info.linkUrl, false);
     }
 
-    async onClickedDTATurboLink(info: any, tab: any) {
-      return await this.findSingleItem(tab, info.linkUrl, true);
+    async onClickedDTATurboLink(info: MenuClickInfo, tab: Tab) {
+      if (!info.linkUrl) {
+        return;
+      }
+      await this.findSingleItem(tab, info.linkUrl, true);
     }
 
-    async onClickedDTARegularImage(info: any, tab: any) {
-      return await this.findSingleItem(tab, info.srcUrl, false);
+    async onClickedDTARegularImage(info: MenuClickInfo, tab: Tab) {
+      if (!info.srcUrl) {
+        return;
+      }
+      await this.findSingleItem(tab, info.srcUrl, false);
     }
 
-    async onClickedDTATurboImage(info: any, tab: any) {
-      return await this.findSingleItem(tab, info.srcUrl, true);
+    async onClickedDTATurboImage(info: MenuClickInfo, tab: Tab) {
+      if (!info.srcUrl) {
+        return;
+      }
+      await this.findSingleItem(tab, info.srcUrl, true);
     }
 
-    async onClickedDTARegularMedia(info: any, tab: any) {
-      return await this.findSingleItem(tab, info.srcUrl, false);
+    async onClickedDTARegularMedia(info: MenuClickInfo, tab: Tab) {
+      if (!info.srcUrl) {
+        return;
+      }
+      await this.findSingleItem(tab, info.srcUrl, false);
     }
 
-    async onClickedDTATurboMedia(info: any, tab: any) {
-      return await this.findSingleItem(tab, info.srcUrl, true);
+    async onClickedDTATurboMedia(info: MenuClickInfo, tab: Tab) {
+      if (!info.srcUrl) {
+        return;
+      }
+      await this.findSingleItem(tab, info.srcUrl, true);
     }
 
     onClickedDTAAdd() {

@@ -2,22 +2,18 @@
 // License: MIT
 
 import { EventEmitter } from "./events";
-import {runtime, tabs} from "./browser";
+// eslint-disable-next-line no-unused-vars
+import {runtime, tabs, RawPort, MessageSender} from "./browser";
 
 export class Port extends EventEmitter {
-  private port: any;
+  private port: RawPort | null;
 
-  constructor(port: any) {
+  constructor(port: RawPort) {
     super();
     this.port = port;
 
     let disconnected = false;
-    let tabListener: any;
     const disconnect = () => {
-      if (tabListener) {
-        tabs.onRemoved.removeListener(tabListener);
-        tabListener = null;
-      }
       if (disconnected) {
         return;
       }
@@ -41,12 +37,17 @@ export class Port extends EventEmitter {
   }
 
   get name() {
+    if (!this.port) {
+      return null;
+    }
     return this.port.name;
   }
 
   get id() {
-    return this.port.sender && (
-      this.port.sender.id || this.port.sender.extensionId);
+    if (!this.port || !this.port.sender) {
+      return null;
+    }
+    return this.port.sender.id;
   }
 
   get isSelf() {
@@ -54,6 +55,9 @@ export class Port extends EventEmitter {
   }
 
   post(msg: string, ...data: any[]) {
+    if (!this.port) {
+      return;
+    }
     if (!data) {
       this.port.postMessage({msg});
       return;
@@ -65,12 +69,15 @@ export class Port extends EventEmitter {
   }
 
   onMessage(message: any) {
-    if (Object.keys(message).includes("msg")) {
-      this.emit(message.msg, message);
+    if (!this.port) {
       return;
     }
     if (Array.isArray(message)) {
       message.forEach(this.onMessage, this);
+      return;
+    }
+    if (Object.keys(message).includes("msg")) {
+      this.emit(message.msg, message);
       return;
     }
     if (typeof message === "string") {
@@ -100,7 +107,7 @@ export const Bus = new class extends EventEmitter {
     runtime.onConnect.addListener(this.onConnect.bind(this));
   }
 
-  onMessage(msg: any, sender: any, callback: any) {
+  onMessage(msg: any, sender: MessageSender, callback: any) {
     let {type = null} = msg;
     if (!type) {
       type = msg;
@@ -108,7 +115,7 @@ export const Bus = new class extends EventEmitter {
     this.emit(type, msg, callback);
   }
 
-  onConnect(port: any) {
+  onConnect(port: RawPort) {
     if (!port.name) {
       port.disconnect();
       return;

@@ -6,7 +6,8 @@ import { Prefs, PrefWatcher } from "../lib/prefs";
 import { hostToDomain } from "../lib/util";
 import { filters } from "../lib/filters";
 import {Limits} from "../lib/manager/limits";
-import ModalDialog from "../uikit/lib/modal";
+// eslint-disable-next-line no-unused-vars
+import ModalDialog, { ModalButton } from "../uikit/lib/modal";
 import { TYPE_LINK, TYPE_MEDIA } from "../lib/constants";
 import { iconForPath, visible } from "../lib/windowutils";
 import { VirtualTable } from "../uikit/lib/table";
@@ -138,7 +139,7 @@ class CreateFilterDialog extends ModalDialog {
     this.label.focus();
   }
 
-  done(b: any) {
+  done(b: ModalButton) {
     if (!b || !b.default) {
       return super.done(b);
     }
@@ -210,7 +211,7 @@ class FiltersUI extends VirtualTable {
   ignoreNext: boolean;
 
   constructor() {
-    super("#filters");
+    super("#filters", null);
     this.filters = [];
     this.icons = new Icons($("#icons"));
     const filter: any = null;
@@ -403,7 +404,7 @@ class LimitsUI extends VirtualTable {
   };
 
   constructor() {
-    super("#limits");
+    super("#limits", null);
     this.limits = [];
     Limits.on("changed", () => {
       this.limits = Array.from(Limits);

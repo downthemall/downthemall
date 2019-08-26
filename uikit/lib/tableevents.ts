@@ -12,6 +12,8 @@ import {Row} from "./row";
 import {APOOL} from "./animationpool";
 import {COLS, ROWCACHE, VISIBLE} from "./tablesymbols";
 import {ContextMenu, MenuItem} from "./contextmenu";
+// eslint-disable-next-line no-unused-vars
+import { TableConfig } from "./config";
 
 const RESIZE_DEBOUNCE = 500;
 const SCROLL_DEBOUNCE = 250;
@@ -19,7 +21,7 @@ const SCROLL_DEBOUNCE = 250;
 export class TableEvents extends BaseTable {
   private oldVisibleTop: number;
 
-  constructor(elem: any, config?: any, version?: number) {
+  constructor(elem: any, config: TableConfig | null, version?: number) {
     super(elem, config, version);
     const {selection} = this;
     selection.on("selection-added", this.selectionAdded.bind(this));
@@ -172,7 +174,7 @@ export class TableEvents extends BaseTable {
         ctx,
         id,
         col.spanElem.textContent || "",
-        {autohide: "false"});
+        {autoHide: "false"});
       ctx.add(item);
       item.iconElem.textContent = col.visible ? "✓" : " ";
       ctx.on(id, async () => {

@@ -4,7 +4,8 @@
 
 import ModalDialog from "../uikit/lib/modal";
 import { _, localize } from "../lib/i18n";
-import { Item } from "../lib/item";
+// eslint-disable-next-line no-unused-vars
+import { Item, BaseItem } from "../lib/item";
 import { MASK } from "../lib/recentlist";
 import { BatchGenerator } from "../lib/batches";
 import { WindowState } from "./windowstate";
@@ -16,7 +17,7 @@ import { $ } from "./winutil";
 
 const PORT = runtime.connect(null, { name: "single" });
 
-let ITEM: any;
+let ITEM: BaseItem;
 let Mask: Dropdown;
 
 class BatchModalDialog extends ModalDialog {
@@ -59,7 +60,7 @@ class BatchModalDialog extends ModalDialog {
   }
 }
 
-function setItem(item: any) {
+function setItem(item: BaseItem) {
   if (!item) {
     return;
   }
@@ -179,10 +180,12 @@ async function downloadInternal(paused: boolean) {
 
   PORT.postMessage({
     msg: "queue",
-    paused,
     items,
-    mask,
-    maskOnce: $<HTMLInputElement>("#maskOnceCheck").checked,
+    options: {
+      paused,
+      mask,
+      maskOnce: $<HTMLInputElement>("#maskOnceCheck").checked,
+    }
   });
   return null;
 }
@@ -204,7 +207,27 @@ async function init() {
 
 addEventListener("DOMContentLoaded", async function dom() {
   removeEventListener("DOMContentLoaded", dom);
-  await init();
+
+  const inited = init();
+  PORT.onMessage.addListener(async (msg: any) => {
+    try {
+      switch (msg.msg) {
+      case "item": {
+        await inited;
+        setItem(msg.data.item);
+        return;
+      }
+
+      default:
+        throw Error("Unhandled message");
+      }
+    }
+    catch (ex) {
+      console.error("Failed to process message", msg, ex);
+    }
+  });
+
+  await inited;
 
   $("#btnDownload").addEventListener("click", () => download(false));
   $("#btnPaused").addEventListener("click", () => download(true));
@@ -224,27 +247,10 @@ addEventListener("DOMContentLoaded", async function dom() {
     return true;
   });
 
-  PORT.onMessage.addListener((msg: any) => {
-    try {
-      switch (msg.msg) {
-      case "item": {
-        setItem(msg.data);
-        return;
-      }
-
-      default:
-        throw Error("Unhandled message");
-      }
-    }
-    catch (ex) {
-      console.error("Failed to process message", msg, ex);
-    }
-  });
-
   hookButton($("#maskButton"));
 });
 
-addEventListener("load", function() {
+addEventListener("load", function () {
   $("#URL").focus();
 });
 
@@ -258,7 +264,7 @@ addEventListener("contextmenu", event => {
   return false;
 });
 
-addEventListener("beforeunload", function() {
+addEventListener("beforeunload", function () {
   PORT.disconnect();
 });
 

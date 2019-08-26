@@ -15,10 +15,17 @@ import { Icons } from "./icons";
 import { sort, naturalCaseCompare } from "../lib/sorting";
 import { hookButton } from "../lib/manager/renamer";
 import { CellTypes } from "../uikit/lib/constants";
-import { runtime } from "../lib/browser";
+// eslint-disable-next-line no-unused-vars
+import { runtime, RawPort } from "../lib/browser";
 import { $ } from "./winutil";
+// eslint-disable-next-line no-unused-vars
+import { BaseItem } from "../lib/item";
+// eslint-disable-next-line no-unused-vars
+import { ItemDelta } from "../lib/select";
+// eslint-disable-next-line no-unused-vars
+import { TableConfig } from "../uikit/lib/config";
 
-const PORT = runtime.connect(null, { name: "select" });
+const PORT: RawPort = runtime.connect(null, { name: "select" });
 
 const TREE_CONFIG_VERSION = 1;
 
@@ -37,7 +44,11 @@ let Mask: Dropdown;
 let FastFilter: Dropdown;
 
 
-type DELTAS = {deltaLinks: any[]; deltaMedia: any[]};
+type DELTAS = {deltaLinks: ItemDelta[]; deltaMedia: ItemDelta[]};
+
+interface BaseMatchedItem extends BaseItem {
+  matched?: string | null;
+}
 
 function cleaErrors() {
   const not = $("#notification");
@@ -46,7 +57,7 @@ function cleaErrors() {
 }
 
 
-function matched(item: any) {
+function matched(item: BaseMatchedItem) {
   return item && item.matched && item.matched !== "unmanual";
 }
 
@@ -113,18 +124,20 @@ class CheckClasser extends Map<string, string> {
   }
 }
 
+type KeyFn = (item: BaseMatchedItem) => any;
+
 class SelectionTable extends VirtualTable {
   checkClasser: CheckClasser;
 
   icons: Icons;
 
-  links: any[];
+  links: BaseMatchedItem[];
 
-  media: any[];
+  media: BaseMatchedItem[];
 
   type: string;
 
-  items: any[];
+  items: BaseMatchedItem[];
 
   status: HTMLElement;
 
@@ -142,9 +155,11 @@ class SelectionTable extends VirtualTable {
 
   sortasc: boolean;
 
-  keyfns: Map<string, (item: any) => any>;
+  keyfns: Map<string, KeyFn>;
 
-  constructor(treeConfig: any, type: string, links: any[], media: any[]) {
+  constructor(
+      treeConfig: TableConfig | null, type: string,
+      links: BaseMatchedItem[], media: BaseMatchedItem[]) {
     if (type === "links" && !links.length) {
       type = "media";
     }
@@ -187,7 +202,7 @@ class SelectionTable extends VirtualTable {
 
     this.sortcol = null;
     this.sortasc = true;
-    this.keyfns = new Map([
+    this.keyfns = new Map<string, KeyFn>([
       ["colDownload", item => item.usable],
       ["colTitle", item => [item.title, item.usable]],
       ["colDescription", item => [item.description, item.usable]],
@@ -270,7 +285,7 @@ class SelectionTable extends VirtualTable {
           oldmask = "";
           break;
         }
-        oldmask = m;
+        oldmask = m || oldmask;
       }
       try {
         Keys.suppressed = true;
@@ -374,7 +389,7 @@ class SelectionTable extends VirtualTable {
     });
   }
 
-  applyDeltaTo(delta: any[], items: any[]) {
+  applyDeltaTo(delta: ItemDelta[], items: BaseMatchedItem[]) {
     const active = items === this.items;
     for (const d of delta) {
       const {idx = -1, matched = null} = d;
@@ -432,7 +447,7 @@ class SelectionTable extends VirtualTable {
 
   getRowClasses(rowid: number) {
     const item = this.items[rowid];
-    if (!item || !matched(item)) {
+    if (!item || !matched(item) || !item.matched) {
       return null;
     }
     return ["filtered", this.checkClasser.get(item.matched)];
@@ -467,7 +482,7 @@ class SelectionTable extends VirtualTable {
   }
 
   getText(prop: string, idx: number) {
-    const item = this.items[idx];
+    const item: any = this.items[idx];
     if (!item || !(prop in item) || !item[prop]) {
       return "";
     }
@@ -506,7 +521,7 @@ class SelectionTable extends VirtualTable {
 
   getCellCheck(rowid: number, colid: number) {
     if (colid === COL_CHECK) {
-      return matched(this.items[rowid]);
+      return !!matched(this.items[rowid]);
     }
     return false;
   }
@@ -549,13 +564,15 @@ async function download(paused = false) {
     }
     PORT.postMessage({
       msg: "queue",
-      type: Table.type,
       items,
-      paused,
-      mask,
-      maskOnce: $<HTMLInputElement>("#maskOnceCheck").checked,
-      fast: FastFilter.value,
-      fastOnce: $<HTMLInputElement>("#fastOnceCheck").checked,
+      options: {
+        type: Table.type,
+        paused,
+        mask,
+        maskOnce: $<HTMLInputElement>("#maskOnceCheck").checked,
+        fast: FastFilter.value,
+        fastOnce: $<HTMLInputElement>("#fastOnceCheck").checked,
+      }
     });
   }
   catch (ex) {
@@ -567,17 +584,17 @@ async function download(paused = false) {
 }
 
 class Filter {
-  active: any;
-
-  container: any;
-
-  elem: HTMLLabelElement;
-
-  label: any;
+  active: boolean;
 
   checkElem: HTMLInputElement;
 
-  id: any;
+  container: HTMLElement;
+
+  elem: HTMLLabelElement;
+
+  id: string;
+
+  label: string;
 
   constructor(container: HTMLElement, raw: any, active = false) {
     Object.assign(this, raw);

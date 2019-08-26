@@ -7,8 +7,10 @@ import { WindowStateTracker } from "./windowstatetracker";
 import { Promised, timeout } from "./util";
 import { donate } from "./windowutils";
 import { windows } from "./browser";
+// eslint-disable-next-line no-unused-vars
+import { BaseItem } from "./item";
 
-export async function single(item: any) {
+export async function single(item: BaseItem | null) {
   const tracker = new WindowStateTracker("single", {
     minWidth: 700,
     minHeight: 460
@@ -46,7 +48,9 @@ export async function single(item: any) {
       donate();
     });
 
-    port.post("item", item);
+    if (item) {
+      port.post("item", {item});
+    }
     return await done;
   }
   finally {

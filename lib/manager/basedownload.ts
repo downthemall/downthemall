@@ -29,8 +29,6 @@ const SAVEDPROPS = [
   "serverName",
   // other options
   "private",
-  "fromMetalink",
-  "cleanRequest",
   // db
   "manId",
   "dbId",

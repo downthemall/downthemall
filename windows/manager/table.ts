@@ -35,6 +35,8 @@ import "../../lib/util";
 import { CellTypes } from "../../uikit/lib/constants";
 import { downloads } from "../../lib/browser";
 import { $ } from "../winutil";
+// eslint-disable-next-line no-unused-vars
+import { TableConfig } from "../../uikit/lib/config";
 
 const TREE_CONFIG_VERSION = 2;
 const RUNNING_TIMEOUT = 1000;
@@ -311,9 +313,9 @@ export class DownloadTable extends VirtualTable {
 
   public readonly showUrls: ShowUrlsWatcher;
 
-  private runningTimer: any;
+  private runningTimer: number | null;
 
-  private sizesTimer: any;
+  private sizesTimer: number | null;
 
   private readonly globalStats: Stats;
 
@@ -329,7 +331,7 @@ export class DownloadTable extends VirtualTable {
 
   private readonly openFileAction: Broadcaster;
 
-  private readonly openDirectoryAction: any;
+  private readonly openDirectoryAction: Broadcaster;
 
   private readonly moveTopAction: Broadcaster;
 
@@ -339,11 +341,11 @@ export class DownloadTable extends VirtualTable {
 
   private readonly moveBottomAction: Broadcaster;
 
-  private readonly disableSet: Set<any>;
+  private readonly disableSet: Set<Broadcaster>;
 
   private tooltip: Tooltip | null;
 
-  constructor(treeConfig: any) {
+  constructor(treeConfig: TableConfig | null) {
     super("#items", treeConfig, TREE_CONFIG_VERSION);
 
     TEXT_SIZE_UNKNOWM = _("size-unknown");
@@ -621,7 +623,7 @@ export class DownloadTable extends VirtualTable {
         filter(e => e.startsWith(prefix)).
         forEach(e => rem.remove(e));
       for (const filt of filts.all) {
-        if (filt.id === "deffilter-all") {
+        if (typeof filt.id !== "string" || filt.id === "deffilter-all") {
           continue;
         }
         const mi = new MenuItem(rem, `${prefix}-${filt.id}`, filt.label, {
@@ -918,7 +920,7 @@ export class DownloadTable extends VirtualTable {
     }
 
     const filter = (await filters()).get(id);
-    if (!filter) {
+    if (!filter || typeof filter.id !== "string") {
       return;
     }
     await new RemovalModalDialog(
@@ -966,7 +968,7 @@ export class DownloadTable extends VirtualTable {
     switch (oldState) {
     case DownloadState.RUNNING:
       this.running.delete(item);
-      if (!this.running.size && this.runningTimer) {
+      if (!this.running.size && this.runningTimer && this.sizesTimer) {
         clearInterval(this.runningTimer);
         this.runningTimer = null;
         clearInterval(this.sizesTimer);
@@ -983,9 +985,9 @@ export class DownloadTable extends VirtualTable {
     case DownloadState.RUNNING:
       this.running.add(item);
       if (!this.runningTimer) {
-        this.runningTimer = setInterval(
+        this.runningTimer = window.setInterval(
           this.updateRunning.bind(this), RUNNING_TIMEOUT);
-        this.sizesTimer = setInterval(
+        this.sizesTimer = window.setInterval(
           this.updateSizes.bind(this), SIZES_TIMEOUT);
         this.updateRunning();
         this.updateSizes();

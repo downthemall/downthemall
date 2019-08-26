@@ -5,7 +5,8 @@ import { TYPE_LINK, TYPE_MEDIA } from "./constants";
 import { filters } from "./filters";
 import { Prefs } from "./prefs";
 import { lazy } from "./util";
-import { Item, makeUniqueItems } from "./item";
+// eslint-disable-next-line no-unused-vars
+import { Item, makeUniqueItems, BaseItem } from "./item";
 import { getManager } from "./manager/man";
 import { select } from "./select";
 import { single } from "./single";
@@ -16,12 +17,17 @@ import { _ } from "./i18n";
 
 const MAX_BATCH = 10000;
 
+export interface QueueOptions {
+  mask?: string;
+  paused?: boolean;
+}
+
 export const API = new class APIImpl {
-  async filter(arr: any, type: number) {
+  async filter(arr: BaseItem[], type: number) {
     return await (await filters()).filterItemsByType(arr, type);
   }
 
-  async queue(items: any, options: any) {
+  async queue(items: BaseItem[], options: QueueOptions) {
     await MASK.init();
     const {mask = MASK.current} = options;
 
@@ -36,12 +42,9 @@ export const API = new class APIImpl {
       fileName: null,
       title: "",
       description: "",
-      fromMetalink: false,
       startDate: new Date(),
-      hashes: [],
       private: false,
       postData: null,
-      cleanRequest: false,
       mask,
       date: Date.now(),
       paused
@@ -54,7 +57,7 @@ export const API = new class APIImpl {
       }
       return currentBatch;
     });
-    items = items.map((i: any) => {
+    items = items.map(i => {
       delete i.idx;
       return new Item(i, defaults);
     });
@@ -79,7 +82,7 @@ export const API = new class APIImpl {
     }
   }
 
-  sanity(links: any[], media: any[]) {
+  sanity(links: BaseItem[], media: BaseItem[]) {
     if (!links.length && !media.length) {
       new Notification(null, _("no-links"));
       return false;
@@ -87,7 +90,7 @@ export const API = new class APIImpl {
     return true;
   }
 
-  async turbo(links: any[], media: any[]) {
+  async turbo(links: BaseItem[], media: BaseItem[]) {
     if (!this.sanity(links, media)) {
       return false;
     }
@@ -105,37 +108,36 @@ export const API = new class APIImpl {
     return await this.queue(selected, {paused: await Prefs.get("add-paused")});
   }
 
-  async regularInternal(selected: any) {
-    if (selected.mask && !selected.maskOnce) {
+  async regularInternal(selected: BaseItem[], options: any) {
+    if (options.mask && !options.maskOnce) {
       await MASK.init();
-      await MASK.push(selected.mask);
+      await MASK.push(options.mask);
     }
-    if (typeof selected.fast === "string" && !selected.fastOnce) {
+    if (typeof options.fast === "string" && !options.fastOnce) {
       await FASTFILTER.init();
-      await FASTFILTER.push(selected.fast);
+      await FASTFILTER.push(options.fast);
     }
-    if (typeof selected.type === "string") {
-      await Prefs.set("last-type", selected.type);
+    if (typeof options.type === "string") {
+      await Prefs.set("last-type", options.type);
     }
-    const {items} = selected;
-    delete selected.items;
-    return await this.queue(items, selected);
+    return await this.queue(selected, options);
   }
 
-  async regular(links: any[], media: any[]) {
+  async regular(links: BaseItem[], media: BaseItem[]) {
     if (!this.sanity(links, media)) {
       return false;
     }
-    const selected = await select(links, media);
-    return this.regularInternal(selected);
+    const {items, options} = await select(links, media);
+    console.log(items, options);
+    return this.regularInternal(items, options);
   }
 
-  async singleTurbo(item: any) {
+  async singleTurbo(item: BaseItem) {
     return await this.queue([item], {paused: await Prefs.get("add-paused")});
   }
 
-  async singleRegular(item: any) {
-    const selected = await single(item);
-    return this.regularInternal(selected);
+  async singleRegular(item: BaseItem | null) {
+    const {items, options} = await single(item);
+    return this.regularInternal(items, options);
   }
 }();

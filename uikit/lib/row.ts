@@ -38,7 +38,7 @@ class Hover {
 
   private hovering: boolean;
 
-  private timer: any;
+  private timer: number | null;
 
   constructor(row: Row) {
     this.row = row;
@@ -62,7 +62,7 @@ class Hover {
     this.elem.addEventListener("mousemove", this.onmove, {passive: true});
     this.x = evt.clientX;
     this.y = evt.clientY;
-    this.timer = setTimeout(this.onhover, HOVER_TIME);
+    this.timer = window.setTimeout(this.onhover, HOVER_TIME);
   }
 
   onleave() {
@@ -93,7 +93,7 @@ class Hover {
       if (this.timer) {
         clearTimeout(this.timer);
       }
-      this.timer = setTimeout(this.onhover, HOVER_TIME);
+      this.timer = window.setTimeout(this.onhover, HOVER_TIME);
     }
   }
 

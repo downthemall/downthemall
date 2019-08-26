@@ -33,6 +33,14 @@ export interface MenuPosition {
   clientY: number;
 }
 
+interface MenuOptions {
+  disabled?: string;
+  allowClick?: string;
+  icon?: string;
+  key?: string;
+  autoHide?: string;
+}
+
 export class MenuItemBase {
   public readonly owner: ContextMenu;
 
@@ -44,7 +52,7 @@ export class MenuItemBase {
 
   public readonly key: string;
 
-  public readonly autohide: boolean;
+  public readonly autoHide: boolean;
 
   public readonly elem: HTMLLIElement;
 
@@ -54,18 +62,16 @@ export class MenuItemBase {
 
   public readonly keyElem: HTMLSpanElement;
 
-  constructor(owner: ContextMenu, id = "", text = "", {
-    key = "", icon = "", autohide = Object()
-  }) {
+  constructor(owner: ContextMenu, id = "", text = "", options: MenuOptions) {
     this.owner = owner;
     if (!id) {
       id = `contextmenu-${++ids}`;
     }
     this.id = id;
     this.text = text || "";
-    this.icon = icon || "";
-    this.key = key || "";
-    this.autohide = autohide !== "false" && autohide !== false;
+    this.icon = options.icon || "";
+    this.key = options.key || "";
+    this.autoHide = options.autoHide !== "false";
 
     this.elem = document.createElement("li");
     this.elem.id = this.id;
@@ -96,13 +102,14 @@ export class MenuItemBase {
 }
 
 export class MenuItem extends MenuItemBase {
-  constructor(owner: ContextMenu, id = "", text = "", options: any = {}) {
+  constructor(
+      owner: ContextMenu, id = "", text = "", options: MenuOptions = {}) {
     options = options || {};
     super(owner, id, text, options);
-    this.disabled = !!options.disabled;
+    this.disabled = options.disabled === "true";
     this.elem.setAttribute("aria-role", "menuitem");
     this.elem.addEventListener(
-      "click", () => this.owner.emit("clicked", this.id, this.autohide));
+      "click", () => this.owner.emit("clicked", this.id, this.autoHide));
   }
 
   get disabled() {
@@ -132,7 +139,8 @@ export class SubMenuItem extends MenuItemBase {
 
   public readonly expandElem: HTMLSpanElement;
 
-  constructor(owner: ContextMenu, id = "", text = "", options: any = {}) {
+  constructor(
+      owner: ContextMenu, id = "", text = "", options: MenuOptions = {}) {
     super(owner, id, text, options);
     this.elem.setAttribute("aria-role", "menuitem");
     this.elem.setAttribute("aria-haspopup", "true");
@@ -145,8 +153,8 @@ export class SubMenuItem extends MenuItemBase {
     this.expandElem.textContent = "►";
     this.elem.appendChild(this.expandElem);
     this.elem.addEventListener("click", event => {
-      if (options.allowClick) {
-        this.owner.emit("clicked", this.id, this.autohide);
+      if (options.allowClick === "true") {
+        this.owner.emit("clicked", this.id, this.autoHide);
       }
       event.stopPropagation();
       event.preventDefault();
@@ -160,7 +168,7 @@ export class SubMenuItem extends MenuItemBase {
     this.owner.on("showing", () => {
       this.menu.dismiss();
     });
-    this.menu.on("clicked", (...args: any) => {
+    this.menu.on("clicked", (...args: any[]) => {
       this.owner.emit("clicked", ...args);
     });
   }
@@ -215,7 +223,7 @@ export class SubMenuItem extends MenuItemBase {
 export class ContextMenu extends EventEmitter {
   id: string;
 
-  items: any[];
+  items: MenuItemBase[];
 
   itemMap: Map<string, MenuItemBase>;
 
@@ -223,7 +231,7 @@ export class ContextMenu extends EventEmitter {
 
   showing: boolean;
 
-  _maybeDismiss: any;
+  _maybeDismiss: (this: Window, ev: MouseEvent) => any;
 
   constructor(el?: any) {
     super();
@@ -348,10 +356,12 @@ export class ContextMenu extends EventEmitter {
     return this.itemMap.get(id);
   }
 
-  add(item: MenuItemBase, before: any = "") {
+  add(item: MenuItemBase, before: MenuItemBase | string = "") {
     let idx = this.items.length;
     if (before) {
-      before = before.id || before;
+      if (typeof before !== "string") {
+        before = before.id;
+      }
       const ni = this.items.findIndex(i => i.id === before);
       if (ni >= 0) {
         idx = ni;
@@ -366,8 +376,8 @@ export class ContextMenu extends EventEmitter {
     this.itemMap.set(item.id, item);
   }
 
-  remove(item: any) {
-    const id = item.id || item;
+  remove(item: MenuItemBase | string) {
+    const id = typeof item === "string" ? item : item.id;
     const idx = this.items.findIndex(i => i.id === id);
     if (idx >= 0) {
       this.items.splice(idx, 1);

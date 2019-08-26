@@ -4,18 +4,32 @@
 import { ALLOWED_SCHEMES } from "./constants";
 import { TRANSFERABLE_PROPERTIES } from "./constants";
 
+export interface BaseItem {
+  url: string;
+  usable: string;
+  referrer?: string;
+  usableReferrer?: string;
+  description?: string;
+  title?: string;
+  fileName?: string;
+  batch?: number;
+  idx: number;
+  mask?: string;
+  startDate?: number;
+  private?: boolean;
+  postData?: string;
+  paused?: boolean;
+}
+
 const OPTIONPROPS = Object.freeze([
   "referrer", "usableReferrer",
   "description", "title",
   "fileName",
   "batch", "idx",
   "mask",
-  "fromMetalink",
   "startDate",
-  "hashes",
   "private",
   "postData",
-  "cleanRequest",
   "paused"
 ]);
 
@@ -34,7 +48,7 @@ function maybeAssign(options: any, what: any) {
   this[what] = val;
 }
 
-export class Item {
+export class Item implements BaseItem {
   public url: string;
 
   public usable: string;
@@ -42,6 +56,8 @@ export class Item {
   public referrer: string;
 
   public usableReferrer: string;
+
+  public idx: number;
 
   constructor(raw: any, options?: any) {
     Object.assign(this, raw);

@@ -1,5 +1,8 @@
 "use strict";
 
+// eslint-disable-next-line no-unused-vars
+import { BaseItem } from "./item";
+
 // License: MIT
 
 const VERSION = 1;
@@ -40,12 +43,12 @@ export const DB = new class DB {
     });
   }
 
-  getAllInternal(resolve: (items: any[]) => void, reject: Function) {
+  getAllInternal(resolve: (items: BaseItem[]) => void, reject: Function) {
     if (!this.db) {
       reject(new Error("db closed"));
       return;
     }
-    const items: any[] = [];
+    const items: BaseItem[] = [];
     const transaction = this.db.transaction(STORE, "readonly");
     transaction.onerror = ex => reject(ex);
     const store = transaction.objectStore(STORE);

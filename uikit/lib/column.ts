@@ -1,14 +1,12 @@
 "use strict";
+// License: MIT
 
 /* eslint-disable no-unused-vars */
 import { TableEvents } from "./tableevents";
 import {addClass, debounce, sum} from "./util";
 import {EventEmitter} from "./events";
 import {APOOL} from "./animationpool";
-
-/* eslint-enable no-unused-vars */
-
-// License: MIT
+import { ColumnConfig, ColumnConfigs } from "./config";
 
 const PIXLIT_WIDTH = 2;
 const MIN_COL_WIDTH = 16;
@@ -55,8 +53,7 @@ export class Column extends EventEmitter {
       columns: Columns,
       col: HTMLTableHeaderCellElement,
       id: number,
-      config: any) {
-    config = config || {};
+      config: ColumnConfig | null) {
     super();
     this.columns = columns;
     this.elem = col;
@@ -89,7 +86,7 @@ export class Column extends EventEmitter {
 
     this.elem.appendChild(containerElem);
 
-    if ("visible" in config) {
+    if (config) {
       this.visible = config.visible;
     }
     this.initWidths(config);
@@ -148,18 +145,18 @@ export class Column extends EventEmitter {
     return Math.max(0, this.currentWidth - this.minWidth);
   }
 
-  get config() {
+  get config(): ColumnConfig {
     return {
       visible: this.visible,
       width: this.currentWidth,
     };
   }
 
-  initWidths(config: any) {
+  initWidths(config: ColumnConfig | null) {
     const style = getComputedStyle(this.elem, null);
     this.minWidth = toPixel(style.getPropertyValue("min-width"), MIN_COL_WIDTH);
     this.maxWidth = toPixel(style.getPropertyValue("max-width"), 0);
-    const width = config.width || this.baseWidth;
+    const width = (config && config.width) || this.baseWidth;
     this.setWidth(width);
   }
 
@@ -236,7 +233,7 @@ export class Columns extends EventEmitter {
 
   public visible: Column[];
 
-  constructor(table: any, config: any) {
+  constructor(table: any, config: ColumnConfigs | null) {
     config = config || {};
     super();
     this.table = table;
@@ -247,7 +244,9 @@ export class Columns extends EventEmitter {
     this.named = new Map<string, Column>();
     this.cols = Array.from(table.elem.querySelectorAll("th")).
       map((colEl: HTMLTableHeaderCellElement, colid: number) => {
-        const columnConfig = colEl.id in config ? config[colEl.id] : null;
+        const columnConfig = config && colEl.id in config ?
+          config[colEl.id] :
+          null;
         const col = new Column(this, colEl, colid, columnConfig);
         col.on("gripmoved", this.gripmoved);
         this.named.set(colEl.id, col);
@@ -261,7 +260,7 @@ export class Columns extends EventEmitter {
     Object.seal(this);
   }
 
-  get config() {
+  get config(): ColumnConfigs {
     const rv: any = {};
     for (const c of this.cols) {
       rv[c.elem.id] = c.config;

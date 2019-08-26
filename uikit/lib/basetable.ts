@@ -14,6 +14,8 @@ import {
 } from "./tablesymbols";
 import { InvalidatedSet, UpdateRecord } from "./tableutil";
 import { addClass, clampUInt, IS_MAC } from "./util";
+// eslint-disable-next-line no-unused-vars
+import { TableConfig } from "./config";
 
 const ROWS_SMALL_UPDATE = 5;
 const PIXEL_PREC = 5;
@@ -79,7 +81,7 @@ export class BaseTable extends AbstractTable {
 
   [COLS]: Columns;
 
-  constructor(elem: any, config: any, version?: number) {
+  constructor(elem: any, config: TableConfig | null, version?: number) {
     config = (config && config.version === version && config) || {};
     super();
 
@@ -121,9 +123,9 @@ export class BaseTable extends AbstractTable {
     this.makeDOM(config);
   }
 
-  makeDOM(config: any) {
+  makeDOM(config: TableConfig) {
     const configColumns = "columns" in config ? config.columns : null;
-    const cols = this[COLS] = new Columns(this, configColumns);
+    const cols = this[COLS] = new Columns(this, configColumns || null);
 
     const container = document.createElement("div");
     const thead = document.createElement("div");
@@ -241,7 +243,7 @@ export class BaseTable extends AbstractTable {
     return new SelectionRange(firstIdx, lastIdx);
   }
 
-  get config() {
+  get config(): TableConfig {
     return {
       version: this.version,
       columns: this.columnConfig

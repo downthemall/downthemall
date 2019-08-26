@@ -12,6 +12,8 @@ import { Overlayable } from "./objectoverlay";
 import * as DEFAULT_FILTERS from "../data/filters.json";
 import { FASTFILTER } from "./recentlist";
 import { _, locale } from "./i18n";
+// eslint-disable-next-line no-unused-vars
+import { BaseItem } from "./item";
 
 const REG_ESCAPE = /[{}()[\]\\^$.]/g;
 const REG_FNMATCH = /[*?]/;
@@ -174,25 +176,37 @@ export class Matcher {
   }
   /* eslint-enable no-unused-vars */
 
-  matchItem(item: any) {
+  matchItem(item: BaseItem) {
     const {usable = "", title = "", description = "", fileName = ""} = item;
     return this.match(usable) || this.match(title) ||
              this.match(description) || this.match(fileName);
   }
 }
 
+interface RawFilter extends Object {
+  active: boolean;
+  type: number;
+  label: string;
+  expr: string;
+  icon?: string;
+  custom?: boolean;
+  isOverridden?: (prop: string) => boolean;
+  reset?: () => void;
+  toJSON?: () => any;
+}
+
 export class Filter {
   private readonly owner: Filters;
 
-  public readonly id: any;
+  public readonly id: string | symbol;
 
-  private readonly raw: any;
+  private readonly raw: RawFilter;
 
   private _label: string;
 
   private _reg: Matcher;
 
-  constructor(owner: Filters, id: any, raw: any) {
+  constructor(owner: Filters, id: string | symbol, raw: RawFilter) {
     if (!owner || !id || !raw) {
       throw new Error("null argument");
     }
@@ -204,9 +218,11 @@ export class Filter {
 
   init() {
     this._label = this.raw.label;
-    if (this.id !== FAST && this.id.startsWith("deffilter-") &&
-      !this.raw.isOverridden("label")) {
-      this._label = _(this.id) || this._label;
+    if (typeof this.raw.isOverridden !== "undefined" &&
+        typeof this.id === "string") {
+      if (this.id.startsWith("deffilter-") && !this.raw.isOverridden("label")) {
+        this._label = _(this.id) || this._label;
+      }
     }
     this._reg = Matcher.fromExpression(this.expr);
     Object.seal(this);
@@ -282,7 +298,7 @@ export class Filter {
   }
 
   async reset() {
-    if (this.raw.custom) {
+    if (!this.raw.reset) {
       throw Error("Cannot reset non-default filter");
     }
     this.raw.reset();
@@ -292,7 +308,10 @@ export class Filter {
 
   async "delete"() {
     if (!this.raw.custom) {
-      throw Error("Cannot delete default filter");
+      throw new Error("Cannot delete default filter");
+    }
+    if (typeof this.id !== "string") {
+      throw new Error("Cannot delete symbolized");
     }
     await this.owner.delete(this.id);
   }
@@ -301,7 +320,7 @@ export class Filter {
     return this._reg.match(str);
   }
 
-  matchItem(item: any) {
+  matchItem(item: BaseItem) {
     return this._reg.matchItem(item);
   }
 
@@ -316,8 +335,7 @@ class FastFilter extends Filter {
       throw new Error("Invalid fast filter value");
     }
     super(owner, FAST, {
-      id: FAST,
-      label: FAST,
+      label: "fast",
       type: TYPE_ALL,
       active: true,
       expr: value,
@@ -409,11 +427,11 @@ class Filters extends EventEmitter {
     await this.save();
   }
 
-  "get"(id: any) {
+  "get"(id: string | symbol) {
     return this.filters.find(e => e.id === id);
   }
 
-  async "delete"(id: any) {
+  async "delete"(id: string) {
     const idx = this.filters.findIndex(e => e.id === id);
     if (idx < 0) {
       return;
@@ -517,7 +535,7 @@ class Filters extends EventEmitter {
     this.regenerate();
   }
 
-  async filterItemsByType(items: any[], type: number) {
+  async filterItemsByType(items: BaseItem[], type: number) {
     const matcher = this.typeMatchers.get(type);
     const fast = await this.getFastFilter();
     return items.filter(function(item) {
@@ -544,12 +562,14 @@ class Filters extends EventEmitter {
   }
 }
 
-let _filters: any;
+let _filters: Filters;
+let _loader: Promise<void>;
 
 export async function filters(): Promise<Filters> {
-  if (!_filters) {
+  if (!_loader) {
     _filters = new Filters();
-    await _filters.load();
+    _loader = _filters.load();
   }
+  await _loader;
   return _filters;
 }

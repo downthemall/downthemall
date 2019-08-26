@@ -8,6 +8,8 @@ import { Row } from "./row";
 import {APOOL} from "./animationpool";
 import {ROW_CACHE_SIZE, ROW_REUSE_SIZE} from "./constants";
 import {clampUInt} from "./util";
+// eslint-disable-next-line no-unused-vars
+import { BaseTable } from "./basetable";
 
 
 export class InvalidatedSet<T> extends Set<T> {
@@ -70,7 +72,7 @@ export class UpdateRecord {
 
   bottom: number;
 
-  constructor(table: any, cols: Column[]) {
+  constructor(table: BaseTable, cols: Column[]) {
     this.rowCount = table.rowCount;
     this.scrollTop = table.visibleTop;
     this.rowHeight = table.rowHeight;

@@ -10,10 +10,24 @@ import { donate, openPrefs, openUrls } from "./windowutils";
 import { filters, FAST, Filter } from "./filters";
 import { WindowStateTracker } from "./windowstatetracker";
 import { windows } from "./browser";
+// eslint-disable-next-line no-unused-vars
+import { BaseItem } from "./item";
 
+interface BaseMatchedItem extends BaseItem {
+  matched?: string | null;
+  prevMatched?: string | null;
+}
 
-function computeSelection(filters: any[], items: any[], onlyFast: boolean) {
-  let ws = items.map((item: any, idx: number) => {
+export interface ItemDelta {
+  idx: number;
+  matched?: string | null;
+}
+
+function computeSelection(
+    filters: Filter[],
+    items: BaseMatchedItem[],
+    onlyFast: boolean): ItemDelta[] {
+  let ws = items.map((item, idx: number) => {
     item.idx = idx;
     const {matched = null} = item;
     item.prevMatched = matched;
@@ -23,9 +37,15 @@ function computeSelection(filters: any[], items: any[], onlyFast: boolean) {
   for (const filter of filters) {
     ws = ws.filter(item => {
       if (filter.matchItem(item)) {
-        item.matched = filter.id === FAST ?
-          "fast" :
-          (onlyFast ? null : filter.id);
+        if (filter.id === FAST) {
+          item.matched = "fast";
+        }
+        else if (!onlyFast && typeof filter.id === "string") {
+          item.matched = filter.id;
+        }
+        else {
+          item.matched = null;
+        }
       }
       return !item.matched;
     });
@@ -41,6 +61,9 @@ function computeSelection(filters: any[], items: any[], onlyFast: boolean) {
 function *computeActiveFiltersGen(
     filters: Filter[], activeOverrides: Map<string, boolean>) {
   for (const filter of filters) {
+    if (typeof filter.id !== "string") {
+      continue;
+    }
     const override = activeOverrides.get(filter.id);
     if (typeof override === "boolean") {
       if (override) {
@@ -59,11 +82,11 @@ function computeActiveFilters(
   return Array.from(computeActiveFiltersGen(filters, activeOverrides));
 }
 
-function filtersToDescs(filters: any[]) {
+function filtersToDescs(filters: Filter[]) {
   return filters.map(f => f.descriptor);
 }
 
-export async function select(links: any[], media: any[]) {
+export async function select(links: BaseItem[], media: BaseItem[]) {
   const fm = await filters();
   const tracker = new WindowStateTracker("select", {
     minWidth: 700,
@@ -85,7 +108,7 @@ export async function select(links: any[], media: any[]) {
     tracker.track(window.id, port);
 
     const overrides = new Map();
-    let fast: any = null;
+    let fast: Filter | null = null;
     let onlyFast: false;
     try {
       fast = await fm.getFastFilter();
@@ -95,16 +118,16 @@ export async function select(links: any[], media: any[]) {
     }
 
     const sendFilters = function(delta = false) {
-      let {linkFilters, mediaFilters} = fm;
+      const {linkFilters, mediaFilters} = fm;
       const alink = computeActiveFilters(linkFilters, overrides);
       const amedia = computeActiveFilters(mediaFilters, overrides);
       const sactiveFilters = new Set<any>();
       [alink, amedia].forEach(
         a => a.forEach(filter => sactiveFilters.add(filter.id)));
       const activeFilters = Array.from(sactiveFilters);
-      linkFilters = filtersToDescs(linkFilters);
-      mediaFilters = filtersToDescs(mediaFilters);
-      port.post("filters", {linkFilters, mediaFilters, activeFilters});
+      const linkFilterDescs = filtersToDescs(linkFilters);
+      const mediaFilterDescs = filtersToDescs(mediaFilters);
+      port.post("filters", {linkFilterDescs, mediaFilterDescs, activeFilters});
 
       if (fast) {
         alink.unshift(fast);
@@ -128,9 +151,6 @@ export async function select(links: any[], media: any[]) {
     });
 
     port.on("queue", (msg: any) => {
-      const selected = new Set<number>(msg.items);
-      const items = (msg.type === "links" ? links : media);
-      msg.items = items.filter((item: any, idx: number) => selected.has(idx));
       done.resolve(msg);
     });
 
@@ -175,7 +195,11 @@ export async function select(links: any[], media: any[]) {
       sendFilters(false);
       const type = await Prefs.get("last-type", "links");
       port.post("items", {type, links, media});
-      const result = await done;
+      const {items, options} = await done;
+      const selectedIndexes = new Set<number>(items);
+      const selectedList = (options.type === "links" ? links : media);
+      const selectedItems = selectedList.filter(
+        (item: BaseItem, idx: number) => selectedIndexes.has(idx));
       for (const [filter, override] of overrides) {
         const f = fm.get(filter);
         if (f) {
@@ -183,7 +207,7 @@ export async function select(links: any[], media: any[]) {
         }
       }
       await fm.save();
-      return result;
+      return {items: selectedItems, options};
     }
     finally {
       fm.off("changed", sendFilters);

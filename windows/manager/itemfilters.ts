@@ -41,7 +41,7 @@ export class TextFilter extends ItemFilter {
 
   private box: HTMLInputElement;
 
-  private timer: any;
+  private timer: number | null;
 
   private current: string;
 
@@ -58,7 +58,7 @@ export class TextFilter extends ItemFilter {
       if (this.timer) {
         return;
       }
-      this.timer = setTimeout(() => this.update(), TIMEOUT_SEARCH);
+      this.timer = window.setTimeout(() => this.update(), TIMEOUT_SEARCH);
     });
     this.box.addEventListener("keydown", e => {
       if (e.key !== "Escape") {
@@ -152,7 +152,7 @@ export class MenuFilter extends ItemFilter {
       return;
     }
     const item = new MenuItem(this.menu, id, text, {
-      autohide: false,
+      autoHide: "false",
     });
     item.iconElem.textContent = checked ? "✓" : "";
     this.items.set(id, {item, callback});
@@ -202,16 +202,24 @@ export class MenuFilter extends ItemFilter {
   }
 }
 
+type ChainedFunction = (item: DownloadItem) => boolean;
+
+interface ChainedItem {
+  text: string;
+  fn: ChainedFunction;
+}
+
 class FixedMenuFilter extends MenuFilter {
   collection: FilteredCollection;
 
-  selected: Set<any>;
+  selected: Set<ChainedItem>;
 
-  fixed: Set<any>;
+  fixed: Set<ChainedItem>;
 
-  chain: any;
+  chain: ChainedFunction | null;
 
-  constructor(id: string, collection: FilteredCollection, items: any[]) {
+  constructor(
+      id: string, collection: FilteredCollection, items: ChainedItem[]) {
     super(id);
     this.collection = collection;
     this.selected = new Set();
@@ -226,7 +234,7 @@ class FixedMenuFilter extends MenuFilter {
     });
   }
 
-  toggle(item: MenuItem) {
+  toggle(item: ChainedItem) {
     if (this.selected.has(item)) {
       this.selected.delete(item);
     }
@@ -241,14 +249,18 @@ class FixedMenuFilter extends MenuFilter {
       this.collection.removeFilter(this);
       return;
     }
-    this.chain = Array.from(this.selected).reduce((prev, curr) => {
-      return (item: DownloadItem) => curr.fn(item) || (prev && prev(item));
-    }, null);
+    this.chain = null;
+    this.chain = Array.from(this.selected).reduce(
+      (prev: ChainedFunction | null, curr) => {
+        return (item: DownloadItem) => {
+          return curr.fn(item) || (prev !== null && prev(item));
+        };
+      }, this.chain);
     this.collection.addFilter(this);
   }
 
   allow(item: DownloadItem) {
-    return this.chain(item);
+    return this.chain !== null && this.chain(item);
   }
 
   clear() {
@@ -341,7 +353,7 @@ export class UrlMenuFilter extends MenuFilter {
     });
   }
 
-  toggleRegularFilter(filter: any) {
+  toggleRegularFilter(filter: Filter) {
     if (this.filters.has(filter)) {
       this.filters.delete(filter);
     }
