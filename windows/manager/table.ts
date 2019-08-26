@@ -11,7 +11,7 @@ import {
 import { iconForPath } from "../../lib/windowutils";
 import { formatSpeed, formatSize, formatTimeDelta } from "../../lib/formatters";
 import { filters } from "../../lib/filters";
-import { _, localize } from "../../lib/i18n";
+import { _ } from "../../lib/i18n";
 import { EventEmitter } from "../../lib/events";
 import { Prefs, PrefWatcher } from "../../lib/prefs";
 // eslint-disable-next-line no-unused-vars
@@ -52,7 +52,11 @@ const COL_SEGS = 8;
 
 const ICON_BASE_SIZE = 16;
 
-const TEXT_SIZE_UNKNOWM = _("size-unknown");
+let TEXT_SIZE_UNKNOWM = "unknown";
+let REAL_STATE_TEXTS = Object.freeze(new Map<number, string>());
+StateTexts.then(v => {
+  REAL_STATE_TEXTS = v;
+});
 
 const prettyNumber = (function() {
 const rv = new Intl.NumberFormat(undefined, {
@@ -190,7 +194,7 @@ export class DownloadItem extends EventEmitter {
     if (this.error) {
       return _(this.error) || this.error;
     }
-    return StateTexts.get(this.state);
+    return REAL_STATE_TEXTS.get(this.state) || "";
   }
 
   get fmtSpeed() {
@@ -342,6 +346,8 @@ export class DownloadTable extends VirtualTable {
   constructor(treeConfig: any) {
     super("#items", treeConfig, TREE_CONFIG_VERSION);
 
+    TEXT_SIZE_UNKNOWM = _("size-unknown");
+
     this.finished = 0;
     this.running = new Set();
     this.runningTimer = null;
@@ -362,7 +368,7 @@ export class DownloadTable extends VirtualTable {
     new TextFilter(this.downloads);
     const menufilters = new Map<string, MenuFilter>([
       ["colURL", new UrlMenuFilter(this.downloads)],
-      ["colETA", new StateMenuFilter(this.downloads)],
+      ["colETA", new StateMenuFilter(this.downloads, REAL_STATE_TEXTS)],
       ["colSize", new SizeMenuFilter(this.downloads)],
     ]);
     this.on("column-clicked", (id, evt, col) => {
@@ -402,7 +408,6 @@ export class DownloadTable extends VirtualTable {
     this.sids = new Map<number, DownloadItem>();
     this.icons = new Icons($("#icons"));
 
-    localize($<HTMLTemplateElement>("#table-context").content);
     const ctx = this.contextMenu = new ContextMenu("#table-context");
     Keys.adoptContext(ctx);
     Keys.adoptButtons($("#toolbar"));

@@ -2,7 +2,7 @@
 "use strict";
 // License: MIT
 
-import { _, localize } from "../../lib/i18n";
+import { _ } from "../../lib/i18n";
 import { formatSpeed } from "../../lib/formatters";
 import { DownloadState } from "./state";
 import { Rect } from "../../uikit/lib/rect";
@@ -155,7 +155,7 @@ export class Tooltip {
     if (!el) {
       throw new Error("invalid template");
     }
-    this.elem = localize(el.cloneNode(true) as HTMLElement);
+    this.elem = el.cloneNode(true) as HTMLElement;
     this.adjust(pos);
 
     // eslint-disable-next-line @typescript-eslint/no-this-alias

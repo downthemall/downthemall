@@ -4,13 +4,14 @@
 import uuid from "./uuid";
 
 import "./objectoverlay";
-import { storage, i18n } from "./browser";
+import { storage } from "./browser";
 import { EventEmitter } from "./events";
 import { TYPE_LINK, TYPE_MEDIA, TYPE_ALL } from "./constants";
 // eslint-disable-next-line no-unused-vars
 import { Overlayable } from "./objectoverlay";
 import * as DEFAULT_FILTERS from "../data/filters.json";
 import { FASTFILTER } from "./recentlist";
+import { _, locale } from "./i18n";
 
 const REG_ESCAPE = /[{}()[\]\\^$.]/g;
 const REG_FNMATCH = /[*?]/;
@@ -205,7 +206,7 @@ export class Filter {
     this._label = this.raw.label;
     if (this.id !== FAST && this.id.startsWith("deffilter-") &&
       !this.raw.isOverridden("label")) {
-      this._label = i18n.getMessage(this.id) || this._label;
+      this._label = _(this.id) || this._label;
     }
     this._reg = Matcher.fromExpression(this.expr);
     Object.seal(this);
@@ -475,6 +476,7 @@ class Filters extends EventEmitter {
   }
 
   async load() {
+    await locale;
     const defaultFilters = DEFAULT_FILTERS as any;
     let savedFilters = (await storage.local.get("userFilters"));
     if (savedFilters && "userFilters" in savedFilters) {

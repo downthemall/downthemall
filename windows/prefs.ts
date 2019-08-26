@@ -109,15 +109,14 @@ class CreateFilterDialog extends ModalDialog {
 
   media: HTMLInputElement;
 
-  get content() {
-    const tmpl = $<HTMLTemplateElement>("#create-filter-template").
+  getContent() {
+    const rv = $<HTMLTemplateElement>("#create-filter-template").
       content.cloneNode(true) as DocumentFragment;
-    const rv = localize(tmpl);
     this.label = $("#filter-create-label", rv);
     this.expr = $("#filter-create-expr", rv);
     this.link = $("#filter-create-type-link", rv);
     this.media = $("#filter-create-type-media", rv);
-    return rv;
+    return Promise.resolve(rv);
   }
 
   get buttons() {

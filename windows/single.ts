@@ -198,15 +198,15 @@ function cancel() {
 }
 
 async function init() {
+  await localize(document.documentElement);
   await Promise.all([MASK.init()]);
   Mask = new Dropdown("#mask", MASK.values);
 }
 
-addEventListener("DOMContentLoaded", function dom() {
+addEventListener("DOMContentLoaded", async function dom() {
   removeEventListener("DOMContentLoaded", dom);
-  init().catch(console.error);
+  await init();
 
-  localize(document.documentElement);
   $("#btnDownload").addEventListener("click", () => download(false));
   $("#btnPaused").addEventListener("click", () => download(true));
   $("#btnCancel").addEventListener(

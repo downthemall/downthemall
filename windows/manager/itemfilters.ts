@@ -20,7 +20,6 @@ import {DownloadItem, DownloadTable} from "./table";
 import {formatSize} from "../../lib/formatters";
 import {_} from "../../lib/i18n";
 import {$} from "../winutil";
-import {StateTexts} from "./state";
 
 const TIMEOUT_SEARCH = 750;
 
@@ -260,7 +259,9 @@ class FixedMenuFilter extends MenuFilter {
 }
 
 export class StateMenuFilter extends FixedMenuFilter {
-  constructor(collection: FilteredCollection) {
+  constructor(
+      collection: FilteredCollection,
+      StateTexts: Readonly<Map<number, string>>) {
     const items = Array.from(StateTexts.entries()).map(([state, text]) => {
       return {
         state,

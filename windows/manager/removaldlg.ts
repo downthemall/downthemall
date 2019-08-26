@@ -21,10 +21,10 @@ export default class RemovalModalDialog extends ModalDialog {
     this.check = null;
   }
 
-  get content() {
+  async getContent() {
     const content = $<HTMLTemplateElement>("#removal-template").
       content.cloneNode(true) as DocumentFragment;
-    localize(content);
+    await localize(content);
     this.check = content.querySelector(".removal-remember");
     $(".removal-text", content).textContent = this.text;
     return content;

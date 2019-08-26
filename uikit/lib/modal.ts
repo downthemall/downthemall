@@ -23,7 +23,7 @@ export default class ModalDialog {
     this._default = null;
   }
 
-  _makeEl() {
+  async _makeEl() {
     this._dismiss = null;
     this._default = null;
 
@@ -35,7 +35,7 @@ export default class ModalDialog {
 
     const body = document.createElement("article");
     body.classList.add("modal-body");
-    body.appendChild(this.content);
+    body.appendChild(await this.getContent());
     cont.appendChild(body);
 
     const footer = document.createElement("footer");
@@ -87,7 +87,7 @@ export default class ModalDialog {
     return el;
   }
 
-  get content(): DocumentFragment | HTMLElement {
+  getContent(): Promise<DocumentFragment | HTMLElement> {
     throw new Error("Not implemented");
   }
 
@@ -160,7 +160,7 @@ export default class ModalDialog {
       return;
     };
 
-    document.body.appendChild(this.el = this._makeEl());
+    document.body.appendChild(this.el = await this._makeEl());
     this.shown();
     addEventListener("keydown", escapeHandler);
     addEventListener("keydown", enterHandler);

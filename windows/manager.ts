@@ -20,37 +20,6 @@ const LOADED = new Promise(resolve => {
   });
 });
 
-LOADED.then(async () => {
-  const nag = await Prefs.get("nagging", 0);
-  const nagnext = await Prefs.get("nagging-next", 6);
-  const next = Math.ceil(Math.log2(Math.max(1, nag)));
-  const el = $("#nagging");
-  const remove = () => {
-    el.parentElement.removeChild(el);
-  };
-  if (next <= nagnext) {
-    return;
-  }
-  setTimeout(() => {
-    $("#nagging-donate").addEventListener("click", () => {
-      PORT.post("donate");
-      Prefs.set("nagging-next", next);
-      remove();
-    });
-    $("#nagging-later").addEventListener("click", () => {
-      Prefs.set("nagging-next", next);
-      remove();
-    });
-    $("#nagging-never").addEventListener("click", () => {
-      Prefs.set("nagging-next", Number.MAX_SAFE_INTEGER);
-      remove();
-    });
-    $("#nagging-message").textContent = _(
-      "nagging-message", nag.toLocaleString());
-    $("#nagging").classList.remove("hidden");
-  }, 2 * 1000);
-});
-
 addEventListener("DOMContentLoaded", function dom() {
   removeEventListener("DOMContentLoaded", dom);
 
@@ -70,10 +39,40 @@ addEventListener("DOMContentLoaded", function dom() {
   })();
 
   const tabled = new Promised();
-  const loaded = Promise.all([LOADED, platformed]);
-  const fullyloaded = Promise.all([LOADED, platformed, tabled]);
+  const localized = localize(document.documentElement);
+  const loaded = Promise.all([LOADED, platformed, localized]);
+  const fullyloaded = Promise.all([LOADED, platformed, tabled, localized]);
+  fullyloaded.then(async () => {
+    const nag = await Prefs.get("nagging", 0);
+    const nagnext = await Prefs.get("nagging-next", 6);
+    const next = Math.ceil(Math.log2(Math.max(1, nag)));
+    const el = $("#nagging");
+    const remove = () => {
+      el.parentElement.removeChild(el);
+    };
+    if (next <= nagnext) {
+      return;
+    }
+    setTimeout(() => {
+      $("#nagging-donate").addEventListener("click", () => {
+        PORT.post("donate");
+        Prefs.set("nagging-next", next);
+        remove();
+      });
+      $("#nagging-later").addEventListener("click", () => {
+        Prefs.set("nagging-next", next);
+        remove();
+      });
+      $("#nagging-never").addEventListener("click", () => {
+        Prefs.set("nagging-next", Number.MAX_SAFE_INTEGER);
+        remove();
+      });
+      $("#nagging-message").textContent = _(
+        "nagging-message", nag.toLocaleString());
+      $("#nagging").classList.remove("hidden");
+    }, 2 * 1000);
+  });
 
-  localize(document.documentElement);
   $("#donate").addEventListener("click", () => {
     PORT.post("donate");
   });
@@ -110,7 +109,8 @@ addEventListener("DOMContentLoaded", function dom() {
   statusNetwork.addEventListener("click", () => {
     PORT.post("toggle-active");
   });
-  PORT.on("active", active => {
+  PORT.on("active", async (active: boolean) => {
+    await loaded;
     if (active) {
       statusNetwork.className = "icon-network-on";
       statusNetwork.setAttribute("title", _("statusNetwork-active.title"));

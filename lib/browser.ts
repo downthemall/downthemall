@@ -3,7 +3,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const polyfill = require("webextension-polyfill");
 
-export const {i18n} = polyfill;
 export const {extension} = polyfill;
 export const {notifications} = polyfill;
 export const {browserAction} = polyfill;

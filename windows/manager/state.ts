@@ -2,11 +2,11 @@
 // License: MIT
 
 import * as _DownloadState from "../../lib/manager/state";
-import { _ } from "../../lib/i18n";
+import { _, locale } from "../../lib/i18n";
 
 export const DownloadState = _DownloadState;
 
-export const StateTexts = Object.freeze(new Map([
+export const StateTexts = locale.then(() => Object.freeze(new Map([
   [DownloadState.QUEUED, _("queued")],
   [DownloadState.RUNNING, _("running")],
   [DownloadState.FINISHING, _("finishing")],
@@ -14,7 +14,7 @@ export const StateTexts = Object.freeze(new Map([
   [DownloadState.DONE, _("done")],
   [DownloadState.CANCELED, _("canceled")],
   [DownloadState.MISSING, _("missing")],
-]));
+])));
 
 export const StateClasses = Object.freeze(new Map([
   [DownloadState.QUEUED, "queued"],
