@@ -152,24 +152,6 @@ locale.then(() => {
         return menus.create(options);
       };
       mcreate({
-        id: "DTARegular",
-        contexts: ["all", "browser_action", "tools_menu"],
-        icons: {
-          16: "/style/button-regular.png",
-          32: "/style/button-regular@2x.png",
-        },
-        title: _("dta.regular"),
-      });
-      mcreate({
-        id: "DTATurbo",
-        contexts: ["all", "browser_action", "tools_menu"],
-        icons: {
-          16: "/style/button-turbo.png",
-          32: "/style/button-turbo@2x.png",
-        },
-        title: _("dta.turbo"),
-      });
-      mcreate({
         id: "DTARegularLink",
         contexts: ["link"],
         icons: {
@@ -240,6 +222,24 @@ locale.then(() => {
           32: "/style/button-turbo@2x.png",
         },
         title: _("dta.turbo.selection"),
+      });
+      mcreate({
+        id: "DTARegular",
+        contexts: ["all", "browser_action", "tools_menu"],
+        icons: {
+          16: "/style/button-regular.png",
+          32: "/style/button-regular@2x.png",
+        },
+        title: _("dta.regular"),
+      });
+      mcreate({
+        id: "DTATurbo",
+        contexts: ["all", "browser_action", "tools_menu"],
+        icons: {
+          16: "/style/button-turbo.png",
+          32: "/style/button-turbo@2x.png",
+        },
+        title: _("dta.turbo"),
       });
       mcreate({
         id: "sep-1",
