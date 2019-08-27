@@ -124,7 +124,7 @@ class CreateFilterDialog extends ModalDialog {
   get buttons() {
     return [
       {
-        title: "Create",
+        title: _("create-filter"),
         value: "ok",
         default: true
       },
@@ -584,7 +584,7 @@ addEventListener("DOMContentLoaded", () => {
       await Prefs.reset(k);
     }
     await ModalDialog.inform(
-      _("information.title"), _("reset-confirmations.done"), _("ok"));
+      _("information.title"), _("reset-layouts.done"), _("ok"));
   });
 
   // Filters

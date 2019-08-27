@@ -7,7 +7,7 @@ import {
   MenuItem,
   // eslint-disable-next-line no-unused-vars
   SubMenuItem
-} from "../../uikit/lib/contextmenu";
+} from "../contextmenu";
 import { iconForPath } from "../../lib/windowutils";
 import { formatSpeed, formatSize, formatTimeDelta } from "../../lib/formatters";
 import { filters } from "../../lib/filters";

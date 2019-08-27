@@ -143,6 +143,26 @@
     "description": "Table column in manager",
     "message": "Speed"
   },
+  "conflict-overwrite": {
+    "description": "Option text; prefs/general",
+    "message": "Overwrite"
+  },
+  "conflict-prompt": {
+    "description": "Option text; prefs/general",
+    "message": "Prompt"
+  },
+  "conflict-rename": {
+    "description": "Option text; prefs/general",
+    "message": "Rename"
+  },
+  "create-filter": {
+    "description": "Button text; Create filter dialog; prefs/filters",
+    "message": "Create Filter"
+  },
+  "custom-filename": {
+    "description": "Label text; single window",
+    "message": "Custom Filename"
+  },
   "deffilter-all": {
     "description": "Filter label for the All files filter",
     "message": "All files"
@@ -245,27 +265,27 @@
   },
   "dta.turbo.image": {
     "description": "Menu text",
-    "message": "Save Image with One Click!"
+    "message": "Save Image with OneClick!"
   },
   "dta.turbo.link": {
     "description": "Menu text",
-    "message": "Save Link with One Click!"
+    "message": "Save Link with OneClick!"
   },
   "dta.turbo.media": {
     "description": "Menu text",
-    "message": "Save Media with One Click!"
+    "message": "Save Media with OneClick!"
   },
   "dta.turbo.selection": {
     "description": "Menu text",
-    "message": "Save Selection with One Click!"
-  },
-  "error.invalidReferrer": {
-    "description": "Error message; single window",
-    "message": "Invalid Referrer"
+    "message": "Save Selection with OneClick!"
   },
   "error.invalidMask": {
     "description": "Error message; single/select window",
     "message": "Invalid Renaming Mask"
+  },
+  "error.invalidReferrer": {
+    "description": "Error message; single window",
+    "message": "Invalid Referrer"
   },
   "error.invalidURL": {
     "description": "Error message; single window",
@@ -335,6 +355,34 @@
     "description": "Menu text",
     "message": "Invert selection"
   },
+  "key-alt": {
+    "description": "Short for Alt-Key",
+    "message": "Alt"
+  },
+  "key-ctrl": {
+    "description": "Short for Ctrl-Key",
+    "message": "Ctrl"
+  },
+  "key-delete": {
+    "description": "Short for Delete-key",
+    "message": "Del"
+  },
+  "key-end": {
+    "description": "Short for End-key",
+    "message": "End"
+  },
+  "key-home": {
+    "description": "Short for home key",
+    "message": "Home"
+  },
+  "key-pagedown": {
+    "description": "Short for pagedown-key",
+    "message": "PageDown"
+  },
+  "key-pageup": {
+    "description": "Short for PageUp-key",
+    "message": "PageUp"
+  },
   "language": {
     "description": "Lanuage Name in your language",
     "message": "English (US)"
@@ -344,8 +392,8 @@
     "message": "en"
   },
   "limited-to": {
-    "description": "Label text; used in ",
-    "message": "Limited to; prefs/network"
+    "description": "Label text; used in prefs/network",
+    "message": "Limited to"
   },
   "links": {
     "description": "Links tab label (short); select window",
@@ -456,6 +504,10 @@
   "open-file": {
     "description": "Menu text; manager context",
     "message": "Open File"
+  },
+  "open-link": {
+    "description": "Menu text; select window",
+    "message": "Open Link"
   },
   "options-filters": {
     "description": "Pref tab text",
@@ -721,7 +773,7 @@
   },
   "renamer-d": {
     "description": "Mask text; see mask button",
-    "message": "Date Added Day"
+    "message": "Date Added - Day"
   },
   "renamer-date": {
     "description": "Mask text; see mask button",
@@ -737,7 +789,7 @@
   },
   "renamer-hh": {
     "description": "Mask text; see mask button",
-    "message": "Date Added Hour"
+    "message": "Date Added - Hour"
   },
   "renamer-host": {
     "description": "Mask text; see mask button",
@@ -753,11 +805,11 @@
   },
   "renamer-m": {
     "description": "Mask text; see mask button",
-    "message": "Date Added Month"
+    "message": "Date Added - Month"
   },
   "renamer-mm": {
     "description": "Mask text; see mask button",
-    "message": "Date Added Minute"
+    "message": "Date Added - Minute"
   },
   "renamer-name": {
     "description": "Mask text; see mask button",
@@ -805,7 +857,7 @@
   },
   "renamer-ss": {
     "description": "Mask text; see mask button",
-    "message": "Date Added Second"
+    "message": "Date Added - Second"
   },
   "renamer-subdirs": {
     "description": "Mask text; see mask button",
@@ -829,7 +881,7 @@
   },
   "renamer-y": {
     "description": "Mask text; see mask button",
-    "message": "Date Added Year"
+    "message": "Date Added - Year"
   },
   "renmask": {
     "description": "Renaming mask (long)",
@@ -847,13 +899,13 @@
     "description": "Messagebox text; pref/General",
     "message": "All previously remembered confirmations have been reset!"
   },
-  "reset-layouts.done": {
-    "description": "Messagebox text; pref/General",
-    "message": "All previously remembered layout customizations have been reset! You may need to reload windows/tabs."
-  },
   "reset-layouts": {
     "description": "Button text; pref/General",
     "message": "Reset user interface customizations"
+  },
+  "reset-layouts.done": {
+    "description": "Messagebox text; pref/General",
+    "message": "All previously remembered layout customizations have been reset! You may need to reload windows/tabs."
   },
   "resume-download": {
     "description": "Action for resuming a download",

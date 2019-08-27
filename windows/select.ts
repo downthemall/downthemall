@@ -3,7 +3,7 @@
 
 import { VirtualTable } from "../uikit/lib/table";
 import ModalDialog from "../uikit/lib/modal";
-import { ContextMenu } from "../uikit/lib/contextmenu";
+import { ContextMenu } from "./contextmenu";
 import { iconForPath } from "../lib/windowutils";
 import { _, localize } from "../lib/i18n";
 import { Prefs } from "../lib/prefs";

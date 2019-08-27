@@ -10,7 +10,7 @@ const MENU_OPEN_BOUNCE = 500;
 
 let ids = 0;
 
-const Keys = new Map([
+export const Keys = new Map([
   ["ACCEL", IS_MAC ? "⌘" : "Ctrl"],
   ["CTRL", "Ctrl"],
   ["ALT", IS_MAC ? "⌥" : "Alt"],

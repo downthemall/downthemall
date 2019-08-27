@@ -10,7 +10,7 @@ import {
   MenuItemBase,
   // eslint-disable-next-line no-unused-vars
   MenuPosition,
-} from "../../uikit/lib/contextmenu";
+} from "../contextmenu";
 import {EventEmitter} from "../../lib/events";
 // eslint-disable-next-line no-unused-vars
 import {filters, Matcher, Filter} from "../../lib/filters";

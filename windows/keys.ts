@@ -3,7 +3,7 @@
 
 import {EventEmitter} from "../lib/events";
 // eslint-disable-next-line no-unused-vars
-import { ContextMenu } from "../uikit/lib/contextmenu";
+import { ContextMenu } from "./contextmenu";
 import { runtime } from "../lib/browser";
 
 export const Keys = new class extends EventEmitter {
