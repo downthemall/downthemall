@@ -28,7 +28,9 @@ return url;
 }();
 
 function makeURL(url: string) {
-  return new URL(url, baseURL);
+  const rv = new URL(url, baseURL);
+  rv.hash = "";
+  return rv;
 }
 
 function sanitize(str: string | null | undefined) {
