@@ -23,6 +23,10 @@ But it is what it is...
 
 **What we *can* do and did do is bring the mass selection, organizing (renaming masks, etc) and queueing tools of DownThemAll! over to the WebExtension, so you can easily queue up hundreds or thousands files at once without the downloads going up in flames because the browser tried to download them all at once.**
 
+Translations
+---
+
+If you would like to help out translating DTA, please see our [translation guide](_locales/Readme.md).
 
 Development
 ---
