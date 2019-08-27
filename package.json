@@ -22,13 +22,13 @@
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "chai": "^4.1.2",
-    "eslint": "^6.1.0",
+    "eslint": "^6.2.2",
     "mocha": "^6.2.0",
     "ts-loader": "^6.0.4",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.6",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
     "xregexp": "^4.2.4"
   },
   "dependencies": {
