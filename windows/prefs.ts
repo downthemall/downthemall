@@ -1,7 +1,7 @@
 "use strict";
 // License: MIT
 
-import { _, localize } from "../lib/i18n";
+import { _, localize, saveCustomLocale } from "../lib/i18n";
 import { Prefs, PrefWatcher } from "../lib/prefs";
 import { hostToDomain } from "../lib/util";
 import { filters } from "../lib/filters";
@@ -13,6 +13,7 @@ import { iconForPath, visible } from "../lib/windowutils";
 import { VirtualTable } from "../uikit/lib/table";
 import { Icons } from "./icons";
 import { $ } from "./winutil";
+import { runtime } from "../lib/browser";
 
 const ICON_BASE_SIZE = 16;
 
@@ -593,4 +594,40 @@ addEventListener("DOMContentLoaded", () => {
   new IntPref("pref-concurrent-downloads", "concurrent");
 
   visible("#limits").then(() => new LimitsUI());
+
+  const customLocale = $<HTMLInputElement>("#customLocale");
+  $<HTMLInputElement>("#loadCustomLocale").addEventListener("click", () => {
+    customLocale.click();
+  });
+  $<HTMLInputElement>("#clearCustomLocale").addEventListener("click", () => {
+    saveCustomLocale(undefined);
+    runtime.reload();
+  });
+  customLocale.addEventListener("change", async () => {
+    if (!customLocale.files || !customLocale.files.length) {
+      return;
+    }
+    const [file] = customLocale.files;
+    if (!file || file.size > (5 << 20)) {
+      return;
+    }
+    try {
+      const text = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          resolve(reader.result as string);
+        };
+        reader.onerror = reject;
+        reader.readAsText(file);
+      });
+      saveCustomLocale(text);
+      if (confirm("Imported your file.\nWant to realod the extension now?")) {
+        runtime.reload();
+      }
+    }
+    catch (ex) {
+      console.error(ex);
+      alert(`Could not load your translation file:\n${ex.toString()}`);
+    }
+  });
 });

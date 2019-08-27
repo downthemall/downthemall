@@ -65,10 +65,18 @@
       <label><input type="checkbox" id="pref-remove-missing-on-init"> <span data-i18n="pref-remove-missing-on-init"></span></label>
     </fieldset>
     <fieldset id="pref-conflict-action">
-      <legend>When a file exists</legend>
+      <legend data-i18="prefs.conflict">When a file exists</legend>
       <label><input type="radio" name="pref-conflict-action" value="overwrite"> <span>Overwrite</span></label>
       <label><input type="radio" name="pref-conflict-action" value="uniquify"> <span>Rename</span></label>
       <!--<label><input type="radio" name="pref-conflict-action" value="prompt"> <span>Prompt</span></label>-->
+    </fieldset>
+    <fieldset>
+      <legend>Translations</legend>
+      <div>
+        <button id="loadCustomLocale">Load custom trranslation</button>
+        <button id="clearCustomLocale">Clear custom trranslation</button>
+      </div>
+      <input type="file" style="display: none;" id="customLocale" accept=".json">
     </fieldset>
   </article>
 

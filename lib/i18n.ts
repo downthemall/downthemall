@@ -6,6 +6,9 @@ import {memoize} from "./memoize";
 declare let browser: any;
 declare let chrome: any;
 
+const CACHE_KEY = "_cached_locales";
+const CUSTOM_KEY = "_custom_locale";
+
 interface JSONEntry {
   message: string;
   placeholders: any;
@@ -65,7 +68,7 @@ class Localization {
       }
     };
     mapLanguage(baseLanguage);
-    overlayLanguages.forEach(() => {});
+    overlayLanguages.forEach(mapLanguage);
   }
 
   localize(id: string, ...args: any[]) {
@@ -104,7 +107,6 @@ async function fetchLanguage(code: string) {
   }
 }
 
-const CACHE_KEY = "_cached_locales";
 
 function loadCached() {
   if (document.location.pathname.includes("/windows/")) {
@@ -142,6 +144,18 @@ async function load(): Promise<Localization> {
       }
       if (!valid.length) {
         throw new Error("Could not lood ANY of these locales");
+      }
+
+      const custom = localStorage.getItem(CUSTOM_KEY);
+      console.log("custom", custom);
+      if (custom) {
+        try {
+          valid.push(JSON.parse(custom));
+        }
+        catch (ex) {
+          console.error(ex);
+          // ignored
+        }
       }
 
       const base = valid.shift();
@@ -237,4 +251,13 @@ export async function localize<T extends HTMLElement | DocumentFragment>(
     elem: T): Promise<T> {
   await locale;
   return localize_(elem);
+}
+
+export function saveCustomLocale(data?: string) {
+  if (!data) {
+    localStorage.removeItem(CUSTOM_KEY);
+    return;
+  }
+  new Localization(JSON.parse(data));
+  localStorage.setItem(CUSTOM_KEY, data);
 }

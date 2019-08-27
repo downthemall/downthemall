@@ -1,12 +1,4 @@
 {
-  "language": {
-    "description": "lanuage name",
-    "message": "English (US)"
-  },
-  "language_code": {
-    "description": "language code",
-    "message": "en"
-  },
   "CRASH": {
     "description": "",
     "message": "Interal Browser Error"
@@ -343,6 +335,14 @@
     "description": "Label",
     "message": "Invert selection"
   },
+  "language": {
+    "description": "lanuage name",
+    "message": "English (US)"
+  },
+  "language_code": {
+    "description": "language code",
+    "message": "en"
+  },
   "limited-to": {
     "description": "",
     "message": "Limited to"
@@ -536,6 +536,10 @@
   "pref.ui": {
     "description": "",
     "message": "User Interface"
+  },
+  "prefs.conflicts": {
+    "description": "",
+    "message": "When a file exists"
   },
   "prefs.short": {
     "description": "Preferences",
