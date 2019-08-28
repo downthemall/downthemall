@@ -92,7 +92,7 @@
     "message": "Cancel"
   },
   "canceled": {
-    "description": "Download statu text",
+    "description": "Download status text",
     "message": "Canceled"
   },
   "cannot-be-empty": {
@@ -555,11 +555,11 @@
   },
   "pref-open-manager-on-queue": {
     "description": "Preferences/General",
-    "message": "Open the Manager tab after queueing some downloads"
+    "message": "Open the Manager tab after queuing some downloads"
   },
   "pref-queue-notification": {
     "description": "Preferences/General",
-    "message": "Show a notification when queueing new downloads"
+    "message": "Show a notification when queuing new downloads"
   },
   "pref-remove-missing-on-init": {
     "description": "Preferences/General",
@@ -583,7 +583,7 @@
   },
   "pref.queueing": {
     "description": "Preferences/General; group text",
-    "message": "Queueing Downloads"
+    "message": "Queuing Downloads"
   },
   "pref.ui": {
     "description": "Preferences/General; group text",
