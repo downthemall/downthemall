@@ -41,7 +41,8 @@ Licensed under GPL2.0; see [LICENSE.gpl-2.0.txt](LICENSE.gpl-2.0.txt).
 ## DownThemAll! icons, icon-font and graphic assets
 
 Copyright (C) 2012-2019 by Nils Maier
-Licensed under Creative Commons Attribution-ShareAlike 4.0 International
+Licensed under Creative Commons Attribution-ShareAlike 4.0 International.
+
 The icon font contains icons from Font Awesome.
 
 See: https://creativecommons.org/licenses/by-sa/4.0/legalcode
