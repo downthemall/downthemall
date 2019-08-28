@@ -30,7 +30,7 @@ THE SOFTWARE.
 ## DownThemAll! uikit
 
 Copyright © 2016-2019 by Nils Maier
-The uikit libraries and assets are licened under the MIT license.
+The uikit libraries and assets are licensed under the MIT license.
 
 ## DownThemAll! interface (.html, .css)
 
@@ -55,19 +55,23 @@ Copyright © 2010-2019 by Nils Maier, Stefano Verna.
 The DownThemAll! name and logo cannot be used without explicit permission
 in any derivative work, except in credits and license-related notices.
 
-Using the DownThemAll! logo in personal non-distributed non-commerical
+Using the DownThemAll! logo in personal non-distributed non-commercial
 modifications of the software and forks is permitted without explicit
 permission.
+
+Distributing official DownThemAll! releases without any modifications is allowed without explicit permission.
 
 ## Font Awesome
 
 Copyright (C) 2016 by Dave Gandy
+
 License:   SIL ()
+
 Homepage:  http://fortawesome.github.com/Font-Awesome/
 
 ## webextension-polyfill
 
-Lcensed under the Mozilla Public License 2.0.
+Licensed under the Mozilla Public License 2.0.
 
 ## PSL (public-suffix-list)
 
