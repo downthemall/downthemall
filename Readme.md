@@ -36,7 +36,9 @@ You will want to `yarn` the development dependencies such as webpack first.
 Afterwards there is two important commands to run
 
   * `yarn watch` - This will run the webpack bundler in watch mode, updating bundles as you change the source.
-  * `yarn webext` - This will run the WebExtension in a development profile using the [`web-ext` tool from mozilla](https://www.npmjs.com/package/web-ext) (which you need to install separately).
+  * `yarn webext` - This will run the WebExtension in a development profile using the [`web-ext` tool from mozilla](https://www.npmjs.com/package/web-ext) (which you need to install separately). This will use the directory `../dtalite.p` to keep a development profile. You might need to create this directory before you use this command first.
+  
+Please note: You have to run `yarn watch` (at least once) as it builds the actual script bundles.
   
 Alternative, you can also `yarn build`, which then builds an *unsigned* zip that you can then install permanently in a browser that does not enforce signing (i.e. Nightly or the Unbranded Firefox).
 
