@@ -1,7 +1,7 @@
 {
   "CRASH": {
     "description": "Error Message",
-    "message": "Interal Browser Error"
+    "message": "Internal Browser Error"
   },
   "FILE_FAILED": {
     "description": "Error Message",
