@@ -14,7 +14,7 @@
 	},
 	"deffilter-aud": {
 		"label": "Audio",
-		"expr": "/\\.(?:mp3|wav|og(?:g|a)|flac|midi?|rm|aac|wma|mka|ape)$/i",
+		"expr": "/\\.(?:mp3|wav|og(?:g|a)|flac|midi?|rm|aac|wma|mka|ape|opus)$/i",
 		"type": 1,
 		"active": false,
 		"icon": "mp3"
@@ -35,7 +35,7 @@
 	},
 	"deffilter-img": {
 		"label": "Images",
-		"expr": "/\\.(?:jp(?:e?g|e|2)|gif|png|tiff?|bmp|ico)$/i",
+		"expr": "/\\.(?:jp(?:e?g|e|2)|gif|png|tiff?|bmp|ico|heic|heif|webp|jxr|wdp|dng|cr2|arw)$/i",
 		"type": 3,
 		"active": false,
 		"icon": "jpg"
@@ -63,7 +63,7 @@
 	},
 	"deffilter-vid": {
 		"label": "Videos",
-		"expr": "/\\.(?:mpeg|ra?m|avi|mp(?:g|e|4)|mov|divx|asf|qt|wmv|m\\dv|rv|vob|asx|ogm|ogv|webm|flv|mkv)$/i",
+		"expr": "/\\.(?:mpeg|ra?m|avi|mp(?:g|e|4)|mov|divx|asf|qt|wmv|m\\dv|rv|vob|asx|ogm|ogv|webm|flv|mkv|f4v|m4v)$/i",
 		"type": 3,
 		"active": true,
 		"icon": "mkv"

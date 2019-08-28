@@ -80,7 +80,11 @@
 		"tif",
 		"tiff",
 		"wmf",
-		"webp"
+		"webp",
+		"heic",
+		"heif",
+		"jxr",
+		"wdp"
 	],
 	"video": [
 		"3g2",
