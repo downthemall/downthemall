@@ -147,7 +147,6 @@ async function load(): Promise<Localization> {
       }
 
       const custom = localStorage.getItem(CUSTOM_KEY);
-      console.log("custom", custom);
       if (custom) {
         try {
           valid.push(JSON.parse(custom));
