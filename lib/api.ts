@@ -128,7 +128,6 @@ export const API = new class APIImpl {
       return false;
     }
     const {items, options} = await select(links, media);
-    console.log(items, options);
     return this.regularInternal(items, options);
   }
 
