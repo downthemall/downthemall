@@ -50,7 +50,7 @@ function computeSelection(
       return !item.matched;
     });
   }
-  return items.filter(item => item.prevMatched !== item.matched). map(item => {
+  return items.filter(item => item.prevMatched !== item.matched).map(item => {
     return {
       idx: item.idx,
       matched: item.matched

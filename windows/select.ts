@@ -48,6 +48,7 @@ type DELTAS = {deltaLinks: ItemDelta[]; deltaMedia: ItemDelta[]};
 
 interface BaseMatchedItem extends BaseItem {
   matched?: string | null;
+  rowid: number;
 }
 
 function cleaErrors() {
@@ -96,8 +97,6 @@ class PausedModalDialog extends ModalDialog {
   }
 }
 
-
-
 class CheckClasser extends Map<string, string> {
   gen: IterableIterator<string>;
 
@@ -126,18 +125,81 @@ class CheckClasser extends Map<string, string> {
 
 type KeyFn = (item: BaseMatchedItem) => any;
 
+class ItemCollection {
+  private items: BaseMatchedItem[];
+
+  private indexes: Map<number, BaseMatchedItem>;
+
+  constructor(items: BaseMatchedItem[]) {
+    this.items = items;
+    this.assignRows();
+    this.indexes = new Map(items.map(i => [i.idx, i]));
+  }
+
+  assignRows() {
+    this.items.forEach((item, idx) => item.rowid = idx);
+  }
+
+  get length() {
+    return this.items.length;
+  }
+
+  get checked() {
+    const rv: number[] = [];
+    this.items.forEach(function (item, idx) {
+      if (item.matched && item.matched !== "unmanual") {
+        rv.push(idx);
+      }
+    });
+    return rv;
+  }
+
+  get checkedIndexes() {
+    const rv: number[] = [];
+    this.items.forEach(function (item) {
+      if (item.matched && item.matched !== "unmanual") {
+        rv.push(item.idx);
+      }
+    });
+    return rv;
+  }
+
+
+  at(idx: number) {
+    return this.items[idx];
+  }
+
+  byIndex(idx: number) {
+    return this.indexes.get(idx);
+  }
+
+  sort(keyFn: KeyFn) {
+    sort(this.items, keyFn, naturalCaseCompare);
+    this.assignRows();
+  }
+
+  reverse() {
+    this.items.reverse();
+    this.assignRows();
+  }
+
+  filter(fn: (item: BaseMatchedItem, idx: number) => boolean) {
+    return this.items.filter(fn);
+  }
+}
+
 class SelectionTable extends VirtualTable {
   checkClasser: CheckClasser;
 
   icons: Icons;
 
-  links: BaseMatchedItem[];
+  links: ItemCollection;
 
-  media: BaseMatchedItem[];
+  media: ItemCollection;
+
+  items: ItemCollection;
 
   type: string;
-
-  items: BaseMatchedItem[];
 
   status: HTMLElement;
 
@@ -170,10 +232,10 @@ class SelectionTable extends VirtualTable {
 
     this.checkClasser = new CheckClasser(NUM_FILTER_CLASSES);
     this.icons = new Icons($("#icons") as HTMLStyleElement);
-    this.links = links;
-    this.media = media;
+    this.links = new ItemCollection(links);
+    this.media = new ItemCollection(media);
     this.type = type;
-    this.items = (this as any)[type];
+    this.items = type === "links" ? this.links : this.media;
 
     this.status = $("#statusItems");
     this.linksTab = $("#linksTab");
@@ -217,8 +279,8 @@ class SelectionTable extends VirtualTable {
       if (!keyfn) {
         return false;
       }
-      sort(this.links, keyfn, naturalCaseCompare);
-      sort(this.media, keyfn, naturalCaseCompare);
+      this.links.sort(keyfn);
+      this.media.sort(keyfn);
       const elem = document.querySelector<HTMLElement>(`#${colid}`);
       const oldelem = (this.sortcol && document.querySelector<HTMLElement>(`#${this.sortcol}`));
       if (this.sortcol === colid && this.sortasc) {
@@ -280,7 +342,7 @@ class SelectionTable extends VirtualTable {
       }
       let oldmask = "";
       for (const r of this.selection) {
-        const m = this.items[r].mask;
+        const m = this.items.at(r).mask;
         if (oldmask && m !== oldmask) {
           oldmask = "";
           break;
@@ -292,7 +354,7 @@ class SelectionTable extends VirtualTable {
         const newmask = await ModalDialog.prompt(
           "Renaming mask", "Set new renaming mask", oldmask);
         for (const r of this.selection) {
-          this.items[r].mask = newmask;
+          this.items.at(r).mask = newmask;
           this.invalidateRow(r);
         }
       }
@@ -317,16 +379,6 @@ class SelectionTable extends VirtualTable {
     this.switchTab(type);
   }
 
-  get checkedIndexes() {
-    const rv: number[] = [];
-    this.items.forEach(function (item, idx) {
-      if (item.matched && item.matched !== "unmanual") {
-        rv.push(idx);
-      }
-    });
-    return rv;
-  }
-
   get rowCount() {
     return this.items.length;
   }
@@ -336,7 +388,7 @@ class SelectionTable extends VirtualTable {
       return false;
     }
     for (const rowid of this.selection) {
-      const item = this.items[rowid];
+      const item = this.items.at(rowid);
       if (!state) {
         state = matched(item) ? "unmanual" : "manual";
       }
@@ -362,7 +414,7 @@ class SelectionTable extends VirtualTable {
   selectChecked() {
     this.selection.clear();
     let min = null;
-    for (const ci of this.checkedIndexes) {
+    for (const ci of this.items.checked) {
       this.selection.add(ci);
       min = min === null ? ci : Math.min(min, ci);
     }
@@ -381,7 +433,7 @@ class SelectionTable extends VirtualTable {
       if (this.focusRow < 0) {
         return;
       }
-      items.push(this.items[this.focusRow]);
+      items.push(this.items.at(this.focusRow));
     }
     PORT.postMessage({
       msg: "openUrls",
@@ -389,14 +441,14 @@ class SelectionTable extends VirtualTable {
     });
   }
 
-  applyDeltaTo(delta: ItemDelta[], items: BaseMatchedItem[]) {
+  applyDeltaTo(delta: ItemDelta[], items: ItemCollection) {
     const active = items === this.items;
     for (const d of delta) {
       const {idx = -1, matched = null} = d;
       if (idx < 0) {
         continue;
       }
-      const item = items[idx];
+      const item = items.byIndex(idx);
       if (!item) {
         continue;
       }
@@ -410,7 +462,7 @@ class SelectionTable extends VirtualTable {
       }
       item.matched = matched;
       if (active) {
-        this.invalidateRow(idx);
+        this.invalidateRow(item.rowid);
       }
     }
   }
@@ -435,7 +487,7 @@ class SelectionTable extends VirtualTable {
   }
 
   updateStatus() {
-    const selected = this.checkedIndexes.length;
+    const selected = this.items.checked.length;
     if (!selected) {
       this.status.textContent = _("noitems.label");
     }
@@ -446,7 +498,7 @@ class SelectionTable extends VirtualTable {
   }
 
   getRowClasses(rowid: number) {
-    const item = this.items[rowid];
+    const item = this.items.at(rowid);
     if (!item || !matched(item) || !item.matched) {
       return null;
     }
@@ -454,7 +506,7 @@ class SelectionTable extends VirtualTable {
   }
 
   getCellIcon(rowid: number, colid: number) {
-    const item = this.items[rowid];
+    const item = this.items.at(rowid);
     if (item && colid === COL_DOWNLOAD) {
       return this.icons.get(iconForPath(item.url, ICON_BASE_SIZE));
     }
@@ -471,7 +523,7 @@ class SelectionTable extends VirtualTable {
   }
 
   getDownloadText(idx: number) {
-    const item = this.items[idx];
+    const item = this.items.at(idx);
     if (!item) {
       return "";
     }
@@ -482,7 +534,7 @@ class SelectionTable extends VirtualTable {
   }
 
   getText(prop: string, idx: number) {
-    const item: any = this.items[idx];
+    const item: any = this.items.at(idx);
     if (!item || !(prop in item) || !item[prop]) {
       return "";
     }
@@ -490,7 +542,7 @@ class SelectionTable extends VirtualTable {
   }
 
   getMaskText(idx: number) {
-    const item = this.items[idx];
+    const item = this.items.at(idx);
     if (item) {
       return item.mask;
     }
@@ -521,13 +573,13 @@ class SelectionTable extends VirtualTable {
 
   getCellCheck(rowid: number, colid: number) {
     if (colid === COL_CHECK) {
-      return !!matched(this.items[rowid]);
+      return !!matched(this.items.at(rowid));
     }
     return false;
   }
 
   setCellCheck(rowid: number, colid: number, value: boolean) {
-    this.items[rowid].matched = value ? "manual" : "unmanual";
+    this.items.at(rowid).matched = value ? "manual" : "unmanual";
     this.invalidateRow(rowid);
     this.updateStatus();
   }
@@ -539,7 +591,7 @@ async function download(paused = false) {
     if (!mask) {
       throw new Error("error.invalidMask");
     }
-    const items = Table.checkedIndexes;
+    const items = Table.items.checkedIndexes;
     if (!items.length) {
       throw new Error("error.noItemsSelected");
     }
