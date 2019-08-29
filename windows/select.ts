@@ -631,10 +631,14 @@ function setFiltersInternal(
 }
 
 function setFilters(filters: any) {
-  const {linkFilters = [], mediaFilters = [], activeFilters = []} = filters;
+  const {
+    linkFilterDescs = [],
+    mediaFilterDescs = [],
+    activeFilters = []
+  } = filters;
   const active: Set<string> = new Set(activeFilters);
-  setFiltersInternal("#linksFilters", linkFilters, active);
-  setFiltersInternal("#mediaFilters", mediaFilters, active);
+  setFiltersInternal("#linksFilters", linkFilterDescs, active);
+  setFiltersInternal("#mediaFilters", mediaFilterDescs, active);
 }
 
 function cancel() {
