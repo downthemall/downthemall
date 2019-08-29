@@ -1,0 +1,1170 @@
+{
+  "language": {
+    "message": "Español (España)",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "es-ES",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "add-download": {
+    "message": "Añadir descarga",
+    "description": "Action for adding a download"
+  },
+  "add-new": {
+    "message": "Añadir nuevo",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add-paused-once": {
+    "message": "Añadir pausada solo esta vez",
+    "description": "Checkbox label"
+  },
+  "add-paused.question": {
+    "message": "¿Quiere recordar esta decisión y añadir todas las descargas pausadas a partir de ahora?",
+    "description": "Messagebox text"
+  },
+  "add-paused.title": {
+    "message": "¿Añadir siempre pausada?",
+    "description": "Title for the add-paused dialog"
+  },
+  "addpaused": {
+    "message": "Añadir pausada",
+    "description": "Action: Add paused"
+  },
+  "ask-again-later": {
+    "message": "Pregúntame luego",
+    "description": "Button text"
+  },
+  "batch.batch": {
+    "message": "Descarga por lotes",
+    "description": "Button text"
+  },
+  "batch.desc": {
+    "message": "La URL actual parece que contiene instrucciones de una descarga por lotes.",
+    "description": ""
+  },
+  "batch.items": {
+    "message": "Número de elementos:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch.preview": {
+    "message": "Vista previa:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch.question": {
+    "message": "¿Quiere añadir esto como una descarga individual o por lotes?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch.single": {
+    "message": "Descarga individual",
+    "description": "Button text for batch confirmation"
+  },
+  "batch.title": {
+    "message": "Descarga por lotes",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "Cancelar",
+    "description": "Button text: Cancel"
+  },
+  "cancel-download": {
+    "message": "Cancelar",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "canceled": {
+    "message": "Cancelada",
+    "description": "Download status text"
+  },
+  "cannot-be-empty": {
+    "message": "Este campo no puede estar vacío",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change-later-reminder": {
+    "message": "Puede cambiar esta decisión más tarde en las Preferencias",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check-selected-items": {
+    "message": "Marcar elementos seleccionados",
+    "description": "Menu text"
+  },
+  "colConnections": {
+    "message": "Conexiones simultáneas",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "Dominio",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "Tiempo restante",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "Nombre/URL",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "Progreso",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Segmentos",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Tamaño",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Velocidad",
+    "description": "Table column in manager"
+  },
+  "conflict-overwrite": {
+    "message": "Sobrescribir",
+    "description": "Option text; prefs/general"
+  },
+  "conflict-prompt": {
+    "message": "Preguntar",
+    "description": "Option text; prefs/general"
+  },
+  "conflict-rename": {
+    "message": "Renombrar",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "Error del navegador interno",
+    "description": "Error Message"
+  },
+  "create-filter": {
+    "message": "Crear filtro",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom-filename": {
+    "message": "Nombre de fichero personalizado",
+    "description": "Label text; single window"
+  },
+  "deffilter-all": {
+    "message": "Todos los ficheros",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter-arch": {
+    "message": "Archivos (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter-aud": {
+    "message": "Audio (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter-bin": {
+    "message": "Software (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter-doc": {
+    "message": "Documentos (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter-img": {
+    "message": "Imágenes (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter-imggif": {
+    "message": "Imágenes GIF",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter-imgjpg": {
+    "message": "Imágenes JPEG",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter-imgpng": {
+    "message": "Imágenes PNG",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter-vid": {
+    "message": "Vídeos (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "Borrar",
+    "description": "button text"
+  },
+  "description": {
+    "message": "Descripción",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable-other-filters": {
+    "message": "Desactivar otros",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "¡Donar!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Completada",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "Descarga",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download.verb": {
+    "message": "Descargar",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta-regular-all": {
+    "message": "DownThemAll! - Todas las pestañas",
+    "description": "Menu text"
+  },
+  "dta-turbo-all": {
+    "message": "OneClick! - Todas las pestañas",
+    "description": "Menu text"
+  },
+  "dta.regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta.regular.image": {
+    "message": "Guardar imagen con DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.regular.link": {
+    "message": "Guardar enlace con DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.regular.media": {
+    "message": "Guardar multimedia con DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.regular.selection": {
+    "message": "Guardar selección con DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.turbo": {
+    "message": "OneClick!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta.turbo.image": {
+    "message": "Guardar imagen con OneClick!",
+    "description": "Menu text"
+  },
+  "dta.turbo.link": {
+    "message": "Guardar enlace con OneClick!",
+    "description": "Menu text"
+  },
+  "dta.turbo.media": {
+    "message": "Guardar multimedia con OneClick!",
+    "description": "Menu text"
+  },
+  "dta.turbo.selection": {
+    "message": "Guardar selección con OneClick!",
+    "description": "Menu text"
+  },
+  "error.invalidMask": {
+    "message": "Máscara de renombrado incorrecta",
+    "description": "Error message; single/select window"
+  },
+  "error.invalidReferrer": {
+    "message": "Referrer incorrecto",
+    "description": "Error message; single window"
+  },
+  "error.invalidURL": {
+    "message": "URL incorrecta",
+    "description": "Error message; single window"
+  },
+  "error.noItemsSelected": {
+    "message": "No se ha seleccionado ningún elemento",
+    "description": "Error Message; select window"
+  },
+  "extensionDescription": {
+    "message": "El programa de descargas masivas para su navegador",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfilter.placeholder": {
+    "message": "Expresión con comodines o expresión regular",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "fastfiltering": {
+    "message": "Filtro rápido",
+    "description": "Label for Fast Filtering input"
+  },
+  "FILE_FAILED": {
+    "message": "Error de acceso a fichero",
+    "description": "Error Message"
+  },
+  "filter-at-least-one": {
+    "message": "¡Debe seleccionar al menos un tipo de filtro!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter-create.title": {
+    "message": "Crear un filtro nuevo",
+    "description": "Message box title"
+  },
+  "filter-expression": {
+    "message": "Expresión del filtro",
+    "description": "Message box label"
+  },
+  "filter-label": {
+    "message": "Etiqueta del filtro",
+    "description": "Message box label"
+  },
+  "filter-type-link": {
+    "message": "Filtro de enlace",
+    "description": "Message box checkbox label"
+  },
+  "filter-type-media": {
+    "message": "Filtro multimedia",
+    "description": "Message box checkbox label"
+  },
+  "filter-types": {
+    "message": "Tipos de filtros",
+    "description": "Message box label"
+  },
+  "finishing": {
+    "message": "Terminando",
+    "description": "Status text"
+  },
+  "force-start": {
+    "message": "Forzar el inicio",
+    "description": "Menu text"
+  },
+  "information.title": {
+    "message": "Información",
+    "description": "Used in message boxes"
+  },
+  "invalid-domain-pref": {
+    "message": "Dominio incorrecto",
+    "description": "Error message in prefs/network"
+  },
+  "invert-selection": {
+    "message": "Invertir selección",
+    "description": "Menu text"
+  },
+  "key-alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key-ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key-delete": {
+    "message": "Supr",
+    "description": "Short for Delete-key"
+  },
+  "key-end": {
+    "message": "Fin",
+    "description": "Short for End-key"
+  },
+  "key-home": {
+    "message": "Inicio",
+    "description": "Short for home key"
+  },
+  "key-pagedown": {
+    "message": "AvPág",
+    "description": "Short for pagedown-key"
+  },
+  "key-pageup": {
+    "message": "RePág",
+    "description": "Short for PageUp-key"
+  },
+  "limited-to": {
+    "message": "Limitar a",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "Enlaces",
+    "description": "Links tab label (short); select window"
+  },
+  "manager-status-items": {
+    "message": "Completadas $COMPLETE$ de $TOTAL$ descargas ($SHOWING$ mostradas), $RUNNING$ en proceso",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager.short": {
+    "message": "Gestor de descargas",
+    "description": "Menu text"
+  },
+  "manager.title": {
+    "message": "Gestor DownThemAll!",
+    "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "Máscara",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask.default": {
+    "message": "Máscara por defecto",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "Medio",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Falta",
+    "description": "Status text in manager"
+  },
+  "move-bottom": {
+    "message": "Última",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move-down": {
+    "message": "Bajar",
+    "description": "Action for moving a download down"
+  },
+  "move-top": {
+    "message": "Primera",
+    "description": "Action for moving a download to the top"
+  },
+  "move-up": {
+    "message": "Subir",
+    "description": "Action for moving a download up"
+  },
+  "nagging-message": {
+    "message": "¡Ha añadido $DOWNLOADS$ descargas con DownThemAll! hasta el momento! Al ser un usuario habitual quizás podría plantearse hacer una donación para apoyar el futuro desarrollo del proyecto. ¡Gracias!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "Fallo de red",
+    "description": "Error Message"
+  },
+  "never-ask-again": {
+    "message": "No preguntar de nuevo",
+    "description": "Donation button"
+  },
+  "no-links": {
+    "message": "¡No se han encontrado enlaces!",
+    "description": "Notification text"
+  },
+  "noitems.label": {
+    "message": "Sin elementos seleccionados",
+    "description": "Status bar text in select"
+  },
+  "numitems.label": {
+    "message": "$ITEMS$ elementos seleccionados…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "Aceptar",
+    "description": "Button text; Used in message boxes"
+  },
+  "open-directory": {
+    "message": "Abrir directorio",
+    "description": "Menu text; manager context"
+  },
+  "open-file": {
+    "message": "Abrir fichero",
+    "description": "Menu text; manager context"
+  },
+  "open-link": {
+    "message": "Abrir enlace",
+    "description": "Menu text; select window"
+  },
+  "options-filters": {
+    "message": "Filtros",
+    "description": "Pref tab text"
+  },
+  "options-general": {
+    "message": "General",
+    "description": "Pref tab text"
+  },
+  "options-network": {
+    "message": "Red",
+    "description": "Pref tab text"
+  },
+  "pause-download": {
+    "message": "Pausar",
+    "description": "Action for pausing a download"
+  },
+  "paused": {
+    "message": "Pausada",
+    "description": "Status text; manager"
+  },
+  "pref-add-paused": {
+    "message": "Añadir nuevas descargas pausadas, en lugar de empezar a descargarlas inmediatamente",
+    "description": "Preferences/General"
+  },
+  "pref-concurrent-downloads": {
+    "message": "Descargas simultáneas",
+    "description": "Preferences/Network"
+  },
+  "pref-finish-notification": {
+    "message": "Mostrar una notificación cuando se termine la cola de descargas",
+    "description": "Preferences/General"
+  },
+  "pref-global-turbo": {
+    "message": "El botón del navegador debe ser OneClick!",
+    "description": "Preferences/General"
+  },
+  "pref-hide-context": {
+    "message": "No mostrar opciones en el menú contextual general",
+    "description": "Preferences/General"
+  },
+  "pref-manager-tooltip": {
+    "message": "Mostrar descripciones emergentes (flying tooltips) en las pestañas del gestor",
+    "description": "Preferences/General"
+  },
+  "pref-open-manager-on-queue": {
+    "message": "Abrir la pestaña del gestor tras poner en cola algunas descargas",
+    "description": "Preferences/General"
+  },
+  "pref-queue-notification": {
+    "message": "Mostrar una notificación cuando se encolen nuevas descargas",
+    "description": "Preferences/General"
+  },
+  "pref-remove-missing-on-init": {
+    "message": "Eliminar descargas ausentes tras un reinicio",
+    "description": "Preferences/General"
+  },
+  "pref-show-urls": {
+    "message": "Mostrar URLs en lugar de nombres",
+    "description": "Preferences/General"
+  },
+  "pref-text-links": {
+    "message": "Intentar buscar enlaces en el texto del sitio web (más lento)",
+    "description": "Preferences/General"
+  },
+  "pref.manager": {
+    "message": "Gestor de descargas",
+    "description": "Preferences/General; group text"
+  },
+  "pref.netglobal": {
+    "message": "Límites globales de red",
+    "description": "Preferences/General; group text"
+  },
+  "pref.queueing": {
+    "message": "Cola de descargas",
+    "description": "Preferences/General; group text"
+  },
+  "pref.ui": {
+    "message": "Interfaz de usuario",
+    "description": "Preferences/General; group text"
+  },
+  "prefs.conflicts": {
+    "message": "Cuando exista un fichero",
+    "description": "Preferences/General; group text"
+  },
+  "prefs.short": {
+    "message": "Preferencias",
+    "description": "Menu text; Preferences"
+  },
+  "prefs.title": {
+    "message": "Preferencias de DownThemAll!",
+    "description": "Window/tab title; Preferences"
+  },
+  "queue-finished": {
+    "message": "La cola de descargas ha finalizado",
+    "description": "Notification text"
+  },
+  "queued": {
+    "message": "En cola",
+    "description": "Status text"
+  },
+  "queued-download": {
+    "message": "¡Añadida 1 descarga a la cola!",
+    "description": "Notification text; single download"
+  },
+  "queued-downloads": {
+    "message": "¡Añadidas $COUNT$ descargas a la cola!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "referrer": {
+    "message": "Referrer",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "Recordar esta decisión",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove-all-complete-downloads": {
+    "message": "Eliminar todas las completadas",
+    "description": "Menu text"
+  },
+  "remove-all-downloads": {
+    "message": "Eliminar todas",
+    "description": "Menu text"
+  },
+  "remove-all-downloads.question": {
+    "message": "¿Quiere eliminar TODAS las descargas?",
+    "description": "Messagebox text"
+  },
+  "remove-batch-downloads": {
+    "message": "Eliminar el lote actual",
+    "description": "Menu text"
+  },
+  "remove-batch-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas del mismo lote que la descarga actualmente seleccionada?",
+    "description": "Messagebox text"
+  },
+  "remove-complete-downloads": {
+    "message": "Eliminar descargas completadas",
+    "description": "Action for removing complete downloads"
+  },
+  "remove-complete-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas completadas?",
+    "description": "Messagebox text"
+  },
+  "remove-complete-filter-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas completadas que cumplan el filtro  '$FILTER$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove-complete-selection-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas completadas de la selección actual?",
+    "description": "Messagebox text"
+  },
+  "remove-domain-complete-downloads": {
+    "message": "Eliminar completadas del dominio actual",
+    "description": "Menu text"
+  },
+  "remove-domain-complete-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas completadas del dominio '$DOMAIN$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove-domain-downloads": {
+    "message": "Eliminar dominio actual",
+    "description": "Menu text"
+  },
+  "remove-domain-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas del dominio '$DOMAIN$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove-download": {
+    "message": "Eliminar descargas",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove-download.question": {
+    "message": "¿Quiere eliminar todas las descargas seleccionadas?",
+    "description": "Messagebox text"
+  },
+  "remove-downloads": {
+    "message": "Eliminar descargas",
+    "description": "Menu text"
+  },
+  "remove-downloads.title": {
+    "message": "¿Está seguro de que quiere eliminar estas descargas?",
+    "description": "Messagebox title; manager"
+  },
+  "remove-failed-downloads": {
+    "message": "Eliminar fallidas",
+    "description": "Menu text"
+  },
+  "remove-failed-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas fallidas?",
+    "description": "Messagebox text"
+  },
+  "remove-filter-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas que cumplan el filtro '$FILTER$'?",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove-missing": {
+    "message": "Eliminar descargas ausentes",
+    "description": "Menu text"
+  },
+  "remove-missing-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas ausentes?",
+    "description": "Messagebox text"
+  },
+  "remove-paused-downloads": {
+    "message": "Eliminar pausadas",
+    "description": "Menu text"
+  },
+  "remove-paused-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas pausadas?",
+    "description": "Messagebox text"
+  },
+  "remove-selected-complete-downloads": {
+    "message": "Eliminar completadas de la selección",
+    "description": "Menu text"
+  },
+  "remove-selected-complete-downloads.question": {
+    "message": "¿Quiere eliminar todas las descargas completas de la selección actual?",
+    "description": "Messagebox text"
+  },
+  "remove-selected-downloads": {
+    "message": "Eliminar seleccionadas",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "Renombrar",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer-batch": {
+    "message": "Número de lote",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-d": {
+    "message": "Fecha añadida - Día",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-date": {
+    "message": "Fecha añadida",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-domain": {
+    "message": "Nombre de dominio (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-ext": {
+    "message": "Extensión del fichero",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-hh": {
+    "message": "Fecha añadida - Hora",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-host": {
+    "message": "Nombre del host",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-idx": {
+    "message": "Nº de elemento en el lote",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-info": {
+    "message": "Añadiendo 'flat', como p.ej. *flatsubdirs* se reemplazarán todas las barras del valor y no se crearán directorios",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer-m": {
+    "message": "Fecha añadida - Mes",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-mm": {
+    "message": "Fecha añadida - Minuto",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-name": {
+    "message": "Nombre del fichero",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-num": {
+    "message": "Alias para el *lote*",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-qstring": {
+    "message": "Cadena de consulta",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-ref": {
+    "message": "Referrer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refdomain": {
+    "message": "Nombre de dominio referrer (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refext": {
+    "message": "Extensión del fichero referrer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refhost": {
+    "message": "Nombre del host referrer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refname": {
+    "message": "Nombre del fichero referrer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refqstring": {
+    "message": "Cadena de consulta referrer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refsubdirs": {
+    "message": "Ruta referrer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refurl": {
+    "message": "URL referrer (sin protocolo)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-ss": {
+    "message": "Fecha añadida - Segundo",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-subdirs": {
+    "message": "Ruta",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-tags": {
+    "message": "Etiquetas de máscara de renombrado",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-text": {
+    "message": "Texto de la descripción",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-title": {
+    "message": "Texto del título",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-url": {
+    "message": "URL (sin protocolo)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-y": {
+    "message": "Fecha añadida - Año",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "Máscara de renombrado",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "Reiniciar",
+    "description": "Button text; pref window"
+  },
+  "reset-confirmations": {
+    "message": "Reiniciar confirmaciones guardadas",
+    "description": "Button text; pref/General"
+  },
+  "reset-confirmations.done": {
+    "message": "¡Todas las confirmaciones previamente guardadas han sido reiniciadas!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset-layouts": {
+    "message": "Reiniciar personalizaciones del interfaz de usuario",
+    "description": "Button text; pref/General"
+  },
+  "reset-layouts.done": {
+    "message": "¡Todas las personalizaciones del interfaz de usuario han sido reiniciadas! Puede que sea necesario recargar las ventanas/pestañas.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume-download": {
+    "message": "Continuar",
+    "description": "Action for resuming a download"
+  },
+  "running": {
+    "message": "En proceso",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Guardar",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Buscar…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select-all": {
+    "message": "Seleccionar todas",
+    "description": "Menu text; e.g. select context"
+  },
+  "select-checked": {
+    "message": "Seleccionar las marcadas",
+    "description": "Menu text; select context"
+  },
+  "select-none": {
+    "message": "No seleccionar ninguna",
+    "description": "Menu text; select context"
+  },
+  "select.title": {
+    "message": "DownThemAll! - Seleccionar sus descargas",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "No encontrado",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Error del servidor",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Prohibido",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "No autorizado",
+    "description": "Error message"
+  },
+  "set-mask": {
+    "message": "Establecer máscara de renombrado",
+    "description": "Menu text; select window"
+  },
+  "single.batchexamples": {
+    "message": "Se pueden usar lotes, por ejemplo:",
+    "description": "Header text; single window"
+  },
+  "single.header": {
+    "message": "Introducir una URL de descarga (enlace) y otras opciones",
+    "description": "Header text; single window"
+  },
+  "single.title": {
+    "message": "DownThemAll! - Añadir un enlace",
+    "description": "Title of single window"
+  },
+  "size-progress": {
+    "message": "$WRITTEN$ de $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size-unknown": {
+    "message": "Desconocido",
+    "description": "Status text; manager size column"
+  },
+  "sizeB": {
+    "message": "$S$B",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes-huge": {
+    "message": "Enorme (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes-large": {
+    "message": "Grande ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes-medium": {
+    "message": "Mediana ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes-small": {
+    "message": "Pequeña ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "speedB": {
+    "message": "$SPEED$b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork-active.title": {
+    "message": "Las nuevas descargas serán comenzadas",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork-inactive.title": {
+    "message": "No se comenzarán las nuevas descargas",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "title": {
+    "message": "Título",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle-selected-items": {
+    "message": "Cambiar marcado de los elementos seleccionados",
+    "description": "Menu text; select"
+  },
+  "tooltip-date": {
+    "message": "Fecha añadida:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip-eta": {
+    "message": "Falta:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip-from": {
+    "message": "Desde:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip-size": {
+    "message": "Tamaño:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip-speed-average": {
+    "message": "Media:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip-speed-current": {
+    "message": "Actual:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck-selected-items": {
+    "message": "Desmarcar elementos seleccionados",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Ilimitada",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Usar una vez",
+    "description": "Label for Use-Once checkboxes"
+  }
+}
