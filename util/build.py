@@ -27,6 +27,7 @@ LICENSED = set((".css", ".html", ".js", "*.ts"))
 IGNORED = set((".DS_Store", "Thumbs.db"))
 
 PERM_IGNORED_FX = set(("downloads.shelf",))
+PERM_IGNORED_CHROME = set(("menus",))
 
 SCRIPTS = [
   "yarn build:regexps",
@@ -90,10 +91,35 @@ def build_firefox(args):
   else:
     infos["browser_specific_settings"]["gecko"]["id"] = RELEASE_ID
 
-
-  
   infos["permissions"] = [p for p in infos.get("permissions") if not p in PERM_IGNORED_FX]
   out = Path("web-ext-artifacts") / f"dta-{version}-{args.mode}-fx.zip"
+  if not out.parent.exists():
+    out.parent.mkdir()
+  if out.exists():
+    out.unlink()
+  print("Output", out)
+  build(out, json.dumps(infos, indent=2).encode("utf-8"))
+
+  
+def build_chrome(args):
+  now = datetime.now().strftime("%Y%m%d%H%M%S")
+  with open("manifest.json") as manip:
+    infos = json.load(manip, object_pairs_hook=OrderedDict)
+
+  version = infos.get("version")
+  if args.mode == "nightly":
+    version = infos["version"] = f"{version}.{now}"
+
+  version = infos.get("version")
+
+  del infos["browser_specific_settings"]
+  if args.mode != "release":
+    infos["version_name"] = f"{version}-{args.mode}"
+    infos["short_name"] = infos.get("name")
+    infos["name"] = f"{infos.get('name')} {args.mode}"
+  
+  infos["permissions"] = [p for p in infos.get("permissions") if not p in PERM_IGNORED_CHROME]
+  out = Path("web-ext-artifacts") / f"dta-{version}-{args.mode}-crx.zip"
   if not out.parent.exists():
     out.parent.mkdir()
   if out.exists():
@@ -114,6 +140,7 @@ def main():
     else:
       run([script], shell=True)
   build_firefox(args)
+  build_chrome(args)
   print("DONE.")
 
 if __name__ == "__main__":

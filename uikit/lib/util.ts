@@ -15,16 +15,20 @@ export function addClass(elem: HTMLElement, ...cls: string[]) {
 
 interface Timer {
   args: any[];
+  id: number;
 }
 
-export function debounce(fn: Function, to: number) {
+export function debounce(fn: Function, to: number, reset?: boolean) {
   let timer: Timer | null;
   return function(...args: any[]) {
     if (timer) {
-      timer.args = args;
-      return;
+      if (!reset) {
+        timer.args = args;
+        return;
+      }
+      window.clearTimeout(timer.id);
     }
-    setTimeout(function() {
+    const id = window.setTimeout(function() {
       if (!timer) {
         return;
       }
@@ -37,7 +41,7 @@ export function debounce(fn: Function, to: number) {
         console.error(ex.toString(), ex);
       }
     }, to);
-    timer = {args};
+    timer = {args, id};
   };
 }
 

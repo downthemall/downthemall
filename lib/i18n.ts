@@ -9,6 +9,8 @@ declare let chrome: any;
 const CACHE_KEY = "_cached_locales";
 const CUSTOM_KEY = "_custom_locale";
 
+const normalizer = /[^A-Za-z0-9_]/g;
+
 interface JSONEntry {
   message: string;
   placeholders: any;
@@ -72,7 +74,7 @@ class Localization {
   }
 
   localize(id: string, ...args: any[]) {
-    const entry = this.strings.get(id);
+    const entry = this.strings.get(id.replace(normalizer, "_"));
     if (!entry) {
       return "";
     }
@@ -121,7 +123,8 @@ function loadCached() {
 async function loadRawLocales() {
   // en is the base locale
   const langs = new Set<string>(["en"]);
-  const ui = (browser.i18n || chrome.i18n).getUILanguage();
+  const ui = (typeof browser !== "undefined" ? browser : chrome).
+    i18n.getUILanguage();
   langs.add(ui);
 
   // Try the base too

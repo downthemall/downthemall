@@ -93,10 +93,6 @@ addEventListener("DOMContentLoaded", function dom() {
       Table.setItems(items);
     });
   });
-  PORT.on("icon-cached", async () => {
-    await fullyloaded;
-    Table.onIconCached();
-  });
 
   // Updates
   const serializer = new PromiseSerializer(1);

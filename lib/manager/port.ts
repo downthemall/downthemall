@@ -5,7 +5,6 @@ import { donate, openPrefs } from "../windowutils";
 import { API } from "../api";
 // eslint-disable-next-line no-unused-vars
 import { BaseDownload } from "./basedownload";
-import { IconCache } from "../iconcache";
 
 type SID = {sid: number};
 type SIDS = {
@@ -61,10 +60,6 @@ export class ManagerPort {
       port.off("removeSids", this.onMsgRemoveSids);
       delete this.manager;
       delete this.port;
-    });
-
-    IconCache.on("cached", ext => {
-      this.port.post("icon-cached", ext);
     });
 
     this.port.post("active", this.manager.active);

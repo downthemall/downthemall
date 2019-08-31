@@ -33,7 +33,7 @@
 .modal-footer {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: right;
+  justify-content: flex-end;
   background: rgba(30, 30, 30, 0.2);
   margin-top: 2em;
   border-top: 1px solid rgba(30, 30, 30, 0.5);

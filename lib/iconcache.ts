@@ -1,14 +1,14 @@
 "use strict";
 // License: MIT
 
-import { downloads } from "./browser";
+import { downloads, CHROME } from "./browser";
 import { EventEmitter } from "../uikit/lib/events";
 import { PromiseSerializer } from "./pserializer";
 
 const VERSION = 1;
 const STORE = "iconcache";
 // eslint-disable-next-line no-magic-numbers
-const CACHE_SIZES = [16, 32, 64, 127];
+const CACHE_SIZES = CHROME ? [16, 32] : [16, 32, 64, 127];
 
 const BLACKLISTED = Object.freeze(new Set([
   "",
@@ -28,7 +28,8 @@ const BLACKLISTED = Object.freeze(new Set([
 ]));
 
 async function getIcon(size: number, manId: number) {
-  const icon = new URL(await downloads.getFileIcon(manId, {size}));
+  const raw = await downloads.getFileIcon(manId, {size});
+  const icon = new URL(raw);
   if (icon.protocol === "data:") {
     const res = await fetch(icon.toString());
     const blob = await res.blob();

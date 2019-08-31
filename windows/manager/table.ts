@@ -33,7 +33,7 @@ import { DownloadState, StateTexts, StateClasses, StateIcons } from "./state";
 import { Tooltip } from "./tooltip";
 import "../../lib/util";
 import { CellTypes } from "../../uikit/lib/constants";
-import { downloads } from "../../lib/browser";
+import { downloads, CHROME } from "../../lib/browser";
 import { $ } from "../winutil";
 // eslint-disable-next-line no-unused-vars
 import { TableConfig } from "../../uikit/lib/config";
@@ -57,9 +57,11 @@ const HIDPI = window.matchMedia &&
   window.matchMedia("(min-resolution: 2dppx)").matches;
 
 const ICON_BASE_SIZE = 16;
-const ICON_REAL_SIZE = HIDPI ? ICON_BASE_SIZE * 2 : ICON_BASE_SIZE;
-const LARGE_ICON_BASE_SIZE = 64;
-const MAX_ICON_BASE_SIZE = 127;
+const ICON_REAL_SIZE = !CHROME && HIDPI ? ICON_BASE_SIZE * 2 : ICON_BASE_SIZE;
+// eslint-disable-next-line no-magic-numbers
+const LARGE_ICON_BASE_SIZE = CHROME ? 32 : 64;
+// eslint-disable-next-line no-magic-numbers
+const MAX_ICON_BASE_SIZE = CHROME ? 32 : 127;
 const LARGE_ICON_REAL_SIZE = HIDPI ? MAX_ICON_BASE_SIZE : LARGE_ICON_BASE_SIZE;
 
 let TEXT_SIZE_UNKNOWM = "unknown";
@@ -474,6 +476,8 @@ export class DownloadTable extends VirtualTable {
       }
       col.iconElem.classList.remove("icon-filter");
     });
+
+    IconCache.on("cached", this.onIconCached.bind(this));
 
     this.sids = new Map<number, DownloadItem>();
     this.icons = new Icons($("#icons"));
@@ -1061,10 +1065,16 @@ export class DownloadTable extends VirtualTable {
         this.updateSizes();
         $("#statusSpeedContainer").classList.remove("hidden");
       }
+      if (item.manId && item.ext) {
+        IconCache.set(item.ext, item.manId).catch(console.error);
+      }
       break;
 
     case DownloadState.DONE:
       this.finished++;
+      if (item.manId && item.ext) {
+        IconCache.set(item.ext, item.manId).catch(console.error);
+      }
       break;
     }
     this.selectionChanged();
