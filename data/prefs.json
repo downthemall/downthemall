@@ -9,7 +9,7 @@
 	"hide-context": false,
 	"conflict-action": "uniquify",
 	"nagging": 0,
-	"nagging-next": 6,
+	"nagging-next": 7,
 	"tooltip": true,
 	"show-urls": false,
 	"remove-missing-on-init": false,

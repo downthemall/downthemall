@@ -44,7 +44,7 @@ addEventListener("DOMContentLoaded", function dom() {
   const fullyloaded = Promise.all([LOADED, platformed, tabled, localized]);
   fullyloaded.then(async () => {
     const nag = await Prefs.get("nagging", 0);
-    const nagnext = await Prefs.get("nagging-next", 6);
+    const nagnext = await Prefs.get("nagging-next", 7);
     const next = Math.ceil(Math.log2(Math.max(1, nag)));
     const el = $("#nagging");
     const remove = () => {
