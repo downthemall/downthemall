@@ -15,10 +15,6 @@ Planned for later.
   * Add downloads
 * Chrome support
 * vtable perf: cache column widths
-* Localizations
-  * Settle on system
-  * Do the de-locale
-  * Enagage translators
 * Download options
   * This is a bit more limited, as we cannot modify options of downloads that have been started (and paused) or that are done.
 
