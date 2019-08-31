@@ -442,8 +442,13 @@ body > * {
 }
 
 #tooltip-icon {
-  font-size: 48px;
-  line-height: 48px;
+  height: 64px;
+  width: 64px;
+  background-size: 64px 64px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 64px;
+  line-height: 64px;
   padding: 6px;
   text-align: center;
   grid-row: 1/-1;

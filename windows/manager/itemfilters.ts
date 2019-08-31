@@ -678,6 +678,11 @@ export class FilteredCollection extends EventEmitter {
       this.emit("sorted");
     }
   }
+
+  invalidateIcons() {
+    this.items.forEach(item => item.clearFontIcons());
+    this.recalculate();
+  }
 }
 
 module.exports = {

@@ -12,6 +12,7 @@ import { PromiseSerializer } from "../pserializer";
 // eslint-disable-next-line no-unused-vars
 import { Manager } from "./man";
 import { downloads } from "../browser";
+import { IconCache } from "../iconcache";
 
 
 const setShelfEnabled = downloads.setShelfEnabled || function() {
@@ -134,6 +135,9 @@ export class Download extends BaseDownload {
           this.manager.addManId(
             this.manId = await downloads.download(options), this);
         }
+        await IconCache.
+          set(this.renamer.p_ext, this.manId).
+          catch(console.error);
       }
       finally {
         setShelfEnabled(true);

@@ -37,6 +37,7 @@ import { downloads } from "../../lib/browser";
 import { $ } from "../winutil";
 // eslint-disable-next-line no-unused-vars
 import { TableConfig } from "../../uikit/lib/config";
+import { IconCache } from "../../lib/iconcache";
 
 const TREE_CONFIG_VERSION = 2;
 const RUNNING_TIMEOUT = 1000;
@@ -52,7 +53,14 @@ const COL_SPEED = 6;
 const COL_MASK = 7;
 const COL_SEGS = 8;
 
+const HIDPI = window.matchMedia &&
+  window.matchMedia("(min-resolution: 2dppx)").matches;
+
 const ICON_BASE_SIZE = 16;
+const ICON_REAL_SIZE = HIDPI ? ICON_BASE_SIZE * 2 : ICON_BASE_SIZE;
+const LARGE_ICON_BASE_SIZE = 64;
+const MAX_ICON_BASE_SIZE = 127;
+const LARGE_ICON_REAL_SIZE = HIDPI ? MAX_ICON_BASE_SIZE : LARGE_ICON_BASE_SIZE;
 
 let TEXT_SIZE_UNKNOWM = "unknown";
 let REAL_STATE_TEXTS = Object.freeze(new Map<number, string>());
@@ -108,6 +116,8 @@ export class DownloadItem extends EventEmitter {
 
   public finalName: string;
 
+  public ext?: string;
+
   public position: number;
 
   public filteredPosition: number;
@@ -128,6 +138,10 @@ export class DownloadItem extends EventEmitter {
 
   public mask: string;
 
+  private iconField?: string;
+
+  private largeIconField?: string;
+
   constructor(owner: DownloadTable, raw: any, stats?: Stats) {
     super();
     Object.assign(this, raw);
@@ -136,6 +150,42 @@ export class DownloadItem extends EventEmitter {
     this.owner = owner;
     this.owner.updatedState(this, undefined, this.state);
     this.lastWritten = 0;
+  }
+
+  get icon() {
+    if (this.iconField) {
+      return this.iconField;
+    }
+    this.iconField = this.owner.icons.get(
+      iconForPath(this.finalName, ICON_BASE_SIZE));
+    if (this.ext) {
+      IconCache.get(this.ext, ICON_REAL_SIZE).then(icon => {
+        if (icon) {
+          this.iconField = this.owner.icons.get(icon);
+          if (typeof this.filteredPosition !== undefined) {
+            this.owner.invalidateCell(this.filteredPosition, COL_URL);
+          }
+        }
+      });
+    }
+    return this.iconField || "";
+  }
+
+  get largeIcon() {
+    if (this.largeIconField) {
+      return this.largeIconField;
+    }
+    this.largeIconField = this.owner.icons.get(
+      iconForPath(this.finalName, LARGE_ICON_BASE_SIZE));
+    if (this.ext) {
+      IconCache.get(this.ext, LARGE_ICON_REAL_SIZE).then(icon => {
+        if (icon) {
+          this.largeIconField = this.owner.icons.get(icon);
+        }
+        this.emit("largeIcon");
+      });
+    }
+    return this.largeIconField || "";
   }
 
   get eta() {
@@ -214,6 +264,9 @@ export class DownloadItem extends EventEmitter {
       console.warn("position mismatch", raw.position, this.position);
       PORT.post("all");
       return;
+    }
+    if (("ext" in raw) && raw.ext !== this.ext) {
+      this.clearIcons();
     }
     delete raw.position;
     delete raw.owner;
@@ -297,6 +350,20 @@ export class DownloadItem extends EventEmitter {
     this.domain = this.uURL.domain;
     this.emit("url");
   }
+
+  clearIcons() {
+    this.iconField = undefined;
+    this.largeIconField = undefined;
+  }
+
+  clearFontIcons() {
+    if (this.iconField && this.iconField.startsWith("icon-")) {
+      this.iconField = undefined;
+    }
+    if (this.largeIconField && this.largeIconField.startsWith("icon-")) {
+      this.largeIconField = undefined;
+    }
+  }
 }
 
 
@@ -323,7 +390,7 @@ export class DownloadTable extends VirtualTable {
 
   private readonly sids: Map<number, DownloadItem>;
 
-  private readonly icons: Icons;
+  public readonly icons: Icons;
 
   private readonly contextMenu: ContextMenu;
 
@@ -357,6 +424,7 @@ export class DownloadTable extends VirtualTable {
     this.showUrls = new ShowUrlsWatcher(this);
 
     this.updateCounts = debounce(this.updateCounts.bind(this), 100);
+    this.onIconCached = debounce(this.onIconCached.bind(this), 1000);
 
     this.downloads = new FilteredCollection(this);
     this.downloads.on("changed", () => this.updateCounts());
@@ -1043,10 +1111,10 @@ export class DownloadTable extends VirtualTable {
     }
     const item = this.downloads.filtered[rowid];
     if (colid === COL_URL) {
-      return this.icons.get(iconForPath(item.finalName, ICON_BASE_SIZE));
+      return item.icon;
     }
     if (colid === COL_PROGRESS) {
-      return StateIcons.get(item.state);
+      return StateIcons.get(item.state) || null;
     }
     return null;
   }
@@ -1118,5 +1186,9 @@ export class DownloadTable extends VirtualTable {
     default:
       return -1;
     }
+  }
+
+  onIconCached() {
+    this.downloads.invalidateIcons();
   }
 }
