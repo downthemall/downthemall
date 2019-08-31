@@ -1,11 +1,31 @@
 {
-  "language": {
-    "message": "Polski (PL)",
-    "description": "Lanuage Name in your language"
+  "CRASH": {
+    "message": "Błąd wewnętrzny przeglądarki",
+    "description": "Error Message"
   },
-  "language_code": {
-    "message": "pl",
-    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  "FILE_FAILED": {
+    "message": "Błąd dostępu do pliku",
+    "description": "Error Message"
+  },
+  "NETWORK_FAILED": {
+    "message": "Błąd sieci",
+    "description": "Error Message"
+  },
+  "SERVER_BAD_CONTENT": {
+    "description": "Error message",
+    "message": "Nie odnaleziono serwera"
+  },
+  "SERVER_FAILED": {
+    "description": "Error message",
+    "message": "Błąd serwera"
+  },
+  "SERVER_FORBIDDEN": {
+    "description": "Error message",
+    "message": "Dostęp zabroniony"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "description": "Error message",
+    "message": "Brak autoryzacji dostępu"
   },
   "add-download": {
     "message": "Dodaj pobieranie",
@@ -20,7 +40,7 @@
     "description": "Checkbox label"
   },
   "add-paused.question": {
-    "message": "Czy chcesz zapamiętać tę decyzję i zawsze dodawać nowe pliki wstrzymane od teraz??",
+    "message": "Czy chcesz zapamiętać tę decyzję i od teraz dodawać nowe pobierania jako zatrzymane?",
     "description": "Messagebox text"
   },
   "add-paused.title": {
@@ -36,11 +56,11 @@
     "description": "Button text"
   },
   "batch.batch": {
-    "message": "Pobieranie wsadowe",
+    "message": "Pobieranie grupowe",
     "description": "Button text"
   },
   "batch.desc": {
-    "message": "Obecny adres URL wydaje się zawierać instrukcje dotyczące pobierania wsadowego.",
+    "message": "Obecny adres URL wydaje się zawierać instrukcje dotyczące pobierania grupowego.",
     "description": ""
   },
   "batch.items": {
@@ -52,7 +72,7 @@
     "description": "Messagebox info text for batch confirmations"
   },
   "batch.question": {
-    "message": "Czy chcesz dodać to jako wsadowe czy jako pojedyncze pobranie?",
+    "message": "Chcesz to dodać jako grupowe czy pojedyncze pobranie?",
     "description": "Messagebox info text for batch confirmations"
   },
   "batch.single": {
@@ -60,7 +80,7 @@
     "description": "Button text for batch confirmation"
   },
   "batch.title": {
-    "message": "Pobieranie wsadowe",
+    "message": "Pobieranie grupowe",
     "description": "Messagebox title for batch confirmations"
   },
   "cancel": {
@@ -134,10 +154,6 @@
   "conflict-rename": {
     "message": "Zmień nazwę",
     "description": "Option text; prefs/general"
-  },
-  "CRASH": {
-    "message": "Błąd wewnętrzny przeglądarki",
-    "description": "Error Message"
   },
   "create-filter": {
     "message": "Utwórz filtr",
@@ -236,7 +252,7 @@
     "description": "Menu text"
   },
   "dta.regular.media": {
-    "message": "Zapisz Media z DownThemAll!",
+    "message": "Zapisz Multimedia z DownThemAll!",
     "description": "Menu text"
   },
   "dta.regular.selection": {
@@ -256,7 +272,7 @@
     "description": "Menu text"
   },
   "dta.turbo.media": {
-    "message": "Zapisz Media z One Click!",
+    "message": "Zapisz Multimedia z One Click!",
     "description": "Menu text"
   },
   "dta.turbo.selection": {
@@ -280,7 +296,7 @@
     "description": "Error Message; select window"
   },
   "extensionDescription": {
-    "message": "Mass Downloader dla Twojej przeglądarki",
+    "message": "Narzędzie do zbiorowego pobierania dla Twojej przeglądarki",
     "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
   },
   "fastfilter.placeholder": {
@@ -290,10 +306,6 @@
   "fastfiltering": {
     "message": "Szybkie filtrowanie",
     "description": "Label for Fast Filtering input"
-  },
-  "FILE_FAILED": {
-    "message": "Błąd dostępu do pliku",
-    "description": "Error Message"
   },
   "filter-at-least-one": {
     "message": "Musisz wybrać co najmniej jeden typ filtru!",
@@ -312,11 +324,11 @@
     "description": "Message box label"
   },
   "filter-type-link": {
-    "message": "Link Filter",
+    "message": "Filtr linków",
     "description": "Message box checkbox label"
   },
   "filter-type-media": {
-    "message": "Media Filter",
+    "message": "Filtr Multimediów",
     "description": "Message box checkbox label"
   },
   "filter-types": {
@@ -371,6 +383,14 @@
     "message": "PageUp",
     "description": "Short for PageUp-key"
   },
+  "language": {
+    "description": "Lanuage Name in your language",
+    "message": "Polski (PL)"
+  },
+  "language_code": {
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR",
+    "message": "pl"
+  },
   "limited-to": {
     "message": "Ograniczone do",
     "description": "Label text; used in prefs/network"
@@ -418,7 +438,7 @@
     "description": "Status text; Used in the mask column, select window"
   },
   "media": {
-    "message": "Media",
+    "message": "Multimedia",
     "description": "Media label (short)"
   },
   "missing": {
@@ -450,10 +470,6 @@
         "example": ""
       }
     }
-  },
-  "NETWORK_FAILED": {
-    "message": "Błąd sieci",
-    "description": "Error Message"
   },
   "never-ask-again": {
     "message": "Nie pytaj ponownie",
@@ -628,11 +644,11 @@
     "description": "Messagebox text"
   },
   "remove-batch-downloads": {
-    "message": "Usuń Obecny Wsad",
+    "message": "Usuń aktualne pobieranie grupowe",
     "description": "Menu text"
   },
   "remove-batch-downloads.question": {
-    "message": "Czy chcesz usunąć wszystkie pobrania z tego samego wsadu, co aktualnie wybrane pobieranie?",
+    "message": "Czy chcesz usunąć wszystkie pobrania z danej grupy, co aktualnie wybrane pobieranie?",
     "description": "Messagebox text"
   },
   "remove-complete-downloads": {
@@ -752,7 +768,7 @@
     "description": "UI for renaming; currently unused"
   },
   "renamer-batch": {
-    "message": "Numer Wsadu",
+    "message": "Numer pobierania grupowego",
     "description": "Mask text; see mask button"
   },
   "renamer-d": {
@@ -780,11 +796,11 @@
     "description": "Mask text; see mask button"
   },
   "renamer-idx": {
-    "message": "Numer elementu we Wsadzie",
+    "message": "Numer elementu w pobieraniu grupowym",
     "description": "Mask text; see mask button"
   },
   "renamer-info": {
-    "message": "",
+    "message": "Dodanie 'flat', np. *flatsubdirs*, zamieni wszystkie ukośniki w wartości, co doprowadzi do nieutworzenia katalogów",
     "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
   },
   "renamer-m": {
@@ -800,7 +816,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer-num": {
-    "message": "Alias dla *Wsadu*",
+    "message": "Alias dla *pobieranie grupowe*",
     "description": "Mask text; see mask button"
   },
   "renamer-qstring": {
@@ -888,7 +904,7 @@
     "description": "Button text; pref/General"
   },
   "reset-layouts.done": {
-    "message": "Wszystkie wcześniej zapamiętane dostosowania układu zostały zresetowane! Może być konieczne ponowne załadowanie okien/kart.",
+    "message": "Wszystkie wcześniej zapamiętane ustawienia wyglądu zostały zresetowane! Może być konieczne ponowne załadowanie okien/kart.",
     "description": "Messagebox text; pref/General"
   },
   "resume-download": {
@@ -904,7 +920,7 @@
     "description": "Button text; e.g. prefs/Network"
   },
   "search": {
-    "message": "Szukaj…",
+    "message": "Szukaj\u2026",
     "description": "Placeholder text; manager status search field"
   },
   "select-all": {
@@ -923,28 +939,12 @@
     "message": "DownThemAll! - Wybierz swoje pobierania",
     "description": "Title of the select window"
   },
-  "SERVER_BAD_CONTENT": {
-    "message": "Nie znaleziono",
-    "description": "Error message"
-  },
-  "SERVER_FAILED": {
-    "message": "Błąd serwera",
-    "description": "Error message"
-  },
-  "SERVER_FORBIDDEN": {
-    "message": "Zabronione",
-    "description": "Error message"
-  },
-  "SERVER_UNAUTHORIZED": {
-    "message": "Nieautoryzowany",
-    "description": "Error message"
-  },
   "set-mask": {
     "message": "Ustaw maskę zmiany nazwy",
     "description": "Menu text; select window"
   },
   "single.batchexamples": {
-    "message": "Wsady są wspierane, np.:",
+    "message": "Pobierania grupowe są wspierane, np.:",
     "description": "Header text; single window"
   },
   "single.header": {
