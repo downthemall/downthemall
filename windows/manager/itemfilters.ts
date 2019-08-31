@@ -340,7 +340,8 @@ export class UrlMenuFilter extends MenuFilter {
   async populate() {
     const filts = await filters();
     for (const i of filts.all.filter(e => e.id !== "deffilter-all")) {
-      this.addItem(i.label, this.toggleRegularFilter.bind(this, i));
+      this.addItem(
+        i.label, this.toggleRegularFilter.bind(this, i), this.filters.has(i));
     }
     this.addItem("-");
     sort(
