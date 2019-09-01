@@ -1164,7 +1164,7 @@
     "description": "Option text; Prefs/Network"
   },
   "useonlyonce": {
-    "message": "Nur einmal",
+    "message": "Einmalig",
     "description": "Label for Use-Once checkboxes"
   }
 }
