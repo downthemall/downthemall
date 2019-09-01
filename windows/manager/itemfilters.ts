@@ -343,12 +343,16 @@ export class UrlMenuFilter extends MenuFilter {
       this.addItem(
         i.label, this.toggleRegularFilter.bind(this, i), this.filters.has(i));
     }
-    this.addItem("-");
-    sort(
+    const domains = sort(
       Array.from(new Set(this.collection.items.map(e => e.domain))),
       undefined,
       naturalCaseCompare
-    ).forEach(e => {
+    );
+    if (!domains.length) {
+      return;
+    }
+    this.addItem("-");
+    domains.forEach(e => {
       this.addItem(
         e, this.toggleDomainFilter.bind(this, e), this.domains.has(e));
     });
