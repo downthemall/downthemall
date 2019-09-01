@@ -1,0 +1,1170 @@
+{
+  "language": {
+    "message": "Nederlands",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "nl",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "add-download": {
+    "message": "Download toevoegen",
+    "description": "Action for adding a download"
+  },
+  "add-new": {
+    "message": "Nieuw toevoegen",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add-paused-once": {
+    "message": "Alleen nu gepauzeerd toevoegen",
+    "description": "Checkbox label"
+  },
+  "add-paused.question": {
+    "message": "Wilt u deze beslissing onthouden en voortaan alle nieuwe downloads gepauzeerd toevoegen?",
+    "description": "Messagebox text"
+  },
+  "add-paused.title": {
+    "message": "Altijd gepauzeerd toevoegen",
+    "description": "Title for the add-paused dialog"
+  },
+  "addpaused": {
+    "message": "Gepauzeerd toevoegen",
+    "description": "Action: Add paused"
+  },
+  "ask-again-later": {
+    "message": "Later opnieuw vragen",
+    "description": "Button text"
+  },
+  "batch.batch": {
+    "message": "Groep download",
+    "description": "Button text"
+  },
+  "batch.desc": {
+    "message": "De huidige URL lijkt een instructie voor een groep download te bevatten.",
+    "description": ""
+  },
+  "batch.items": {
+    "message": "Aantal onderdelen:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch.preview": {
+    "message": "Voorbeeld:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch.question": {
+    "message": "Wilt u dit als groep of individuele download toevoegen?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch.single": {
+    "message": "Individuele download",
+    "description": "Button text for batch confirmation"
+  },
+  "batch.title": {
+    "message": "Groep download",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "Annuleren",
+    "description": "Button text: Cancel"
+  },
+  "cancel-download": {
+    "message": "Annuleren",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "canceled": {
+    "message": "Geannuleerd",
+    "description": "Download status text"
+  },
+  "cannot-be-empty": {
+    "message": "Dit veld mag niet leeg zijn",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change-later-reminder": {
+    "message": "U kunt deze beslissing later nog veranderen in de Voorkeuren",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check-selected-items": {
+    "message": "Geselecteerde onderdelen aanvinken",
+    "description": "Menu text"
+  },
+  "colConnections": {
+    "message": "Gelijktijdige verbindingen",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "Domein",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "Gesch. tijd",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "Naam/URL",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "Voortgang",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Segmenten",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Grootte",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Snelheid",
+    "description": "Table column in manager"
+  },
+  "conflict-overwrite": {
+    "message": "Overschrijven",
+    "description": "Option text; prefs/general"
+  },
+  "conflict-prompt": {
+    "message": "Prompt",
+    "description": "Option text; prefs/general"
+  },
+  "conflict-rename": {
+    "message": "Naam wijzigen",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "Interne browser fout",
+    "description": "Error Message"
+  },
+  "create-filter": {
+    "message": "Filter maken",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom-filename": {
+    "message": "Aangepaste bestandsnaam",
+    "description": "Label text; single window"
+  },
+  "deffilter-all": {
+    "message": "Alle bestanden",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter-arch": {
+    "message": "Archieven (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter-aud": {
+    "message": "Audio (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter-bin": {
+    "message": "Programma's (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter-doc": {
+    "message": "Documenten (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter-img": {
+    "message": "Afbeeldingen (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter-imggif": {
+    "message": "GIF Afbeeldingen",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter-imgjpg": {
+    "message": "JPEG Afbeeldingen",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter-imgpng": {
+    "message": "PNG Afbeeldingen",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter-vid": {
+    "message": "Video's (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "Verwijderen",
+    "description": "button text"
+  },
+  "description": {
+    "message": "Omschrijving",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable-other-filters": {
+    "message": "Andere uitschakelen",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "Doneren!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Klaar",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "Download",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download.verb": {
+    "message": "Downloaden",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta-regular-all": {
+    "message": "DownThemAll! - Alle Tabbladen",
+    "description": "Menu text"
+  },
+  "dta-turbo-all": {
+    "message": "OneClick! - All Tabbladen",
+    "description": "Menu text"
+  },
+  "dta.regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta.regular.image": {
+    "message": "Afbeelding opslaan met DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.regular.link": {
+    "message": "Link opslaan met DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.regular.media": {
+    "message": "Media opslaan met DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.regular.selection": {
+    "message": "Selectie opslaan met DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.turbo": {
+    "message": "OneClick!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta.turbo.image": {
+    "message": "Afbeelding opslaan met OneClick!",
+    "description": "Menu text"
+  },
+  "dta.turbo.link": {
+    "message": "Link opslaan met OneClick!",
+    "description": "Menu text"
+  },
+  "dta.turbo.media": {
+    "message": "Media opslaan met OneClick!",
+    "description": "Menu text"
+  },
+  "dta.turbo.selection": {
+    "message": "Selectie opslaan met OneClick!",
+    "description": "Menu text"
+  },
+  "error.invalidMask": {
+    "message": "Ongeldig wijzigingsmasker",
+    "description": "Error message; single/select window"
+  },
+  "error.invalidReferrer": {
+    "message": "Ongeldige doorverwijzing",
+    "description": "Error message; single window"
+  },
+  "error.invalidURL": {
+    "message": "Ongeldige URL",
+    "description": "Error message; single window"
+  },
+  "error.noItemsSelected": {
+    "message": "Geen geselecteerde items",
+    "description": "Error Message; select window"
+  },
+  "extensionDescription": {
+    "message": "De bulkdownloader voor uw browser",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfilter.placeholder": {
+    "message": "Jokerteken of reguliere expressie",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "fastfiltering": {
+    "message": "Snel filteren",
+    "description": "Label for Fast Filtering input"
+  },
+  "FILE_FAILED": {
+    "message": "Bestandstoegangsfout",
+    "description": "Error Message"
+  },
+  "filter-at-least-one": {
+    "message": "U moet tenminste één filtertype selecteren!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter-create.title": {
+    "message": "Nieuw filter maken",
+    "description": "Message box title"
+  },
+  "filter-expression": {
+    "message": "Filterexpressie",
+    "description": "Message box label"
+  },
+  "filter-label": {
+    "message": "Filterlabel",
+    "description": "Message box label"
+  },
+  "filter-type-link": {
+    "message": "Link filter",
+    "description": "Message box checkbox label"
+  },
+  "filter-type-media": {
+    "message": "Media filter",
+    "description": "Message box checkbox label"
+  },
+  "filter-types": {
+    "message": "Filtersoort",
+    "description": "Message box label"
+  },
+  "finishing": {
+    "message": "Voltooien",
+    "description": "Status text"
+  },
+  "force-start": {
+    "message": "Forceer start",
+    "description": "Menu text"
+  },
+  "information.title": {
+    "message": "Informatie",
+    "description": "Used in message boxes"
+  },
+  "invalid-domain-pref": {
+    "message": "Ongeldig domein",
+    "description": "Error message in prefs/network"
+  },
+  "invert-selection": {
+    "message": "Selectie omkeren",
+    "description": "Menu text"
+  },
+  "key-alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key-ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key-delete": {
+    "message": "Del",
+    "description": "Short for Delete-key"
+  },
+  "key-end": {
+    "message": "End",
+    "description": "Short for End-key"
+  },
+  "key-home": {
+    "message": "Home",
+    "description": "Short for home key"
+  },
+  "key-pagedown": {
+    "message": "PageDown",
+    "description": "Short for pagedown-key"
+  },
+  "key-pageup": {
+    "message": "PageUp",
+    "description": "Short for PageUp-key"
+  },
+  "limited-to": {
+    "message": "Gelimiteerd tot",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "Links",
+    "description": "Links tab label (short); select window"
+  },
+  "manager-status-items": {
+    "message": "$COMPLETE$ van $TOTAL$ downloads gereed ($SHOWING$ weergegeven), $RUNNING$ bezig",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager.short": {
+    "message": "Beheerder",
+    "description": "Menu text"
+  },
+  "manager.title": {
+    "message": "DownThemAll! beheerder",
+    "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "Masker",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask.default": {
+    "message": "Standaardmasker",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "Media",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Ontbrekend",
+    "description": "Status text in manager"
+  },
+  "move-bottom": {
+    "message": "Onderaan",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move-down": {
+    "message": "Omlaag",
+    "description": "Action for moving a download down"
+  },
+  "move-top": {
+    "message": "Bovenaan",
+    "description": "Action for moving a download to the top"
+  },
+  "move-up": {
+    "message": "Omhoog",
+    "description": "Action for moving a download up"
+  },
+  "nagging-message": {
+    "message": "U heeft al $DOWNLOADS$ downloads toegevoegd met DownThemAll! Als regelmatige gebruiker wilt u wellicht een donatie overwegen om verdere ontwikkeling te ondersteunen. Alvast bedankt!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "Netwerkfout",
+    "description": "Error Message"
+  },
+  "never-ask-again": {
+    "message": "Niet opnieuw vragen",
+    "description": "Donation button"
+  },
+  "no-links": {
+    "message": "Geen links gevonden",
+    "description": "Notification text"
+  },
+  "noitems.label": {
+    "message": "Geen items geselecteerd",
+    "description": "Status bar text in select"
+  },
+  "numitems.label": {
+    "message": "$ITEMS$ items geselecteerd…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "OK",
+    "description": "Button text; Used in message boxes"
+  },
+  "open-directory": {
+    "message": "Open map",
+    "description": "Menu text; manager context"
+  },
+  "open-file": {
+    "message": "Open bestand",
+    "description": "Menu text; manager context"
+  },
+  "open-link": {
+    "message": "Open link",
+    "description": "Menu text; select window"
+  },
+  "options-filters": {
+    "message": "Filters",
+    "description": "Pref tab text"
+  },
+  "options-general": {
+    "message": "Algemeen",
+    "description": "Pref tab text"
+  },
+  "options-network": {
+    "message": "Netwerk",
+    "description": "Pref tab text"
+  },
+  "pause-download": {
+    "message": "Pauze",
+    "description": "Action for pausing a download"
+  },
+  "paused": {
+    "message": "Gepauzeerd",
+    "description": "Status text; manager"
+  },
+  "pref-add-paused": {
+    "message": "Nieuwe downloads gepauzeerd toevoegen, in plaats van ze meteen te starten",
+    "description": "Preferences/General"
+  },
+  "pref-concurrent-downloads": {
+    "message": "Gelijktijdige downloads",
+    "description": "Preferences/Network"
+  },
+  "pref-finish-notification": {
+    "message": "Laat een melding zien als de wachtrij klaar is met downloaden",
+    "description": "Preferences/General"
+  },
+  "pref-global-turbo": {
+    "message": "Browserknop moet OneClick! zijn",
+    "description": "Preferences/General"
+  },
+  "pref-hide-context": {
+    "message": "Geen algemene context menu items weergeven",
+    "description": "Preferences/General"
+  },
+  "pref-manager-tooltip": {
+    "message": "Knopinfo weergeven in Beheerder tabbladen",
+    "description": "Preferences/General"
+  },
+  "pref-open-manager-on-queue": {
+    "message": "Open het beheerdertabblad na het plaatsen van downloads in de wachtrij",
+    "description": "Preferences/General"
+  },
+  "pref-queue-notification": {
+    "message": "Laat een melding zien wanneer er nieuwe downloads in de wachtrij worden geplaatst",
+    "description": "Preferences/General"
+  },
+  "pref-remove-missing-on-init": {
+    "message": "Ontbrekende downloads verwijderen na een herstart",
+    "description": "Preferences/General"
+  },
+  "pref-show-urls": {
+    "message": "URL's weergeven in plaats van namen",
+    "description": "Preferences/General"
+  },
+  "pref-text-links": {
+    "message": "Probeer links te vinden in de tekst van de website (langzamer)",
+    "description": "Preferences/General"
+  },
+  "pref.manager": {
+    "message": "Beheerder",
+    "description": "Preferences/General; group text"
+  },
+  "pref.netglobal": {
+    "message": "Algemene netwerk limieten",
+    "description": "Preferences/General; group text"
+  },
+  "pref.queueing": {
+    "message": "Downloads in wachtrij plaatsen",
+    "description": "Preferences/General; group text"
+  },
+  "pref.ui": {
+    "message": "Gebruikersinterface",
+    "description": "Preferences/General; group text"
+  },
+  "prefs.conflicts": {
+    "message": "Als een bestand al bestaat",
+    "description": "Preferences/General; group text"
+  },
+  "prefs.short": {
+    "message": "Voorkeuren",
+    "description": "Menu text; Preferences"
+  },
+  "prefs.title": {
+    "message": "DownThemAll! voorkeuren",
+    "description": "Window/tab title; Preferences"
+  },
+  "queue-finished": {
+    "message": "De download wachtrij is gereed",
+    "description": "Notification text"
+  },
+  "queued": {
+    "message": "In de wachtrij geplaatst",
+    "description": "Status text"
+  },
+  "queued-download": {
+    "message": "1 download in de wachtrij geplaatst!",
+    "description": "Notification text; single download"
+  },
+  "queued-downloads": {
+    "message": "$COUNT$ downloads in de wachtrij geplaatst!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "referrer": {
+    "message": "Verwijzer",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "Deze beslissing onthouden",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove-all-complete-downloads": {
+    "message": "Alle voltooide verwijderen",
+    "description": "Menu text"
+  },
+  "remove-all-downloads": {
+    "message": "Alle verwijderen",
+    "description": "Menu text"
+  },
+  "remove-all-downloads.question": {
+    "message": "Wilt u alle downloads verwijderen?",
+    "description": "Messagebox text"
+  },
+  "remove-batch-downloads": {
+    "message": "Huidige groep verwijderen",
+    "description": "Menu text"
+  },
+  "remove-batch-downloads.question": {
+    "message": "Wilt u alle downloads verwijderen die zich in dezelfde groep bevinden als de huidige selectie?",
+    "description": "Messagebox text"
+  },
+  "remove-complete-downloads": {
+    "message": "Voltooide downloads verwijderen",
+    "description": "Action for removing complete downloads"
+  },
+  "remove-complete-downloads.question": {
+    "message": "Wilt u alle voltooide downloads verwijderen?",
+    "description": "Messagebox text"
+  },
+  "remove-complete-filter-downloads.question": {
+    "message": "Wilt u alle voltooide downloads verwijderen die voldoen aan het '$FILTER$' filter?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove-complete-selection-downloads.question": {
+    "message": "Wilt u alle voltooide downloads in de huidige selectie verwiijderen?",
+    "description": "Messagebox text"
+  },
+  "remove-domain-complete-downloads": {
+    "message": "Verwijder voltooid van huidig domein",
+    "description": "Menu text"
+  },
+  "remove-domain-complete-downloads.question": {
+    "message": "Wilt u alle voltooide downloads van domein '$DOMAIN$' verwijderen?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove-domain-downloads": {
+    "message": "Huidig domein verwijderen",
+    "description": "Menu text"
+  },
+  "remove-domain-downloads.question": {
+    "message": "Wilt u alle downloads van domein '$DOMAIN$' verwijderen?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove-download": {
+    "message": "Download verwijderen",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove-download.question": {
+    "message": "Wilt u alle geselecteerde downloads verwijderen?",
+    "description": "Messagebox text"
+  },
+  "remove-downloads": {
+    "message": "Downloads verwijderen",
+    "description": "Menu text"
+  },
+  "remove-downloads.title": {
+    "message": "Weet u zeker dat u downloads wilt verwijderen?",
+    "description": "Messagebox title; manager"
+  },
+  "remove-failed-downloads": {
+    "message": "Verwijderen mislukt",
+    "description": "Menu text"
+  },
+  "remove-failed-downloads.question": {
+    "message": "Wilt u alle mislukte downloads verwijderen?",
+    "description": "Messagebox text"
+  },
+  "remove-filter-downloads.question": {
+    "message": "Wilt u alle downloads verwijderen die aan het '$FILTER$' filter voldoen?",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove-missing": {
+    "message": "Ontbrekende downloads verwijderen",
+    "description": "Menu text"
+  },
+  "remove-missing-downloads.question": {
+    "message": "Wilt u alle ontbrekende downloads verwijderen?",
+    "description": "Messagebox text"
+  },
+  "remove-paused-downloads": {
+    "message": "Gepauzeerd verwijderen",
+    "description": "Menu text"
+  },
+  "remove-paused-downloads.question": {
+    "message": "Wilt u alle gepauzeerde downloads verwijderen?",
+    "description": "Messagebox text"
+  },
+  "remove-selected-complete-downloads": {
+    "message": "Verwijder compleet in selectie",
+    "description": "Menu text"
+  },
+  "remove-selected-complete-downloads.question": {
+    "message": "Wilt u alle complete downloads verwijderen in de huidige selectie?",
+    "description": "Messagebox text"
+  },
+  "remove-selected-downloads": {
+    "message": "Verwijder geselecteerd",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "Naam wijzigen",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer-batch": {
+    "message": "Groepsnummer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-d": {
+    "message": "Datum toegevoegd - Dag",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-date": {
+    "message": "Datum toegevoegd",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-domain": {
+    "message": "Domeinnaam (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-ext": {
+    "message": "Extensie",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-hh": {
+    "message": "Datum toegevoegd - Uur",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-host": {
+    "message": "Hostnaam",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-idx": {
+    "message": "Itemnummer in groep",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-info": {
+    "message": "'flat' toevoegen, zoals *flatsubdirs* zal alle schuine streepjes in de waarde vervangen en geen mappen toevoegen",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer-m": {
+    "message": "Datum toegevoegd - Maand",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-mm": {
+    "message": "Datum toegevoegd - Minuut",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-name": {
+    "message": "Bestandsnaam",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-num": {
+    "message": "Alias voor *groep*",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-qstring": {
+    "message": "Query tekenreeks",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-ref": {
+    "message": "Referrer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refdomain": {
+    "message": "Referrer domeinnaam (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refext": {
+    "message": "Referrer extensie",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refhost": {
+    "message": "Referrer hostnaam",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refname": {
+    "message": "Referrer bestandsnaam",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refqstring": {
+    "message": "Referrer query tekenreeks",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refsubdirs": {
+    "message": "Referrer pad",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refurl": {
+    "message": "Referrer URL (zonder protocol)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-ss": {
+    "message": "Datum toegevoegd - Seconde",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-subdirs": {
+    "message": "Pad",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-tags": {
+    "message": "Labels voor wijzigingsmasker",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-text": {
+    "message": "Omschrijving",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-title": {
+    "message": "Titeltekst",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-url": {
+    "message": "URL (zonder protocol)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-y": {
+    "message": "Datum toegevoegd - Jaar",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "Wijzigingsmasker",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "Herstellen",
+    "description": "Button text; pref window"
+  },
+  "reset-confirmations": {
+    "message": "Onthouden bevestigingen herstellen",
+    "description": "Button text; pref/General"
+  },
+  "reset-confirmations.done": {
+    "message": "Alle eerder onthouden bevestigingen zijn hersteld!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset-layouts": {
+    "message": "Aanpassingen in de gebruikersinterface herstellen",
+    "description": "Button text; pref/General"
+  },
+  "reset-layouts.done": {
+    "message": "Alle eerder onthouden ontwerpaanpassingen zijn hersteld! U moet wellicht vensters of tabbladen opnieuw laden.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume-download": {
+    "message": "Voortzetten",
+    "description": "Action for resuming a download"
+  },
+  "running": {
+    "message": "Bezig",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Opslaan",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Zoeken…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select-all": {
+    "message": "Alles selecteren",
+    "description": "Menu text; e.g. select context"
+  },
+  "select-checked": {
+    "message": "Aangevinkt selecteren",
+    "description": "Menu text; select context"
+  },
+  "select-none": {
+    "message": "Niets selecteren",
+    "description": "Menu text; select context"
+  },
+  "select.title": {
+    "message": "DownThemAll! - Selecteer uw Downloads",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "Niet gevonden",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Serverfout",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Verboden",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "Onbevoegd",
+    "description": "Error message"
+  },
+  "set-mask": {
+    "message": "Wijzigingsmasker instellen",
+    "description": "Menu text; select window"
+  },
+  "single.batchexamples": {
+    "message": "Groepen worden ondersteund, bijvoorbeeld:",
+    "description": "Header text; single window"
+  },
+  "single.header": {
+    "message": "Een download URL (link) toevoegen en andere opties",
+    "description": "Header text; single window"
+  },
+  "single.title": {
+    "message": "DownThemAll! - Link toevoegen",
+    "description": "Title of single window"
+  },
+  "size-progress": {
+    "message": "$WRITTEN$ van $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size-unknown": {
+    "message": "Onbekend",
+    "description": "Status text; manager size column"
+  },
+  "sizeB": {
+    "message": "$S$ B",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$ GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$ kB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$ MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$ PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes-huge": {
+    "message": "Enorm (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes-large": {
+    "message": "Groot ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes-medium": {
+    "message": "Gemiddeld ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes-small": {
+    "message": "Klein ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$ TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "speedB": {
+    "message": "$SPEED$ b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$ kB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$ MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork-active.title": {
+    "message": "Nieuwe downloads worden gestart",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork-inactive.title": {
+    "message": "Nieuwe downloads worden niet gestart",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "title": {
+    "message": "Titel",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle-selected-items": {
+    "message": "Vinkje omkeren voor geselecteerde items",
+    "description": "Menu text; select"
+  },
+  "tooltip-date": {
+    "message": "Datum toegevoegd:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip-eta": {
+    "message": "Resterend:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip-from": {
+    "message": "Van:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip-size": {
+    "message": "Grootte:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip-speed-average": {
+    "message": "Gemiddeld:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip-speed-current": {
+    "message": "Huidig:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck-selected-items": {
+    "message": "Geselecteerde items uitvinken",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Ongelimiteerd",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Gebruik één keer",
+    "description": "Label for Use-Once checkboxes"
+  }
+}
