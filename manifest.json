@@ -9,6 +9,8 @@
 
   "default_locale": "en",
 
+  "content_security_policy": "script-src 'self'; style-src 'self' 'unsafe-inline'; default-src 'self'",
+
   "icons": {
     "16": "style/icon16.png",
     "32": "style/icon32.png",
