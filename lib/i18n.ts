@@ -123,9 +123,13 @@ async function loadRawLocales() {
   const langs = new Set<string>(["en"]);
   const ui = (browser.i18n || chrome.i18n).getUILanguage();
   langs.add(ui);
+
+  // Try the base too
   if (ui.includes("-")) {
-    // Try the base too
-    langs.add(ui.split(/[_-]+/)[0]);
+    langs.add(ui.split(/[-]+/)[0]);
+  }
+  else if (ui.includes("_")) {
+    langs.add(ui.split(/[_]+/)[0]);
   }
 
   const fetched = await Promise.all(Array.from(langs, fetchLanguage));
