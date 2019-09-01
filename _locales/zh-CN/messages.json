@@ -4,7 +4,7 @@
     "description": "Lanuage Name in your language"
   },
   "language_code": {
-    "message": "zh_CN",
+    "message": "zh-CN",
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
   "add-download": {
