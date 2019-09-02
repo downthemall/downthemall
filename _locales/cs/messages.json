@@ -1,0 +1,1170 @@
+{
+  "language": {
+    "message": "Čeština (CZ)",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "cs",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "add-download": {
+    "message": "Přidat stahování",
+    "description": "Action for adding a download"
+  },
+  "add-new": {
+    "message": "Přidat",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add-paused-once": {
+    "message": "Přidat pozastavené pouze jednou",
+    "description": "Checkbox label"
+  },
+  "add-paused.question": {
+    "message": "Chcete zapamatovat toto rozhodnutí a vždy přidávat stahování pozastavená?",
+    "description": "Messagebox text"
+  },
+  "add-paused.title": {
+    "message": "Vždy přidávat pozastavené?",
+    "description": "Title for the add-paused dialog"
+  },
+  "addpaused": {
+    "message": "Přidat pozastavené",
+    "description": "Action: Add paused"
+  },
+  "ask-again-later": {
+    "message": "Zeptat se později",
+    "description": "Button text"
+  },
+  "batch.batch": {
+    "message": "Dávkové stahování",
+    "description": "Button text"
+  },
+  "batch.desc": {
+    "message": "URL adresa nejspíše obsahuje instrukce pro dávkové stahování",
+    "description": ""
+  },
+  "batch.items": {
+    "message": "Počet stahování:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch.preview": {
+    "message": "Náhled:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch.question": {
+    "message": "Chcete přidat jako dávkové stahování nebo jedno stahování?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch.single": {
+    "message": "Jedno stahování",
+    "description": "Button text for batch confirmation"
+  },
+  "batch.title": {
+    "message": "Dávkové stahování",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "Zrušit",
+    "description": "Button text: Cancel"
+  },
+  "cancel-download": {
+    "message": "Zrušit",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "canceled": {
+    "message": "Zrušeno",
+    "description": "Download status text"
+  },
+  "cannot-be-empty": {
+    "message": "Toto pole nesmí být prázdné",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change-later-reminder": {
+    "message": "Toto můžete později změnit v nastavení",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check-selected-items": {
+    "message": "Zkontrolovat vybrané",
+    "description": "Menu text"
+  },
+  "colConnections": {
+    "message": "Souběžná spojení",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "Doména",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "Předpokládaný čas",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "Jméno / URL",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "Průběh",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Segmenty",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Velikost",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Rychlost",
+    "description": "Table column in manager"
+  },
+  "conflict-overwrite": {
+    "message": "Přepsat",
+    "description": "Option text; prefs/general"
+  },
+  "conflict-prompt": {
+    "message": "Zeptat se",
+    "description": "Option text; prefs/general"
+  },
+  "conflict-rename": {
+    "message": "Přejmenovat",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "Interní chyba prohlížeče",
+    "description": "Error Message"
+  },
+  "create-filter": {
+    "message": "Vytvořit filtr",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom-filename": {
+    "message": "Vlastní název souboru",
+    "description": "Label text; single window"
+  },
+  "deffilter-all": {
+    "message": "Všechny soubory",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter-arch": {
+    "message": "Archivy (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter-aud": {
+    "message": "Audio (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter-bin": {
+    "message": "Software (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter-doc": {
+    "message": "Dokumenty (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter-img": {
+    "message": "Obrázky (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter-imggif": {
+    "message": "Obrázky GIF",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter-imgjpg": {
+    "message": "Obrázky JPEG",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter-imgpng": {
+    "message": "Obrázky PNG",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter-vid": {
+    "message": "Videa (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "Smazat",
+    "description": "button text"
+  },
+  "description": {
+    "message": "Popis",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable-other-filters": {
+    "message": "Zrušit ostatní filtry",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "Darovat!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Hotovo",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "Stahování",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download.verb": {
+    "message": "Stáhnout",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta-regular-all": {
+    "message": "DownThemAll! - Všechny záložky",
+    "description": "Menu text"
+  },
+  "dta-turbo-all": {
+    "message": "OneClick! - Všechny záložky",
+    "description": "Menu text"
+  },
+  "dta.regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta.regular.image": {
+    "message": "Stáhnout obrázek pomocí DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.regular.link": {
+    "message": "Stáhnout odkaz pomocí DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.regular.media": {
+    "message": "Stáhnout média pomocí DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.regular.selection": {
+    "message": "Stáhnout vybrané pomocí DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta.turbo": {
+    "message": "OneClick!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta.turbo.image": {
+    "message": "Stáhnout obrázek pomocí OneClick!",
+    "description": "Menu text"
+  },
+  "dta.turbo.link": {
+    "message": "Stáhnout odkaz pomocí OneClick!",
+    "description": "Menu text"
+  },
+  "dta.turbo.media": {
+    "message": "Stáhnout média pomocí OneClick!",
+    "description": "Menu text"
+  },
+  "dta.turbo.selection": {
+    "message": "Stáhnout vybrané pomocí OneClick!",
+    "description": "Menu text"
+  },
+  "error.invalidMask": {
+    "message": "Neplatná maska přejmenování",
+    "description": "Error message; single/select window"
+  },
+  "error.invalidReferrer": {
+    "message": "Neplatná hlavička Referrer",
+    "description": "Error message; single window"
+  },
+  "error.invalidURL": {
+    "message": "Neplatná URL adresa",
+    "description": "Error message; single window"
+  },
+  "error.noItemsSelected": {
+    "message": "Nic není vybráno",
+    "description": "Error Message; select window"
+  },
+  "extensionDescription": {
+    "message": "Správce stahování pro Váš prohlížeč",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfilter.placeholder": {
+    "message": "Zástupný výraz nebo regulární výraz",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "fastfiltering": {
+    "message": "Rychlé filtrování",
+    "description": "Label for Fast Filtering input"
+  },
+  "FILE_FAILED": {
+    "message": "Chyba přístupu k soubory",
+    "description": "Error Message"
+  },
+  "filter-at-least-one": {
+    "message": "Musíte vybrat alespoň jeden typ filtru!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter-create.title": {
+    "message": "Vytvořit nový filtr",
+    "description": "Message box title"
+  },
+  "filter-expression": {
+    "message": "Filtr - výraz",
+    "description": "Message box label"
+  },
+  "filter-label": {
+    "message": "Filtr - popisek",
+    "description": "Message box label"
+  },
+  "filter-type-link": {
+    "message": "Filtr odkazů",
+    "description": "Message box checkbox label"
+  },
+  "filter-type-media": {
+    "message": "Filtr médií",
+    "description": "Message box checkbox label"
+  },
+  "filter-types": {
+    "message": "Filtr - typy",
+    "description": "Message box label"
+  },
+  "finishing": {
+    "message": "Dokončuje se",
+    "description": "Status text"
+  },
+  "force-start": {
+    "message": "Vynutit spuštění",
+    "description": "Menu text"
+  },
+  "information.title": {
+    "message": "Informace",
+    "description": "Used in message boxes"
+  },
+  "invalid-domain-pref": {
+    "message": "Neplatná doména",
+    "description": "Error message in prefs/network"
+  },
+  "invert-selection": {
+    "message": "Obrátit výběr",
+    "description": "Menu text"
+  },
+  "key-alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key-ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key-delete": {
+    "message": "Del",
+    "description": "Short for Delete-key"
+  },
+  "key-end": {
+    "message": "End",
+    "description": "Short for End-key"
+  },
+  "key-home": {
+    "message": "Home",
+    "description": "Short for home key"
+  },
+  "key-pagedown": {
+    "message": "Page down",
+    "description": "Short for pagedown-key"
+  },
+  "key-pageup": {
+    "message": "Page up",
+    "description": "Short for PageUp-key"
+  },
+  "limited-to": {
+    "message": "Omezeno na",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "Odkazy",
+    "description": "Links tab label (short); select window"
+  },
+  "manager-status-items": {
+    "message": "Dokončeno $COMPLETE$ z $TOTAL$ stahování ($SHOWING$ zobrazeno), $RUNNING$ probíhá",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager.short": {
+    "message": "Manažer",
+    "description": "Menu text"
+  },
+  "manager.title": {
+    "message": "DownThemAll! Manažer",
+    "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "Maska přejmenování",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask.default": {
+    "message": "Výchozí maska přejmenování",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "Média",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Chybějící",
+    "description": "Status text in manager"
+  },
+  "move-bottom": {
+    "message": "Na konec",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move-down": {
+    "message": "Dolů",
+    "description": "Action for moving a download down"
+  },
+  "move-top": {
+    "message": "Na začátek",
+    "description": "Action for moving a download to the top"
+  },
+  "move-up": {
+    "message": "Nahoru",
+    "description": "Action for moving a download up"
+  },
+  "nagging-message": {
+    "message": "Již bylo stáhnuto $DOWNLOADS$ souborů pomocí DownThemAll! Jako častý uživatel byste mohl/a podpořit další vývoj darem. Děkujeme!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "Chyba sítě",
+    "description": "Error Message"
+  },
+  "never-ask-again": {
+    "message": "Znovu se neptat",
+    "description": "Donation button"
+  },
+  "no-links": {
+    "message": "Nenalezeny žádné odkazy!",
+    "description": "Notification text"
+  },
+  "noitems.label": {
+    "message": "Nic není vybráno",
+    "description": "Status bar text in select"
+  },
+  "numitems.label": {
+    "message": "vybráno $ITEMS$ souborů…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "OK",
+    "description": "Button text; Used in message boxes"
+  },
+  "open-directory": {
+    "message": "Otevřít složku",
+    "description": "Menu text; manager context"
+  },
+  "open-file": {
+    "message": "Otevřít soubor",
+    "description": "Menu text; manager context"
+  },
+  "open-link": {
+    "message": "Otevřít odkaz",
+    "description": "Menu text; select window"
+  },
+  "options-filters": {
+    "message": "Filtry",
+    "description": "Pref tab text"
+  },
+  "options-general": {
+    "message": "Obecné",
+    "description": "Pref tab text"
+  },
+  "options-network": {
+    "message": "Síť",
+    "description": "Pref tab text"
+  },
+  "pause-download": {
+    "message": "Pozastavit",
+    "description": "Action for pausing a download"
+  },
+  "paused": {
+    "message": "Pozastaveno",
+    "description": "Status text; manager"
+  },
+  "pref-add-paused": {
+    "message": "Přidávat nová stahování pozastavená",
+    "description": "Preferences/General"
+  },
+  "pref-concurrent-downloads": {
+    "message": "Souběžná stahování",
+    "description": "Preferences/Network"
+  },
+  "pref-finish-notification": {
+    "message": "Zobrazit oznámení po dokončení fronty stahování",
+    "description": "Preferences/General"
+  },
+  "pref-global-turbo": {
+    "message": "Tlačítho na liště je OneClick!",
+    "description": "Preferences/General"
+  },
+  "pref-hide-context": {
+    "message": "Nezobrazovat v kontextové nabídce",
+    "description": "Preferences/General"
+  },
+  "pref-manager-tooltip": {
+    "message": "Zobrazovat popisky v záložkách Manažeru",
+    "description": "Preferences/General"
+  },
+  "pref-open-manager-on-queue": {
+    "message": "Otevřít záložku Manažeru po zařazení stahování do fronty",
+    "description": "Preferences/General"
+  },
+  "pref-queue-notification": {
+    "message": "Zobrazit oznámení po zařazení stahování do fronty",
+    "description": "Preferences/General"
+  },
+  "pref-remove-missing-on-init": {
+    "message": "Odebrat chybějící stahování po restartu",
+    "description": "Preferences/General"
+  },
+  "pref-show-urls": {
+    "message": "Zobrazit URL adresy místo názvů souborů",
+    "description": "Preferences/General"
+  },
+  "pref-text-links": {
+    "message": "Vyhledat odkazy v textu stránky (pomalejší)",
+    "description": "Preferences/General"
+  },
+  "pref.manager": {
+    "message": "Manažer",
+    "description": "Preferences/General; group text"
+  },
+  "pref.netglobal": {
+    "message": "Obecné omezení sítě",
+    "description": "Preferences/General; group text"
+  },
+  "pref.queueing": {
+    "message": "Přidávání stahování",
+    "description": "Preferences/General; group text"
+  },
+  "pref.ui": {
+    "message": "Uživatelské rozhraní",
+    "description": "Preferences/General; group text"
+  },
+  "prefs.conflicts": {
+    "message": "Když soubor existuje",
+    "description": "Preferences/General; group text"
+  },
+  "prefs.short": {
+    "message": "Nastavení",
+    "description": "Menu text; Preferences"
+  },
+  "prefs.title": {
+    "message": "Nastavení DownThemAll!",
+    "description": "Window/tab title; Preferences"
+  },
+  "queue-finished": {
+    "message": "Fronta stahování byla dokončena",
+    "description": "Notification text"
+  },
+  "queued": {
+    "message": "Zařazeno",
+    "description": "Status text"
+  },
+  "queued-download": {
+    "message": "Jedno stahování bylo přidáno do fronty!",
+    "description": "Notification text; single download"
+  },
+  "queued-downloads": {
+    "message": "$COUNT$ stahování bylo přidáno do fronty!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "referrer": {
+    "message": "Odkazující stránka",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "Zapamatovat toto rozhodnutí",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove-all-complete-downloads": {
+    "message": "Odebrat všechna dokončená stahování",
+    "description": "Menu text"
+  },
+  "remove-all-downloads": {
+    "message": "Odebrat všechna stahování",
+    "description": "Menu text"
+  },
+  "remove-all-downloads.question": {
+    "message": "Chcete odebrat všechna stahování?",
+    "description": "Messagebox text"
+  },
+  "remove-batch-downloads": {
+    "message": "Odebrat dávkové stahování",
+    "description": "Menu text"
+  },
+  "remove-batch-downloads.question": {
+    "message": "Chcete odebrat všechna stahování ze stejné dávky jako právě vybrané?",
+    "description": "Messagebox text"
+  },
+  "remove-complete-downloads": {
+    "message": "Odebrat dokončená stahování",
+    "description": "Action for removing complete downloads"
+  },
+  "remove-complete-downloads.question": {
+    "message": "Chcete odebrat všechna dokončená stahování?",
+    "description": "Messagebox text"
+  },
+  "remove-complete-filter-downloads.question": {
+    "message": "Chcete odebrat všechna dokončená stahování odpovídající filtru '$FILTER$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove-complete-selection-downloads.question": {
+    "message": "Chcete odebrat všechna dokončená stahování z právě vybraných?",
+    "description": "Messagebox text"
+  },
+  "remove-domain-complete-downloads": {
+    "message": "Odebrat dokončená stahování z aktuální domény",
+    "description": "Menu text"
+  },
+  "remove-domain-complete-downloads.question": {
+    "message": "Chcete odebrat všechna dokončená stahování z domény '$DOMAIN$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove-domain-downloads": {
+    "message": "Odebrat stahování z této domény",
+    "description": "Menu text"
+  },
+  "remove-domain-downloads.question": {
+    "message": "Chcete odebrat všechna stahování z domény '$DOMAIN$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove-download": {
+    "message": "Odebrat stahování",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove-download.question": {
+    "message": "Chcete odebrat vybraná stahování?",
+    "description": "Messagebox text"
+  },
+  "remove-downloads": {
+    "message": "Odebrat stahování",
+    "description": "Menu text"
+  },
+  "remove-downloads.title": {
+    "message": "Chcete odebrat stahování?",
+    "description": "Messagebox title; manager"
+  },
+  "remove-failed-downloads": {
+    "message": "Odebrat neúspěšná stahování",
+    "description": "Menu text"
+  },
+  "remove-failed-downloads.question": {
+    "message": "Chcete odebrat všechna neúspěšná stahování?",
+    "description": "Messagebox text"
+  },
+  "remove-filter-downloads.question": {
+    "message": "Chcete odebrat všechna stahování odpovídající filtru '$FILTER$'?",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove-missing": {
+    "message": "Odebrat chybějící stahování",
+    "description": "Menu text"
+  },
+  "remove-missing-downloads.question": {
+    "message": "Chcete odebrat všechna chybějící stahování?",
+    "description": "Messagebox text"
+  },
+  "remove-paused-downloads": {
+    "message": "Odebrat pozastavená stahování",
+    "description": "Menu text"
+  },
+  "remove-paused-downloads.question": {
+    "message": "Chcete odebrat všechna pozastavená stahování?",
+    "description": "Messagebox text"
+  },
+  "remove-selected-complete-downloads": {
+    "message": "Odebrat dokončená stahování z vybraných",
+    "description": "Menu text"
+  },
+  "remove-selected-complete-downloads.question": {
+    "message": "Chcete odebrat všechna dokončená stahování z právě vybraných?",
+    "description": "Messagebox text"
+  },
+  "remove-selected-downloads": {
+    "message": "Odebrat vybraná stahování",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "Přejmenovat",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer-batch": {
+    "message": "Číslo dávky",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-d": {
+    "message": "Datum přidání - den",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-date": {
+    "message": "Datum přidání",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-domain": {
+    "message": "Doménové jméno (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-ext": {
+    "message": "Přípona souboru",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-hh": {
+    "message": "Datum přidání - hodina",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-host": {
+    "message": "Název hostitele",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-idx": {
+    "message": "Číslo souboru v dávce",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-info": {
+    "message": "Přidáním 'flat', například *flatsubdirs* se odstraní všechna lomítka a nebudou se vytvářet složky",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer-m": {
+    "message": "Datum přidání - měsíc",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-mm": {
+    "message": "Datum přidání - minuta",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-name": {
+    "message": "Název souboru",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-num": {
+    "message": "Alias pro *batch*",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-qstring": {
+    "message": "Řetězec dotazu",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-ref": {
+    "message": "Odkazující stránka",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refdomain": {
+    "message": "Doménové jméno odkazující stránky (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refext": {
+    "message": "Přípona souboru odkazující stránky",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refhost": {
+    "message": "Název hostitele odkazující stránky",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refname": {
+    "message": "Název souboru odkazující stránky",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refqstring": {
+    "message": "Řetězec dotazu odkazující stránky",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refsubdirs": {
+    "message": "Cesta odkazující stránky",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-refurl": {
+    "message": "URL adresa odkazující stránky (bez názvu protokolu)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-ss": {
+    "message": "Datum přidání - sekunda",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-subdirs": {
+    "message": "Cesta",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-tags": {
+    "message": "Štítky masky přejmenování",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-text": {
+    "message": "Popis",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-title": {
+    "message": "Název",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-url": {
+    "message": "URL adresa (bez názvu protokolu)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer-y": {
+    "message": "Datum přidání - rok",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "Maska přejmenování",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "Resetovat",
+    "description": "Button text; pref window"
+  },
+  "reset-confirmations": {
+    "message": "Resetovat zapamatovaná potvrzení",
+    "description": "Button text; pref/General"
+  },
+  "reset-confirmations.done": {
+    "message": "Všechna zapamatovaná potvrzení byla resetována!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset-layouts": {
+    "message": "Resetovat změny uživatelského rozhraní",
+    "description": "Button text; pref/General"
+  },
+  "reset-layouts.done": {
+    "message": "Všechny změny uživatelského rozhraní a rozložení byly resetovány! Je nutné znovu načíst okna / záložky.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume-download": {
+    "message": "Pokračovat",
+    "description": "Action for resuming a download"
+  },
+  "running": {
+    "message": "Probíhá",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Uložit",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Hledat…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select-all": {
+    "message": "Vybrat vše",
+    "description": "Menu text; e.g. select context"
+  },
+  "select-checked": {
+    "message": "Vybrat zaškrtnuté",
+    "description": "Menu text; select context"
+  },
+  "select-none": {
+    "message": "Zrušit výběr",
+    "description": "Menu text; select context"
+  },
+  "select.title": {
+    "message": "DownThemAll! - Vyberte soubory ke stažení",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "Nenalezeno",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Chyba serveru",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Zakázáné",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "Neoprávněné",
+    "description": "Error message"
+  },
+  "set-mask": {
+    "message": "Nastavit masku přejmenování",
+    "description": "Menu text; select window"
+  },
+  "single.batchexamples": {
+    "message": "Jsou podporována dávková stahování, například:",
+    "description": "Header text; single window"
+  },
+  "single.header": {
+    "message": "Zadejte URL adresu ke stažení a další možnosti",
+    "description": "Header text; single window"
+  },
+  "single.title": {
+    "message": "DownThemAll! - Přidat odkaz",
+    "description": "Title of single window"
+  },
+  "size-progress": {
+    "message": "$WRITTEN$ z $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size-unknown": {
+    "message": "Neznámá",
+    "description": "Status text; manager size column"
+  },
+  "sizeB": {
+    "message": "$S$ B",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$ GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$ KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$ MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$ PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes-huge": {
+    "message": "Obrovské (nad $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes-large": {
+    "message": "Velké ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes-medium": {
+    "message": "Středně velké ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes-small": {
+    "message": "Malé ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$ TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "speedB": {
+    "message": "$SPEED$ b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$ KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$ MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork-active.title": {
+    "message": "Nová stahování budou spuštěna",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork-inactive.title": {
+    "message": "Nová stahování nebudou spuštěna",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "title": {
+    "message": "Popisek",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle-selected-items": {
+    "message": "Přepnout zaškrtnutí vybraných",
+    "description": "Menu text; select"
+  },
+  "tooltip-date": {
+    "message": "Datum přidání:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip-eta": {
+    "message": "Zbývá:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip-from": {
+    "message": "Odkazující stránka:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip-size": {
+    "message": "Velikost:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip-speed-average": {
+    "message": "Průměrná rychlost:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip-speed-current": {
+    "message": "Aktuální rychlost:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck-selected-items": {
+    "message": "Odškrtnout vybrané",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Neomezeno",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Použít pouze jednou",
+    "description": "Label for Use-Once checkboxes"
+  }
+}
