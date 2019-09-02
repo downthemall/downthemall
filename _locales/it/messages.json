@@ -1,0 +1,780 @@
+{
+  "language": {
+    "message": "Italiano (IT)",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "it-IT",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "colConnections": {
+    "message": "Connessioni contemporanee",
+    "description": "Table column in prefs/network"
+  },
+  "add_download": {
+    "message": "Aggiungi Download",
+    "description": "Action for adding a download"
+  },
+  "add_new": {
+    "message": "Aggiungi nuovo",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "ask_again_later": {
+    "message": "Chiedimelo più tardi",
+    "description": "Button text"
+  },
+  "batch_items": {
+    "message": "Numero di elementi:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_preview": {
+    "message": "Anteprima:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_single": {
+    "message": "Download singolo",
+    "description": "Button text for batch confirmation"
+  },
+  "cancel": {
+    "message": "Annulla",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "Annullato",
+    "description": "Download status text"
+  },
+  "cancel_download": {
+    "message": "Annulla",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "cannot_be_empty": {
+    "message": "Questo campo non può essere vuoto",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change_later_reminder": {
+    "message": "Puoi cambiare la tua decisione nelle Impostazioni",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "colDomain": {
+    "message": "Dominio",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "ETA",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "Nome/URL",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "Progresso",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Segmenti",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Dimensione",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Velocità",
+    "description": "Table column in manager"
+  },
+  "conflict_overwrite": {
+    "message": "Sovrascrivi",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_prompt": {
+    "message": "Chiedi",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_rename": {
+    "message": "Rinomina",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "Errore interno del browser",
+    "description": "Error Message"
+  },
+  "create_filter": {
+    "message": "Crea Filtro",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom_filename": {
+    "message": "Nome personalizzato",
+    "description": "Label text; single window"
+  },
+  "deffilter_all": {
+    "message": "Tutti i file",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter_arch": {
+    "message": "Archivi (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter_aud": {
+    "message": "Audio (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter_bin": {
+    "message": "Software (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter_doc": {
+    "message": "Documenti (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter_img": {
+    "message": "Immagini (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter_imggif": {
+    "message": "Immagini GIF",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter_imgjpg": {
+    "message": "Immagini JPEG",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter_imgpng": {
+    "message": "Immagini PNG",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter_vid": {
+    "message": "Video (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "Elimina",
+    "description": "button text"
+  },
+  "description": {
+    "message": "Descrizione",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable_other_filters": {
+    "message": "Disabilita gli altri",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "Dona!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Completato",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "Download",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download_verb": {
+    "message": "Scarica",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta_regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "DownThemAll! - Tutte le schede",
+    "description": "Menu text"
+  },
+  "dta_regular_image": {
+    "message": "Salva immagine con DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_regular_link": {
+    "message": "Salva link con DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_regular_media": {
+    "message": "Salva media con DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_regular_selection": {
+    "message": "Salva selezione con DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_turbo": {
+    "message": "OneClick!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "OneClick! - Tutte le schede",
+    "description": "Menu text"
+  },
+  "dta_turbo_image": {
+    "message": "Salva immagine con OneClick!",
+    "description": "Menu text"
+  },
+  "dta_turbo_link": {
+    "message": "Salva link con OneClick!",
+    "description": "Menu text"
+  },
+  "dta_turbo_media": {
+    "message": "Salva media con OneClick!",
+    "description": "Menu text"
+  },
+  "dta_turbo_selection": {
+    "message": "Salva selezione con OneClick!",
+    "description": "Menu text"
+  },
+  "error_invalidURL": {
+    "message": "URL non valido",
+    "description": "Error message; single window"
+  },
+  "error_noItemsSelected": {
+    "message": "Nessun elemento selezionato",
+    "description": "Error Message; select window"
+  },
+  "filter_create_title": {
+    "message": "Crea nuovo filtro",
+    "description": "Message box title"
+  },
+  "finishing": {
+    "message": "In completamento",
+    "description": "Status text"
+  },
+  "force_start": {
+    "message": "Forza avvio",
+    "description": "Menu text"
+  },
+  "information_title": {
+    "message": "Informazione",
+    "description": "Used in message boxes"
+  },
+  "invalid_domain_pref": {
+    "message": "Dominio non valido",
+    "description": "Error message in prefs/network"
+  },
+  "invert_selection": {
+    "message": "Inverti selezione",
+    "description": "Menu text"
+  },
+  "key_alt": {
+    "message": "Atl",
+    "description": "Short for Alt-Key"
+  },
+  "key_ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key_delete": {
+    "message": "Canc",
+    "description": "Short for Delete-key"
+  },
+  "key_end": {
+    "message": "Fine",
+    "description": "Short for End-key"
+  },
+  "key_home": {
+    "message": "Inizio",
+    "description": "Short for home key"
+  },
+  "key_pagedown": {
+    "message": "PagGIU",
+    "description": "Short for pagedown-key"
+  },
+  "key_pageup": {
+    "message": "PagSU",
+    "description": "Short for PageUp-key"
+  },
+  "limited_to": {
+    "message": "Limitato a",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "Link",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "Manager",
+    "description": "Menu text"
+  },
+  "manager_status_items": {
+    "message": "Completati $COMPLETE$ di $TOTAL$ download ($SHOWING$ mostrati), $RUNNING$ in esecuzione",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_title": {
+    "message": "DownThemAll! Manager",
+    "description": "Window/tab title"
+  },
+  "media": {
+    "message": "Media",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Mancante",
+    "description": "Status text in manager"
+  },
+  "move_bottom": {
+    "message": "In basso",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move_down": {
+    "message": "Giù",
+    "description": "Action for moving a download down"
+  },
+  "move_top": {
+    "message": "In alto",
+    "description": "Action for moving a download to the top"
+  },
+  "move_up": {
+    "message": "Su",
+    "description": "Action for moving a download up"
+  },
+  "never_ask_again": {
+    "message": "Non chiedermelo di nuovo",
+    "description": "Donation button"
+  },
+  "noitems_label": {
+    "message": "Nessun elemento selezionato",
+    "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "Nessun link trovato!",
+    "description": "Notification text"
+  },
+  "ok": {
+    "message": "OK",
+    "description": "Button text; Used in message boxes"
+  },
+  "open_directory": {
+    "message": "Apri cartella",
+    "description": "Menu text; manager context"
+  },
+  "open_file": {
+    "message": "Apri file",
+    "description": "Menu text; manager context"
+  },
+  "open_link": {
+    "message": "Apri link",
+    "description": "Menu text; select window"
+  },
+  "options_filters": {
+    "message": "Filtri",
+    "description": "Pref tab text"
+  },
+  "options_network": {
+    "message": "Rete",
+    "description": "Pref tab text"
+  },
+  "pause_download": {
+    "message": "Metti in pausa",
+    "description": "Action for pausing a download"
+  },
+  "pref_concurrent_downloads": {
+    "message": "Download contemporanei",
+    "description": "Preferences/Network"
+  },
+  "queued": {
+    "message": "In coda",
+    "description": "Status text"
+  },
+  "queued_download": {
+    "message": "1 download è stato messo in coda!",
+    "description": "Notification text; single download"
+  },
+  "queued_downloads": {
+    "message": "$COUNT$ download sono stati messi in coda!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "queue_finished": {
+    "message": "La coda di download è terminata",
+    "description": "Notification text"
+  },
+  "remove_all_downloads": {
+    "message": "Rimuovi tutto",
+    "description": "Menu text"
+  },
+  "remove_all_downloads_question": {
+    "message": "Vuoi rimuovere TUTTI i download?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads": {
+    "message": "Rimuovi download completati",
+    "description": "Action for removing complete downloads"
+  },
+  "remove_domain_downloads_question": {
+    "message": "Vuoi rimuovere tutti i download dal dominio '$DOMAIN$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "message": "Rimuovi download",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove_downloads": {
+    "message": "Rimuovi download",
+    "description": "Menu text"
+  },
+  "remove_downloads_title": {
+    "message": "Sei sicuro di voler rimuovere i download?",
+    "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "Vuoi rimuovere i download selezionati?",
+    "description": "Messagebox text"
+  },
+  "remove_failed_downloads": {
+    "message": "Rimuovi falliti",
+    "description": "Menu text"
+  },
+  "remove_failed_downloads_question": {
+    "message": "Vuoi rimuovere tutti i download falliti?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_downloads": {
+    "message": "Rimuovi selezionati",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "Rinomina",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer_d": {
+    "message": "Data aggiunta - Giorno",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_date": {
+    "message": "Data aggiunta",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_domain": {
+    "message": "Dominio (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_hh": {
+    "message": "Data aggiunta - Ora",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_host": {
+    "message": "Hostname",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_m": {
+    "message": "Data aggiunta - Mese",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_mm": {
+    "message": "Data aggiunta - Minute",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_name": {
+    "message": "Nome file",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ss": {
+    "message": "Data aggiunta - Seconda",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_subdirs": {
+    "message": "Percorso",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_url": {
+    "message": "URL (senza protocollo)",
+    "description": "Mask text; see mask button"
+  },
+  "reset": {
+    "message": "Ripristina",
+    "description": "Button text; pref window"
+  },
+  "resume_download": {
+    "message": "Ripristina",
+    "description": "Action for resuming a download"
+  },
+  "running": {
+    "message": "In esecuzione",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Salva",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Cerca…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select_all": {
+    "message": "Seleziona tutto",
+    "description": "Menu text; e.g. select context"
+  },
+  "select_none": {
+    "message": "Seleziona nessuno",
+    "description": "Menu text; select context"
+  },
+  "select_title": {
+    "message": "DownThemAll! - Seleziona i tuoi download",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "Non trovato",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Errore del server",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Negato",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "Non autorizzato",
+    "description": "Error message"
+  },
+  "single_header": {
+    "message": "Inserisci un URL di download (link) e altre opzioni",
+    "description": "Header text; single window"
+  },
+  "single_title": {
+    "message": "DownThemAll! - Aggiungi un link",
+    "description": "Title of single window"
+  },
+  "sizeB": {
+    "message": "$S$B",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes_huge": {
+    "message": "Gigante (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "message": "Grande ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "message": "Medio ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "message": "Piccolo ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ of $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "Sconosciuto",
+    "description": "Status text; manager size column"
+  },
+  "speedB": {
+    "message": "$SPEED$b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "message": "I nuovi download verranno avviato",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork_inactive_title": {
+    "message": "I nuovi download non verranno avviati",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "title": {
+    "message": "Titolo",
+    "description": "Column text; Title label (short)"
+  },
+  "tooltip_date": {
+    "message": "Data aggiunta:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_eta": {
+    "message": "Rimanente:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip_from": {
+    "message": "Da:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip_size": {
+    "message": "Dimensione:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_average": {
+    "message": "Media:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_current": {
+    "message": "Attuale:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck_selected_items": {
+    "message": "Annulla selezione",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Illimitato",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Usa una volta",
+    "description": "Label for Use-Once checkboxes"
+  }
+}
