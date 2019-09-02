@@ -7,9 +7,71 @@
     "message": "it-IT",
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
-  "colConnections": {
-    "message": "Connessioni contemporanee",
-    "description": "Table column in prefs/network"
+  "check_selected_items": {
+    "message": "Contrassegna elementi selezionati",
+    "description": "Menu text"
+  },
+  "NETWORK_FAILED": {
+    "message": "Errore di rete",
+    "description": "Error Message"
+  },
+  "numitems_label": {
+    "message": "$ITEMS$ elementi selezionati…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "options_general": {
+    "message": "Generale",
+    "description": "Pref tab text"
+  },
+  "paused": {
+    "message": "In pausa",
+    "description": "Status text; manager"
+  },
+  "prefs_conflicts": {
+    "message": "Quando un file esiste",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "Impostazioni",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "Impostazioni di DownThemAll!",
+    "description": "Window/tab title; Preferences"
+  },
+  "pref_manager": {
+    "message": "Manager",
+    "description": "Preferences/General; group text"
+  },
+  "pref_ui": {
+    "message": "Interfaccia utente",
+    "description": "Preferences/General; group text"
+  },
+  "remember": {
+    "message": "Ricorda questa decisione",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove_all_complete_downloads": {
+    "message": "Rimuovi completati",
+    "description": "Menu text"
+  },
+  "renamer_text": {
+    "message": "Descrizione",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "Titolo",
+    "description": "Mask text; see mask button"
+  },
+  "select_checked": {
+    "message": "Contrassegna elemento",
+    "description": "Menu text; select context"
   },
   "add_download": {
     "message": "Aggiungi Download",
@@ -54,6 +116,10 @@
   "change_later_reminder": {
     "message": "Puoi cambiare la tua decisione nelle Impostazioni",
     "description": "Checkbox label text for decision confirmations"
+  },
+  "colConnections": {
+    "message": "Connessioni contemporanee",
+    "description": "Table column in prefs/network"
   },
   "colDomain": {
     "message": "Dominio",
@@ -562,7 +628,7 @@
     "description": "Error message"
   },
   "single_header": {
-    "message": "Inserisci un URL di download (link) e altre opzioni",
+    "message": "Inserisci un indirizzo di download (link) e altre opzioni",
     "description": "Header text; single window"
   },
   "single_title": {
@@ -766,7 +832,7 @@
     "description": "Tooltip text; manager/downloads"
   },
   "uncheck_selected_items": {
-    "message": "Annulla selezione",
+    "message": "Non contrassegnare elementi selezionati",
     "description": "Menu text; select"
   },
   "unlimited": {
