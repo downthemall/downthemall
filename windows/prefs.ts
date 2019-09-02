@@ -621,7 +621,7 @@ addEventListener("DOMContentLoaded", () => {
         reader.readAsText(file);
       });
       saveCustomLocale(text);
-      if (confirm("Imported your file.\nWant to realod the extension now?")) {
+      if (confirm("Imported your file.\nWant to relaod the extension now?")) {
         runtime.reload();
       }
     }
