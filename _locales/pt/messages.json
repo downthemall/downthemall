@@ -20,7 +20,7 @@
 		"description": "Error message"
 	},
 	"SERVER_FORBIDDEN": {
-		"message": "Probido",
+		"message": "Proibido",
 		"description": "Error message"
 	},
 	"SERVER_UNAUTHORIZED": {
@@ -462,7 +462,7 @@
 		"description": "Action for moving a download up"
 	},
 	"nagging-message": {
-		"message": "Você ja adicionou $DOWNLOADS$ downloads com DownThemAll! Como usuário regular, você pode considerar uma doação para apoiar desenvolvimento adicional. Obrigado!",
+		"message": "Você já adicionou $DOWNLOADS$ downloads com DownThemAll! Como usuário regular, você pode considerar uma doação para apoiar desenvolvimento adicional. Obrigado!",
 		"description": "Donation nagging message; displayed as a notification bar in manager",
 		"placeholders": {
 			"downloads": {
@@ -498,7 +498,7 @@
 		"description": "Button text; Used in message boxes"
 	},
 	"open-directory": {
-		"message": "Abrir diretório",
+		"message": "Abrir pasta",
 		"description": "Menu text; manager context"
 	},
 	"open-file": {
@@ -554,11 +554,11 @@
 		"description": "Preferences/General"
 	},
 	"pref-open-manager-on-queue": {
-		"message": "Abrir a aba 'Gerenciador' após adicionar donwloads à fila",
+		"message": "Abrir a aba 'Gerenciador' após adicionar downloads à fila",
 		"description": "Preferences/General"
 	},
 	"pref-queue-notification": {
-		"message": "Exibir notificação ao  adicionar donwloads à fila",
+		"message": "Exibir notificação ao  adicionar downloads à fila",
 		"description": "Preferences/General"
 	},
 	"pref-remove-missing-on-init": {
@@ -636,7 +636,7 @@
 		"description": "Menu text"
 	},
 	"remove-all-downloads": {
-		"message": "Removert Tudo",
+		"message": "Remover Tudo",
 		"description": "Menu text"
 	},
 	"remove-all-downloads.question": {
@@ -692,7 +692,7 @@
 		"description": "Menu text"
 	},
 	"remove-domain-downloads.question": {
-		"message": "Deseja remover todos os downloads do domínio  '$DOMAIN$'?",
+		"message": "Deseja remover todos os downloads do domínio '$DOMAIN$'?",
 		"description": "Messagebox text",
 		"placeholders": {
 			"domain": {
@@ -800,7 +800,7 @@
 		"description": "Mask text; see mask button"
 	},
 	"renamer-info": {
-		"message": "Adiconar 'flat', como em *flatsubdirs* irá substituir todas as barras no valor, portanto não criará diretórios",
+		"message": "Adiconar 'flat', como em *flatsubdirs* irá substituir todas as barras no valor, portanto não criará pastas",
 		"description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
 	},
 	"renamer-m": {
@@ -892,7 +892,7 @@
 		"description": "Button text; pref window"
 	},
 	"reset-confirmations": {
-		"message": "Zerar comfirmações memorizadas",
+		"message": "Zerar confirmações memorizadas",
 		"description": "Button text; pref/General"
 	},
 	"reset-confirmations.done": {
