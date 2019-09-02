@@ -42,6 +42,11 @@ module.exports = {
     filename: "[name].js"
   },
   devtool: "source-map",
+  stats: {
+    hash: true,
+    timings: true,
+    maxModules: 2,
+  },
   watchOptions: {
     ignored: /node_modules|bundles/
   },

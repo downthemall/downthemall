@@ -17,7 +17,8 @@ import {
   // eslint-disable-next-line no-unused-vars
   Tab,
   // eslint-disable-next-line no-unused-vars
-  MenuClickInfo
+  MenuClickInfo,
+  windows
 } from "./browser";
 import { Bus } from "./bus";
 import { filterInSitu } from "./util";
@@ -389,7 +390,10 @@ locale.then(() => {
     }
 
     async enumulate(action: string) {
-      const tab = await tabs.query({active: true});
+      const tab = await tabs.query({
+        active: true,
+        windowId: windows.WINDOW_ID_CURRENT
+      });
       if (!tab || !tab.length) {
         return;
       }

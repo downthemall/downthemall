@@ -1,13 +1,15 @@
 {
   "manifest_version": 2,
   "name": "DownThemAll!",
-  "version": "4.0.4",
+  "version": "4.0.5",
 
   "description": "__MSG_extensionDescription__",
   "homepage_url": "https://downthemall.org/",
   "author": "Nils Maier",
 
   "default_locale": "en",
+
+  "content_security_policy": "script-src 'self'; style-src 'self' 'unsafe-inline'; default-src 'self'",
 
   "icons": {
     "16": "style/icon16.png",

@@ -49,7 +49,7 @@ p.example {
 }
 
 #options > * {
-  margin: 0;
+  margin: 2px;
 }
 
 #options > input {

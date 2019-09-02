@@ -12,13 +12,20 @@ const DEFAULTS = {
   message: "message",
 };
 
+const TIMEOUT = 4000;
+
+let gid = 1;
+
 export class Notification extends EventEmitter {
   private notification: any;
+
+  private readonly generated: boolean;
 
   constructor(id: string | null, options = {}) {
     super();
 
-    id = id || "DownThemAll-notification";
+    this.generated = !id;
+    id = id || `DownThemAll-notification${++gid}`;
     if (typeof options === "string") {
       options = {message: options};
     }
@@ -39,11 +46,16 @@ export class Notification extends EventEmitter {
   opened(notification: any) {
     this.notification = notification;
     this.emit("opened", this);
+    if (this.generated) {
+      setTimeout(() => {
+        notifications.clear(notification);
+      }, TIMEOUT);
+    }
   }
 
   clicked(notification: any, button?: number) {
     // We can only be clicked, when we were opened, at which point the
-    // notification id is availablfalse
+    // notification id is available
     if (notification !== this.notification) {
       return;
     }
@@ -52,6 +64,7 @@ export class Notification extends EventEmitter {
       return;
     }
     this.emit("clicked", this);
+    console.log("clicked", notification);
   }
 
   async closed(notification: any) {
