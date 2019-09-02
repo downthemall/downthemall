@@ -557,7 +557,7 @@ addEventListener("DOMContentLoaded", () => {
   new BoolPref("pref-text-links", "text-links");
   new BoolPref("pref-add-paused", "add-paused");
   new BoolPref("pref-show-urls", "show-urls");
-  new BoolPref("pref-remove-missing-on-init", "show-urls");
+  new BoolPref("pref-remove-missing-on-init", "remove-missing-on-init");
   new OptionPref("pref-conflict-action", "conflict-action");
 
   $("#reset-confirmations").addEventListener("click", async () => {
