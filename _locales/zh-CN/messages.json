@@ -1024,7 +1024,7 @@
     }
   },
   "sizes-huge": {
-    "message": "超大（$LOW$ - $HIGH$）",
+    "message": "超大（> $HIGH$）",
     "description": "Menu text; manager size column dropdown",
     "placeholders": {
       "high": {
