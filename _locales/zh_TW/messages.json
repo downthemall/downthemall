@@ -395,7 +395,7 @@
   },
   "deffilter_imgjpg": {
     "description": "Filter label for the JPEG filter",
-    "message": "JPEG Images"
+    "message": "JPEG 圖片"
   },
   "deffilter_imgpng": {
     "description": "Filter label for the PNG filter",
