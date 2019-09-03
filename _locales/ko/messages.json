@@ -1,0 +1,1170 @@
+{
+  "language": {
+    "message": "한국어",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "ko",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "addpaused": {
+    "message": "일시중지로 추가",
+    "description": "Action: Add paused"
+  },
+  "add_download": {
+    "message": "다운로드 추가",
+    "description": "Action for adding a download"
+  },
+  "add_new": {
+    "message": "새로 추가",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add_paused_once": {
+    "message": "이번만 일시중지로 추가",
+    "description": "Checkbox label"
+  },
+  "add_paused_question": {
+    "message": "이 결정을 기억하고 지금부터 항상 새 다운로드를 일시중지로 추가할까요?",
+    "description": "Messagebox text"
+  },
+  "add_paused_title": {
+    "message": "항상 일시중지로 추가할까요?",
+    "description": "Title for the add-paused dialog"
+  },
+  "ask_again_later": {
+    "message": "나중에 다시 묻기",
+    "description": "Button text"
+  },
+  "batch_batch": {
+    "message": "일괄 다운로드",
+    "description": "Button text"
+  },
+  "batch_desc": {
+    "message": "현재 URL에 일괄 다운로드에 대한 지침이 포함되어 있는 것 같습니다.",
+    "description": ""
+  },
+  "batch_items": {
+    "message": "항목 수:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_preview": {
+    "message": "미리보기:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_question": {
+    "message": "이것을 일괄 또는 단일 다운로드로 추가할까요?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_single": {
+    "message": "단일 다운로드",
+    "description": "Button text for batch confirmation"
+  },
+  "batch_title": {
+    "message": "일괄 다운로드",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "취소",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "취소됨",
+    "description": "Download status text"
+  },
+  "cancel_download": {
+    "message": "취소",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "cannot_be_empty": {
+    "message": "이 필드는 비워 둘 수 없습니다.",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change_later_reminder": {
+    "message": "나중에 설정에서 이 결정을 변경할 수 있습니다",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check_selected_items": {
+    "message": "선택항목 체크",
+    "description": "Menu text"
+  },
+  "colConnections": {
+    "message": "동시 연결",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "도메인",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "예상시간",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "이름/URL",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "진행률",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "세그먼트",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "크기",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "속도",
+    "description": "Table column in manager"
+  },
+  "conflict_overwrite": {
+    "message": "덮어쓰기",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_prompt": {
+    "message": "묻기",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_rename": {
+    "message": "이름 바꾸기",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "내부 브라우저 오류",
+    "description": "Error Message"
+  },
+  "create_filter": {
+    "message": "필터 만들기",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom_filename": {
+    "message": "사용자 파일이름",
+    "description": "Label text; single window"
+  },
+  "deffilter_all": {
+    "message": "모든 파일",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter_arch": {
+    "message": "압축 (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter_aud": {
+    "message": "오디오 (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter_bin": {
+    "message": "소프트웨어 (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter_doc": {
+    "message": "문서 (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter_img": {
+    "message": "이미지 (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter_imggif": {
+    "message": "GIF 이미지",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter_imgjpg": {
+    "message": "JPEG 이미지",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter_imgpng": {
+    "message": "PNG 이미지",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter_vid": {
+    "message": "동영상 (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "삭제",
+    "description": "button text"
+  },
+  "description": {
+    "message": "설명",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable_other_filters": {
+    "message": "다른것 사용안함",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "기부!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "완료",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "다운로드",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download_verb": {
+    "message": "다운로드",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta_regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "DownThemAll! - 모든 탭",
+    "description": "Menu text"
+  },
+  "dta_regular_image": {
+    "message": "이미지를 DownThemAll!로 저장",
+    "description": "Menu text"
+  },
+  "dta_regular_link": {
+    "message": "링크를 DownThemAll!로 저장",
+    "description": "Menu text"
+  },
+  "dta_regular_media": {
+    "message": "미디어를 DownThemAll!로 저장",
+    "description": "Menu text"
+  },
+  "dta_regular_selection": {
+    "message": "선택영역을 DownThemAll!로 저장",
+    "description": "Menu text"
+  },
+  "dta_turbo": {
+    "message": "OneClick!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "OneClick! - 모든 탭",
+    "description": "Menu text"
+  },
+  "dta_turbo_image": {
+    "message": "이미지를 OneClick!으로 저장",
+    "description": "Menu text"
+  },
+  "dta_turbo_link": {
+    "message": "링크를 OneClick!으로 저장",
+    "description": "Menu text"
+  },
+  "dta_turbo_media": {
+    "message": "미디어를 OneClick!으로 저장",
+    "description": "Menu text"
+  },
+  "dta_turbo_selection": {
+    "message": "선택영역을 OneClick!으로 저장",
+    "description": "Menu text"
+  },
+  "error_invalidMask": {
+    "message": "잘못된 이름 바꾸기 마스크",
+    "description": "Error message; single/select window"
+  },
+  "error_invalidReferrer": {
+    "message": "잘못된 참조 페이지",
+    "description": "Error message; single window"
+  },
+  "error_invalidURL": {
+    "message": "잘못된 URL",
+    "description": "Error message; single window"
+  },
+  "error_noItemsSelected": {
+    "message": "선택된 항목 없음",
+    "description": "Error Message; select window"
+  },
+  "extensionDescription": {
+    "message": "브라우저용 대량 다운로더",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "빠른 필터링",
+    "description": "Label for Fast Filtering input"
+  },
+  "fastfilter_placeholder": {
+    "message": "와일드카드 표현식 또는 정규 표현식",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "파일 접근 오류",
+    "description": "Error Message"
+  },
+  "filter_at_least_one": {
+    "message": "하나 이상의 필터 유형을 선택해야 합니다!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter_create_title": {
+    "message": "새 필터 만들기",
+    "description": "Message box title"
+  },
+  "filter_expression": {
+    "message": "필터-표현식",
+    "description": "Message box label"
+  },
+  "filter_label": {
+    "message": "필터-레이블",
+    "description": "Message box label"
+  },
+  "filter_types": {
+    "message": "필터-형식",
+    "description": "Message box label"
+  },
+  "filter_type_link": {
+    "message": "링크 필터",
+    "description": "Message box checkbox label"
+  },
+  "filter_type_media": {
+    "message": "미디어 필터",
+    "description": "Message box checkbox label"
+  },
+  "finishing": {
+    "message": "완료 중",
+    "description": "Status text"
+  },
+  "force_start": {
+    "message": "강제 시작",
+    "description": "Menu text"
+  },
+  "information_title": {
+    "message": "정보",
+    "description": "Used in message boxes"
+  },
+  "invalid_domain_pref": {
+    "message": "잘못된 도메인",
+    "description": "Error message in prefs/network"
+  },
+  "invert_selection": {
+    "message": "선택 반전",
+    "description": "Menu text"
+  },
+  "key_alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key_ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key_delete": {
+    "message": "Del",
+    "description": "Short for Delete-key"
+  },
+  "key_end": {
+    "message": "End",
+    "description": "Short for End-key"
+  },
+  "key_home": {
+    "message": "Home",
+    "description": "Short for home key"
+  },
+  "key_pagedown": {
+    "message": "PageDown",
+    "description": "Short for pagedown-key"
+  },
+  "key_pageup": {
+    "message": "PageUp",
+    "description": "Short for PageUp-key"
+  },
+  "limited_to": {
+    "message": "제한 갯수:",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "링크",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "관리자",
+    "description": "Menu text"
+  },
+  "manager_status_items": {
+    "message": "$COMPLETE$ / $TOTAL$ 완료됨 ($SHOWING$ 표시됨), $RUNNING$ 실행중",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_title": {
+    "message": "DownThemAll! 관리자",
+    "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "마스크",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask_default": {
+    "message": "기본 마스크",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "미디어",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "누락됨",
+    "description": "Status text in manager"
+  },
+  "move_bottom": {
+    "message": "맨 아래로",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move_down": {
+    "message": "아래로",
+    "description": "Action for moving a download down"
+  },
+  "move_top": {
+    "message": "맨 위로",
+    "description": "Action for moving a download to the top"
+  },
+  "move_up": {
+    "message": "위로",
+    "description": "Action for moving a download up"
+  },
+  "nagging_message": {
+    "message": "지금까지 DownThemAll!로 $DOWNLOADS$ 다운로드를 추가하셨습니다. 일반 사용자로서 추가 개발을 지원하기 위해 기부를 고려할 수 있습니다. 감사합니다!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "네트워크 실패",
+    "description": "Error Message"
+  },
+  "never_ask_again": {
+    "message": "다시 묻지 않기",
+    "description": "Donation button"
+  },
+  "noitems_label": {
+    "message": "선택된 항목 없음",
+    "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "링크 찾지 못함!",
+    "description": "Notification text"
+  },
+  "numitems_label": {
+    "message": "$ITEMS$ 항목 선택됨…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "확인",
+    "description": "Button text; Used in message boxes"
+  },
+  "open_directory": {
+    "message": "디렉토리 열기",
+    "description": "Menu text; manager context"
+  },
+  "open_file": {
+    "message": "파일 열기",
+    "description": "Menu text; manager context"
+  },
+  "open_link": {
+    "message": "링크 열기",
+    "description": "Menu text; select window"
+  },
+  "options_filters": {
+    "message": "필터",
+    "description": "Pref tab text"
+  },
+  "options_general": {
+    "message": "일반",
+    "description": "Pref tab text"
+  },
+  "options_network": {
+    "message": "네트워크",
+    "description": "Pref tab text"
+  },
+  "paused": {
+    "message": "일시중지됨",
+    "description": "Status text; manager"
+  },
+  "pause_download": {
+    "message": "일시중지",
+    "description": "Action for pausing a download"
+  },
+  "prefs_conflicts": {
+    "message": "파일이 이미 존재할때",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "설정",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "DownThemAll! 설정",
+    "description": "Window/tab title; Preferences"
+  },
+  "pref_add_paused": {
+    "message": "새 다운로드를 즉시 시작하는 대신 일시중지로 추가",
+    "description": "Preferences/General"
+  },
+  "pref_concurrent_downloads": {
+    "message": "동시 다운로드",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "다운로드 대기열이 끝나면 알림 표시",
+    "description": "Preferences/General"
+  },
+  "pref_global_turbo": {
+    "message": "브라우저 버튼을 OneClick!으로 작동",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "일반 컨텍스트 메뉴 항목 표시 안 함",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "관리자",
+    "description": "Preferences/General; group text"
+  },
+  "pref_manager_tooltip": {
+    "message": "관리자 탭에서 툴팁 표시",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "전역 네트워크 제한",
+    "description": "Preferences/General; group text"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "다운로드를 대기열에 넣은 후 관리자 탭 열기",
+    "description": "Preferences/General"
+  },
+  "pref_queueing": {
+    "message": "대기열 다운로드",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queue_notification": {
+    "message": "새 다운로드를 대기열에 넣을 때 알림 표시",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "다시 시작한 후 누락된 다운로드 제거",
+    "description": "Preferences/General"
+  },
+  "pref_show_urls": {
+    "message": "이름 대신 URL 표시",
+    "description": "Preferences/General"
+  },
+  "pref_text_links": {
+    "message": "웹 사이트 텍스트에서 링크를 찾도록 시도 (느림)",
+    "description": "Preferences/General"
+  },
+  "pref_ui": {
+    "message": "사용자 인터페이스",
+    "description": "Preferences/General; group text"
+  },
+  "queued": {
+    "message": "대기",
+    "description": "Status text"
+  },
+  "queued_download": {
+    "message": "다운로드 대기열에 1개 넣었습니다!",
+    "description": "Notification text; single download"
+  },
+  "queued_downloads": {
+    "message": "다운로드 대기열에 $COUNT$개 넣었습니다!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "queue_finished": {
+    "message": "다운로드 대기열이 끝났습니다",
+    "description": "Notification text"
+  },
+  "referrer": {
+    "message": "참조 페이지",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "이 결정 기억",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove_all_complete_downloads": {
+    "message": "모든 완료 항목 제거",
+    "description": "Menu text"
+  },
+  "remove_all_downloads": {
+    "message": "모든 항목 제거",
+    "description": "Menu text"
+  },
+  "remove_all_downloads_question": {
+    "message": "모든 다운로드를 제거할까요?",
+    "description": "Messagebox text"
+  },
+  "remove_batch_downloads": {
+    "message": "현재 일괄 항목 제거",
+    "description": "Menu text"
+  },
+  "remove_batch_downloads_question": {
+    "message": "현재 선택한 다운로드와 동일한 일괄 처리의 모든 다운로드를 제거할까요?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads": {
+    "message": "완료된 다운로드 제거",
+    "description": "Action for removing complete downloads"
+  },
+  "remove_complete_downloads_question": {
+    "message": "모든 완료된 다운로드를 제거할까요?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_filter_downloads_question": {
+    "message": "'$FILTER$' 필터와 일치하는 모든 완료된 다운로드를 제거할까요?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "message": "현재 선택 항목에서 모든 완료된 다운로드를 제거할까요?",
+    "description": "Messagebox text"
+  },
+  "remove_domain_complete_downloads": {
+    "message": "현재 도메인의 완료 항목 제거",
+    "description": "Menu text"
+  },
+  "remove_domain_complete_downloads_question": {
+    "message": "'$DOMAIN$' 도메인의 모든 완료된 다운로드를 제거할까요?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "message": "현재 도메인 항목 제거",
+    "description": "Menu text"
+  },
+  "remove_domain_downloads_question": {
+    "message": "'$DOMAIN$' 도메인의 모든 다운로드를 제거할까요?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "message": "다운로드 제거",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove_downloads": {
+    "message": "다운로드 제거",
+    "description": "Menu text"
+  },
+  "remove_downloads_title": {
+    "message": "정말 다운로드를 제거하시겠습니까?",
+    "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "선택한 다운로드를 제거할까요?",
+    "description": "Messagebox text"
+  },
+  "remove_failed_downloads": {
+    "message": "실패한 항목 제거",
+    "description": "Menu text"
+  },
+  "remove_failed_downloads_question": {
+    "message": "실패한 모든 다운로드를 제거할까요?",
+    "description": "Messagebox text"
+  },
+  "remove_filter_downloads_question": {
+    "message": "'$FILTER$' 필터와 일치하는 모든 다운로드를 제거할까요?",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "message": "누락된 다운로드 지우기",
+    "description": "Menu text"
+  },
+  "remove_missing_downloads_question": {
+    "message": "누락된 모든 다운로드를 지울까요?",
+    "description": "Messagebox text"
+  },
+  "remove_paused_downloads": {
+    "message": "일시중지된 항목 제거",
+    "description": "Menu text"
+  },
+  "remove_paused_downloads_question": {
+    "message": "일시중지된 모든 항목을 제거할까요?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_complete_downloads": {
+    "message": "선택 항목 중 완료된 항목 제거",
+    "description": "Menu text"
+  },
+  "remove_selected_complete_downloads_question": {
+    "message": "현재 선택 항목 중 모든 완료된 다운로드를 제거할까요?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_downloads": {
+    "message": "선택한 항목 제거",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "이름 바꾸기",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer_batch": {
+    "message": "일괄 번호",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_d": {
+    "message": "추가된 날짜 - 일",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_date": {
+    "message": "추가된 날짜",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_domain": {
+    "message": "도메인 이름 (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ext": {
+    "message": "파일 확장자",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_hh": {
+    "message": "추가된 날짜 - 시",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_host": {
+    "message": "호스트 이름",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_idx": {
+    "message": "일괄 항목 번호",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_info": {
+    "message": "flatsubdirs처럼 'flat'을 추가하면 값의 모든 슬래쉬를 대체하므로 디렉토리를 만들지 않습니다",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer_m": {
+    "message": "추가된 날짜 - 월",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_mm": {
+    "message": "추가된 날짜 - 분",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_name": {
+    "message": "파일 이름",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_num": {
+    "message": "batch의 별칭",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_qstring": {
+    "message": "질의어",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ref": {
+    "message": "참조 페이지",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refdomain": {
+    "message": "참조 페이지 도메인 이름 (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refext": {
+    "message": "참조 페이지 파일 확장자",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refhost": {
+    "message": "참조 페이지 호스트 이름",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refname": {
+    "message": "참조 페이지 파일 이름",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refqstring": {
+    "message": "참조 페이지 질의어",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refsubdirs": {
+    "message": "참조 페이지 경로",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refurl": {
+    "message": "참조 페이지 URL (프로토콜 없음)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ss": {
+    "message": "추가된 날짜 - 초",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_subdirs": {
+    "message": "경로",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_tags": {
+    "message": "이름 바꾸기 마스크 태그",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_text": {
+    "message": "설명 텍스트",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "제목 텍스트",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_url": {
+    "message": "URL (프로토콜 없음)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_y": {
+    "message": "추가된 날짜 - 년",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "이름 바꾸기 마스크",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "초기화",
+    "description": "Button text; pref window"
+  },
+  "reset_confirmations": {
+    "message": "기억된 결정 초기화",
+    "description": "Button text; pref/General"
+  },
+  "reset_confirmations_done": {
+    "message": "이전에 기억된 확인이 모두 초기화되었습니다!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset_layouts": {
+    "message": "사용자 인터페이스 사용자 지정 초기화",
+    "description": "Button text; pref/General"
+  },
+  "reset_layouts_done": {
+    "message": "이전에 기억된 레이아웃 사용자 지정이 모두 초기화되었습니다! 창/탭을 다시 로드해야 할 수도 있습니다.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume_download": {
+    "message": "계속",
+    "description": "Action for resuming a download"
+  },
+  "running": {
+    "message": "실행중",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "저장",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "검색…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select_all": {
+    "message": "모두 선택",
+    "description": "Menu text; e.g. select context"
+  },
+  "select_checked": {
+    "message": "체크된 항목 선택",
+    "description": "Menu text; select context"
+  },
+  "select_none": {
+    "message": "모두 선택 해제",
+    "description": "Menu text; select context"
+  },
+  "select_title": {
+    "message": "DownThemAll! - 다운로드 선택",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "찾지 못함",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "서버 오류",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "금지됨",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "권한 없음",
+    "description": "Error message"
+  },
+  "set_mask": {
+    "message": "이름 바꾸기 마스크 설정",
+    "description": "Menu text; select window"
+  },
+  "single_batchexamples": {
+    "message": "일괄 처리가 지원됩니다, 예:",
+    "description": "Header text; single window"
+  },
+  "single_header": {
+    "message": "다운로드 URL (링크) 및 다른 옵션을 입력하세요",
+    "description": "Header text; single window"
+  },
+  "single_title": {
+    "message": "DownThemAll! - 링크 추가",
+    "description": "Title of single window"
+  },
+  "sizeB": {
+    "message": "$S$B",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes_huge": {
+    "message": "매우 큼 (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "message": "큼 ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "message": "중간 ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "message": "작음 ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ / $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "알 수 없음",
+    "description": "Status text; manager size column"
+  },
+  "speedB": {
+    "message": "$SPEED$b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "message": "새 다운로드가 시작됩니다",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork_inactive_title": {
+    "message": "새 다운로드가 시작되지 않습니다",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "title": {
+    "message": "제목",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle_selected_items": {
+    "message": "선택항목 체크 토글",
+    "description": "Menu text; select"
+  },
+  "tooltip_date": {
+    "message": "추가된 날짜:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_eta": {
+    "message": "이름 바꾸기:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip_from": {
+    "message": "원본:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip_size": {
+    "message": "크기:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_average": {
+    "message": "평균:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_current": {
+    "message": "현재:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck_selected_items": {
+    "message": "선택항목 체크해제",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "무제한",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "한번만",
+    "description": "Label for Use-Once checkboxes"
+  }
+}
