@@ -684,7 +684,7 @@
     "description": "Preferences/General"
   },
   "pref_hide_context": {
-    "message": "Nerodyti bendrųjų kontekstinio meniu elementų",
+    "message": "Kontekstiniame meniu nerodyti bendrųjų elementų",
     "description": "Preferences/General"
   },
   "pref_manager_tooltip": {
