@@ -29,7 +29,7 @@ const RELOAD_TIMEOUT = 10 * 1000;
 export class Manager extends EventEmitter {
   private items: Download[];
 
-  private active: boolean;
+  public active: boolean;
 
   private notifiedFinished: boolean;
 
@@ -360,6 +360,10 @@ export class Manager extends EventEmitter {
       this.startNext();
     }
     this.emit("active", this.active);
+  }
+
+  getMsgItems() {
+    return this.items.map(e => e.toMsg());
   }
 }
 

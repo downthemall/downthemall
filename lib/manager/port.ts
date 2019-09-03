@@ -5,6 +5,10 @@ import { donate, openPrefs } from "../windowutils";
 import { API } from "../api";
 // eslint-disable-next-line no-unused-vars
 import { BaseDownload } from "./basedownload";
+// eslint-disable-next-line no-unused-vars
+import { Manager } from "./man";
+// eslint-disable-next-line no-unused-vars
+import { Port } from "../bus";
 
 type SID = {sid: number};
 type SIDS = {
@@ -13,9 +17,9 @@ type SIDS = {
 };
 
 export class ManagerPort {
-  private manager: any;
+  private manager: Manager;
 
-  private port: any;
+  private port: Port;
 
   constructor(manager: any, port: any) {
     this.manager = manager;
@@ -79,7 +83,6 @@ export class ManagerPort {
   }
 
   sendAll() {
-    this.port.post(
-      "all", this.manager.items.map((e: BaseDownload) => e.toMsg()));
+    this.port.post("all", this.manager.getMsgItems());
   }
 }
