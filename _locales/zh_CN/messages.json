@@ -463,7 +463,7 @@
   },
   "error_invalidMask": {
     "description": "Error message; single/select window",
-    "message": "无效重命名模板"
+    "message": "无效的重命名模板"
   },
   "error_invalidReferrer": {
     "description": "Error message; single window",
@@ -475,7 +475,7 @@
   },
   "error_noItemsSelected": {
     "description": "Error Message; select window",
-    "message": "未选中任何项目"
+    "message": "未选中项目"
   },
   "fastfilter_placeholder": {
     "description": "Placeholder for fastfilter inputs",
