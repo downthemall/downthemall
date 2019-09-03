@@ -291,7 +291,7 @@
   },
   "add_paused_question": {
     "description": "Messagebox text",
-    "message": "您是否要记住此决定，且从现在开始新建的下载总是暂停？"
+    "message": "您是否要记住此决定，且从现在添加的下载总是暂停？"
   },
   "add_paused_title": {
     "description": "Title for the add-paused dialog",
@@ -1039,7 +1039,7 @@
   },
   "select_title": {
     "description": "Title of the select window",
-    "message": "DownThemAll! - 选择您的下载"
+    "message": "DownThemAll! - 选择您要下载的内容"
   },
   "set_mask": {
     "description": "Menu text; select window",
