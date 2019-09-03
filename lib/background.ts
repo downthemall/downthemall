@@ -18,7 +18,7 @@ import {
   Tab,
   // eslint-disable-next-line no-unused-vars
   MenuClickInfo,
-  windows
+  CHROME,
 } from "./browser";
 import { Bus } from "./bus";
 import { filterInSitu } from "./util";
@@ -28,6 +28,20 @@ const menus = typeof (_menus) !== "undefined" && _menus || _cmenus;
 
 const GATHER = "/bundles/content-gather.js";
 
+const CHROME_CONTEXTS = Object.freeze(new Set([
+  "all",
+  "audio",
+  "browser_action",
+  "editable",
+  "frame",
+  "image",
+  "launcher",
+  "link",
+  "page",
+  "page_action",
+  "selection",
+  "video",
+]));
 
 async function runContentJob(tab: Tab, file: string, msg: any) {
   try {
@@ -84,11 +98,15 @@ class Handler {
 
   async performSelection(options: SelectionOptions) {
     try {
+      const toptions: any = {
+        currentWindow: true,
+        discarded: false,
+      };
+      if (!CHROME) {
+        toptions.hidden = true;
+      }
       const selectedTabs = options.allTabs ?
-        await tabs.query({
-          currentWindow: true,
-          discarded: false,
-          hidden: false}) as any[] :
+        await tabs.query(toptions) as any[] :
         [options.tab];
 
       const textLinks = await Prefs.get("text-links", true);
@@ -147,10 +165,18 @@ locale.then(() => {
       this.onClicked = this.onClicked.bind(this);
       const alls = new Map<string, string[]>();
       const mcreate = (options: any) => {
+        if (CHROME) {
+          delete options.icons;
+          options.contexts = options.contexts.
+            filter((e: string) => CHROME_CONTEXTS.has(e));
+          if (!options.contexts.length) {
+            return;
+          }
+        }
         if (options.contexts.includes("all")) {
           alls.set(options.id, options.contexts);
         }
-        return menus.create(options);
+        menus.create(options);
       };
       mcreate({
         id: "DTARegularLink",
@@ -392,7 +418,7 @@ locale.then(() => {
     async enumulate(action: string) {
       const tab = await tabs.query({
         active: true,
-        windowId: windows.WINDOW_ID_CURRENT
+        currentWindow: true,
       });
       if (!tab || !tab.length) {
         return;
@@ -521,13 +547,21 @@ locale.then(() => {
 
   function adjustAction(globalTurbo: boolean) {
     action.setPopup({
-      popup: globalTurbo ? "" : null
+      popup: globalTurbo ? "" : "/windows/popup.html"
     });
     action.setIcon({
       path: globalTurbo ? {
         16: "/style/button-turbo.png",
         32: "/style/button-turbo@2x.png",
-      } : null
+      } : {
+        16: "/style/icon16.png",
+        32: "/style/icon32.png",
+        48: "/style/icon48.png",
+        64: "/style/icon64.png",
+        96: "/style/icon96.png",
+        128: "/style/icon128.png",
+        256: "/style/icon256.png"
+      }
     });
   }
 

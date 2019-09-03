@@ -2,12 +2,27 @@
 // License: MIT
 
 import {memoize} from "./memoize";
+import * as langs from "../_locales/all.json";
+import { sorted, naturalCaseCompare } from "./sorting";
+
+
+export const ALL_LANGS = Object.freeze(new Map<string, string>(
+  sorted(Object.entries(langs), e => {
+    return [e[1], e[0]];
+  }, naturalCaseCompare)));
+
+let CURRENT = "en";
+export function getCurrentLanguage() {
+  return CURRENT;
+}
 
 declare let browser: any;
 declare let chrome: any;
 
 const CACHE_KEY = "_cached_locales";
 const CUSTOM_KEY = "_custom_locale";
+
+const normalizer = /[^A-Za-z0-9_]/g;
 
 interface JSONEntry {
   message: string;
@@ -72,7 +87,7 @@ class Localization {
   }
 
   localize(id: string, ...args: any[]) {
-    const entry = this.strings.get(id);
+    const entry = this.strings.get(id.replace(normalizer, "_"));
     if (!entry) {
       return "";
     }
@@ -119,20 +134,36 @@ function loadCached() {
 }
 
 async function loadRawLocales() {
-  // en is the base locale
+  // en is the base locale, always to be loaded
+  // The loader will override string from it with more specific string
+  // from other locales
   const langs = new Set<string>(["en"]);
-  const ui = (browser.i18n || chrome.i18n).getUILanguage();
-  langs.add(ui);
 
-  // Try the base too
-  if (ui.includes("-")) {
-    langs.add(ui.split(/[-]+/)[0]);
-  }
-  else if (ui.includes("_")) {
-    langs.add(ui.split(/[_]+/)[0]);
+  const uiLang: string = (typeof browser !== "undefined" ? browser : chrome).
+    i18n.getUILanguage();
+
+  // Chrome will only look for underscore versions of locale codes,
+  // while Firefox will look for both.
+  // So we better normalize the code to the underscore version.
+  // However, the API seems to always return the dash-version.
+
+  // Add all base locales into ascending order of priority,
+  // starting with the most unspecific base locale, ending
+  // with the most specific locale.
+  // e.g. this will transform ["zh", "CN"] -> ["zh", "zh_CN"]
+  uiLang.split(/[_-]/g).reduce<string[]>((prev, curr) => {
+    prev.push(curr);
+    langs.add(prev.join("_"));
+    return prev;
+  }, []);
+
+  if (CURRENT && CURRENT !== "default") {
+    langs.delete(CURRENT);
+    langs.add(CURRENT);
   }
 
-  const fetched = await Promise.all(Array.from(langs, fetchLanguage));
+  const valid = Array.from(langs).filter(e => ALL_LANGS.has(e));
+  const fetched = await Promise.all(Array.from(valid, fetchLanguage));
   return fetched.filter(e => !!e);
 }
 
@@ -140,6 +171,21 @@ async function load(): Promise<Localization> {
   try {
     checkBrowser();
     try {
+      let currentLang: any = "";
+      if (typeof browser !== "undefined") {
+        currentLang = await browser.storage.sync.get("language");
+      }
+      else {
+        currentLang = await new Promise(
+          resolve => chrome.storage.sync.get("language", resolve));
+      }
+      if ("language" in currentLang) {
+        currentLang = currentLang.language;
+      }
+      if (!currentLang || !currentLang.length) {
+        currentLang = "default";
+      }
+      CURRENT = currentLang;
       // en is the base locale
       let valid = loadCached();
       if (!valid) {

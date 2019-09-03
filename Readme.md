@@ -1,12 +1,10 @@
-DownThemAll! WE
-===
+# DownThemAll! WE
 
 The DownThemAll! WebExtension.
 
 For those still on supported browser: [Non-WebExtension legacy code](https://github.com/downthemall/downthemall-legacy).
 
-About
----
+## About
 
 This is the WebExtension version of DownThemAll!, a complete re-development from scratch.
 Being a WebExtension it lacks a ton of features the original DownThemAll! had. Sorry, but there is no way around it since Mozilla decided to adopt WebExtensions as the *only* extension type and WebExtensions are extremely limited in what they can do.
@@ -23,25 +21,48 @@ But it is what it is...
 
 **What we *can* do and did do is bring the mass selection, organizing (renaming masks, etc) and queueing tools of DownThemAll! over to the WebExtension, so you can easily queue up hundreds or thousands files at once without the downloads going up in flames because the browser tried to download them all at once.**
 
-Translations
----
+## Translations
 
 If you would like to help out translating DTA, please see our [translation guide](_locales/Readme.md).
 
-Development
----
+## Development
+
 
 You will want to `yarn` the development dependencies such as webpack first.
 
-Afterwards there is two important commands to run
+Afterwards, you will want to run`yarn watch`.
+This will run the webpack bundler in watch mode, transpiling the TypeScript to Javascript and updating bundles as you change the source.
 
-  * `yarn watch` - This will run the webpack bundler in watch mode, updating bundles as you change the source.
-  * `yarn webext` - This will run the WebExtension in a development profile using the [`web-ext` tool from mozilla](https://www.npmjs.com/package/web-ext) (which you need to install separately). This will use the directory `../dtalite.p` to keep a development profile. You might need to create this directory before you use this command first.
-  
 Please note: You have to run `yarn watch` (at least once) as it builds the actual script bundles.
+
+### Firefox
+
+I recommend you install the [`web-ext`](https://www.npmjs.com/package/web-ext) tools from mozilla. It is not listed as a dependency by design at it causes problems with dependency resolution in yarn right now if installed in the same location as the rest of the dependencies.
+
+If you did, then running `yarn webext` (additionally to `yarn watch`) will run the WebExtension in a development profile. This will use the directory `../dtalite.p` to keep a development profile. You might need to create this directory before you use this command. Furthermore `yarn webext` will watch for changes to the sources and automatically reload the extension.
   
-Alternative, you can also `yarn build`, which then builds an *unsigned* zip that you can then install permanently in a browser that does not enforce signing (i.e. Nightly or the Unbranded Firefox).
+Alternative, you can also `yarn build`, which then builds an *unsigned* zip that you can then install permanently in a browser that does not enforce signing (i.e. Nightly or the Unbranded Firefox with the right about:config preferences).
 
-Before submitting patches, please make sure you run eslint, if this isn't done automatically, and eslint does not report any open issues. Code contributions should favor typescript code over javascript code. External dependencies that would ship with the final product (including all npm/yarn packages) should be kept to a bare minimum.
+### Chrome
 
-The code base is comparatively large for a WebExtension, with over 10K sloc of typescript and over 14K sloc total.
+You have to build the bundles first, of course.
+
+Then put your Chrome into Developement Mode on the Extensions page, and Load Unpacked the directory of your downthemall clone.
+
+### Patches
+
+Before submitting patches, please make sure you run eslint (if this isn't done automatically in your text editor/IDE), and eslint does not report any open issues. Code contributions should favor typescript code over javascript code. External dependencies that would ship with the final product (including all npm/yarn packages) should be kept to a bare minimum and need justification.
+
+Please submit your patches as Pull Requests, and rebase your commits onto the current `master` before submitting.
+
+### Code structure
+
+The code base is comparatively large for a WebExtension, with over 11K sloc of typescript.
+It isn't as well organized as it should be in some places; hope you don't mind.
+
+* `uikit/` - The base User Interface Kit, which currently consists of
+  * the `VirtualTable` implementation, aka that interactive HTML table with columns, columns resizing and hiding, etc you see in the Manager, Select and Preferences windows/tabs
+  * the `ContextMenu` and related classes that drive the HTML-based context menus
+* `lib/` - The "backend stuff" and assorted library routines and classes.
+* `windows/` - The "frontend stuff" so all the HTML and corresponding code to make that HTML into something interactive
+* `style/` - CSS and images

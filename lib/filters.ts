@@ -94,7 +94,7 @@ function *parseIntoRegexpInternal(str: string): Iterable<RegExp> {
 
   // multi-expression
   if (str.includes(",")) {
-    for (const part in str.split(",")) {
+    for (const part of str.split(",")) {
       yield *parseIntoRegexpInternal(part);
     }
     return;

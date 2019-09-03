@@ -153,6 +153,7 @@ export class BaseDownload {
     rv.destPath = dest.path;
     rv.destFull = dest.full;
     rv.error = this.error;
+    rv.ext = this.renamer.p_ext;
     return rv;
   }
 }

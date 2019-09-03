@@ -35,7 +35,6 @@ Nice-to-haves.
 * Dark Theme support
   * os/browser define be default
   * overwritable
-* Get and cache system icons (because Firefox doesn't allow moz-icon: for WE, but makes them kinda accessible through the downloads API anyway, essentially copying them via a canvas on a privileged hidden page into a data URL... ikr)
 * Remove `any` types as possible, and generally improve typescript (new language to me)
 
 P4

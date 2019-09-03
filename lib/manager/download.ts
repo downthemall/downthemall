@@ -11,12 +11,15 @@ import { BaseDownload } from "./basedownload";
 import { PromiseSerializer } from "../pserializer";
 // eslint-disable-next-line no-unused-vars
 import { Manager } from "./man";
-import { downloads } from "../browser";
+import { downloads, CHROME } from "../browser";
+import { debounce } from "../../uikit/lib/util";
 
 
 const setShelfEnabled = downloads.setShelfEnabled || function() {
   // ignored
 };
+
+const reenableShelf = debounce(() => setShelfEnabled(true), 1000, true);
 
 type Header = {name: string; value: string};
 interface Options {
@@ -26,7 +29,7 @@ interface Options {
   url: string;
   method?: string;
   body?: string;
-  incognito: boolean;
+  incognito?: boolean;
   headers: Header[];
 }
 
@@ -103,13 +106,15 @@ export class Download extends BaseDownload {
         saveAs: false,
         url: this.url,
         headers: [],
-        incognito: this.private
       };
+      if (!CHROME && this.private) {
+        options.incognito = true;
+      }
       if (this.postData) {
         options.body = this.postData;
         options.method = "POST";
       }
-      if (this.referrer) {
+      if (!CHROME && this.referrer) {
         options.headers.push({
           name: "Referer",
           value: this.referrer
@@ -136,7 +141,7 @@ export class Download extends BaseDownload {
         }
       }
       finally {
-        setShelfEnabled(true);
+        reenableShelf();
       }
       this.markDirty();
     }

@@ -61,6 +61,7 @@ export class ManagerPort {
       delete this.manager;
       delete this.port;
     });
+
     this.port.post("active", this.manager.active);
     this.sendAll();
   }

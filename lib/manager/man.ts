@@ -12,17 +12,19 @@ import { Prefs } from "../prefs";
 import { _ } from "../i18n";
 import { CoalescedUpdate, mapFilterInSitu, filterInSitu } from "../util";
 import { PromiseSerializer } from "../pserializer";
-import {Download} from "./download";
-import {ManagerPort} from "./port";
-import {Scheduler} from "./scheduler";
-import {Limits} from "./limits";
-import { downloads } from "../browser";
+import { Download } from "./download";
+import { ManagerPort } from "./port";
+import { Scheduler } from "./scheduler";
+import { Limits } from "./limits";
+import { downloads, runtime } from "../browser";
 
 
 const AUTOSAVE_TIMEOUT = 2000;
 const DIRTY_TIMEOUT = 100;
 // eslint-disable-next-line no-magic-numbers
 const MISSING_TIMEOUT = 12 * 1000;
+const RELOAD_TIMEOUT = 10 * 1000;
+
 
 export class Manager extends EventEmitter {
   private items: Download[];
@@ -45,9 +47,12 @@ export class Manager extends EventEmitter {
 
   private scheduler: Scheduler | null;
 
+  private shouldReload: boolean;
+
   constructor() {
     super();
     this.active = true;
+    this.shouldReload = false;
     this.notifiedFinished = true;
     this.items = [];
     this.saveQueue = new CoalescedUpdate(
@@ -91,6 +96,13 @@ export class Manager extends EventEmitter {
     await this.resetScheduler();
     this.emit("inited");
     setTimeout(() => this.checkMissing(), MISSING_TIMEOUT);
+    runtime.onUpdateAvailable.addListener(() => {
+      if (this.running.size) {
+        this.shouldReload = true;
+        return;
+      }
+      runtime.reload();
+    });
     return this;
   }
 
@@ -169,6 +181,14 @@ export class Manager extends EventEmitter {
     }
     this.notifiedFinished = true;
     new Notification(null, _("queue-finished"));
+    if (this.shouldReload) {
+      setTimeout(() => {
+        if (this.running.size) {
+          return;
+        }
+        runtime.reload();
+      }, RELOAD_TIMEOUT);
+    }
   }
 
   addManId(id: number, download: Download) {

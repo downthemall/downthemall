@@ -8,12 +8,26 @@ import * as DEFAULT_ICONS from "../data/icons.json";
 const DONATE_URL = "https://www.downthemall.org/howto/donate/";
 const MANAGER_URL = "/windows/manager.html";
 
-const IS_CHROME = navigator && navigator.userAgent.includes("Chrome");
-
-
 export async function mostRecentBrowser(): Promise<any> {
-  let window = Array.from(await windows.getAll({windowTypes: ["normal"]})).
-    filter((w: any) => w.type === "normal").pop();
+  let window;
+  try {
+    window = await windows.getCurrent({windowTypes: ["normal"]});
+    if (window.type !== "normal") {
+      throw new Error("not a normal window");
+    }
+  }
+  catch {
+    try {
+      window = await windows.getlastFocused({windowTypes: ["normal"]});
+      if (window.type !== "normal") {
+        throw new Error("not a normal window");
+      }
+    }
+    catch {
+      window = Array.from(await windows.getAll({windowTypes: ["normal"]})).
+        filter((w: any) => w.type === "normal").pop();
+    }
+  }
   if (!window) {
     window = await windows.create({
       url: DONATE_URL,
@@ -106,32 +120,10 @@ const ICONS = Object.freeze((() => {
   return new Map<string, string>(rv);
 })());
 
-let iconForPathPlatform: Function;
-if (IS_CHROME) {
-  const FOUR = 128;
-  const DOUBLE = 64;
-  iconForPathPlatform = function(icon: string, size: number) {
-    let scale = "1x";
-    if (size > FOUR) {
-      // wishful thinking at this point
-      scale = "4x";
-    }
-    else if (size > DOUBLE) {
-      scale = "2x";
-    }
-    return `chrome://fileicon/${icon}?scale=${scale}`;
-  };
-}
-else {
-  // eslint-disable-next-line no-unused-vars
-  iconForPathPlatform = function(icon: string, size: number) {
-    return ICONS.get(icon) || "icon-file-generic";
-  };
-}
+export const DEFAULT_ICON_SIZE = 16;
 
-
-// eslint-disable-next-line no-magic-numbers
-export function iconForPath(path: string, size = 16) {
+// eslint-disable-next-line no-unused-vars
+export function iconForPath(path: string, size = DEFAULT_ICON_SIZE) {
   const web = /^https?:\/\//.test(path);
   let file = path.split(/[\\/]/).pop();
   if (file) {
@@ -152,7 +144,7 @@ export function iconForPath(path: string, size = 16) {
       file = "file";
     }
   }
-  return iconForPathPlatform(file, size);
+  return ICONS.get(file) || "icon-file-generic";
 }
 
 /**

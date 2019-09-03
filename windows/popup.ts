@@ -6,7 +6,9 @@ import { localize } from "../lib/i18n";
 declare let browser: any;
 declare let chrome: any;
 
-const runtime = browser !== "undefined" ? browser.runtime : chrome.runtime;
+const runtime = typeof browser !== "undefined" ?
+  browser.runtime :
+  chrome.runtime;
 
 function handler(e: Event) {
   e.preventDefault();

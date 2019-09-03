@@ -146,6 +146,8 @@ export class Tooltip {
   constructor(item: DownloadItem, pos: number) {
     this.update = this.update.bind(this);
     this.item = item;
+    this.item.on("largeIcon", this.update);
+
     const tmpl = (
       document.querySelector<HTMLTemplateElement>("#tooltip-template"));
     if (!tmpl) {
@@ -178,7 +180,7 @@ export class Tooltip {
       this.dismiss();
       return;
     }
-    const icon = item.owner.getCellIcon(item.filteredPosition, 0);
+    const icon = item.largeIcon;
     this.icon.className = icon;
     this.name.textContent = item.destFull;
     this.from.textContent = item.usable;
@@ -318,5 +320,6 @@ export class Tooltip {
     }
     this.item.off("stats", this.update);
     this.item.off("update", this.update);
+    this.item.off("largeIcon", this.update);
   }
 }

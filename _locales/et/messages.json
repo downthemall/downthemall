@@ -1,91 +1,23 @@
 {
   "language": {
-    "message": "eesti keel",
+    "message": "Eesti Keel",
     "description": "Lanuage Name in your language"
   },
   "language_code": {
     "message": "et",
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
-  "add-download": {
-    "message": "Lisa allalaadimine",
-    "description": "Action for adding a download"
-  },
-  "add-new": {
-    "message": "Lisa uus",
-    "description": "Button text (adding filters, limits and such)"
-  },
-  "add-paused-once": {
-    "message": "Lisa peatatuna ainult sel korral",
-    "description": "Checkbox label"
-  },
-  "add-paused.question": {
-    "message": "Kas tahad selle otsuse meelde jätta ja tulevikus kõik uued allalaadimised lisada peatatuna?",
-    "description": "Messagebox text"
-  },
-  "add-paused.title": {
-    "message": "Alati lisa peatatuna?",
-    "description": "Title for the add-paused dialog"
-  },
   "addpaused": {
     "message": "Lisa peatatuna",
     "description": "Action: Add paused"
-  },
-  "ask-again-later": {
-    "message": "Küsi hiljem uuesti",
-    "description": "Button text"
-  },
-  "batch.batch": {
-    "message": "Pakkallalaadimine",
-    "description": "Button text"
-  },
-  "batch.desc": {
-    "message": "Praegune URL paistab sisaldavat juhiseid pakkallalaadimiseks.",
-    "description": ""
-  },
-  "batch.items": {
-    "message": "Üksuseid:",
-    "description": "Messagebox info text for batch confirmations"
-  },
-  "batch.preview": {
-    "message": "Eelvaade:",
-    "description": "Messagebox info text for batch confirmations"
-  },
-  "batch.question": {
-    "message": "Kas tahad selle allalaadimise lisada pakina või üksiku allalaadimisena?",
-    "description": "Messagebox info text for batch confirmations"
-  },
-  "batch.single": {
-    "message": "Üksik allalaadimine",
-    "description": "Button text for batch confirmation"
-  },
-  "batch.title": {
-    "message": "Pakkallalaadimine",
-    "description": "Messagebox title for batch confirmations"
   },
   "cancel": {
     "message": "Loobu",
     "description": "Button text: Cancel"
   },
-  "cancel-download": {
-    "message": "Tühista",
-    "description": "Action to cancel downloads, e.g. from the context menu"
-  },
   "canceled": {
     "message": "Tühistatud",
     "description": "Download status text"
-  },
-  "cannot-be-empty": {
-    "message": "See väli ei saa olla tühi",
-    "description": "Error message when an input field is empty but has to have a value"
-  },
-  "change-later-reminder": {
-    "message": "Sa saad seda otsust hiljem Eelistustes muuta",
-    "description": "Checkbox label text for decision confirmations"
-  },
-  "check-selected-items": {
-    "message": "Märgista valitud üksused",
-    "description": "Menu text"
   },
   "colConnections": {
     "message": "Samaaegseid allalaadimisi",
@@ -123,69 +55,9 @@
     "message": "Kiirus",
     "description": "Table column in manager"
   },
-  "conflict-overwrite": {
-    "message": "Kirjuta üle",
-    "description": "Option text; prefs/general"
-  },
-  "conflict-prompt": {
-    "message": "Küsi",
-    "description": "Option text; prefs/general"
-  },
-  "conflict-rename": {
-    "message": "Nimeta ümber",
-    "description": "Option text; prefs/general"
-  },
   "CRASH": {
     "message": "Sisemise lehitseja viga",
     "description": "Error Message"
-  },
-  "create-filter": {
-    "message": "Loo filter",
-    "description": "Button text; Create filter dialog; prefs/filters"
-  },
-  "custom-filename": {
-    "message": "Kohandatud failinimi",
-    "description": "Label text; single window"
-  },
-  "deffilter-all": {
-    "message": "Kõik failid",
-    "description": "Filter label for the All files filter"
-  },
-  "deffilter-arch": {
-    "message": "Arhiivid (zip, rar, 7z, …)",
-    "description": "Filter label for the Archives filter"
-  },
-  "deffilter-aud": {
-    "message": "Audio (mp3, flac, wav, …)",
-    "description": "Filter label for the Audio filter"
-  },
-  "deffilter-bin": {
-    "message": "Tarkvara (exe, msi, …)",
-    "description": "Filter label for the Software filter"
-  },
-  "deffilter-doc": {
-    "message": "Dokumendid (pdf, odf, docx, …)",
-    "description": "Filter label for the Documents filter"
-  },
-  "deffilter-img": {
-    "message": "Pildid (jpeg, png, gif, …)",
-    "description": "Filter label for the Images filter"
-  },
-  "deffilter-imggif": {
-    "message": "GIF-pildid",
-    "description": "Filter label for the GIF filter"
-  },
-  "deffilter-imgjpg": {
-    "message": "JPEG-pildid",
-    "description": "Filter label for the JPEG filter"
-  },
-  "deffilter-imgpng": {
-    "message": "PNG-pildid",
-    "description": "Filter label for the PNG filter"
-  },
-  "deffilter-vid": {
-    "message": "Videod (mp4, webm, mkv, …)",
-    "description": "Filter label for the Videos filter"
   },
   "delete": {
     "message": "Kustuta",
@@ -194,10 +66,6 @@
   "description": {
     "message": "Kirjeldus",
     "description": "Description (keep it short); e.g. the description column in select"
-  },
-  "disable-other-filters": {
-    "message": "Keela teised",
-    "description": "Checkbox label. Keep it short"
   },
   "donate": {
     "message": "Anneta!",
@@ -211,81 +79,9 @@
     "message": "Allalaadimine",
     "description": "Download (noun); e.g. Download column in select"
   },
-  "download.verb": {
-    "message": "Laadi alla",
-    "description": "Download (verb/action); e.g. in single and select buttons"
-  },
-  "dta-regular-all": {
-    "message": "DownThemAll! - Kõik kaardid",
-    "description": "Menu text"
-  },
-  "dta-turbo-all": {
-    "message": "OneClick! - Kõik kaardid",
-    "description": "Menu text"
-  },
-  "dta.regular": {
-    "message": "DownThemAll!",
-    "description": "Regular dta action; Menu text"
-  },
-  "dta.regular.image": {
-    "message": "Salvesta pilt DownThemAll!-iga",
-    "description": "Menu text"
-  },
-  "dta.regular.link": {
-    "message": "Salvesta link DownThemAll!-iga",
-    "description": "Menu text"
-  },
-  "dta.regular.media": {
-    "message": "Salvesta meedia DownThemAll!-iga",
-    "description": "Menu text"
-  },
-  "dta.regular.selection": {
-    "message": "Salvesta valik DownThemAll!-iga",
-    "description": "Menu text"
-  },
-  "dta.turbo": {
-    "message": "OneClick!",
-    "description": "OneClick! action; Menu text"
-  },
-  "dta.turbo.image": {
-    "message": "Salvesta pilt OneClick!-iga",
-    "description": "Menu text"
-  },
-  "dta.turbo.link": {
-    "message": "Salvesta link OneClick!-iga",
-    "description": "Menu text"
-  },
-  "dta.turbo.media": {
-    "message": "Salvesta meedia OneClick!-iga",
-    "description": "Menu text"
-  },
-  "dta.turbo.selection": {
-    "message": "Salvesta valik OneClick!-iga",
-    "description": "Menu text"
-  },
-  "error.invalidMask": {
-    "message": "Vigane nimemuutmise mask",
-    "description": "Error message; single/select window"
-  },
-  "error.invalidReferrer": {
-    "message": "Vigane viitaja",
-    "description": "Error message; single window"
-  },
-  "error.invalidURL": {
-    "message": "Vigane URL",
-    "description": "Error message; single window"
-  },
-  "error.noItemsSelected": {
-    "message": "Ühtki üksust pole valitud",
-    "description": "Error Message; select window"
-  },
   "extensionDescription": {
     "message": "Massallalaadija sinu veebilehitsejale",
     "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
-  },
-  "fastfilter.placeholder": {
-    "message": "Jokkeravaldis või regulaaravaldis",
-    "description": "Placeholder for fastfilter inputs"
   },
   "fastfiltering": {
     "message": "Kiirfiltreerimine",
@@ -295,127 +91,17 @@
     "message": "Failile ligipääsu viga",
     "description": "Error Message"
   },
-  "filter-at-least-one": {
-    "message": "Sa pead valima vähemalt ühe filtritüübi!",
-    "description": "Error message when no filter types are selected for a filter in the preferences UI"
-  },
-  "filter-create.title": {
-    "message": "Uue filtri loomine",
-    "description": "Message box title"
-  },
-  "filter-expression": {
-    "message": "Filtri avaldis",
-    "description": "Message box label"
-  },
-  "filter-label": {
-    "message": "Filtri nimi",
-    "description": "Message box label"
-  },
-  "filter-type-link": {
-    "message": "Lingifilter",
-    "description": "Message box checkbox label"
-  },
-  "filter-type-media": {
-    "message": "Meediafilter",
-    "description": "Message box checkbox label"
-  },
-  "filter-types": {
-    "message": "Filtritüübid",
-    "description": "Message box label"
-  },
   "finishing": {
     "message": "Lõpetamas",
     "description": "Status text"
-  },
-  "force-start": {
-    "message": "Sunni käivituma",
-    "description": "Menu text"
-  },
-  "information.title": {
-    "message": "Teave",
-    "description": "Used in message boxes"
-  },
-  "invalid-domain-pref": {
-    "message": "Vigane domeen",
-    "description": "Error message in prefs/network"
-  },
-  "invert-selection": {
-    "message": "Pööra valik",
-    "description": "Menu text"
-  },
-  "key-alt": {
-    "message": "Alt",
-    "description": "Short for Alt-Key"
-  },
-  "key-ctrl": {
-    "message": "Ctrl",
-    "description": "Short for Ctrl-Key"
-  },
-  "key-delete": {
-    "message": "Del",
-    "description": "Short for Delete-key"
-  },
-  "key-end": {
-    "message": "End",
-    "description": "Short for End-key"
-  },
-  "key-home": {
-    "message": "Home",
-    "description": "Short for home key"
-  },
-  "key-pagedown": {
-    "message": "PageDown",
-    "description": "Short for pagedown-key"
-  },
-  "key-pageup": {
-    "message": "PageUp",
-    "description": "Short for PageUp-key"
-  },
-  "limited-to": {
-    "message": "Piiratud:",
-    "description": "Label text; used in prefs/network"
   },
   "links": {
     "message": "Lingid",
     "description": "Links tab label (short); select window"
   },
-  "manager-status-items": {
-    "message": "Valmis $COMPLETE$ / $TOTAL$ allalaadimist ($SHOWING$ näidatud), $RUNNING$ käib",
-    "description": "Status bar text; manager",
-    "placeholders": {
-      "complete": {
-        "content": "$1",
-        "example": "10"
-      },
-      "running": {
-        "content": "$4",
-        "example": "4"
-      },
-      "showing": {
-        "content": "$3",
-        "example": "90"
-      },
-      "total": {
-        "content": "$2",
-        "example": "100"
-      }
-    }
-  },
-  "manager.short": {
-    "message": "Haldur",
-    "description": "Menu text"
-  },
-  "manager.title": {
-    "message": "DownThemAll! haldur",
-    "description": "Window/tab title"
-  },
   "mask": {
     "message": "Mask",
     "description": "Renaming mask (short); used in e.g. select"
-  },
-  "mask.default": {
-    "message": "Vaikimisi mask",
-    "description": "Status text; Used in the mask column, select window"
   },
   "media": {
     "message": "Meedia",
@@ -425,187 +111,21 @@
     "message": "Puudub",
     "description": "Status text in manager"
   },
-  "move-bottom": {
-    "message": "Lõppu",
-    "description": "Action for moving a download to the bottom"
-  },
-  "move-down": {
-    "message": "Alla",
-    "description": "Action for moving a download down"
-  },
-  "move-top": {
-    "message": "Algusesse",
-    "description": "Action for moving a download to the top"
-  },
-  "move-up": {
-    "message": "Üles",
-    "description": "Action for moving a download up"
-  },
-  "nagging-message": {
-    "message": "Sa oled praeguseks DownThemAll!-iga lisanud $DOWNLOADS$ allalaadimist! Tavakasutajana võiksid edasise arendamise toetamiseks kaaluda annetamist. Täname!",
-    "description": "Donation nagging message; displayed as a notification bar in manager",
-    "placeholders": {
-      "downloads": {
-        "content": "$1",
-        "example": ""
-      }
-    }
-  },
   "NETWORK_FAILED": {
     "message": "Võrgu viga",
     "description": "Error Message"
-  },
-  "never-ask-again": {
-    "message": "Ära enam küsi",
-    "description": "Donation button"
-  },
-  "no-links": {
-    "message": "Linke ei leitud!",
-    "description": "Notification text"
-  },
-  "noitems.label": {
-    "message": "Ühtki üksust pole valitud",
-    "description": "Status bar text in select"
-  },
-  "numitems.label": {
-    "message": "$ITEMS$ üksust valitud…",
-    "description": "Status bar text in select; Number of items selected (label)",
-    "placeholders": {
-      "items": {
-        "content": "$1",
-        "example": "1000"
-      }
-    }
   },
   "ok": {
     "message": "OK",
     "description": "Button text; Used in message boxes"
   },
-  "open-directory": {
-    "message": "Ava kaust",
-    "description": "Menu text; manager context"
-  },
-  "open-file": {
-    "message": "Ava fail",
-    "description": "Menu text; manager context"
-  },
-  "open-link": {
-    "message": "Ava link",
-    "description": "Menu text; select window"
-  },
-  "options-filters": {
-    "message": "Filtrid",
-    "description": "Pref tab text"
-  },
-  "options-general": {
-    "message": "Üldised",
-    "description": "Pref tab text"
-  },
-  "options-network": {
-    "message": "Võrk",
-    "description": "Pref tab text"
-  },
-  "pause-download": {
-    "message": "Peata",
-    "description": "Action for pausing a download"
-  },
   "paused": {
     "message": "Peatatud",
     "description": "Status text; manager"
   },
-  "pref-add-paused": {
-    "message": "Lisa uued allalaadimised peatatuna, ära käivita neid automaatselt",
-    "description": "Preferences/General"
-  },
-  "pref-concurrent-downloads": {
-    "message": "Samaaegseid allalaadimisi",
-    "description": "Preferences/Network"
-  },
-  "pref-finish-notification": {
-    "message": "Järjekorra valmissaamisel näita teavitust",
-    "description": "Preferences/General"
-  },
-  "pref-global-turbo": {
-    "message": "Veebilehitseja nupp peaks olema OneClick!",
-    "description": "Preferences/General"
-  },
-  "pref-hide-context": {
-    "message": "Ära näita üldiseid kontekstimenüü kirjeid",
-    "description": "Preferences/General"
-  },
-  "pref-manager-tooltip": {
-    "message": "Näita Halduri kaartidel kohtspikreid",
-    "description": "Preferences/General"
-  },
-  "pref-open-manager-on-queue": {
-    "message": "Mõne allalaadimise järjekorda lisamisel ava Halduri kaart",
-    "description": "Preferences/General"
-  },
-  "pref-queue-notification": {
-    "message": "Uute allalaadimiste järjekorda lisamisel näita teavitust",
-    "description": "Preferences/General"
-  },
-  "pref-remove-missing-on-init": {
-    "message": "Pärast taaskäivitamist eemalda puuduvad allalaadimised",
-    "description": "Preferences/General"
-  },
-  "pref-show-urls": {
-    "message": "Näita nimede asemel URLe",
-    "description": "Preferences/General"
-  },
-  "pref-text-links": {
-    "message": "Ürita leida linke veebisaidi tekstist (aeglasem)",
-    "description": "Preferences/General"
-  },
-  "pref.manager": {
-    "message": "Haldur",
-    "description": "Preferences/General; group text"
-  },
-  "pref.netglobal": {
-    "message": "Globaalsed võrgupiirangud",
-    "description": "Preferences/General; group text"
-  },
-  "pref.queueing": {
-    "message": "Allalaadimiste järjekorda lisamine",
-    "description": "Preferences/General; group text"
-  },
-  "pref.ui": {
-    "message": "Kasutajaliides",
-    "description": "Preferences/General; group text"
-  },
-  "prefs.conflicts": {
-    "message": "Kui fail on olemas",
-    "description": "Preferences/General; group text"
-  },
-  "prefs.short": {
-    "message": "Eelistused",
-    "description": "Menu text; Preferences"
-  },
-  "prefs.title": {
-    "message": "DownThemAll! eelistused",
-    "description": "Window/tab title; Preferences"
-  },
-  "queue-finished": {
-    "message": "Allalaadimiste järjekord on valmis saanud",
-    "description": "Notification text"
-  },
   "queued": {
     "message": "Järjekorras",
     "description": "Status text"
-  },
-  "queued-download": {
-    "message": "Järjekorda lisati 1 allalaadimine!",
-    "description": "Notification text; single download"
-  },
-  "queued-downloads": {
-    "message": "Järjekorda lisati $COUNT$ allalaadimist!",
-    "description": "Notification text; multiple downloads",
-    "placeholders": {
-      "count": {
-        "content": "$1",
-        "example": "100"
-      }
-    }
   },
   "referrer": {
     "message": "Viitaja",
@@ -615,257 +135,9 @@
     "message": "Jäta see otsus meelde",
     "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
   },
-  "remove-all-complete-downloads": {
-    "message": "Eemalda kõik valmis",
-    "description": "Menu text"
-  },
-  "remove-all-downloads": {
-    "message": "Eemalda kõik",
-    "description": "Menu text"
-  },
-  "remove-all-downloads.question": {
-    "message": "Kas tahad eemaldada KÕIK allalaadimised?",
-    "description": "Messagebox text"
-  },
-  "remove-batch-downloads": {
-    "message": "Eemalda praegune pakk",
-    "description": "Menu text"
-  },
-  "remove-batch-downloads.question": {
-    "message": "Kas tahad eemaldada kõik allalaadimised, mis on pärit valitud allalaadimisega samast pakist?",
-    "description": "Messagebox text"
-  },
-  "remove-complete-downloads": {
-    "message": "Eemalda valmis allalaadimised",
-    "description": "Action for removing complete downloads"
-  },
-  "remove-complete-downloads.question": {
-    "message": "Kas tahad eemaldada kõik valmis allalaadimised?",
-    "description": "Messagebox text"
-  },
-  "remove-complete-filter-downloads.question": {
-    "message": "Kas tahad eemaldada kõik valmis allalaadimised, mis vastavad filtrile '$FILTER$'?",
-    "description": "Messagebox text",
-    "placeholders": {
-      "filter": {
-        "content": "$1",
-        "example": "JPEG Images"
-      }
-    }
-  },
-  "remove-complete-selection-downloads.question": {
-    "message": "Kas tahad eemaldada kõik valmis allalaadimised praeguses valikus?",
-    "description": "Messagebox text"
-  },
-  "remove-domain-complete-downloads": {
-    "message": "Eemalda praegusest domeenist pärit valmis allalaadimised",
-    "description": "Menu text"
-  },
-  "remove-domain-complete-downloads.question": {
-    "message": "Kas tahad eemaldada kõik domeenist '$DOMAIN$' pärit valmis allalaadimised?",
-    "description": "Messagebox text",
-    "placeholders": {
-      "domain": {
-        "content": "$1",
-        "example": "example.org"
-      }
-    }
-  },
-  "remove-domain-downloads": {
-    "message": "Eemalda praegune domeen",
-    "description": "Menu text"
-  },
-  "remove-domain-downloads.question": {
-    "message": "Kas tahad eemaldada kõik domeenist '$DOMAIN$' pärit allalaadimised?",
-    "description": "Messagebox text",
-    "placeholders": {
-      "domain": {
-        "content": "$1",
-        "example": "example.org"
-      }
-    }
-  },
-  "remove-download": {
-    "message": "Eemalda allalaadimine",
-    "description": "Action for removing a download, no matter what state"
-  },
-  "remove-download.question": {
-    "message": "Kas tahad eemaldada valitud allalaadimised",
-    "description": "Messagebox text"
-  },
-  "remove-downloads": {
-    "message": "Eemalda allalaadimised",
-    "description": "Menu text"
-  },
-  "remove-downloads.title": {
-    "message": "Kas oled kindel, et tahad allalaadimised eemaldada?",
-    "description": "Messagebox title; manager"
-  },
-  "remove-failed-downloads": {
-    "message": "Eemalda ebaõnnestunud",
-    "description": "Menu text"
-  },
-  "remove-failed-downloads.question": {
-    "message": "Kas tahad eemaldada kõik ebaõnnestunud allalaadimised?",
-    "description": "Messagebox text"
-  },
-  "remove-filter-downloads.question": {
-    "message": "Kas tahad eemaldada kõik filtrile '$FILTER$' vastavad allalaadimised?",
-    "description": "Mesagebox text",
-    "placeholders": {
-      "filter": {
-        "content": "$1",
-        "example": "JPEG Images"
-      }
-    }
-  },
-  "remove-missing": {
-    "message": "Tühjenda puuduvad allalaadimised",
-    "description": "Menu text"
-  },
-  "remove-missing-downloads.question": {
-    "message": "Kas tahad eemaldada kõik puuduvad allalaadimised?",
-    "description": "Messagebox text"
-  },
-  "remove-paused-downloads": {
-    "message": "Eemalda peatatud",
-    "description": "Menu text"
-  },
-  "remove-paused-downloads.question": {
-    "message": "Kas tahad eemaldada kõik peatatud allalaadimised?",
-    "description": "Messagebox text"
-  },
-  "remove-selected-complete-downloads": {
-    "message": "Eemalda valmis valikust",
-    "description": "Menu text"
-  },
-  "remove-selected-complete-downloads.question": {
-    "message": "Kas tahad eemaldada kõik valmis allalaadimised praeguses valikus?",
-    "description": "Messagebox text"
-  },
-  "remove-selected-downloads": {
-    "message": "Eemalda valitud",
-    "description": "Menu text"
-  },
   "rename": {
     "message": "Nime muutmine",
     "description": "UI for renaming; currently unused"
-  },
-  "renamer-batch": {
-    "message": "Pakinumber",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-d": {
-    "message": "Lisamise aeg - Päev",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-date": {
-    "message": "Lisamise aeg",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-domain": {
-    "message": "Domeeninimi (TLD)",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-ext": {
-    "message": "Faililaiend",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-hh": {
-    "message": "Lisamise aeg - Tunnid",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-host": {
-    "message": "Hostinimi",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-idx": {
-    "message": "Üksuse järjekorranumber pakis",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-info": {
-    "message": "Kui lisad 'flat', näiteks *flatsubdirs*, siis asendatakse kõik väärtuse kaldkriipsud, seega ei looda kaustasid",
-    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
-  },
-  "renamer-m": {
-    "message": "Lisamise aeg - Kuu",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-mm": {
-    "message": "Lisamise aeg - Minutid",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-name": {
-    "message": "Failinimi",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-num": {
-    "message": "Sildi *batch* pseudonüüm",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-qstring": {
-    "message": "Päringusõne",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-ref": {
-    "message": "Viitaja",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-refdomain": {
-    "message": "Viitav domeeninimi (TLD)",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-refext": {
-    "message": "Viitav faililaiend",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-refhost": {
-    "message": "Viitav hostinimi",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-refname": {
-    "message": "Viitava faili nimi",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-refqstring": {
-    "message": "Viitaja päringusõne",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-refsubdirs": {
-    "message": "Viitaja tee",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-refurl": {
-    "message": "Viitav URL (ilma protokollita)",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-ss": {
-    "message": "Lisamise aeg - Sekundid",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-subdirs": {
-    "message": "Tee",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-tags": {
-    "message": "Nimemuutmismaski sildid",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-text": {
-    "message": "Kirjelduse tekst",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-title": {
-    "message": "Pealkirja tekst",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-url": {
-    "message": "URL (ilma protokollita)",
-    "description": "Mask text; see mask button"
-  },
-  "renamer-y": {
-    "message": "Lisamise aeg - Aasta",
-    "description": "Mask text; see mask button"
   },
   "renmask": {
     "message": "Nimemuutmismask",
@@ -874,26 +146,6 @@
   "reset": {
     "message": "Lähtesta",
     "description": "Button text; pref window"
-  },
-  "reset-confirmations": {
-    "message": "Lähtesta meelde jäetud kinnitused",
-    "description": "Button text; pref/General"
-  },
-  "reset-confirmations.done": {
-    "message": "Kõik eelnevalt meelde jäetud kinnitused on lähtestatud!",
-    "description": "Messagebox text; pref/General"
-  },
-  "reset-layouts": {
-    "message": "Lähtesta kasutajaliidese kohandamised",
-    "description": "Button text; pref/General"
-  },
-  "reset-layouts.done": {
-    "message": "Kõik eeelnevalt meelde jäetud välimuse kohandamised on lähtestatud! Võibolla on aknad/kaardid vaja uuesti laadida.",
-    "description": "Messagebox text; pref/General"
-  },
-  "resume-download": {
-    "message": "Jätka",
-    "description": "Action for resuming a download"
   },
   "running": {
     "message": "Käib",
@@ -906,22 +158,6 @@
   "search": {
     "message": "Otsi…",
     "description": "Placeholder text; manager status search field"
-  },
-  "select-all": {
-    "message": "Vali kõik",
-    "description": "Menu text; e.g. select context"
-  },
-  "select-checked": {
-    "message": "Vali märgistatud",
-    "description": "Menu text; select context"
-  },
-  "select-none": {
-    "message": "Eemalda kõigilt valik",
-    "description": "Menu text; select context"
-  },
-  "select.title": {
-    "message": "DownThemAll! - Vali oma allalaadimised",
-    "description": "Title of the select window"
   },
   "SERVER_BAD_CONTENT": {
     "message": "Ei leitud",
@@ -938,40 +174,6 @@
   "SERVER_UNAUTHORIZED": {
     "message": "Autoriseerimata",
     "description": "Error message"
-  },
-  "set-mask": {
-    "message": "Määratle nimemuutmismask",
-    "description": "Menu text; select window"
-  },
-  "single.batchexamples": {
-    "message": "Toetatakse ka pakkallalaadimisi, nt.:",
-    "description": "Header text; single window"
-  },
-  "single.header": {
-    "message": "Sisesta allalaadimise URL (link) ja muud suvandid",
-    "description": "Header text; single window"
-  },
-  "single.title": {
-    "message": "DownThemAll! - Lingi lisamine",
-    "description": "Title of single window"
-  },
-  "size-progress": {
-    "message": "$WRITTEN$ / $TOTAL$",
-    "description": "Status text; manager size column",
-    "placeholders": {
-      "total": {
-        "content": "$2",
-        "example": ""
-      },
-      "written": {
-        "content": "$1",
-        "example": ""
-      }
-    }
-  },
-  "size-unknown": {
-    "message": "Teadmata",
-    "description": "Status text; manager size column"
   },
   "sizeB": {
     "message": "$S$ B",
@@ -1023,58 +225,6 @@
       }
     }
   },
-  "sizes-huge": {
-    "message": "Tohutud (> $HIGH$)",
-    "description": "Menu text; manager size column dropdown",
-    "placeholders": {
-      "high": {
-        "content": "$1",
-        "example": "1GB"
-      }
-    }
-  },
-  "sizes-large": {
-    "message": "Suured ($LOW$ - $HIGH$)",
-    "description": "Menu text; manager size column dropdown",
-    "placeholders": {
-      "high": {
-        "content": "$2",
-        "example": "10MB"
-      },
-      "low": {
-        "content": "$1",
-        "example": "1MB"
-      }
-    }
-  },
-  "sizes-medium": {
-    "message": "Keskmised ($LOW$ - $HIGH$)",
-    "description": "Menu text; manager size column dropdown",
-    "placeholders": {
-      "high": {
-        "content": "$2",
-        "example": "10MB"
-      },
-      "low": {
-        "content": "$1",
-        "example": "1MB"
-      }
-    }
-  },
-  "sizes-small": {
-    "message": "Väiksed ($LOW$ - $HIGH$)",
-    "description": "Menu text; manager size column dropdown",
-    "placeholders": {
-      "high": {
-        "content": "$2",
-        "example": "10MB"
-      },
-      "low": {
-        "content": "$1",
-        "example": "1MB"
-      }
-    }
-  },
   "sizeTB": {
     "message": "$S$ TB",
     "description": "Size formatting; tera bytes (you never know)",
@@ -1115,49 +265,9 @@
       }
     }
   },
-  "statusNetwork-active.title": {
-    "message": "Uued allalaadimised alustatakse",
-    "description": "Status bar tooltip; manager network icon"
-  },
-  "statusNetwork-inactive.title": {
-    "message": "Uusi allalaadimisi ei alustata",
-    "description": "Status bar tooltip; manager network icon"
-  },
   "title": {
     "message": "Pealkiri",
     "description": "Column text; Title label (short)"
-  },
-  "toggle-selected-items": {
-    "message": "Lülita valitud üksuste märgistust",
-    "description": "Menu text; select"
-  },
-  "tooltip-date": {
-    "message": "Lisamise aeg:",
-    "description": "Tooltip text; manager/downloads"
-  },
-  "tooltip-eta": {
-    "message": "Jäänud:",
-    "description": "Tooltip text; manager/downloads; Time"
-  },
-  "tooltip-from": {
-    "message": "Allikas:",
-    "description": "Tooltip text; manager/downloads; source URL"
-  },
-  "tooltip-size": {
-    "message": "Suurus:",
-    "description": "Tooltip text; manager/downloads"
-  },
-  "tooltip-speed-average": {
-    "message": "Keskmine:",
-    "description": "Tooltip text; manager/downloads"
-  },
-  "tooltip-speed-current": {
-    "message": "Praegune:",
-    "description": "Tooltip text; manager/downloads"
-  },
-  "uncheck-selected-items": {
-    "message": "Eemalda valitud üksustelt märgistus",
-    "description": "Menu text; select"
   },
   "unlimited": {
     "message": "Piiramatu",
@@ -1166,5 +276,895 @@
   "useonlyonce": {
     "message": "Kasuta üks kord",
     "description": "Label for Use-Once checkboxes"
+  },
+  "add_download": {
+    "message": "Lisa allalaadimine",
+    "description": "Action for adding a download"
+  },
+  "add_new": {
+    "message": "Lisa uus",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add_paused_once": {
+    "message": "Lisa peatatuna ainult sel korral",
+    "description": "Checkbox label"
+  },
+  "add_paused_question": {
+    "message": "Kas tahad selle otsuse meelde jätta ja tulevikus kõik uued allalaadimised lisada peatatuna?",
+    "description": "Messagebox text"
+  },
+  "add_paused_title": {
+    "message": "Alati lisa peatatuna?",
+    "description": "Title for the add-paused dialog"
+  },
+  "ask_again_later": {
+    "message": "Küsi hiljem uuesti",
+    "description": "Button text"
+  },
+  "batch_batch": {
+    "message": "Pakkallalaadimine",
+    "description": "Button text"
+  },
+  "batch_desc": {
+    "message": "Praegune URL paistab sisaldavat juhiseid pakkallalaadimiseks.",
+    "description": ""
+  },
+  "batch_items": {
+    "message": "Üksuseid:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_preview": {
+    "message": "Eelvaade:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_question": {
+    "message": "Kas tahad selle allalaadimise lisada pakina või üksiku allalaadimisena?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_single": {
+    "message": "Üksik allalaadimine",
+    "description": "Button text for batch confirmation"
+  },
+  "batch_title": {
+    "message": "Pakkallalaadimine",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel_download": {
+    "message": "Tühista",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "cannot_be_empty": {
+    "message": "See väli ei saa olla tühi",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change_later_reminder": {
+    "message": "Sa saad seda otsust hiljem Eelistustes muuta",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check_selected_items": {
+    "message": "Märgista valitud üksused",
+    "description": "Menu text"
+  },
+  "conflict_overwrite": {
+    "message": "Kirjuta üle",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_prompt": {
+    "message": "Küsi",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_rename": {
+    "message": "Nimeta ümber",
+    "description": "Option text; prefs/general"
+  },
+  "create_filter": {
+    "message": "Loo filter",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom_filename": {
+    "message": "Kohandatud failinimi",
+    "description": "Label text; single window"
+  },
+  "deffilter_all": {
+    "message": "Kõik failid",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter_arch": {
+    "message": "Arhiivid (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter_aud": {
+    "message": "Audio (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter_bin": {
+    "message": "Tarkvara (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter_doc": {
+    "message": "Dokumendid (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter_img": {
+    "message": "Pildid (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter_imggif": {
+    "message": "GIF-pildid",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter_imgjpg": {
+    "message": "JPEG-pildid",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter_imgpng": {
+    "message": "PNG-pildid",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter_vid": {
+    "message": "Videod (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "disable_other_filters": {
+    "message": "Keela teised",
+    "description": "Checkbox label. Keep it short"
+  },
+  "download_verb": {
+    "message": "Laadi alla",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta_regular_all": {
+    "message": "DownThemAll! - Kõik kaardid",
+    "description": "Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "OneClick! - Kõik kaardid",
+    "description": "Menu text"
+  },
+  "dta_regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_image": {
+    "message": "Salvesta pilt DownThemAll!-iga",
+    "description": "Menu text"
+  },
+  "dta_regular_link": {
+    "message": "Salvesta link DownThemAll!-iga",
+    "description": "Menu text"
+  },
+  "dta_regular_media": {
+    "message": "Salvesta meedia DownThemAll!-iga",
+    "description": "Menu text"
+  },
+  "dta_regular_selection": {
+    "message": "Salvesta valik DownThemAll!-iga",
+    "description": "Menu text"
+  },
+  "dta_turbo": {
+    "message": "OneClick!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_image": {
+    "message": "Salvesta pilt OneClick!-iga",
+    "description": "Menu text"
+  },
+  "dta_turbo_link": {
+    "message": "Salvesta link OneClick!-iga",
+    "description": "Menu text"
+  },
+  "dta_turbo_media": {
+    "message": "Salvesta meedia OneClick!-iga",
+    "description": "Menu text"
+  },
+  "dta_turbo_selection": {
+    "message": "Salvesta valik OneClick!-iga",
+    "description": "Menu text"
+  },
+  "error_invalidMask": {
+    "message": "Vigane nimemuutmise mask",
+    "description": "Error message; single/select window"
+  },
+  "error_invalidReferrer": {
+    "message": "Vigane viitaja",
+    "description": "Error message; single window"
+  },
+  "error_invalidURL": {
+    "message": "Vigane URL",
+    "description": "Error message; single window"
+  },
+  "error_noItemsSelected": {
+    "message": "Ühtki üksust pole valitud",
+    "description": "Error Message; select window"
+  },
+  "fastfilter_placeholder": {
+    "message": "Jokkeravaldis või regulaaravaldis",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "filter_at_least_one": {
+    "message": "Sa pead valima vähemalt ühe filtritüübi!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter_create_title": {
+    "message": "Uue filtri loomine",
+    "description": "Message box title"
+  },
+  "filter_expression": {
+    "message": "Filtri avaldis",
+    "description": "Message box label"
+  },
+  "filter_label": {
+    "message": "Filtri nimi",
+    "description": "Message box label"
+  },
+  "filter_type_link": {
+    "message": "Lingifilter",
+    "description": "Message box checkbox label"
+  },
+  "filter_type_media": {
+    "message": "Meediafilter",
+    "description": "Message box checkbox label"
+  },
+  "filter_types": {
+    "message": "Filtritüübid",
+    "description": "Message box label"
+  },
+  "force_start": {
+    "message": "Sunni käivituma",
+    "description": "Menu text"
+  },
+  "information_title": {
+    "message": "Teave",
+    "description": "Used in message boxes"
+  },
+  "invalid_domain_pref": {
+    "message": "Vigane domeen",
+    "description": "Error message in prefs/network"
+  },
+  "invert_selection": {
+    "message": "Pööra valik",
+    "description": "Menu text"
+  },
+  "key_alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key_ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key_delete": {
+    "message": "Del",
+    "description": "Short for Delete-key"
+  },
+  "key_end": {
+    "message": "End",
+    "description": "Short for End-key"
+  },
+  "key_home": {
+    "message": "Home",
+    "description": "Short for home key"
+  },
+  "key_pagedown": {
+    "message": "PageDown",
+    "description": "Short for pagedown-key"
+  },
+  "key_pageup": {
+    "message": "PageUp",
+    "description": "Short for PageUp-key"
+  },
+  "limited_to": {
+    "message": "Piiratud:",
+    "description": "Label text; used in prefs/network"
+  },
+  "manager_status_items": {
+    "message": "Valmis $COMPLETE$ / $TOTAL$ allalaadimist ($SHOWING$ näidatud), $RUNNING$ käib",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_short": {
+    "message": "Haldur",
+    "description": "Menu text"
+  },
+  "manager_title": {
+    "message": "DownThemAll! haldur",
+    "description": "Window/tab title"
+  },
+  "mask_default": {
+    "message": "Vaikimisi mask",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "move_bottom": {
+    "message": "Lõppu",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move_down": {
+    "message": "Alla",
+    "description": "Action for moving a download down"
+  },
+  "move_top": {
+    "message": "Algusesse",
+    "description": "Action for moving a download to the top"
+  },
+  "move_up": {
+    "message": "Üles",
+    "description": "Action for moving a download up"
+  },
+  "nagging_message": {
+    "message": "Sa oled praeguseks DownThemAll!-iga lisanud $DOWNLOADS$ allalaadimist! Tavakasutajana võiksid edasise arendamise toetamiseks kaaluda annetamist. Täname!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "never_ask_again": {
+    "message": "Ära enam küsi",
+    "description": "Donation button"
+  },
+  "no_links": {
+    "message": "Linke ei leitud!",
+    "description": "Notification text"
+  },
+  "noitems_label": {
+    "message": "Ühtki üksust pole valitud",
+    "description": "Status bar text in select"
+  },
+  "numitems_label": {
+    "message": "$ITEMS$ üksust valitud…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "open_directory": {
+    "message": "Ava kaust",
+    "description": "Menu text; manager context"
+  },
+  "open_file": {
+    "message": "Ava fail",
+    "description": "Menu text; manager context"
+  },
+  "open_link": {
+    "message": "Ava link",
+    "description": "Menu text; select window"
+  },
+  "options_filters": {
+    "message": "Filtrid",
+    "description": "Pref tab text"
+  },
+  "options_general": {
+    "message": "Üldised",
+    "description": "Pref tab text"
+  },
+  "options_network": {
+    "message": "Võrk",
+    "description": "Pref tab text"
+  },
+  "pause_download": {
+    "message": "Peata",
+    "description": "Action for pausing a download"
+  },
+  "pref_add_paused": {
+    "message": "Lisa uued allalaadimised peatatuna, ära käivita neid automaatselt",
+    "description": "Preferences/General"
+  },
+  "pref_concurrent_downloads": {
+    "message": "Samaaegseid allalaadimisi",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "Järjekorra valmissaamisel näita teavitust",
+    "description": "Preferences/General"
+  },
+  "pref_global_turbo": {
+    "message": "Veebilehitseja nupp peaks olema OneClick!",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "Ära näita üldiseid kontekstimenüü kirjeid",
+    "description": "Preferences/General"
+  },
+  "pref_manager_tooltip": {
+    "message": "Näita Halduri kaartidel kohtspikreid",
+    "description": "Preferences/General"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "Mõne allalaadimise järjekorda lisamisel ava Halduri kaart",
+    "description": "Preferences/General"
+  },
+  "pref_queue_notification": {
+    "message": "Uute allalaadimiste järjekorda lisamisel näita teavitust",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "Pärast taaskäivitamist eemalda puuduvad allalaadimised",
+    "description": "Preferences/General"
+  },
+  "pref_show_urls": {
+    "message": "Näita nimede asemel URLe",
+    "description": "Preferences/General"
+  },
+  "pref_text_links": {
+    "message": "Ürita leida linke veebisaidi tekstist (aeglasem)",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "Haldur",
+    "description": "Preferences/General; group text"
+  },
+  "pref_netglobal": {
+    "message": "Globaalsed võrgupiirangud",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queueing": {
+    "message": "Allalaadimiste järjekorda lisamine",
+    "description": "Preferences/General; group text"
+  },
+  "pref_ui": {
+    "message": "Kasutajaliides",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_conflicts": {
+    "message": "Kui fail on olemas",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "Eelistused",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "DownThemAll! eelistused",
+    "description": "Window/tab title; Preferences"
+  },
+  "queue_finished": {
+    "message": "Allalaadimiste järjekord on valmis saanud",
+    "description": "Notification text"
+  },
+  "queued_download": {
+    "message": "Järjekorda lisati 1 allalaadimine!",
+    "description": "Notification text; single download"
+  },
+  "queued_downloads": {
+    "message": "Järjekorda lisati $COUNT$ allalaadimist!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "remove_all_complete_downloads": {
+    "message": "Eemalda kõik valmis",
+    "description": "Menu text"
+  },
+  "remove_all_downloads": {
+    "message": "Eemalda kõik",
+    "description": "Menu text"
+  },
+  "remove_all_downloads_question": {
+    "message": "Kas tahad eemaldada KÕIK allalaadimised?",
+    "description": "Messagebox text"
+  },
+  "remove_batch_downloads": {
+    "message": "Eemalda praegune pakk",
+    "description": "Menu text"
+  },
+  "remove_batch_downloads_question": {
+    "message": "Kas tahad eemaldada kõik allalaadimised, mis on pärit valitud allalaadimisega samast pakist?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads": {
+    "message": "Eemalda valmis allalaadimised",
+    "description": "Action for removing complete downloads"
+  },
+  "remove_complete_downloads_question": {
+    "message": "Kas tahad eemaldada kõik valmis allalaadimised?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_filter_downloads_question": {
+    "message": "Kas tahad eemaldada kõik valmis allalaadimised, mis vastavad filtrile '$FILTER$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "message": "Kas tahad eemaldada kõik valmis allalaadimised praeguses valikus?",
+    "description": "Messagebox text"
+  },
+  "remove_domain_complete_downloads": {
+    "message": "Eemalda praegusest domeenist pärit valmis allalaadimised",
+    "description": "Menu text"
+  },
+  "remove_domain_complete_downloads_question": {
+    "message": "Kas tahad eemaldada kõik domeenist '$DOMAIN$' pärit valmis allalaadimised?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "message": "Eemalda praegune domeen",
+    "description": "Menu text"
+  },
+  "remove_domain_downloads_question": {
+    "message": "Kas tahad eemaldada kõik domeenist '$DOMAIN$' pärit allalaadimised?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "message": "Eemalda allalaadimine",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove_download_question": {
+    "message": "Kas tahad eemaldada valitud allalaadimised",
+    "description": "Messagebox text"
+  },
+  "remove_downloads": {
+    "message": "Eemalda allalaadimised",
+    "description": "Menu text"
+  },
+  "remove_downloads_title": {
+    "message": "Kas oled kindel, et tahad allalaadimised eemaldada?",
+    "description": "Messagebox title; manager"
+  },
+  "remove_failed_downloads": {
+    "message": "Eemalda ebaõnnestunud",
+    "description": "Menu text"
+  },
+  "remove_failed_downloads_question": {
+    "message": "Kas tahad eemaldada kõik ebaõnnestunud allalaadimised?",
+    "description": "Messagebox text"
+  },
+  "remove_filter_downloads_question": {
+    "message": "Kas tahad eemaldada kõik filtrile '$FILTER$' vastavad allalaadimised?",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "message": "Tühjenda puuduvad allalaadimised",
+    "description": "Menu text"
+  },
+  "remove_missing_downloads_question": {
+    "message": "Kas tahad eemaldada kõik puuduvad allalaadimised?",
+    "description": "Messagebox text"
+  },
+  "remove_paused_downloads": {
+    "message": "Eemalda peatatud",
+    "description": "Menu text"
+  },
+  "remove_paused_downloads_question": {
+    "message": "Kas tahad eemaldada kõik peatatud allalaadimised?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_complete_downloads": {
+    "message": "Eemalda valmis valikust",
+    "description": "Menu text"
+  },
+  "remove_selected_complete_downloads_question": {
+    "message": "Kas tahad eemaldada kõik valmis allalaadimised praeguses valikus?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_downloads": {
+    "message": "Eemalda valitud",
+    "description": "Menu text"
+  },
+  "renamer_batch": {
+    "message": "Pakinumber",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_d": {
+    "message": "Lisamise aeg - Päev",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_date": {
+    "message": "Lisamise aeg",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_domain": {
+    "message": "Domeeninimi (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ext": {
+    "message": "Faililaiend",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_hh": {
+    "message": "Lisamise aeg - Tunnid",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_host": {
+    "message": "Hostinimi",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_idx": {
+    "message": "Üksuse järjekorranumber pakis",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_info": {
+    "message": "Kui lisad 'flat', näiteks *flatsubdirs*, siis asendatakse kõik väärtuse kaldkriipsud, seega ei looda kaustasid",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer_m": {
+    "message": "Lisamise aeg - Kuu",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_mm": {
+    "message": "Lisamise aeg - Minutid",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_name": {
+    "message": "Failinimi",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_num": {
+    "message": "Sildi *batch* pseudonüüm",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_qstring": {
+    "message": "Päringusõne",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ref": {
+    "message": "Viitaja",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refdomain": {
+    "message": "Viitav domeeninimi (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refext": {
+    "message": "Viitav faililaiend",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refhost": {
+    "message": "Viitav hostinimi",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refname": {
+    "message": "Viitava faili nimi",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refqstring": {
+    "message": "Viitaja päringusõne",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refsubdirs": {
+    "message": "Viitaja tee",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refurl": {
+    "message": "Viitav URL (ilma protokollita)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ss": {
+    "message": "Lisamise aeg - Sekundid",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_subdirs": {
+    "message": "Tee",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_tags": {
+    "message": "Nimemuutmismaski sildid",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_text": {
+    "message": "Kirjelduse tekst",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "Pealkirja tekst",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_url": {
+    "message": "URL (ilma protokollita)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_y": {
+    "message": "Lisamise aeg - Aasta",
+    "description": "Mask text; see mask button"
+  },
+  "reset_confirmations": {
+    "message": "Lähtesta meelde jäetud kinnitused",
+    "description": "Button text; pref/General"
+  },
+  "reset_confirmations_done": {
+    "message": "Kõik eelnevalt meelde jäetud kinnitused on lähtestatud!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset_layouts": {
+    "message": "Lähtesta kasutajaliidese kohandamised",
+    "description": "Button text; pref/General"
+  },
+  "reset_layouts_done": {
+    "message": "Kõik eeelnevalt meelde jäetud välimuse kohandamised on lähtestatud! Võibolla on aknad/kaardid vaja uuesti laadida.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume_download": {
+    "message": "Jätka",
+    "description": "Action for resuming a download"
+  },
+  "select_all": {
+    "message": "Vali kõik",
+    "description": "Menu text; e.g. select context"
+  },
+  "select_checked": {
+    "message": "Vali märgistatud",
+    "description": "Menu text; select context"
+  },
+  "select_none": {
+    "message": "Eemalda kõigilt valik",
+    "description": "Menu text; select context"
+  },
+  "select_title": {
+    "message": "DownThemAll! - Vali oma allalaadimised",
+    "description": "Title of the select window"
+  },
+  "set_mask": {
+    "message": "Määratle nimemuutmismask",
+    "description": "Menu text; select window"
+  },
+  "single_batchexamples": {
+    "message": "Toetatakse ka pakkallalaadimisi, nt.:",
+    "description": "Header text; single window"
+  },
+  "single_header": {
+    "message": "Sisesta allalaadimise URL (link) ja muud suvandid",
+    "description": "Header text; single window"
+  },
+  "single_title": {
+    "message": "DownThemAll! - Lingi lisamine",
+    "description": "Title of single window"
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ / $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "Teadmata",
+    "description": "Status text; manager size column"
+  },
+  "sizes_huge": {
+    "message": "Tohutud (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "message": "Suured ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "message": "Keskmised ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "message": "Väiksed ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "message": "Uued allalaadimised alustatakse",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork_inactive_title": {
+    "message": "Uusi allalaadimisi ei alustata",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "toggle_selected_items": {
+    "message": "Lülita valitud üksuste märgistust",
+    "description": "Menu text; select"
+  },
+  "tooltip_date": {
+    "message": "Lisamise aeg:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_eta": {
+    "message": "Jäänud:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip_from": {
+    "message": "Allikas:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip_size": {
+    "message": "Suurus:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_average": {
+    "message": "Keskmine:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_current": {
+    "message": "Praegune:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck_selected_items": {
+    "message": "Eemalda valitud üksustelt märgistus",
+    "description": "Menu text; select"
   }
 }
