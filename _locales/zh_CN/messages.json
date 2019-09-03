@@ -947,35 +947,35 @@
   },
   "renamer_ref": {
     "description": "Mask text; see mask button",
-    "message": "Referrer"
+    "message": "来源"
   },
   "renamer_refdomain": {
     "description": "Mask text; see mask button",
-    "message": "Referrer 域 (TLD)"
+    "message": "来源域 (TLD)"
   },
   "renamer_refext": {
     "description": "Mask text; see mask button",
-    "message": "Referrer 文件扩展名"
+    "message": "来源文件扩展名"
   },
   "renamer_refhost": {
     "description": "Mask text; see mask button",
-    "message": "Referrer 主机名"
+    "message": "来源主机名"
   },
   "renamer_refname": {
     "description": "Mask text; see mask button",
-    "message": "Referrer 文件名"
+    "message": "来源文件名"
   },
   "renamer_refqstring": {
     "description": "Mask text; see mask button",
-    "message": "Referrer 查询字符串"
+    "message": "来源查询字符串"
   },
   "renamer_refsubdirs": {
     "description": "Mask text; see mask button",
-    "message": "Referrer 路径"
+    "message": "来源路径"
   },
   "renamer_refurl": {
     "description": "Mask text; see mask button",
-    "message": "Referrer URL （无需协议）"
+    "message": "来源 URL （无需协议）"
   },
   "renamer_ss": {
     "description": "Mask text; see mask button",
