@@ -109,7 +109,7 @@
   },
   "language": {
     "description": "Lanuage Name in your language",
-    "message": "中文（简体)"
+    "message": "中文（简体）"
   },
   "language_code": {
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR",
@@ -141,7 +141,7 @@
   },
   "queued": {
     "description": "Status text",
-    "message": "已加入队列"
+    "message": "已入队"
   },
   "referrer": {
     "description": "Label for \"Referrer\"",
