@@ -1,0 +1,1170 @@
+{
+  "CRASH": {
+    "description": "Error Message",
+    "message": "瀏覽器內部錯誤"
+  },
+  "FILE_FAILED": {
+    "description": "Error Message",
+    "message": "檔案存取錯誤"
+  },
+  "NETWORK_FAILED": {
+    "description": "Error Message",
+    "message": "網路錯誤"
+  },
+  "SERVER_BAD_CONTENT": {
+    "description": "Error message",
+    "message": "查無"
+  },
+  "SERVER_FAILED": {
+    "description": "Error message",
+    "message": "伺服器錯誤"
+  },
+  "SERVER_FORBIDDEN": {
+    "description": "Error message",
+    "message": "禁止"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "description": "Error message",
+    "message": "未授權"
+  },
+  "addpaused": {
+    "description": "Action: Add paused",
+    "message": "新增暫停項目"
+  },
+  "cancel": {
+    "description": "Button text: Cancel",
+    "message": "取消"
+  },
+  "canceled": {
+    "description": "Download status text",
+    "message": "已取消"
+  },
+  "colConnections": {
+    "description": "Table column in prefs/network",
+    "message": "同時連線數"
+  },
+  "colDomain": {
+    "description": "Table column in manager",
+    "message": "網域"
+  },
+  "colETA": {
+    "description": "Table column in manager",
+    "message": "預估時間"
+  },
+  "colNameURL": {
+    "description": "Table column in manager",
+    "message": "名稱/位址"
+  },
+  "colPercent": {
+    "description": "Table column in manager",
+    "message": "%"
+  },
+  "colProgress": {
+    "description": "Table column in manager",
+    "message": "進度"
+  },
+  "colSegments": {
+    "description": "Table column in manager",
+    "message": "分段"
+  },
+  "colSize": {
+    "description": "Table column in manager",
+    "message": "大小"
+  },
+  "colSpeed": {
+    "description": "Table column in manager",
+    "message": "速率"
+  },
+  "delete": {
+    "description": "button text",
+    "message": "刪除"
+  },
+  "description": {
+    "description": "Description (keep it short); e.g. the description column in select",
+    "message": "描述"
+  },
+  "donate": {
+    "description": "Donate button",
+    "message": "贊助!"
+  },
+  "done": {
+    "description": "Status text",
+    "message": "完成"
+  },
+  "download": {
+    "description": "Download (noun); e.g. Download column in select",
+    "message": "下載"
+  },
+  "extensionDescription": {
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one",
+    "message": "為你瀏覽器而生的大量下載工具"
+  },
+  "fastfiltering": {
+    "description": "Label for Fast Filtering input",
+    "message": "快速篩選"
+  },
+  "finishing": {
+    "description": "Status text",
+    "message": "結束中"
+  },
+  "language": {
+    "description": "Lanuage Name in your language",
+    "message": "正體中文 (TW)"
+  },
+  "language_code": {
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR",
+    "message": "zh-TW"
+  },
+  "links": {
+    "description": "Links tab label (short); select window",
+    "message": "連結"
+  },
+  "mask": {
+    "description": "Renaming mask (short); used in e.g. select",
+    "message": "遮罩"
+  },
+  "media": {
+    "description": "Media label (short)",
+    "message": "媒體"
+  },
+  "missing": {
+    "description": "Status text in manager",
+    "message": "檔案遺失"
+  },
+  "ok": {
+    "description": "Button text; Used in message boxes",
+    "message": "OK"
+  },
+  "paused": {
+    "description": "Status text; manager",
+    "message": "暫停"
+  },
+  "queued": {
+    "description": "Status text",
+    "message": "等候中"
+  },
+  "referrer": {
+    "description": "Label for \"Referrer\"",
+    "message": "參照"
+  },
+  "remember": {
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager",
+    "message": "記住選擇"
+  },
+  "rename": {
+    "description": "UI for renaming; currently unused",
+    "message": "重新命名"
+  },
+  "renmask": {
+    "description": "Renaming mask (long)",
+    "message": "重新命名遮罩"
+  },
+  "reset": {
+    "description": "Button text; pref window",
+    "message": "重設"
+  },
+  "running": {
+    "description": "Status text",
+    "message": "運行中"
+  },
+  "save": {
+    "description": "Button text; e.g. prefs/Network",
+    "message": "儲存"
+  },
+  "search": {
+    "description": "Placeholder text; manager status search field",
+    "message": "搜尋…"
+  },
+  "sizeB": {
+    "description": "Size formatting; bytes",
+    "message": "$S$B",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "description": "Size formatting; giga bytes",
+    "message": "$S$GB",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "description": "Size formatting; kilo bytes",
+    "message": "$S$KB",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "description": "Size formatting; mega bytes",
+    "message": "$S$MB",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "description": "Size formatting; peta bytes (you never know)",
+    "message": "$S$PB",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizeTB": {
+    "description": "Size formatting; tera bytes (you never know)",
+    "message": "$S$TB",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "speedB": {
+    "description": "Speed formatting; bytes",
+    "message": "$SPEED$b/s",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "description": "Speed formatting; kilo bytes",
+    "message": "$SPEED$KB/s",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "description": "Speed formatting; mega bytes",
+    "message": "$SPEED$MB/s",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "title": {
+    "description": "Column text; Title label (short)",
+    "message": "標題"
+  },
+  "unlimited": {
+    "description": "Option text; Prefs/Network",
+    "message": "無上限"
+  },
+  "useonlyonce": {
+    "description": "Label for Use-Once checkboxes",
+    "message": "使用一次"
+  },
+  "add_download": {
+    "description": "Action for adding a download",
+    "message": "新增下載"
+  },
+  "add_new": {
+    "description": "Button text (adding filters, limits and such)",
+    "message": "新增"
+  },
+  "add_paused_once": {
+    "description": "Checkbox label",
+    "message": "此次加入暫停的下載"
+  },
+  "add_paused_question": {
+    "description": "Messagebox text",
+    "message": "是否記住選擇，往後皆新增暫停的下載？"
+  },
+  "add_paused_title": {
+    "description": "Title for the add-paused dialog",
+    "message": "往後皆新增暫停的下載？"
+  },
+  "ask-again-later": {
+    "description": "Button text",
+    "message": "以後再說"
+  },
+  "batch_batch": {
+    "description": "Button text",
+    "message": "批次下載"
+  },
+  "batch_desc": {
+    "description": "",
+    "message": "當前URL位置貌似包含批次下載指示。"
+  },
+  "batch_items": {
+    "description": "Messagebox info text for batch confirmations",
+    "message": "項目個數:"
+  },
+  "batch_preview": {
+    "description": "Messagebox info text for batch confirmations",
+    "message": "預覽:"
+  },
+  "batch_question": {
+    "description": "Messagebox info text for batch confirmations",
+    "message": "要加入這些當作批次或單次下載嗎？"
+  },
+  "batch_single": {
+    "description": "Button text for batch confirmation",
+    "message": "單一下載"
+  },
+  "batch_title": {
+    "description": "Messagebox title for batch confirmations",
+    "message": "批次下載"
+  },
+  "cancel_download": {
+    "description": "Action to cancel downloads, e.g. from the context menu",
+    "message": "取消"
+  },
+  "cannot_be_empty": {
+    "description": "Error message when an input field is empty but has to have a value",
+    "message": "此欄位必填"
+  },
+  "change_later_reminder": {
+    "description": "Checkbox label text for decision confirmations",
+    "message": "您稍後可在偏好設定中修改"
+  },
+  "check_selected_items": {
+    "description": "Menu text",
+    "message": "檢查選取項目"
+  },
+  "conflict_overwrite": {
+    "description": "Option text; prefs/general",
+    "message": "覆寫"
+  },
+  "conflict_prompt": {
+    "description": "Option text; prefs/general",
+    "message": "提示"
+  },
+  "conflict_rename": {
+    "description": "Option text; prefs/general",
+    "message": "重新命名"
+  },
+  "create_filter": {
+    "description": "Button text; Create filter dialog; prefs/filters",
+    "message": "新增篩選器"
+  },
+  "custom_filename": {
+    "description": "Label text; single window",
+    "message": "自訂檔名"
+  },
+  "deffilter_all": {
+    "description": "Filter label for the All files filter",
+    "message": "所有檔案"
+  },
+  "deffilter_arch": {
+    "description": "Filter label for the Archives filter",
+    "message": "壓縮檔 (zip, rar, 7z, …)"
+  },
+  "deffilter_aud": {
+    "description": "Filter label for the Audio filter",
+    "message": "聲音檔 (mp3, flac, wav, …)"
+  },
+  "deffilter_bin": {
+    "description": "Filter label for the Software filter",
+    "message": "軟體 (exe, msi, …)"
+  },
+  "deffilter_doc": {
+    "description": "Filter label for the Documents filter",
+    "message": "文件 (pdf, odf, docx, …)"
+  },
+  "deffilter_img": {
+    "description": "Filter label for the Images filter",
+    "message": "圖片 (jpeg, png, gif, …)"
+  },
+  "deffilter_imggif": {
+    "description": "Filter label for the GIF filter",
+    "message": "GIF 圖片"
+  },
+  "deffilter_imgjpg": {
+    "description": "Filter label for the JPEG filter",
+    "message": "JPEG Images"
+  },
+  "deffilter_imgpng": {
+    "description": "Filter label for the PNG filter",
+    "message": "PNG 圖片"
+  },
+  "deffilter_vid": {
+    "description": "Filter label for the Videos filter",
+    "message": "影片 (mp4, webm, mkv, …)"
+  },
+  "disable_other_filters": {
+    "description": "Checkbox label. Keep it short",
+    "message": "關閉其他"
+  },
+  "download_verb": {
+    "description": "Download (verb/action); e.g. in single and select buttons",
+    "message": "下載"
+  },
+  "dta_regular_all": {
+    "description": "Menu text",
+    "message": "DownThemAll!- 全部分頁"
+  },
+  "dta_turbo_all": {
+    "description": "Menu text",
+    "message": "OneClick!- 全部分頁"
+  },
+  "dta_regular": {
+    "description": "Regular dta action; Menu text",
+    "message": "DownThemAll!"
+  },
+  "dta_regular_image": {
+    "description": "Menu text",
+    "message": "以 DownThemAll! 儲存圖片"
+  },
+  "dta_regular_link": {
+    "description": "Menu text",
+    "message": "以 DownThemAll! 下載連結!"
+  },
+  "dta_regular_media": {
+    "description": "Menu text",
+    "message": "以 DownThemAll! 儲存媒體檔案"
+  },
+  "dta_regular_selection": {
+    "description": "Menu text",
+    "message": "以 DownThemAll! 儲存選取項目"
+  },
+  "dta_turbo": {
+    "description": "OneClick! action; Menu text",
+    "message": "OneClick!"
+  },
+  "dta_turbo_image": {
+    "description": "Menu text",
+    "message": "以 OneClick! 儲存圖片"
+  },
+  "dta_turbo_link": {
+    "description": "Menu text",
+    "message": "以 OneClick! 儲存連結"
+  },
+  "dta_turbo_media": {
+    "description": "Menu text",
+    "message": "以 OneClick! 儲存媒體"
+  },
+  "dta_turbo_selection": {
+    "description": "Menu text",
+    "message": "以 OneClick! 儲存選取項目"
+  },
+  "error_invalidMask": {
+    "description": "Error message; single/select window",
+    "message": "無效的命名遮罩"
+  },
+  "error_invalidReferrer": {
+    "description": "Error message; single window",
+    "message": "Referrer 失效"
+  },
+  "error_invalidURL": {
+    "description": "Error message; single window",
+    "message": "無效 URL地址"
+  },
+  "error_noItemsSelected": {
+    "description": "Error Message; select window",
+    "message": "未選擇項目"
+  },
+  "fastfilter_placeholder": {
+    "description": "Placeholder for fastfilter inputs",
+    "message": "星號表示法或正規表示式"
+  },
+  "filter_at_least_one": {
+    "description": "Error message when no filter types are selected for a filter in the preferences UI",
+    "message": "你最少得選一種篩選器"
+  },
+  "filter_create_title": {
+    "description": "Message box title",
+    "message": "建立新篩選器"
+  },
+  "filter_expression": {
+    "description": "Message box label",
+    "message": "篩選器表示式"
+  },
+  "filter_label": {
+    "description": "Message box label",
+    "message": "篩選器標籤"
+  },
+  "filter_type_link": {
+    "description": "Message box checkbox label",
+    "message": "連結篩選器"
+  },
+  "filter_type_media": {
+    "description": "Message box checkbox label",
+    "message": "媒體篩選器"
+  },
+  "filter_types": {
+    "description": "Message box label",
+    "message": "篩選器類型"
+  },
+  "force_start": {
+    "description": "Menu text",
+    "message": "強制開始"
+  },
+  "information_title": {
+    "description": "Used in message boxes",
+    "message": "資訊"
+  },
+  "invalid_domain_pref": {
+    "description": "Error message in prefs/network",
+    "message": "無效網域"
+  },
+  "invert_selection": {
+    "description": "Menu text",
+    "message": "反向選取"
+  },
+  "key_alt": {
+    "description": "Short for Alt-Key",
+    "message": "Alt"
+  },
+  "key_ctrl": {
+    "description": "Short for Ctrl-Key",
+    "message": "Ctrl"
+  },
+  "key_delete": {
+    "description": "Short for Delete-key",
+    "message": "Del"
+  },
+  "key_end": {
+    "description": "Short for End-key",
+    "message": "End"
+  },
+  "key_home": {
+    "description": "Short for home key",
+    "message": "Home"
+  },
+  "key_pagedown": {
+    "description": "Short for pagedown-key",
+    "message": "PageDown"
+  },
+  "key_pageup": {
+    "description": "Short for PageUp-key",
+    "message": "PageUp"
+  },
+  "limited_to": {
+    "description": "Label text; used in prefs/network",
+    "message": "僅限於"
+  },
+  "manager_status_items": {
+    "description": "Status bar text; manager",
+    "message": "完成 $COMPLETE$ 個 \/ 共 $TOTAL$ 個下載 ($SHOWING$ 顯示), $RUNNING$ 進行中",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_short": {
+    "description": "Menu text",
+    "message": "下載管理"
+  },
+  "manager_title": {
+    "description": "Window/tab title",
+    "message": "DownThemAll!下載管理"
+  },
+  "mask_default": {
+    "description": "Status text; Used in the mask column, select window",
+    "message": "預設遮罩"
+  },
+  "move_bottom": {
+    "description": "Action for moving a download to the bottom",
+    "message": "置底"
+  },
+  "move_down": {
+    "description": "Action for moving a download down",
+    "message": "下移"
+  },
+  "move_top": {
+    "description": "Action for moving a download to the top",
+    "message": "置頂"
+  },
+  "move_up": {
+    "description": "Action for moving a download up",
+    "message": "上移"
+  },
+  "nagging_message": {
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "message": "目前已透過DownThemAll! 加入 $DOWNLOADS$ 個下載您可以贊助我們支持更進一步的開發謝謝!",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "never_ask_again": {
+    "description": "Donation button",
+    "message": "不再詢問"
+  },
+  "no_links": {
+    "description": "Notification text",
+    "message": "查無連結!"
+  },
+  "noitems_label": {
+    "description": "Status bar text in select",
+    "message": "未選擇項目"
+  },
+  "numitems_label": {
+    "description": "Status bar text in select; Number of items selected (label)",
+    "message": "已選 $ITEMS$ 個項目...",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "open_directory": {
+    "description": "Menu text; manager context",
+    "message": "開啟資料匣"
+  },
+  "open_file": {
+    "description": "Menu text; manager context",
+    "message": "開啟檔案"
+  },
+  "open_link": {
+    "description": "Menu text; select window",
+    "message": "開啟連結"
+  },
+  "options_filters": {
+    "description": "Pref tab text",
+    "message": "篩選器"
+  },
+  "options_general": {
+    "description": "Pref tab text",
+    "message": "一般"
+  },
+  "options_network": {
+    "description": "Pref tab text",
+    "message": "網路"
+  },
+  "pause_download": {
+    "description": "Action for pausing a download",
+    "message": "暫停"
+  },
+  "pref_add_paused": {
+    "description": "Preferences/General",
+    "message": "加入暫停的下載，而不直接開始下載"
+  },
+  "pref_concurrent_downloads": {
+    "description": "Preferences/Network",
+    "message": "同時下載數"
+  },
+  "pref_finish_notification": {
+    "description": "Preferences/General",
+    "message": "全部下載完成後通知"
+  },
+  "pref_global_turbo": {
+    "description": "Preferences/General",
+    "message": "瀏覽器按鍵設為 OneClick!"
+  },
+  "pref_hide_context": {
+    "description": "Preferences/General",
+    "message": "不在一般右鍵快捷選單中顯示"
+  },
+  "pref_manager_tooltip": {
+    "description": "Preferences/General",
+    "message": "管理分頁中顯示提示"
+  },
+  "pref_open_manager_on_queue": {
+    "description": "Preferences/General",
+    "message": "加入下載後開啟管理分頁"
+  },
+  "pref_queue_notification": {
+    "description": "Preferences/General",
+    "message": "加入新下載後顯示通知"
+  },
+  "pref_remove_missing_on_init": {
+    "description": "Preferences/General",
+    "message": "重啟後清除檔案遺失的下載項目"
+  },
+  "pref_show_urls": {
+    "description": "Preferences/General",
+    "message": "顯示 URL位址，取代檔名"
+  },
+  "pref_text_links": {
+    "description": "Preferences/General",
+    "message": "試著從網頁文字尋找連結〈較慢〉"
+  },
+  "pref_manager": {
+    "description": "Preferences/General; group text",
+    "message": "下載管理"
+  },
+  "pref_netglobal": {
+    "description": "Preferences/General; group text",
+    "message": "全域網路限制"
+  },
+  "pref_queueing": {
+    "description": "Preferences/General; group text",
+    "message": "下載清單數"
+  },
+  "pref_ui": {
+    "description": "Preferences/General; group text",
+    "message": "操作介面"
+  },
+  "prefs_conflicts": {
+    "description": "Preferences/General; group text",
+    "message": "相同檔名檔案已存在時"
+  },
+  "prefs_short": {
+    "description": "Menu text; Preferences",
+    "message": "偏好設定"
+  },
+  "prefs_title": {
+    "description": "Window/tab title; Preferences",
+    "message": "DownThemAll!偏好設定"
+  },
+  "queue_finished": {
+    "description": "Notification text",
+    "message": "完成清單下載"
+  },
+  "queued_download": {
+    "description": "Notification text; single download",
+    "message": "一個項目開始下載!"
+  },
+  "queued_downloads": {
+    "description": "Notification text; multiple downloads",
+    "message": "$COUNT$ 個下載等候中",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "remove_all_complete_downloads": {
+    "description": "Menu text",
+    "message": "移除所有完成項目"
+  },
+  "remove_all_downloads": {
+    "description": "Menu text",
+    "message": "移除所有項目"
+  },
+  "remove_all_downloads_question": {
+    "description": "Messagebox text",
+    "message": "要移除所有下載嗎？"
+  },
+  "remove_batch_downloads": {
+    "description": "Menu text",
+    "message": "刪除當前批次作業"
+  },
+  "remove_batch_downloads_question": {
+    "description": "Messagebox text",
+    "message": "要移除選擇項目的整個批次下載嗎？"
+  },
+  "remove_complete_downloads": {
+    "description": "Action for removing complete downloads",
+    "message": "移除完成下載"
+  },
+  "remove_complete_downloads_question": {
+    "description": "Messagebox text",
+    "message": "要移除所有完成的下載嗎？"
+  },
+  "remove_complete_filter_downloads_question": {
+    "description": "Messagebox text",
+    "message": "要移除所有 '$FILTER$' 中完成的下載嗎？",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "description": "Messagebox text",
+    "message": "要移除所有選取中的完成項目？"
+  },
+  "remove_domain_complete_downloads": {
+    "description": "Menu text",
+    "message": "移除當前網域已完成的下載"
+  },
+  "remove_domain_complete_downloads_question": {
+    "description": "Messagebox text",
+    "message": "要移除從網域 '$DOMAIN$' 下載完成的項目嗎？",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "description": "Menu text",
+    "message": "移除當前網域"
+  },
+  "remove_domain_downloads_question": {
+    "description": "Messagebox text",
+    "message": "要移除網域 '$DOMAIN$' 所有的下載任務嗎？",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "description": "Action for removing a download, no matter what state",
+    "message": "刪除下載任務"
+  },
+  "remove_download_question": {
+    "description": "Messagebox text",
+    "message": "要刪除選取的下載任務嗎？"
+  },
+  "remove_downloads": {
+    "description": "Menu text",
+    "message": "移除下載任務"
+  },
+  "remove_downloads_title": {
+    "description": "Messagebox title; manager",
+    "message": "要移除下載任務嗎？"
+  },
+  "remove_failed_downloads": {
+    "description": "Menu text",
+    "message": "移除失敗任務"
+  },
+  "remove_failed_downloads_question": {
+    "description": "Messagebox text",
+    "message": "你要移除所有失敗的下載任務嗎？"
+  },
+  "remove_filter_downloads_question": {
+    "description": "Mesagebox text",
+    "message": "你要移除所有符合 '$FILTER$' 的下載任務嗎？",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "description": "Menu text",
+    "message": "清除檔案遺失的下載項目"
+  },
+  "remove_missing_downloads_question": {
+    "description": "Messagebox text",
+    "message": "要清除所有檔案遺失的項目嗎？"
+  },
+  "remove_paused_downloads": {
+    "description": "Menu text",
+    "message": "刪除暫停任務"
+  },
+  "remove_paused_downloads_question": {
+    "description": "Messagebox text",
+    "message": "要移除所有暫停任務嗎？"
+  },
+  "remove_selected_complete_downloads": {
+    "description": "Menu text",
+    "message": "移除選取中的完成項目"
+  },
+  "remove_selected_complete_downloads_question": {
+    "description": "Messagebox text",
+    "message": "要移除所有選取中的完成項目？"
+  },
+  "remove_selected_downloads": {
+    "description": "Menu text",
+    "message": "移除選取項目"
+  },
+  "renamer_batch": {
+    "description": "Mask text; see mask button",
+    "message": "批次號碼"
+  },
+  "renamer_d": {
+    "description": "Mask text; see mask button",
+    "message": "加入日期 - 日"
+  },
+  "renamer_date": {
+    "description": "Mask text; see mask button",
+    "message": "加入日期"
+  },
+  "renamer_domain": {
+    "description": "Mask text; see mask button",
+    "message": "網域名稱 (TLD)"
+  },
+  "renamer_ext": {
+    "description": "Mask text; see mask button",
+    "message": "副檔名"
+  },
+  "renamer_hh": {
+    "description": "Mask text; see mask button",
+    "message": "加入日期 - 時"
+  },
+  "renamer_host": {
+    "description": "Mask text; see mask button",
+    "message": "主機名稱"
+  },
+  "renamer_idx": {
+    "description": "Mask text; see mask button",
+    "message": "批次中的項目號碼"
+  },
+  "renamer_info": {
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!",
+    "message": "加入 'flat'，像是 *flatsubdirs* 會替換所有的斜線，避免建立子目錄"
+  },
+  "renamer_m": {
+    "description": "Mask text; see mask button",
+    "message": "加入日期 - 月"
+  },
+  "renamer_mm": {
+    "description": "Mask text; see mask button",
+    "message": "加入日期 - 分"
+  },
+  "renamer_name": {
+    "description": "Mask text; see mask button",
+    "message": "檔案名稱"
+  },
+  "renamer_num": {
+    "description": "Mask text; see mask button",
+    "message": "*batch* 的別名"
+  },
+  "renamer_qstring": {
+    "description": "Mask text; see mask button",
+    "message": "查詢字串"
+  },
+  "renamer_ref": {
+    "description": "Mask text; see mask button",
+    "message": "參照"
+  },
+  "renamer_refdomain": {
+    "description": "Mask text; see mask button",
+    "message": "參照網域名稱 (TLD)"
+  },
+  "renamer_refext": {
+    "description": "Mask text; see mask button",
+    "message": "參照副檔名"
+  },
+  "renamer_refhost": {
+    "description": "Mask text; see mask button",
+    "message": "參照主機名稱"
+  },
+  "renamer_refname": {
+    "description": "Mask text; see mask button",
+    "message": "參照檔案名稱"
+  },
+  "renamer_refqstring": {
+    "description": "Mask text; see mask button",
+    "message": "參照查詢字串"
+  },
+  "renamer_refsubdirs": {
+    "description": "Mask text; see mask button",
+    "message": "參照路徑"
+  },
+  "renamer_refurl": {
+    "description": "Mask text; see mask button",
+    "message": "參照 URL位址 (不含傳輸協定)"
+  },
+  "renamer_ss": {
+    "description": "Mask text; see mask button",
+    "message": "加入日期 - 秒"
+  },
+  "renamer_subdirs": {
+    "description": "Mask text; see mask button",
+    "message": "路徑"
+  },
+  "renamer_tags": {
+    "description": "Mask text; see mask button",
+    "message": "重新命名遮罩標籤"
+  },
+  "renamer_text": {
+    "description": "Mask text; see mask button",
+    "message": "描述文字"
+  },
+  "renamer_title": {
+    "description": "Mask text; see mask button",
+    "message": "標題文字"
+  },
+  "renamer_url": {
+    "description": "Mask text; see mask button",
+    "message": "URL位址 (不含傳輸協定)"
+  },
+  "renamer_y": {
+    "description": "Mask text; see mask button",
+    "message": "加入日期 - 年"
+  },
+  "reset_confirmations": {
+    "description": "Button text; pref/General",
+    "message": "重設記住選擇"
+  },
+  "reset_confirmations_done": {
+    "description": "Messagebox text; pref/General",
+    "message": "已重設所有未來皆是的確認!"
+  },
+  "reset_layouts": {
+    "description": "Button text; pref/General",
+    "message": "重設操作介面"
+  },
+  "reset_layouts_done": {
+    "description": "Messagebox text; pref/General",
+    "message": "已重設客製化排版!需要重新整理視窗/分頁"
+  },
+  "resume_download": {
+    "description": "Action for resuming a download",
+    "message": "恢復下載"
+  },
+  "select_all": {
+    "description": "Menu text; e.g. select context",
+    "message": "全選"
+  },
+  "select_checked": {
+    "description": "Menu text; select context",
+    "message": "選取勾選者"
+  },
+  "select_none": {
+    "description": "Menu text; select context",
+    "message": "清除選取"
+  },
+  "select_title": {
+    "description": "Title of the select window",
+    "message": "DownThemAll!- 選擇下載"
+  },
+  "set_mask": {
+    "description": "Menu text; select window",
+    "message": "設定重新名命遮罩"
+  },
+  "single_batchexamples": {
+    "description": "Header text; single window",
+    "message": "支援批次下載, 例如:"
+  },
+  "single_header": {
+    "description": "Header text; single window",
+    "message": "輸入下載 URL 位址(連結) 及其他選項"
+  },
+  "single_title": {
+    "description": "Title of single window",
+    "message": "DownThemAll!- 新增連結"
+  },
+  "size_progress": {
+    "description": "Status text; manager size column",
+    "message": "$TOTAL$ 的 $WRITTEN$",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "description": "Status text; manager size column",
+    "message": "未知"
+  },
+  "sizes_huge": {
+    "description": "Menu text; manager size column dropdown",
+    "message": "巨大 (> $HIGH$)",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "description": "Menu text; manager size column dropdown",
+    "message": "大 ($LOW$ - $HIGH$)",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "description": "Menu text; manager size column dropdown",
+    "message": "中 ($LOW$ - $HIGH$)",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "description": "Menu text; manager size column dropdown",
+    "message": "小 ($LOW$ - $HIGH$)",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "description": "Status bar tooltip; manager network icon",
+    "message": "新任務即將開始下載"
+  },
+  "statusNetwork_inactive_title": {
+    "description": "Status bar tooltip; manager network icon",
+    "message": "新任務暫不開始下載"
+  },
+  "toggle_selected_items": {
+    "description": "Menu text; select",
+    "message": "勾取選擇項目"
+  },
+  "tooltip_date": {
+    "description": "Tooltip text; manager/downloads",
+    "message": "加入日期:"
+  },
+  "tooltip_eta": {
+    "description": "Tooltip text; manager/downloads; Time",
+    "message": "剩餘:"
+  },
+  "tooltip_from": {
+    "description": "Tooltip text; manager/downloads; source URL",
+    "message": "來源:"
+  },
+  "tooltip_size": {
+    "description": "Tooltip text; manager/downloads",
+    "message": "大小:"
+  },
+  "tooltip_speed_average": {
+    "description": "Tooltip text; manager/downloads",
+    "message": "平均:"
+  },
+  "tooltip_speed_current": {
+    "description": "Tooltip text; manager/downloads",
+    "message": "當前:"
+  },
+  "uncheck_selected_items": {
+    "description": "Menu text; select",
+    "message": "剔除勾取選擇項目"
+  }
+}
