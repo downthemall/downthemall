@@ -1,183 +1,183 @@
 {
-  "language": {
-    "message": "简体中文",
-    "description": "Lanuage Name in your language"
-  },
-  "language_code": {
-    "message": "zh-CN",
-    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
-  },
-  "addpaused": {
-    "message": "添加后暂停",
-    "description": "Action: Add paused"
-  },
-  "cancel": {
-    "message": "取消",
-    "description": "Button text: Cancel"
-  },
-  "canceled": {
-    "message": "已取消",
-    "description": "Download status text"
-  },
-  "colConnections": {
-    "message": "并发连接数",
-    "description": "Table column in prefs/network"
-  },
-  "colDomain": {
-    "message": "域",
-    "description": "Table column in manager"
-  },
-  "colETA": {
-    "message": "剩余时间",
-    "description": "Table column in manager"
-  },
-  "colNameURL": {
-    "message": "名称/URL",
-    "description": "Table column in manager"
-  },
-  "colPercent": {
-    "message": "百分比",
-    "description": "Table column in manager"
-  },
-  "colProgress": {
-    "message": "进度",
-    "description": "Table column in manager"
-  },
-  "colSegments": {
-    "message": "分段",
-    "description": "Table column in manager"
-  },
-  "colSize": {
-    "message": "大小",
-    "description": "Table column in manager"
-  },
-  "colSpeed": {
-    "message": "速度",
-    "description": "Table column in manager"
-  },
   "CRASH": {
-    "message": "内部浏览器错误",
-    "description": "Error Message"
-  },
-  "delete": {
-    "message": "删除",
-    "description": "button text"
-  },
-  "description": {
-    "message": "描述",
-    "description": "Description (keep it short); e.g. the description column in select"
-  },
-  "donate": {
-    "message": "捐助！",
-    "description": "Donate button"
-  },
-  "done": {
-    "message": "完成",
-    "description": "Status text"
-  },
-  "download": {
-    "message": "下载",
-    "description": "Download (noun); e.g. Download column in select"
-  },
-  "extensionDescription": {
-    "message": "适用你浏览器的批量下载器",
-    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
-  },
-  "fastfiltering": {
-    "message": "快速筛选",
-    "description": "Label for Fast Filtering input"
+    "description": "Error Message",
+    "message": "浏览器内部出错"
   },
   "FILE_FAILED": {
-    "message": "文件访问错误",
-    "description": "Error Message"
-  },
-  "finishing": {
-    "message": "已完成",
-    "description": "Status text"
-  },
-  "links": {
-    "message": "链接",
-    "description": "Links tab label (short); select window"
-  },
-  "mask": {
-    "message": "掩码",
-    "description": "Renaming mask (short); used in e.g. select"
-  },
-  "media": {
-    "message": "媒体",
-    "description": "Media label (short)"
-  },
-  "missing": {
-    "message": "缺失",
-    "description": "Status text in manager"
+    "description": "Error Message",
+    "message": "文件访问出错"
   },
   "NETWORK_FAILED": {
-    "message": "网络故障",
-    "description": "Error Message"
-  },
-  "ok": {
-    "message": "确定",
-    "description": "Button text; Used in message boxes"
-  },
-  "paused": {
-    "message": "已暂停",
-    "description": "Status text; manager"
-  },
-  "queued": {
-    "message": "已排队",
-    "description": "Status text"
-  },
-  "referrer": {
-    "message": "引用",
-    "description": "Label for \"Referrer\""
-  },
-  "remember": {
-    "message": "记住此选择",
-    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
-  },
-  "rename": {
-    "message": "重命名",
-    "description": "UI for renaming; currently unused"
-  },
-  "renmask": {
-    "message": "重命名掩码",
-    "description": "Renaming mask (long)"
-  },
-  "reset": {
-    "message": "重置",
-    "description": "Button text; pref window"
-  },
-  "running": {
-    "message": "运行中",
-    "description": "Status text"
-  },
-  "save": {
-    "message": "保存",
-    "description": "Button text; e.g. prefs/Network"
-  },
-  "search": {
-    "message": "搜索…",
-    "description": "Placeholder text; manager status search field"
+    "description": "Error Message",
+    "message": "网络故障"
   },
   "SERVER_BAD_CONTENT": {
-    "message": "未找到",
-    "description": "Error message"
+    "description": "Error message",
+    "message": "未找到"
   },
   "SERVER_FAILED": {
-    "message": "服务器错误",
-    "description": "Error message"
+    "description": "Error message",
+    "message": "服务器出错"
   },
   "SERVER_FORBIDDEN": {
-    "message": "遭拒",
-    "description": "Error message"
+    "description": "Error message",
+    "message": "禁止访问"
   },
   "SERVER_UNAUTHORIZED": {
-    "message": "未授权",
-    "description": "Error message"
+    "description": "Error message",
+    "message": "未授权"
+  },
+  "addpaused": {
+    "description": "Action: Add paused",
+    "message": "添加后暂停"
+  },
+  "cancel": {
+    "description": "Button text: Cancel",
+    "message": "取消"
+  },
+  "canceled": {
+    "description": "Download status text",
+    "message": "已取消"
+  },
+  "colConnections": {
+    "description": "Table column in prefs/network",
+    "message": "并发连接数"
+  },
+  "colDomain": {
+    "description": "Table column in manager",
+    "message": "域"
+  },
+  "colETA": {
+    "description": "Table column in manager",
+    "message": "剩余时间"
+  },
+  "colNameURL": {
+    "description": "Table column in manager",
+    "message": "名称/URL"
+  },
+  "colPercent": {
+    "description": "Table column in manager",
+    "message": "百分比"
+  },
+  "colProgress": {
+    "description": "Table column in manager",
+    "message": "进度"
+  },
+  "colSegments": {
+    "description": "Table column in manager",
+    "message": "分段"
+  },
+  "colSize": {
+    "description": "Table column in manager",
+    "message": "大小"
+  },
+  "colSpeed": {
+    "description": "Table column in manager",
+    "message": "速度"
+  },
+  "delete": {
+    "description": "button text",
+    "message": "删除"
+  },
+  "description": {
+    "description": "Description (keep it short); e.g. the description column in select",
+    "message": "描述"
+  },
+  "donate": {
+    "description": "Donate button",
+    "message": "捐助！"
+  },
+  "done": {
+    "description": "Status text",
+    "message": "完成"
+  },
+  "download": {
+    "description": "Download (noun); e.g. Download column in select",
+    "message": "下载"
+  },
+  "extensionDescription": {
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one",
+    "message": "适用您浏览器的批量下载工具"
+  },
+  "fastfiltering": {
+    "description": "Label for Fast Filtering input",
+    "message": "快速筛选"
+  },
+  "finishing": {
+    "description": "Status text",
+    "message": "已完成"
+  },
+  "language": {
+    "description": "Lanuage Name in your language",
+    "message": "中文 (简体)"
+  },
+  "language_code": {
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR",
+    "message": "zh-CN"
+  },
+  "links": {
+    "description": "Links tab label (short); select window",
+    "message": "链接"
+  },
+  "mask": {
+    "description": "Renaming mask (short); used in e.g. select",
+    "message": "模板"
+  },
+  "media": {
+    "description": "Media label (short)",
+    "message": "媒体"
+  },
+  "missing": {
+    "description": "Status text in manager",
+    "message": "缺失"
+  },
+  "ok": {
+    "description": "Button text; Used in message boxes",
+    "message": "确定"
+  },
+  "paused": {
+    "description": "Status text; manager",
+    "message": "已暂停"
+  },
+  "queued": {
+    "description": "Status text",
+    "message": "已入队"
+  },
+  "referrer": {
+    "description": "Label for \"Referrer\"",
+    "message": "Referrer"
+  },
+  "remember": {
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager",
+    "message": "记住此决定"
+  },
+  "rename": {
+    "description": "UI for renaming; currently unused",
+    "message": "重命名"
+  },
+  "renmask": {
+    "description": "Renaming mask (long)",
+    "message": "重命名模板"
+  },
+  "reset": {
+    "description": "Button text; pref window",
+    "message": "重置"
+  },
+  "running": {
+    "description": "Status text",
+    "message": "运行中"
+  },
+  "save": {
+    "description": "Button text; e.g. prefs/Network",
+    "message": "保存"
+  },
+  "search": {
+    "description": "Placeholder text; manager status search field",
+    "message": "搜索…"
   },
   "sizeB": {
-    "message": "$S$ 字节",
     "description": "Size formatting; bytes",
+    "message": "$S$B",
     "placeholders": {
       "s": {
         "content": "$1",
@@ -186,8 +186,8 @@
     }
   },
   "sizeGB": {
-    "message": "$S$GB",
     "description": "Size formatting; giga bytes",
+    "message": "$S$GB",
     "placeholders": {
       "s": {
         "content": "$1",
@@ -196,8 +196,8 @@
     }
   },
   "sizeKB": {
-    "message": "$S$KB",
     "description": "Size formatting; kilo bytes",
+    "message": "$S$KB",
     "placeholders": {
       "s": {
         "content": "$1",
@@ -206,8 +206,8 @@
     }
   },
   "sizeMB": {
-    "message": "$S$MB",
     "description": "Size formatting; mega bytes",
+    "message": "$S$MB",
     "placeholders": {
       "s": {
         "content": "$1",
@@ -216,8 +216,8 @@
     }
   },
   "sizePB": {
-    "message": "$S$PB",
     "description": "Size formatting; peta bytes (you never know)",
+    "message": "$S$PB",
     "placeholders": {
       "s": {
         "content": "$1",
@@ -226,8 +226,8 @@
     }
   },
   "sizeTB": {
-    "message": "$S$TB",
     "description": "Size formatting; tera bytes (you never know)",
+    "message": "$S$TB",
     "placeholders": {
       "s": {
         "content": "$1",
@@ -236,8 +236,8 @@
     }
   },
   "speedB": {
-    "message": "$SPEED$ 位/s",
     "description": "Speed formatting; bytes",
+    "message": "$SPEED$b/s",
     "placeholders": {
       "speed": {
         "content": "$1",
@@ -246,8 +246,8 @@
     }
   },
   "speedKB": {
-    "message": "$SPEED$KB/s",
     "description": "Speed formatting; kilo bytes",
+    "message": "$SPEED$KB/s",
     "placeholders": {
       "speed": {
         "content": "$1",
@@ -256,8 +256,8 @@
     }
   },
   "speedMB": {
-    "message": "$SPEED$MB/s",
     "description": "Speed formatting; mega bytes",
+    "message": "$SPEED$MB/s",
     "placeholders": {
       "speed": {
         "content": "$1",
@@ -266,300 +266,300 @@
     }
   },
   "title": {
-    "message": "标题",
-    "description": "Column text; Title label (short)"
+    "description": "Column text; Title label (short)",
+    "message": "标题"
   },
   "unlimited": {
-    "message": "无限制",
-    "description": "Option text; Prefs/Network"
+    "description": "Option text; Prefs/Network",
+    "message": "无限制"
   },
   "useonlyonce": {
-    "message": "单次使用",
-    "description": "Label for Use-Once checkboxes"
+    "description": "Label for Use-Once checkboxes",
+    "message": "单次使用"
   },
   "add_download": {
-    "message": "添加下载",
-    "description": "Action for adding a download"
+    "description": "Action for adding a download",
+    "message": "新建下载"
   },
   "add_new": {
-    "message": "新增",
-    "description": "Button text (adding filters, limits and such)"
+    "description": "Button text (adding filters, limits and such)",
+    "message": "新建"
   },
   "add_paused_once": {
-    "message": "仅此次添加并暂停",
-    "description": "Checkbox label"
+    "description": "Checkbox label",
+    "message": "仅此次添加后暂停"
   },
   "add_paused_question": {
-    "message": "你是否想要记住此决定并从现在开始新增的下载总是暂停？",
-    "description": "Messagebox text"
+    "description": "Messagebox text",
+    "message": "您是否要记住此决定，且从现在开始新建的下载总是暂停？"
   },
   "add_paused_title": {
-    "message": "总是添加后暂停？",
-    "description": "Title for the add-paused dialog"
+    "description": "Title for the add-paused dialog",
+    "message": "总是添加后暂停？"
   },
   "ask_again_later": {
-    "message": "之后再次询问",
-    "description": "Button text"
+    "description": "Button text",
+    "message": "稍后再询问我"
   },
   "batch_batch": {
-    "message": "批量下载",
-    "description": "Button text"
+    "description": "Button text",
+    "message": "批量下载"
   },
   "batch_desc": {
-    "message": "当前 URL 似乎包含批量下载的说明。",
-    "description": ""
+    "description": "",
+    "message": "当前 URL 似乎包含批量下载的说明。"
   },
   "batch_items": {
-    "message": "项目数量：",
-    "description": "Messagebox info text for batch confirmations"
+    "description": "Messagebox info text for batch confirmations",
+    "message": "项目数："
   },
   "batch_preview": {
-    "message": "预览：",
-    "description": "Messagebox info text for batch confirmations"
+    "description": "Messagebox info text for batch confirmations",
+    "message": "预览："
   },
   "batch_question": {
-    "message": "你想要添加此项为批量或单一下载吗？",
-    "description": "Messagebox info text for batch confirmations"
+    "description": "Messagebox info text for batch confirmations",
+    "message": "Do you want to add this as a batch or as a single download?"
   },
   "batch_single": {
-    "message": "单一下载",
-    "description": "Button text for batch confirmation"
+    "description": "Button text for batch confirmation",
+    "message": "单词下载"
   },
   "batch_title": {
-    "message": "批量下载",
-    "description": "Messagebox title for batch confirmations"
+    "description": "Messagebox title for batch confirmations",
+    "message": "批量下载"
   },
   "cancel_download": {
-    "message": "取消",
-    "description": "Action to cancel downloads, e.g. from the context menu"
+    "description": "Action to cancel downloads, e.g. from the context menu",
+    "message": "取消"
   },
   "cannot_be_empty": {
-    "message": "此字段不能为空",
-    "description": "Error message when an input field is empty but has to have a value"
+    "description": "Error message when an input field is empty but has to have a value",
+    "message": "该字段不能为空"
   },
   "change_later_reminder": {
-    "message": "你之后可以在首选项中修改此决定",
-    "description": "Checkbox label text for decision confirmations"
+    "description": "Checkbox label text for decision confirmations",
+    "message": "您可稍后在“首选项”中更改此决定"
   },
   "check_selected_items": {
-    "message": "检查选中项",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "Check Selected Items"
   },
   "conflict_overwrite": {
-    "message": "覆盖",
-    "description": "Option text; prefs/general"
+    "description": "Option text; prefs/general",
+    "message": "覆盖"
   },
   "conflict_prompt": {
-    "message": "提示",
-    "description": "Option text; prefs/general"
+    "description": "Option text; prefs/general",
+    "message": "提示"
   },
   "conflict_rename": {
-    "message": "重命名",
-    "description": "Option text; prefs/general"
+    "description": "Option text; prefs/general",
+    "message": "重命名"
   },
   "create_filter": {
-    "message": "创建筛选器",
-    "description": "Button text; Create filter dialog; prefs/filters"
+    "description": "Button text; Create filter dialog; prefs/filters",
+    "message": "新建筛选器"
   },
   "custom_filename": {
-    "message": "自定义文件名",
-    "description": "Label text; single window"
+    "description": "Label text; single window",
+    "message": "自定义文件名"
   },
   "deffilter_all": {
-    "message": "全部文件",
-    "description": "Filter label for the All files filter"
+    "description": "Filter label for the All files filter",
+    "message": "所有文件"
   },
   "deffilter_arch": {
-    "message": "归档（zip、rar、7z……）",
-    "description": "Filter label for the Archives filter"
+    "description": "Filter label for the Archives filter",
+    "message": "压缩文件（zip, rar, 7z, …）"
   },
   "deffilter_aud": {
-    "message": "音频（mp3、flac、wav……）",
-    "description": "Filter label for the Audio filter"
+    "description": "Filter label for the Audio filter",
+    "message": "音频（mp3, flac, wav, …）"
   },
   "deffilter_bin": {
-    "message": "软件（exe、msi……）",
-    "description": "Filter label for the Software filter"
+    "description": "Filter label for the Software filter",
+    "message": "软件（exe, msi, …）"
   },
   "deffilter_doc": {
-    "message": "文档（pdf、odf、docx……）",
-    "description": "Filter label for the Documents filter"
+    "description": "Filter label for the Documents filter",
+    "message": "文档（pdf, odf, docx, …）"
   },
   "deffilter_img": {
-    "message": "图像（jpeg、png、gif……）",
-    "description": "Filter label for the Images filter"
+    "description": "Filter label for the Images filter",
+    "message": "图片（jpeg, png, gif, …）"
   },
   "deffilter_imggif": {
-    "message": "GIF 图像",
-    "description": "Filter label for the GIF filter"
+    "description": "Filter label for the GIF filter",
+    "message": "GIF 图片"
   },
   "deffilter_imgjpg": {
-    "message": "JPEG 图像",
-    "description": "Filter label for the JPEG filter"
+    "description": "Filter label for the JPEG filter",
+    "message": "JPEG 图片"
   },
   "deffilter_imgpng": {
-    "message": "PNG 图像",
-    "description": "Filter label for the PNG filter"
+    "description": "Filter label for the PNG filter",
+    "message": "PNG 图片"
   },
   "deffilter_vid": {
-    "message": "视频（mp4、webm、mkv……）",
-    "description": "Filter label for the Videos filter"
+    "description": "Filter label for the Videos filter",
+    "message": "视频（mp4, webm, mkv, …）"
   },
   "disable_other_filters": {
-    "message": "禁用其他",
-    "description": "Checkbox label. Keep it short"
+    "description": "Checkbox label. Keep it short",
+    "message": "禁用其他"
   },
   "download_verb": {
-    "message": "下载",
-    "description": "Download (verb/action); e.g. in single and select buttons"
+    "description": "Download (verb/action); e.g. in single and select buttons",
+    "message": "下载"
   },
   "dta_regular_all": {
-    "message": "DownThemAll! — 全部标签",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "DownThemAll! - 全部标签页"
   },
   "dta_turbo_all": {
-    "message": "OneClick! — 全部标签",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "OneClick! - 全部标签页"
   },
   "dta_regular": {
-    "message": "DownThemAll!",
-    "description": "Regular dta action; Menu text"
+    "description": "Regular dta action; Menu text",
+    "message": "DownThemAll!"
   },
   "dta_regular_image": {
-    "message": "用 DownThemAll! 保存图像",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "用 DownThemAll! 保存图片"
   },
   "dta_regular_link": {
-    "message": "用 DownThemAll! 保存链接",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "用 DownThemAll! 保存链接"
   },
   "dta_regular_media": {
-    "message": "用 DownThemAll! 保存媒体",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "用 DownThemAll! 保存媒体"
   },
   "dta_regular_selection": {
-    "message": "用 DownThemAll! 保存选中项",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "用 DownThemAll! 保存选中项"
   },
   "dta_turbo": {
-    "message": "OneClick!",
-    "description": "OneClick! action; Menu text"
+    "description": "OneClick! action; Menu text",
+    "message": "OneClick!"
   },
   "dta_turbo_image": {
-    "message": "一键保存图像！",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "一键保存图片！"
   },
   "dta_turbo_link": {
-    "message": "一键保存链接！",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "一键保存链接！"
   },
   "dta_turbo_media": {
-    "message": "一键保存媒体！",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "一键保存媒体！"
   },
   "dta_turbo_selection": {
-    "message": "一键保存选中项！",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "一键保存选中项！"
   },
   "error_invalidMask": {
-    "message": "无效的重命名掩码",
-    "description": "Error message; single/select window"
+    "description": "Error message; single/select window",
+    "message": "无效重命名模板"
   },
   "error_invalidReferrer": {
-    "message": "无效的引用",
-    "description": "Error message; single window"
+    "description": "Error message; single window",
+    "message": "无效 Referrer"
   },
   "error_invalidURL": {
-    "message": "无效的 URL",
-    "description": "Error message; single window"
+    "description": "Error message; single window",
+    "message": "无效 URL"
   },
   "error_noItemsSelected": {
-    "message": "未选中项目",
-    "description": "Error Message; select window"
+    "description": "Error Message; select window",
+    "message": "未选中任何项目"
   },
   "fastfilter_placeholder": {
-    "message": "通配符表达式或正则表达式",
-    "description": "Placeholder for fastfilter inputs"
+    "description": "Placeholder for fastfilter inputs",
+    "message": "通配符或正则表达式"
   },
   "filter_at_least_one": {
-    "message": "你必须选择至少一个筛选器类型！",
-    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+    "description": "Error message when no filter types are selected for a filter in the preferences UI",
+    "message": "您须至少选择一种筛选类型！"
   },
   "filter_create_title": {
-    "message": "新建筛选器",
-    "description": "Message box title"
+    "description": "Message box title",
+    "message": "新建筛选器"
   },
   "filter_expression": {
-    "message": "筛选器 — 表达式",
-    "description": "Message box label"
+    "description": "Message box label",
+    "message": "筛选器 — 表达式"
   },
   "filter_label": {
-    "message": "筛选器 — 标签",
-    "description": "Message box label"
+    "description": "Message box label",
+    "message": "筛选器 — 标签"
   },
   "filter_type_link": {
-    "message": "链接筛选器",
-    "description": "Message box checkbox label"
+    "description": "Message box checkbox label",
+    "message": "链接筛选器"
   },
   "filter_type_media": {
-    "message": "媒体筛选器",
-    "description": "Message box checkbox label"
+    "description": "Message box checkbox label",
+    "message": "媒体筛选器"
   },
   "filter_types": {
-    "message": "筛选器 — 类型",
-    "description": "Message box label"
+    "description": "Message box label",
+    "message": "筛选器 — 类型"
   },
   "force_start": {
-    "message": "强制开始",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "强制开始"
   },
   "information_title": {
-    "message": "信息",
-    "description": "Used in message boxes"
+    "description": "Used in message boxes",
+    "message": "信息"
   },
   "invalid_domain_pref": {
-    "message": "无效域",
-    "description": "Error message in prefs/network"
+    "description": "Error message in prefs/network",
+    "message": "无效域"
   },
   "invert_selection": {
-    "message": "反选",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "反选"
   },
   "key_alt": {
-    "message": "Alt",
-    "description": "Short for Alt-Key"
+    "description": "Short for Alt-Key",
+    "message": "Alt"
   },
   "key_ctrl": {
-    "message": "Ctrl",
-    "description": "Short for Ctrl-Key"
+    "description": "Short for Ctrl-Key",
+    "message": "Ctrl"
   },
   "key_delete": {
-    "message": "Del",
-    "description": "Short for Delete-key"
+    "description": "Short for Delete-key",
+    "message": "Del"
   },
   "key_end": {
-    "message": "End",
-    "description": "Short for End-key"
+    "description": "Short for End-key",
+    "message": "End"
   },
   "key_home": {
-    "message": "Home",
-    "description": "Short for home key"
+    "description": "Short for home key",
+    "message": "Home"
   },
   "key_pagedown": {
-    "message": "PageDown",
-    "description": "Short for pagedown-key"
+    "description": "Short for pagedown-key",
+    "message": "PageDown"
   },
   "key_pageup": {
-    "message": "PageUp",
-    "description": "Short for PageUp-key"
+    "description": "Short for PageUp-key",
+    "message": "PageUp"
   },
   "limited_to": {
-    "message": "限制为",
-    "description": "Label text; used in prefs/network"
+    "description": "Label text; used in prefs/network",
+    "message": "限制为"
   },
   "manager_status_items": {
-    "message": "总共 $TOTAL$ 个下载（显示 $SHOWING$ 个），已完成 $COMPLETE$ 个，$RUNNING$ 个正运行",
     "description": "Status bar text; manager",
+    "message": "总共 $TOTAL$ 个下载（显示 $SHOWING$ 个），已完成 $COMPLETE$ 个，$RUNNING$ 个正运行",
     "placeholders": {
       "complete": {
         "content": "$1",
@@ -580,36 +580,36 @@
     }
   },
   "manager_short": {
-    "message": "管理器",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "管理器"
   },
   "manager_title": {
-    "message": "DownThemAll! 管理器",
-    "description": "Window/tab title"
+    "description": "Window/tab title",
+    "message": "DownThemAll! 管理器"
   },
   "mask_default": {
-    "message": "默认掩码",
-    "description": "Status text; Used in the mask column, select window"
+    "description": "Status text; Used in the mask column, select window",
+    "message": "默认模板"
   },
   "move_bottom": {
-    "message": "置底",
-    "description": "Action for moving a download to the bottom"
+    "description": "Action for moving a download to the bottom",
+    "message": "置底"
   },
   "move_down": {
-    "message": "下移",
-    "description": "Action for moving a download down"
+    "description": "Action for moving a download down",
+    "message": "下移"
   },
   "move_top": {
-    "message": "置顶",
-    "description": "Action for moving a download to the top"
+    "description": "Action for moving a download to the top",
+    "message": "置顶"
   },
   "move_up": {
-    "message": "上移",
-    "description": "Action for moving a download up"
+    "description": "Action for moving a download up",
+    "message": "上移"
   },
   "nagging_message": {
-    "message": "你使用 DownThemAll! 至今已经添加了 $DOWNLOADS$ 个下载。作为一名普通用户你可以考虑捐助来支持一下开发。多谢！",
     "description": "Donation nagging message; displayed as a notification bar in manager",
+    "message": "您使用 DownThemAll! 至今已经添加了 $DOWNLOADS$ 个下载。作为一名普通用户，您可以考虑捐助来支持一下开发。多谢！",
     "placeholders": {
       "downloads": {
         "content": "$1",
@@ -618,20 +618,20 @@
     }
   },
   "never_ask_again": {
-    "message": "不要再次询问",
-    "description": "Donation button"
+    "description": "Donation button",
+    "message": "不要再询问我"
   },
   "no_links": {
-    "message": "未找到链接！",
-    "description": "Notification text"
+    "description": "Notification text",
+    "message": "未找到链接！"
   },
   "noitems_label": {
-    "message": "未选中项目",
-    "description": "Status bar text in select"
+    "description": "Status bar text in select",
+    "message": "未选中项目"
   },
   "numitems_label": {
-    "message": "已选中 $ITEMS$ 项……",
     "description": "Status bar text in select; Number of items selected (label)",
+    "message": "已选中 $ITEMS$ 项...",
     "placeholders": {
       "items": {
         "content": "$1",
@@ -640,116 +640,116 @@
     }
   },
   "open_directory": {
-    "message": "打开目录",
-    "description": "Menu text; manager context"
+    "description": "Menu text; manager context",
+    "message": "打开目录"
   },
   "open_file": {
-    "message": "打开文件",
-    "description": "Menu text; manager context"
+    "description": "Menu text; manager context",
+    "message": "打开文件夹"
   },
   "open_link": {
-    "message": "打开链接",
-    "description": "Menu text; select window"
+    "description": "Menu text; select window",
+    "message": "打开链接"
   },
   "options_filters": {
-    "message": "筛选器",
-    "description": "Pref tab text"
+    "description": "Pref tab text",
+    "message": "筛选器"
   },
   "options_general": {
-    "message": "常规",
-    "description": "Pref tab text"
+    "description": "Pref tab text",
+    "message": "常规"
   },
   "options_network": {
-    "message": "网络",
-    "description": "Pref tab text"
+    "description": "Pref tab text",
+    "message": "网络"
   },
   "pause_download": {
-    "message": "暂停",
-    "description": "Action for pausing a download"
+    "description": "Action for pausing a download",
+    "message": "暂停"
   },
   "pref_add_paused": {
-    "message": "新增的下载自动暂停，而不是立即开始",
-    "description": "Preferences/General"
+    "description": "Preferences/General",
+    "message": "新建的下载自动暂停，而非立即开始"
   },
   "pref_concurrent_downloads": {
-    "message": "并发下载数",
-    "description": "Preferences/Network"
+    "description": "Preferences/Network",
+    "message": "并发下载数"
   },
   "pref_finish_notification": {
-    "message": "当队列完成下载时显示通知",
-    "description": "Preferences/General"
+    "description": "Preferences/General",
+    "message": "队列完成下载时显示通知"
   },
   "pref_global_turbo": {
-    "message": "浏览器按钮改为 OneClick！",
-    "description": "Preferences/General"
+    "description": "Preferences/General",
+    "message": "浏览器按钮改为 OneClick！"
   },
   "pref_hide_context": {
-    "message": "不要显示通用的上下文菜单项",
-    "description": "Preferences/General"
+    "description": "Preferences/General",
+    "message": "不要显示右键菜单项"
   },
   "pref_manager_tooltip": {
-    "message": "在管理器标签页中显示工具提示",
-    "description": "Preferences/General"
+    "description": "Preferences/General",
+    "message": "在管理器页中显示工具提示"
   },
   "pref_open_manager_on_queue": {
-    "message": "新增下载到队列后打开管理器标签页",
-    "description": "Preferences/General"
+    "description": "Preferences/General",
+    "message": "新建下载到队列后打开管理器页"
   },
   "pref_queue_notification": {
-    "message": "当新增下载到队列时显示通知",
-    "description": "Preferences/General"
+    "description": "Preferences/General",
+    "message": "新建下载到队列后显示通知"
   },
   "pref_remove_missing_on_init": {
-    "message": "重启后移除丢失的下载",
-    "description": "Preferences/General"
+    "description": "Preferences/General",
+    "message": "重启浏览器后移除丢失的下载"
   },
   "pref_show_urls": {
-    "message": "显示 URL 而不是名称",
-    "description": "Preferences/General"
+    "description": "Preferences/General",
+    "message": "显示 URL，而非名称"
   },
   "pref_text_links": {
-    "message": "尝试在网站文本中查找链接（较慢）",
-    "description": "Preferences/General"
+    "description": "Preferences/General",
+    "message": "尝试在网站文本中寻找链接（较慢）"
   },
   "pref_manager": {
-    "message": "管理器",
-    "description": "Preferences/General; group text"
+    "description": "Preferences/General; group text",
+    "message": "管理器"
   },
   "pref_netglobal": {
-    "message": "全局网络限制",
-    "description": "Preferences/General; group text"
+    "description": "Preferences/General; group text",
+    "message": "全局网络限制"
   },
   "pref_queueing": {
-    "message": "排队中的下载",
-    "description": "Preferences/General; group text"
+    "description": "Preferences/General; group text",
+    "message": "下载队列"
   },
   "pref_ui": {
-    "message": "用户界面",
-    "description": "Preferences/General; group text"
+    "description": "Preferences/General; group text",
+    "message": "用户界面"
   },
   "prefs_conflicts": {
-    "message": "当文件存在时",
-    "description": "Preferences/General; group text"
+    "description": "Preferences/General; group text",
+    "message": "文件名冲突"
   },
   "prefs_short": {
-    "message": "首选项",
-    "description": "Menu text; Preferences"
+    "description": "Menu text; Preferences",
+    "message": "首选项"
   },
   "prefs_title": {
-    "message": "DownThemAll! 首选项",
-    "description": "Window/tab title; Preferences"
+    "description": "Window/tab title; Preferences",
+    "message": "DownThemAll! 首选项"
   },
   "queue_finished": {
-    "message": "下载队列已完成",
-    "description": "Notification text"
+    "description": "Notification text",
+    "message": "下载队列已完成"
   },
   "queued_download": {
-    "message": "1 个下载已加入排队！",
-    "description": "Notification text; single download"
+    "description": "Notification text; single download",
+    "message": "1 个下载已加入队列！"
   },
   "queued_downloads": {
-    "message": "$COUNT$ 个下载已加入排队！",
     "description": "Notification text; multiple downloads",
+    "message": "$COUNT$ 个下载已加入队列！",
     "placeholders": {
       "count": {
         "content": "$1",
@@ -758,36 +758,36 @@
     }
   },
   "remove_all_complete_downloads": {
-    "message": "移除所有完成项",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除所有完成项"
   },
   "remove_all_downloads": {
-    "message": "移除全部",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除全部"
   },
   "remove_all_downloads_question": {
-    "message": "你想要移除所有下载项吗？",
-    "description": "Messagebox text"
+    "description": "Messagebox text",
+    "message": "您要移除所有下载项吗？"
   },
   "remove_batch_downloads": {
-    "message": "移除当前批量",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除当前批量下载"
   },
   "remove_batch_downloads_question": {
-    "message": "你想要移除当前选中下载所属批量的所有下载吗？",
-    "description": "Messagebox text"
+    "description": "Messagebox text",
+    "message": "您要移除当前选中下载所属批量的所有下载项吗？"
   },
   "remove_complete_downloads": {
-    "message": "移除完成的下载",
-    "description": "Action for removing complete downloads"
+    "description": "Action for removing complete downloads",
+    "message": "移除完成的下载项"
   },
   "remove_complete_downloads_question": {
-    "message": "你想要移除所有已完成的下载吗？",
-    "description": "Messagebox text"
+    "description": "Messagebox text",
+    "message": "您要移除所有已完成的下载项吗？"
   },
   "remove_complete_filter_downloads_question": {
-    "message": "你想要移除与“$FILTER$”筛选器匹配的所有已完成下载吗？",
     "description": "Messagebox text",
+    "message": "您要移除与“$FILTER$”筛选器匹配的所有已完成下载项吗？",
     "placeholders": {
       "filter": {
         "content": "$1",
@@ -796,16 +796,16 @@
     }
   },
   "remove_complete_selection_downloads_question": {
-    "message": "你想要移除当前选中项中的所有已完成下载吗？",
-    "description": "Messagebox text"
+    "description": "Messagebox text",
+    "message": "您要移除当前选中项中的所有已完成下载项吗？"
   },
   "remove_domain_complete_downloads": {
-    "message": "移除来自当前域完成的下载",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除来自当前域完成的下载项"
   },
   "remove_domain_complete_downloads_question": {
-    "message": "你想要移除来自“$DOMAIN$”域的已完成下载吗？",
     "description": "Messagebox text",
+    "message": "您要移除来自“$DOMAIN$”域的已完成下载项吗？",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -814,12 +814,12 @@
     }
   },
   "remove_domain_downloads": {
-    "message": "移除当前域",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除当前域"
   },
   "remove_domain_downloads_question": {
-    "message": "你想要移除来自“$DOMAIN$”域的所有下载吗？",
     "description": "Messagebox text",
+    "message": "您要移除来自“$DOMAIN$”域的所有下载项吗？",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -828,32 +828,32 @@
     }
   },
   "remove_download": {
-    "message": "移除下载",
-    "description": "Action for removing a download, no matter what state"
+    "description": "Action for removing a download, no matter what state",
+    "message": "移除下载项"
   },
   "remove_download_question": {
-    "message": "你想要移除选中的下载吗？",
-    "description": "Messagebox text"
+    "description": "Messagebox text",
+    "message": "您要移除选中的下载项吗？"
   },
   "remove_downloads": {
-    "message": "移除下载",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除下载项"
   },
   "remove_downloads_title": {
-    "message": "你确定要移除下载吗？",
-    "description": "Messagebox title; manager"
+    "description": "Messagebox title; manager",
+    "message": "您确定要移除下载项吗？"
   },
   "remove_failed_downloads": {
-    "message": "移除失败项",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除失败项"
   },
   "remove_failed_downloads_question": {
-    "message": "你想要移除所有失败的下载吗？",
-    "description": "Messagebox text"
+    "description": "Messagebox text",
+    "message": "您要移除所有失败的下载项吗？"
   },
   "remove_filter_downloads_question": {
-    "message": "你想要移除与“$FILTER$”筛选器匹配的所有下载吗？",
     "description": "Mesagebox text",
+    "message": "您要移除与“$FILTER$”筛选器匹配的所有下载项吗？",
     "placeholders": {
       "filter": {
         "content": "$1",
@@ -862,204 +862,204 @@
     }
   },
   "remove_missing": {
-    "message": "清除丢失的下载",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除丢失的下载项"
   },
   "remove_missing_downloads_question": {
-    "message": "你想要移除所有丢失的下载吗？",
-    "description": "Messagebox text"
+    "description": "Messagebox text",
+    "message": "您要移除所有丢失的下载项吗？"
   },
   "remove_paused_downloads": {
-    "message": "移除暂停项",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除暂停项"
   },
   "remove_paused_downloads_question": {
-    "message": "你想要移除所有已暂停的下载吗？",
-    "description": "Messagebox text"
+    "description": "Messagebox text",
+    "message": "您要移除所有已暂停的下载项吗？"
   },
   "remove_selected_complete_downloads": {
-    "message": "移除选中的完成项",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除选中的完成项"
   },
   "remove_selected_complete_downloads_question": {
-    "message": "你想要移除当前选中项中的所有已完成的下载吗？",
-    "description": "Messagebox text"
+    "description": "Messagebox text",
+    "message": "您要移除当前选中项中的所有已完成的下载项吗？"
   },
   "remove_selected_downloads": {
-    "message": "移除选中项",
-    "description": "Menu text"
+    "description": "Menu text",
+    "message": "移除选中项"
   },
   "renamer_batch": {
-    "message": "批量号码",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "下载批次"
   },
   "renamer_d": {
-    "message": "添加日期 — 日",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "添加日期 — 日"
   },
   "renamer_date": {
-    "message": "添加日期",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "添加日期"
   },
   "renamer_domain": {
-    "message": "域名（TLD）",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "域（TLD）"
   },
   "renamer_ext": {
-    "message": "文件扩展名",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "文件扩展名"
   },
   "renamer_hh": {
-    "message": "添加日期 — 时",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "添加日期 — 时"
   },
   "renamer_host": {
-    "message": "主机名",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "主机名"
   },
   "renamer_idx": {
-    "message": "批量中的项目号",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "批内项目编号"
   },
   "renamer_info": {
-    "message": "添加“flat”，比如 *flatsubdirs* 将替换值里的所有斜杠，因此不创建目录",
-    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!",
+    "message": "添加“flat”，例如 *flatsubdirs* 将替换值里的所有斜杠，因此不创建文件夹"
   },
   "renamer_m": {
-    "message": "添加日期 — 月",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "添加日期 — 月"
   },
   "renamer_mm": {
-    "message": "添加日期 — 分",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "添加日期 — 分"
   },
   "renamer_name": {
-    "message": "文件名",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "文件名"
   },
   "renamer_num": {
-    "message": "*batch* 的别名",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "*batch* 的别名"
   },
   "renamer_qstring": {
-    "message": "查询字符串",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "查询字符串"
   },
   "renamer_ref": {
-    "message": "引用",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "Referrer"
   },
   "renamer_refdomain": {
-    "message": "引用域名（TLD）",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "Referrer 域 (TLD)"
   },
   "renamer_refext": {
-    "message": "引用文件扩展名",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "Referrer 文件扩展名"
   },
   "renamer_refhost": {
-    "message": "引用主机名",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "Referrer 主机名"
   },
   "renamer_refname": {
-    "message": "引用文件名",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "Referrer 文件名"
   },
   "renamer_refqstring": {
-    "message": "引用查询字符串",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "Referrer 查询字符串"
   },
   "renamer_refsubdirs": {
-    "message": "引用路径",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "Referrer 路径"
   },
   "renamer_refurl": {
-    "message": "引用 URL（无需协议）",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "Referrer URL （无需协议）"
   },
   "renamer_ss": {
-    "message": "添加日期 — 秒",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "添加日期 — 秒"
   },
   "renamer_subdirs": {
-    "message": "路径",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "路径"
   },
   "renamer_tags": {
-    "message": "重命名掩码标签",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "重命名模板标签"
   },
   "renamer_text": {
-    "message": "描述文本",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "描述文本"
   },
   "renamer_title": {
-    "message": "标题文本",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "标题文本"
   },
   "renamer_url": {
-    "message": "URL（无需协议）",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "URL（无需协议）"
   },
   "renamer_y": {
-    "message": "添加日期 — 年",
-    "description": "Mask text; see mask button"
+    "description": "Mask text; see mask button",
+    "message": "添加日期 — 年"
   },
   "reset_confirmations": {
-    "message": "重置记住的确认项",
-    "description": "Button text; pref/General"
+    "description": "Button text; pref/General",
+    "message": "重置记住的确认项"
   },
   "reset_confirmations_done": {
-    "message": "所有以前记住的确认项都已重置！",
-    "description": "Messagebox text; pref/General"
+    "description": "Messagebox text; pref/General",
+    "message": "已重置过去所有以前记住的确认项！"
   },
   "reset_layouts": {
-    "message": "重置用户界面自定义项",
-    "description": "Button text; pref/General"
+    "description": "Button text; pref/General",
+    "message": "重置用户界面自定义项"
   },
   "reset_layouts_done": {
-    "message": "所有以前记住的布局自定义项都已重置！你可能需要重新加载窗口/标签页。",
-    "description": "Messagebox text; pref/General"
+    "description": "Messagebox text; pref/General",
+    "message": "已重置过去所有记住的布局自定义项！您可能需要重新加载窗口/标签页。"
   },
   "resume_download": {
-    "message": "恢复",
-    "description": "Action for resuming a download"
+    "description": "Action for resuming a download",
+    "message": "恢复"
   },
   "select_all": {
-    "message": "选择全部",
-    "description": "Menu text; e.g. select context"
+    "description": "Menu text; e.g. select context",
+    "message": "全选"
   },
   "select_checked": {
-    "message": "选择勾选项",
-    "description": "Menu text; select context"
+    "description": "Menu text; select context",
+    "message": "选择勾选项"
   },
   "select_none": {
-    "message": "取消选择",
-    "description": "Menu text; select context"
+    "description": "Menu text; select context",
+    "message": "取消选择"
   },
   "select_title": {
-    "message": "DownThemAll! — 选择你的下载",
-    "description": "Title of the select window"
+    "description": "Title of the select window",
+    "message": "DownThemAll! - 选择您的下载项"
   },
   "set_mask": {
-    "message": "设定重命名掩码",
-    "description": "Menu text; select window"
+    "description": "Menu text; select window",
+    "message": "设置重命名模板"
   },
   "single_batchexamples": {
-    "message": "支持批量，示例：",
-    "description": "Header text; single window"
+    "description": "Header text; single window",
+    "message": "支持批量下载, 示例："
   },
   "single_header": {
-    "message": "输入下载的 URL（链接）或其他选项",
-    "description": "Header text; single window"
+    "description": "Header text; single window",
+    "message": "输入下载的 URL（链接）或其他选项"
   },
   "single_title": {
-    "message": "DownThemAll! — 添加链接",
-    "description": "Title of single window"
+    "description": "Title of single window",
+    "message": "DownThemAll! - 添加链接"
   },
   "size_progress": {
-    "message": "$WRITTEN$，总 $TOTAL$",
     "description": "Status text; manager size column",
+    "message": "$WRITTEN$，总 $TOTAL$",
     "placeholders": {
       "total": {
         "content": "$2",
@@ -1072,12 +1072,12 @@
     }
   },
   "size_unknown": {
-    "message": "未知",
-    "description": "Status text; manager size column"
+    "description": "Status text; manager size column",
+    "message": "未知"
   },
   "sizes_huge": {
-    "message": "超大（> $HIGH$）",
     "description": "Menu text; manager size column dropdown",
+    "message": "超大 (> $HIGH$)",
     "placeholders": {
       "high": {
         "content": "$1",
@@ -1086,8 +1086,8 @@
     }
   },
   "sizes_large": {
-    "message": "大（$LOW$ - $HIGH$）",
     "description": "Menu text; manager size column dropdown",
+    "message": "大 ($LOW$ - $HIGH$)",
     "placeholders": {
       "high": {
         "content": "$2",
@@ -1100,8 +1100,8 @@
     }
   },
   "sizes_medium": {
-    "message": "中（$LOW$ - $HIGH$）",
     "description": "Menu text; manager size column dropdown",
+    "message": "中 ($LOW$ - $HIGH$)",
     "placeholders": {
       "high": {
         "content": "$2",
@@ -1114,8 +1114,8 @@
     }
   },
   "sizes_small": {
-    "message": "小（$LOW$ - $HIGH$）",
     "description": "Menu text; manager size column dropdown",
+    "message": "小 ($LOW$ - $HIGH$)",
     "placeholders": {
       "high": {
         "content": "$2",
@@ -1128,43 +1128,43 @@
     }
   },
   "statusNetwork_active_title": {
-    "message": "新下载即将开始",
-    "description": "Status bar tooltip; manager network icon"
+    "description": "Status bar tooltip; manager network icon",
+    "message": "即将开始新的下载"
   },
   "statusNetwork_inactive_title": {
-    "message": "没有要开始的新下载",
-    "description": "Status bar tooltip; manager network icon"
+    "description": "Status bar tooltip; manager network icon",
+    "message": "没有要开始的新下载"
   },
   "toggle_selected_items": {
-    "message": "切换选中项",
-    "description": "Menu text; select"
+    "description": "Menu text; select",
+    "message": "切换选中项"
   },
   "tooltip_date": {
-    "message": "添加日期：",
-    "description": "Tooltip text; manager/downloads"
+    "description": "Tooltip text; manager/downloads",
+    "message": "添加日期："
   },
   "tooltip_eta": {
-    "message": "重命名：",
-    "description": "Tooltip text; manager/downloads; Time"
+    "description": "Tooltip text; manager/downloads; Time",
+    "message": "重命名："
   },
   "tooltip_from": {
-    "message": "来源：",
-    "description": "Tooltip text; manager/downloads; source URL"
+    "description": "Tooltip text; manager/downloads; source URL",
+    "message": "来源："
   },
   "tooltip_size": {
-    "message": "大小：",
-    "description": "Tooltip text; manager/downloads"
+    "description": "Tooltip text; manager/downloads",
+    "message": "大小："
   },
   "tooltip_speed_average": {
-    "message": "平均：",
-    "description": "Tooltip text; manager/downloads"
+    "description": "Tooltip text; manager/downloads",
+    "message": "平均："
   },
   "tooltip_speed_current": {
-    "message": "当前：",
-    "description": "Tooltip text; manager/downloads"
+    "description": "Tooltip text; manager/downloads",
+    "message": "当前："
   },
   "uncheck_selected_items": {
-    "message": "取消选中项",
-    "description": "Menu text; select"
+    "description": "Menu text; select",
+    "message": "取消选中项"
   }
 }
