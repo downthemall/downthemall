@@ -611,7 +611,7 @@ addEventListener("DOMContentLoaded", async () => {
       return;
     }
     // eslint-disable-next-line max-len
-    if (confirm("Changing the selected translation requires restarting the extension.\nDo you wanDo you want to restrt the extension now?")) {
+    if (confirm("Changing the selected translation requires restarting the extension.\nDo you want to restart the extension now?")) {
       runtime.reload();
     }
   });
