@@ -109,7 +109,7 @@
   },
   "language": {
     "description": "Lanuage Name in your language",
-    "message": "中文 (简体)"
+    "message": "中文（简体)"
   },
   "language_code": {
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR",
@@ -141,7 +141,7 @@
   },
   "queued": {
     "description": "Status text",
-    "message": "已入队"
+    "message": "已加入队列"
   },
   "referrer": {
     "description": "Label for \"Referrer\"",
@@ -323,7 +323,7 @@
   },
   "batch_single": {
     "description": "Button text for batch confirmation",
-    "message": "单词下载"
+    "message": "单次下载"
   },
   "batch_title": {
     "description": "Messagebox title for batch confirmations",
@@ -343,7 +343,7 @@
   },
   "check_selected_items": {
     "description": "Menu text",
-    "message": "Check Selected Items"
+    "message": "勾选选中项"
   },
   "conflict_overwrite": {
     "description": "Option text; prefs/general",
@@ -631,7 +631,7 @@
   },
   "numitems_label": {
     "description": "Status bar text in select; Number of items selected (label)",
-    "message": "已选中 $ITEMS$ 项...",
+    "message": "已选中 $ITEMS$ 项…",
     "placeholders": {
       "items": {
         "content": "$1",
@@ -645,7 +645,7 @@
   },
   "open_file": {
     "description": "Menu text; manager context",
-    "message": "打开文件夹"
+    "message": "打开文件"
   },
   "open_link": {
     "description": "Menu text; select window",
@@ -685,7 +685,7 @@
   },
   "pref_hide_context": {
     "description": "Preferences/General",
-    "message": "不要显示右键菜单项"
+    "message": "不要显示通用右键菜单项"
   },
   "pref_manager_tooltip": {
     "description": "Preferences/General",
@@ -1077,7 +1077,7 @@
   },
   "sizes_huge": {
     "description": "Menu text; manager size column dropdown",
-    "message": "超大 (> $HIGH$)",
+    "message": "超大 （> $HIGH$）",
     "placeholders": {
       "high": {
         "content": "$1",
