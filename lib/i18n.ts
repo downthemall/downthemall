@@ -121,19 +121,28 @@ function loadCached() {
 }
 
 async function loadRawLocales() {
-  // en is the base locale
+  // en is the base locale, always to be loaded
+  // The loader will override string from it with more specific string
+  // from other locales
   const langs = new Set<string>(["en"]);
-  const ui = (typeof browser !== "undefined" ? browser : chrome).
-    i18n.getUILanguage();
-  langs.add(ui);
 
-  // Try the base too
-  if (ui.includes("-")) {
-    langs.add(ui.split(/[-]+/)[0]);
-  }
-  else if (ui.includes("_")) {
-    langs.add(ui.split(/[_]+/)[0]);
-  }
+  const uiLang: string = (typeof browser !== "undefined" ? browser : chrome).
+    i18n.getUILanguage();
+
+  // Chrome will only look for underscore versions of locale codes,
+  // while Firefox will look for both.
+  // So we better normalize the code to the underscore version.
+  // However, the API seems to always return the dash-version.
+
+  // Add all base locales into ascending order of priority,
+  // starting with the most unspecific base locale, ending
+  // with the most specific locale.
+  // e.g. this will transform ["zh", "CN"] -> ["zh", "zh_CN"]
+  uiLang.split(/[_-]/g).reduce<string[]>((prev, curr) => {
+    prev.push(curr);
+    langs.add(prev.join("_"));
+    return prev;
+  }, []);
 
   const fetched = await Promise.all(Array.from(langs, fetchLanguage));
   return fetched.filter(e => !!e);
