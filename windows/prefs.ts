@@ -1,7 +1,13 @@
 "use strict";
 // License: MIT
 
-import { _, localize, saveCustomLocale } from "../lib/i18n";
+import {
+  ALL_LANGS,
+  _,
+  getCurrentLanguage,
+  localize,
+  saveCustomLocale,
+} from "../lib/i18n";
 import { Prefs, PrefWatcher } from "../lib/prefs";
 import { hostToDomain } from "../lib/util";
 import { filters } from "../lib/filters";
@@ -13,7 +19,7 @@ import { iconForPath, visible } from "../lib/windowutils";
 import { VirtualTable } from "../uikit/lib/table";
 import { Icons } from "./icons";
 import { $ } from "./winutil";
-import { runtime } from "../lib/browser";
+import { runtime, storage } from "../lib/browser";
 
 const ICON_BASE_SIZE = 16;
 
@@ -544,8 +550,8 @@ class LimitsUI extends VirtualTable {
 }
 
 
-addEventListener("DOMContentLoaded", () => {
-  localize(document.documentElement);
+addEventListener("DOMContentLoaded", async () => {
+  await localize(document.documentElement);
 
   // General
   new BoolPref("pref-global-turbo", "global-turbo");
@@ -585,6 +591,29 @@ addEventListener("DOMContentLoaded", () => {
     }
     await ModalDialog.inform(
       _("information.title"), _("reset-layouts.done"), _("ok"));
+  });
+
+
+  const langs = $<HTMLSelectElement>("#languages");
+  const currentLang = getCurrentLanguage();
+  for (const [code, lang] of ALL_LANGS.entries()) {
+    const langEl = document.createElement("option");
+    langEl.textContent = lang;
+    langEl.value = code;
+    if (code === currentLang) {
+      langEl.selected = true;
+    }
+    langs.appendChild(langEl);
+  }
+  langs.addEventListener("change", async () => {
+    await storage.sync.set({language: langs.value});
+    if (langs.value === currentLang) {
+      return;
+    }
+    // eslint-disable-next-line max-len
+    if (confirm("Changing the selected translation requires restarting the extension.\nDo you wanDo you want to restrt the extension now?")) {
+      runtime.reload();
+    }
   });
 
   // Filters

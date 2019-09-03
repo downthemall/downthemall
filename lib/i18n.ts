@@ -2,6 +2,19 @@
 // License: MIT
 
 import {memoize} from "./memoize";
+import * as langs from "../_locales/all.json";
+import { sorted, naturalCaseCompare } from "./sorting";
+
+
+export const ALL_LANGS = Object.freeze(new Map<string, string>(
+  sorted(Object.entries(langs), e => {
+    return [e[1], e[0]];
+  }, naturalCaseCompare)));
+
+let CURRENT = "en";
+export function getCurrentLanguage() {
+  return CURRENT;
+}
 
 declare let browser: any;
 declare let chrome: any;
@@ -144,7 +157,13 @@ async function loadRawLocales() {
     return prev;
   }, []);
 
-  const fetched = await Promise.all(Array.from(langs, fetchLanguage));
+  if (CURRENT && CURRENT !== "default") {
+    langs.delete(CURRENT);
+    langs.add(CURRENT);
+  }
+
+  const valid = Array.from(langs).filter(e => ALL_LANGS.has(e));
+  const fetched = await Promise.all(Array.from(valid, fetchLanguage));
   return fetched.filter(e => !!e);
 }
 
@@ -152,6 +171,21 @@ async function load(): Promise<Localization> {
   try {
     checkBrowser();
     try {
+      let currentLang: any = "";
+      if (typeof browser !== "undefined") {
+        currentLang = await browser.storage.sync.get("language");
+      }
+      else {
+        currentLang = await new Promise(
+          resolve => chrome.storage.sync.get("language", resolve));
+      }
+      if ("language" in currentLang) {
+        currentLang = currentLang.language;
+      }
+      if (!currentLang || !currentLang.length) {
+        currentLang = "default";
+      }
+      CURRENT = currentLang;
       // en is the base locale
       let valid = loadCached();
       if (!valid) {
