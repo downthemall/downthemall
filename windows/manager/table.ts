@@ -777,7 +777,8 @@ export class DownloadTable extends VirtualTable {
   }
 
   resumeDownloads(forced = false) {
-    const sids = this.getSelectedSids(DownloadState.RESUMABLE);
+    const sids = this.getSelectedSids(
+      forced ? DownloadState.FORCABLE : DownloadState.RESUMABLE);
     if (!sids.length) {
       return;
     }
