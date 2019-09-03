@@ -9,8 +9,25 @@ const DONATE_URL = "https://www.downthemall.org/howto/donate/";
 const MANAGER_URL = "/windows/manager.html";
 
 export async function mostRecentBrowser(): Promise<any> {
-  let window = Array.from(await windows.getAll({windowTypes: ["normal"]})).
-    filter((w: any) => w.type === "normal").pop();
+  let window;
+  try {
+    window = await windows.getCurrent({windowTypes: ["normal"]});
+    if (window.type !== "normal") {
+      throw new Error("not a normal window");
+    }
+  }
+  catch {
+    try {
+      window = await windows.getlastFocused({windowTypes: ["normal"]});
+      if (window.type !== "normal") {
+        throw new Error("not a normal window");
+      }
+    }
+    catch {
+      window = Array.from(await windows.getAll({windowTypes: ["normal"]})).
+        filter((w: any) => w.type === "normal").pop();
+    }
+  }
   if (!window) {
     window = await windows.create({
       url: DONATE_URL,
