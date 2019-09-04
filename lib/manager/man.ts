@@ -185,6 +185,7 @@ export class Manager extends EventEmitter {
     this.notifiedFinished = true;
     new Notification(null, _("queue-finished"));
     if (this.shouldReload) {
+      this.saveQueue.trigger();
       setTimeout(() => {
         if (this.running.size) {
           return;
