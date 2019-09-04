@@ -93,7 +93,10 @@ export class Manager extends EventEmitter {
       }
       this.items.push(rv);
     });
-    await this.resetScheduler();
+
+    // Do not wait for the scheduler
+    this.resetScheduler();
+
     this.emit("inited");
     setTimeout(() => this.checkMissing(), MISSING_TIMEOUT);
     runtime.onUpdateAvailable.addListener(() => {
