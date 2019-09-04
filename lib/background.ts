@@ -103,7 +103,7 @@ class Handler {
         discarded: false,
       };
       if (!CHROME) {
-        toptions.hidden = true;
+        toptions.hidden = false;
       }
       const selectedTabs = options.allTabs ?
         await tabs.query(toptions) as any[] :
