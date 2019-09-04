@@ -25,6 +25,7 @@ import {
 
 const PREROLL_HEURISTICS = /dl|attach|download|name|file|get|retr|^n$|\.(php|asp|py|pl|action|htm|shtm)/i;
 const PREROLL_TIMEOUT = 10000;
+const SHELF_TIMEOUT = 2000;
 
 
 const setShelfEnabled = downloads.setShelfEnabled || function() {
@@ -70,7 +71,7 @@ function parseDisposition(disp: MimeType) {
   return "";
 }
 
-const reenableShelf = debounce(() => setShelfEnabled(true), 1000, true);
+const reenableShelf = debounce(() => setShelfEnabled(true), SHELF_TIMEOUT, true);
 
 type Header = {name: string; value: string};
 interface Options {
