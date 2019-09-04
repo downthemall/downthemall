@@ -297,7 +297,7 @@
     "description": "Title for the add-paused dialog",
     "message": "往後皆新增暫停的下載？"
   },
-  "ask-again-later": {
+  "ask_again_later": {
     "description": "Button text",
     "message": "以後再說"
   },
