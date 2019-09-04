@@ -97,7 +97,7 @@ export class Download extends BaseDownload {
     if (this.state !== QUEUED) {
       throw new Error("invalid state");
     }
-    console.trace("starting", this.toString(), this.toMsg());
+    console.log("starting", this.toString(), this.toMsg());
     this.changeState(RUNNING);
     try {
       const options: Options = {
