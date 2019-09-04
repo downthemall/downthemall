@@ -257,7 +257,7 @@ export class Download extends BaseDownload {
     finally {
       if (this.state === RUNNING) {
         this.prerolled = true;
-        this.manager.save([this]);
+        this.markDirty();
       }
     }
   }

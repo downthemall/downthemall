@@ -239,7 +239,7 @@ export class Manager extends EventEmitter {
     this.emit("dirty", items);
   }
 
-  save(items: Download[]) {
+  private save(items: Download[]) {
     DB.saveItems(items.filter(i => !i.removed)).
       catch(console.error);
   }
