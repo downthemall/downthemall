@@ -356,7 +356,7 @@ export class Download extends BaseDownload {
       this.cancel();
       this.error = "SERVER_UNAUTHORIZED";
     }
-    else if (status === 400) {
+    else if (status === 400 || status === 405) {
       PREROLL_NOPE.add(this.uURL.host);
     }
     else if (status > 400 && status < 500) {
