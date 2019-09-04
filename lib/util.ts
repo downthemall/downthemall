@@ -2,8 +2,8 @@
 // License: MIT
 
 import * as psl from "psl";
-import {memoize, identity} from "./memoize";
-export {debounce} from "../uikit/lib/util";
+import { identity, memoize } from "./memoize";
+export { debounce } from "../uikit/lib/util";
 
 export class Promised {
   private promise: Promise<any>;
@@ -96,8 +96,72 @@ export const IS_WIN = typeof navigator !== "undefined" &&
 export const sanitizePath = identity(
   IS_WIN ? sanitizePathWindows : sanitizePathGeneric);
 
+export class PathInfo {
+  private baseField: string;
+
+  private extField: string;
+
+  private pathField: string;
+
+  private nameField: string;
+
+  private fullField: string;
+
+  constructor(base: string, ext: string, path: string) {
+    this.baseField = base;
+    this.extField = ext;
+    this.pathField = path;
+    this.update();
+  }
+
+  get base() {
+    return this.baseField;
+  }
+
+  set base(nv) {
+    this.baseField = sanitizePath(nv);
+    this.update();
+  }
+
+  get ext() {
+    return this.extField;
+  }
+
+  set ext(nv) {
+    this.extField = sanitizePath(nv);
+    this.update();
+  }
+
+  get name() {
+    return this.nameField;
+  }
+
+  get path() {
+    return this.pathField;
+  }
+
+  set path(nv) {
+    this.pathField = sanitizePath(nv);
+    this.update();
+  }
+
+  get full() {
+    return this.fullField;
+  }
+
+  private update() {
+    this.nameField = this.extField ? `${this.baseField}.${this.extField}` : this.baseField;
+    this.fullField = this.pathField ? `${this.pathField}/${this.nameField}` : this.nameField;
+  }
+
+  clone() {
+    return new PathInfo(this.baseField, this.extField, this.pathField);
+  }
+}
+
 // XXX cleanup + test
-export const parsePath = memoize(function parsePath(path: string | URL) {
+export const parsePath = memoize(function parsePath(
+    path: string | URL): PathInfo {
   if (path instanceof URL) {
     path = decodeURIComponent(path.pathname);
   }
@@ -127,13 +191,7 @@ export const parsePath = memoize(function parsePath(path: string | URL) {
   }
 
   path = pieces.join("/");
-  return {
-    path,
-    name,
-    base,
-    ext,
-    full: path ? `${path}/${name}` : name
-  };
+  return new PathInfo(base, ext, path);
 });
 
 export class CoalescedUpdate<T> extends Set<T> {

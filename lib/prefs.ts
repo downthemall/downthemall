@@ -1,9 +1,9 @@
 "use strict";
 // License: MIT
 
-import * as DEFAULT_PREFS from "../data/prefs.json";
+import DEFAULT_PREFS from "../data/prefs.json";
 import { EventEmitter } from "./events";
-import {loadOverlay} from "./objectoverlay";
+import { loadOverlay } from "./objectoverlay";
 import { storage } from "./browser";
 
 const PREFS = Symbol("PREFS");

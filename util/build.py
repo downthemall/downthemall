@@ -26,7 +26,7 @@ UNCOMPRESSABLE = set((".png", ".jpg", ".zip", ".woff2"))
 LICENSED = set((".css", ".html", ".js", "*.ts"))
 IGNORED = set((".DS_Store", "Thumbs.db"))
 
-PERM_IGNORED_FX = set(("downloads.shelf",))
+PERM_IGNORED_FX = set(("downloads.shelf", "webRequest"))
 PERM_IGNORED_CHROME = set(("menus",))
 
 SCRIPTS = [

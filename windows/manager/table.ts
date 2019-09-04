@@ -116,7 +116,7 @@ export class DownloadItem extends EventEmitter {
 
   public error: string;
 
-  public finalName: string;
+  public currentName: string;
 
   public ext?: string;
 
@@ -159,7 +159,7 @@ export class DownloadItem extends EventEmitter {
       return this.iconField;
     }
     this.iconField = this.owner.icons.get(
-      iconForPath(this.finalName, ICON_BASE_SIZE));
+      iconForPath(this.currentName, ICON_BASE_SIZE));
     if (this.ext) {
       IconCache.get(this.ext, ICON_REAL_SIZE).then(icon => {
         if (icon) {
@@ -178,7 +178,7 @@ export class DownloadItem extends EventEmitter {
       return this.largeIconField;
     }
     this.largeIconField = this.owner.icons.get(
-      iconForPath(this.finalName, LARGE_ICON_BASE_SIZE));
+      iconForPath(this.currentName, LARGE_ICON_BASE_SIZE));
     if (this.ext) {
       IconCache.get(this.ext, LARGE_ICON_REAL_SIZE).then(icon => {
         if (icon) {
@@ -217,7 +217,7 @@ export class DownloadItem extends EventEmitter {
     if (this.owner.showUrls.value) {
       return this.usable;
     }
-    return this.finalName;
+    return this.currentName;
   }
 
   get fmtSize() {

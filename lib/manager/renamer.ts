@@ -2,8 +2,12 @@
 "use strict";
 // License: MIT
 
-import { parsePath, sanitizePath } from "../util";
 import { _ } from "../i18n";
+import { MimeDB } from "../mime";
+// eslint-disable-next-line no-unused-vars
+import { parsePath, PathInfo, sanitizePath } from "../util";
+// eslint-disable-next-line no-unused-vars
+import { BaseDownload } from "./basedownload";
 
 const REPLACE_EXPR = /\*\w+\*/gi;
 
@@ -22,20 +26,40 @@ const DATE_FORMATTER = new Intl.NumberFormat(undefined, {
 });
 
 export default class Renamer {
-  private readonly d: any;
+  private readonly d: BaseDownload;
 
-  constructor(download: any) {
+  private readonly nameinfo: PathInfo;
+
+  constructor(download: BaseDownload) {
     this.d = download;
+    const info = parsePath(this.d.finalName);
+    this.nameinfo = this.fixupExtension(info);
   }
 
-  get nameinfo() {
-    return parsePath(this.d.finalName);
+  private fixupExtension(info: PathInfo): PathInfo {
+    if (!this.d.mime) {
+      return info;
+    }
+    const mime = MimeDB.getMime(this.d.mime);
+    if (!mime) {
+      return info;
+    }
+    const {ext} = info;
+    if (mime.major === "image" || mime.major === "video") {
+      if (ext && mime.extensions.has(ext.toLowerCase())) {
+        return info;
+      }
+      return new PathInfo(info.base, mime.primary, info.path);
+    }
+    if (ext) {
+      return info;
+    }
+    return new PathInfo(info.base, mime.primary, info.path);
   }
 
   get ref() {
     return this.d.uReferrer;
   }
-
 
   get p_name() {
     return this.nameinfo.base;
@@ -184,7 +208,7 @@ export default class Renamer {
         (self[prop] || "").trim() :
         type;
       if (flat) {
-        return rv.replace(/\/+/g, "-");
+        return rv.replace(/[/\\]+/g, "-");
       }
       return rv;
     }));

@@ -19,7 +19,7 @@ const OPTS = {
   state: DownloadState.QUEUED,
   batch: 42,
   idx: 23,
-  mask: "*name*.*ext",
+  mask: "*name*.*ext*",
   description: "desc / ript.ion .",
   title: " *** TITLE *** ",
 };
@@ -54,6 +54,49 @@ describe("Renamer", function() {
       expect(dest.name).to.equal("filenäme.extension");
       expect(dest.base).to.equal("filenäme");
       expect(dest.ext).to.equal("extension");
+      expect(dest.path).to.equal("");
+    });
+
+    it("*name*.*ext* (mime override)", function() {
+      const {dest} = new BaseDownload(
+        Object.assign({}, OPTS, {
+          mask: "*name* *batch*.*ext*",
+          mime: "image/jpeg"
+        }));
+      expect(dest.full).to.equal("filenäme 042.jpg");
+      expect(dest.name).to.equal("filenäme 042.jpg");
+      expect(dest.base).to.equal("filenäme 042");
+      expect(dest.ext).to.equal("jpg");
+      expect(dest.path).to.equal("");
+    });
+
+    it("*name*.*ext* (mime no override)", function() {
+      const {dest} = new BaseDownload(
+        Object.assign({}, OPTS, {
+          mask: "*name* *batch*.*ext*",
+          mime: "image/jpeg",
+          url: "https://www.example.co.uk/filen%C3%A4me.JPe",
+          usable: "https://www.example.co.uk/filenäme.JPe",
+        }));
+      expect(dest.full).to.equal("filenäme 042.JPe");
+      expect(dest.name).to.equal("filenäme 042.JPe");
+      expect(dest.base).to.equal("filenäme 042");
+      expect(dest.ext).to.equal("JPe");
+      expect(dest.path).to.equal("");
+    });
+
+    it("*name*.*ext* (mime override; missing ext)", function() {
+      const {dest} = new BaseDownload(
+        Object.assign({}, OPTS, {
+          mask: "*name* *batch*.*ext*",
+          mime: "application/json",
+          url: "https://www.example.co.uk/filen%C3%A4me",
+          usable: "https://www.example.co.uk/filenäme",
+        }));
+      expect(dest.full).to.equal("filenäme 042.json");
+      expect(dest.name).to.equal("filenäme 042.json");
+      expect(dest.base).to.equal("filenäme 042");
+      expect(dest.ext).to.equal("json");
       expect(dest.path).to.equal("");
     });
 

@@ -94,8 +94,10 @@ export class TextFilter extends ItemFilter {
   }
 
   allow(item: DownloadItem) {
-    return this.expr.test(
-      [item.usable, item.description, item.finalName].join(" "));
+    const {expr} = this;
+    return expr.test(item.currentName) ||
+      expr.test(item.usable) ||
+      expr.test(item.description);
   }
 }
 
