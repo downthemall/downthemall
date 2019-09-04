@@ -132,6 +132,11 @@ export class Download extends BaseDownload {
           this.updateStateFromBrowser();
           return;
         }
+        if (state[0].state == "complete") {
+          this.changeState(DONE);
+          this.updateStateFromBrowser();
+          return;
+        }
         if (!state[0].canResume) {
           throw new Error("Cannot resume");
         }
