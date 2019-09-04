@@ -156,6 +156,12 @@ export class Download extends BaseDownload {
     }
     console.log("starting", this.toString(), this.toMsg());
     this.changeState(RUNNING);
+
+    // Do NOT await
+    this.reallyStart();
+  }
+
+  private async reallyStart() {
     try {
       if (!this.prerolled) {
         await this.maybePreroll();
