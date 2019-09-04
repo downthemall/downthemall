@@ -374,7 +374,7 @@ export class Download extends BaseDownload {
     this.prerolled = false;
     this.manId = 0;
     this.written = this.totalSize = 0;
-    this.mime = this.serverName = "";
+    this.mime = this.serverName = this.browserName = "";
   }
 
   async removeFromBrowser() {
@@ -451,7 +451,7 @@ export class Download extends BaseDownload {
       const state = (await downloads.search({id: this.manId})).pop();
       const {filename, error} = state;
       const path = parsePath(filename);
-      this.serverName = path.name;
+      this.browserName = path.name;
       this.adoptSize(state);
       if (!this.mime && state.mime) {
         this.mime = state.mime;

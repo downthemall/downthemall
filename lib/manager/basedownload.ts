@@ -27,6 +27,7 @@ const SAVEDPROPS = [
   "written",
   // server stuff
   "serverName",
+  "browserName",
   "mime",
   "prerolled",
   // other options
@@ -41,6 +42,7 @@ const DEFAULTS = {
   state: QUEUED,
   error: "",
   serverName: "",
+  browserName: "",
   fileName: "",
   totalSize: 0,
   written: 0,
@@ -95,6 +97,8 @@ export class BaseDownload {
 
   public serverName: string;
 
+  public browserName: string;
+
   public mime: string;
 
   public mask: string;
@@ -135,7 +139,7 @@ export class BaseDownload {
   }
 
   get currentName() {
-    return this.serverName || this.dest.name || this.finalName;
+    return this.browserName || this.dest.name || this.finalName;
   }
 
   get urlName() {
@@ -175,7 +179,7 @@ export class BaseDownload {
     rv.destName = dest.name;
     rv.destPath = dest.path;
     rv.destFull = dest.full;
-    rv.currentName = this.serverName || rv.destName || rv.finalName;
+    rv.currentName = this.browserName || rv.destName || rv.finalName;
     rv.error = this.error;
     rv.ext = this.renamer.p_ext;
     return rv;
