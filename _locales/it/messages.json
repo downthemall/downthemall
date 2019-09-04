@@ -7,71 +7,265 @@
     "message": "it-IT",
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
-  "check_selected_items": {
-    "message": "Contrassegna elementi selezionati",
-    "description": "Menu text"
+  "addpaused": {
+    "message": "Aggiungi in pausa",
+    "description": "Action: Add paused"
   },
-  "NETWORK_FAILED": {
-    "message": "Errore di rete",
+  "add_paused_once": {
+    "message": "Aggiungi in pausa solo questa volta",
+    "description": "Checkbox label"
+  },
+  "add_paused_question": {
+    "message": "Vuoi ricordare questa decisione e aggiungere sempre",
+    "description": "Messagebox text"
+  },
+  "add_paused_title": {
+    "message": "Vuoi sempre aggiungere in pausa?",
+    "description": "Title for the add-paused dialog"
+  },
+  "batch_batch": {
+    "message": "Download di massa",
+    "description": "Button text"
+  },
+  "batch_desc": {
+    "message": "L'indirizzo attuale sembra contenere istruzioni per un download di massa.",
+    "description": ""
+  },
+  "batch_question": {
+    "message": "Vuoi aggiungerlo come download di massa o singolo?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_title": {
+    "message": "Download di massa",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "error_invalidMask": {
+    "message": "Maschera di rinomina non valida",
+    "description": "Error message; single/select window"
+  },
+  "error_invalidReferrer": {
+    "message": "Referrer invalido",
+    "description": "Error message; single window"
+  },
+  "extensionDescription": {
+    "message": "Il download manager di massa per il tuo browser",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "Filtraggio Rapido",
+    "description": "Label for Fast Filtering input"
+  },
+  "fastfilter_placeholder": {
+    "message": "Espressione con asterischi (*) oppure regolare",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "Errore di accesso al file",
     "description": "Error Message"
   },
-  "numitems_label": {
-    "message": "$ITEMS$ elementi selezionati…",
-    "description": "Status bar text in select; Number of items selected (label)",
+  "filter_at_least_one": {
+    "message": "Devi selezionare almeno un tipo di filtro!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter_expression": {
+    "message": "Valore Filtro",
+    "description": "Message box label"
+  },
+  "filter_label": {
+    "message": "Etichetta Filtro",
+    "description": "Message box label"
+  },
+  "filter_types": {
+    "message": "Tipo Filtro",
+    "description": "Message box label"
+  },
+  "filter_type_link": {
+    "message": "Filtro Link",
+    "description": "Message box checkbox label"
+  },
+  "filter_type_media": {
+    "message": "Filtro Media",
+    "description": "Message box checkbox label"
+  },
+  "mask": {
+    "message": "Maschera",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask_default": {
+    "message": "Maschera Predefinita",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "nagging_message": {
+    "message": "Hai aggiunto $DOWNLOADS$ download a DownThemAll! Come utente abituale, potresti considerare una donazione per supportare lo sviluppo. Grazie!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
     "placeholders": {
-      "items": {
+      "downloads": {
         "content": "$1",
-        "example": "1000"
+        "example": ""
       }
     }
   },
-  "options_general": {
-    "message": "Generale",
-    "description": "Pref tab text"
+  "pref_add_paused": {
+    "message": "Aggiungi nuovi download in pausa, invece di avviarli subito",
+    "description": "Preferences/General"
   },
-  "paused": {
-    "message": "In pausa",
-    "description": "Status text; manager"
+  "pref_finish_notification": {
+    "message": "Mostra una notifica quando la coda finisce di scaricare",
+    "description": "Preferences/General"
   },
-  "prefs_conflicts": {
-    "message": "Quando un file esiste",
+  "pref_global_turbo": {
+    "message": "Il pulsante del browser diventa OneClick!",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "Non mostrare menù contestuali ovunque",
+    "description": "Preferences/General"
+  },
+  "pref_manager_tooltip": {
+    "message": "Mostra suggerimenti nelle schede del Manager",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "Limiti di rete globali",
     "description": "Preferences/General; group text"
   },
-  "prefs_short": {
-    "message": "Impostazioni",
-    "description": "Menu text; Preferences"
+  "pref_open_manager_on_queue": {
+    "message": "Apri la scheda del Manager dopo aver aggiunto nuovi download",
+    "description": "Preferences/General"
   },
-  "prefs_title": {
-    "message": "Impostazioni di DownThemAll!",
-    "description": "Window/tab title; Preferences"
-  },
-  "pref_manager": {
-    "message": "Manager",
+  "pref_queueing": {
+    "message": "Coda dei Download",
     "description": "Preferences/General; group text"
   },
-  "pref_ui": {
-    "message": "Interfaccia utente",
-    "description": "Preferences/General; group text"
+  "pref_queue_notification": {
+    "message": "Mostra una notifica quando si accodano nuovi download",
+    "description": "Preferences/General"
   },
-  "remember": {
-    "message": "Ricorda questa decisione",
-    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  "pref_remove_missing_on_init": {
+    "message": "Rimuovi i download mancanti dopo un riavvio",
+    "description": "Preferences/General"
   },
-  "remove_all_complete_downloads": {
-    "message": "Rimuovi completati",
+  "pref_show_urls": {
+    "message": "Mostra indirizzi invece dei nomi",
+    "description": "Preferences/General"
+  },
+  "pref_text_links": {
+    "message": "Cerca link nel testo del sito (più lento)",
+    "description": "Preferences/General"
+  },
+  "referrer": {
+    "message": "Referrer",
+    "description": "Label for \"Referrer\""
+  },
+  "remove_batch_downloads": {
+    "message": "Rimuovi gruppo attuale",
     "description": "Menu text"
   },
-  "renamer_text": {
-    "message": "Descrizione",
+  "remove_batch_downloads_question": {
+    "message": "Vuoi rimuovere tutti i download dello stesso gruppo dal download attualmente selezionato?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads_question": {
+    "message": "Vuoi rimuovere tutti i download completati?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_filter_downloads_question": {
+    "message": "Vuoi rimuovere tutti i download completati che corrispondono al filtro '$FILTER$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "message": "Vuoi rimuovere tutti i download completati nella selezione attuale?",
+    "description": "Messagebox text"
+  },
+  "remove_domain_complete_downloads": {
+    "message": "Rimuovi download completati dal dominio attuale",
+    "description": "Menu text"
+  },
+  "remove_domain_complete_downloads_question": {
+    "message": "Vuoi rimuovere tutti i download completati dal dominio $DOMAIN$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "message": "Rimuovi dominio attuale",
+    "description": "Menu text"
+  },
+  "remove_filter_downloads_question": {
+    "message": "Vuoi rimuovere tutti i download che corrispondono al filtro '$FILTER$'?",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "message": "Cancella i download mancanti",
+    "description": "Menu text"
+  },
+  "remove_missing_downloads_question": {
+    "message": "Vuoi rimuovere tutti i download mancanti?",
+    "description": "Messagebox text"
+  },
+  "remove_paused_downloads": {
+    "message": "Rimuovi in pausa",
+    "description": "Menu text"
+  },
+  "remove_paused_downloads_question": {
+    "message": "Vuoi rimuovere tutti i download in pausa?",
+    "description": "Messagebox text"
+  },
+  "renamer_ext": {
+    "message": "Estensione file",
     "description": "Mask text; see mask button"
   },
-  "renamer_title": {
-    "message": "Titolo",
+  "renamer_info": {
+    "message": "Aggiungendo 'flat', come *flatsubdirs* sostituirà tutti gli slash nel valore, quindi non verranno create cartelle",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer_qstring": {
+    "message": "Stringa Querry",
     "description": "Mask text; see mask button"
   },
-  "select_checked": {
-    "message": "Contrassegna elemento",
-    "description": "Menu text; select context"
+  "renamer_ref": {
+    "message": "Referrer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refdomain": {
+    "message": "Dominio Referrer (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refurl": {
+    "message": "Indirizzo URL (senza protocollo)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_y": {
+    "message": "Data Aggiunta - Anno",
+    "description": "Mask text; see mask button"
+  },
+  "reset_confirmations": {
+    "message": "Ripristina conferme memorizzate",
+    "description": "Button text; pref/General"
+  },
+  "reset_confirmations_done": {
+    "message": "Tutte le conferme precedentemente memorizzate sono state resettate!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset_layouts": {
+    "message": "Ripristina modifiche grafiche",
+    "description": "Button text; pref/General"
   },
   "add_download": {
     "message": "Aggiungi Download",
@@ -116,6 +310,10 @@
   "change_later_reminder": {
     "message": "Puoi cambiare la tua decisione nelle Impostazioni",
     "description": "Checkbox label text for decision confirmations"
+  },
+  "check_selected_items": {
+    "message": "Contrassegna elementi selezionati",
+    "description": "Menu text"
   },
   "colConnections": {
     "message": "Connessioni contemporanee",
@@ -415,6 +613,10 @@
     "message": "Su",
     "description": "Action for moving a download up"
   },
+  "NETWORK_FAILED": {
+    "message": "Errore di rete",
+    "description": "Error Message"
+  },
   "never_ask_again": {
     "message": "Non chiedermelo di nuovo",
     "description": "Donation button"
@@ -426,6 +628,16 @@
   "no_links": {
     "message": "Nessun link trovato!",
     "description": "Notification text"
+  },
+  "numitems_label": {
+    "message": "$ITEMS$ elementi selezionati…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
   },
   "ok": {
     "message": "OK",
@@ -447,17 +659,45 @@
     "message": "Filtri",
     "description": "Pref tab text"
   },
+  "options_general": {
+    "message": "Generale",
+    "description": "Pref tab text"
+  },
   "options_network": {
     "message": "Rete",
     "description": "Pref tab text"
+  },
+  "paused": {
+    "message": "In pausa",
+    "description": "Status text; manager"
   },
   "pause_download": {
     "message": "Metti in pausa",
     "description": "Action for pausing a download"
   },
+  "prefs_conflicts": {
+    "message": "Quando un file esiste",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "Impostazioni",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "Impostazioni di DownThemAll!",
+    "description": "Window/tab title; Preferences"
+  },
   "pref_concurrent_downloads": {
     "message": "Download contemporanei",
     "description": "Preferences/Network"
+  },
+  "pref_manager": {
+    "message": "Manager",
+    "description": "Preferences/General; group text"
+  },
+  "pref_ui": {
+    "message": "Interfaccia utente",
+    "description": "Preferences/General; group text"
   },
   "queued": {
     "message": "In coda",
@@ -480,6 +720,14 @@
   "queue_finished": {
     "message": "La coda di download è terminata",
     "description": "Notification text"
+  },
+  "remember": {
+    "message": "Ricorda questa decisione",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove_all_complete_downloads": {
+    "message": "Rimuovi completati",
+    "description": "Menu text"
   },
   "remove_all_downloads": {
     "message": "Rimuovi tutto",
@@ -575,6 +823,14 @@
     "message": "Percorso",
     "description": "Mask text; see mask button"
   },
+  "renamer_text": {
+    "message": "Descrizione",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "Titolo",
+    "description": "Mask text; see mask button"
+  },
   "renamer_url": {
     "message": "URL (senza protocollo)",
     "description": "Mask text; see mask button"
@@ -602,6 +858,10 @@
   "select_all": {
     "message": "Seleziona tutto",
     "description": "Menu text; e.g. select context"
+  },
+  "select_checked": {
+    "message": "Contrassegna elemento",
+    "description": "Menu text; select context"
   },
   "select_none": {
     "message": "Seleziona nessuno",
@@ -796,7 +1056,7 @@
     }
   },
   "statusNetwork_active_title": {
-    "message": "I nuovi download verranno avviato",
+    "message": "I nuovi download verranno avviati",
     "description": "Status bar tooltip; manager network icon"
   },
   "statusNetwork_inactive_title": {
