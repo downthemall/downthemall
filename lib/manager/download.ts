@@ -24,9 +24,11 @@ import {
 } from "./state";
 
 const PREROLL_HEURISTICS = /dl|attach|download|name|file|get|retr|^n$|\.(php|asp|py|pl|action|htm|shtm)/i;
+const PREROLL_HOSTS = /4cdn|chan/;
 const PREROLL_TIMEOUT = 10000;
-const SHELF_TIMEOUT = 2000;
+const PREROLL_NOPE = new Set<string>();
 
+const SHELF_TIMEOUT = 2000;
 
 const setShelfEnabled = downloads.setShelfEnabled || function() {
   // ignored
@@ -71,7 +73,8 @@ function parseDisposition(disp: MimeType) {
   return "";
 }
 
-const reenableShelf = debounce(() => setShelfEnabled(true), SHELF_TIMEOUT, true);
+const reenableShelf = debounce(
+  () => setShelfEnabled(true), SHELF_TIMEOUT, true);
 
 type Header = {name: string; value: string};
 interface Options {
@@ -133,7 +136,7 @@ export class Download extends BaseDownload {
           this.updateStateFromBrowser();
           return;
         }
-        if (state[0].state == "complete") {
+        if (state[0].state === "complete") {
           this.changeState(DONE);
           this.updateStateFromBrowser();
           return;
@@ -224,8 +227,14 @@ export class Download extends BaseDownload {
   }
 
   private get shouldPreroll() {
-    const {pathname, search} = this.uURL;
+    const {pathname, search, host} = this.uURL;
+    if (PREROLL_NOPE.has(host)) {
+      return false;
+    }
     if (!this.renamer.p_ext) {
+      return true;
+    }
+    if (search.length) {
       return true;
     }
     if (this.uURL.pathname.endsWith("/")) {
@@ -234,7 +243,7 @@ export class Download extends BaseDownload {
     if (PREROLL_HEURISTICS.test(pathname)) {
       return true;
     }
-    if (search.length) {
+    if (PREROLL_HOSTS.test(host)) {
       return true;
     }
     return false;
@@ -347,7 +356,10 @@ export class Download extends BaseDownload {
       this.cancel();
       this.error = "SERVER_UNAUTHORIZED";
     }
-    else if (status >= 400) {
+    else if (status === 400) {
+      PREROLL_NOPE.add(this.uURL.host);
+    }
+    else if (status > 400 && status < 500) {
       this.cancel();
       this.error = "SERVER_FAILED";
     }
