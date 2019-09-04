@@ -108,11 +108,11 @@ body > * {
 }
 
 #colURL {
-  width: 38%;
+  width: 42%;
 }
 
 #colPercent {
-  width: 3em;
+  width: 4em;
   min-width: 3em;
 }
 
@@ -121,11 +121,11 @@ body > * {
 }
 
 #colSize {
-  width: 15em;
+  width: 14em;
 }
 
 #colSpeed {
-  width: 6em;
+  width: 7em;
 }
 
 #colDomain,
@@ -262,6 +262,7 @@ body > * {
 }
 
 .virtualtable-column-6,
+.virtualtable-column-4,
 .virtualtable-column-3 {
   text-align: right;
 }
