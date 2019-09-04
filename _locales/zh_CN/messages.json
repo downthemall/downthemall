@@ -1077,7 +1077,7 @@
   },
   "sizes_huge": {
     "description": "Menu text; manager size column dropdown",
-    "message": "超大 （> $HIGH$）",
+    "message": "超大（> $HIGH$）",
     "placeholders": {
       "high": {
         "content": "$1",
@@ -1087,7 +1087,7 @@
   },
   "sizes_large": {
     "description": "Menu text; manager size column dropdown",
-    "message": "大 ($LOW$ - $HIGH$)",
+    "message": "大（$LOW$ - $HIGH$）",
     "placeholders": {
       "high": {
         "content": "$2",
@@ -1101,7 +1101,7 @@
   },
   "sizes_medium": {
     "description": "Menu text; manager size column dropdown",
-    "message": "中 ($LOW$ - $HIGH$)",
+    "message": "中（$LOW$ - $HIGH$）",
     "placeholders": {
       "high": {
         "content": "$2",
@@ -1115,7 +1115,7 @@
   },
   "sizes_small": {
     "description": "Menu text; manager size column dropdown",
-    "message": "小 ($LOW$ - $HIGH$)",
+    "message": "小（$LOW$ - $HIGH$）",
     "placeholders": {
       "high": {
         "content": "$2",
