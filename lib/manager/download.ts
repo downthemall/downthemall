@@ -2,7 +2,6 @@
 // License: MIT
 
 import MimeType from "whatwg-mimetype";
-import { debounce } from "../../uikit/lib/util";
 import { CHROME, downloads, webRequest } from "../browser";
 import { Prefs } from "../prefs";
 import { PromiseSerializer } from "../pserializer";
@@ -27,12 +26,6 @@ const PREROLL_HEURISTICS = /dl|attach|download|name|file|get|retr|^n$|\.(php|asp
 const PREROLL_HOSTS = /4cdn|chan/;
 const PREROLL_TIMEOUT = 10000;
 const PREROLL_NOPE = new Set<string>();
-
-const SHELF_TIMEOUT = 2000;
-
-const setShelfEnabled = downloads.setShelfEnabled || function() {
-  // ignored
-};
 
 function parseDisposition(disp: MimeType) {
   if (!disp) {
@@ -72,9 +65,6 @@ function parseDisposition(disp: MimeType) {
   }
   return "";
 }
-
-const reenableShelf = debounce(
-  () => setShelfEnabled(true), SHELF_TIMEOUT, true);
 
 type Header = {name: string; value: string};
 interface Options {
@@ -198,24 +188,18 @@ export class Download extends BaseDownload {
         this.manager.removeManId(this.manId);
       }
 
-      setShelfEnabled(false);
       try {
-        try {
-          this.manager.addManId(
-            this.manId = await downloads.download(options), this);
-        }
-        catch (ex) {
-          if (!this.referrer) {
-            throw ex;
-          }
-          // Re-attempt without referrer
-          filterInSitu(options.headers, h => h.name !== "Referer");
-          this.manager.addManId(
-            this.manId = await downloads.download(options), this);
-        }
+        this.manager.addManId(
+          this.manId = await downloads.download(options), this);
       }
-      finally {
-        reenableShelf();
+      catch (ex) {
+        if (!this.referrer) {
+          throw ex;
+        }
+        // Re-attempt without referrer
+        filterInSitu(options.headers, h => h.name !== "Referer");
+        this.manager.addManId(
+          this.manId = await downloads.download(options), this);
       }
       this.markDirty();
     }

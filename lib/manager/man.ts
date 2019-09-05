@@ -25,6 +25,9 @@ const DIRTY_TIMEOUT = 100;
 const MISSING_TIMEOUT = 12 * 1000;
 const RELOAD_TIMEOUT = 10 * 1000;
 
+const setShelfEnabled = downloads.setShelfEnabled || function() {
+  // ignored
+};
 
 export class Manager extends EventEmitter {
   private items: Download[];
@@ -151,7 +154,7 @@ export class Manager extends EventEmitter {
       }
       const next = await this.scheduler.next(this.running);
       if (!next) {
-        this.maybeNotifyFinished();
+        this.maybeRunFinishActions();
         break;
       }
       if (this.running.has(next) || next.state !== QUEUED) {
@@ -171,8 +174,29 @@ export class Manager extends EventEmitter {
   async startDownload(download: Download) {
     // Add to running first, so we don't confuse the scheduler and other parts
     this.running.add(download);
+    setShelfEnabled(false);
     await download.start();
     this.notifiedFinished = false;
+  }
+
+  async maybeRunFinishActions() {
+    if (this.running.size) {
+      return;
+    }
+    await this.maybeNotifyFinished();
+    if (this.running.size) {
+      return;
+    }
+    if (this.shouldReload) {
+      this.saveQueue.trigger();
+      setTimeout(() => {
+        if (this.running.size) {
+          return;
+        }
+        runtime.reload();
+      }, RELOAD_TIMEOUT);
+    }
+    setShelfEnabled(true);
   }
 
   async maybeNotifyFinished() {
@@ -184,15 +208,6 @@ export class Manager extends EventEmitter {
     }
     this.notifiedFinished = true;
     new Notification(null, _("queue-finished"));
-    if (this.shouldReload) {
-      this.saveQueue.trigger();
-      setTimeout(() => {
-        if (this.running.size) {
-          return;
-        }
-        runtime.reload();
-      }, RELOAD_TIMEOUT);
-    }
   }
 
   addManId(id: number, download: Download) {
