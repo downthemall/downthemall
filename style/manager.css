@@ -439,6 +439,8 @@ body > * {
   justify-items: stretch;
   border-radius: 4px;
   box-shadow: 2px 2px 6px black;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #tooltip-infos {

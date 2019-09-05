@@ -609,8 +609,12 @@ export class DownloadTable extends VirtualTable {
     this.selection.clear();
 
     this.tooltip = null;
-    this.on("hover", async info => {
-      if (!(await Prefs.get("tooltip"))) {
+    const tooltipWatcher = new PrefWatcher("tooltip", true);
+    this.on("hover", info => {
+      if (!document.hasFocus()) {
+        return;
+      }
+      if (!tooltipWatcher.value) {
         return;
       }
       const item = this.downloads.filtered[info.rowid];
@@ -804,6 +808,7 @@ export class DownloadTable extends VirtualTable {
   }
 
   async openFile() {
+    this.dismissTooltip();
     const {focusRow} = this;
     if (focusRow < 0) {
       return;
@@ -823,8 +828,8 @@ export class DownloadTable extends VirtualTable {
     }
     finally {
       setTimeout(() => {
-      item.opening = false;
-      this.invalidateRow(focusRow);
+        item.opening = false;
+        this.invalidateRow(focusRow);
       }, 500);
     }
   }
