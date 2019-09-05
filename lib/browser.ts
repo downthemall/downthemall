@@ -49,6 +49,7 @@ export const {runtime} = polyfill;
 export const {storage} = polyfill;
 export const {tabs} = polyfill;
 export const {webNavigation} = polyfill;
+export const {webRequest} = polyfill;
 export const {windows} = polyfill;
 
 export const CHROME = navigator.appVersion.includes("Chrome/");

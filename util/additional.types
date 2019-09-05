@@ -1,0 +1,23 @@
+types {
+  application/x-x509-ca-cert pem crt der;
+  application/javascript js jsx;
+  audio/x-matroska mka;
+  image/bmp bmp;
+  image/heic heic heif;
+  image/heic heic heif;
+  image/heif-sequence heic heif;
+  image/heif-sequence heic heif;
+  image/jpeg jpg jpeg jpe jfif;
+  image/webp webp;
+  text/html html htm shtml php;
+  text/javascript js jsx;
+  video/mpeg mpg mpe mpeg mpg;
+  video/opus opus;
+  video/x-matroska mkv mk3d mks;
+  video/quicktime mov qt moov;
+  application/x-compressed gz;
+  application/x-gzip gz gzip;
+  application/x-bzip2 bz2;
+  application/x-tar tar;
+  application/x-xz xz;
+}

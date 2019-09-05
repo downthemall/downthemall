@@ -1,25 +1,80 @@
 "use strict";
 // License: MIT
 
+import MimeType from "whatwg-mimetype";
+import { debounce } from "../../uikit/lib/util";
+import { CHROME, downloads, webRequest } from "../browser";
 import { Prefs } from "../prefs";
-import { parsePath, filterInSitu } from "../util";
-import {
-  QUEUED, RUNNING, CANCELED, PAUSED, MISSING, DONE,
-  FORCABLE, PAUSABLE, CANCELABLE,
-} from "./state";
-import { BaseDownload } from "./basedownload";
 import { PromiseSerializer } from "../pserializer";
+import { filterInSitu, parsePath, sanitizePath } from "../util";
+import { BaseDownload } from "./basedownload";
 // eslint-disable-next-line no-unused-vars
 import { Manager } from "./man";
-import { downloads, CHROME } from "../browser";
-import { debounce } from "../../uikit/lib/util";
+import Renamer from "./renamer";
+import {
+  CANCELABLE,
+  CANCELED,
+  DONE,
+  FORCABLE,
+  MISSING,
+  PAUSABLE,
+  PAUSED,
+  QUEUED,
+  RUNNING
+} from "./state";
 
+const PREROLL_HEURISTICS = /dl|attach|download|name|file|get|retr|^n$|\.(php|asp|py|pl|action|htm|shtm)/i;
+const PREROLL_HOSTS = /4cdn|chan/;
+const PREROLL_TIMEOUT = 10000;
+const PREROLL_NOPE = new Set<string>();
+
+const SHELF_TIMEOUT = 2000;
 
 const setShelfEnabled = downloads.setShelfEnabled || function() {
   // ignored
 };
 
-const reenableShelf = debounce(() => setShelfEnabled(true), 1000, true);
+function parseDisposition(disp: MimeType) {
+  if (!disp) {
+    return "";
+  }
+  let encoding = (disp.parameters.get("charset") || "utf-8").trim();
+  let file = (disp.parameters.get("filename") || "").trim().replace(/^(["'])(.*)\1$/, "$2");
+  if (!file) {
+    const encoded = disp.parameters.get("filename*");
+    if (!encoded) {
+      return "";
+    }
+    const pieces = encoded.split("'", 3);
+    if (pieces.length !== 3) {
+      return "";
+    }
+    encoding = pieces[0].trim() || encoding;
+    file = (pieces[3] || "").trim().replace(/^(["'])(.*)\1$/, "$2");
+  }
+  file = file.trim();
+  if (!file) {
+    return "";
+  }
+
+  try {
+    // And now for the tricky part...
+    // First unescape the string, to get the raw bytes
+    // not utf-8-interpreted bytes
+    // Then convert the string into an uint8[]
+    // Then decode
+    return new TextDecoder(encoding).decode(
+      new Uint8Array(unescape(file).split("").map(e => e.charCodeAt(0)))
+    );
+  }
+  catch (ex) {
+    console.error("Cannot decode", encoding, file, ex);
+  }
+  return "";
+}
+
+const reenableShelf = debounce(
+  () => setShelfEnabled(true), SHELF_TIMEOUT, true);
 
 type Header = {name: string; value: string};
 interface Options {
@@ -53,6 +108,7 @@ export class Download extends BaseDownload {
   }
 
   markDirty() {
+    this.renamer = new Renamer(this);
     this.manager.setDirty(this);
   }
 
@@ -80,6 +136,11 @@ export class Download extends BaseDownload {
           this.updateStateFromBrowser();
           return;
         }
+        if (state[0].state === "complete") {
+          this.changeState(DONE);
+          this.updateStateFromBrowser();
+          return;
+        }
         if (!state[0].canResume) {
           throw new Error("Cannot resume");
         }
@@ -97,9 +158,22 @@ export class Download extends BaseDownload {
     if (this.state !== QUEUED) {
       throw new Error("invalid state");
     }
-    console.trace("starting", this.toString(), this.toMsg());
+    console.log("starting", this.toString(), this.toMsg());
     this.changeState(RUNNING);
+
+    // Do NOT await
+    this.reallyStart();
+  }
+
+  private async reallyStart() {
     try {
+      if (!this.prerolled) {
+        await this.maybePreroll();
+        if (this.state !== RUNNING) {
+          // Aborted by preroll
+          return;
+        }
+      }
       const options: Options = {
         conflictAction: await Prefs.get("conflict-action"),
         filename: this.dest.full,
@@ -152,6 +226,146 @@ export class Download extends BaseDownload {
     }
   }
 
+  private get shouldPreroll() {
+    const {pathname, search, host} = this.uURL;
+    if (PREROLL_NOPE.has(host)) {
+      return false;
+    }
+    if (!this.renamer.p_ext) {
+      return true;
+    }
+    if (search.length) {
+      return true;
+    }
+    if (this.uURL.pathname.endsWith("/")) {
+      return true;
+    }
+    if (PREROLL_HEURISTICS.test(pathname)) {
+      return true;
+    }
+    if (PREROLL_HOSTS.test(host)) {
+      return true;
+    }
+    return false;
+  }
+
+  private async maybePreroll() {
+    try {
+      if (this.prerolled) {
+        // Check again, just in case, async and all
+        return;
+      }
+      if (!this.shouldPreroll) {
+        return;
+      }
+      await (CHROME ? this.prerollChrome() : this.prerollFirefox());
+    }
+    catch (ex) {
+      console.error("Failed to preroll", this, ex.toString(), ex.stack, ex);
+    }
+    finally {
+      if (this.state === RUNNING) {
+        this.prerolled = true;
+        this.markDirty();
+      }
+    }
+  }
+
+  private async prerollFirefox() {
+    const controller = new AbortController();
+    const {signal} = controller;
+    const res = await fetch(this.uURL.toString(), {
+      method: "HEAD",
+      mode: "same-origin",
+      signal,
+    });
+    controller.abort();
+    const {headers} = res;
+    this.prerollFinialize(headers, res);
+  }
+
+  async prerollChrome() {
+    let rid = "";
+    const rurl = this.uURL.toString();
+    let listener: any;
+    const wr = new Promise<any[]>(resolve => {
+      listener = (details: any) => {
+        const {url, requestId, statusCode} = details;
+        if (rid !== requestId && url !== rurl) {
+          return;
+        }
+        // eslint-disable-next-line no-magic-numbers
+        if (statusCode >= 300 && statusCode < 400) {
+          // Redirect, continue tracking;
+          rid = requestId;
+          return;
+        }
+        resolve(details.responseHeaders);
+      };
+      webRequest.onHeadersReceived.addListener(
+        listener, {urls: ["<all_urls>"]}, ["responseHeaders"]);
+    });
+    const p = Promise.race([
+      wr,
+      new Promise<any[]>((_, reject) =>
+        setTimeout(() => reject(new Error("timeout")), PREROLL_TIMEOUT))
+    ]);
+
+    p.finally(() => {
+      webRequest.onHeadersReceived.removeListener(listener);
+    });
+    const controller = new AbortController();
+    const {signal} = controller;
+    const res = await fetch(rurl, {
+      method: "HEAD",
+      signal,
+    });
+    controller.abort();
+    const headers = await p;
+    this.prerollFinialize(
+      new Headers(headers.map(i => [i.name, i.value])), res);
+  }
+
+
+  private prerollFinialize(headers: Headers, res: Response) {
+    const type = MimeType.parse(headers.get("content-type") || "");
+    const dispHeader = headers.get("content-disposition");
+    let file = "";
+    if (dispHeader) {
+      const disp = new MimeType(`${type && type.toString() || "application/octet-stream"}; ${dispHeader}`);
+      file = parseDisposition(disp);
+      // Sanitize
+      file = sanitizePath(file.replace(/[/\\]+/g, "-"));
+    }
+    if (type) {
+      this.mime = type.essence;
+    }
+    this.serverName = file;
+    this.markDirty();
+    const {status} = res;
+    /* eslint-disable no-magic-numbers */
+    if (status === 404) {
+      this.cancel();
+      this.error = "SERVER_BAD_CONTENT";
+    }
+    else if (status === 403) {
+      this.cancel();
+      this.error = "SERVER_FORBIDDEN";
+    }
+    else if (status === 402 || status === 407) {
+      this.cancel();
+      this.error = "SERVER_UNAUTHORIZED";
+    }
+    else if (status === 400 || status === 405) {
+      PREROLL_NOPE.add(this.uURL.host);
+    }
+    else if (status > 400 && status < 500) {
+      this.cancel();
+      this.error = "SERVER_FAILED";
+    }
+    /* eslint-enable no-magic-numbers */
+  }
+
   resume(forced = false) {
     if (!(FORCABLE & this.state)) {
       return;
@@ -181,9 +395,10 @@ export class Download extends BaseDownload {
   }
 
   reset() {
+    this.prerolled = false;
     this.manId = 0;
     this.written = this.totalSize = 0;
-    this.serverName = "";
+    this.mime = this.serverName = this.browserName = "";
   }
 
   async removeFromBrowser() {
@@ -260,8 +475,11 @@ export class Download extends BaseDownload {
       const state = (await downloads.search({id: this.manId})).pop();
       const {filename, error} = state;
       const path = parsePath(filename);
-      this.serverName = path.name;
+      this.browserName = path.name;
       this.adoptSize(state);
+      if (!this.mime && state.mime) {
+        this.mime = state.mime;
+      }
       this.markDirty();
       switch (state.state) {
       case "in_progress":

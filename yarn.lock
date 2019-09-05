@@ -46,6 +46,11 @@
   resolved "https://registry.yarnpkg.com/@types/psl/-/psl-1.1.0.tgz#390c5df1613b166ce3c3eb9fda4d93dc3eeec7b5"
   integrity sha512-HhZnoLAvI2koev3czVPzBNRYvdrzJGLjQbWZhqFmS9Q6a0yumc5qtfSahBGb5g+6qWvA8iiQktqGkwoIXa/BNQ==
 
+"@types/whatwg-mimetype@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@types/whatwg-mimetype/-/whatwg-mimetype-2.1.0.tgz#f981bbdf1813a75820a6ec3a7fdfa0d452552cc7"
+  integrity sha512-bJ/bZ+pA69lm+Ll8JJRoAD9saH7unIMfxPQQpl7bxa00qNqvUXSyk3xvoRMea1uCpAOxweI7CzjWx48ysX6yug==
+
 "@typescript-eslint/eslint-plugin@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.0.0.tgz#609a5d7b00ce21a6f94d7ef282eba9da57ca1e42"
@@ -3717,6 +3722,11 @@ webpack@^4.39.3:
     terser-webpack-plugin "^1.4.1"
     watchpack "^1.6.0"
     webpack-sources "^1.4.1"
+
+whatwg-mimetype@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/whatwg-mimetype/-/whatwg-mimetype-2.3.0.tgz#3d4b1e0312d2079879f826aff18dbeeca5960fbf"
+  integrity sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==
 
 which-module@^2.0.0:
   version "2.0.0"

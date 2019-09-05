@@ -12,6 +12,8 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
     "sourceMap": true
   }
 }

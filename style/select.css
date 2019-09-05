@@ -232,3 +232,7 @@ body > * {
 #maskButton {
   justify-self: flex-start;
 }
+
+#btnDownload {
+  font-weight: bold;
+}

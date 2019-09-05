@@ -9,7 +9,7 @@
 
   "default_locale": "en",
 
-  "content_security_policy": "script-src 'self'; style-src 'self' 'unsafe-inline'; img-src data: blob: 'self'; connect-src data: blob: 'self'; default-src 'self'",
+  "content_security_policy": "script-src 'self'; style-src 'self' 'unsafe-inline'; img-src data: blob: 'self'; connect-src data: blob: http: https: 'self'; default-src 'self'",
 
   "icons": {
     "16": "style/icon16.png",
@@ -31,7 +31,8 @@
     "notifications",
     "storage",
     "tabs",
-    "webNavigation"
+    "webNavigation",
+    "webRequest"
   ],
 
   "background": {

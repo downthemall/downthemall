@@ -295,7 +295,7 @@ class Gatherer {
 function gather(msg: any, sender: any, callback: Function) {
   try {
     if (!msg || msg.type !== "DTA:gather" || !callback) {
-      return;
+      return Promise.resolve(null);
     }
     const gatherer = new Gatherer(msg);
     const result = {
@@ -313,10 +313,11 @@ function gather(msg: any, sender: any, callback: Function) {
       ),
     };
     urlToUsable(result, result.baseURL);
-    callback(result);
+    return Promise.resolve(result);
   }
   catch (ex) {
     console.error(ex.toString(), ex.stack, ex);
+    return Promise.resolve(null);
   }
 }
 

@@ -27,6 +27,9 @@ const SAVEDPROPS = [
   "written",
   // server stuff
   "serverName",
+  "browserName",
+  "mime",
+  "prerolled",
   // other options
   "private",
   // db
@@ -39,10 +42,13 @@ const DEFAULTS = {
   state: QUEUED,
   error: "",
   serverName: "",
+  browserName: "",
   fileName: "",
   totalSize: 0,
   written: 0,
   manId: 0,
+  mime: "",
+  prerolled: false
 };
 
 let sessionId = 0;
@@ -59,13 +65,25 @@ export class BaseDownload {
 
   public url: string;
 
+  public usable: string;
+
   public uReferrer: URLd;
 
   public referrer: string;
 
+  public usableReferrer: string;
+
   public startDate: Date;
 
   public fileName: string;
+
+  public description?: string;
+
+  public title?: string;
+
+  public batch: number;
+
+  public idx: number;
 
   public error: string;
 
@@ -79,8 +97,13 @@ export class BaseDownload {
 
   public serverName: string;
 
+  public browserName: string;
+
+  public mime: string;
+
   public mask: string;
 
+  public prerolled: boolean;
 
   constructor(options: any) {
     Object.assign(this, DEFAULTS);
@@ -113,6 +136,10 @@ export class BaseDownload {
 
   get finalName() {
     return this.serverName || this.fileName || this.urlName || "index.html";
+  }
+
+  get currentName() {
+    return this.browserName || this.dest.name || this.finalName;
   }
 
   get urlName() {
@@ -152,6 +179,7 @@ export class BaseDownload {
     rv.destName = dest.name;
     rv.destPath = dest.path;
     rv.destFull = dest.full;
+    rv.currentName = this.browserName || rv.destName || rv.finalName;
     rv.error = this.error;
     rv.ext = this.renamer.p_ext;
     return rv;

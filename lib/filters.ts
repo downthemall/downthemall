@@ -9,7 +9,7 @@ import { EventEmitter } from "./events";
 import { TYPE_LINK, TYPE_MEDIA, TYPE_ALL } from "./constants";
 // eslint-disable-next-line no-unused-vars
 import { Overlayable } from "./objectoverlay";
-import * as DEFAULT_FILTERS from "../data/filters.json";
+import DEFAULT_FILTERS from "../data/filters.json";
 import { FASTFILTER } from "./recentlist";
 import { _, locale } from "./i18n";
 // eslint-disable-next-line no-unused-vars

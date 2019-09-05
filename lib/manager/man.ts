@@ -93,7 +93,10 @@ export class Manager extends EventEmitter {
       }
       this.items.push(rv);
     });
-    await this.resetScheduler();
+
+    // Do not wait for the scheduler
+    this.resetScheduler();
+
     this.emit("inited");
     setTimeout(() => this.checkMissing(), MISSING_TIMEOUT);
     runtime.onUpdateAvailable.addListener(() => {
@@ -182,6 +185,7 @@ export class Manager extends EventEmitter {
     this.notifiedFinished = true;
     new Notification(null, _("queue-finished"));
     if (this.shouldReload) {
+      this.saveQueue.trigger();
       setTimeout(() => {
         if (this.running.size) {
           return;
@@ -236,7 +240,7 @@ export class Manager extends EventEmitter {
     this.emit("dirty", items);
   }
 
-  save(items: Download[]) {
+  private save(items: Download[]) {
     DB.saveItems(items.filter(i => !i.removed)).
       catch(console.error);
   }

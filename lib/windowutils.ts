@@ -3,7 +3,7 @@
 
 import { windows, tabs, runtime } from "../lib/browser";
 import {getManager} from "./manager/man";
-import * as DEFAULT_ICONS from "../data/icons.json";
+import DEFAULT_ICONS from "../data/icons.json";
 
 const DONATE_URL = "https://www.downthemall.org/howto/donate/";
 const MANAGER_URL = "/windows/manager.html";

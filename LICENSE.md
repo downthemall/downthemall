@@ -77,3 +77,7 @@ Licensed under the Mozilla Public License 2.0.
 
 The list itself is licensed under the Mozilla Public License 2.0.
 The javascript library accessing it is licensed under the MIT license.
+
+## whatwg-mimetype
+
+Licensed under MIT

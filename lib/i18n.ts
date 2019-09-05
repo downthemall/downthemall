@@ -2,7 +2,7 @@
 // License: MIT
 
 import {memoize} from "./memoize";
-import * as langs from "../_locales/all.json";
+import langs from "../_locales/all.json";
 import { sorted, naturalCaseCompare } from "./sorting";
 
 
