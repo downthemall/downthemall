@@ -154,6 +154,10 @@ body > * {
   height: 26px;
 }
 
+.virtualtable-progress-container {
+  border-radius: 2px;
+}
+
 .virtualtable-progress-bar {
   height: 14px;
 }
