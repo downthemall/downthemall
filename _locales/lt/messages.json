@@ -108,7 +108,7 @@
     "description": "Media label (short)"
   },
   "missing": {
-    "message": "Trūksta",
+    "message": "Nėra",
     "description": "Status text in manager"
   },
   "NETWORK_FAILED": {
@@ -692,15 +692,15 @@
     "description": "Preferences/General"
   },
   "pref_open_manager_on_queue": {
-    "message": "Atidaryti Menedžerio kortelę, po kai kurių parsisiuntimų atsiradimo eilėje",
+    "message": "Atidaryti Menedžerio kortelę po parsisiuntimo pridėjimo",
     "description": "Preferences/General"
   },
   "pref_queue_notification": {
-    "message": "Parodyti pranešimą, kai eilėje atsiranda nauji parsisiuntimai",
+    "message": "Rodyti pranešimą po naujų parsisiuntimų pridėjimo",
     "description": "Preferences/General"
   },
   "pref_remove_missing_on_init": {
-    "message": "Pašalinti trūkstamus parsisiuntimus po restarto",
+    "message": "Šalinti nepavykusius parsisiuntimus po restarto",
     "description": "Preferences/General"
   },
   "pref_show_urls": {
@@ -740,7 +740,7 @@
     "description": "Window/tab title; Preferences"
   },
   "queue_finished": {
-    "message": "Parsisiuntimų eilė baigta",
+    "message": "Visi parsisiuntimai baigti",
     "description": "Notification text"
   },
   "queued_download": {
@@ -862,11 +862,11 @@
     }
   },
   "remove_missing": {
-    "message": "Išvalyti trūkstamus parsisiuntimus",
+    "message": "Išvalyti nepavykusius parsisiuntimus",
     "description": "Menu text"
   },
   "remove_missing_downloads_question": {
-    "message": "Norite išvalyti visus trūkstamus parsisiuntimus?",
+    "message": "Norite išvalyti visus nepavykusius parsisiuntimus?",
     "description": "Messagebox text"
   },
   "remove_paused_downloads": {
