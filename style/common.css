@@ -18,6 +18,7 @@
   --folder-color: rgb(214, 165, 4);
   --maskbutton-color: rgb(236, 185, 16);
   --missing-color: rgb(0, 82, 204);
+  --open-color: rgba(236, 185, 16, 0.8);
 }
 
 html[data-platform="mac"] {

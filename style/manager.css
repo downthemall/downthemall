@@ -154,6 +154,10 @@ body > * {
   height: 26px;
 }
 
+.virtualtable-row.opening {
+  background: var(--open-color) !important;
+}
+
 .virtualtable-progress-container {
   border-radius: 2px;
 }

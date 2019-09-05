@@ -144,6 +144,8 @@ export class DownloadItem extends EventEmitter {
 
   private largeIconField?: string;
 
+  public opening: boolean;
+
   constructor(owner: DownloadTable, raw: any, stats?: Stats) {
     super();
     Object.assign(this, raw);
@@ -802,19 +804,28 @@ export class DownloadTable extends VirtualTable {
   }
 
   async openFile() {
-    if (this.focusRow < 0) {
+    const {focusRow} = this;
+    if (focusRow < 0) {
       return;
     }
-    const item = this.downloads.filtered[this.focusRow];
+    const item = this.downloads.filtered[focusRow];
     if (!item || !item.manId || item.state !== DownloadState.DONE) {
       return;
     }
+    item.opening = true;
     try {
+      this.invalidateRow(focusRow);
       await downloads.open(item.manId);
     }
     catch (ex) {
       console.error(ex, ex.toString(), ex);
       PORT.post("missing", {sid: item.sessionId});
+    }
+    finally {
+      setTimeout(() => {
+      item.opening = false;
+      this.invalidateRow(focusRow);
+      }, 500);
     }
   }
 
@@ -1112,7 +1123,16 @@ export class DownloadTable extends VirtualTable {
     if (!item) {
       return null;
     }
+    if (item.opening) {
+      return ["opening"];
+    }
     const cls = StateClasses.get(item.state);
+    if (cls && item.opening) {
+      return [cls, "opening"];
+    }
+    if (item.opening) {
+      return ["opening"];
+    }
     return cls && [cls] || null;
   }
 
