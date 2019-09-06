@@ -154,6 +154,14 @@ body > * {
   height: 26px;
 }
 
+.virtualtable-row.opening {
+  background: var(--open-color) !important;
+}
+
+.virtualtable-progress-container {
+  border-radius: 2px;
+}
+
 .virtualtable-progress-bar {
   height: 14px;
 }
@@ -431,6 +439,8 @@ body > * {
   justify-items: stretch;
   border-radius: 4px;
   box-shadow: 2px 2px 6px black;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #tooltip-infos {

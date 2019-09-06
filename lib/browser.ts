@@ -39,13 +39,15 @@ export interface RawPort {
   postMessage: (message: any) => void;
 }
 
-export const {extension} = polyfill;
-export const {notifications} = polyfill;
 export const {browserAction} = polyfill;
 export const {contextMenus} = polyfill;
 export const {downloads} = polyfill;
+export const {extension} = polyfill;
+export const {history} = polyfill;
 export const {menus} = polyfill;
+export const {notifications} = polyfill;
 export const {runtime} = polyfill;
+export const {sessions} = polyfill;
 export const {storage} = polyfill;
 export const {tabs} = polyfill;
 export const {webNavigation} = polyfill;

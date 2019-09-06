@@ -19,6 +19,9 @@ import {
   // eslint-disable-next-line no-unused-vars
   MenuClickInfo,
   CHROME,
+  runtime,
+  history,
+  sessions,
 } from "./browser";
 import { Bus } from "./bus";
 import { filterInSitu } from "./util";
@@ -566,6 +569,43 @@ locale.then(() => {
   }
 
   (async function init() {
+    const urlBase = runtime.getURL("");
+    history.onVisited.addListener(({url}: {url: string}) => {
+      if (!url || !url.startsWith(urlBase)) {
+        return;
+      }
+      history.deleteUrl({url});
+    });
+    const results: {url?: string}[] = await history.search({text: urlBase});
+    for (const {url} of results) {
+      if (!url) {
+        continue;
+      }
+      history.deleteUrl({url});
+    }
+
+    if (!CHROME) {
+      const sessionRemover = async () => {
+        for (const s of await sessions.getRecentlyClosed()) {
+          if (s.tab) {
+            if (s.tab.url.startsWith(urlBase)) {
+              await sessions.forgetClosedTab(s.tab.windowId, s.tab.sessionId);
+            }
+            continue;
+          }
+          if (!s.window || !s.window.tabs || s.window.tabs.length > 1) {
+            continue;
+          }
+          const [tab] = s.window.tabs;
+          if (tab.url.startsWith(urlBase)) {
+            await sessions.forgetClosedWindow(s.window.sessionId);
+          }
+        }
+      };
+      sessions.onChanged.addListener(sessionRemover);
+      await sessionRemover();
+    }
+
     await Prefs.set("last-run", new Date());
     Prefs.get("global-turbo", false).then(v => adjustAction(v));
     Prefs.on("global-turbo", (prefs, key, value) => {

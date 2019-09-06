@@ -21,6 +21,7 @@ export async function single(item: BaseItem | null) {
     type: "popup",
   });
   const window = await windows.create(windowOptions);
+  tracker.track(window.id, null);
   try {
     const port: Port = await Promise.race<Port>([
       new Promise<Port>(resolve => Bus.oncePort("single", resolve)),
