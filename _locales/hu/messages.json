@@ -1,10 +1,10 @@
 {
   "language": {
-    "message": "A nyelv neve a saját nyelveden",
+    "message": "Magyar (HU)",
     "description": "Lanuage Name in your language"
   },
   "language_code": {
-    "message": "angol",
+    "message": "hu",
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
   "addpaused": {
