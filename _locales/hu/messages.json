@@ -1,0 +1,1170 @@
+{
+  "language": {
+    "message": "Magyar (HU)",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "hu",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "addpaused": {
+    "message": "Szünetelt letöltés hozzáadása",
+    "description": "Action: Add paused"
+  },
+  "add_download": {
+    "message": "Letöltés hozzáadása",
+    "description": "Action for adding a download"
+  },
+  "add_new": {
+    "message": "Új hozzáadása",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add_paused_once": {
+    "message": "Egyszeri szünetelt letöltés hozzáadása",
+    "description": "Checkbox label"
+  },
+  "add_paused_question": {
+    "message": "Szeretné, hogy mostantól minden letöltés szünetelten kerüljön hozzáadásra?",
+    "description": "Messagebox text"
+  },
+  "add_paused_title": {
+    "message": "Mindig szünetelt letöltés kerüljön hozzáadásra?",
+    "description": "Title for the add-paused dialog"
+  },
+  "ask_again_later": {
+    "message": "Kérdezzen rá újból",
+    "description": "Button text"
+  },
+  "batch_batch": {
+    "message": "Kötegelt letöltés",
+    "description": "Button text"
+  },
+  "batch_desc": {
+    "message": "Úgy tűnik, hogy az aktuális URL kötegelt letöltésről szóló információt tartalmaz.",
+    "description": ""
+  },
+  "batch_items": {
+    "message": "Az elemek száma:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_preview": {
+    "message": "Előnézet:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_question": {
+    "message": "Kötegelten vagy egyben kívánja hozzáadni a letöltési listához?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_single": {
+    "message": "Letöltés egyben",
+    "description": "Button text for batch confirmation"
+  },
+  "batch_title": {
+    "message": "Kötegelt letöltés",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "Mégse",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "Elvetve",
+    "description": "Download status text"
+  },
+  "cancel_download": {
+    "message": "Mégse",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "cannot_be_empty": {
+    "message": "Ez a mező nem lehet üres",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change_later_reminder": {
+    "message": "Később megváltoztathatja döntését a Beállítások menüben",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check_selected_items": {
+    "message": "Kiválasztott elemek kijelölése",
+    "description": "Menu text"
+  },
+  "colConnections": {
+    "message": "Egyidejű kapcsolatok",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "Tartomány (domain)",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "Becsült idő",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "Név/URL",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "Folyamat",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Szeletek",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Méret",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Sebesség",
+    "description": "Table column in manager"
+  },
+  "conflict_overwrite": {
+    "message": "Felülírás",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_prompt": {
+    "message": "Elvégez",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_rename": {
+    "message": "Átnevezés",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "Belső böngésző hiba",
+    "description": "Error Message"
+  },
+  "create_filter": {
+    "message": "Szűrő létrehozása",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom_filename": {
+    "message": "Egyéni fájlnév",
+    "description": "Label text; single window"
+  },
+  "deffilter_all": {
+    "message": "Minden fájl",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter_arch": {
+    "message": "Tömörített (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter_aud": {
+    "message": "Hang (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter_bin": {
+    "message": "Szoftver (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter_doc": {
+    "message": "Dokumentumok (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter_img": {
+    "message": "Képek (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter_imggif": {
+    "message": "GIF képek",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter_imgjpg": {
+    "message": "JPEG képek",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter_imgpng": {
+    "message": "PNG képek",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter_vid": {
+    "message": "Videók (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "Törlés",
+    "description": "button text"
+  },
+  "description": {
+    "message": "Leírás",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable_other_filters": {
+    "message": "A többi letiltása",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "Adományozz!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Kész",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "Letöltés",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download_verb": {
+    "message": "Letöltés",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta_regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "DownThemAll! - Összes lap",
+    "description": "Menu text"
+  },
+  "dta_regular_image": {
+    "message": "Kép mentése a DownThemAll-al!",
+    "description": "Menu text"
+  },
+  "dta_regular_link": {
+    "message": "Hivatkozás mentése DownThemAll-al",
+    "description": "Menu text"
+  },
+  "dta_regular_media": {
+    "message": "Média mentése DownThemAll-al",
+    "description": "Menu text"
+  },
+  "dta_regular_selection": {
+    "message": "Kiválasztás mentése DownThemAll-al",
+    "description": "Menu text"
+  },
+  "dta_turbo": {
+    "message": "OneClick!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "OneClick! - Összes lap",
+    "description": "Menu text"
+  },
+  "dta_turbo_image": {
+    "message": "Kép letöltése OneClick-el",
+    "description": "Menu text"
+  },
+  "dta_turbo_link": {
+    "message": "Hivatkozás letöltése OneClick-el",
+    "description": "Menu text"
+  },
+  "dta_turbo_media": {
+    "message": "Média letöltése OneClick-el",
+    "description": "Menu text"
+  },
+  "dta_turbo_selection": {
+    "message": "Kijelölés mentése OneClick-el",
+    "description": "Menu text"
+  },
+  "error_invalidMask": {
+    "message": "Érvénytelen átnevezési maszk",
+    "description": "Error message; single/select window"
+  },
+  "error_invalidReferrer": {
+    "message": "Érvénytelen ajánló",
+    "description": "Error message; single window"
+  },
+  "error_invalidURL": {
+    "message": "Érvénytelen URL",
+    "description": "Error message; single window"
+  },
+  "error_noItemsSelected": {
+    "message": "Nincs elem kiválasztva",
+    "description": "Error Message; select window"
+  },
+  "extensionDescription": {
+    "message": "A tömeges letöltő a böngésződ számára",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "Gyors szűrés",
+    "description": "Label for Fast Filtering input"
+  },
+  "fastfilter_placeholder": {
+    "message": "Helyettesítő kifejezés vagy reguláris kifejezés",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "Fájl hozzáférési hiba",
+    "description": "Error Message"
+  },
+  "filter_at_least_one": {
+    "message": "Legalább egy szűrőtípust kell választani!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter_create_title": {
+    "message": "Új szűrő készítése",
+    "description": "Message box title"
+  },
+  "filter_expression": {
+    "message": "Szűrő kifejezés",
+    "description": "Message box label"
+  },
+  "filter_label": {
+    "message": "Szűrő címke",
+    "description": "Message box label"
+  },
+  "filter_types": {
+    "message": "Szűrő típusok",
+    "description": "Message box label"
+  },
+  "filter_type_link": {
+    "message": "Hivatkozás szűrő",
+    "description": "Message box checkbox label"
+  },
+  "filter_type_media": {
+    "message": "Média szűrő",
+    "description": "Message box checkbox label"
+  },
+  "finishing": {
+    "message": "Befejezés",
+    "description": "Status text"
+  },
+  "force_start": {
+    "message": "Erőltetett indítás",
+    "description": "Menu text"
+  },
+  "information_title": {
+    "message": "Információ",
+    "description": "Used in message boxes"
+  },
+  "invalid_domain_pref": {
+    "message": "Érvénytelen tartomány",
+    "description": "Error message in prefs/network"
+  },
+  "invert_selection": {
+    "message": "Kijelölés megfordítása",
+    "description": "Menu text"
+  },
+  "key_alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key_ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key_delete": {
+    "message": "Del",
+    "description": "Short for Delete-key"
+  },
+  "key_end": {
+    "message": "End",
+    "description": "Short for End-key"
+  },
+  "key_home": {
+    "message": "Home",
+    "description": "Short for home key"
+  },
+  "key_pagedown": {
+    "message": "PageDown",
+    "description": "Short for pagedown-key"
+  },
+  "key_pageup": {
+    "message": "PageUp",
+    "description": "Short for PageUp-key"
+  },
+  "limited_to": {
+    "message": "Korlátozás",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "Hivatkozások",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "Kezelő",
+    "description": "Menu text"
+  },
+  "manager_status_items": {
+    "message": "Elkészült $COMPLETE$ a $TOTAL$ letöltésből ($SHOWING$ kijelezve), $RUNNING$ folyamatban",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_title": {
+    "message": "DownThemAll! kezelő",
+    "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "Maszk",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask_default": {
+    "message": "Alapértelmezett maszk",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "Média",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Hiányzik",
+    "description": "Status text in manager"
+  },
+  "move_bottom": {
+    "message": "Legalulra",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move_down": {
+    "message": "Le",
+    "description": "Action for moving a download down"
+  },
+  "move_top": {
+    "message": "Legfelülre",
+    "description": "Action for moving a download to the top"
+  },
+  "move_up": {
+    "message": "Fel",
+    "description": "Action for moving a download up"
+  },
+  "nagging_message": {
+    "message": "Eddig $DOWNLOADS$ letöltést adtál hozzá a DownThemAll!-hoz! Gyakori felhasználóként megfontolhatnád a további fejlesztés támogatását. Köszönöm!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "Hálózati hiba",
+    "description": "Error Message"
+  },
+  "never_ask_again": {
+    "message": "Ne kérdezz rá újból",
+    "description": "Donation button"
+  },
+  "noitems_label": {
+    "message": "Nincs elem kiválasztva",
+    "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "Nem található hivatkozás!",
+    "description": "Notification text"
+  },
+  "numitems_label": {
+    "message": "$ITEMS$ elem kiválasztva…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "OK",
+    "description": "Button text; Used in message boxes"
+  },
+  "open_directory": {
+    "message": "Mappa megnyitása",
+    "description": "Menu text; manager context"
+  },
+  "open_file": {
+    "message": "Fájl megnyitása",
+    "description": "Menu text; manager context"
+  },
+  "open_link": {
+    "message": "Hivatkozás megnyitása",
+    "description": "Menu text; select window"
+  },
+  "options_filters": {
+    "message": "Szűrők",
+    "description": "Pref tab text"
+  },
+  "options_general": {
+    "message": "Általános",
+    "description": "Pref tab text"
+  },
+  "options_network": {
+    "message": "Hálózat",
+    "description": "Pref tab text"
+  },
+  "paused": {
+    "message": "Szüneteltetve",
+    "description": "Status text; manager"
+  },
+  "pause_download": {
+    "message": "Szünetelés",
+    "description": "Action for pausing a download"
+  },
+  "prefs_conflicts": {
+    "message": "Ha egy fájl létezik",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "Beállítások",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "DownThemAll! beállításai",
+    "description": "Window/tab title; Preferences"
+  },
+  "pref_add_paused": {
+    "message": "Add hozzá az új letöltéseket szüneteltetve, ahelyett, hogy azonnal megkezdenéd a letöltésüket",
+    "description": "Preferences/General"
+  },
+  "pref_concurrent_downloads": {
+    "message": "Egyidejű letöltések",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "Értesíts, ha a letöltések befejeződtek",
+    "description": "Preferences/General"
+  },
+  "pref_global_turbo": {
+    "message": "A böngésző gomb inkább OneClick! legyen",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "Ne mutasd az általános menü elemeit",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "Kezelő",
+    "description": "Preferences/General; group text"
+  },
+  "pref_manager_tooltip": {
+    "message": "Mutass tooltipeket a Kezelő lapokon",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "Globális hálózati korlátozások",
+    "description": "Preferences/General; group text"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "Nyisd meg a Kezelő lapot a letöltések sorbaállítását követően",
+    "description": "Preferences/General"
+  },
+  "pref_queueing": {
+    "message": "Letöltések sorba állítása",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queue_notification": {
+    "message": "Mutass értesítést új letöltések sorbaállításakor",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "Hiányzó letöltések eltávolítása újraindítást követően",
+    "description": "Preferences/General"
+  },
+  "pref_show_urls": {
+    "message": "Mutass URL-eket nevek helyett",
+    "description": "Preferences/General"
+  },
+  "pref_text_links": {
+    "message": "Keress hivatkozásokat a honlap szövegében (lassabb)",
+    "description": "Preferences/General"
+  },
+  "pref_ui": {
+    "message": "Felhasználói felület",
+    "description": "Preferences/General; group text"
+  },
+  "queued": {
+    "message": "Sorba állított",
+    "description": "Status text"
+  },
+  "queued_download": {
+    "message": "Sorbaállítva 1 letöltés!",
+    "description": "Notification text; single download"
+  },
+  "queued_downloads": {
+    "message": "Sorbaállítva $COUNT$ letöltés!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "queue_finished": {
+    "message": "A letöltések befejeződtek",
+    "description": "Notification text"
+  },
+  "referrer": {
+    "message": "Hivatkozó",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "Emlékezz erre a döntésre",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove_all_complete_downloads": {
+    "message": "Befejezettek eltávolítása",
+    "description": "Menu text"
+  },
+  "remove_all_downloads": {
+    "message": "Mind eltávolítása",
+    "description": "Menu text"
+  },
+  "remove_all_downloads_question": {
+    "message": "Biztosan eltávolítja az ÖSSZES letöltést?",
+    "description": "Messagebox text"
+  },
+  "remove_batch_downloads": {
+    "message": "Jelenlegi köteg eltávolítása",
+    "description": "Menu text"
+  },
+  "remove_batch_downloads_question": {
+    "message": "El akarod távolítani a kijelölt letöltéssel egy kötegben lévő összes letöltést?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads": {
+    "message": "Elkészült letöltések eltávolítása",
+    "description": "Action for removing complete downloads"
+  },
+  "remove_complete_downloads_question": {
+    "message": "El akarod távolítani az összes befejezett letöltést?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_filter_downloads_question": {
+    "message": "El akarod távolítani az összes elkészült, '$FILTER$' szűrőnek megfelelő letöltést?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "message": "El akarod távolítani az aktuális kijelölés szerinti összes befejezett letöltést?",
+    "description": "Messagebox text"
+  },
+  "remove_domain_complete_downloads": {
+    "message": "Az összes befejezett eltávolítása az aktuális tartományból",
+    "description": "Menu text"
+  },
+  "remove_domain_complete_downloads_question": {
+    "message": "El akarod távolítani az összes befejezett letöltést a '$DOMAIN$' tartományból?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "message": "Aktuális tartomány eltávolítása",
+    "description": "Menu text"
+  },
+  "remove_domain_downloads_question": {
+    "message": "El akarod távolítani az összes befejezett letöltést a '$DOMAIN$' tartományból?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "message": "Letöltés eltávolítása",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove_downloads": {
+    "message": "Letöltések eltávolítása",
+    "description": "Menu text"
+  },
+  "remove_downloads_title": {
+    "message": "Biztos vagy benne, hogy eltávolítod a letöltéseket?",
+    "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "El akarod távolítani a kiválasztott letöltéseket?",
+    "description": "Messagebox text"
+  },
+  "remove_failed_downloads": {
+    "message": "Meghiúsultak eltávolítása",
+    "description": "Menu text"
+  },
+  "remove_failed_downloads_question": {
+    "message": "El akarod távolítani az összes meghiúsult letöltést?",
+    "description": "Messagebox text"
+  },
+  "remove_filter_downloads_question": {
+    "message": "El akarod távolítani a '$FILTER$' szűrésnek megfelelő letöltéseket?",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "message": "Hiányzó letöltések törlése",
+    "description": "Menu text"
+  },
+  "remove_missing_downloads_question": {
+    "message": "Törölni akarod az összes hiányzó letöltést?",
+    "description": "Messagebox text"
+  },
+  "remove_paused_downloads": {
+    "message": "Szüneteltetettek eltávolítása",
+    "description": "Menu text"
+  },
+  "remove_paused_downloads_question": {
+    "message": "El akarod távolítani az összes szüneteltetett letöltést?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_complete_downloads": {
+    "message": "Befejezettek eltávolítása a kijelölésből",
+    "description": "Menu text"
+  },
+  "remove_selected_complete_downloads_question": {
+    "message": "El akarod távolítani az összes befejezett letöltést az aktuális kiválasztásból?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_downloads": {
+    "message": "Kijelöltek eltávolítása",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "Átnevezés",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer_batch": {
+    "message": "Kötegszám",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_d": {
+    "message": "Hozzáadás dátuma - Nap",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_date": {
+    "message": "Hozzáadás dátuma",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_domain": {
+    "message": "Tartomány neve (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ext": {
+    "message": "Fájl kiterjesztés",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_hh": {
+    "message": "Hozzáadás dátuma - Óra",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_host": {
+    "message": "Kiszolgáló neve",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_idx": {
+    "message": "Elem száma a kötegen belül",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_info": {
+    "message": "'flat' hozzáadása, ahogy a *flatsubdirs* ki fogja cserélni az összes per jelet az értékben, így nem fog mappákat létrehozni",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer_m": {
+    "message": "Hozzáadás dátuma - Hónap",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_mm": {
+    "message": "Hozzáadás dátuma - Perc",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_name": {
+    "message": "Fájl név",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_num": {
+    "message": "A *kötegelés* szinonimája",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_qstring": {
+    "message": "Lekérdezési karakterlánc",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ref": {
+    "message": "Hivatkozó",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refdomain": {
+    "message": "Hivatkozó tartomány név (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refext": {
+    "message": "Hivatkozó fájlkiterjesztés",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refhost": {
+    "message": "Hivatkozó kiszolgálónév",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refname": {
+    "message": "Hivatkozó fájlnév",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refqstring": {
+    "message": "Hivatkozó lekérdezési karakterlánc",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refsubdirs": {
+    "message": "Hivatkozó útvonal",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refurl": {
+    "message": "Hivatkozó URL (protokoll nélkül)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ss": {
+    "message": "Hozzáadás dátuma - Másodperc",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_subdirs": {
+    "message": "Útvonal",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_tags": {
+    "message": "Maszk címkék átnevezése",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_text": {
+    "message": "Leírás szövege",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "Cím szövege",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_url": {
+    "message": "URL (protokoll nélkül)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_y": {
+    "message": "Hozzáadás dátuma - Év",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "Átnevezési maszk",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "Visszaállítás",
+    "description": "Button text; pref window"
+  },
+  "reset_confirmations": {
+    "message": "Megjegyzett megerősítések visszaállítása",
+    "description": "Button text; pref/General"
+  },
+  "reset_confirmations_done": {
+    "message": "Az összes megjegyzett megerősítés visszaállításra került!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset_layouts": {
+    "message": "Felhasználói felület testreszabásának visszaállítása",
+    "description": "Button text; pref/General"
+  },
+  "reset_layouts_done": {
+    "message": "Az összes megjegyzett elrendezés testreszabás vissza lett állítva! Szükség lehet az ablakok/lapok újratöltésére.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume_download": {
+    "message": "Folytatás",
+    "description": "Action for resuming a download"
+  },
+  "running": {
+    "message": "Folyamatban",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Mentés",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Keresés…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select_all": {
+    "message": "Mind kiválasztása",
+    "description": "Menu text; e.g. select context"
+  },
+  "select_checked": {
+    "message": "Bejelöltek kiválasztása",
+    "description": "Menu text; select context"
+  },
+  "select_none": {
+    "message": "Kiválasztás törlése",
+    "description": "Menu text; select context"
+  },
+  "select_title": {
+    "message": "DownThemAll! - Válaszd ki a letöltéseidet",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "Nem található",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Szerver hiba",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Tiltott",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "Jogosulatlan",
+    "description": "Error message"
+  },
+  "set_mask": {
+    "message": "Átnevezési maszk beállítása",
+    "description": "Menu text; select window"
+  },
+  "single_batchexamples": {
+    "message": "Kötegek támogatva vannak, pl.:",
+    "description": "Header text; single window"
+  },
+  "single_header": {
+    "message": "Írj be egy letöltési URL-t (hivatkozást) és egyéb beállításokat",
+    "description": "Header text; single window"
+  },
+  "single_title": {
+    "message": "DownThemAll! - Adj hozzá egy hivatkozást",
+    "description": "Title of single window"
+  },
+  "sizeB": {
+    "message": "$S$B",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes_huge": {
+    "message": "Óriási (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "message": "Nagy ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "message": "Közepes ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "message": "Kicsi ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ a $TOTAL$-ból/ből",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "Ismeretlen",
+    "description": "Status text; manager size column"
+  },
+  "speedB": {
+    "message": "$SPEED$b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "message": "Az új letöltések el lesznek indítva",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork_inactive_title": {
+    "message": "Nem lesznek új letöltések elindítva",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "title": {
+    "message": "Cím",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle_selected_items": {
+    "message": "Bejelölés felcserélése a kijelölt elemekre",
+    "description": "Menu text; select"
+  },
+  "tooltip_date": {
+    "message": "Hozzáadás dátuma:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_eta": {
+    "message": "Hátravan:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip_from": {
+    "message": "Innen:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip_size": {
+    "message": "Méret:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_average": {
+    "message": "Átlag:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_current": {
+    "message": "Aktuális:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck_selected_items": {
+    "message": "Kiválasztott elemek megjelölésének törlése",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Korlátlan",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Egyszer használd",
+    "description": "Label for Use-Once checkboxes"
+  }
+}
