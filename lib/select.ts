@@ -98,6 +98,7 @@ export async function select(links: BaseItem[], media: BaseItem[]) {
     type: "popup",
   });
   const window = await windows.create(windowOptions);
+  tracker.track(window.id, null);
   try {
     const port = await Promise.race<Port>([
       new Promise<Port>(resolve => Bus.oncePort("select", resolve)),
