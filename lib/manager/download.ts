@@ -260,6 +260,9 @@ export class Download extends BaseDownload {
     const {signal} = controller;
     const res = await fetch(this.uURL.toString(), {
       method: "GET",
+      headers: new Headers({
+        Range: "bytes=0-1",
+      }),
       mode: "same-origin",
       signal,
     });
@@ -305,6 +308,9 @@ export class Download extends BaseDownload {
     const {signal} = controller;
     const res = await fetch(rurl, {
       method: "GET",
+      headers: new Headers({
+        Range: "bytes=0-1",
+      }),
       signal,
     });
     if (res.body) {
@@ -346,7 +352,7 @@ export class Download extends BaseDownload {
       this.cancel();
       this.error = "SERVER_UNAUTHORIZED";
     }
-    else if (status === 400 || status === 405) {
+    else if (status === 400 || status === 405 || status === 416) {
       PREROLL_NOPE.add(this.uURL.host);
     }
     else if (status > 400 && status < 500) {
