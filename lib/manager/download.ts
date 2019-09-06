@@ -259,10 +259,13 @@ export class Download extends BaseDownload {
     const controller = new AbortController();
     const {signal} = controller;
     const res = await fetch(this.uURL.toString(), {
-      method: "HEAD",
+      method: "GET",
       mode: "same-origin",
       signal,
     });
+    if (res.body) {
+      res.body.cancel();
+    }
     controller.abort();
     const {headers} = res;
     this.prerollFinialize(headers, res);
@@ -301,9 +304,12 @@ export class Download extends BaseDownload {
     const controller = new AbortController();
     const {signal} = controller;
     const res = await fetch(rurl, {
-      method: "HEAD",
+      method: "GET",
       signal,
     });
+    if (res.body) {
+      res.body.cancel();
+    }
     controller.abort();
     const headers = await p;
     this.prerollFinialize(
