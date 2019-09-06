@@ -524,6 +524,15 @@ export class DownloadTable extends VirtualTable {
       return true;
     });
 
+    Keys.on("SHIFT-Delete", (event: Event) => {
+      const target = event.target as HTMLElement;
+      if (target.localName === "input") {
+        return false;
+      }
+      this.removeCompleteDownloads(false);
+      return true;
+    });
+
     ctx.on("ctx-remove-all", () => this.removeAllDownloads());
     ctx.on("ctx-remove-complete", () => this.removeCompleteDownloads(false));
     ctx.on("ctx-remove-complete-all",
