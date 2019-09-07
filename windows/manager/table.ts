@@ -751,6 +751,7 @@ export class DownloadTable extends VirtualTable {
   }
 
   selectionChanged() {
+    this.dismissTooltip();
     const {empty} = this.selection;
     if (empty) {
       for (const d of this.disableSet) {
