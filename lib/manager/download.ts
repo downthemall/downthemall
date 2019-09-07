@@ -21,50 +21,13 @@ import {
   QUEUED,
   RUNNING
 } from "./state";
+import { CDHeaderParser } from "../cdheaderparser";
 
 const PREROLL_HEURISTICS = /dl|attach|download|name|file|get|retr|^n$|\.(php|asp|py|pl|action|htm|shtm)/i;
 const PREROLL_HOSTS = /4cdn|chan/;
 const PREROLL_TIMEOUT = 10000;
 const PREROLL_NOPE = new Set<string>();
-
-function parseDisposition(disp: MimeType) {
-  if (!disp) {
-    return "";
-  }
-  let encoding = (disp.parameters.get("charset") || "utf-8").trim();
-  let file = (disp.parameters.get("filename") || "").trim().replace(/^(["'])(.*)\1$/, "$2");
-  if (!file) {
-    const encoded = disp.parameters.get("filename*");
-    if (!encoded) {
-      return "";
-    }
-    const pieces = encoded.split("'", 3);
-    if (pieces.length !== 3) {
-      return "";
-    }
-    encoding = pieces[0].trim() || encoding;
-    file = (pieces[3] || "").trim().replace(/^(["'])(.*)\1$/, "$2");
-  }
-  file = file.trim();
-  if (!file) {
-    return "";
-  }
-
-  try {
-    // And now for the tricky part...
-    // First unescape the string, to get the raw bytes
-    // not utf-8-interpreted bytes
-    // Then convert the string into an uint8[]
-    // Then decode
-    return new TextDecoder(encoding).decode(
-      new Uint8Array(unescape(file).split("").map(e => e.charCodeAt(0)))
-    );
-  }
-  catch (ex) {
-    console.error("Cannot decode", encoding, file, ex);
-  }
-  return "";
-}
+const CDPARSER = new CDHeaderParser();
 
 type Header = {name: string; value: string};
 interface Options {
@@ -328,8 +291,7 @@ export class Download extends BaseDownload {
     const dispHeader = headers.get("content-disposition");
     let file = "";
     if (dispHeader) {
-      const disp = new MimeType(`${type && type.toString() || "application/octet-stream"}; ${dispHeader}`);
-      file = parseDisposition(disp);
+      file = CDPARSER.parse(dispHeader);
       // Sanitize
       file = sanitizePath(file.replace(/[/\\]+/g, "-"));
     }
