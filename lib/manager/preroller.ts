@@ -6,12 +6,26 @@ import MimeType from "whatwg-mimetype";
 import { Download } from "./download";
 import { CHROME, webRequest } from "../browser";
 import { CDHeaderParser } from "../cdheaderparser";
-import { sanitizePath } from "../util";
+import { sanitizePath, parsePath } from "../util";
+import { MimeDB } from "../mime";
 
 const PREROLL_HEURISTICS = /dl|attach|download|name|file|get|retr|^n$|\.(php|asp|py|pl|action|htm|shtm)/i;
 const PREROLL_HOSTS = /4cdn|chan/;
 const PREROLL_TIMEOUT = 10000;
 const PREROLL_NOPE = new Set<string>();
+const PREROLL_SEARCHEXTS = Object.freeze(new Set<string>([
+  "php",
+  "asp",
+  "aspx",
+  "inc",
+  "py",
+  "pl",
+  "action",
+  "htm",
+  "html",
+  "shtml"
+]));
+const NAME_TESTER = /\.[a-z0-9]{1,5}$/i;
 const CDPARSER = new CDHeaderParser();
 
 export interface PrerollResults {
@@ -139,11 +153,36 @@ export class Preroller {
       rv.mime = type.essence;
     }
 
+    const {p_ext: ext} = this.download.renamer;
     const dispHeader = headers.get("content-disposition");
     if (dispHeader) {
       const file = CDPARSER.parse(dispHeader);
       // Sanitize
       rv.name = sanitizePath(file.replace(/[/\\]+/g, "-"));
+    }
+    else if (!ext || PREROLL_SEARCHEXTS.has(ext.toLocaleLowerCase())) {
+      const {searchParams} = this.download.uURL;
+      let detected = "";
+      for (const [, value] of searchParams) {
+        if (!NAME_TESTER.test(value)) {
+          continue;
+        }
+        const p = parsePath(value);
+        if (!p.base || !p.ext) {
+          continue;
+        }
+        if (!MimeDB.hasExtension(p.ext)) {
+          continue;
+        }
+        const sanitized = sanitizePath(p.name);
+        if (sanitized.length <= detected.length) {
+          continue;
+        }
+        detected = sanitized;
+      }
+      if (detected) {
+        rv.name = detected;
+      }
     }
 
     rv.finalURL = res.url;
