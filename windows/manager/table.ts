@@ -534,7 +534,6 @@ export class DownloadTable extends VirtualTable {
     });
 
     ctx.on("ctx-remove-all", () => this.removeAllDownloads());
-    ctx.on("ctx-remove-complete", () => this.removeCompleteDownloads(false));
     ctx.on("ctx-remove-complete-all",
       () => this.removeCompleteDownloads(false));
     ctx.on("ctx-remove-complete-selected",
