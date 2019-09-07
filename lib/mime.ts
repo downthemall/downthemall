@@ -28,6 +28,8 @@ export class MimeInfo {
 export const MimeDB = new class {
   private readonly mimeToExts: Map<string, MimeInfo>;
 
+  private readonly registeredExtensions: Set<string>;
+
   constructor() {
     const exts = new Map<string, string[]>();
     for (const [prim, more] of Object.entries(mime.e)) {
@@ -42,6 +44,10 @@ export const MimeDB = new class {
       Object.entries(mime.m),
       ([mime, prim]) => [mime, new MimeInfo(mime, exts.get(prim) || [prim])]
     ));
+    const all = Array.from(
+      this.mimeToExts.values(),
+      m => Array.from(m.extensions, e => e.toLowerCase()));
+    this.registeredExtensions = new Set(all.flat());
   }
 
   getPrimary(mime: string) {
@@ -51,5 +57,9 @@ export const MimeDB = new class {
 
   getMime(mime: string) {
     return this.mimeToExts.get(mime.trim().toLocaleLowerCase());
+  }
+
+  hasExtension(ext: string) {
+    return this.registeredExtensions.has(ext.toLowerCase());
   }
 }();
