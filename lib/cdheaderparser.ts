@@ -9,7 +9,7 @@
 // License: MPL-2
 
 /**
-  * THis typescript port was done by Nils Maier based on
+  * This typescript port was done by Nils Maier based on
   * https://github.com/Rob--W/open-in-browser/blob/83248155b633ed41bc9cdb1205042653e644abd2/extension/content-disposition.js
   * Special thanks goes to Rob doing all the heavy lifting and putting
   * it together in a reuseable, open source'd library.
