@@ -22,4 +22,9 @@ describe("MIME", function() {
     expect(Array.from(MimeDB.getMime("imAge/jpEg").extensions)).to.deep.equal(
       ["jpg", "jpeg", "jpe", "jfif"]);
   });
+
+  it("application/octet-stream should not yield results", function() {
+    expect(MimeDB.getPrimary("application/octet-stream")).to.equal("");
+    expect(MimeDB.getMime("application/octet-Stream")).to.be.undefined;
+  });
 });
