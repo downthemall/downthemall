@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-env node */
 "use strict";
-// LICENSE: MPL-2
+// License: MPL-2
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { CDHeaderParser } = require("../lib/cdheaderparser");
