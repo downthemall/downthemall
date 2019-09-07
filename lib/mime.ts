@@ -25,7 +25,7 @@ export class MimeInfo {
   }
 }
 
-export const MimeDB = new class {
+export const MimeDB = new class MimeDB {
   private readonly mimeToExts: Map<string, MimeInfo>;
 
   private readonly registeredExtensions: Set<string>;
