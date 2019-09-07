@@ -174,6 +174,12 @@ export class Preroller {
         if (!MimeDB.hasExtension(p.ext)) {
           continue;
         }
+        if (rv.mime) {
+          const mime = MimeDB.getMime(rv.mime);
+          if (mime && !mime.extensions.has(p.ext.toLowerCase())) {
+            continue;
+          }
+        }
         const sanitized = sanitizePath(p.name);
         if (sanitized.length <= detected.length) {
           continue;
