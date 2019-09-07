@@ -25,6 +25,10 @@ html[data-platform="mac"] {
   --folder-color: rgb(4, 102, 214);
 }
 
+html, body {
+  font-size: 10pt !important;
+}
+
 @font-face {
   font-family: 'downthemall';
   src: url('downthemall.woff2?75791791') format('woff2');
