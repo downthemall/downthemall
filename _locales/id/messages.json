@@ -7,6 +7,18 @@
     "message": "id",
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
+  "renamer_tags": {
+    "message": "Penanda Mask Penamaan",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "Mask penamaan",
+    "description": "Renaming mask (long)"
+  },
+  "set_mask": {
+    "message": "Set Mask Penamaan",
+    "description": "Menu text; select window"
+  },
   "addpaused": {
     "message": "Tambahkan dalam kondisi terpause",
     "description": "Action: Add paused"
@@ -280,15 +292,15 @@
     "description": "Message box title"
   },
   "filter_expression": {
-    "message": "Ekspres-Filter",
+    "message": "Ekspresi",
     "description": "Message box label"
   },
   "filter_label": {
-    "message": "Label-Filter",
+    "message": "Label",
     "description": "Message box label"
   },
   "filter_types": {
-    "message": "Tipe-Filter",
+    "message": "Tipe",
     "description": "Message box label"
   },
   "filter_type_link": {
@@ -320,7 +332,7 @@
     "description": "Menu text"
   },
   "limited_to": {
-    "message": "Terbatas ke",
+    "message": "Batasi ke",
     "description": "Label text; used in prefs/network"
   },
   "links": {
@@ -362,11 +374,11 @@
     "description": "Status text; Used in the mask column, select window"
   },
   "missing": {
-    "message": "Tidak Ada",
+    "message": "Hilang",
     "description": "Status text in manager"
   },
   "move_bottom": {
-    "message": "Bawah",
+    "message": "Ke Bawah",
     "description": "Action for moving a download to the bottom"
   },
   "move_down": {
@@ -374,7 +386,7 @@
     "description": "Action for moving a download down"
   },
   "move_top": {
-    "message": "Atas",
+    "message": "Ke Atas",
     "description": "Action for moving a download to the top"
   },
   "move_up": {
@@ -560,7 +572,7 @@
     "description": "Menu text"
   },
   "remove_batch_downloads_question": {
-    "message": "Hapus semua unduhan dari kumpulan yang sama dengan unduhan terpilih?",
+    "message": "Hapus semua unduhan dari batch yang sama dengan unduhan terpilih?",
     "description": "Messagebox text"
   },
   "remove_complete_downloads": {
@@ -600,7 +612,7 @@
     }
   },
   "remove_domain_downloads": {
-    "message": "Hapus Domain Ini",
+    "message": "Hapus Unduhan Dari Domain Ini",
     "description": "Menu text"
   },
   "remove_domain_downloads_question": {
@@ -630,7 +642,7 @@
     "description": "Messagebox text"
   },
   "remove_failed_downloads": {
-    "message": "Gagal Menghapus",
+    "message": "Hapus Unduhan Gagal",
     "description": "Menu text"
   },
   "remove_failed_downloads_question": {
@@ -648,11 +660,11 @@
     }
   },
   "remove_missing": {
-    "message": "Hapus Unduhan Yang Tidak Ada",
+    "message": "Hapus Unduhan Yang Hilang",
     "description": "Menu text"
   },
   "remove_missing_downloads_question": {
-    "message": "Hapus semua unduhan yang tidak ada?",
+    "message": "Hapus semua unduhan yang hilang?",
     "description": "Messagebox text"
   },
   "remove_paused_downloads": {
@@ -664,7 +676,7 @@
     "description": "Messagebox text"
   },
   "remove_selected_complete_downloads": {
-    "message": "Hapus Yang Selesai Di Pilihan",
+    "message": "Hapus Yang Selesai Dari Unduhan Terpilih",
     "description": "Menu text"
   },
   "remove_selected_complete_downloads_question": {
