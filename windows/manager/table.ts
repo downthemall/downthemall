@@ -534,7 +534,6 @@ export class DownloadTable extends VirtualTable {
     });
 
     ctx.on("ctx-remove-all", () => this.removeAllDownloads());
-    ctx.on("ctx-remove-complete", () => this.removeCompleteDownloads(false));
     ctx.on("ctx-remove-complete-all",
       () => this.removeCompleteDownloads(false));
     ctx.on("ctx-remove-complete-selected",
@@ -752,6 +751,7 @@ export class DownloadTable extends VirtualTable {
   }
 
   selectionChanged() {
+    this.dismissTooltip();
     const {empty} = this.selection;
     if (empty) {
       for (const d of this.disableSet) {

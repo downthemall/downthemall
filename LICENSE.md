@@ -81,3 +81,9 @@ The javascript library accessing it is licensed under the MIT license.
 ## whatwg-mimetype
 
 Licensed under MIT
+
+
+## CDHeaderParser
+
+Licensed under MPL-2
+(c) 2017 Rob Wu <rob@robwu.nl> (https://robwu.nl)
