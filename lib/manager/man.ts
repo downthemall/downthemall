@@ -209,14 +209,22 @@ export class Manager extends EventEmitter {
   }
 
   async maybeNotifyFinished() {
-    if (!(await Prefs.get("finish-notification"))) {
-      return;
-    }
     if (this.notifiedFinished || this.running.size) {
       return;
     }
+    const notification = await Prefs.get("finish-notification", true);
+    const sounds = await Prefs.get("sounds", false);
+    if (this.notifiedFinished || this.running.size) {
+      return;
+    }
+    if (sounds) {
+      const audio = new Audio(runtime.getURL("/style/done.opus"));
+      audio.addEventListener("canplaythrough", () => audio.play());
+    }
+    if (notification) {
+      new Notification(null, _("queue-finished"));
+    }
     this.notifiedFinished = true;
-    new Notification(null, _("queue-finished"));
   }
 
   addManId(id: number, download: Download) {

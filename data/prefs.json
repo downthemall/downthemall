@@ -3,6 +3,7 @@
 	"concurrent": 4,
 	"queue-notification": true,
 	"finish-notification": true,
+	"sounds": true,
 	"open-manager-on-queue": true,
 	"text-links": true,
 	"add-paused": false,
