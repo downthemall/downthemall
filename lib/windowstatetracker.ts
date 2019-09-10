@@ -55,13 +55,15 @@ export class WindowStateTracker {
 
   getOptions(options: any) {
     const result = Object.assign(options, {
-      width: this.width,
-      height: this.height,
       state: this.state,
     });
-    if (this.top >= 0) {
-      result.top = this.top;
-      result.left = this.left;
+    if (result.state !== "maximized") {
+      result.width = this.width;
+      result.theight = this.height;
+      if (this.top >= 0) {
+        result.top = this.top;
+        result.left = this.left;
+      }
     }
     return result;
   }
