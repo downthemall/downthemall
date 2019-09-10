@@ -59,7 +59,7 @@ export class WindowStateTracker {
     });
     if (result.state !== "maximized") {
       result.width = this.width;
-      result.theight = this.height;
+      result.height = this.height;
       if (this.top >= 0) {
         result.top = this.top;
         result.left = this.left;
