@@ -77,6 +77,8 @@ function urlToUsable(e: any, u: string) {
 }
 
 class Gatherer {
+  private: boolean;
+
   textLinks: boolean;
 
   selectionOnly: boolean;
@@ -88,6 +90,7 @@ class Gatherer {
   transferable: string[];
 
   constructor(options: any) {
+    this.private = !!options.private;
     this.textLinks = options.textLinks;
     this.selectionOnly = options.selectionOnly;
     this.selection = options.selectionOnly ? getSelection() : null;
@@ -255,6 +258,7 @@ class Gatherer {
       return {
         url: url.href,
         title,
+        private: this.private
       };
     }
     catch (ex) {

@@ -19,6 +19,7 @@ export interface MessageSender {
 
 export interface Tab {
   id?: number;
+  incognito?: boolean;
 }
 
 export interface MenuClickInfo {
