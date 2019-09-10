@@ -11,7 +11,7 @@ const MANAGER_URL = "/windows/manager.html";
 export async function mostRecentBrowser(incognito: boolean): Promise<any> {
   let window;
   try {
-    window = await windows.getCurrent({windowTypes: ["normal"]});
+    window = await windows.getCurrent();
     if (window.type !== "normal") {
       throw new Error("not a normal window");
     }
@@ -21,7 +21,7 @@ export async function mostRecentBrowser(incognito: boolean): Promise<any> {
   }
   catch {
     try {
-      window = await windows.getlastFocused({windowTypes: ["normal"]});
+      window = await windows.getlastFocused();
       if (window.type !== "normal") {
         throw new Error("not a normal window");
       }
