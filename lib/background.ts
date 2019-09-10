@@ -48,6 +48,9 @@ const CHROME_CONTEXTS = Object.freeze(new Set([
 
 async function runContentJob(tab: Tab, file: string, msg: any) {
   try {
+    if (tab && tab.incognito && msg) {
+      msg.private = tab.incognito;
+    }
     const res = await tabs.executeScript(tab.id, {
       file,
       allFrames: true,
