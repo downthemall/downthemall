@@ -428,17 +428,42 @@ class SelectionTable extends VirtualTable {
   }
 
   openSelection() {
-    const items = this.items.filter((i, idx) => this.selection.contains(idx));
-    if (!items.length) {
+    const privates: BaseMatchedItem[] = [];
+    const items = this.items.filter((i, idx) => this.selection.contains(idx)).
+      filter(i => {
+        if (i.private) {
+          privates.push(i);
+          return false;
+        }
+        return true;
+      });
+    if (!items.length && !privates.length) {
       if (this.focusRow < 0) {
         return;
       }
-      items.push(this.items.at(this.focusRow));
+      const item = this.items.at(this.focusRow);
+      if (item.private) {
+        privates.push(item);
+      }
+      else {
+        items.push(item);
+      }
     }
-    PORT.postMessage({
-      msg: "openUrls",
-      urls: items.map(e => e.url)
-    });
+
+    if (items.length) {
+      PORT.postMessage({
+        msg: "openUrls",
+        urls: items.map(e => e.url),
+        incognito: false,
+      });
+    }
+    if (privates.length) {
+      PORT.postMessage({
+        msg: "openUrls",
+        urls: privates.map(e => e.url),
+        incognito: true,
+      });
+    }
   }
 
   applyDeltaTo(delta: ItemDelta[], items: ItemCollection) {

@@ -187,8 +187,8 @@ export async function select(links: BaseItem[], media: BaseItem[]) {
       openPrefs();
     });
 
-    port.on("openUrls", ({urls}) => {
-      openUrls(urls);
+    port.on("openUrls", ({urls, incognito}) => {
+      openUrls(urls, incognito);
     });
 
     try {
