@@ -8,12 +8,15 @@ import DEFAULT_ICONS from "../data/icons.json";
 const DONATE_URL = "https://www.downthemall.org/howto/donate/";
 const MANAGER_URL = "/windows/manager.html";
 
-export async function mostRecentBrowser(): Promise<any> {
+export async function mostRecentBrowser(incognito: boolean): Promise<any> {
   let window;
   try {
     window = await windows.getCurrent({windowTypes: ["normal"]});
     if (window.type !== "normal") {
       throw new Error("not a normal window");
+    }
+    if (incognito && !window.incognito) {
+      throw new Error("Not incognito");
     }
   }
   catch {
@@ -22,23 +25,28 @@ export async function mostRecentBrowser(): Promise<any> {
       if (window.type !== "normal") {
         throw new Error("not a normal window");
       }
+      if (incognito && !window.incognito) {
+        throw new Error("Not incognito");
+      }
     }
     catch {
       window = Array.from(await windows.getAll({windowTypes: ["normal"]})).
-        filter((w: any) => w.type === "normal").pop();
+        filter(
+          (w: any) => w.type === "normal" && !!w.incognito === !!incognito).
+        pop();
     }
   }
   if (!window) {
     window = await windows.create({
-      url: DONATE_URL,
+      incognito: !!incognito,
       type: "normal",
     });
   }
   return window;
 }
 
-export async function openInTab(url: string) {
-  const window = await mostRecentBrowser();
+export async function openInTab(url: string, incognito: boolean) {
+  const window = await mostRecentBrowser(incognito);
   await tabs.create({
     active: true,
     url,
@@ -47,7 +55,7 @@ export async function openInTab(url: string) {
   await windows.update(window.id, {focused: true});
 }
 
-export async function openInTabOrFocus(url: string) {
+export async function openInTabOrFocus(url: string, incognito: boolean) {
   const etabs = await tabs.query({
     url
   });
@@ -57,21 +65,21 @@ export async function openInTabOrFocus(url: string) {
     await windows.update(tab.windowId, {focused: true});
     return;
   }
-  await openInTab(url);
+  await openInTab(url, incognito);
 }
 
-export async function maybeOpenInTab(url: string) {
+export async function maybeOpenInTab(url: string, incognito: boolean) {
   const etabs = await tabs.query({
     url
   });
   if (etabs.length) {
     return;
   }
-  await openInTab(url);
+  await openInTab(url, incognito);
 }
 
 export async function donate() {
-  await openInTab(DONATE_URL);
+  await openInTab(DONATE_URL, false);
 }
 
 export async function openPrefs() {
@@ -86,15 +94,15 @@ export async function openManager(focus = true) {
     console.error(ex.toString(), ex);
   }
   if (focus) {
-    await openInTabOrFocus(await runtime.getURL(MANAGER_URL));
+    await openInTabOrFocus(await runtime.getURL(MANAGER_URL), false);
   }
   else {
-    await maybeOpenInTab(await runtime.getURL(MANAGER_URL));
+    await maybeOpenInTab(await runtime.getURL(MANAGER_URL), false);
   }
 }
 
-export async function openUrls(urls: string) {
-  const window = await mostRecentBrowser();
+export async function openUrls(urls: string, incognito: boolean) {
+  const window = await mostRecentBrowser(incognito);
   for (const url of urls) {
     try {
       await tabs.create({
