@@ -1,5 +1,5 @@
 {
-	"global-turbo": false,
+	"button-type": "popup",
 	"concurrent": 4,
 	"queue-notification": true,
 	"finish-notification": true,
