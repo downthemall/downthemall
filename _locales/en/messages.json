@@ -979,6 +979,18 @@
     "description": "Menu text; select window",
     "message": "Set Renaming Mask"
   },
+  "set_mask_text": {
+    "description": "dialog text",
+    "message": "Set a new renaming mask"
+  },
+  "set_referrer": {
+    "description": "menu text",
+    "message": "Set Referrer"
+  },
+  "set_referrer_text": {
+    "description": "dialog text",
+    "message": "Set a new referrer"
+  },
   "single_batchexamples": {
     "description": "Header text; single window",
     "message": "Batches are supported, e.g.:"
