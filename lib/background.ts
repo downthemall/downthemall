@@ -136,35 +136,6 @@ class Handler {
 }
 
 locale.then(() => {
-  new class Action extends Handler {
-    constructor() {
-      super();
-      this.onClicked = this.onClicked.bind(this);
-      action.onClicked.addListener(this.onClicked);
-    }
-
-    async onClicked(tab: {id: number}) {
-      if (!tab.id) {
-        return;
-      }
-      try {
-        await this.processResults(
-          true,
-          await runContentJob(
-            tab, "/bundles/content-gather.js", {
-              type: "DTA:gather",
-              selectionOnly: false,
-              textLinks: await Prefs.get("text-links", true),
-              schemes: Array.from(ALLOWED_SCHEMES.values()),
-              transferable: TRANSFERABLE_PROPERTIES,
-            }));
-      }
-      catch (ex) {
-        console.error(ex);
-      }
-    }
-  }();
-
   const menuHandler = new class Menus extends Handler {
     constructor() {
       super();
@@ -421,7 +392,7 @@ locale.then(() => {
       }
     }
 
-    async enumulate(action: string) {
+    async emulate(action: string) {
       const tab = await tabs.query({
         active: true,
         currentWindow: true,
@@ -543,33 +514,87 @@ locale.then(() => {
     }
   }();
 
-  Bus.on("do-regular", () => menuHandler.enumulate("DTARegular"));
-  Bus.on("do-regular-all", () => menuHandler.enumulate("DTARegularAll"));
-  Bus.on("do-turbo", () => menuHandler.enumulate("DTATurbo"));
-  Bus.on("do-turbo-all", () => menuHandler.enumulate("DTATurboAll"));
+  new class Action extends Handler {
+    constructor() {
+      super();
+      this.onClicked = this.onClicked.bind(this);
+      action.onClicked.addListener(this.onClicked);
+      Prefs.get("button-type", false).then(v => this.adjust(v));
+      Prefs.on("button-type", (prefs, key, value) => {
+        this.adjust(value);
+      });
+    }
+
+    adjust(type: string) {
+      action.setPopup({
+        popup: type !== "popup" ? "" : "/windows/popup.html"
+      });
+      let icons;
+      switch (type) {
+      case "popup":
+        icons = {
+          16: "/style/icon16.png",
+          32: "/style/icon32.png",
+          48: "/style/icon48.png",
+          64: "/style/icon64.png",
+          96: "/style/icon96.png",
+          128: "/style/icon128.png",
+          256: "/style/icon256.png"
+        };
+        break;
+
+      case "dta":
+        icons = {
+          16: "/style/button-regular.png",
+          32: "/style/button-regular@2x.png",
+        };
+        break;
+
+      case "turbo":
+        icons = {
+          16: "/style/button-turbo.png",
+          32: "/style/button-turbo@2x.png",
+        };
+        break;
+
+      case "manager":
+        icons = {
+          16: "/style/button-manager.png",
+          32: "/style/button-manager@2x.png",
+        };
+        break;
+      }
+      action.setIcon({path: icons});
+    }
+
+    async onClicked() {
+      switch (await Prefs.get("button-type")) {
+      case "popup":
+        break;
+
+      case "dta":
+        menuHandler.emulate("DTARegular");
+        break;
+
+      case "turbo":
+        menuHandler.emulate("DTATurbo");
+        break;
+
+      case "manager":
+        menuHandler.emulate("DTAManager");
+        break;
+      }
+    }
+  }();
+
+
+  Bus.on("do-regular", () => menuHandler.emulate("DTARegular"));
+  Bus.on("do-regular-all", () => menuHandler.emulate("DTARegularAll"));
+  Bus.on("do-turbo", () => menuHandler.emulate("DTATurbo"));
+  Bus.on("do-turbo-all", () => menuHandler.emulate("DTATurboAll"));
   Bus.on("do-single", () => API.singleRegular(null));
   Bus.on("open-manager", () => openManager(true));
   Bus.on("open-prefs", () => openPrefs());
-
-  function adjustAction(globalTurbo: boolean) {
-    action.setPopup({
-      popup: globalTurbo ? "" : "/windows/popup.html"
-    });
-    action.setIcon({
-      path: globalTurbo ? {
-        16: "/style/button-turbo.png",
-        32: "/style/button-turbo@2x.png",
-      } : {
-        16: "/style/icon16.png",
-        32: "/style/icon32.png",
-        48: "/style/icon48.png",
-        64: "/style/icon64.png",
-        96: "/style/icon96.png",
-        128: "/style/icon128.png",
-        256: "/style/icon256.png"
-      }
-    });
-  }
 
   (async function init() {
     const urlBase = runtime.getURL("");
@@ -610,10 +635,6 @@ locale.then(() => {
     }
 
     await Prefs.set("last-run", new Date());
-    Prefs.get("global-turbo", false).then(v => adjustAction(v));
-    Prefs.on("global-turbo", (prefs, key, value) => {
-      adjustAction(value);
-    });
     await filters();
     await getManager();
   })().catch(ex => {

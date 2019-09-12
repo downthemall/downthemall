@@ -549,6 +549,26 @@
     "description": "Preferences/General",
     "message": "Add new downloads paused, instead of starting them immediately"
   },
+  "pref_button_type": {
+    "description": "label",
+    "message": "DownThemAll! button:"
+  },
+  "pref_button_type_dta": {
+    "description": "label",
+    "message": "DownThemAll! selection"
+  },
+  "pref_button_type_manager": {
+    "description": "label",
+    "message": "Open Manager"
+  },
+  "pref_button_type_popup": {
+    "description": "label",
+    "message": "Popup menu"
+  },
+  "pref_button_type_turbo": {
+    "description": "label",
+    "message": "OneClick!"
+  },
   "pref_concurrent_downloads": {
     "description": "Preferences/Network",
     "message": "Concurrent downloads"
@@ -556,10 +576,6 @@
   "pref_finish_notification": {
     "description": "Preferences/General",
     "message": "Show a notification when the queue finishes downloading"
-  },
-  "pref_global_turbo": {
-    "description": "Preferences/General",
-    "message": "Browser button should be OneClick!"
   },
   "pref_hide_context": {
     "description": "Preferences/General",

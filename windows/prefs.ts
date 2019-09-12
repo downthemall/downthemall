@@ -554,7 +554,6 @@ addEventListener("DOMContentLoaded", async () => {
   await localize(document.documentElement);
 
   // General
-  new BoolPref("pref-global-turbo", "global-turbo");
   new BoolPref("pref-queue-notification", "queue-notification");
   new BoolPref("pref-finish-notification", "finish-notification");
   new BoolPref("pref-sounds", "sounds");
@@ -565,6 +564,7 @@ addEventListener("DOMContentLoaded", async () => {
   new BoolPref("pref-add-paused", "add-paused");
   new BoolPref("pref-show-urls", "show-urls");
   new BoolPref("pref-remove-missing-on-init", "remove-missing-on-init");
+  new OptionPref("pref-button-type", "button-type");
   new OptionPref("pref-conflict-action", "conflict-action");
 
   $("#reset-confirmations").addEventListener("click", async () => {
