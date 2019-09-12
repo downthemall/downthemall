@@ -15,6 +15,8 @@
 	"tooltip": true,
 	"show-urls": false,
 	"remove-missing-on-init": false,
+	"retries": 5,
+	"retry-time": 10,
 	"limits": [
 		{
 			"domain": "*",

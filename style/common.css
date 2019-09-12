@@ -10,6 +10,7 @@
   --add-color: navy;
   --queue-color: gray;
   --pause-color: #ffa318;
+  --retry-color: rgb(0, 112, 204);
   --error-color: rgb(160, 13, 42);
   --running-color: #aae061;
   --finishing-color: #57cc12;

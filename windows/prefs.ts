@@ -623,6 +623,8 @@ addEventListener("DOMContentLoaded", async () => {
 
   // Network
   new IntPref("pref-concurrent-downloads", "concurrent");
+  new IntPref("pref-retries", "retries");
+  new IntPref("pref-retry-time", "retry-time");
 
   visible("#limits").then(() => new LimitsUI());
 

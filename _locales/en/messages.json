@@ -617,6 +617,14 @@
     "description": "Preferences/General",
     "message": "Remove missing downloads after a restart"
   },
+  "pref_retries": {
+    "description": "pref text",
+    "message": "Number of retries of downloads on temporary errors"
+  },
+  "pref_retry_time": {
+    "description": "pref text",
+    "message": "Retry every (in minutes)"
+  },
   "pref_show_urls": {
     "description": "Preferences/General",
     "message": "Show URLs instead of Names"
@@ -954,6 +962,20 @@
   "resume_download": {
     "description": "Action for resuming a download",
     "message": "Resume"
+  },
+  "retrying": {
+    "description": "Status text",
+    "message": "Retrying"
+  },
+  "retrying_error": {
+    "description": "status text",
+    "message": "Retrying - $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
   },
   "running": {
     "description": "Status text",

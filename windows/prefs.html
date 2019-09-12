@@ -123,9 +123,14 @@
   </article>
 
   <article id="tab-network" class="tab">
-    <fieldset>
+    <fieldset id="network-general">
       <legend data-i18n="pref.netglobal"></legend>
-      <label><span data-i18n="pref-concurrent-downloads">Concurrent downloads</span> <input id="pref-concurrent-downloads" type="number" min="1" max="10"></label>
+      <label data-i18n="pref-concurrent-downloads">Concurrent downloads</label>
+      <input id="pref-concurrent-downloads" type="number" min="1" max="10">
+      <label data-i18n="pref-retries"></label>
+      <input id="pref-retries" type="number" min="0" max="100">
+      <label data-i18n="pref-retry-time"></label>
+      <input id="pref-retry-time" type="number" min="1" max="600">
     </fieldset>
     <table id="limits" data-singleselect="true">
       <tr>
