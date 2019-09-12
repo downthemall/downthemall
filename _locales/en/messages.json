@@ -27,6 +27,10 @@
     "description": "Error message",
     "message": "Unauthorized"
   },
+  "USER_CANCELED": {
+    "description": "Error message",
+    "message": "User Canceled"
+  },
   "add_download": {
     "description": "Action for adding a download",
     "message": "Add Download"
