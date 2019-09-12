@@ -65,23 +65,23 @@ export class Download extends BaseDownload {
     if (this.manId) {
       const {manId: id} = this;
       try {
-        const state = await downloads.search({id});
-        if (state[0].state === "in_progress") {
+        const state = (await downloads.search({id})).pop() || {};
+        if (state.state === "in_progress" && !state.error && !state.paused) {
           this.changeState(RUNNING);
           this.updateStateFromBrowser();
           return;
         }
-        if (state[0].state === "complete") {
+        if (state.state === "complete") {
           this.changeState(DONE);
           this.updateStateFromBrowser();
           return;
         }
-        if (!state[0].canResume) {
+        if (!state.canResume) {
           throw new Error("Cannot resume");
         }
         // Cannot await here
         // Firefox bug: will not return until download is finished
-        downloads.resume(id).catch(() => {});
+        downloads.resume(id).catch(console.error);
         this.changeState(RUNNING);
         return;
       }
@@ -314,7 +314,10 @@ export class Download extends BaseDownload {
       this.markDirty();
       switch (state.state) {
       case "in_progress":
-        if (error) {
+        if (state.paused) {
+          this.changeState(PAUSED);
+        }
+        else if (error) {
           this.cancel();
           this.error = error;
         }
