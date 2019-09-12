@@ -13,6 +13,17 @@ const PREROLL_HEURISTICS = /dl|attach|download|name|file|get|retr|^n$|\.(php|asp
 const PREROLL_HOSTS = /4cdn|chan/;
 const PREROLL_TIMEOUT = 10000;
 const PREROLL_NOPE = new Set<string>();
+
+/* eslint-disable no-magic-numbers */
+const NOPE_STATUSES = Object.freeze(new Set([
+  400,
+  401,
+  402,
+  405,
+  416,
+]));
+/* eslint-enable no-magic-numbers */
+
 const PREROLL_SEARCHEXTS = Object.freeze(new Set<string>([
   "php",
   "asp",
@@ -207,7 +218,7 @@ export class Preroller {
     else if (status === 402 || status === 407) {
       rv.error = "SERVER_UNAUTHORIZED";
     }
-    else if (status === 400 || status === 405 || status === 416) {
+    else if (NOPE_STATUSES.has(status)) {
       PREROLL_NOPE.add(this.download.uURL.host);
       if (PREROLL_NOPE.size > 1000) {
         PREROLL_NOPE.delete(PREROLL_NOPE.keys().next().value);
