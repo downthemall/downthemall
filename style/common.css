@@ -93,6 +93,7 @@ html, body {
 .icon-file-video:before { content: '\e825'; } /* '' */
 .icon-file-generic:before { content: '\e826'; } /* '' */
 .icon-question-dark:before { content: '\e827'; } /* '' */
+.icon-forward:before { content: '\e828'; } /* '' */
 .icon-filter:before { content: '\f0b0'; } /* '' */
 .icon-donate:before { content: '\f0d6'; } /* '' */
 .icon-file-doc:before { content: '\f0f6'; } /* '' */
@@ -105,7 +106,8 @@ html, body {
 .icon-file-image:before { content: '\f1c5'; } /* '' */
 .icon-file-archive:before { content: '\f1c6'; } /* '' */
 .icon-file-audio:before { content: '\f1c7'; } /* '' */
-.icon-toggle:before { content: '\f205'; } /* '' */
+.icon-toggle-off:before { content: '\f204'; } /* '' */
+.icon-toggle-on:before { content: '\f205'; } /* '' */
 .icon-server:before { content: '\f233'; } /* '' */
 .icon-question-light:before { content: '\f29c'; } /* '' */
 

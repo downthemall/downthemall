@@ -117,7 +117,9 @@ class CheckClasser extends Map<string, string> {
     let result = super.get(key);
     if (typeof result !== "string") {
       result = this.gen.next().value;
-      super.set(key, result);
+      if (result) {
+        super.set(key, result);
+      }
     }
     return result;
   }
@@ -352,7 +354,7 @@ class SelectionTable extends VirtualTable {
       try {
         Keys.suppressed = true;
         const newmask = await ModalDialog.prompt(
-          "Renaming mask", "Set new renaming mask", oldmask);
+          _("set_mask"), _("set_mask_text"), oldmask);
         for (const r of this.selection) {
           this.items.at(r).mask = newmask;
           this.invalidateRow(r);
@@ -365,6 +367,57 @@ class SelectionTable extends VirtualTable {
         Keys.suppressed = false;
       }
     });
+
+    this.contextMenu.on("ctx-referrer", async() => {
+      if (this.selection.empty) {
+        return;
+      }
+      let oldref = "";
+      for (const r of this.selection) {
+        const m = this.items.at(r).usableReferrer;
+        if (oldref && m !== oldref) {
+          oldref = "";
+          break;
+        }
+        oldref = m || oldref;
+      }
+      try {
+        Keys.suppressed = true;
+        const newref = await ModalDialog.prompt(
+          _("set_referrer"), _("set_referrer_text"), oldref);
+        try {
+          let ref;
+          if (!newref) {
+            ref = {
+              referrer: undefined,
+              usableReferrer: undefined,
+            };
+          }
+          else {
+            const u = new URL(newref);
+            u.hash = "";
+            ref = {
+              referrer: u.toString(),
+              usableReferrer: decodeURIComponent(u.toString()),
+            };
+          }
+          for (const r of this.selection) {
+            Object.assign(this.items.at(r), ref);
+            this.invalidateRow(r);
+          }
+        }
+        catch {
+          // ignored
+        }
+      }
+      catch (ex) {
+        console.warn("mask dismissed", ex);
+      }
+      finally {
+        Keys.suppressed = false;
+      }
+    });
+
 
     this.contextMenu.on("dismissed", () => this.table.focus());
 
@@ -527,7 +580,11 @@ class SelectionTable extends VirtualTable {
     if (!item || !matched(item) || !item.matched) {
       return null;
     }
-    return ["filtered", this.checkClasser.get(item.matched)];
+    const m = this.checkClasser.get(item.matched);
+    if (!m) {
+      return null;
+    }
+    return ["filtered", m];
   }
 
   getCellIcon(rowid: number, colid: number) {
