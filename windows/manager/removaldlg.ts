@@ -7,7 +7,7 @@ import { Prefs } from "../../lib/prefs";
 import { Keys } from "../keys";
 import { $ } from "../winutil";
 
-export default class RemovalModalDialog extends ModalDialog {
+export class RemovalModalDialog extends ModalDialog {
   private readonly text: string;
 
   private readonly pref: string;
@@ -68,3 +68,57 @@ export default class RemovalModalDialog extends ModalDialog {
     this.focusDefault();
   }
 }
+
+export class DeleteFilesDialog extends ModalDialog {
+  private readonly paths: string[];
+
+  constructor(paths: string[]) {
+    super();
+    this.paths = paths;
+  }
+
+  async getContent() {
+    const content = $<HTMLTemplateElement>("#deletefiles-template").
+      content.cloneNode(true) as DocumentFragment;
+    await localize(content);
+    const list = $(".deletefiles-list", content);
+    for (const path of this.paths) {
+      const li = document.createElement("li");
+      li.textContent = path;
+      list.appendChild(li);
+    }
+    return content;
+  }
+
+  get buttons() {
+    return [
+      {
+        title: _("deletefiles_button"),
+        value: "ok",
+        default: true,
+        dismiss: false,
+      },
+      {
+        title: _("cancel"),
+        value: "cancel",
+        default: false,
+        dismiss: true,
+      }
+    ];
+  }
+
+  async show() {
+    Keys.suppressed = true;
+    try {
+      return await super.show();
+    }
+    finally {
+      Keys.suppressed = false;
+    }
+  }
+
+  shown() {
+    this.focusDefault();
+  }
+}
+

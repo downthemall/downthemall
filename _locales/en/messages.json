@@ -207,6 +207,22 @@
     "description": "button text",
     "message": "Delete"
   },
+  "deletefiles": {
+    "description": "menu action",
+    "message": "Delete Files"
+  },
+  "deletefiles_button": {
+    "description": "button text",
+    "message": "Delete"
+  },
+  "deletefiles_text": {
+    "description": "messagebox text",
+    "message": "Are you sure you want to delete the following files?"
+  },
+  "deletefiles_title": {
+    "description": "messagebox title",
+    "message": "Delete Files"
+  },
   "description": {
     "description": "Description (keep it short); e.g. the description column in select",
     "message": "Description"
@@ -529,10 +545,6 @@
     "description": "Status text; manager",
     "message": "Paused"
   },
-  "pref_sounds": {
-    "description": "checkbox text",
-    "message": "Play sounds"
-  },
   "pref_add_paused": {
     "description": "Preferences/General",
     "message": "Add new downloads paused, instead of starting them immediately"
@@ -584,6 +596,10 @@
   "pref_show_urls": {
     "description": "Preferences/General",
     "message": "Show URLs instead of Names"
+  },
+  "pref_sounds": {
+    "description": "checkbox text",
+    "message": "Play sounds"
   },
   "pref_text_links": {
     "description": "Preferences/General",

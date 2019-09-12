@@ -26,7 +26,7 @@ import {
   MenuFilter
 } from "./itemfilters";
 import { FilteredCollection } from "./itemfilters";
-import RemovalModalDialog from "./removaldlg";
+import { RemovalModalDialog, DeleteFilesDialog } from "./removaldlg";
 import { Stats } from "./stats";
 import PORT from "./port";
 import { DownloadState, StateTexts, StateClasses, StateIcons } from "./state";
@@ -404,6 +404,8 @@ export class DownloadTable extends VirtualTable {
 
   private readonly openDirectoryAction: Broadcaster;
 
+  private readonly deleteFilesAction: Broadcaster;
+
   private readonly moveTopAction: Broadcaster;
 
   private readonly moveUpAction: Broadcaster;
@@ -579,6 +581,9 @@ export class DownloadTable extends VirtualTable {
     this.openDirectoryAction = new Broadcaster("ctx-open-directory");
     this.openDirectoryAction.onaction = this.openDirectory.bind(this);
 
+    this.deleteFilesAction = new Broadcaster("ctx-delete-files");
+    this.deleteFilesAction.onaction = this.deleteFiles.bind(this);
+
     const moveAction = (method: string) => {
       if (this.selection.empty) {
         return;
@@ -610,6 +615,7 @@ export class DownloadTable extends VirtualTable {
       this.moveBottomAction,
       this.openFileAction,
       this.openDirectoryAction,
+      this.deleteFilesAction,
     ]);
 
     this.on(
@@ -782,6 +788,10 @@ export class DownloadTable extends VirtualTable {
       this.cancelAction.disabled = true;
     }
 
+    if (!(states & DownloadState.DONE)) {
+      this.deleteFilesAction.disabled = true;
+    }
+
     const item = this.focusRow >= 0 ?
       this.downloads.filtered[this.focusRow] :
       null;
@@ -858,6 +868,33 @@ export class DownloadTable extends VirtualTable {
       console.error(ex, ex.toString(), ex);
       PORT.post("missing", {sid: item.sessionId});
     }
+  }
+
+  async deleteFiles() {
+    const items = [];
+    for (const rowid of this.selection) {
+      const item = this.downloads.filtered[rowid];
+      if (item.state === DownloadState.DONE && item.manId) {
+        items.push(item);
+      }
+    }
+    if (!items.length) {
+      return;
+    }
+    const sids = items.map(i => i.sessionId);
+    const paths = items.map(i => i.destFull);
+    await new DeleteFilesDialog(paths).show();
+    await Promise.all(items.map(async item => {
+      try {
+        if (item.manId && item.state === DownloadState.DONE) {
+          await downloads.removeFile(item.manId);
+        }
+      }
+      catch {
+        // ignored
+      }
+    }));
+    this.removeDownloadsInternal(sids);
   }
 
   removeDownloadsInternal(sids?: number[]) {
