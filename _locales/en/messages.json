@@ -585,6 +585,10 @@
     "description": "Preferences/General; group text",
     "message": "Manager"
   },
+  "pref_manager_in_popup": {
+    "description": "checkbox text",
+    "message": "Open manager in a new popup window"
+  },
   "pref_manager_tooltip": {
     "description": "Preferences/General",
     "message": "Show tooltips in Manager tabs"
