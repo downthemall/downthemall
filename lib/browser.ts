@@ -81,6 +81,7 @@ interface Downloads {
   search(query: DownloadsQuery): Promise<any[]>;
   getFileIcon(id: number, options?: any): Promise<string>;
   setShelfEnabled(state: boolean): void;
+  removeFile(manId: number): Promise<void>;
   onCreated: ExtensionListener;
   onChanged: ExtensionListener;
   onErased: ExtensionListener;

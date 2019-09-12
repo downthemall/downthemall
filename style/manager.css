@@ -512,3 +512,18 @@ body > * {
   width: 100%;
   background: var(--done-color);
 }
+
+.deletefiles-list {
+  padding-left: 1ex;
+  padding-right: 1.5ex;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  background-color: rgba(128,128,128,0.1);
+  max-height: 8em;
+  overflow-y: auto;
+}
+.deletefiles-list > li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
