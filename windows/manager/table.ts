@@ -146,6 +146,8 @@ export class DownloadItem extends EventEmitter {
 
   public opening: boolean;
 
+  public retries: number;
+
   constructor(owner: DownloadTable, raw: any, stats?: Stats) {
     super();
     Object.assign(this, raw);
@@ -246,6 +248,12 @@ export class DownloadItem extends EventEmitter {
   get fmtETA() {
     if (this.state === DownloadState.RUNNING) {
       return this.eta;
+    }
+    if (this.state === DownloadState.RETRYING) {
+      if (this.error) {
+        return _("retrying_error", _(this.error) || this.error);
+      }
+      return _("retrying");
     }
     if (this.error) {
       return _(this.error) || this.error;

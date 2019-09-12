@@ -202,6 +202,23 @@ body > * {
   );
 }
 
+.retrying .virtualtable-column-2 .virtualtable-icon {
+  color: var(--retry-color);
+}
+.retrying .virtualtable-column-2 .virtualtable-progress-bar {
+  background: var(--retry-color);
+}
+.retrying .virtualtable-column-2 .virtualtable-progress-undetermined {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--retry-color),
+    var(--retry-color) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+
 .missing .virtualtable-column-2 .virtualtable-icon,
 .canceled .virtualtable-column-2 .virtualtable-icon {
   color: var(--error-color);

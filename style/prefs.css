@@ -139,3 +139,10 @@ legend {
   background: rgba(128, 128, 128, 0.05);
   box-shadow: 1px 1px 6px lightgray;
 }
+
+#network-general {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1ex;
+}

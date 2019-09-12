@@ -48,7 +48,9 @@ const DEFAULTS = {
   written: 0,
   manId: 0,
   mime: "",
-  prerolled: false
+  prerolled: false,
+  retries: 0,
+  deadline: 0
 };
 
 let sessionId = 0;
@@ -105,6 +107,8 @@ export class BaseDownload {
 
   public prerolled: boolean;
 
+  public retries: number;
+
   constructor(options: any) {
     Object.assign(this, DEFAULTS);
     this.assign(options);
@@ -113,6 +117,7 @@ export class BaseDownload {
     }
     this.sessionId = ++sessionId;
     this.renamer = new Renamer(this);
+    this.retries = 0;
   }
 
   assign(options: any) {
@@ -182,6 +187,7 @@ export class BaseDownload {
     rv.currentName = this.browserName || rv.destName || rv.finalName;
     rv.error = this.error;
     rv.ext = this.renamer.p_ext;
+    rv.retries = this.retries;
     return rv;
   }
 }
