@@ -13,7 +13,6 @@ Planned for later.
 * Delete files (well, as far as the browser allows)
 * Inter-addon API (basic)
   * Add downloads
-* Chrome support
 * vtable perf: cache column widths
 * Download options
   * This is a bit more limited, as we cannot modify options of downloads that have been started (and paused) or that are done.
