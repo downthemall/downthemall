@@ -1,0 +1,1170 @@
+{
+  "language": {
+    "message": "العربية",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "ar",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "addpaused": {
+    "message": "أضِفها ملبثة",
+    "description": "Action: Add paused"
+  },
+  "add_download": {
+    "message": "أضِف تنزيلًا",
+    "description": "Action for adding a download"
+  },
+  "add_new": {
+    "message": "أضف جديد",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add_paused_once": {
+    "message": "أضِفها ملبثة حاليًا فقط",
+    "description": "Checkbox label"
+  },
+  "add_paused_question": {
+    "message": "أتريد تذكر خيارك وإضافة التنزيلات الجديدة ملبثة من الآن فصاعدًا؟",
+    "description": "Messagebox text"
+  },
+  "add_paused_title": {
+    "message": "أنضيفها ملبثة دومًا؟",
+    "description": "Title for the add-paused dialog"
+  },
+  "ask_again_later": {
+    "message": "اسألني لاحقًا",
+    "description": "Button text"
+  },
+  "batch_batch": {
+    "message": "دفعة تنزيلات",
+    "description": "Button text"
+  },
+  "batch_desc": {
+    "message": "يبدو أن في العنوان الحالي إرشادات لتنزيل دفعة.",
+    "description": ""
+  },
+  "batch_items": {
+    "message": "عدد العناصر:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_preview": {
+    "message": "معاينة:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_question": {
+    "message": "أتريد إضافتها كدفعة تنزيلات أو كتنزيل واحد؟",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_single": {
+    "message": "كتنزيل واحد",
+    "description": "Button text for batch confirmation"
+  },
+  "batch_title": {
+    "message": "كدفعة تنزيلات",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "ألغِ",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "أُلغي",
+    "description": "Download status text"
+  },
+  "cancel_download": {
+    "message": "ألغِ",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "cannot_be_empty": {
+    "message": "لا يمكنك ترك هذا الحقل فارغًا",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change_later_reminder": {
+    "message": "يمكنك تغيير قرارك هذا في التفضيلات لاحقًا",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check_selected_items": {
+    "message": "أشّر العناصر المحددة",
+    "description": "Menu text"
+  },
+  "colConnections": {
+    "message": "الاتصالات المتزامنة",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "النطاق",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "الوقت المتبقي",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "الاسم/العنوان",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "٪",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "التقدم",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "القطاعات",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "الحجم",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "السرعة",
+    "description": "Table column in manager"
+  },
+  "conflict_overwrite": {
+    "message": "اكتب عليه",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_prompt": {
+    "message": "طلب",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_rename": {
+    "message": "غيّر اسمه",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "خطأ داخلي في المتصفح",
+    "description": "Error Message"
+  },
+  "create_filter": {
+    "message": "أنشِئ مرشحًا",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom_filename": {
+    "message": "خصّص اسم الملف",
+    "description": "Label text; single window"
+  },
+  "deffilter_all": {
+    "message": "كل الملفات",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter_arch": {
+    "message": "الأرشيفات (zip،‏ rar،‏ 7z، …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter_aud": {
+    "message": "الصوت (mp3،‏ flac،‏ wav، …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter_bin": {
+    "message": "البرمجيات (exe،‏ msi، …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter_doc": {
+    "message": "المستندات (pdf،‏ odf،‏ docx، …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter_img": {
+    "message": "الصور (jpeg،‏ png،‏ gif، …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter_imggif": {
+    "message": "صور GIF",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter_imgjpg": {
+    "message": "صور JPEG",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter_imgpng": {
+    "message": "صور PNG",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter_vid": {
+    "message": "الفيديوهات (mp4،‏ webm،‏ mkv، …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "احذف",
+    "description": "button text"
+  },
+  "description": {
+    "message": "الوصف",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable_other_filters": {
+    "message": "عطّل البقية",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "تبرّع!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "تم",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "التنزيل",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download_verb": {
+    "message": "نزّل",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta_regular": {
+    "message": "نزّلها كلها!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "”نزّلها كلها!“ - كل الألسنة",
+    "description": "Menu text"
+  },
+  "dta_regular_image": {
+    "message": "احفظ الألسنة عبر ”نزّلها كلها!“",
+    "description": "Menu text"
+  },
+  "dta_regular_link": {
+    "message": "احفظ الرابط عبر ”نزّلها كلها!“",
+    "description": "Menu text"
+  },
+  "dta_regular_media": {
+    "message": "احفظ الوسيط عبر ”نزّلها كلها!“",
+    "description": "Menu text"
+  },
+  "dta_regular_selection": {
+    "message": "احفظ التحديد عبر ”نزّلها كلها!“",
+    "description": "Menu text"
+  },
+  "dta_turbo": {
+    "message": "بنقرة واحدة!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "”بنقرة واحدة!“ - كل الألسنة",
+    "description": "Menu text"
+  },
+  "dta_turbo_image": {
+    "message": "احفظ الصورة عبر ”بنقرة واحدة!“",
+    "description": "Menu text"
+  },
+  "dta_turbo_link": {
+    "message": "احفظ الرابط عبر ”بنقرة واحدة!“",
+    "description": "Menu text"
+  },
+  "dta_turbo_media": {
+    "message": "احفظ الوسيط عبر ”بنقرة واحدة!“",
+    "description": "Menu text"
+  },
+  "dta_turbo_selection": {
+    "message": "احفظ التحديد عبر ”بنقرة واحدة!“",
+    "description": "Menu text"
+  },
+  "error_invalidMask": {
+    "message": "قناع تغيير الاسم غير صالح",
+    "description": "Error message; single/select window"
+  },
+  "error_invalidReferrer": {
+    "message": "الموجّه غير صالح",
+    "description": "Error message; single window"
+  },
+  "error_invalidURL": {
+    "message": "العنوان غير صالح",
+    "description": "Error message; single window"
+  },
+  "error_noItemsSelected": {
+    "message": "لم تحدّد عناصر",
+    "description": "Error Message; select window"
+  },
+  "extensionDescription": {
+    "message": "أداة التنزيل لبحور من الروابط، داخل متصفحك",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "ترشيح سريع",
+    "description": "Label for Fast Filtering input"
+  },
+  "fastfilter_placeholder": {
+    "message": "تعبير أحرف بَدَل أو تعبير نمطي",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "خطأ في الوصول إلى الملف",
+    "description": "Error Message"
+  },
+  "filter_at_least_one": {
+    "message": "عليك اختيار نوعًا على الأقل من المرشحات!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter_create_title": {
+    "message": "أنشِئ مرشحًا جديدًا",
+    "description": "Message box title"
+  },
+  "filter_expression": {
+    "message": "تعبير المرشح",
+    "description": "Message box label"
+  },
+  "filter_label": {
+    "message": "اسم المرشح",
+    "description": "Message box label"
+  },
+  "filter_types": {
+    "message": "أنواع المرشح",
+    "description": "Message box label"
+  },
+  "filter_type_link": {
+    "message": "مرشح روابط",
+    "description": "Message box checkbox label"
+  },
+  "filter_type_media": {
+    "message": "مرشح وسائط",
+    "description": "Message box checkbox label"
+  },
+  "finishing": {
+    "message": "يُنهي",
+    "description": "Status text"
+  },
+  "force_start": {
+    "message": "يُجبر البدء",
+    "description": "Menu text"
+  },
+  "information_title": {
+    "message": "معلومات",
+    "description": "Used in message boxes"
+  },
+  "invalid_domain_pref": {
+    "message": "نطاق غير صالح",
+    "description": "Error message in prefs/network"
+  },
+  "invert_selection": {
+    "message": "اعكس التحديد",
+    "description": "Menu text"
+  },
+  "key_alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key_ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key_delete": {
+    "message": "Del",
+    "description": "Short for Delete-key"
+  },
+  "key_end": {
+    "message": "End",
+    "description": "Short for End-key"
+  },
+  "key_home": {
+    "message": "Home",
+    "description": "Short for home key"
+  },
+  "key_pagedown": {
+    "message": "PageDown",
+    "description": "Short for pagedown-key"
+  },
+  "key_pageup": {
+    "message": "PageUp",
+    "description": "Short for PageUp-key"
+  },
+  "limited_to": {
+    "message": "اقصر على",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "الروابط",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "المدير",
+    "description": "Menu text"
+  },
+  "manager_status_items": {
+    "message": "اكتملت التنزيلات $COMPLETE$ من أصل $TOTAL$ (المعروضة $SHOWING$)، الباقية $RUNNING$",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_title": {
+    "message": "مدير ”نزّلها كلها!“",
+    "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "القناع",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask_default": {
+    "message": "القناع المبدئي",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "الوسائط",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "ناقص",
+    "description": "Status text in manager"
+  },
+  "move_bottom": {
+    "message": "للأسفل",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move_down": {
+    "message": "لأسفل",
+    "description": "Action for moving a download down"
+  },
+  "move_top": {
+    "message": "للأعلى",
+    "description": "Action for moving a download to the top"
+  },
+  "move_up": {
+    "message": "لأعلى",
+    "description": "Action for moving a download up"
+  },
+  "nagging_message": {
+    "message": "أضفت لحد الساعة إلى ”نزّلها كلها!“ $DOWNLOADS$ من التنزيلات! لربما ترغب كأحد مسخدمي الأداة بالتبرع ودعم التطوير المستمر في المستقبل القريب؟ جزيل الشكر مقدمًا!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "فشل في الشبكة",
+    "description": "Error Message"
+  },
+  "never_ask_again": {
+    "message": "لا تسألني ثانية",
+    "description": "Donation button"
+  },
+  "noitems_label": {
+    "message": "لم تحدّد عناصر",
+    "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "لا روابط!",
+    "description": "Notification text"
+  },
+  "numitems_label": {
+    "message": "حدّدت من العناصر $ITEMS$…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "حسنًا",
+    "description": "Button text; Used in message boxes"
+  },
+  "open_directory": {
+    "message": "افتح الدليل",
+    "description": "Menu text; manager context"
+  },
+  "open_file": {
+    "message": "افتح الملف",
+    "description": "Menu text; manager context"
+  },
+  "open_link": {
+    "message": "افتح الرابط",
+    "description": "Menu text; select window"
+  },
+  "options_filters": {
+    "message": "المرشحات",
+    "description": "Pref tab text"
+  },
+  "options_general": {
+    "message": "عام",
+    "description": "Pref tab text"
+  },
+  "options_network": {
+    "message": "الشبكة",
+    "description": "Pref tab text"
+  },
+  "paused": {
+    "message": "ملبث",
+    "description": "Status text; manager"
+  },
+  "pause_download": {
+    "message": "ألبِث",
+    "description": "Action for pausing a download"
+  },
+  "prefs_conflicts": {
+    "message": "إن وُجد الملف",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "التفضيلات",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "تفضيلات ”نزّلها كلها!“",
+    "description": "Window/tab title; Preferences"
+  },
+  "pref_add_paused": {
+    "message": "أضفِ التنزيلات الجديدة ملبثة، بدل بدئها مباشرة عند إضافتها",
+    "description": "Preferences/General"
+  },
+  "pref_concurrent_downloads": {
+    "message": "التنزيلات المتزامنة",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "اعرض إخطارًا حين ينتهي تنزيل طابور التنزيلات",
+    "description": "Preferences/General"
+  },
+  "pref_global_turbo": {
+    "message": "ليكن زر المتصفح ”بنقرة واحدة!“",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "لا تعرض عناصر القائمة السياقية العامة",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "المدير",
+    "description": "Preferences/General; group text"
+  },
+  "pref_manager_tooltip": {
+    "message": "اعرض التلميحات في ألسنة المدير",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "الحدود العامة على الشبكة",
+    "description": "Preferences/General; group text"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "افتح لسان المدير بعد إضافة التنزيلات إلى الطابور",
+    "description": "Preferences/General"
+  },
+  "pref_queueing": {
+    "message": "إضافة التنزيلات في الطابور",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queue_notification": {
+    "message": "اعرض إخطارًا عند إضافة التنزيلات إلى الطابور",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "أزِل التنزيلات الناقصة بعد إعادة التشغيل",
+    "description": "Preferences/General"
+  },
+  "pref_show_urls": {
+    "message": "اعرض العناوين بدل الأسماء",
+    "description": "Preferences/General"
+  },
+  "pref_text_links": {
+    "message": "حاوِل البحث عن الروابط في نص موقع الوِب (أبطأ)",
+    "description": "Preferences/General"
+  },
+  "pref_ui": {
+    "message": "واجهة المستخدم",
+    "description": "Preferences/General; group text"
+  },
+  "queued": {
+    "message": "أَضيف إلى الطابور",
+    "description": "Status text"
+  },
+  "queued_download": {
+    "message": "أَضيف إلى الطابور تنزيل واحد!",
+    "description": "Notification text; single download"
+  },
+  "queued_downloads": {
+    "message": "أَضيف إلى الطابور $COUNT$ من التنزيلات!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "queue_finished": {
+    "message": "اكتمل طابور التنزيل",
+    "description": "Notification text"
+  },
+  "referrer": {
+    "message": "الموجّه",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "تذكر هذا الخيار",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove_all_complete_downloads": {
+    "message": "أزِل كل المكتملة",
+    "description": "Menu text"
+  },
+  "remove_all_downloads": {
+    "message": "أزِل الكل",
+    "description": "Menu text"
+  },
+  "remove_all_downloads_question": {
+    "message": "أتريد إزالة كـل التنزيلات حقًا؟",
+    "description": "Messagebox text"
+  },
+  "remove_batch_downloads": {
+    "message": "أزِل الدفعة الحالية",
+    "description": "Menu text"
+  },
+  "remove_batch_downloads_question": {
+    "message": "أتريد إزالة كل التنزيلات من الدفعة الحالية التي فيها التنزيل المحدد؟",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads": {
+    "message": "أزِل التنزيلات المكتملة",
+    "description": "Action for removing complete downloads"
+  },
+  "remove_complete_downloads_question": {
+    "message": "أتريد إزالة كل التنزيلات المكتملة؟",
+    "description": "Messagebox text"
+  },
+  "remove_complete_filter_downloads_question": {
+    "message": "أتريد إزالة كل التنزيلات المكتملة والتي تتطابق مع مرشح ”$FILTER$“؟",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "message": "أتريد إزالة كل التنزيلات المكتملة في التحديد الحالي؟",
+    "description": "Messagebox text"
+  },
+  "remove_domain_complete_downloads": {
+    "message": "أزِل المكتملة من النطاق الحالي",
+    "description": "Menu text"
+  },
+  "remove_domain_complete_downloads_question": {
+    "message": "أتريد إزالة كل التنزيلات المكتملة والتي تتطابق مع نطاق ”$DOMAIN$“؟",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "message": "أزِل النطاق الحالي",
+    "description": "Menu text"
+  },
+  "remove_domain_downloads_question": {
+    "message": "أتريد إزالة كل التنزيلات التي تتطابق مع نطاق ”$DOMAIN$“؟",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "message": "أزِل التنزيل",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove_downloads": {
+    "message": "أزِل التنزيلات",
+    "description": "Menu text"
+  },
+  "remove_downloads_title": {
+    "message": "أتريد إزالة كل التنزيلات؟",
+    "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "أتريد إزالة التنزيلات المحددة؟",
+    "description": "Messagebox text"
+  },
+  "remove_failed_downloads": {
+    "message": "أزِل التي فشلت",
+    "description": "Menu text"
+  },
+  "remove_failed_downloads_question": {
+    "message": "أتريد إزالة كل التنزيلات التي فشلت؟",
+    "description": "Messagebox text"
+  },
+  "remove_filter_downloads_question": {
+    "message": "أتريد إزالة كل التنزيلات التي تتطابق مع نطاق ”$FILTER$“؟",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "message": "امسح التنزيلات الناقصة",
+    "description": "Menu text"
+  },
+  "remove_missing_downloads_question": {
+    "message": "أتريد مسح كل التنزيلات الناقصة؟",
+    "description": "Messagebox text"
+  },
+  "remove_paused_downloads": {
+    "message": "أزِل الملبثة",
+    "description": "Menu text"
+  },
+  "remove_paused_downloads_question": {
+    "message": "أتريد إزالة كل التنزيلات الملبثة؟",
+    "description": "Messagebox text"
+  },
+  "remove_selected_complete_downloads": {
+    "message": "أزِل المكتملة من التحديد",
+    "description": "Menu text"
+  },
+  "remove_selected_complete_downloads_question": {
+    "message": "أتريد إزالة كل التنزيلات المكتملة في التحديد الحالي؟",
+    "description": "Messagebox text"
+  },
+  "remove_selected_downloads": {
+    "message": "أزِل المحددة",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "غير الاسم",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer_batch": {
+    "message": "رقم الدفعة",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_d": {
+    "message": "تاريخ الإضافة - اليوم",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_date": {
+    "message": "تاريخ الإضافة",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_domain": {
+    "message": "اسم النطاق (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ext": {
+    "message": "امتداد الملف",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_hh": {
+    "message": "تاريخ الإضافة - الساعة",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_host": {
+    "message": "اسم المضيف",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_idx": {
+    "message": "رقم العنصر في الدفعة",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_info": {
+    "message": "إن أضفت ”flat“ (مثلًا *flatsubdirs*) فستستبدل كل الشرطات في حقل القيمة، بهذا لن تُنشئ أية أدلة",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer_m": {
+    "message": "تاريخ الإضافة - الشهر",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_mm": {
+    "message": "تاريخ الإضافة - الدقيقة",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_name": {
+    "message": "اسم الملف",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_num": {
+    "message": "اختصار لِ‍ *batch*",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_qstring": {
+    "message": "نص الاستعلام",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ref": {
+    "message": "الموجّه",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refdomain": {
+    "message": "اسم نطاق الموجّه (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refext": {
+    "message": "امتداد ملفات الموجّه",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refhost": {
+    "message": "اسم مضيف الموجّه",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refname": {
+    "message": "اسم ملف الموجّه",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refqstring": {
+    "message": "نص استعلام الموجّه",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refsubdirs": {
+    "message": "مسار الموجّه",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refurl": {
+    "message": "عنوان الموجّه (بدون الميفاق)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ss": {
+    "message": "تاريخ الإضافة - الثانية",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_subdirs": {
+    "message": "المسار",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_tags": {
+    "message": "تغيير اسم وسوم الأقنعة",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_text": {
+    "message": "نص الوصف",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "نص العنوان",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_url": {
+    "message": "العنوان (بدون الميفاق)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_y": {
+    "message": "تاريخ الإضافة - السنة",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "قناع تغيير الاسم",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "صفّر",
+    "description": "Button text; pref window"
+  },
+  "reset_confirmations": {
+    "message": "صفّر التأكيدات التي حُفظت",
+    "description": "Button text; pref/General"
+  },
+  "reset_confirmations_done": {
+    "message": "صُفّرت كل التأكيدات التي قدمتها سابقًا!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset_layouts": {
+    "message": "صفّر التخصيصات على واجهة المستخدم",
+    "description": "Button text; pref/General"
+  },
+  "reset_layouts_done": {
+    "message": "صُفّرت كل التخصيصات على التخطيط التي أجريتها سابقًا! لربما عليك إعادة تحميل النوافذ/الألسنة.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume_download": {
+    "message": "استأنف",
+    "description": "Action for resuming a download"
+  },
+  "running": {
+    "message": "يعمل",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "احفظ",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "ابحث…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select_all": {
+    "message": "حدّد الكل",
+    "description": "Menu text; e.g. select context"
+  },
+  "select_checked": {
+    "message": "حدّد المؤشر عليه",
+    "description": "Menu text; select context"
+  },
+  "select_none": {
+    "message": "أزِل التحديد",
+    "description": "Menu text; select context"
+  },
+  "select_title": {
+    "message": "”نزّلها كلها!“ - حدّد تنزيلاتك",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "لم يوجد",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "خطأ في الخادوم",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "ممنوع",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "لا ترخيص",
+    "description": "Error message"
+  },
+  "set_mask": {
+    "message": "اضبط قناع تغيير الاسم",
+    "description": "Menu text; select window"
+  },
+  "single_batchexamples": {
+    "message": "الدفعات مدعومة، مثل:",
+    "description": "Header text; single window"
+  },
+  "single_header": {
+    "message": "أدخِل عنوان تنزيل (رابط) والخيارات الأخرى",
+    "description": "Header text; single window"
+  },
+  "single_title": {
+    "message": "”نزّلها كلها!“ - أضِف رابطًا",
+    "description": "Title of single window"
+  },
+  "sizeB": {
+    "message": "$S$بايت",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$غ.بايت",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$ك.بايت",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$م.بايت",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$پ.بايت",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes_huge": {
+    "message": "ضخم (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "message": "كبير ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "message": "متوسط ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "message": "صغير ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$ت.بايت",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ من أصل $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "مجهول",
+    "description": "Status text; manager size column"
+  },
+  "speedB": {
+    "message": "$SPEED$بايت/ثا",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$ك.بايت/ثا",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$م.بايت/ثا",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "message": "ستبدأ التنزيلات الجديدة",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork_inactive_title": {
+    "message": "لن تبدأ أي تنزيلات جديدة",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "title": {
+    "message": "العنوان",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle_selected_items": {
+    "message": "اقلب التأشير على العناصر المحددة",
+    "description": "Menu text; select"
+  },
+  "tooltip_date": {
+    "message": "تاريخ الإضافة:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_eta": {
+    "message": "المتبقي:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip_from": {
+    "message": "من:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip_size": {
+    "message": "الحجم:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_average": {
+    "message": "المتوسط:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_current": {
+    "message": "الحالية:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck_selected_items": {
+    "message": "ألغِ تأشير العناصر المحددة",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "بلا حدود",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "استعمله مرة واحدة",
+    "description": "Label for Use-Once checkboxes"
+  }
+}
