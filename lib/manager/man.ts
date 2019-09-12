@@ -16,8 +16,9 @@ import { Download } from "./download";
 import { ManagerPort } from "./port";
 import { Scheduler } from "./scheduler";
 import { Limits } from "./limits";
-import { downloads, runtime } from "../browser";
+import { downloads, runtime, webRequest, CHROME } from "../browser";
 
+const US = runtime.getURL("");
 
 const AUTOSAVE_TIMEOUT = 2000;
 const DIRTY_TIMEOUT = 100;
@@ -83,6 +84,14 @@ export class Manager extends EventEmitter {
     Limits.on("changed", () => {
       this.resetScheduler();
     });
+
+    if (CHROME) {
+      webRequest.onBeforeSendHeaders.addListener(
+        this.stuffReferrer.bind(this),
+        {urls: ["<all_urls>"]},
+        ["blocking", "requestHeaders", "extraHeaders"]
+      );
+    }
   }
 
   async init() {
@@ -383,6 +392,31 @@ export class Manager extends EventEmitter {
 
   getMsgItems() {
     return this.items.map(e => e.toMsg());
+  }
+
+  stuffReferrer(details: any): any {
+    if (details.tabId > 0 && !US.startsWith(details.initiator)) {
+      return undefined;
+    }
+    const sidx = details.requestHeaders.findIndex(
+      (e: any) => e.name.toLowerCase() === "x-dta-id");
+    if (sidx < 0) {
+      return undefined;
+    }
+    const sid = parseInt(details.requestHeaders[sidx].value, 10);
+    details.requestHeaders.splice(sidx, 1);
+    const item = this.sids.get(sid);
+    if (!item) {
+      return undefined;
+    }
+    details.requestHeaders.push({
+      name: "Referer",
+      value: (item.uReferrer || item.uURL).toString()
+    });
+    const rv: any = {
+      requestHeaders: details.requestHeaders
+    };
+    return rv;
   }
 }
 

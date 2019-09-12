@@ -79,7 +79,7 @@ export class Preroller {
   private async prerollFirefox() {
     const controller = new AbortController();
     const {signal} = controller;
-    const {uURL} = this.download;
+    const {uURL, uReferrer} = this.download;
     const res = await fetch(uURL.toString(), {
       method: "GET",
       headers: new Headers({
@@ -87,6 +87,7 @@ export class Preroller {
       }),
       mode: "same-origin",
       signal,
+      referrer: (uReferrer || uURL).toString(),
     });
     if (res.body) {
       res.body.cancel();
@@ -98,7 +99,7 @@ export class Preroller {
 
   private async prerollChrome() {
     let rid = "";
-    const {uURL} = this.download;
+    const {uURL, uReferrer} = this.download;
     const rurl = uURL.toString();
     let listener: any;
     const wr = new Promise<any[]>(resolve => {
@@ -132,9 +133,11 @@ export class Preroller {
     const res = await fetch(rurl, {
       method: "GET",
       headers: new Headers({
-        Range: "bytes=0-1",
+        "Range": "bytes=0-1",
+        "X-DTA-ID": this.download.sessionId.toString(),
       }),
       signal,
+      referrer: (uReferrer || uURL).toString(),
     });
     if (res.body) {
       res.body.cancel();

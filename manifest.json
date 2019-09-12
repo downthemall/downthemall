@@ -34,7 +34,8 @@
     "storage",
     "tabs",
     "webNavigation",
-    "webRequest"
+    "webRequest",
+    "webRequestBlocking"
   ],
 
   "background": {

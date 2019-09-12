@@ -1,7 +1,8 @@
 "use strict";
 // License: MIT
 
-import { CHROME, downloads } from "../browser";
+// eslint-disable-next-line no-unused-vars
+import { CHROME, downloads, DownloadOptions } from "../browser";
 import { Prefs } from "../prefs";
 import { PromiseSerializer } from "../pserializer";
 import { filterInSitu, parsePath } from "../util";
@@ -21,18 +22,6 @@ import {
   RUNNING
 } from "./state";
 import { Preroller } from "./preroller";
-
-type Header = {name: string; value: string};
-interface Options {
-  conflictAction: string;
-  filename: string;
-  saveAs: boolean;
-  url: string;
-  method?: string;
-  body?: string;
-  incognito?: boolean;
-  headers: Header[];
-}
 
 export class Download extends BaseDownload {
   public manager: Manager;
@@ -120,7 +109,7 @@ export class Download extends BaseDownload {
           return;
         }
       }
-      const options: Options = {
+      const options: DownloadOptions = {
         conflictAction: await Prefs.get("conflict-action"),
         filename: this.dest.full,
         saveAs: false,
@@ -138,6 +127,12 @@ export class Download extends BaseDownload {
         options.headers.push({
           name: "Referer",
           value: this.referrer
+        });
+      }
+      else if (CHROME) {
+        options.headers.push({
+          name: "X-DTA-ID",
+          value: this.sessionId.toString(),
         });
       }
       if (this.manId) {
