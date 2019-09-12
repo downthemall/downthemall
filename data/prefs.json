@@ -1,5 +1,6 @@
 {
 	"button-type": "popup",
+	"manager-in-popup": false,
 	"concurrent": 4,
 	"queue-notification": true,
 	"finish-notification": true,

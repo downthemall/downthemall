@@ -2,8 +2,9 @@
 // License: MIT
 
 import { windows, tabs, runtime } from "../lib/browser";
-import {getManager} from "./manager/man";
+import { getManager } from "./manager/man";
 import DEFAULT_ICONS from "../data/icons.json";
+import { Prefs } from "./prefs";
 
 const DONATE_URL = "https://www.downthemall.org/howto/donate/";
 const MANAGER_URL = "/windows/manager.html";
@@ -93,11 +94,33 @@ export async function openManager(focus = true) {
   catch (ex) {
     console.error(ex.toString(), ex);
   }
+  const url = runtime.getURL(MANAGER_URL);
+  const openInPopup = await Prefs.get("manager-in-popup");
+  if (openInPopup) {
+    const etabs = await tabs.query({
+      url
+    });
+    if (etabs.length) {
+      if (!focus) {
+        return;
+      }
+      const tab = etabs.pop();
+      await tabs.update(tab.id, {active: true});
+      await windows.update(tab.windowId, {focused: true});
+      return;
+    }
+    const windowOptions = {
+      url,
+      type: "popup",
+    };
+    await windows.create(windowOptions);
+    return;
+  }
   if (focus) {
-    await openInTabOrFocus(await runtime.getURL(MANAGER_URL), false);
+    await openInTabOrFocus(runtime.getURL(MANAGER_URL), false);
   }
   else {
-    await maybeOpenInTab(await runtime.getURL(MANAGER_URL), false);
+    await maybeOpenInTab(runtime.getURL(MANAGER_URL), false);
   }
 }
 
