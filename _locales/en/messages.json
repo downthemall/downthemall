@@ -315,6 +315,14 @@
     "description": "Error Message; select window",
     "message": "No items selected"
   },
+  "error_noabsolutepath": {
+    "description": "Error Message; select/single window",
+    "message": "Absolute paths for subfolders are not supported by browsers"
+  },
+  "error_nodotsinpath": {
+    "description": "Error Message; select/single window",
+    "message": "Dots (.) in subfolders are not supported by browsers"
+  },
   "extensionDescription": {
     "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one",
     "message": "The Mass Downloader for your browser"
@@ -1200,6 +1208,14 @@
   "statusNetwork_inactive_title": {
     "description": "Status bar tooltip; manager network icon",
     "message": "No new Downloads will be started"
+  },
+  "subfolder": {
+    "description": "label text",
+    "message": "Subfolder:"
+  },
+  "subfolder_placeholder": {
+    "description": "placeholder text within an input box",
+    "message": "Place files in this subfolder within your downloads directory"
   },
   "title": {
     "description": "Column text; Title label (short)",

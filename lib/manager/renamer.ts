@@ -193,24 +193,25 @@ export default class Renamer {
   }
 
   toString() {
-    const {mask} = this.d;
+    const {mask, subfolder} = this.d;
     // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self: any = this;
-    // XXX flat
-    return sanitizePath(mask.replace(REPLACE_EXPR, function(type: string) {
+    const baseMask = subfolder ? `${subfolder}/${mask}` : mask;
+    console.log(mask, subfolder, baseMask);
+    return sanitizePath(baseMask.replace(REPLACE_EXPR, function(type: string) {
       let prop = type.substr(1, type.length - 2);
       const flat = prop.startsWith("flat");
       if (flat) {
         prop = prop.substr(4);
       }
       prop = `p_${prop}`;
-      const rv = (prop in self) ?
+      let rv = (prop in self) ?
         (self[prop] || "").trim() :
         type;
       if (flat) {
-        return rv.replace(/[/\\]+/g, "-");
+        rv = rv.replace(/[/\\]+/g, "-");
       }
-      return rv;
+      return rv.replace(/\/{2,}/g, "/");
     }));
   }
 }

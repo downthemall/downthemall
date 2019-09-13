@@ -5,6 +5,8 @@
 import { parsePath, URLd } from "../util";
 import { QUEUED, RUNNING, PAUSED } from "./state";
 import Renamer from "./renamer";
+// eslint-disable-next-line no-unused-vars
+import { BaseItem } from "../item";
 
 const SAVEDPROPS = [
   "state",
@@ -14,6 +16,7 @@ const SAVEDPROPS = [
   "usableReferrer",
   "fileName",
   "mask",
+  "subfolder",
   "date",
   // batches
   "batch",
@@ -105,11 +108,13 @@ export class BaseDownload {
 
   public mask: string;
 
+  public subfolder: string;
+
   public prerolled: boolean;
 
   public retries: number;
 
-  constructor(options: any) {
+  constructor(options: BaseItem) {
     Object.assign(this, DEFAULTS);
     this.assign(options);
     if (this.state === RUNNING) {
@@ -120,12 +125,13 @@ export class BaseDownload {
     this.retries = 0;
   }
 
-  assign(options: any) {
+  assign(options: BaseItem) {
     // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self: any = this;
+    const other: any = options;
     for (const prop of SAVEDPROPS) {
       if (prop in options) {
-        self[prop] = options[prop];
+        self[prop] = other[prop];
       }
     }
     this.uURL = new URL(this.url) as URLd;

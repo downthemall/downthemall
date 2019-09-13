@@ -116,3 +116,9 @@ export const FASTFILTER = new RecentList("fastfilter", [
   "*.z??, *.css, *.html"
 ]);
 FASTFILTER.init().catch(console.error);
+
+export const SUBFOLDER = new RecentList("subfolder", [
+  "",
+  "/downthemall",
+]);
+SUBFOLDER.init().catch(console.error);
