@@ -11,7 +11,7 @@ import { getManager } from "./manager/man";
 import { select } from "./select";
 import { single } from "./single";
 import { Notification } from "./notifications";
-import { MASK, FASTFILTER } from "./recentlist";
+import { MASK, FASTFILTER, SUBFOLDER } from "./recentlist";
 import { openManager } from "./windowutils";
 import { _ } from "./i18n";
 
@@ -19,6 +19,7 @@ const MAX_BATCH = 10000;
 
 export interface QueueOptions {
   mask?: string;
+  subfolder?: string;
   paused?: boolean;
 }
 
@@ -28,8 +29,9 @@ export const API = new class APIImpl {
   }
 
   async queue(items: BaseItem[], options: QueueOptions) {
-    await MASK.init();
+    await Promise.all([MASK.init(), SUBFOLDER.init()]);
     const {mask = MASK.current} = options;
+    const {subfolder = SUBFOLDER.current} = options;
 
     const {paused = false} = options;
     const defaults: any = {
@@ -46,6 +48,7 @@ export const API = new class APIImpl {
       private: false,
       postData: null,
       mask,
+      subfolder,
       date: Date.now(),
       paused
     };
@@ -116,6 +119,10 @@ export const API = new class APIImpl {
     if (typeof options.fast === "string" && !options.fastOnce) {
       await FASTFILTER.init();
       await FASTFILTER.push(options.fast);
+    }
+    if (typeof options.subfolder === "string" && !options.subfolderOnce) {
+      await SUBFOLDER.init();
+      await SUBFOLDER.push(options.subfolder);
     }
     if (typeof options.type === "string") {
       await Prefs.set("last-type", options.type);

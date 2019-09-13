@@ -357,3 +357,20 @@ export function mapFilterInSitu<TRes, T>(
 export function randint(min: number, max: number) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
+
+export function validateSubFolder(folder: string) {
+  if (!folder) {
+    return;
+  }
+  folder = folder.replace(/[/\\]+/g, "/");
+  if (folder.startsWith("/")) {
+    throw new Error("error.noabsolutepath");
+  }
+  if (/^[a-z]:\//i.test(folder)) {
+    throw new Error("error.noabsolutepath");
+  }
+  if (/^\.+\/|\/\.+\/|\/\.+$/g.test(folder)) {
+    throw new Error("error.nodotsinpath");
+  }
+}

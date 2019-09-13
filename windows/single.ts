@@ -6,7 +6,7 @@ import ModalDialog from "../uikit/lib/modal";
 import { _, localize } from "../lib/i18n";
 // eslint-disable-next-line no-unused-vars
 import { Item, BaseItem } from "../lib/item";
-import { MASK } from "../lib/recentlist";
+import { MASK, SUBFOLDER } from "../lib/recentlist";
 import { BatchGenerator } from "../lib/batches";
 import { WindowState } from "./windowstate";
 import { Dropdown } from "./dropdown";
@@ -14,11 +14,13 @@ import { Keys } from "./keys";
 import { hookButton } from "../lib/manager/renamer";
 import { runtime } from "../lib/browser";
 import { $ } from "./winutil";
+import { validateSubFolder } from "../lib/util";
 
 const PORT = runtime.connect(null, { name: "single" });
 
 let ITEM: BaseItem;
 let Mask: Dropdown;
+let Subfolder: Dropdown;
 
 class BatchModalDialog extends ModalDialog {
   private readonly gen: BatchGenerator;
@@ -71,7 +73,8 @@ function setItem(item: BaseItem) {
     title = "",
     description = "",
     usableReferrer = "",
-    mask = ""
+    mask = "",
+    subfolder = "",
   } = item;
   $<HTMLInputElement>("#URL").value = usable;
   $<HTMLInputElement>("#filename").value = fileName;
@@ -80,6 +83,9 @@ function setItem(item: BaseItem) {
   $<HTMLInputElement>("#referrer").value = usableReferrer;
   if (mask) {
     Mask.value = mask;
+  }
+  if (subfolder) {
+    Subfolder.value = subfolder;
   }
 }
 
@@ -124,6 +130,9 @@ async function downloadInternal(paused: boolean) {
     return displayError("error.invalidMask");
   }
 
+  const subfolder = Subfolder.value.trim();
+  validateSubFolder(subfolder);
+
   const items = [];
 
   if (!ITEM) {
@@ -136,6 +145,7 @@ async function downloadInternal(paused: boolean) {
       title,
       description,
       mask,
+      subfolder
     });
   }
   else {
@@ -143,6 +153,7 @@ async function downloadInternal(paused: boolean) {
     ITEM.title = title;
     ITEM.description = description;
     ITEM.mask = mask;
+    ITEM.subfolder = subfolder;
     if (usableReferrer !== ITEM.usableReferrer) {
       ITEM.referrer = referrer;
       ITEM.usableReferrer = usableReferrer;
@@ -185,6 +196,8 @@ async function downloadInternal(paused: boolean) {
       paused,
       mask,
       maskOnce: $<HTMLInputElement>("#maskOnceCheck").checked,
+      subfolder,
+      subfolderOnce: $<HTMLInputElement>("#subfolderOnceCheck").checked,
     }
   });
   return null;
@@ -201,8 +214,9 @@ function cancel() {
 
 async function init() {
   await localize(document.documentElement);
-  await Promise.all([MASK.init()]);
+  await Promise.all([MASK.init(), SUBFOLDER.init()]);
   Mask = new Dropdown("#mask", MASK.values);
+  Subfolder = new Dropdown("#subfolder", SUBFOLDER.values);
 }
 
 addEventListener("DOMContentLoaded", async function dom() {
