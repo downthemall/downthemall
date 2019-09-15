@@ -38,6 +38,10 @@ import { $ } from "../winutil";
 // eslint-disable-next-line no-unused-vars
 import { TableConfig } from "../../uikit/lib/config";
 import { IconCache } from "../../lib/iconcache";
+import * as imex from "../../lib/imex";
+// eslint-disable-next-line no-unused-vars
+import { BaseItem } from "../../lib/item";
+import { API } from "../../lib/api";
 
 const TREE_CONFIG_VERSION = 2;
 const RUNNING_TIMEOUT = 1000;
@@ -555,6 +559,12 @@ export class DownloadTable extends VirtualTable {
     ctx.on("ctx-remove-failed", () => this.removeFailedDownloads());
     ctx.on("ctx-remove-paused", () => this.removePausedDownloads());
     ctx.on("ctx-remove-batch", () => this.removeBatchDownloads());
+
+    ctx.on("ctx-import", () => this.importDownloads());
+    ctx.on("ctx-export-text", () => this.exportDownloads(imex.textExporter));
+    ctx.on("ctx-export-aria2", () => this.exportDownloads(imex.aria2Exporter));
+    ctx.on("ctx-export-metalink",
+      () => this.exportDownloads(imex.metalinkExporter));
 
     ctx.on("dismissed", () => this.table.focus());
 
@@ -1175,6 +1185,49 @@ export class DownloadTable extends VirtualTable {
 
   selectToggle() {
     this.selection.toggle(0, this.rowCount - 1);
+  }
+
+  importDownloads() {
+    const picker = document.createElement("input");
+    picker.setAttribute("type", "file");
+    picker.setAttribute("accept", "text/*,.txt,.lst,.metalink,.meta4");
+    picker.onchange = () => {
+      if (!picker.files || !picker.files.length) {
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (!reader.result) {
+          return;
+        }
+        const items = imex.importText(reader.result as string);
+        if (!items || !items.length) {
+          return;
+        }
+        API.regular(items, []);
+      };
+      reader.readAsText(picker.files[0], "utf-8");
+    };
+    picker.click();
+  }
+
+  exportDownloads(exporter: imex.Exporter) {
+    const items = this.getSelectedItems();
+    if (!items.length) {
+      return;
+    }
+    const text = exporter.getText(items as unknown as BaseItem[]);
+    const enc = new TextEncoder();
+    const data = enc.encode(text);
+    const url = URL.createObjectURL(new Blob([data], {type: "text/plain"}));
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", exporter.fileName);
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   }
 
   getRowClasses(rowid: number) {

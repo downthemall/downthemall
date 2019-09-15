@@ -28,7 +28,7 @@ function computeSelection(
     items: BaseMatchedItem[],
     onlyFast: boolean): ItemDelta[] {
   let ws = items.map((item, idx: number) => {
-    item.idx = idx;
+    item.idx = item.idx || idx;
     const {matched = null} = item;
     item.prevMatched = matched;
     item.matched = null;
