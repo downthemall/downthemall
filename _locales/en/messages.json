@@ -323,6 +323,22 @@
     "description": "Error Message; select/single window",
     "message": "Dots (.) in subfolders are not supported by browsers"
   },
+  "export": {
+    "description": "menu text",
+    "message": "Export To File"
+  },
+  "export_aria2": {
+    "description": "menu text",
+    "message": "Export As aria2 List"
+  },
+  "export_metalink": {
+    "description": "menu text",
+    "message": "Export As Metalink"
+  },
+  "export_text": {
+    "description": "menu text",
+    "message": "Export As Text"
+  },
   "extensionDescription": {
     "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one",
     "message": "The Mass Downloader for your browser"
@@ -370,6 +386,10 @@
   "force_start": {
     "description": "Menu text",
     "message": "Force Start"
+  },
+  "import": {
+    "description": "menu text",
+    "message": "Import From File"
   },
   "information_title": {
     "description": "Used in message boxes",
