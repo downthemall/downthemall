@@ -156,7 +156,7 @@
     "description": "Filter label for the Archives filter"
   },
   "deffilter_aud": {
-    "message": "音楽ファイル (mp3, flac, wav, …)",
+    "message": "音声ファイル (mp3, flac, wav, …)",
     "description": "Filter label for the Audio filter"
   },
   "deffilter_bin": {
@@ -164,7 +164,7 @@
     "description": "Filter label for the Software filter"
   },
   "deffilter_doc": {
-    "message": "書庫ファイル (pdf, odf, docx, …)",
+    "message": "文書ファイル (pdf, odf, docx, …)",
     "description": "Filter label for the Documents filter"
   },
   "deffilter_img": {
@@ -303,6 +303,22 @@
     "message": "アイテムが選択されていません",
     "description": "Error Message; select window"
   },
+  "export": {
+    "message": "ファイルにエクスポート",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "aria2リストとしてエクスポート",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "メタリンクとしてエクスポート",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "テキストとしてエクスポート",
+    "description": "menu text"
+  },
   "extensionDescription": {
     "message": "ブラウザ用マスダウンローダー",
     "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
@@ -354,6 +370,10 @@
   "force_start": {
     "message": "強制的に開始",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "ファイルからインポート",
+    "description": "menu text"
   },
   "information_title": {
     "message": "インフォメーション",
