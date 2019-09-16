@@ -292,11 +292,11 @@
     "description": "Error message; single window"
   },
   "error_noabsolutepath": {
-    "message": "サブフォルダーの絶対パスはブラウザでサポートされていません",
+    "message": "サブフォルダからの相対パスを指定して下さい(絶対パスはブラウザ非対応)",
     "description": "Error Message; select/single window"
   },
   "error_nodotsinpath": {
-    "message": "サブフォルダー内のドット（.）はブラウザでサポートされていません",
+    "message": "フォルダ名の先頭に\".\"を使わないで下さい(ブラウザ非対応)",
     "description": "Error Message; select/single window"
   },
   "error_noItemsSelected": {
@@ -428,7 +428,7 @@
     "description": "Menu text"
   },
   "manager_status_items": {
-    "message": "$TOTAL$ のダウンロードのうち $COMPLETE$ が完了（ $SHOWING$ が表示）、 $RUNNING$ が実行中",
+    "message": "$TOTAL$ のダウンロードのうち $COMPLETE$ が完了 ($SHOWING$ が表示)、$RUNNING$ が実行中",
     "description": "Status bar text; manager",
     "placeholders": {
       "complete": {
@@ -574,23 +574,23 @@
     "description": "Preferences/General"
   },
   "pref_button_type": {
-    "message": "DownThemAll! ボタン:",
+    "message": "DownThemAll! アイコンクリック時:",
     "description": "label"
   },
   "pref_button_type_dta": {
-    "message": "DownThemAll！ 選択",
+    "message": "DownThemAll! 選択画面",
     "description": "label"
   },
   "pref_button_type_manager": {
-    "message": "マネージャーを開く",
+    "message": "マネージャを開く",
     "description": "label"
   },
   "pref_button_type_popup": {
-    "message": "ポップアップメニュー",
+    "message": "メニュー展開",
     "description": "label"
   },
   "pref_button_type_turbo": {
-    "message": "OneClick!",
+    "message": "OneClick! ダウンロード",
     "description": "label"
   },
   "pref_concurrent_downloads": {
@@ -642,7 +642,7 @@
     "description": "pref text"
   },
   "pref_retry_time": {
-    "message": "毎回再試行する（数分で）",
+    "message": "再試行の間隔 (分単位)",
     "description": "pref text"
   },
   "pref_show_urls": {
@@ -654,7 +654,7 @@
     "description": "checkbox text"
   },
   "pref_text_links": {
-    "message": "Webサイトの文字列でリンクを見つけてみる（但し、遅い）",
+    "message": "Webサイトの文字列でリンクを見つけてみる (但し、遅い)",
     "description": "Preferences/General"
   },
   "pref_ui": {
@@ -964,7 +964,7 @@
     "description": "Button text; pref/General"
   },
   "reset_layouts_done": {
-    "message": "以前に記憶したレイアウトのカスタマイズはすべてリセットされました！ ウィンドウ/タブの再読み込みが必要になる場合があります。",
+    "message": "以前に記憶したレイアウトのカスタマイズはすべてリセットされました！ウィンドウ/タブの再読み込みが必要になる場合があります。",
     "description": "Messagebox text; pref/General"
   },
   "resume_download": {
@@ -1050,7 +1050,7 @@
     "description": "Header text; single window"
   },
   "single_header": {
-    "message": "ダウンロードURL（リンク）およびその他のオプションを入力します",
+    "message": "ダウンロードURL(リンク)およびその他のオプションを入力します",
     "description": "Header text; single window"
   },
   "single_title": {
