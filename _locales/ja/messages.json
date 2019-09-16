@@ -292,11 +292,11 @@
     "description": "Error message; single window"
   },
   "error_noabsolutepath": {
-    "message": "サブフォルダからの相対パスを指定して下さい\\n(絶対パスはブラウザ側で対応しておりません)",
+    "message": "サブフォルダからの相対パスを指定して下さい\n(絶対パスはブラウザ側で対応しておりません)",
     "description": "Error Message; select/single window"
   },
   "error_nodotsinpath": {
-    "message": "フォルダ名の先頭に\".\"を使わないで下さい\\n(ブラウザ側で対応しておりません)",
+    "message": "フォルダ名の先頭に\".\"を使わないで下さい\n(ブラウザ側で対応しておりません)",
     "description": "Error Message; select/single window"
   },
   "error_noItemsSelected": {
@@ -486,7 +486,7 @@
     "description": "Action for moving a download up"
   },
   "nagging_message": {
-    "message": "これまでDownThemAllで$DOWNLOADS$ダウンロードを追加しました！ 通常のユーザーとして、さらなる開発を支援するために寄付を検討することができます。\\n皆様のご協力、心よりお待ち致しております。",
+    "message": "これまでDownThemAllで$DOWNLOADS$ダウンロードを追加しました！ 通常のユーザーとして、さらなる開発を支援するために寄付を検討することができます。\n皆様のご協力、心よりお待ち致しております。",
     "description": "Donation nagging message; displayed as a notification bar in manager",
     "placeholders": {
       "downloads": {
