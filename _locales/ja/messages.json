@@ -292,7 +292,7 @@
     "description": "Error message; single window"
   },
   "error_noabsolutepath": {
-    "message": "サブフォルダからの相対パスを指定して下さい\n(絶対パスはブラウザ非対応)",
+    "message": "サブフォルダからの相対パスを指定して下さい(絶対パスはブラウザ非対応)",
     "description": "Error Message; select/single window"
   },
   "error_nodotsinpath": {
@@ -428,7 +428,7 @@
     "description": "Menu text"
   },
   "manager_status_items": {
-    "message": "$TOTAL$ のダウンロードのうち $COMPLETE$ が完了 ($SHOWING$ が表示)、 $RUNNING$ が実行中",
+    "message": "$TOTAL$ のダウンロードのうち $COMPLETE$ が完了 ($SHOWING$ が表示)、$RUNNING$ が実行中",
     "description": "Status bar text; manager",
     "placeholders": {
       "complete": {
@@ -964,7 +964,7 @@
     "description": "Button text; pref/General"
   },
   "reset_layouts_done": {
-    "message": "以前に記憶したレイアウトのカスタマイズはすべてリセットされました！ ウィンドウ/タブの再読み込みが必要になる場合があります。",
+    "message": "以前に記憶したレイアウトのカスタマイズはすべてリセットされました！ウィンドウ/タブの再読み込みが必要になる場合があります。",
     "description": "Messagebox text; pref/General"
   },
   "resume_download": {
@@ -1282,4 +1282,3 @@
     "description": "Error message"
   }
 }
-
