@@ -4,11 +4,11 @@
 import { EventEmitter } from "../events";
 import { Notification } from "../notifications";
 import { DB } from "../db";
-import { QUEUED, CANCELED, RUNNING } from "./state";
+import { QUEUED, CANCELED, RUNNING, RETRYING } from "./state";
 // eslint-disable-next-line no-unused-vars
 import { Bus, Port } from "../bus";
 import { sort } from "../sorting";
-import { Prefs } from "../prefs";
+import { Prefs, PrefWatcher } from "../prefs";
 import { _ } from "../i18n";
 import { CoalescedUpdate, mapFilterInSitu, filterInSitu } from "../util";
 import { PromiseSerializer } from "../pserializer";
@@ -30,6 +30,9 @@ const setShelfEnabled = downloads.setShelfEnabled || function() {
   // ignored
 };
 
+const FINISH_NOTIFICATION = new PrefWatcher("finish-notification", true);
+const SOUNDS = new PrefWatcher("sounds", false);
+
 export class Manager extends EventEmitter {
   private items: Download[];
 
@@ -49,9 +52,13 @@ export class Manager extends EventEmitter {
 
   private readonly running: Set<Download>;
 
+  private readonly retrying: Set<Download>;
+
   private scheduler: Scheduler | null;
 
   private shouldReload: boolean;
+
+  private deadlineTimer: number;
 
   constructor() {
     super();
@@ -63,11 +70,13 @@ export class Manager extends EventEmitter {
       AUTOSAVE_TIMEOUT, this.save.bind(this));
     this.dirty = new CoalescedUpdate(
       DIRTY_TIMEOUT, this.processDirty.bind(this));
+    this.processDeadlines = this.processDeadlines.bind(this);
     this.sids = new Map();
     this.manIds = new Map();
     this.ports = new Set();
     this.scheduler = null;
     this.running = new Set();
+    this.retrying = new Set();
 
     this.startNext = PromiseSerializer.wrapNew(1, this, this.startNext);
 
@@ -188,14 +197,11 @@ export class Manager extends EventEmitter {
     this.notifiedFinished = false;
   }
 
-  async maybeRunFinishActions() {
+  maybeRunFinishActions() {
     if (this.running.size) {
       return;
     }
-    await this.maybeNotifyFinished();
-    if (this.running.size) {
-      return;
-    }
+    this.maybeNotifyFinished();
     if (this.shouldReload) {
       this.saveQueue.trigger();
       setTimeout(() => {
@@ -208,15 +214,18 @@ export class Manager extends EventEmitter {
     setShelfEnabled(true);
   }
 
-  async maybeNotifyFinished() {
-    if (!(await Prefs.get("finish-notification"))) {
+  maybeNotifyFinished() {
+    if (this.notifiedFinished || this.running.size || this.retrying.size) {
       return;
     }
-    if (this.notifiedFinished || this.running.size) {
-      return;
+    if (SOUNDS.value) {
+      const audio = new Audio(runtime.getURL("/style/done.opus"));
+      audio.addEventListener("canplaythrough", () => audio.play());
+    }
+    if (FINISH_NOTIFICATION.value) {
+      new Notification(null, _("queue-finished"));
     }
     this.notifiedFinished = true;
-    new Notification(null, _("queue-finished"));
   }
 
   addManId(id: number, download: Download) {
@@ -315,6 +324,10 @@ export class Manager extends EventEmitter {
     if (oldState === RUNNING) {
       this.running.delete(download);
     }
+    else if (oldState === RETRYING) {
+      this.retrying.delete(download);
+      this.findDeadline();
+    }
     if (newState === QUEUED) {
       this.resetScheduler();
       this.startNext().catch(console.error);
@@ -326,7 +339,53 @@ export class Manager extends EventEmitter {
       this.running.add(download);
     }
     else {
+      if (newState === RETRYING) {
+        this.addRetry(download);
+      }
       this.startNext().catch(console.error);
+    }
+  }
+
+  addRetry(download: Download) {
+    this.retrying.add(download);
+    this.findDeadline();
+  }
+
+  private findDeadline() {
+    let deadline = Array.from(this.retrying).
+      reduce<number>((deadline, item) => {
+        if (deadline) {
+          return item.deadline ? Math.min(deadline, item.deadline) : deadline;
+        }
+        return item.deadline;
+      }, 0);
+    if (deadline <= 0) {
+      return;
+    }
+    deadline -= Date.now();
+    if (deadline <= 0) {
+      return;
+    }
+
+    if (this.deadlineTimer) {
+      window.clearTimeout(this.deadlineTimer);
+    }
+    this.deadlineTimer = window.setTimeout(this.processDeadlines, deadline);
+  }
+
+  private processDeadlines() {
+    this.deadlineTimer = 0;
+    try {
+      const now = Date.now();
+      this.items.forEach(item => {
+        if (item.deadline && Math.abs(item.deadline - now) < 1000) {
+          this.retrying.delete(item);
+          item.resume(false);
+        }
+      });
+    }
+    finally {
+      this.findDeadline();
     }
   }
 

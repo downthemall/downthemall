@@ -8,9 +8,6 @@ P2
 
 Planned for later.
 
-* Soft errors and retry logic
-  * Big caveat: When the server still responds, like 50x errors which would be recoverable, we actually have no way of knowing it did in respond in such a way. See P4 - Handle Errors remarks.
-* Delete files (well, as far as the browser allows)
 * Inter-addon API (basic)
   * Add downloads
 * vtable perf: cache column widths
@@ -45,8 +42,6 @@ Stuff that probably cannot be implemented due to WeberEension limitations.
   * Firefox helpfully keeps different lists of downloads. One for newly added downloads, and other ones for "previous" downloads. Turns out the WebExtension API only ever queries the "new" list.
 * Segmented downloads
   * Cannot be done with WebExtensions - downloads API has no support and manually downloading, storing in temporary add-on storage and reassmbling the downloaded parts later is not only efficient but does not reliabliy work due to storage limitations.
-* Handle errors, 404 and such
-  * The Firefox download manager is too stupid and webRequest does not see Downloads, so cannot be done right now.
 * Conflicts: ask when a file exists
   * Not supported by Firefox
 * Speed limiter

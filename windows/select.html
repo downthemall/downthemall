@@ -39,7 +39,7 @@
         <th id="colTitle" data-i18n="title">Title</th>
         <th id="colDescription" data-i18n="description">Description</th>
         <th id="colMask" data-i18n="mask">Mask</th>
-        <!--<th id="colReferrer" data-i18n="referrer">Referrer</th>-->
+        <th id="colReferrer" data-i18n="referrer">Referrer</th>
       </tr>
     </table>
   </div>
@@ -59,6 +59,15 @@
       <input type="checkbox" id="fastOnceCheck">
       <span data-i18n="useonlyonce">Use only once</span>
     </label>
+
+    <h2 data-i18n="subfolder"></h2>
+    <input id="subfolder" data-i18n="placeholder=subfolder.placeholder">
+    <span></span>
+    <label>
+      <input type="checkbox" id="subfolderOnceCheck">
+      <span data-i18n="useonlyonce">Use only once</span>
+    </label>
+
     <h2 data-i18n="mask">Mask</h2>
     <input id="mask">
     <button id="maskButton" class="icon-tags"></button>
@@ -84,6 +93,7 @@
       <li id="ctx-toggle-selected" data-icon="icon-unchecked" data-i18n="toggle-selected-items">Toggle Check for Selected Items</li>
       <li>-</li>
       <li id="ctx-mask" data-icon="icon-tags" data-i18n="set-mask">Mask</li>
+      <li id="ctx-referrer" data-icon="icon-forward" data-i18n="set-referrer">Referrer</li>
       <li>-</li>
       <li id="ctx-select-all" data-key="ACCEL-KeyA" data-i18n="select-all">Select All</li>
       <li id="ctx-select-filtered" data-key="ACCEL-KeyF" data-i18n="select-checked">Select Checked</li>

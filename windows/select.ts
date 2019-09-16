@@ -7,7 +7,7 @@ import { ContextMenu } from "./contextmenu";
 import { iconForPath } from "../lib/windowutils";
 import { _, localize } from "../lib/i18n";
 import { Prefs } from "../lib/prefs";
-import { MASK, FASTFILTER } from "../lib/recentlist";
+import { MASK, FASTFILTER, SUBFOLDER } from "../lib/recentlist";
 import { WindowState } from "./windowstate";
 import { Dropdown } from "./dropdown";
 import { Keys } from "./keys";
@@ -24,6 +24,7 @@ import { BaseItem } from "../lib/item";
 import { ItemDelta } from "../lib/select";
 // eslint-disable-next-line no-unused-vars
 import { TableConfig } from "../uikit/lib/config";
+import { validateSubFolder as validateSubfolder } from "../lib/util";
 
 const PORT: RawPort = runtime.connect(null, { name: "select" });
 
@@ -42,6 +43,7 @@ const NUM_FILTER_CLASSES = 8;
 let Table: SelectionTable;
 let Mask: Dropdown;
 let FastFilter: Dropdown;
+let Subfolder: Dropdown;
 
 
 type DELTAS = {deltaLinks: ItemDelta[]; deltaMedia: ItemDelta[]};
@@ -51,7 +53,7 @@ interface BaseMatchedItem extends BaseItem {
   rowid: number;
 }
 
-function cleaErrors() {
+function clearErrors() {
   const not = $("#notification");
   not.textContent = "";
   not.style.display = "none";
@@ -117,7 +119,9 @@ class CheckClasser extends Map<string, string> {
     let result = super.get(key);
     if (typeof result !== "string") {
       result = this.gen.next().value;
-      super.set(key, result);
+      if (result) {
+        super.set(key, result);
+      }
     }
     return result;
   }
@@ -352,7 +356,7 @@ class SelectionTable extends VirtualTable {
       try {
         Keys.suppressed = true;
         const newmask = await ModalDialog.prompt(
-          "Renaming mask", "Set new renaming mask", oldmask);
+          _("set_mask"), _("set_mask_text"), oldmask);
         for (const r of this.selection) {
           this.items.at(r).mask = newmask;
           this.invalidateRow(r);
@@ -365,6 +369,57 @@ class SelectionTable extends VirtualTable {
         Keys.suppressed = false;
       }
     });
+
+    this.contextMenu.on("ctx-referrer", async() => {
+      if (this.selection.empty) {
+        return;
+      }
+      let oldref = "";
+      for (const r of this.selection) {
+        const m = this.items.at(r).usableReferrer;
+        if (oldref && m !== oldref) {
+          oldref = "";
+          break;
+        }
+        oldref = m || oldref;
+      }
+      try {
+        Keys.suppressed = true;
+        const newref = await ModalDialog.prompt(
+          _("set_referrer"), _("set_referrer_text"), oldref);
+        try {
+          let ref;
+          if (!newref) {
+            ref = {
+              referrer: undefined,
+              usableReferrer: undefined,
+            };
+          }
+          else {
+            const u = new URL(newref);
+            u.hash = "";
+            ref = {
+              referrer: u.toString(),
+              usableReferrer: decodeURIComponent(u.toString()),
+            };
+          }
+          for (const r of this.selection) {
+            Object.assign(this.items.at(r), ref);
+            this.invalidateRow(r);
+          }
+        }
+        catch {
+          // ignored
+        }
+      }
+      catch (ex) {
+        console.warn("mask dismissed", ex);
+      }
+      finally {
+        Keys.suppressed = false;
+      }
+    });
+
 
     this.contextMenu.on("dismissed", () => this.table.focus());
 
@@ -519,7 +574,7 @@ class SelectionTable extends VirtualTable {
     else {
       this.status.textContent = _("numitems.label", [selected]);
     }
-    cleaErrors();
+    clearErrors();
   }
 
   getRowClasses(rowid: number) {
@@ -527,7 +582,11 @@ class SelectionTable extends VirtualTable {
     if (!item || !matched(item) || !item.matched) {
       return null;
     }
-    return ["filtered", this.checkClasser.get(item.matched)];
+    const m = this.checkClasser.get(item.matched);
+    if (!m) {
+      return null;
+    }
+    return ["filtered", m];
   }
 
   getCellIcon(rowid: number, colid: number) {
@@ -616,6 +675,9 @@ async function download(paused = false) {
     if (!mask) {
       throw new Error("error.invalidMask");
     }
+    const subfolder = Subfolder.value;
+    validateSubfolder(subfolder);
+
     const items = Table.items.checkedIndexes;
     if (!items.length) {
       throw new Error("error.noItemsSelected");
@@ -649,6 +711,8 @@ async function download(paused = false) {
         maskOnce: $<HTMLInputElement>("#maskOnceCheck").checked,
         fast: FastFilter.value,
         fastOnce: $<HTMLInputElement>("#fastOnceCheck").checked,
+        subfolder,
+        subfolderOnce: $<HTMLInputElement>("#subfolderOnceCheck").checked,
       }
     });
   }
@@ -724,9 +788,9 @@ function cancel() {
 }
 
 async function init() {
-  await Promise.all([MASK.init(), FASTFILTER.init()]);
+  await Promise.all([MASK.init(), FASTFILTER.init(), SUBFOLDER.init()]);
   Mask = new Dropdown("#mask", MASK.values);
-  Mask.on("changed", cleaErrors);
+  Mask.on("changed", clearErrors);
   FastFilter = new Dropdown("#fast", FASTFILTER.values);
   FastFilter.on("changed", () => {
     PORT.postMessage({
@@ -734,6 +798,8 @@ async function init() {
       fastFilter: FastFilter.value
     });
   });
+  Subfolder = new Dropdown("#subfolder", SUBFOLDER.values);
+  Subfolder.on("changed", clearErrors);
 }
 
 const LOADED = new Promise(resolve => {

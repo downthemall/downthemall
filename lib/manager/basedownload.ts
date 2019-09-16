@@ -5,6 +5,8 @@
 import { parsePath, URLd } from "../util";
 import { QUEUED, RUNNING, PAUSED } from "./state";
 import Renamer from "./renamer";
+// eslint-disable-next-line no-unused-vars
+import { BaseItem } from "../item";
 
 const SAVEDPROPS = [
   "state",
@@ -14,6 +16,7 @@ const SAVEDPROPS = [
   "usableReferrer",
   "fileName",
   "mask",
+  "subfolder",
   "date",
   // batches
   "batch",
@@ -48,7 +51,9 @@ const DEFAULTS = {
   written: 0,
   manId: 0,
   mime: "",
-  prerolled: false
+  prerolled: false,
+  retries: 0,
+  deadline: 0
 };
 
 let sessionId = 0;
@@ -103,9 +108,13 @@ export class BaseDownload {
 
   public mask: string;
 
+  public subfolder: string;
+
   public prerolled: boolean;
 
-  constructor(options: any) {
+  public retries: number;
+
+  constructor(options: BaseItem) {
     Object.assign(this, DEFAULTS);
     this.assign(options);
     if (this.state === RUNNING) {
@@ -113,14 +122,16 @@ export class BaseDownload {
     }
     this.sessionId = ++sessionId;
     this.renamer = new Renamer(this);
+    this.retries = 0;
   }
 
-  assign(options: any) {
+  assign(options: BaseItem) {
     // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self: any = this;
+    const other: any = options;
     for (const prop of SAVEDPROPS) {
       if (prop in options) {
-        self[prop] = options[prop];
+        self[prop] = other[prop];
       }
     }
     this.uURL = new URL(this.url) as URLd;
@@ -182,6 +193,7 @@ export class BaseDownload {
     rv.currentName = this.browserName || rv.destName || rv.finalName;
     rv.error = this.error;
     rv.ext = this.renamer.p_ext;
+    rv.retries = this.retries;
     return rv;
   }
 }

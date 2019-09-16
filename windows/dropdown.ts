@@ -22,6 +22,9 @@ export class Dropdown extends EventEmitter {
 
     this.container = document.createElement("div");
     this.container.classList.add("dropdown");
+    if (input.id) {
+      this.container.id = `${input.id}-dropdown`;
+    }
 
     input = input.parentElement.replaceChild(this.container, input);
     this.input = input as HTMLInputElement;

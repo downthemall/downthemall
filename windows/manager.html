@@ -75,6 +75,7 @@
     <ul id="table-context" class="table-context">
       <li id="ctx-open-file" data-key="Enter" data-i18n="open-file" data-icon="icon-file">Open File</li>
       <li id="ctx-open-directory" data-key="ACCEL-Enter" data-i18n="open-directory" data-icon="icon-folder">Open Directory</li>
+      <li id="ctx-delete-files" data-key="ACCEL-Delete" data-i18n="deletefiles" data-icon="icon-delete"></li>
       <li>-</li>
       <li id="ctx-resume" data-key="ACCEL-KeyR" data-i18n="resume-download" data-icon="icon-go">Resume</li>
       <li id="ctx-pause" data-key="ACCEL-KeyP" data-i18n="pause-download" data-icon="icon-pause">Pause</li>
@@ -109,6 +110,15 @@
       <li id="ctx-select-all" data-key="ACCEL-KeyA" data-i18n="select-all">Select All</li>
       <li id="ctx-select-invert" data-key="ACCEL-KeyI" data-i18n="invert-selection">Invert Selection</li>
       <li>-</li>
+      <li id="ctx-import" data-icon="icon-import" data-i18n="import"></li>
+      <li id="ctx-export" data-icon="icon-download" data-i18n="export">
+        <ul class="table-context">
+          <li id="ctx-export-text" data-i18n="export-text"></li>
+          <li id="ctx-export-aria2" data-i18n="export-aria2"></li>
+          <li id="ctx-export-metalink" data-i18n="export-metalink"></li>
+        </ul>
+      </li>
+      <li>-</li>
       <li id="ctx-move-top" data-key="ALT-Home" data-i18n="move-top" data-icon="icon-top">Top</li>
       <li id="ctx-move-up" data-key="ALT-PageUp" data-i18n="move-up" data-icon="icon-up">Up</li>
       <li id="ctx-move-down" data-key="ALT-PageDown" data-i18n="move-down" data-icon="icon-down">down</li>
@@ -123,6 +133,12 @@
       <div><label><input type="checkbox" name="removal-remember" class="removal-remember"> <span data-i18n="remember"></span></label></div>
       <div><em data-i18n="change-later-reminder">You can later change it in the Preferences</em></div>
     </p>
+  </template>
+
+  <template id="deletefiles-template">
+    <h1 class="deletefiles-title" data-i18n="deletefiles_title"></h1>
+    <p class="deletefiles-text" data-i18n="deletefiles_text"></p>
+    <ul class="deletefiles-list"></ul>
   </template>
 
   <template id="menufilter-template">

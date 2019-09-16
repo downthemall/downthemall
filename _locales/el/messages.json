@@ -191,6 +191,22 @@
     "message": "Διαγραφή",
     "description": "button text"
   },
+  "deletefiles": {
+    "message": "Διαγραφή Αρχείων",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Διαγραφή",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Θέλετε σίγουρα να διαγράψετε τα ακόλουθα αρχεία;",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Διαγραφή Αρχείων",
+    "description": "messagebox title"
+  },
   "description": {
     "message": "Περιγραφή",
     "description": "Description (keep it short); e.g. the description column in select"
@@ -274,6 +290,14 @@
   "error_invalidURL": {
     "message": "Μη έγκυρο URL",
     "description": "Error message; single window"
+  },
+  "error_noabsolutepath": {
+    "message": "Οι πλήρεις διαδρομές υποφακέλων δεν υποστηρίζονται από τους φυλλομετρητές",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Οι τελείες (.) στους υποφακέλους δεν υποστηρίζονται από τους φυλλομετρητές",
+    "description": "Error Message; select/single window"
   },
   "error_noItemsSelected": {
     "message": "Δεν επιλέχθηκαν αντικείμενα",
@@ -529,16 +553,32 @@
     "message": "Προσθήκη νέων λήψεων σε παύση, αντί για άμεση εκκίνησή τους",
     "description": "Preferences/General"
   },
+  "pref_button_type": {
+    "message": "Κουμπί Λήψης Όλων",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "Επιλογή Λήψης Όλων",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Άνοιγμα Διαχειριστή",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Αναδυόμενο μενού",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "ΜονόΚλικ!",
+    "description": "label"
+  },
   "pref_concurrent_downloads": {
     "message": "Ταυτόχρονες λήψεις",
     "description": "Preferences/Network"
   },
   "pref_finish_notification": {
     "message": "Προβολή ειδοποίησης με την ολοκλήρωση της ουράς λήψεων",
-    "description": "Preferences/General"
-  },
-  "pref_global_turbo": {
-    "message": "Το κουμπί φυλλομετρητή πρέπει να είναι το ΜονόΚλικ!",
     "description": "Preferences/General"
   },
   "pref_hide_context": {
@@ -548,6 +588,10 @@
   "pref_manager": {
     "message": "Διαχειριστής",
     "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "Άνοιγμα διαχειριστή σε νέο αναδυόμενο παράθυρο",
+    "description": "checkbox text"
   },
   "pref_manager_tooltip": {
     "message": "Προβολή επεξηγήσεων στις καρτέλες Διαχειριστή",
@@ -573,9 +617,21 @@
     "message": "Απομάκρυνση αγνοημένων λήψεων μετά την επανεκκίνηση",
     "description": "Preferences/General"
   },
+  "pref_retries": {
+    "message": "Αριθμός επαναλήψεων λήψεων με προσωρινά σφάλματα",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Επανάληψη κάθε (σε λεπτά)",
+    "description": "pref text"
+  },
   "pref_show_urls": {
     "message": "Προβολή URLs αντί για Ονόματα",
     "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "Αναπαραγωγή ήχων",
+    "description": "checkbox text"
   },
   "pref_text_links": {
     "message": "Δοκιμή εύρεσης συνδέσμων στο κείμενο της ιστοσελίδας (αργό)",
@@ -895,6 +951,20 @@
     "message": "Συνέχιση",
     "description": "Action for resuming a download"
   },
+  "retrying": {
+    "message": "Επανάληψη",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Επανάληψη - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
   "running": {
     "message": "Σε λειτουργία",
     "description": "Status text"
@@ -942,6 +1012,18 @@
   "set_mask": {
     "message": "Ορισμός Μάσκας Μετονομασίας",
     "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Ορισμός μιας νέας μάσκας μετονομασίας",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Ορισμός Αναφορέα",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Ορισμός νέου αναφορέα",
+    "description": "dialog text"
   },
   "single_batchexamples": {
     "message": "Οι δέσμες υποστηρίζονται, π.χ.:",
@@ -1123,6 +1205,14 @@
     "message": "Καμία νέα Λήψη δεν θα εκκινηθεί",
     "description": "Status bar tooltip; manager network icon"
   },
+  "subfolder": {
+    "message": "Υποφάκελος:",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Τοποθέτηση αρχείων σε αυτό τον υποφάκελο μέσα στον φάκελο λήψεών σας",
+    "description": "placeholder text within an input box"
+  },
   "title": {
     "message": "Τίτλος",
     "description": "Column text; Title label (short)"
@@ -1166,5 +1256,9 @@
   "useonlyonce": {
     "message": "Χρήση μόνο μια φορά",
     "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Ακύρωση του χρήστη",
+    "description": "Error message"
   }
 }

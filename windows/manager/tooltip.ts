@@ -192,7 +192,7 @@ export class Tooltip {
     const hidden = this.speedbox.classList.contains("hidden");
 
     if (!running && !hidden) {
-      this.eta.style.fontWeight = "bold";
+      this.eta.classList.add("single");
       this.etalabel.classList.add("hidden");
       this.speedbox.classList.add("hidden");
       this.progressbar.classList.add("hidden");
@@ -202,7 +202,7 @@ export class Tooltip {
       return;
     }
     if (hidden) {
-      this.eta.style.fontWeight = "auto";
+      this.eta.classList.remove("single");
       this.etalabel.classList.remove("hidden");
       this.speedbox.classList.remove("hidden");
       this.progressbar.classList.remove("hidden");

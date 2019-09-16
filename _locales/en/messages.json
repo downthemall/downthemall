@@ -27,17 +27,89 @@
     "description": "Error message",
     "message": "Unauthorized"
   },
+  "USER_CANCELED": {
+    "description": "Error message",
+    "message": "User Canceled"
+  },
+  "add_download": {
+    "description": "Action for adding a download",
+    "message": "Add Download"
+  },
+  "add_new": {
+    "description": "Button text (adding filters, limits and such)",
+    "message": "Add New"
+  },
+  "add_paused_once": {
+    "description": "Checkbox label",
+    "message": "Only add paused this time"
+  },
+  "add_paused_question": {
+    "description": "Messagebox text",
+    "message": "Do you want to remember this decision and always add new downloads paused from now on?"
+  },
+  "add_paused_title": {
+    "description": "Title for the add-paused dialog",
+    "message": "Always add paused?"
+  },
   "addpaused": {
     "description": "Action: Add paused",
     "message": "Add paused"
+  },
+  "ask_again_later": {
+    "description": "Button text",
+    "message": "Ask me again later"
+  },
+  "batch_batch": {
+    "description": "Button text",
+    "message": "Batch Download"
+  },
+  "batch_desc": {
+    "description": "",
+    "message": "The current URL seems to contain instructions for a batch download."
+  },
+  "batch_items": {
+    "description": "Messagebox info text for batch confirmations",
+    "message": "Number of items:"
+  },
+  "batch_preview": {
+    "description": "Messagebox info text for batch confirmations",
+    "message": "Preview:"
+  },
+  "batch_question": {
+    "description": "Messagebox info text for batch confirmations",
+    "message": "Do you want to add this as a batch or as a single download?"
+  },
+  "batch_single": {
+    "description": "Button text for batch confirmation",
+    "message": "Single Download"
+  },
+  "batch_title": {
+    "description": "Messagebox title for batch confirmations",
+    "message": "Batch Download"
   },
   "cancel": {
     "description": "Button text: Cancel",
     "message": "Cancel"
   },
+  "cancel_download": {
+    "description": "Action to cancel downloads, e.g. from the context menu",
+    "message": "Cancel"
+  },
   "canceled": {
     "description": "Download status text",
     "message": "Canceled"
+  },
+  "cannot_be_empty": {
+    "description": "Error message when an input field is empty but has to have a value",
+    "message": "This field cannot be empty"
+  },
+  "change_later_reminder": {
+    "description": "Checkbox label text for decision confirmations",
+    "message": "You can later change this decision in the Preferences"
+  },
+  "check_selected_items": {
+    "description": "Menu text",
+    "message": "Check Selected Items"
   },
   "colConnections": {
     "description": "Table column in prefs/network",
@@ -74,276 +146,6 @@
   "colSpeed": {
     "description": "Table column in manager",
     "message": "Speed"
-  },
-  "delete": {
-    "description": "button text",
-    "message": "Delete"
-  },
-  "description": {
-    "description": "Description (keep it short); e.g. the description column in select",
-    "message": "Description"
-  },
-  "donate": {
-    "description": "Donate button",
-    "message": "Donate!"
-  },
-  "done": {
-    "description": "Status text",
-    "message": "Done"
-  },
-  "download": {
-    "description": "Download (noun); e.g. Download column in select",
-    "message": "Download"
-  },
-  "extensionDescription": {
-    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one",
-    "message": "The Mass Downloader for your browser"
-  },
-  "fastfiltering": {
-    "description": "Label for Fast Filtering input",
-    "message": "Fast Filtering"
-  },
-  "finishing": {
-    "description": "Status text",
-    "message": "Finishing"
-  },
-  "language": {
-    "description": "Lanuage Name in your language",
-    "message": "English (US)"
-  },
-  "language_code": {
-    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR",
-    "message": "en"
-  },
-  "links": {
-    "description": "Links tab label (short); select window",
-    "message": "Links"
-  },
-  "mask": {
-    "description": "Renaming mask (short); used in e.g. select",
-    "message": "Mask"
-  },
-  "media": {
-    "description": "Media label (short)",
-    "message": "Media"
-  },
-  "missing": {
-    "description": "Status text in manager",
-    "message": "Missing"
-  },
-  "ok": {
-    "description": "Button text; Used in message boxes",
-    "message": "OK"
-  },
-  "paused": {
-    "description": "Status text; manager",
-    "message": "Paused"
-  },
-  "queued": {
-    "description": "Status text",
-    "message": "Queued"
-  },
-  "referrer": {
-    "description": "Label for \"Referrer\"",
-    "message": "Referrer"
-  },
-  "remember": {
-    "description": "Checkbox text for confirmation, e.g. when removing a download in manager",
-    "message": "Remember this decision"
-  },
-  "rename": {
-    "description": "UI for renaming; currently unused",
-    "message": "Rename"
-  },
-  "renmask": {
-    "description": "Renaming mask (long)",
-    "message": "Renaming mask"
-  },
-  "reset": {
-    "description": "Button text; pref window",
-    "message": "Reset"
-  },
-  "running": {
-    "description": "Status text",
-    "message": "Running"
-  },
-  "save": {
-    "description": "Button text; e.g. prefs/Network",
-    "message": "Save"
-  },
-  "search": {
-    "description": "Placeholder text; manager status search field",
-    "message": "Search…"
-  },
-  "sizeB": {
-    "description": "Size formatting; bytes",
-    "message": "$S$B",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100b"
-      }
-    }
-  },
-  "sizeGB": {
-    "description": "Size formatting; giga bytes",
-    "message": "$S$GB",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.200GB"
-      }
-    }
-  },
-  "sizeKB": {
-    "description": "Size formatting; kilo bytes",
-    "message": "$S$KB",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.2KB"
-      }
-    }
-  },
-  "sizeMB": {
-    "description": "Size formatting; mega bytes",
-    "message": "$S$MB",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.22MB"
-      }
-    }
-  },
-  "sizePB": {
-    "description": "Size formatting; peta bytes (you never know)",
-    "message": "$S$PB",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.212PB"
-      }
-    }
-  },
-  "sizeTB": {
-    "description": "Size formatting; tera bytes (you never know)",
-    "message": "$S$TB",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.002TB"
-      }
-    }
-  },
-  "speedB": {
-    "description": "Speed formatting; bytes",
-    "message": "$SPEED$b/s",
-    "placeholders": {
-      "speed": {
-        "content": "$1",
-        "example": "100b/s"
-      }
-    }
-  },
-  "speedKB": {
-    "description": "Speed formatting; kilo bytes",
-    "message": "$SPEED$KB/s",
-    "placeholders": {
-      "speed": {
-        "content": "$1",
-        "example": "100.1KB/s"
-      }
-    }
-  },
-  "speedMB": {
-    "description": "Speed formatting; mega bytes",
-    "message": "$SPEED$MB/s",
-    "placeholders": {
-      "speed": {
-        "content": "$1",
-        "example": "100.20MB/s"
-      }
-    }
-  },
-  "title": {
-    "description": "Column text; Title label (short)",
-    "message": "Title"
-  },
-  "unlimited": {
-    "description": "Option text; Prefs/Network",
-    "message": "Unlimited"
-  },
-  "useonlyonce": {
-    "description": "Label for Use-Once checkboxes",
-    "message": "Use Once"
-  },
-  "add_download": {
-    "description": "Action for adding a download",
-    "message": "Add Download"
-  },
-  "add_new": {
-    "description": "Button text (adding filters, limits and such)",
-    "message": "Add New"
-  },
-  "add_paused_once": {
-    "description": "Checkbox label",
-    "message": "Only add paused this time"
-  },
-  "add_paused_question": {
-    "description": "Messagebox text",
-    "message": "Do you want to remember this decision and always add new downloads paused from now on?"
-  },
-  "add_paused_title": {
-    "description": "Title for the add-paused dialog",
-    "message": "Always add paused?"
-  },
-  "ask_again_later": {
-    "description": "Button text",
-    "message": "Ask me again later"
-  },
-  "batch_batch": {
-    "description": "Button text",
-    "message": "Batch Download"
-  },
-  "batch_desc": {
-    "description": "",
-    "message": "The current URL seems to contain instructions for a batch download."
-  },
-  "batch_items": {
-    "description": "Messagebox info text for batch confirmations",
-    "message": "Number of items:"
-  },
-  "batch_preview": {
-    "description": "Messagebox info text for batch confirmations",
-    "message": "Preview:"
-  },
-  "batch_question": {
-    "description": "Messagebox info text for batch confirmations",
-    "message": "Do you want to add this as a batch or as a single download?"
-  },
-  "batch_single": {
-    "description": "Button text for batch confirmation",
-    "message": "Single Download"
-  },
-  "batch_title": {
-    "description": "Messagebox title for batch confirmations",
-    "message": "Batch Download"
-  },
-  "cancel_download": {
-    "description": "Action to cancel downloads, e.g. from the context menu",
-    "message": "Cancel"
-  },
-  "cannot_be_empty": {
-    "description": "Error message when an input field is empty but has to have a value",
-    "message": "This field cannot be empty"
-  },
-  "change_later_reminder": {
-    "description": "Checkbox label text for decision confirmations",
-    "message": "You can later change this decision in the Preferences"
-  },
-  "check_selected_items": {
-    "description": "Menu text",
-    "message": "Check Selected Items"
   },
   "conflict_overwrite": {
     "description": "Option text; prefs/general",
@@ -405,25 +207,57 @@
     "description": "Filter label for the Videos filter",
     "message": "Videos (mp4, webm, mkv, …)"
   },
+  "delete": {
+    "description": "button text",
+    "message": "Delete"
+  },
+  "deletefiles": {
+    "description": "menu action",
+    "message": "Delete Files"
+  },
+  "deletefiles_button": {
+    "description": "button text",
+    "message": "Delete"
+  },
+  "deletefiles_text": {
+    "description": "messagebox text",
+    "message": "Are you sure you want to delete the following files?"
+  },
+  "deletefiles_title": {
+    "description": "messagebox title",
+    "message": "Delete Files"
+  },
+  "description": {
+    "description": "Description (keep it short); e.g. the description column in select",
+    "message": "Description"
+  },
   "disable_other_filters": {
     "description": "Checkbox label. Keep it short",
     "message": "Disable others"
+  },
+  "donate": {
+    "description": "Donate button",
+    "message": "Donate!"
+  },
+  "done": {
+    "description": "Status text",
+    "message": "Done"
+  },
+  "download": {
+    "description": "Download (noun); e.g. Download column in select",
+    "message": "Download"
   },
   "download_verb": {
     "description": "Download (verb/action); e.g. in single and select buttons",
     "message": "Download"
   },
-  "dta_regular_all": {
-    "description": "Menu text",
-    "message": "DownThemAll! - All Tabs"
-  },
-  "dta_turbo_all": {
-    "description": "Menu text",
-    "message": "OneClick! - All Tabs"
-  },
   "dta_regular": {
     "description": "Regular dta action; Menu text",
     "message": "DownThemAll!"
+  },
+  "dta_regular_all": {
+    "description": "Menu text",
+    "message": "DownThemAll! - All Tabs"
   },
   "dta_regular_image": {
     "description": "Menu text",
@@ -444,6 +278,10 @@
   "dta_turbo": {
     "description": "OneClick! action; Menu text",
     "message": "OneClick!"
+  },
+  "dta_turbo_all": {
+    "description": "Menu text",
+    "message": "OneClick! - All Tabs"
   },
   "dta_turbo_image": {
     "description": "Menu text",
@@ -477,9 +315,41 @@
     "description": "Error Message; select window",
     "message": "No items selected"
   },
+  "error_noabsolutepath": {
+    "description": "Error Message; select/single window",
+    "message": "Absolute paths for subfolders are not supported by browsers"
+  },
+  "error_nodotsinpath": {
+    "description": "Error Message; select/single window",
+    "message": "Dots (.) in subfolders are not supported by browsers"
+  },
+  "export": {
+    "description": "menu text",
+    "message": "Export To File"
+  },
+  "export_aria2": {
+    "description": "menu text",
+    "message": "Export As aria2 List"
+  },
+  "export_metalink": {
+    "description": "menu text",
+    "message": "Export As Metalink"
+  },
+  "export_text": {
+    "description": "menu text",
+    "message": "Export As Text"
+  },
+  "extensionDescription": {
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one",
+    "message": "The Mass Downloader for your browser"
+  },
   "fastfilter_placeholder": {
     "description": "Placeholder for fastfilter inputs",
     "message": "Wildcard expression or regular expression"
+  },
+  "fastfiltering": {
+    "description": "Label for Fast Filtering input",
+    "message": "Fast Filtering"
   },
   "filter_at_least_one": {
     "description": "Error message when no filter types are selected for a filter in the preferences UI",
@@ -509,9 +379,17 @@
     "description": "Message box label",
     "message": "Filter-Types"
   },
+  "finishing": {
+    "description": "Status text",
+    "message": "Finishing"
+  },
   "force_start": {
     "description": "Menu text",
     "message": "Force Start"
+  },
+  "import": {
+    "description": "menu text",
+    "message": "Import From File"
   },
   "information_title": {
     "description": "Used in message boxes",
@@ -553,9 +431,25 @@
     "description": "Short for PageUp-key",
     "message": "PageUp"
   },
+  "language": {
+    "description": "Lanuage Name in your language",
+    "message": "English (US)"
+  },
+  "language_code": {
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR",
+    "message": "en"
+  },
   "limited_to": {
     "description": "Label text; used in prefs/network",
     "message": "Limited to"
+  },
+  "links": {
+    "description": "Links tab label (short); select window",
+    "message": "Links"
+  },
+  "manager_short": {
+    "description": "Menu text",
+    "message": "Manager"
   },
   "manager_status_items": {
     "description": "Status bar text; manager",
@@ -579,17 +473,25 @@
       }
     }
   },
-  "manager_short": {
-    "description": "Menu text",
-    "message": "Manager"
-  },
   "manager_title": {
     "description": "Window/tab title",
     "message": "DownThemAll! Manager"
   },
+  "mask": {
+    "description": "Renaming mask (short); used in e.g. select",
+    "message": "Mask"
+  },
   "mask_default": {
     "description": "Status text; Used in the mask column, select window",
     "message": "Default Mask"
+  },
+  "media": {
+    "description": "Media label (short)",
+    "message": "Media"
+  },
+  "missing": {
+    "description": "Status text in manager",
+    "message": "Missing"
   },
   "move_bottom": {
     "description": "Action for moving a download to the bottom",
@@ -639,6 +541,10 @@
       }
     }
   },
+  "ok": {
+    "description": "Button text; Used in message boxes",
+    "message": "OK"
+  },
   "open_directory": {
     "description": "Menu text; manager context",
     "message": "Open Directory"
@@ -667,9 +573,33 @@
     "description": "Action for pausing a download",
     "message": "Pause"
   },
+  "paused": {
+    "description": "Status text; manager",
+    "message": "Paused"
+  },
   "pref_add_paused": {
     "description": "Preferences/General",
     "message": "Add new downloads paused, instead of starting them immediately"
+  },
+  "pref_button_type": {
+    "description": "label",
+    "message": "DownThemAll! button:"
+  },
+  "pref_button_type_dta": {
+    "description": "label",
+    "message": "DownThemAll! selection"
+  },
+  "pref_button_type_manager": {
+    "description": "label",
+    "message": "Open Manager"
+  },
+  "pref_button_type_popup": {
+    "description": "label",
+    "message": "Popup menu"
+  },
+  "pref_button_type_turbo": {
+    "description": "label",
+    "message": "OneClick!"
   },
   "pref_concurrent_downloads": {
     "description": "Preferences/Network",
@@ -679,17 +609,25 @@
     "description": "Preferences/General",
     "message": "Show a notification when the queue finishes downloading"
   },
-  "pref_global_turbo": {
-    "description": "Preferences/General",
-    "message": "Browser button should be OneClick!"
-  },
   "pref_hide_context": {
     "description": "Preferences/General",
     "message": "Do not show general context menu items"
   },
+  "pref_manager": {
+    "description": "Preferences/General; group text",
+    "message": "Manager"
+  },
+  "pref_manager_in_popup": {
+    "description": "checkbox text",
+    "message": "Open manager in a new popup window"
+  },
   "pref_manager_tooltip": {
     "description": "Preferences/General",
     "message": "Show tooltips in Manager tabs"
+  },
+  "pref_netglobal": {
+    "description": "Preferences/General; group text",
+    "message": "Global Network Limits"
   },
   "pref_open_manager_on_queue": {
     "description": "Preferences/General",
@@ -699,29 +637,33 @@
     "description": "Preferences/General",
     "message": "Show a notification when queuing new downloads"
   },
+  "pref_queueing": {
+    "description": "Preferences/General; group text",
+    "message": "Queuing Downloads"
+  },
   "pref_remove_missing_on_init": {
     "description": "Preferences/General",
     "message": "Remove missing downloads after a restart"
+  },
+  "pref_retries": {
+    "description": "pref text",
+    "message": "Number of retries of downloads on temporary errors"
+  },
+  "pref_retry_time": {
+    "description": "pref text",
+    "message": "Retry every (in minutes)"
   },
   "pref_show_urls": {
     "description": "Preferences/General",
     "message": "Show URLs instead of Names"
   },
+  "pref_sounds": {
+    "description": "checkbox text",
+    "message": "Play sounds"
+  },
   "pref_text_links": {
     "description": "Preferences/General",
     "message": "Try to find links in the website text (slower)"
-  },
-  "pref_manager": {
-    "description": "Preferences/General; group text",
-    "message": "Manager"
-  },
-  "pref_netglobal": {
-    "description": "Preferences/General; group text",
-    "message": "Global Network Limits"
-  },
-  "pref_queueing": {
-    "description": "Preferences/General; group text",
-    "message": "Queuing Downloads"
   },
   "pref_ui": {
     "description": "Preferences/General; group text",
@@ -743,6 +685,10 @@
     "description": "Notification text",
     "message": "The download queue has finished"
   },
+  "queued": {
+    "description": "Status text",
+    "message": "Queued"
+  },
   "queued_download": {
     "description": "Notification text; single download",
     "message": "Queued 1 download!"
@@ -756,6 +702,14 @@
         "example": "100"
       }
     }
+  },
+  "referrer": {
+    "description": "Label for \"Referrer\"",
+    "message": "Referrer"
+  },
+  "remember": {
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager",
+    "message": "Remember this decision"
   },
   "remove_all_complete_downloads": {
     "description": "Menu text",
@@ -889,6 +843,10 @@
     "description": "Menu text",
     "message": "Remove Selected"
   },
+  "rename": {
+    "description": "UI for renaming; currently unused",
+    "message": "Rename"
+  },
   "renamer_batch": {
     "description": "Mask text; see mask button",
     "message": "Batch Number"
@@ -1005,6 +963,14 @@
     "description": "Mask text; see mask button",
     "message": "Date Added - Year"
   },
+  "renmask": {
+    "description": "Renaming mask (long)",
+    "message": "Renaming mask"
+  },
+  "reset": {
+    "description": "Button text; pref window",
+    "message": "Reset"
+  },
   "reset_confirmations": {
     "description": "Button text; pref/General",
     "message": "Reset remembered confirmations"
@@ -1024,6 +990,32 @@
   "resume_download": {
     "description": "Action for resuming a download",
     "message": "Resume"
+  },
+  "retrying": {
+    "description": "Status text",
+    "message": "Retrying"
+  },
+  "retrying_error": {
+    "description": "status text",
+    "message": "Retrying - $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
+  "running": {
+    "description": "Status text",
+    "message": "Running"
+  },
+  "save": {
+    "description": "Button text; e.g. prefs/Network",
+    "message": "Save"
+  },
+  "search": {
+    "description": "Placeholder text; manager status search field",
+    "message": "Search…"
   },
   "select_all": {
     "description": "Menu text; e.g. select context",
@@ -1045,6 +1037,18 @@
     "description": "Menu text; select window",
     "message": "Set Renaming Mask"
   },
+  "set_mask_text": {
+    "description": "dialog text",
+    "message": "Set a new renaming mask"
+  },
+  "set_referrer": {
+    "description": "menu text",
+    "message": "Set Referrer"
+  },
+  "set_referrer_text": {
+    "description": "dialog text",
+    "message": "Set a new referrer"
+  },
   "single_batchexamples": {
     "description": "Header text; single window",
     "message": "Batches are supported, e.g.:"
@@ -1056,6 +1060,66 @@
   "single_title": {
     "description": "Title of single window",
     "message": "DownThemAll! - Add a link"
+  },
+  "sizeB": {
+    "description": "Size formatting; bytes",
+    "message": "$S$B",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "description": "Size formatting; giga bytes",
+    "message": "$S$GB",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "description": "Size formatting; kilo bytes",
+    "message": "$S$KB",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "description": "Size formatting; mega bytes",
+    "message": "$S$MB",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "description": "Size formatting; peta bytes (you never know)",
+    "message": "$S$PB",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizeTB": {
+    "description": "Size formatting; tera bytes (you never know)",
+    "message": "$S$TB",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
   },
   "size_progress": {
     "description": "Status text; manager size column",
@@ -1127,6 +1191,36 @@
       }
     }
   },
+  "speedB": {
+    "description": "Speed formatting; bytes",
+    "message": "$SPEED$b/s",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "description": "Speed formatting; kilo bytes",
+    "message": "$SPEED$KB/s",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "description": "Speed formatting; mega bytes",
+    "message": "$SPEED$MB/s",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
   "statusNetwork_active_title": {
     "description": "Status bar tooltip; manager network icon",
     "message": "New Downloads will be started"
@@ -1134,6 +1228,18 @@
   "statusNetwork_inactive_title": {
     "description": "Status bar tooltip; manager network icon",
     "message": "No new Downloads will be started"
+  },
+  "subfolder": {
+    "description": "label text",
+    "message": "Subfolder:"
+  },
+  "subfolder_placeholder": {
+    "description": "placeholder text within an input box",
+    "message": "Place files in this subfolder within your downloads directory"
+  },
+  "title": {
+    "description": "Column text; Title label (short)",
+    "message": "Title"
   },
   "toggle_selected_items": {
     "description": "Menu text; select",
@@ -1166,5 +1272,13 @@
   "uncheck_selected_items": {
     "description": "Menu text; select",
     "message": "Uncheck Selected Items"
+  },
+  "unlimited": {
+    "description": "Option text; Prefs/Network",
+    "message": "Unlimited"
+  },
+  "useonlyonce": {
+    "description": "Label for Use-Once checkboxes",
+    "message": "Use Once"
   }
 }

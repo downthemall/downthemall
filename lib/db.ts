@@ -2,6 +2,9 @@
 
 // eslint-disable-next-line no-unused-vars
 import { BaseItem } from "./item";
+// eslint-disable-next-line no-unused-vars
+import { Download } from "./manager/download";
+import { RUNNING, QUEUED, RETRYING } from "./manager/state";
 
 // License: MIT
 
@@ -69,7 +72,7 @@ export const DB = new class DB {
     return await new Promise(this.getAllInternal);
   }
 
-  saveItemsInternal(items: any[], resolve: Function, reject: Function) {
+  saveItemsInternal(items: Download[], resolve: Function, reject: Function) {
     if (!items || !items.length || !this.db) {
       resolve();
       return;
@@ -83,9 +86,13 @@ export const DB = new class DB {
         if (item.private) {
           continue;
         }
-        const req = store.put(item.toJSON());
+        const json = item.toJSON();
+        if (item.state === RUNNING || item.state === RETRYING) {
+          json.state = QUEUED;
+        }
+        const req = store.put(json);
         if (!("dbId" in item) || item.dbId < 0) {
-          req.onsuccess = () => item.dbId = req.result;
+          req.onsuccess = () => item.dbId = req.result as number;
         }
       }
     }
@@ -94,7 +101,7 @@ export const DB = new class DB {
     }
   }
 
-  async saveItems(items: any[]) {
+  async saveItems(items: Download[]) {
     await this.init();
     return await new Promise(this.saveItemsInternal.bind(this, items));
   }

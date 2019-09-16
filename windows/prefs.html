@@ -43,8 +43,17 @@
   <article id="tab-general" class="tab">
     <fieldset>
       <legend data-i18n="pref.ui">UI</legend>
-      <label><input type="checkbox" id="pref-global-turbo"> <span data-i18n="pref-global-turbo">Global turbo</span></label>
+      <div id="pref-button-type">
+        <label data-i18n="pref-button-type"></label>
+        <label><input type="radio" name="pref-button-type" value="popup"> <span data-i18n="pref-button-type-popup"></span></label>
+        <label><input type="radio" name="pref-button-type" value="dta"> <span data-i18n="pref-button-type-dta"></span></label>
+        <label><input type="radio" name="pref-button-type" value="turbo"> <span data-i18n="pref-button-type-turbo"></span></label>
+        <label><input type="radio" name="pref-button-type" value="manager"> <span data-i18n="pref-button-type-manager"></span></label>
+      </div>
+      <hr>
+      <label><input type="checkbox" id="pref-manager-in-popup"> <span data-i18n="pref-manager-in-popup"></span></label>
       <label><input type="checkbox" id="pref-finish-notification"> <span data-i18n="pref-finish-notification"></span></label>
+      <label><input type="checkbox" id="pref-sounds"> <span data-i18n="pref-sounds"></span></label>
       <label><input type="checkbox" id="pref-hide-context"> <span data-i18n="pref-hide-context"></span></label>
       <div style="margin-top: 1em;">
         <button id="reset-confirmations" data-i18n="reset-confirmations"></button>
@@ -114,9 +123,14 @@
   </article>
 
   <article id="tab-network" class="tab">
-    <fieldset>
+    <fieldset id="network-general">
       <legend data-i18n="pref.netglobal"></legend>
-      <label><span data-i18n="pref-concurrent-downloads">Concurrent downloads</span> <input id="pref-concurrent-downloads" type="number" min="1" max="10"></label>
+      <label data-i18n="pref-concurrent-downloads">Concurrent downloads</label>
+      <input id="pref-concurrent-downloads" type="number" min="1" max="10">
+      <label data-i18n="pref-retries"></label>
+      <input id="pref-retries" type="number" min="0" max="100">
+      <label data-i18n="pref-retry-time"></label>
+      <input id="pref-retry-time" type="number" min="1" max="600">
     </fieldset>
     <table id="limits" data-singleselect="true">
       <tr>

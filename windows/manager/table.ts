@@ -26,7 +26,7 @@ import {
   MenuFilter
 } from "./itemfilters";
 import { FilteredCollection } from "./itemfilters";
-import RemovalModalDialog from "./removaldlg";
+import { RemovalModalDialog, DeleteFilesDialog } from "./removaldlg";
 import { Stats } from "./stats";
 import PORT from "./port";
 import { DownloadState, StateTexts, StateClasses, StateIcons } from "./state";
@@ -38,6 +38,10 @@ import { $ } from "../winutil";
 // eslint-disable-next-line no-unused-vars
 import { TableConfig } from "../../uikit/lib/config";
 import { IconCache } from "../../lib/iconcache";
+import * as imex from "../../lib/imex";
+// eslint-disable-next-line no-unused-vars
+import { BaseItem } from "../../lib/item";
+import { API } from "../../lib/api";
 
 const TREE_CONFIG_VERSION = 2;
 const RUNNING_TIMEOUT = 1000;
@@ -146,6 +150,8 @@ export class DownloadItem extends EventEmitter {
 
   public opening: boolean;
 
+  public retries: number;
+
   constructor(owner: DownloadTable, raw: any, stats?: Stats) {
     super();
     Object.assign(this, raw);
@@ -246,6 +252,12 @@ export class DownloadItem extends EventEmitter {
   get fmtETA() {
     if (this.state === DownloadState.RUNNING) {
       return this.eta;
+    }
+    if (this.state === DownloadState.RETRYING) {
+      if (this.error) {
+        return _("retrying_error", _(this.error) || this.error);
+      }
+      return _("retrying");
     }
     if (this.error) {
       return _(this.error) || this.error;
@@ -404,6 +416,8 @@ export class DownloadTable extends VirtualTable {
 
   private readonly openDirectoryAction: Broadcaster;
 
+  private readonly deleteFilesAction: Broadcaster;
+
   private readonly moveTopAction: Broadcaster;
 
   private readonly moveUpAction: Broadcaster;
@@ -546,6 +560,12 @@ export class DownloadTable extends VirtualTable {
     ctx.on("ctx-remove-paused", () => this.removePausedDownloads());
     ctx.on("ctx-remove-batch", () => this.removeBatchDownloads());
 
+    ctx.on("ctx-import", () => this.importDownloads());
+    ctx.on("ctx-export-text", () => this.exportDownloads(imex.textExporter));
+    ctx.on("ctx-export-aria2", () => this.exportDownloads(imex.aria2Exporter));
+    ctx.on("ctx-export-metalink",
+      () => this.exportDownloads(imex.metalinkExporter));
+
     ctx.on("dismissed", () => this.table.focus());
 
     this.on("contextmenu", (tree, event) => {
@@ -579,6 +599,9 @@ export class DownloadTable extends VirtualTable {
     this.openDirectoryAction = new Broadcaster("ctx-open-directory");
     this.openDirectoryAction.onaction = this.openDirectory.bind(this);
 
+    this.deleteFilesAction = new Broadcaster("ctx-delete-files");
+    this.deleteFilesAction.onaction = this.deleteFiles.bind(this);
+
     const moveAction = (method: string) => {
       if (this.selection.empty) {
         return;
@@ -610,6 +633,7 @@ export class DownloadTable extends VirtualTable {
       this.moveBottomAction,
       this.openFileAction,
       this.openDirectoryAction,
+      this.deleteFilesAction,
     ]);
 
     this.on(
@@ -782,6 +806,10 @@ export class DownloadTable extends VirtualTable {
       this.cancelAction.disabled = true;
     }
 
+    if (!(states & DownloadState.DONE)) {
+      this.deleteFilesAction.disabled = true;
+    }
+
     const item = this.focusRow >= 0 ?
       this.downloads.filtered[this.focusRow] :
       null;
@@ -858,6 +886,33 @@ export class DownloadTable extends VirtualTable {
       console.error(ex, ex.toString(), ex);
       PORT.post("missing", {sid: item.sessionId});
     }
+  }
+
+  async deleteFiles() {
+    const items = [];
+    for (const rowid of this.selection) {
+      const item = this.downloads.filtered[rowid];
+      if (item.state === DownloadState.DONE && item.manId) {
+        items.push(item);
+      }
+    }
+    if (!items.length) {
+      return;
+    }
+    const sids = items.map(i => i.sessionId);
+    const paths = items.map(i => i.destFull);
+    await new DeleteFilesDialog(paths).show();
+    await Promise.all(items.map(async item => {
+      try {
+        if (item.manId && item.state === DownloadState.DONE) {
+          await downloads.removeFile(item.manId);
+        }
+      }
+      catch {
+        // ignored
+      }
+    }));
+    this.removeDownloadsInternal(sids);
   }
 
   removeDownloadsInternal(sids?: number[]) {
@@ -1130,6 +1185,49 @@ export class DownloadTable extends VirtualTable {
 
   selectToggle() {
     this.selection.toggle(0, this.rowCount - 1);
+  }
+
+  importDownloads() {
+    const picker = document.createElement("input");
+    picker.setAttribute("type", "file");
+    picker.setAttribute("accept", "text/*,.txt,.lst,.metalink,.meta4");
+    picker.onchange = () => {
+      if (!picker.files || !picker.files.length) {
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (!reader.result) {
+          return;
+        }
+        const items = imex.importText(reader.result as string);
+        if (!items || !items.length) {
+          return;
+        }
+        API.regular(items, []);
+      };
+      reader.readAsText(picker.files[0], "utf-8");
+    };
+    picker.click();
+  }
+
+  exportDownloads(exporter: imex.Exporter) {
+    const items = this.getSelectedItems();
+    if (!items.length) {
+      return;
+    }
+    const text = exporter.getText(items as unknown as BaseItem[]);
+    const enc = new TextEncoder();
+    const data = enc.encode(text);
+    const url = URL.createObjectURL(new Blob([data], {type: "text/plain"}));
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", exporter.fileName);
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   }
 
   getRowClasses(rowid: number) {

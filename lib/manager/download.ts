@@ -3,7 +3,7 @@
 
 // eslint-disable-next-line no-unused-vars
 import { CHROME, downloads, DownloadOptions } from "../browser";
-import { Prefs } from "../prefs";
+import { Prefs, PrefWatcher } from "../prefs";
 import { PromiseSerializer } from "../pserializer";
 import { filterInSitu, parsePath } from "../util";
 import { BaseDownload } from "./basedownload";
@@ -19,9 +19,26 @@ import {
   PAUSABLE,
   PAUSED,
   QUEUED,
-  RUNNING
+  RUNNING,
+  RETRYING
 } from "./state";
 import { Preroller } from "./preroller";
+
+function isRecoverable(error: string) {
+  switch (error) {
+  case "CRASH":
+    return true;
+
+  case "SERVER_FAILED":
+    return true;
+
+  default:
+    return error.startsWith("NETWORK_");
+  }
+}
+
+const RETRIES = new PrefWatcher("retries", 5);
+const RETRY_TIME = new PrefWatcher("retry-time", 5);
 
 export class Download extends BaseDownload {
   public manager: Manager;
@@ -33,6 +50,10 @@ export class Download extends BaseDownload {
   public position: number;
 
   public error: string;
+
+  public dbId: number;
+
+  public deadline: number;
 
   constructor(manager: Manager, options: any) {
     super(options);
@@ -86,6 +107,7 @@ export class Download extends BaseDownload {
         return;
       }
       catch (ex) {
+        console.error("cannot resume", ex);
         this.manager.removeManId(this.manId);
         this.removeFromBrowser();
       }
@@ -182,8 +204,7 @@ export class Download extends BaseDownload {
         this.serverName = res.name;
       }
       if (res.error) {
-        this.cancel();
-        this.error = res.error;
+        this.cancelAccordingToError(res.error);
       }
     }
     catch (ex) {
@@ -209,20 +230,32 @@ export class Download extends BaseDownload {
     }
   }
 
-  async pause() {
+  async pause(retry?: boolean) {
     if (!(PAUSABLE & this.state)) {
       return;
     }
+
+    if (!retry) {
+      this.retries = 0;
+      this.deadline = 0;
+    }
+    else {
+      // eslint-disable-next-line no-magic-numbers
+      this.deadline = Date.now() + RETRY_TIME.value * 60 * 1000;
+    }
+
     if (this.state === RUNNING && this.manId) {
       try {
         await downloads.pause(this.manId);
       }
       catch (ex) {
         console.error("pause", ex.toString(), ex);
+        this.cancel();
         return;
       }
     }
-    this.changeState(PAUSED);
+
+    this.changeState(retry ? RETRYING : PAUSED);
   }
 
   reset() {
@@ -230,6 +263,8 @@ export class Download extends BaseDownload {
     this.manId = 0;
     this.written = this.totalSize = 0;
     this.mime = this.serverName = this.browserName = "";
+    this.retries = 0;
+    this.deadline = 0;
   }
 
   async removeFromBrowser() {
@@ -260,6 +295,17 @@ export class Download extends BaseDownload {
     }
     this.reset();
     this.changeState(CANCELED);
+  }
+
+  async cancelAccordingToError(error: string) {
+    if (!isRecoverable(error) || ++this.retries > RETRIES.value) {
+      this.cancel();
+      this.error = error;
+      return;
+    }
+
+    await this.pause(true);
+    this.error = error;
   }
 
   setMissing() {
@@ -318,8 +364,7 @@ export class Download extends BaseDownload {
           this.changeState(PAUSED);
         }
         else if (error) {
-          this.cancel();
-          this.error = error;
+          this.cancelAccordingToError(error);
         }
         else {
           this.changeState(RUNNING);
@@ -329,6 +374,9 @@ export class Download extends BaseDownload {
       case "interrupted":
         if (state.paused) {
           this.changeState(PAUSED);
+        }
+        else if (error) {
+          this.cancelAccordingToError(error);
         }
         else {
           this.cancel();

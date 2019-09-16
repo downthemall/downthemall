@@ -63,6 +63,7 @@ p.example {
   align-items: center;
 }
 
+#options > #subfolderOptions,
 #options > #maskOptions {
   display: grid;
   grid-template-columns: 2fr auto auto;

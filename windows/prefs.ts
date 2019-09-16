@@ -554,9 +554,10 @@ addEventListener("DOMContentLoaded", async () => {
   await localize(document.documentElement);
 
   // General
-  new BoolPref("pref-global-turbo", "global-turbo");
+  new BoolPref("pref-manager-in-popup", "manager-in-popup");
   new BoolPref("pref-queue-notification", "queue-notification");
   new BoolPref("pref-finish-notification", "finish-notification");
+  new BoolPref("pref-sounds", "sounds");
   new BoolPref("pref-hide-context", "hide-context");
   new BoolPref("pref-tooltip", "tooltip");
   new BoolPref("pref-open-manager-on-queue", "open-manager-on-queue");
@@ -564,6 +565,7 @@ addEventListener("DOMContentLoaded", async () => {
   new BoolPref("pref-add-paused", "add-paused");
   new BoolPref("pref-show-urls", "show-urls");
   new BoolPref("pref-remove-missing-on-init", "remove-missing-on-init");
+  new OptionPref("pref-button-type", "button-type");
   new OptionPref("pref-conflict-action", "conflict-action");
 
   $("#reset-confirmations").addEventListener("click", async () => {
@@ -621,6 +623,8 @@ addEventListener("DOMContentLoaded", async () => {
 
   // Network
   new IntPref("pref-concurrent-downloads", "concurrent");
+  new IntPref("pref-retries", "retries");
+  new IntPref("pref-retry-time", "retry-time");
 
   visible("#limits").then(() => new LimitsUI());
 

@@ -15,6 +15,7 @@ export interface BaseItem {
   batch?: number;
   idx: number;
   mask?: string;
+  subfolder?: string;
   startDate?: number;
   private?: boolean;
   postData?: string;
@@ -27,6 +28,7 @@ const OPTIONPROPS = Object.freeze([
   "fileName",
   "batch", "idx",
   "mask",
+  "subfolder",
   "startDate",
   "private",
   "postData",

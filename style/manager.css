@@ -202,6 +202,23 @@ body > * {
   );
 }
 
+.retrying .virtualtable-column-2 .virtualtable-icon {
+  color: var(--retry-color);
+}
+.retrying .virtualtable-column-2 .virtualtable-progress-bar {
+  background: var(--retry-color);
+}
+.retrying .virtualtable-column-2 .virtualtable-progress-undetermined {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--retry-color),
+    var(--retry-color) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+
 .missing .virtualtable-column-2 .virtualtable-icon,
 .canceled .virtualtable-column-2 .virtualtable-icon {
   color: var(--error-color);
@@ -511,4 +528,24 @@ body > * {
   height: 100%;
   width: 100%;
   background: var(--done-color);
+}
+
+#tooltip-eta.single {
+  font-weight: bold;
+  grid-column-end: span 2;
+}
+
+.deletefiles-list {
+  padding-left: 1ex;
+  padding-right: 1.5ex;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  background-color: rgba(128,128,128,0.1);
+  max-height: 8em;
+  overflow-y: auto;
+}
+.deletefiles-list > li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
