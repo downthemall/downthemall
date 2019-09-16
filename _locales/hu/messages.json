@@ -124,7 +124,7 @@
     "description": "Table column in manager"
   },
   "conflict_overwrite": {
-    "message": "Felülírás",
+    "message": "Írd felül",
     "description": "Option text; prefs/general"
   },
   "conflict_prompt": {
@@ -132,7 +132,7 @@
     "description": "Option text; prefs/general"
   },
   "conflict_rename": {
-    "message": "Átnevezés",
+    "message": "Nevezd át",
     "description": "Option text; prefs/general"
   },
   "CRASH": {
@@ -190,6 +190,22 @@
   "delete": {
     "message": "Törlés",
     "description": "button text"
+  },
+  "deletefiles": {
+    "message": "Fájlok törlése",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Törlés",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Biztos benne, hogy törli a következő fájlokat?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Fájlok törlése",
+    "description": "messagebox title"
   },
   "description": {
     "message": "Leírás",
@@ -275,9 +291,33 @@
     "message": "Érvénytelen URL",
     "description": "Error message; single window"
   },
+  "error_noabsolutepath": {
+    "message": "Abszolút útvonalak megadása az almappákhoz nem támogatott a böngészők által",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Pontok az almappákban nem támogatottak a böngészők által",
+    "description": "Error Message; select/single window"
+  },
   "error_noItemsSelected": {
     "message": "Nincs elem kiválasztva",
     "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "Exportálás fájlba",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Exportálás aria2 listaként",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Exportálás Metalink formátumba",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Exportálás szövegként",
+    "description": "menu text"
   },
   "extensionDescription": {
     "message": "A tömeges letöltő a böngésződ számára",
@@ -330,6 +370,10 @@
   "force_start": {
     "message": "Erőltetett indítás",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "Importálás fájlból",
+    "description": "menu text"
   },
   "information_title": {
     "message": "Információ",
@@ -384,7 +428,7 @@
     "description": "Menu text"
   },
   "manager_status_items": {
-    "message": "Elkészült $COMPLETE$ a $TOTAL$ letöltésből ($SHOWING$ kijelezve), $RUNNING$ folyamatban",
+    "message": "Elkészült $COMPLETE$ a(z) $TOTAL$ letöltésből ($SHOWING$ kijelezve), $RUNNING$ folyamatban",
     "description": "Status bar text; manager",
     "placeholders": {
       "complete": {
@@ -529,16 +573,32 @@
     "message": "Add hozzá az új letöltéseket szüneteltetve, ahelyett, hogy azonnal megkezdenéd a letöltésüket",
     "description": "Preferences/General"
   },
+  "pref_button_type": {
+    "message": "DownThemAll gomb:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "DownThemAll választás",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Kezelő megnyitása",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Felugró menü",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "OneClick!",
+    "description": "label"
+  },
   "pref_concurrent_downloads": {
-    "message": "Egyidejű letöltések",
+    "message": "Egyidejű letöltések száma",
     "description": "Preferences/Network"
   },
   "pref_finish_notification": {
     "message": "Értesíts, ha a letöltések befejeződtek",
-    "description": "Preferences/General"
-  },
-  "pref_global_turbo": {
-    "message": "A böngésző gomb inkább OneClick! legyen",
     "description": "Preferences/General"
   },
   "pref_hide_context": {
@@ -549,8 +609,12 @@
     "message": "Kezelő",
     "description": "Preferences/General; group text"
   },
+  "pref_manager_in_popup": {
+    "message": "Kezelő megnyitása új felugró ablakban",
+    "description": "checkbox text"
+  },
   "pref_manager_tooltip": {
-    "message": "Mutass tooltipeket a Kezelő lapokon",
+    "message": "Mutass tooltipeket a Kezelő lapjain",
     "description": "Preferences/General"
   },
   "pref_netglobal": {
@@ -558,7 +622,7 @@
     "description": "Preferences/General; group text"
   },
   "pref_open_manager_on_queue": {
-    "message": "Nyisd meg a Kezelő lapot a letöltések sorbaállítását követően",
+    "message": "Nyisd meg a Kezelőt a letöltések sorbaállítását követően",
     "description": "Preferences/General"
   },
   "pref_queueing": {
@@ -573,9 +637,21 @@
     "message": "Hiányzó letöltések eltávolítása újraindítást követően",
     "description": "Preferences/General"
   },
+  "pref_retries": {
+    "message": "Ideiglenes hibák esetén az újrapróbálkozások száma",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Újrapróbálkozás ennyi percenként",
+    "description": "pref text"
+  },
   "pref_show_urls": {
     "message": "Mutass URL-eket nevek helyett",
     "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "Hangok lejátszása",
+    "description": "checkbox text"
   },
   "pref_text_links": {
     "message": "Keress hivatkozásokat a honlap szövegében (lassabb)",
@@ -895,6 +971,20 @@
     "message": "Folytatás",
     "description": "Action for resuming a download"
   },
+  "retrying": {
+    "message": "Újrapróbálkozás",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Újrapróbálkozás - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
   "running": {
     "message": "Folyamatban",
     "description": "Status text"
@@ -943,12 +1033,24 @@
     "message": "Átnevezési maszk beállítása",
     "description": "Menu text; select window"
   },
+  "set_mask_text": {
+    "message": "Új átnevezési maszk beállítása",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Referrer beállítása",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Új referrer beállítása",
+    "description": "dialog text"
+  },
   "single_batchexamples": {
-    "message": "Kötegek támogatva vannak, pl.:",
+    "message": "Kötegelés támogatva van, pl.:",
     "description": "Header text; single window"
   },
   "single_header": {
-    "message": "Írj be egy letöltési URL-t (hivatkozást) és egyéb beállításokat",
+    "message": "Írjon be egy letöltési URL-t (hivatkozást) és adjon meg egyéb beállításokat",
     "description": "Header text; single window"
   },
   "single_title": {
@@ -1123,6 +1225,14 @@
     "message": "Nem lesznek új letöltések elindítva",
     "description": "Status bar tooltip; manager network icon"
   },
+  "subfolder": {
+    "message": "Almappa:",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Fájlok elhelyezése ebbe az almappába a letöltések mappáján belül",
+    "description": "placeholder text within an input box"
+  },
   "title": {
     "message": "Cím",
     "description": "Column text; Title label (short)"
@@ -1166,5 +1276,9 @@
   "useonlyonce": {
     "message": "Egyszer használd",
     "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Felhasználói megszakítás",
+    "description": "Error message"
   }
 }
