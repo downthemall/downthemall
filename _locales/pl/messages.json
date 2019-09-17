@@ -1,281 +1,15 @@
 {
-  "CRASH": {
-    "message": "Błąd wewnętrzny przeglądarki",
-    "description": "Error Message"
+  "language": {
+    "message": "Polski (PL)",
+    "description": "Lanuage Name in your language"
   },
-  "FILE_FAILED": {
-    "message": "Błąd dostępu do pliku",
-    "description": "Error Message"
-  },
-  "NETWORK_FAILED": {
-    "message": "Błąd sieci",
-    "description": "Error Message"
-  },
-  "SERVER_BAD_CONTENT": {
-    "description": "Error message",
-    "message": "Nie odnaleziono serwera"
-  },
-  "SERVER_FAILED": {
-    "description": "Error message",
-    "message": "Błąd serwera"
-  },
-  "SERVER_FORBIDDEN": {
-    "description": "Error message",
-    "message": "Dostęp zabroniony"
-  },
-  "SERVER_UNAUTHORIZED": {
-    "description": "Error message",
-    "message": "Brak autoryzacji dostępu"
+  "language_code": {
+    "message": "pl",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
   "addpaused": {
     "message": "Dodaj wstrzymane",
     "description": "Action: Add paused"
-  },
-  "cancel": {
-    "message": "Anuluj",
-    "description": "Button text: Cancel"
-  },
-  "canceled": {
-    "message": "Anulowane",
-    "description": "Download status text"
-  },
-  "colConnections": {
-    "message": "Jednoczesne połączenia",
-    "description": "Table column in prefs/network"
-  },
-  "colDomain": {
-    "message": "Domena",
-    "description": "Table column in manager"
-  },
-  "colETA": {
-    "message": "Szacowany czas",
-    "description": "Table column in manager"
-  },
-  "colNameURL": {
-    "message": "Nazwa/URL",
-    "description": "Table column in manager"
-  },
-  "colPercent": {
-    "message": "%",
-    "description": "Table column in manager"
-  },
-  "colProgress": {
-    "message": "Postęp",
-    "description": "Table column in manager"
-  },
-  "colSegments": {
-    "message": "Segmenty",
-    "description": "Table column in manager"
-  },
-  "colSize": {
-    "message": "Rozmiar",
-    "description": "Table column in manager"
-  },
-  "colSpeed": {
-    "message": "Prędkość",
-    "description": "Table column in manager"
-  },
-  "delete": {
-    "message": "Usuń",
-    "description": "button text"
-  },
-  "description": {
-    "message": "Opis",
-    "description": "Description (keep it short); e.g. the description column in select"
-  },
-  "donate": {
-    "message": "Wesprzyj!",
-    "description": "Donate button"
-  },
-  "done": {
-    "message": "Zrobione",
-    "description": "Status text"
-  },
-  "download": {
-    "message": "Pobieranie",
-    "description": "Download (noun); e.g. Download column in select"
-  },
-  "extensionDescription": {
-    "message": "Narzędzie do zbiorowego pobierania dla Twojej przeglądarki",
-    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
-  },
-  "fastfiltering": {
-    "message": "Szybkie filtrowanie",
-    "description": "Label for Fast Filtering input"
-  },
-  "finishing": {
-    "message": "Kończenie",
-    "description": "Status text"
-  },
-  "language": {
-    "description": "Lanuage Name in your language",
-    "message": "Polski (PL)"
-  },
-  "language_code": {
-    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR",
-    "message": "pl"
-  },
-  "links": {
-    "message": "Linki",
-    "description": "Links tab label (short); select window"
-  },
-  "mask": {
-    "message": "Maska",
-    "description": "Renaming mask (short); used in e.g. select"
-  },
-  "media": {
-    "message": "Multimedia",
-    "description": "Media label (short)"
-  },
-  "missing": {
-    "message": "Brakujące",
-    "description": "Status text in manager"
-  },
-  "ok": {
-    "message": "OK",
-    "description": "Button text; Used in message boxes"
-  },
-  "paused": {
-    "message": "Wstrzymane",
-    "description": "Status text; manager"
-  },
-  "queued": {
-    "message": "Zakolejkowane",
-    "description": "Status text"
-  },
-  "referrer": {
-    "message": "Odnośnik",
-    "description": "Label for \"Referrer\""
-  },
-  "remember": {
-    "message": "Zapamiętaj tę decyzję",
-    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
-  },
-  "rename": {
-    "message": "Zmień nazwę",
-    "description": "UI for renaming; currently unused"
-  },
-  "renmask": {
-    "message": "Zmiana nazwy maski",
-    "description": "Renaming mask (long)"
-  },
-  "reset": {
-    "message": "Reset",
-    "description": "Button text; pref window"
-  },
-  "running": {
-    "message": "Trwające",
-    "description": "Status text"
-  },
-  "save": {
-    "message": "Zapisz",
-    "description": "Button text; e.g. prefs/Network"
-  },
-  "search": {
-    "message": "Szukaj…",
-    "description": "Placeholder text; manager status search field"
-  },
-  "sizeB": {
-    "message": "$S$B",
-    "description": "Size formatting; bytes",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100b"
-      }
-    }
-  },
-  "sizeGB": {
-    "message": "$S$GB",
-    "description": "Size formatting; giga bytes",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.200GB"
-      }
-    }
-  },
-  "sizeKB": {
-    "message": "$S$KB",
-    "description": "Size formatting; kilo bytes",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.2KB"
-      }
-    }
-  },
-  "sizeMB": {
-    "message": "$S$MB",
-    "description": "Size formatting; mega bytes",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.22MB"
-      }
-    }
-  },
-  "sizePB": {
-    "message": "$S$PB",
-    "description": "Size formatting; peta bytes (you never know)",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.212PB"
-      }
-    }
-  },
-  "sizeTB": {
-    "message": "$S$TB",
-    "description": "Size formatting; tera bytes (you never know)",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.002TB"
-      }
-    }
-  },
-  "speedB": {
-    "message": "$SPEED$b/s",
-    "description": "Speed formatting; bytes",
-    "placeholders": {
-      "speed": {
-        "content": "$1",
-        "example": "100b/s"
-      }
-    }
-  },
-  "speedKB": {
-    "message": "$SPEED$KB/s",
-    "description": "Speed formatting; kilo bytes",
-    "placeholders": {
-      "speed": {
-        "content": "$1",
-        "example": "100.1KB/s"
-      }
-    }
-  },
-  "speedMB": {
-    "message": "$SPEED$MB/s",
-    "description": "Speed formatting; mega bytes",
-    "placeholders": {
-      "speed": {
-        "content": "$1",
-        "example": "100.20MB/s"
-      }
-    }
-  },
-  "title": {
-    "message": "Tytuł",
-    "description": "Column text; Title label (short)"
-  },
-  "unlimited": {
-    "message": "Nielimitowane",
-    "description": "Option text; Prefs/Network"
-  },
-  "useonlyonce": {
-    "message": "Użyj raz",
-    "description": "Label for Use-Once checkboxes"
   },
   "add_download": {
     "message": "Dodaj pobieranie",
@@ -329,6 +63,14 @@
     "message": "Pobieranie grupowe",
     "description": "Messagebox title for batch confirmations"
   },
+  "cancel": {
+    "message": "Anuluj",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "Anulowane",
+    "description": "Download status text"
+  },
   "cancel_download": {
     "message": "Anuluj",
     "description": "Action to cancel downloads, e.g. from the context menu"
@@ -345,6 +87,42 @@
     "message": "Sprawdź wybrane elementy",
     "description": "Menu text"
   },
+  "colConnections": {
+    "message": "Jednoczesne połączenia",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "Domena",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "Szacowany czas",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "Nazwa/URL",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "Postęp",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Segmenty",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Rozmiar",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Prędkość",
+    "description": "Table column in manager"
+  },
   "conflict_overwrite": {
     "message": "Nadpisz",
     "description": "Option text; prefs/general"
@@ -356,6 +134,10 @@
   "conflict_rename": {
     "message": "Zmień nazwę",
     "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "Błąd wewnętrzny przeglądarki",
+    "description": "Error Message"
   },
   "create_filter": {
     "message": "Utwórz filtr",
@@ -405,25 +187,57 @@
     "message": "Filmy (mp4, webm, mkv, …)",
     "description": "Filter label for the Videos filter"
   },
+  "delete": {
+    "message": "Usuń",
+    "description": "button text"
+  },
+  "deletefiles": {
+    "message": "Usuń pliki",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Usuń",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Czy na pewno chcesz usunąć następujące pliki?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Usuń pliki",
+    "description": "messagebox title"
+  },
+  "description": {
+    "message": "Opis",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
   "disable_other_filters": {
     "message": "Wyłącz inne",
     "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "Wesprzyj!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Zrobione",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "Pobieranie",
+    "description": "Download (noun); e.g. Download column in select"
   },
   "download_verb": {
     "message": "Pobierz",
     "description": "Download (verb/action); e.g. in single and select buttons"
   },
-  "dta_regular_all": {
-    "message": "DownThemAll! - Wszystkie zakładki",
-    "description": "Menu text"
-  },
-  "dta_turbo_all": {
-    "message": "OneClick! - Wszystkie zakładki",
-    "description": "Menu text"
-  },
   "dta_regular": {
     "message": "DownThemAll!",
     "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "DownThemAll! - Wszystkie zakładki",
+    "description": "Menu text"
   },
   "dta_regular_image": {
     "message": "Zapisz Obraz z DownThemAll!",
@@ -444,6 +258,10 @@
   "dta_turbo": {
     "message": "OneClick!",
     "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "OneClick! - Wszystkie zakładki",
+    "description": "Menu text"
   },
   "dta_turbo_image": {
     "message": "Zapisz Obraz z One Click!",
@@ -473,13 +291,49 @@
     "message": "Nieprawidłowy URL",
     "description": "Error message; single window"
   },
+  "error_noabsolutepath": {
+    "message": "Przeglądarki nie obsługują ścieżek bezwzględnych dla podfolderów",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Kropki (.) w podfolderach nie są obsługiwane przez przeglądarki",
+    "description": "Error Message; select/single window"
+  },
   "error_noItemsSelected": {
     "message": "Nie wybrano żadnych elementów",
     "description": "Error Message; select window"
   },
+  "export": {
+    "message": "Eksport Do Pliku",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Eksport jako aria2 List",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Eksport Jako Metalink",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Eksport Jako Tekst",
+    "description": "menu text"
+  },
+  "extensionDescription": {
+    "message": "Narzędzie do zbiorowego pobierania dla Twojej przeglądarki",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "Szybkie filtrowanie",
+    "description": "Label for Fast Filtering input"
+  },
   "fastfilter_placeholder": {
     "message": "Wyrażenie wieloznaczne lub wyrażenie regularne",
     "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "Błąd dostępu do pliku",
+    "description": "Error Message"
   },
   "filter_at_least_one": {
     "message": "Musisz wybrać co najmniej jeden typ filtru!",
@@ -497,6 +351,10 @@
     "message": "Filtr-Nazwa",
     "description": "Message box label"
   },
+  "filter_types": {
+    "message": "Filtr-Typy",
+    "description": "Message box label"
+  },
   "filter_type_link": {
     "message": "Filtr linków",
     "description": "Message box checkbox label"
@@ -505,13 +363,17 @@
     "message": "Filtr Multimediów",
     "description": "Message box checkbox label"
   },
-  "filter_types": {
-    "message": "Filtr-Typy",
-    "description": "Message box label"
+  "finishing": {
+    "message": "Kończenie",
+    "description": "Status text"
   },
   "force_start": {
     "message": "Wymuś Start",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "Import Z Pliku",
+    "description": "menu text"
   },
   "information_title": {
     "message": "Informacja",
@@ -557,6 +419,14 @@
     "message": "Ograniczone do",
     "description": "Label text; used in prefs/network"
   },
+  "links": {
+    "message": "Linki",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "Menedżer",
+    "description": "Menu text"
+  },
   "manager_status_items": {
     "message": "Ukończono $COMPLETE$ z $TOTAL$ pobierań ($SHOWING$ wyświetlono), $RUNNING$ trwających",
     "description": "Status bar text; manager",
@@ -579,17 +449,25 @@
       }
     }
   },
-  "manager_short": {
-    "message": "Menedżer",
-    "description": "Menu text"
-  },
   "manager_title": {
     "message": "Menedżer DownThemAll!",
     "description": "Window/tab title"
   },
+  "mask": {
+    "message": "Maska",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
   "mask_default": {
     "message": "Domyślna Maska",
     "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "Multimedia",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Brakujące",
+    "description": "Status text in manager"
   },
   "move_bottom": {
     "message": "Dół",
@@ -617,17 +495,21 @@
       }
     }
   },
+  "NETWORK_FAILED": {
+    "message": "Błąd sieci",
+    "description": "Error Message"
+  },
   "never_ask_again": {
     "message": "Nie pytaj ponownie",
     "description": "Donation button"
   },
-  "no_links": {
-    "message": "Nie znaleziono linków!",
-    "description": "Notification text"
-  },
   "noitems_label": {
     "message": "Nie wybrano elementów",
     "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "Nie znaleziono linków!",
+    "description": "Notification text"
   },
   "numitems_label": {
     "message": "$ITEMS$ elementów wybrano…",
@@ -638,6 +520,10 @@
         "example": "1000"
       }
     }
+  },
+  "ok": {
+    "message": "OK",
+    "description": "Button text; Used in message boxes"
   },
   "open_directory": {
     "message": "Otwórz folder",
@@ -663,69 +549,13 @@
     "message": "Sieć",
     "description": "Pref tab text"
   },
+  "paused": {
+    "message": "Wstrzymane",
+    "description": "Status text; manager"
+  },
   "pause_download": {
     "message": "Pauza",
     "description": "Action for pausing a download"
-  },
-  "pref_add_paused": {
-    "message": "Dodaj nowe pobierania wstrzymane, zamiast rozpoczynać je natychmiast",
-    "description": "Preferences/General"
-  },
-  "pref_concurrent_downloads": {
-    "message": "Jednoczesne pobierania",
-    "description": "Preferences/Network"
-  },
-  "pref_finish_notification": {
-    "message": "Pokaż powiadomienie, gdy kolejka zakończy pobieranie",
-    "description": "Preferences/General"
-  },
-  "pref_global_turbo": {
-    "message": "Przycisk przeglądarki powinien być OneClick!",
-    "description": "Preferences/General"
-  },
-  "pref_hide_context": {
-    "message": "Nie pokazuj ogólnych pozycji menu kontekstowego",
-    "description": "Preferences/General"
-  },
-  "pref_manager_tooltip": {
-    "message": "Pokaż podpowiedzi w zakładkach Menedżera",
-    "description": "Preferences/General"
-  },
-  "pref_open_manager_on_queue": {
-    "message": "Otwórz zakładkę Menedżera po zakolejkowaniu niektórych pobrań",
-    "description": "Preferences/General"
-  },
-  "pref_queue_notification": {
-    "message": "Pokaż powiadomienie, gdy kolejkujesz nowe pobieranie",
-    "description": "Preferences/General"
-  },
-  "pref_remove_missing_on_init": {
-    "message": "Usuwaj brakujące pobrania po restarcie",
-    "description": "Preferences/General"
-  },
-  "pref_show_urls": {
-    "message": "Pokaż URL zamiast Nazw",
-    "description": "Preferences/General"
-  },
-  "pref_text_links": {
-    "message": "Spróbuj znaleźć linki w treści strony internetowej (wolniejsze)",
-    "description": "Preferences/General"
-  },
-  "pref_manager": {
-    "message": "Menedżer",
-    "description": "Preferences/General; group text"
-  },
-  "pref_netglobal": {
-    "message": "Globalne Ograniczenia Sieci",
-    "description": "Preferences/General; group text"
-  },
-  "pref_queueing": {
-    "message": "Kolejkowanie Pobrań",
-    "description": "Preferences/General; group text"
-  },
-  "pref_ui": {
-    "message": "Interfejs Użytkownika",
-    "description": "Preferences/General; group text"
   },
   "prefs_conflicts": {
     "message": "Kiedy plik istnieje",
@@ -739,9 +569,101 @@
     "message": "Ustawienia DownThemAll!",
     "description": "Window/tab title; Preferences"
   },
-  "queue_finished": {
-    "message": "Kolejka pobierania została zakończona",
-    "description": "Notification text"
+  "pref_add_paused": {
+    "message": "Dodaj nowe pobierania wstrzymane, zamiast rozpoczynać je natychmiast",
+    "description": "Preferences/General"
+  },
+  "pref_button_type": {
+    "message": "Przycisk DownThemAll!:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "Wybór DownThemAll!:",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Otwórz Menedżer",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Menu podręczne",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "OneClick!",
+    "description": "label"
+  },
+  "pref_concurrent_downloads": {
+    "message": "Jednoczesne pobierania",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "Pokaż powiadomienie, gdy kolejka zakończy pobieranie",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "Nie pokazuj ogólnych pozycji menu kontekstowego",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "Menedżer",
+    "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "Otwórz menedżera w nowym wyskakującym oknie",
+    "description": "checkbox text"
+  },
+  "pref_manager_tooltip": {
+    "message": "Pokaż podpowiedzi w zakładkach Menedżera",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "Globalne Ograniczenia Sieci",
+    "description": "Preferences/General; group text"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "Otwórz zakładkę Menedżera po zakolejkowaniu niektórych pobrań",
+    "description": "Preferences/General"
+  },
+  "pref_queueing": {
+    "message": "Kolejkowanie Pobrań",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queue_notification": {
+    "message": "Pokaż powiadomienie, gdy kolejkujesz nowe pobieranie",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "Usuwaj brakujące pobrania po restarcie",
+    "description": "Preferences/General"
+  },
+  "pref_retries": {
+    "message": "Liczba ponownych prób pobierania w przypadku tymczasowych błędów",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Powtórz co (w minutach)",
+    "description": "pref text"
+  },
+  "pref_show_urls": {
+    "message": "Pokaż URL zamiast Nazw",
+    "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "Odtwórz dźwięki",
+    "description": "checkbox text"
+  },
+  "pref_text_links": {
+    "message": "Spróbuj znaleźć linki w treści strony internetowej (wolniejsze)",
+    "description": "Preferences/General"
+  },
+  "pref_ui": {
+    "message": "Interfejs Użytkownika",
+    "description": "Preferences/General; group text"
+  },
+  "queued": {
+    "message": "Zakolejkowane",
+    "description": "Status text"
   },
   "queued_download": {
     "message": "Zakolejkowane 1 pobieranie!",
@@ -756,6 +678,18 @@
         "example": "100"
       }
     }
+  },
+  "queue_finished": {
+    "message": "Kolejka pobierania została zakończona",
+    "description": "Notification text"
+  },
+  "referrer": {
+    "message": "Odnośnik",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "Zapamiętaj tę decyzję",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
   },
   "remove_all_complete_downloads": {
     "message": "Usuń wszystkie zakończone",
@@ -831,10 +765,6 @@
     "message": "Usuń Pobranie",
     "description": "Action for removing a download, no matter what state"
   },
-  "remove_download_question": {
-    "message": "Czy chcesz usunąć wybrane pliki do pobrania?",
-    "description": "Messagebox text"
-  },
   "remove_downloads": {
     "message": "Usuń pobierania",
     "description": "Menu text"
@@ -842,6 +772,10 @@
   "remove_downloads_title": {
     "message": "Czy na pewno chcesz usunąć pobrane pliki?",
     "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "Czy chcesz usunąć wybrane pliki do pobrania?",
+    "description": "Messagebox text"
   },
   "remove_failed_downloads": {
     "message": "Usuń błędne",
@@ -888,6 +822,10 @@
   "remove_selected_downloads": {
     "message": "Usuń wybrane",
     "description": "Menu text"
+  },
+  "rename": {
+    "message": "Zmień nazwę",
+    "description": "UI for renaming; currently unused"
   },
   "renamer_batch": {
     "message": "Numer pobierania grupowego",
@@ -1005,6 +943,14 @@
     "message": "Rok dodania",
     "description": "Mask text; see mask button"
   },
+  "renmask": {
+    "message": "Zmiana nazwy maski",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "Reset",
+    "description": "Button text; pref window"
+  },
   "reset_confirmations": {
     "message": "Zresetuj zapamiętane potwierdzenia",
     "description": "Button text; pref/General"
@@ -1025,6 +971,32 @@
     "message": "Wznów",
     "description": "Action for resuming a download"
   },
+  "retrying": {
+    "message": "Ponawiam próbę",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Ponawiam próbę - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
+  "running": {
+    "message": "Trwające",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Zapisz",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Szukaj…",
+    "description": "Placeholder text; manager status search field"
+  },
   "select_all": {
     "message": "Wybierz wszystko",
     "description": "Menu text; e.g. select context"
@@ -1041,9 +1013,37 @@
     "message": "DownThemAll! - Wybierz swoje pobierania",
     "description": "Title of the select window"
   },
+  "SERVER_BAD_CONTENT": {
+    "message": "Nie odnaleziono serwera",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Błąd serwera",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Dostęp zabroniony",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "Brak autoryzacji dostępu",
+    "description": "Error message"
+  },
   "set_mask": {
     "message": "Ustaw maskę zmiany nazwy",
     "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Ustaw nową maskę zmiany nazwy",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Ustaw odnośnik",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Ustaw nowy odnośnik",
+    "description": "dialog text"
   },
   "single_batchexamples": {
     "message": "Pobierania grupowe są wspierane, np.:",
@@ -1057,23 +1057,55 @@
     "message": "DownThemAll! - Dodaj link",
     "description": "Title of single window"
   },
-  "size_progress": {
-    "message": "$WRITTEN$ z $TOTAL$",
-    "description": "Status text; manager size column",
+  "sizeB": {
+    "message": "$S$B",
+    "description": "Size formatting; bytes",
     "placeholders": {
-      "total": {
-        "content": "$2",
-        "example": ""
-      },
-      "written": {
+      "s": {
         "content": "$1",
-        "example": ""
+        "example": "100b"
       }
     }
   },
-  "size_unknown": {
-    "message": "Nieznany",
-    "description": "Status text; manager size column"
+  "sizeGB": {
+    "message": "$S$GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
   },
   "sizes_huge": {
     "message": "Wielki (> $HIGH$)",
@@ -1127,6 +1159,64 @@
       }
     }
   },
+  "sizeTB": {
+    "message": "$S$TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ z $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "Nieznany",
+    "description": "Status text; manager size column"
+  },
+  "speedB": {
+    "message": "$SPEED$b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
   "statusNetwork_active_title": {
     "message": "Nowe pobrania zostaną uruchomione",
     "description": "Status bar tooltip; manager network icon"
@@ -1134,6 +1224,18 @@
   "statusNetwork_inactive_title": {
     "message": "Nowe pobrania nie zostaną uruchomione",
     "description": "Status bar tooltip; manager network icon"
+  },
+  "subfolder": {
+    "message": "Podkatalog",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Umieść pliki w tym podfolderze w katalogu pobranych plików",
+    "description": "placeholder text within an input box"
+  },
+  "title": {
+    "message": "Tytuł",
+    "description": "Column text; Title label (short)"
   },
   "toggle_selected_items": {
     "message": "Zamień wybór zaznaczonych elementów",
@@ -1166,5 +1268,17 @@
   "uncheck_selected_items": {
     "message": "Odznacz wybrane elementy",
     "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Nielimitowane",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Użyj raz",
+    "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Anulowane przez użytkownika",
+    "description": "Error message"
   }
 }
