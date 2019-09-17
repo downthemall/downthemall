@@ -7,18 +7,6 @@
     "message": "id",
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
-  "renamer_tags": {
-    "message": "Penanda Mask Penamaan",
-    "description": "Mask text; see mask button"
-  },
-  "renmask": {
-    "message": "Mask penamaan",
-    "description": "Renaming mask (long)"
-  },
-  "set_mask": {
-    "message": "Set Mask Penamaan",
-    "description": "Menu text; select window"
-  },
   "addpaused": {
     "message": "Tambahkan dalam kondisi terpause",
     "description": "Action: Add paused"
@@ -36,7 +24,7 @@
     "description": "Checkbox label"
   },
   "add_paused_question": {
-    "message": "Apa Anda ingin mengingat keputusan ini dan mulai sekarang tambahkan unduhan dalam kondisi terpause?",
+    "message": "Ingat keputusan ini dan tambahkan unduhan dalam kondisi terpause mulai sekarang?",
     "description": "Messagebox text"
   },
   "add_paused_title": {
@@ -187,6 +175,22 @@
     "message": "Hapus",
     "description": "button text"
   },
+  "deletefiles": {
+    "message": "Hapus Berkas",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Hapus",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Hapus berkas-berkas berikut ini?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Hapus Berkas",
+    "description": "messagebox title"
+  },
   "description": {
     "message": "Keterangan",
     "description": "Description (keep it short); e.g. the description column in select"
@@ -263,9 +267,33 @@
     "message": "URL Tidak Benar",
     "description": "Error message; single window"
   },
+  "error_noabsolutepath": {
+    "message": "Path absolut untuk subfolder tidak didukung oleh peramban",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Titik (.) di subfolder tidak didukung oleh peramban",
+    "description": "Error Message; select/single window"
+  },
   "error_noItemsSelected": {
     "message": "Tidak ada item terpilih",
     "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "Ekspor Ke Berkas",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Ekspor Sebagai Daftar aria2",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Ekspor Sebagai Metalink",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Ekspor Sebagai Teks",
+    "description": "menu text"
   },
   "extensionDescription": {
     "message": "Pengunduh Masal untuk browser anda",
@@ -318,6 +346,10 @@
   "force_start": {
     "message": "Paksa Mulai",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "Impor Dari Berkas",
+    "description": "menu text"
   },
   "information_title": {
     "message": "Informasi",
@@ -473,16 +505,28 @@
     "message": "Tambahkan unduhan terpause, alih-alih langsung memulai mengunduh",
     "description": "Preferences/General"
   },
+  "pref_button_type": {
+    "message": "Tombol DownThemAll!:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "Pilihan DownThemAll!",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Buka Pengelola",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Menu popup",
+    "description": "label"
+  },
   "pref_concurrent_downloads": {
     "message": "Unduhan Bersamaan",
     "description": "Preferences/Network"
   },
   "pref_finish_notification": {
     "message": "Tampilkan pemberitahuan ketika antrian unduhan selesai",
-    "description": "Preferences/General"
-  },
-  "pref_global_turbo": {
-    "message": "Tombol peramban sebaiknya OneClick!",
     "description": "Preferences/General"
   },
   "pref_hide_context": {
@@ -492,6 +536,10 @@
   "pref_manager": {
     "message": "Pengelola",
     "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "Buka pengelola di jendela popup baru",
+    "description": "checkbox text"
   },
   "pref_manager_tooltip": {
     "message": "Tampilkan tooltip di tab Pengelola",
@@ -517,9 +565,21 @@
     "message": "Setelah restart, hapus unduhan yang tidak ada",
     "description": "Preferences/General"
   },
+  "pref_retries": {
+    "message": "Jumlah percobaan ulang ketika gagal mengunduh",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Coba setiap (dalam menit)",
+    "description": "pref text"
+  },
   "pref_show_urls": {
     "message": "Tampilan URL alih-alih Nama",
     "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "Bunyikan suara",
+    "description": "checkbox text"
   },
   "pref_text_links": {
     "message": "Coba cari tautan di teks di situs web (lambat)",
@@ -779,6 +839,10 @@
     "message": "Tanggal Ditambahkan - Detik",
     "description": "Mask text; see mask button"
   },
+  "renamer_tags": {
+    "message": "Penanda Mask Penamaan",
+    "description": "Mask text; see mask button"
+  },
   "renamer_text": {
     "message": "Teks Deskripsi",
     "description": "Mask text; see mask button"
@@ -794,6 +858,10 @@
   "renamer_y": {
     "message": "Tanggal Ditambahkan - Tahun",
     "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "Mask penamaan",
+    "description": "Renaming mask (long)"
   },
   "reset": {
     "message": "Atur Ulang",
@@ -818,6 +886,20 @@
   "resume_download": {
     "message": "Lanjutkan",
     "description": "Action for resuming a download"
+  },
+  "retrying": {
+    "message": "Mengulang",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Mengulang - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
   },
   "running": {
     "message": "Berjalan",
@@ -862,6 +944,22 @@
   "SERVER_UNAUTHORIZED": {
     "message": "Tidak Diizinkan",
     "description": "Error message"
+  },
+  "set_mask": {
+    "message": "Set Mask Penamaan",
+    "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Tentukan mask penamaan baru",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Tentukan Referrer",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Tentukan referrer baru",
+    "description": "dialog text"
   },
   "single_batchexamples": {
     "message": "Batch bisa digunakan, misalnya:",
@@ -983,6 +1081,10 @@
     "message": "Tidak ada Unduhan baru yang akan dimulai",
     "description": "Status bar tooltip; manager network icon"
   },
+  "subfolder_placeholder": {
+    "message": "Simpan berkas di subfolder berikut di dalam direktori unduhan Anda",
+    "description": "placeholder text within an input box"
+  },
   "title": {
     "message": "Judul",
     "description": "Column text; Title label (short)"
@@ -1026,5 +1128,9 @@
   "useonlyonce": {
     "message": "Gunakan Sekali",
     "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Dibatalkan Pengguna",
+    "description": "Error message"
   }
 }
