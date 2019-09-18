@@ -5,8 +5,12 @@ import { windows, tabs, runtime } from "../lib/browser";
 import { getManager } from "./manager/man";
 import DEFAULT_ICONS from "../data/icons.json";
 import { Prefs } from "./prefs";
+import { _ } from "./i18n";
 
 const DONATE_URL = "https://www.downthemall.org/howto/donate/";
+const DONATE_LANG_URLS = Object.freeze(new Map([
+  ["de", "https://www.downthemall.org/howto/donate/spenden/"],
+]));
 const MANAGER_URL = "/windows/manager.html";
 
 export async function mostRecentBrowser(incognito: boolean): Promise<any> {
@@ -80,7 +84,8 @@ export async function maybeOpenInTab(url: string, incognito: boolean) {
 }
 
 export async function donate() {
-  await openInTab(DONATE_URL, false);
+  const url = DONATE_LANG_URLS.get(_("language_code")) || DONATE_URL;
+  await openInTab(url, false);
 }
 
 export async function openPrefs() {
