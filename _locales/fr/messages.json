@@ -303,6 +303,22 @@
     "message": "Aucun élément sélectionné",
     "description": "Error Message; select window"
   },
+  "export": {
+    "message": "Exporter vers un fichier",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Exporter en tant que liste aria2",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Exporter en tant que metalink",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Exporter en tant que texte",
+    "description": "menu text"
+  },
   "extensionDescription": {
     "message": "Le gestionnaire de téléchargements pour votre navigateur",
     "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
@@ -354,6 +370,10 @@
   "force_start": {
     "message": "Forcer le démarrage",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "Importer depuis un fichier",
+    "description": "menu text"
   },
   "information_title": {
     "message": "Information",
