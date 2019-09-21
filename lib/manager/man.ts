@@ -221,6 +221,9 @@ export class Manager extends EventEmitter {
     if (SOUNDS.value) {
       const audio = new Audio(runtime.getURL("/style/done.opus"));
       audio.addEventListener("canplaythrough", () => audio.play());
+      audio.addEventListener("ended", () => document.body.removeChild(audio));
+      audio.addEventListener("error", () => document.body.removeChild(audio));
+      document.body.appendChild(audio);
     }
     if (FINISH_NOTIFICATION.value) {
       new Notification(null, _("queue-finished"));
