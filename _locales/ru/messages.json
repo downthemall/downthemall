@@ -12,7 +12,7 @@
     "description": "Action: Add paused"
   },
   "add_download": {
-    "message": "Добавить закачку",
+    "message": "добавить закачку",
     "description": "Action for adding a download"
   },
   "add_new": {
@@ -191,6 +191,22 @@
     "message": "Удалить",
     "description": "button text"
   },
+  "deletefiles": {
+    "message": "Удалить файлы",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Удалить",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Точно удалить эти файлы?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Удаление файлов",
+    "description": "messagebox title"
+  },
   "description": {
     "message": "Описание",
     "description": "Description (keep it short); e.g. the description column in select"
@@ -275,9 +291,33 @@
     "message": "Неправильная ссылка",
     "description": "Error message; single window"
   },
+  "error_noabsolutepath": {
+    "message": "Полные пути к папкам не поддерживаются браузерами",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Точки (.) в названии папок не поддерживаются браузерами",
+    "description": "Error Message; select/single window"
+  },
   "error_noItemsSelected": {
     "message": "Ничего не выбрано",
     "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "Экспортировать в файл",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Экспортировать как список для aria2",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Экспортировать как Metalink",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Экспортировать как текст",
+    "description": "menu text"
   },
   "extensionDescription": {
     "message": "Универсальная качалка для вашего браузера",
@@ -330,6 +370,10 @@
   "force_start": {
     "message": "Принудительный старт",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "Импортировать из файла",
+    "description": "menu text"
   },
   "information_title": {
     "message": "Информация",
@@ -529,16 +573,32 @@
     "message": "Добавлять закачки приостановленными, вместо того чтобы качать сразу",
     "description": "Preferences/General"
   },
+  "pref_button_type": {
+    "message": "Кнопка DownThemAll!",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "DownThemAll! выделенного",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Открыть менеджер",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Всплывающее меню",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "OneClick!",
+    "description": "label"
+  },
   "pref_concurrent_downloads": {
     "message": "Настройки/Сеть",
     "description": "Preferences/Network"
   },
   "pref_finish_notification": {
     "message": "Показывать уведомление когда список закачек завешен",
-    "description": "Preferences/General"
-  },
-  "pref_global_turbo": {
-    "message": "Использовать OneClick! по умолчанию на кнопке в браузере",
     "description": "Preferences/General"
   },
   "pref_hide_context": {
@@ -548,6 +608,10 @@
   "pref_manager": {
     "message": "Менеджер",
     "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "Открывать менеджер в новом всплывающем окне",
+    "description": "checkbox text"
   },
   "pref_manager_tooltip": {
     "message": "Показывать подсказки на вкладках менеджера",
@@ -573,9 +637,21 @@
     "message": "Удалять неудавшиеся закачки после перезапуска",
     "description": "Preferences/General"
   },
+  "pref_retries": {
+    "message": "Сколько раз пробовать перезапустить закачку при некритичных сбоях",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Как часто пробовать перезапустить закачку (в минутах)",
+    "description": "pref text"
+  },
   "pref_show_urls": {
     "message": "Показывать ссылки вместо имён",
     "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "Проигрывать звуки",
+    "description": "checkbox text"
   },
   "pref_text_links": {
     "message": "Пытаться обнаружить ссылки в тексте на сайте",
@@ -895,6 +971,20 @@
     "message": "Продолжить",
     "description": "Action for resuming a download"
   },
+  "retrying": {
+    "message": "Перезапуск",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Перезапуск - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
   "running": {
     "message": "В процессе",
     "description": "Status text"
@@ -942,6 +1032,18 @@
   "set_mask": {
     "message": "Задать маску переименования",
     "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Задать новую маску переименования",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Задать реферера",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Задать нового реферера",
+    "description": "dialog text"
   },
   "single_batchexamples": {
     "message": "Можно задать группы, к примеру:",
@@ -1123,6 +1225,14 @@
     "message": "Новые закачки запускаться не будут",
     "description": "Status bar tooltip; manager network icon"
   },
+  "subfolder": {
+    "message": "Подпапка",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Размещать файлы в подпапке выбранного пути для закачек",
+    "description": "placeholder text within an input box"
+  },
   "title": {
     "message": "Заголовок",
     "description": "Column text; Title label (short)"
@@ -1166,5 +1276,9 @@
   "useonlyonce": {
     "message": "Только сейчас",
     "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Отменено пользователем",
+    "description": "Error message"
   }
 }
