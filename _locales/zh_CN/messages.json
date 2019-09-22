@@ -578,7 +578,7 @@
     "description": "label"
   },
   "pref_button_type_dta": {
-    "message": "DownThemAll! 选择窗口",
+    "message": "DownThemAll! 选择框",
     "description": "label"
   },
   "pref_button_type_manager": {
@@ -602,7 +602,7 @@
     "description": "Preferences/General"
   },
   "pref_hide_context": {
-    "message": "不要显示通用右键菜单项",
+    "message": "不显示通用右键菜单项",
     "description": "Preferences/General"
   },
   "pref_manager": {
@@ -956,7 +956,7 @@
     "description": "Button text; pref/General"
   },
   "reset_confirmations_done": {
-    "message": "已重置过去所有以前记住的确认项！",
+    "message": "已重置过去所有记住的确认项！",
     "description": "Messagebox text; pref/General"
   },
   "reset_layouts": {
