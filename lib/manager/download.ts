@@ -26,9 +26,6 @@ import { Preroller } from "./preroller";
 
 function isRecoverable(error: string) {
   switch (error) {
-  case "CRASH":
-    return true;
-
   case "SERVER_FAILED":
     return true;
 
