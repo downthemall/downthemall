@@ -8,6 +8,7 @@ import PORT from "./manager/port";
 import { runtime } from "../lib/browser";
 import { Promised } from "../lib/util";
 import { PromiseSerializer } from "../lib/pserializer";
+import { Keys } from "./keys";
 
 const $ = document.querySelector.bind(document);
 
@@ -119,6 +120,11 @@ addEventListener("DOMContentLoaded", function dom() {
       statusNetwork.className = "icon-network-off";
       statusNetwork.setAttribute("title", _("statusNetwork-inactive.title"));
     }
+  });
+
+  Keys.on("ACCEL-KeyF", () => {
+    $("#filter").focus();
+    return true;
   });
 });
 

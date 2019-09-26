@@ -3,6 +3,7 @@
 
 import * as psl from "psl";
 import { identity, memoize } from "./memoize";
+import { IPReg } from "./ipreg";
 export { debounce } from "../uikit/lib/util";
 
 export class Promised {
@@ -237,7 +238,10 @@ export interface URLd extends URL {
 Object.defineProperty(URL.prototype, "domain", {
   get() {
     try {
-      return hostToDomain(this.host) || this.host;
+      const {hostname} = this;
+      return IPReg.test(hostname) ?
+        hostname :
+        hostToDomain(hostname) || hostname;
     }
     catch (ex) {
       console.error(ex);
