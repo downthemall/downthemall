@@ -344,6 +344,7 @@ body > * {
   height: 16px;
   -moz-appearance: none;
   border: 0;
+  outline: 0;
   background: transparent;
   width: calc(100% - 28px);
 }
