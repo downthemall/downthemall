@@ -57,7 +57,7 @@ type Header = {name: string; value: string};
 
 export interface DownloadOptions {
   conflictAction: string;
-  filename: string;
+  filename?: string;
   saveAs: boolean;
   url: string;
   method?: string;
@@ -85,6 +85,7 @@ interface Downloads {
   onCreated: ExtensionListener;
   onChanged: ExtensionListener;
   onErased: ExtensionListener;
+  onDeterminingFilename?: ExtensionListener;
 }
 
 interface WebRequest {

@@ -22,7 +22,8 @@ import {
   RUNNING,
   RETRYING
 } from "./state";
-import { Preroller } from "./preroller";
+// eslint-disable-next-line no-unused-vars
+import { Preroller, PrerollResults } from "./preroller";
 
 function isRecoverable(error: string) {
   switch (error) {
@@ -130,11 +131,13 @@ export class Download extends BaseDownload {
       }
       const options: DownloadOptions = {
         conflictAction: await Prefs.get("conflict-action"),
-        filename: this.dest.full,
         saveAs: false,
         url: this.url,
         headers: [],
       };
+      if (!CHROME) {
+        options.filename = this.dest.full;
+      }
       if (!CHROME && this.private) {
         options.incognito = true;
       }
@@ -194,15 +197,7 @@ export class Download extends BaseDownload {
       if (!res) {
         return;
       }
-      if (res.mime) {
-        this.mime = res.mime;
-      }
-      if (res.name) {
-        this.serverName = res.name;
-      }
-      if (res.error) {
-        this.cancelAccordingToError(res.error);
-      }
+      this.adoptPrerollResults(res);
     }
     catch (ex) {
       console.error("Failed to preroll", this, ex.toString(), ex.stack, ex);
@@ -212,6 +207,18 @@ export class Download extends BaseDownload {
         this.prerolled = true;
         this.markDirty();
       }
+    }
+  }
+
+  adoptPrerollResults(res: PrerollResults) {
+    if (res.mime) {
+      this.mime = res.mime;
+    }
+    if (res.name) {
+      this.serverName = res.name;
+    }
+    if (res.error) {
+      this.cancelAccordingToError(res.error);
     }
   }
 
@@ -389,6 +396,29 @@ export class Download extends BaseDownload {
     catch (ex) {
       console.error("failed to handle state", ex.toString(), ex.stack, ex);
       this.setMissing();
+    }
+  }
+
+  updatefromSuggestion(state: any) {
+    const res: PrerollResults = {};
+    if (state.mime) {
+      res.mime = state.mime;
+    }
+    if (state.filename) {
+      res.name = state.filename;
+    }
+    if (state.finalUrl) {
+      res.finalURL = state.finalUrl;
+      const detected = Preroller.maybeFindNameFromSearchParams(this, res);
+      if (detected) {
+        res.name = detected;
+      }
+    }
+    try {
+      this.adoptPrerollResults(res);
+    }
+    finally {
+      this.markDirty();
     }
   }
 }
