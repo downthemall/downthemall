@@ -1,0 +1,1284 @@
+{
+  "language": {
+    "message": "Dansk",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "da",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "addpaused": {
+    "message": "Tilføj som pauserede",
+    "description": "Action: Add paused"
+  },
+  "add_download": {
+    "message": "Tilføj download",
+    "description": "Action for adding a download"
+  },
+  "add_new": {
+    "message": "Tilføj ny",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add_paused_once": {
+    "message": "Tilføj kun pauserede i denne omgang",
+    "description": "Checkbox label"
+  },
+  "add_paused_question": {
+    "message": "Ønsker du at huske dette valg og fremover altid tilføje nye downloads som pauserede?",
+    "description": "Messagebox text"
+  },
+  "add_paused_title": {
+    "message": "Tilføj altid som pauseret?",
+    "description": "Title for the add-paused dialog"
+  },
+  "ask_again_later": {
+    "message": "Spørg mig igen senere",
+    "description": "Button text"
+  },
+  "batch_batch": {
+    "message": "Batch download",
+    "description": "Button text"
+  },
+  "batch_desc": {
+    "message": "Den nuværende URL synes at indeholde instruktioner for batch download.",
+    "description": ""
+  },
+  "batch_items": {
+    "message": "Antal elementer",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_preview": {
+    "message": "Smugkig",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_question": {
+    "message": "Vil du tilføje denne som batch- eller som enkelt download?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_single": {
+    "message": "Enkelt download",
+    "description": "Button text for batch confirmation"
+  },
+  "batch_title": {
+    "message": "Batch download",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "Annullér",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "Annulleret",
+    "description": "Download status text"
+  },
+  "cancel_download": {
+    "message": "Annullér",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "cannot_be_empty": {
+    "message": "Dette felt kan ikke være tomt",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change_later_reminder": {
+    "message": "Du kan ændre denne indstillinger under Indstillinger senere",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check_selected_items": {
+    "message": "Markér valgte elementer",
+    "description": "Menu text"
+  },
+  "colConnections": {
+    "message": "Antal samtidige forbindelser",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "Domæne",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "Estimeret tid",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "Navn/URL",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "Procent",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "Status",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Segmenter",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Størrelse",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Hastighed",
+    "description": "Table column in manager"
+  },
+  "conflict_overwrite": {
+    "message": "Overskriv",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_prompt": {
+    "message": "Prompt",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_rename": {
+    "message": "Omdøb",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "Intern browser fejl",
+    "description": "Error Message"
+  },
+  "create_filter": {
+    "message": "Lav filter",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom_filename": {
+    "message": "Brugerdefineret filnavn",
+    "description": "Label text; single window"
+  },
+  "deffilter_all": {
+    "message": "Alle filer",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter_arch": {
+    "message": "Arkiver (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter_aud": {
+    "message": "Lyd (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter_bin": {
+    "message": "Programmer (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter_doc": {
+    "message": "Dokumenter (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter_img": {
+    "message": "Billeder (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter_imggif": {
+    "message": "GIF-billeder",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter_imgjpg": {
+    "message": "JPEG-billeder",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter_imgpng": {
+    "message": "PNG-billeder",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter_vid": {
+    "message": "Videoer (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "Slet",
+    "description": "button text"
+  },
+  "deletefiles": {
+    "message": "Slet fil(er)",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Slet",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Er du sikker på, du vil slette disse filer?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Slet filer",
+    "description": "messagebox title"
+  },
+  "description": {
+    "message": "Beskrivelse",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable_other_filters": {
+    "message": "Deaktivér andre",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "Donér!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Færdig",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "Download",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download_verb": {
+    "message": "Hent",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta_regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "DownThemAll! - alle faner",
+    "description": "Menu text"
+  },
+  "dta_regular_image": {
+    "message": "Gem billede med DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_regular_link": {
+    "message": "Gem link med DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_regular_media": {
+    "message": "Gem medie med DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_regular_selection": {
+    "message": "Gem valgte med DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_turbo": {
+    "message": "OneClick!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "OneClick! - alle faner",
+    "description": "Menu text"
+  },
+  "dta_turbo_image": {
+    "message": "Gem billede med OneClick!",
+    "description": "Menu text"
+  },
+  "dta_turbo_link": {
+    "message": "Gem link med OneClick!",
+    "description": "Menu text"
+  },
+  "dta_turbo_media": {
+    "message": "Gem medie med OneClick!",
+    "description": "Menu text"
+  },
+  "dta_turbo_selection": {
+    "message": "Gem valgte med OneClick!",
+    "description": "Menu text"
+  },
+  "error_invalidMask": {
+    "message": "Invalid omdøbningsmaske",
+    "description": "Error message; single/select window"
+  },
+  "error_invalidReferrer": {
+    "message": "Invalid henviser",
+    "description": "Error message; single window"
+  },
+  "error_invalidURL": {
+    "message": "Invalid URL",
+    "description": "Error message; single window"
+  },
+  "error_noabsolutepath": {
+    "message": "Absolutte stier for undermapper er ikke understøttet af browsere",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Punktummer (.) i undermapper er ikke understøttet af browsere",
+    "description": "Error Message; select/single window"
+  },
+  "error_noItemsSelected": {
+    "message": "Ingen elementer valgt",
+    "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "Eksportér til fil",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Eksportér som aria2-liste",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Eksportér som metalink",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Eksportér som tekst",
+    "description": "menu text"
+  },
+  "extensionDescription": {
+    "message": "\"The Mass Downloader\" til din browser",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "Hurtigfilter",
+    "description": "Label for Fast Filtering input"
+  },
+  "fastfilter_placeholder": {
+    "message": "Wildcard ekspression eller regulær ekspression",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "Filadgang - fejl",
+    "description": "Error Message"
+  },
+  "filter_at_least_one": {
+    "message": "Du skal vælge mindst én filtertype!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter_create_title": {
+    "message": "Lav nyt filter",
+    "description": "Message box title"
+  },
+  "filter_expression": {
+    "message": "Ekspression (filter)",
+    "description": "Message box label"
+  },
+  "filter_label": {
+    "message": "Label (filter)",
+    "description": "Message box label"
+  },
+  "filter_types": {
+    "message": "Type (filter)",
+    "description": "Message box label"
+  },
+  "filter_type_link": {
+    "message": "Link filter",
+    "description": "Message box checkbox label"
+  },
+  "filter_type_media": {
+    "message": "Medie-filter",
+    "description": "Message box checkbox label"
+  },
+  "finishing": {
+    "message": "Færdigør",
+    "description": "Status text"
+  },
+  "force_start": {
+    "message": "Gennemtving start",
+    "description": "Menu text"
+  },
+  "import": {
+    "message": "Importér fra fil",
+    "description": "menu text"
+  },
+  "information_title": {
+    "message": "Information",
+    "description": "Used in message boxes"
+  },
+  "invalid_domain_pref": {
+    "message": "Invalidt domæne",
+    "description": "Error message in prefs/network"
+  },
+  "invert_selection": {
+    "message": "Omvend markering",
+    "description": "Menu text"
+  },
+  "key_alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key_ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key_delete": {
+    "message": "Del",
+    "description": "Short for Delete-key"
+  },
+  "key_end": {
+    "message": "End",
+    "description": "Short for End-key"
+  },
+  "key_home": {
+    "message": "Hjem",
+    "description": "Short for home key"
+  },
+  "key_pagedown": {
+    "message": "PageDown",
+    "description": "Short for pagedown-key"
+  },
+  "key_pageup": {
+    "message": "PageUp",
+    "description": "Short for PageUp-key"
+  },
+  "limited_to": {
+    "message": "Begrænset til",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "Links",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "Manager",
+    "description": "Menu text"
+  },
+  "manager_status_items": {
+    "message": "Gennemført $COMPLETE$ ud af $TOTAL$ downloads ($SHOWING$ vist), $RUNNING$ kører",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_title": {
+    "message": "DownThemAll! Manager",
+    "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "Maske",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask_default": {
+    "message": "Standard-maske",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "Medier",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Mangler",
+    "description": "Status text in manager"
+  },
+  "move_bottom": {
+    "message": "Bund",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move_down": {
+    "message": "Ned",
+    "description": "Action for moving a download down"
+  },
+  "move_top": {
+    "message": "Top",
+    "description": "Action for moving a download to the top"
+  },
+  "move_up": {
+    "message": "Op",
+    "description": "Action for moving a download up"
+  },
+  "nagging_message": {
+    "message": "Du har tilføjet $DOWNLOADS$ downloads med DownThemAll! indtil videre! Som fast bruger kunne du evt. overveje en donation for at holde udviklingen kørende. Tak!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "Netværksfejl",
+    "description": "Error Message"
+  },
+  "never_ask_again": {
+    "message": "Spørg mig ikke igen",
+    "description": "Donation button"
+  },
+  "noitems_label": {
+    "message": "Ingen elementer valgt",
+    "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "Ingen links fundet",
+    "description": "Notification text"
+  },
+  "numitems_label": {
+    "message": "$ITEMS$ elementer valgt…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "Ok",
+    "description": "Button text; Used in message boxes"
+  },
+  "open_directory": {
+    "message": "Åbn mappe",
+    "description": "Menu text; manager context"
+  },
+  "open_file": {
+    "message": "Åbn fil",
+    "description": "Menu text; manager context"
+  },
+  "open_link": {
+    "message": "Åbn link",
+    "description": "Menu text; select window"
+  },
+  "options_filters": {
+    "message": "Filtre",
+    "description": "Pref tab text"
+  },
+  "options_general": {
+    "message": "Generelt",
+    "description": "Pref tab text"
+  },
+  "options_network": {
+    "message": "Netværk",
+    "description": "Pref tab text"
+  },
+  "paused": {
+    "message": "Pauseret",
+    "description": "Status text; manager"
+  },
+  "pause_download": {
+    "message": "Pausér",
+    "description": "Action for pausing a download"
+  },
+  "prefs_conflicts": {
+    "message": "Hvis en fil eksisterer i forvejen",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "Indstillinger",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "DownThemAll! indstillinger",
+    "description": "Window/tab title; Preferences"
+  },
+  "pref_add_paused": {
+    "message": "Start ikke nye downloads automatisk",
+    "description": "Preferences/General"
+  },
+  "pref_button_type": {
+    "message": "DownThemAll! knap:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "DownThemAll! markering",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Åbn manager",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Pop-up menu",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "OneClick!",
+    "description": "label"
+  },
+  "pref_concurrent_downloads": {
+    "message": "Maks. antal samtidige downloads",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "Vis en notifikation, når alle filer i køen er hentede",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "Vis ikke kontekstmenu ved højreklik",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "Manager",
+    "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "Åbn manager i et nyt vindue",
+    "description": "checkbox text"
+  },
+  "pref_manager_tooltip": {
+    "message": "Vis værktøjstips i manager-fanen",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "Globale netværksbegrænsninger",
+    "description": "Preferences/General; group text"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "Åbn manager-fanen efter at have sat downloads i kø",
+    "description": "Preferences/General"
+  },
+  "pref_queueing": {
+    "message": "Tilføjelse af downloads til køen",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queue_notification": {
+    "message": "Vis en notifikation, når nye downloads sættes i kø",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "Fjern manglende downloads efter genstart",
+    "description": "Preferences/General"
+  },
+  "pref_retries": {
+    "message": "Antal forsøg på at downloade ved midlertidige fejl",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Forsøg igen hvert (i minutter)",
+    "description": "pref text"
+  },
+  "pref_show_urls": {
+    "message": "Vis URLs i stedet for navne",
+    "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "Afspil lyde",
+    "description": "checkbox text"
+  },
+  "pref_text_links": {
+    "message": "Forsøg at finde links via hjemmesidens tekstindhold (langsommere)",
+    "description": "Preferences/General"
+  },
+  "pref_ui": {
+    "message": "Brugergrænseflade",
+    "description": "Preferences/General; group text"
+  },
+  "queued": {
+    "message": "Sat i kø",
+    "description": "Status text"
+  },
+  "queued_download": {
+    "message": "1 download sat i kø!",
+    "description": "Notification text; single download"
+  },
+  "queued_downloads": {
+    "message": "$COUNT$ downloads sat i kø!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "queue_finished": {
+    "message": "Alle downloads er fuldført",
+    "description": "Notification text"
+  },
+  "referrer": {
+    "message": "Henviser",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "Husk dette valg",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove_all_complete_downloads": {
+    "message": "Fjern alle færdiggjorte",
+    "description": "Menu text"
+  },
+  "remove_all_downloads": {
+    "message": "Fjern alle",
+    "description": "Menu text"
+  },
+  "remove_all_downloads_question": {
+    "message": "Vil du fjerne ALLE downloads?",
+    "description": "Messagebox text"
+  },
+  "remove_batch_downloads": {
+    "message": "Fjern nuværende batch",
+    "description": "Menu text"
+  },
+  "remove_batch_downloads_question": {
+    "message": "Vil du fjerne alle downloads fra samme batch som den nuværende valgte download?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads": {
+    "message": "Ryd færdiggjorte downloads",
+    "description": "Action for removing complete downloads"
+  },
+  "remove_complete_downloads_question": {
+    "message": "Vil du rydde alle færdiggjorte downloads?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_filter_downloads_question": {
+    "message": "Vil du fjerne alle færdiggjorte downloads, der matcher '$FILTER$'-filteret?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "message": "Vil du fjerne alle færdiggjorte downloads i den nuværende markering?",
+    "description": "Messagebox text"
+  },
+  "remove_domain_complete_downloads": {
+    "message": "Fjern alle færdiggjorte downloads fra nuværende domæne",
+    "description": "Menu text"
+  },
+  "remove_domain_complete_downloads_question": {
+    "message": "Vil du fjerne alle færdiggjorte downloads fra doæmnet '$DOMAIN$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "message": "Fjern nuværende domæne",
+    "description": "Menu text"
+  },
+  "remove_domain_downloads_question": {
+    "message": "Vil du fjerne alle downloads fra domænet '$DOMAIN$'?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "message": "Ryd download",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove_downloads": {
+    "message": "Ryd filer",
+    "description": "Menu text"
+  },
+  "remove_downloads_title": {
+    "message": "Er du sikker på, du vil rydde downloads?",
+    "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "Vil du fjerne de valgte filer?",
+    "description": "Messagebox text"
+  },
+  "remove_failed_downloads": {
+    "message": "Fjernelse mislykket",
+    "description": "Menu text"
+  },
+  "remove_failed_downloads_question": {
+    "message": "Vil du fjerne alle mislykkede downloads?",
+    "description": "Messagebox text"
+  },
+  "remove_filter_downloads_question": {
+    "message": "Vil du fjerne alle downloads, som matcher filteret '$FILTER$'?",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "message": "Ryd manglende downloads",
+    "description": "Menu text"
+  },
+  "remove_missing_downloads_question": {
+    "message": "Vil du rydde alle manglende downloads?",
+    "description": "Messagebox text"
+  },
+  "remove_paused_downloads": {
+    "message": "Fjern pauserede",
+    "description": "Menu text"
+  },
+  "remove_paused_downloads_question": {
+    "message": "Vil du fjerne alle pauserede downloads?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_complete_downloads": {
+    "message": "Fjern markerede færdiggjorte",
+    "description": "Menu text"
+  },
+  "remove_selected_complete_downloads_question": {
+    "message": "Vil du fjerne alle færdiggjorte downloads i nuværende markering?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_downloads": {
+    "message": "Fjern markerede",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "Omdøb",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer_batch": {
+    "message": "Batchnummer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_d": {
+    "message": "Tilføjet d. (ugedag)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_date": {
+    "message": "Dato tilføjet",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_domain": {
+    "message": "Domænenavn (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ext": {
+    "message": "Filendelse",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_hh": {
+    "message": "Tilføjet d. (time)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_host": {
+    "message": "Host navn",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_idx": {
+    "message": "Element-nummer inden for batch",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_info": {
+    "message": "Ved tilføjelse af 'flat' (f.eks. *flatsubdirs*) erstattes alle skråstreger i værdien og opretter derved ikke mapper",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer_m": {
+    "message": "Tilføjet d. (måned)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_mm": {
+    "message": "Tilføjet d. (minut)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_name": {
+    "message": "Filnavn",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_num": {
+    "message": "Alias for *batch*",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_qstring": {
+    "message": "Søgestreng",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ref": {
+    "message": "Henviser",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refdomain": {
+    "message": "Domænenavn på henviser (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refext": {
+    "message": "Filendelse (henviser)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refhost": {
+    "message": "Hostnavn (henviser)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refname": {
+    "message": "Filnavn (henviser)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refqstring": {
+    "message": "Søgestreng (henviser)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refsubdirs": {
+    "message": "Sti (henviser)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refurl": {
+    "message": "URL uden protokol (henviser)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ss": {
+    "message": "Tilføjet d. (sekund)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_subdirs": {
+    "message": "Sti",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_tags": {
+    "message": "Tags til omdøbning",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_text": {
+    "message": "Beskrivelse",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "Titel",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_url": {
+    "message": "URL uden protokol",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_y": {
+    "message": "Tilføjet d. (år)",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "Omdøbningsmaske",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "Nulstil",
+    "description": "Button text; pref window"
+  },
+  "reset_confirmations": {
+    "message": "Nulstil tidligere bekræftelser",
+    "description": "Button text; pref/General"
+  },
+  "reset_confirmations_done": {
+    "message": "Alle tidligere huskede bekræftelse er blevet nulstillet!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset_layouts": {
+    "message": "Nulstil ændringer i brugergrænsefladen",
+    "description": "Button text; pref/General"
+  },
+  "reset_layouts_done": {
+    "message": "Alle tidligere ændringer i layout og brugergrænsefladen er blevet nulstill! Du skal om muligt opdatere siden.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume_download": {
+    "message": "Fortsæt",
+    "description": "Action for resuming a download"
+  },
+  "retrying": {
+    "message": "Forsøger igen",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Forsøger igen - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
+  "running": {
+    "message": "Kører",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Gem",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Søg…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select_all": {
+    "message": "Vælg alle",
+    "description": "Menu text; e.g. select context"
+  },
+  "select_checked": {
+    "message": "Vælg markerede",
+    "description": "Menu text; select context"
+  },
+  "select_none": {
+    "message": "Vælg ingen",
+    "description": "Menu text; select context"
+  },
+  "select_title": {
+    "message": "DownThemAll! - vælg dine downloads",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "Ikke fundet",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Serverfejl",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Forbudt",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "Uautoriseret",
+    "description": "Error message"
+  },
+  "set_mask": {
+    "message": "Vælg omdøbningsmaske",
+    "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Vælg en ny omdøbningsmaske",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Vælg henviser",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Vælg en ny henviser",
+    "description": "dialog text"
+  },
+  "single_batchexamples": {
+    "message": "Batching er understøttet, f.eks.:",
+    "description": "Header text; single window"
+  },
+  "single_header": {
+    "message": "Angiv URL (link) og yderligere indstillinger",
+    "description": "Header text; single window"
+  },
+  "single_title": {
+    "message": "DownThemAll! - tilføj et link",
+    "description": "Title of single window"
+  },
+  "sizeB": {
+    "message": "$S$B",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes_huge": {
+    "message": "Enorm (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "message": "Stor ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "message": "Medium ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "message": "Lille ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ af $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "Ukendt",
+    "description": "Status text; manager size column"
+  },
+  "speedB": {
+    "message": "$SPEED$b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "message": "Nye downloads vil startes",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork_inactive_title": {
+    "message": "Ingen nye downloads vil startes",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "subfolder": {
+    "message": "Undermappe:",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Filerne placeres i Overførsler i den angivne undermappe",
+    "description": "placeholder text within an input box"
+  },
+  "title": {
+    "message": "Titel",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle_selected_items": {
+    "message": "Skift afkrydsning for markerede elementer",
+    "description": "Menu text; select"
+  },
+  "tooltip_date": {
+    "message": "Dato tilføjet:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_eta": {
+    "message": "Mangler:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip_from": {
+    "message": "Fra:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip_size": {
+    "message": "Størrelse:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_average": {
+    "message": "Gennemsnit:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_current": {
+    "message": "Nuværende:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck_selected_items": {
+    "message": "Fravælg markerede elementer",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Ubegrænset",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Brug én gang",
+    "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Annulleret af bruger",
+    "description": "Error message"
+  }
+}
