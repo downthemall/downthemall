@@ -73,7 +73,7 @@ class Numeral implements Generator {
     this.digits = dir ? rawpieces[0].length : rawpieces[1].length;
     this.length = Math.floor(
       (this.stop - this.start + (dir ? 1 : -1)) / this.step);
-    this.preview = this[Symbol.iterator]().next().value;
+    this.preview = this[Symbol.iterator]().next().value as string;
     Object.freeze(this);
   }
 
