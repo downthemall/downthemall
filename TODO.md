@@ -25,9 +25,6 @@ Nice-to-haves.
 * Native context menus?
   * Would require massive reworks incl the need for new icon formats, but potentially feasible.
 * Download priorities (manual scheduling overrides)
-* Dark Theme support
-  * os/browser define be default
-  * overwritable
 * Remove `any` types as possible, and generally improve typescript (new language to me)
 
 P4
