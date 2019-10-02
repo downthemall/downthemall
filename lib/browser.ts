@@ -114,5 +114,6 @@ export const {tabs} = polyfill;
 export const {webNavigation} = polyfill;
 export const {webRequest}: {webRequest: WebRequest} = polyfill;
 export const {windows} = polyfill;
+export const {theme} = polyfill;
 
 export const CHROME = navigator.appVersion.includes("Chrome/");

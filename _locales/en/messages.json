@@ -675,7 +675,7 @@
   },
   "pref_theme_default": {
     "description": "option text",
-    "message": "System/Browser default"
+    "message": "System/Browser"
   },
   "pref_theme_light": {
     "description": "option text",
