@@ -191,6 +191,22 @@
     "message": "احذف",
     "description": "button text"
   },
+  "deletefiles": {
+    "message": "احذف الملفات",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "احذف",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "أتريد إزالة الملفات الآتية؟",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "حذف الملفات",
+    "description": "messagebox title"
+  },
   "description": {
     "message": "الوصف",
     "description": "Description (keep it short); e.g. the description column in select"
@@ -275,9 +291,33 @@
     "message": "العنوان غير صالح",
     "description": "Error message; single window"
   },
+  "error_noabsolutepath": {
+    "message": "لا تدعم المتصفّحات أي مسار مُطلق للمجلدات الفرعية",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "لا تدعم المتصفّحات النقط (.) في المجلدات الفرعية",
+    "description": "Error Message; select/single window"
+  },
   "error_noItemsSelected": {
     "message": "لم تحدّد عناصر",
     "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "صدّر إلى ملف",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "صدّر بنسق قائمة aria2",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "صدّر بنسق Metalink",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "صدّر كنصّ",
+    "description": "menu text"
   },
   "extensionDescription": {
     "message": "أداة التنزيل لبحور من الروابط، داخل متصفحك",
@@ -330,6 +370,10 @@
   "force_start": {
     "message": "يُجبر البدء",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "استورِد من نصّ",
+    "description": "menu text"
   },
   "information_title": {
     "message": "معلومات",
@@ -529,16 +573,32 @@
     "message": "أضفِ التنزيلات الجديدة ملبثة، بدل بدئها مباشرة عند إضافتها",
     "description": "Preferences/General"
   },
+  "pref_button_type": {
+    "message": "زر ”نزّلها كلها!“:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "تحديد ”نزّلها كلها“",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "يفتح المدير",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "يعرض القائمة",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "ينفّذ ”بنقرة واحدة!“",
+    "description": "label"
+  },
   "pref_concurrent_downloads": {
     "message": "التنزيلات المتزامنة",
     "description": "Preferences/Network"
   },
   "pref_finish_notification": {
     "message": "اعرض إخطارًا حين ينتهي تنزيل طابور التنزيلات",
-    "description": "Preferences/General"
-  },
-  "pref_global_turbo": {
-    "message": "ليكن زر المتصفح ”بنقرة واحدة!“",
     "description": "Preferences/General"
   },
   "pref_hide_context": {
@@ -548,6 +608,10 @@
   "pref_manager": {
     "message": "المدير",
     "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "افتح المدير في نافذة منبثقة جديدة",
+    "description": "checkbox text"
   },
   "pref_manager_tooltip": {
     "message": "اعرض التلميحات في ألسنة المدير",
@@ -573,9 +637,21 @@
     "message": "أزِل التنزيلات الناقصة بعد إعادة التشغيل",
     "description": "Preferences/General"
   },
+  "pref_retries": {
+    "message": "عدد مرات إعادة التنزيل في حال الأخطاء المؤقتة",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "أعِد كل (بالدقيقة)",
+    "description": "pref text"
+  },
   "pref_show_urls": {
     "message": "اعرض العناوين بدل الأسماء",
     "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "شغّل الأصوات",
+    "description": "checkbox text"
   },
   "pref_text_links": {
     "message": "حاوِل البحث عن الروابط في نص موقع الوِب (أبطأ)",
@@ -895,6 +971,20 @@
     "message": "استأنف",
     "description": "Action for resuming a download"
   },
+  "retrying": {
+    "message": "يُعيد",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "يُعيد -$ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
   "running": {
     "message": "يعمل",
     "description": "Status text"
@@ -942,6 +1032,18 @@
   "set_mask": {
     "message": "اضبط قناع تغيير الاسم",
     "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "اضبط قناع تغيير اسم جديد",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "اضبط المُعيد",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "اضبط مُعيدًا جديدًا",
+    "description": "dialog text"
   },
   "single_batchexamples": {
     "message": "الدفعات مدعومة، مثل:",
@@ -1123,6 +1225,14 @@
     "message": "لن تبدأ أي تنزيلات جديدة",
     "description": "Status bar tooltip; manager network icon"
   },
+  "subfolder": {
+    "message": "المجلد الفرعي:",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "ضَع الملفات في هذا المجلد الفرعي لدليل المجلدات في الجهاز",
+    "description": "placeholder text within an input box"
+  },
   "title": {
     "message": "العنوان",
     "description": "Column text; Title label (short)"
@@ -1166,5 +1276,9 @@
   "useonlyonce": {
     "message": "استعمله مرة واحدة",
     "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "ألغاها المستخدم",
+    "description": "Error message"
   }
 }

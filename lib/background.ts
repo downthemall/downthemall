@@ -22,6 +22,8 @@ import {
   runtime,
   history,
   sessions,
+  // eslint-disable-next-line no-unused-vars
+  OnInstalled,
 } from "./browser";
 import { Bus } from "./bus";
 import { filterInSitu } from "./util";
@@ -134,6 +136,28 @@ class Handler {
     }
   }
 }
+
+function getMajor(version?: string) {
+  if (!version) {
+    return "";
+  }
+  const match = version.match(/^\d+\.\d+/);
+  if (!match) {
+    return "";
+  }
+  return match[0];
+}
+
+runtime.onInstalled.addListener(({reason, previousVersion}: OnInstalled) => {
+  const {version} = runtime.getManifest();
+  const major = getMajor(version);
+  const prevMajor = getMajor(previousVersion);
+  if (reason === "install" || (reason === "update" && major !== prevMajor)) {
+    tabs.create({
+      url: `https://about.downthemall.org/changelog/?cur=${major}&prev=${prevMajor}`,
+    });
+  }
+});
 
 locale.then(() => {
   const menuHandler = new class Menus extends Handler {

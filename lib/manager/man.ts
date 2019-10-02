@@ -82,6 +82,10 @@ export class Manager extends EventEmitter {
 
     downloads.onChanged.addListener(this.onChanged.bind(this));
     downloads.onErased.addListener(this.onErased.bind(this));
+    if (CHROME && downloads.onDeterminingFilename) {
+      downloads.onDeterminingFilename.addListener(
+        this.onDeterminingFilename.bind(this));
+    }
 
     Bus.onPort("manager", (port: Port) => {
       const mport = new ManagerPort(this, port);
@@ -155,6 +159,20 @@ export class Manager extends EventEmitter {
     }
     item.setMissing();
     this.manIds.delete(downloadId);
+  }
+
+  onDeterminingFilename(state: any, suggest: Function) {
+    const download = this.manIds.get(state.id);
+    if (!download) {
+      return;
+    }
+    try {
+      download.updatefromSuggestion(state);
+    }
+    finally {
+      const suggestion = {filename: download.dest.full};
+      suggest(suggestion);
+    }
   }
 
   async resetScheduler() {

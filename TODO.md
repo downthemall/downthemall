@@ -1,8 +1,6 @@
 TODO
 ---
 
-aka a lot
-
 P2
 ===
 
@@ -26,7 +24,6 @@ Nice-to-haves.
   * Manipulate downloads (e.g. rewrite URLs)
 * Native context menus?
   * Would require massive reworks incl the need for new icon formats, but potentially feasible.
-* Import/Export
 * Download priorities (manual scheduling overrides)
 * Dark Theme support
   * os/browser define be default

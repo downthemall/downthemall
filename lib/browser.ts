@@ -9,33 +9,33 @@ interface ExtensionListener {
 }
 
 export interface MessageSender {
-  tab?: Tab;
-  frameId?: number;
-  id?: number;
-  url?: string;
-  tlsChannelId?: string;
+  readonly tab?: Tab;
+  readonly frameId?: number;
+  readonly id?: number;
+  readonly url?: string;
+  readonly tlsChannelId?: string;
 }
 
 
 export interface Tab {
-  id?: number;
-  incognito?: boolean;
+  readonly id?: number;
+  readonly incognito?: boolean;
 }
 
 export interface MenuClickInfo {
-  menuItemId: string | number;
-  button?: number;
-  linkUrl?: string;
-  srcUrl?: string;
+  readonly menuItemId: string | number;
+  readonly button?: number;
+  readonly linkUrl?: string;
+  readonly srcUrl?: string;
 }
 
 
 export interface RawPort {
-  error: any;
-  name: string;
-  onDisconnect: ExtensionListener;
-  onMessage: ExtensionListener;
-  sender?: MessageSender;
+  readonly error: any;
+  readonly name: string;
+  readonly sender?: MessageSender;
+  readonly onDisconnect: ExtensionListener;
+  readonly onMessage: ExtensionListener;
   disconnect: () => void;
   postMessage: (message: any) => void;
 }
@@ -57,7 +57,7 @@ type Header = {name: string; value: string};
 
 export interface DownloadOptions {
   conflictAction: string;
-  filename: string;
+  filename?: string;
   saveAs: boolean;
   url: string;
   method?: string;
@@ -82,15 +82,22 @@ interface Downloads {
   getFileIcon(id: number, options?: any): Promise<string>;
   setShelfEnabled(state: boolean): void;
   removeFile(manId: number): Promise<void>;
-  onCreated: ExtensionListener;
-  onChanged: ExtensionListener;
-  onErased: ExtensionListener;
+  readonly onCreated: ExtensionListener;
+  readonly onChanged: ExtensionListener;
+  readonly onErased: ExtensionListener;
+  readonly onDeterminingFilename?: ExtensionListener;
 }
 
 interface WebRequest {
-  onBeforeSendHeaders: WebRequestListener;
-  onSendHeaders: WebRequestListener;
-  onHeadersReceived: WebRequestListener;
+  readonly onBeforeSendHeaders: WebRequestListener;
+  readonly onSendHeaders: WebRequestListener;
+  readonly onHeadersReceived: WebRequestListener;
+}
+
+export interface OnInstalled {
+  readonly reason: string;
+  readonly previousVersion?: string;
+  readonly temporary: boolean;
 }
 
 export const {browserAction} = polyfill;
