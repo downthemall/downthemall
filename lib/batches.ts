@@ -93,6 +93,60 @@ class Numeral implements Generator {
   }
 }
 
+class Character implements Generator {
+  public readonly start: number;
+
+  public readonly stop: number;
+
+  public readonly step: number;
+
+  public readonly length: number;
+
+  public readonly preview: string;
+
+  constructor(str: string) {
+    const rawpieces = str.split(":").map(e => e.trim());
+    const pieces = rawpieces.map((e, i) => {
+      if (i === 2) {
+        return reallyParseInt(e);
+      }
+      if (e.length > 1) {
+        throw new Error("Malformed Character sequence");
+      }
+      return e.charCodeAt(0);
+    });
+    if (pieces.length < 2) {
+      throw new Error("Invalid input");
+    }
+    const [start, stop, step] = pieces;
+    if (step === 0) {
+      throw new Error("Invalid step");
+    }
+    this.step = !step ? 1 : step;
+    const dir = this.step > 0;
+    if (dir && start > stop) {
+      throw new Error("Invalid sequence");
+    }
+    else if (!dir && start < stop) {
+      throw new Error("Invalid sequence");
+    }
+    this.start = start;
+    this.stop = stop;
+    this.length = Math.floor(
+      (this.stop - this.start + (dir ? 1 : -1)) / this.step);
+    this.preview = this[Symbol.iterator]().next().value as string;
+    Object.freeze(this);
+  }
+
+  *[Symbol.iterator]() {
+    const {start, stop, step} = this;
+    const dir = step > 0;
+    for (let i = start; (dir ? i <= stop : i >= stop); i += step) {
+      yield String.fromCharCode(i);
+    }
+  }
+}
+
 export class BatchGenerator implements Generator {
   private readonly gens: Generator[];
 
@@ -120,9 +174,14 @@ export class BatchGenerator implements Generator {
       try {
         this.gens.push(new Numeral(tok));
       }
-      catch (ex) {
-        this.gens.push(new Literal(`[${tok}]`));
-        this.hasInvalid = true;
+      catch {
+        try {
+          this.gens.push(new Character(tok));
+        }
+        catch {
+          this.gens.push(new Literal(`[${tok}]`));
+          this.hasInvalid = true;
+        }
       }
     }
     if (str) {
