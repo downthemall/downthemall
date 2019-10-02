@@ -63,10 +63,25 @@
   --popup-bgcolor: #4a4a4f;
   --popup-color: rgb(249, 249, 250);
   --general-button-shadow: 0px 0px 7px 1px rgba(128,128,128,0.8);
+  scrollbar-color: rgba(249,249,250,.4) rgba(20,20,25,.3);
 }
- html.dark a {
+
+html.dark a {
   color: lightblue;
 }
+
+html.dark ::-webkit-scrollbar {
+  background: rgba(20,20,25,.3);
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgba(249,249,250,.4);
+}
+
+html.dark ::-webkit-scrollbar-corner {
+  background: #000;
+}
+
 
 html[data-platform="mac"] {
   --folder-color: rgb(4, 102, 214);
@@ -197,7 +212,8 @@ body, html {
   background: var(--general-bgcolor);
 }
 
-body#popup {
+html#popup,
+html#popup > body {
   color: var(--popup-color);
   background: var(--popup-bgcolor);
 }

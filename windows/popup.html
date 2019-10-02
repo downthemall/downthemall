@@ -1,4 +1,6 @@
 <!doctype html>
+<html id="popup">
+
 <head>
   <!-- License: GPL-v2 -->
   <meta charset="utf-8">
@@ -11,6 +13,8 @@
       height: auto !important;
       -webkit-user-select: none;
       user-select: none;
+      margin: 0;
+      padding: 0;
     }
 
     ul {
@@ -65,7 +69,7 @@
   <script defer src="/bundles/content-popup.js"></script>
 </head>
 
-<body id="popup">
+<body>
   <ul>
     <li id="regular" data-action="do-regular">
       <img srcset="/style/button-regular.png, /style/button-regular@2x.png 2x">
@@ -106,3 +110,5 @@
     </li>
   </ul>
 </body>
+
+</html>
