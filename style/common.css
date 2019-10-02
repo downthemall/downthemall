@@ -42,32 +42,30 @@
   --popup-color: #0c0c0d;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --add-color: lightblue;
-    --general-bgcolor: #2A2A2E;
-    --general-border-color: rgb(85, 85, 85);
-    --general-button-bgcolor-hover: black;
-    --general-button-bgcolor: rgb(36, 36, 36);
-    --general-button-color: white;
-    --general-color: rgb(249, 249, 250);
-    --menu-bgcolor: black;
-    --menu-bgcolor-hover: #1a6bce;
-    --table-bgcolor: #1A1A1E;
-    --table-head-bgcolor: #3A3A3E;
-    --toolbar-bg-color: rgb(202, 108, 0);
-    --status-icon-color: #b9b9b9;
-    --status-icon-color-hover: #e2e2e2;
-    --tile-url: url(tile-dark.png?3);
-    --toolbar-border: 1px solid rgba(30, 30, 30, 0.5);
-    --file-icon-image-color: rgb(21, 130, 197);
-    --popup-bgcolor: #4a4a4f;
-    --popup-color: rgb(249, 249, 250);
-    --general-button-shadow: 0px 0px 7px 1px rgba(128,128,128,0.8);
-  }
-  a {
-    color: lightblue;
-  }
+ html.dark {
+  --add-color: lightblue;
+  --general-bgcolor: #2A2A2E;
+  --general-border-color: rgb(85, 85, 85);
+  --general-button-bgcolor-hover: black;
+  --general-button-bgcolor: rgb(36, 36, 36);
+  --general-button-color: white;
+  --general-color: rgb(249, 249, 250);
+  --menu-bgcolor: black;
+  --menu-bgcolor-hover: #1a6bce;
+  --table-bgcolor: #1A1A1E;
+  --table-head-bgcolor: #3A3A3E;
+  --toolbar-bg-color: rgb(202, 108, 0);
+  --status-icon-color: #b9b9b9;
+  --status-icon-color-hover: #e2e2e2;
+  --tile-url: url(tile-dark.png?3);
+  --toolbar-border: 1px solid rgba(30, 30, 30, 0.5);
+  --file-icon-image-color: rgb(21, 130, 197);
+  --popup-bgcolor: #4a4a4f;
+  --popup-color: rgb(249, 249, 250);
+  --general-button-shadow: 0px 0px 7px 1px rgba(128,128,128,0.8);
+}
+ html.dark a {
+  color: lightblue;
 }
 
 html[data-platform="mac"] {

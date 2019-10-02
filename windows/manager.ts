@@ -9,6 +9,7 @@ import { runtime } from "../lib/browser";
 import { Promised } from "../lib/util";
 import { PromiseSerializer } from "../lib/pserializer";
 import { Keys } from "./keys";
+import "./theme";
 
 const $ = document.querySelector.bind(document);
 

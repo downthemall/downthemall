@@ -20,6 +20,7 @@ import { VirtualTable } from "../uikit/lib/table";
 import { Icons } from "./icons";
 import { $ } from "./winutil";
 import { runtime, storage } from "../lib/browser";
+import "./theme";
 
 const ICON_BASE_SIZE = 16;
 
@@ -566,6 +567,7 @@ addEventListener("DOMContentLoaded", async () => {
   new BoolPref("pref-show-urls", "show-urls");
   new BoolPref("pref-remove-missing-on-init", "remove-missing-on-init");
   new OptionPref("pref-button-type", "button-type");
+  new OptionPref("pref-theme", "theme");
   new OptionPref("pref-conflict-action", "conflict-action");
 
   $("#reset-confirmations").addEventListener("click", async () => {
