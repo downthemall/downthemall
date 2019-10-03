@@ -24,7 +24,10 @@ export async function single(item: BaseItem | null) {
   tracker.track(window.id, null);
   try {
     const port: Port = await Promise.race<Port>([
-      new Promise<Port>(resolve => Bus.oncePort("single", resolve)),
+      new Promise<Port>(resolve => Bus.oncePort("single", port => {
+        resolve(port);
+        return true;
+      })),
       timeout<Port>(5 * 1000)]);
     if (!port.isSelf) {
       throw Error("Invalid sender connected");

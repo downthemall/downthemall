@@ -15,6 +15,7 @@ import { hookButton } from "../lib/manager/renamer";
 import { runtime } from "../lib/browser";
 import { $ } from "./winutil";
 import { validateSubFolder } from "../lib/util";
+import "./theme";
 
 const PORT = runtime.connect(null, { name: "single" });
 

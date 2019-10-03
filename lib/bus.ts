@@ -8,32 +8,35 @@ import {runtime, tabs, RawPort, MessageSender} from "./browser";
 export class Port extends EventEmitter {
   private port: RawPort | null;
 
+  private disconnected = false;
+
   constructor(port: RawPort) {
     super();
     this.port = port;
 
-    let disconnected = false;
-    const disconnect = () => {
-      if (disconnected) {
-        return;
-      }
-      disconnected = true;
-      this.port = null; // Break the cycle
-      this.emit("disconnect", this, port);
-    };
     // Nasty firefox bug, thus listen for tab removal explicitly
     if (port.sender && port.sender.tab && port.sender.tab.id) {
       const otherTabId = port.sender.tab.id;
-      const tabListener = function(tabId: number) {
+      const tabListener = (tabId: number) => {
         if (tabId !== otherTabId) {
           return;
         }
-        disconnect();
+        this.disconnect();
       };
       tabs.onRemoved.addListener(tabListener);
     }
     port.onMessage.addListener(this.onMessage.bind(this));
-    port.onDisconnect.addListener(disconnect);
+    port.onDisconnect.addListener(this.disconnect.bind(this));
+  }
+
+  disconnect() {
+    if (this.disconnected) {
+      return;
+    }
+    this.disconnected = true;
+    const {port} = this;
+    this.port = null; // Break the cycle
+    this.emit("disconnect", this, port);
   }
 
   get name() {
@@ -120,6 +123,9 @@ export const Bus = new class extends EventEmitter {
       port.disconnect();
       return;
     }
-    this.ports.emit(port.name, new Port(port));
+    const wrapped = new Port(port);
+    if (!this.ports.emit(port.name, wrapped)) {
+      wrapped.disconnect();
+    }
   }
 }();

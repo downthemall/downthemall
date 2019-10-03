@@ -33,6 +33,7 @@
     "sessions",
     "storage",
     "tabs",
+    "theme",
     "webNavigation",
     "webRequest",
     "webRequestBlocking"

@@ -16,7 +16,7 @@ body > * {
 #toolbar {
   display: flex;
   margin: 0;
-  background: var(--toolbar-bg-color) url(tile.png) repeat-x;
+  background: var(--toolbar-bg-color) var(--tile-url) repeat-x;
 }
 
 #toolbar .spacer {
@@ -42,9 +42,9 @@ body > * {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0px 0px 5px 1px rgba(128,128,128,0.5);
-  background: rgb(246,246,246);
-  color: black;
+  box-shadow: var(--general-button-shadow);
+  background: var(--general-button-bgcolor);
+  color: var(--general-button-color);
   transition: box-shadow 0.5s, background 1s;
   font-size: 24px;
   line-height: 24px;
@@ -60,7 +60,7 @@ body > * {
 }
 
 #toolbar > .button:hover:not(.disabled) {
-  background: white;
+  background: var(--general-button-bgcolor-hover);
   box-shadow: 0px 0px 7px 2px rgba(70,70,70,0.75);
 }
 
@@ -88,14 +88,14 @@ body > * {
   flex: 1 1 auto;
   overflow: hidden;
   display: grid;
-  background: white;
+  background: var(--general-bgcolor);
 }
 
 #loading {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255,255,255,0.9);
+  background: var(--general-button-bgcolor);
   font-weight: bolder;
   font-size: 200%;
   z-index: 10;
@@ -311,7 +311,7 @@ body > * {
   color: crimson;
 }
 #statusNetwork.icon-network-on {
-  color: navy;
+  color: var(--add-color);
 }
 
 #statusFilter {
@@ -404,7 +404,7 @@ body > * {
   font-size: 10pt !important;
 }
 #nagging {
-  border-top: 1px solid lightgray;
+  border-top: 1px solid var(--general-border-color);
   display: grid;
   grid-template-columns: 1fr auto auto auto;
   align-content: center;

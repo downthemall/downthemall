@@ -665,6 +665,22 @@
     "description": "Preferences/General",
     "message": "Try to find links in the website text (slower)"
   },
+  "pref_theme": {
+    "description": "label text",
+    "message": "Theme:"
+  },
+  "pref_theme_dark": {
+    "description": "option text",
+    "message": "Dark"
+  },
+  "pref_theme_default": {
+    "description": "option text",
+    "message": "System/Browser"
+  },
+  "pref_theme_light": {
+    "description": "option text",
+    "message": "Light"
+  },
   "pref_ui": {
     "description": "Preferences/General; group text",
     "message": "User Interface"

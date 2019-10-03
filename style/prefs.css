@@ -2,7 +2,6 @@
 @import 'common.css';
 
 html, body {
-  background: transparent !important;
   width: 100%;
   height: 100%;
 }
@@ -19,9 +18,9 @@ article {
 
 #tabs {
   display: flex;
-  background: url(icon64.png) 1em 50%/32px 32px no-repeat, url(tile.png) repeat-x, var(--toolbar-bg-color);
+  background: url(icon64.png) 1em 50%/32px 32px no-repeat, var(--tile-url) repeat-x, var(--toolbar-bg-color);
   padding-left: calc(2em + 32px);
-  color: white;
+  color: var(--general-bgcolor);
 }
 
 input.tab {
@@ -54,8 +53,8 @@ input.tab {
 #tabsel-general:checked ~ #tabs #tabel-general,
 #tabsel-filters:checked ~ #tabs #tabel-filters,
 #tabsel-network:checked ~ #tabs #tabel-network {
-  color: black !important;
-  background: white;
+  color: var(--general-color) !important;
+  background: var(--general-bgcolor);
   border-top: var(--toolbar-border-width) solid var(--toolbar-active-border-color);
 }
 
@@ -64,8 +63,8 @@ input.tab {
   border-top: var(--toolbar-border-width) solid transparent;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: var(--toolbar-border);
+  border-right: var(--toolbar-border);
   background: var(--toolbar-bg-color);
 }
 
@@ -113,9 +112,9 @@ input.tab {
 fieldset {
   display: flex;
   margin-bottom: 1em;
-  border: 1px solid lightgray;
+  border: 1px solid var(--general-border-color);
   border-radius: 6px;
-  box-shadow: 1px 1px 6px lightgray;
+  box-shadow: 1px 1px 6px var(--general-border-color);
   background: rgba(128, 128, 128, 0.05);
   flex-direction: column;
   max-width: 60em;
@@ -134,10 +133,10 @@ legend {
 }
 
 .virtualtable-container {
-  border: 1px solid lightgray;
+  border: 1px solid var(--general-border-color);
   border-radius: 6px;
   background: rgba(128, 128, 128, 0.05);
-  box-shadow: 1px 1px 6px lightgray;
+  box-shadow: 1px 1px 6px var(--general-border-color);
 }
 
 #network-general {
