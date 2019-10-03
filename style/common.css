@@ -2,15 +2,15 @@
 /* License: gpl-v2 */
 
 :root {
-  --general-color: #2A2A2E;
+  --general-color: #2a2a2e;
   --general-bgcolor: rgb(249, 249, 250);
   --general-border-color: lightgray;
   --general-input-color: black;
   --general-input-bgcolor: white;
   --general-button-color: black;
-  --general-button-bgcolor: rgb(246,246,246);
+  --general-button-bgcolor: rgb(246, 246, 246);
   --general-button-bgcolor-hover: white;
-  --general-button-shadow: 0px 0px 5px 1px rgba(128,128,128,0.5);
+  --general-button-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.5);
   --menu-bgcolor: white;
   --menu-bgcolor-hover: #2283fb;
   --table-bgcolor: white;
@@ -40,11 +40,13 @@
   --file-icon-image-color: rgb(17, 107, 163);
   --popup-bgcolor: #fff;
   --popup-color: #0c0c0d;
+  --modal-color: black;
+  --modal-bgcolor: white;
 }
 
- html.dark {
+html.dark {
   --add-color: lightblue;
-  --general-bgcolor: #2A2A2E;
+  --general-bgcolor: #2a2a2e;
   --general-border-color: rgb(85, 85, 85);
   --general-button-bgcolor-hover: black;
   --general-button-bgcolor: rgb(36, 36, 36);
@@ -52,8 +54,8 @@
   --general-color: rgb(249, 249, 250);
   --menu-bgcolor: black;
   --menu-bgcolor-hover: #1a6bce;
-  --table-bgcolor: #1A1A1E;
-  --table-head-bgcolor: #3A3A3E;
+  --table-bgcolor: #1a1a1e;
+  --table-head-bgcolor: #3a3a3e;
   --toolbar-bg-color: rgb(202, 108, 0);
   --status-icon-color: #b9b9b9;
   --status-icon-color-hover: #e2e2e2;
@@ -62,8 +64,10 @@
   --file-icon-image-color: rgb(21, 130, 197);
   --popup-bgcolor: #4a4a4f;
   --popup-color: rgb(249, 249, 250);
-  --general-button-shadow: 0px 0px 7px 1px rgba(128,128,128,0.8);
-  scrollbar-color: rgba(249,249,250,.4) rgba(20,20,25,.3);
+  --general-button-shadow: 0px 0px 7px 1px rgba(128, 128, 128, 0.8);
+  --modal-color: white;
+  --modal-bgcolor: #333;
+  scrollbar-color: rgba(249, 249, 250, 0.4) rgba(20, 20, 25, 0.3);
 }
 
 html.dark a {
@@ -71,110 +75,226 @@ html.dark a {
 }
 
 html.dark ::-webkit-scrollbar {
-  background: rgba(20,20,25,.3);
+  background: rgba(20, 20, 25, 0.3);
 }
 
 html.dark ::-webkit-scrollbar-thumb {
-  background: rgba(249,249,250,.4);
+  background: rgba(249, 249, 250, 0.4);
 }
 
 html.dark ::-webkit-scrollbar-corner {
   background: #000;
 }
 
-
 html[data-platform="mac"] {
   --folder-color: rgb(4, 102, 214);
 }
 
-html, body {
+html,
+body {
   font-size: 10pt !important;
 }
 
 @font-face {
-  font-family: 'downthemall';
-  src: url('downthemall.woff2?75791791') format('woff2');
+  font-family: "downthemall";
+  src: url("downthemall.woff2?75791791") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
   font-family: "downthemall";
   font-style: normal;
   font-weight: normal;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   text-align: center;
- 
+
   font-variant: normal;
   text-transform: none;
- 
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
- 
-.icon-add:before { content: '\e800'; } /* '' */
-.icon-addsegment:before { content: '\e801'; } /* '' */
-.icon-bottom:before { content: '\e802'; } /* '' */
-.icon-picture:before { content: '\e803'; } /* '' */
-.icon-circle:before { content: '\e804'; } /* '' */
-.icon-delete:before { content: '\e805'; } /* '' */
-.icon-done:before { content: '\e806'; } /* '' */
-.icon-down:before { content: '\e807'; } /* '' */
-.icon-download:before { content: '\e808'; } /* '' */
-.icon-dupe:before { content: '\e809'; } /* '' */
-.icon-error:before { content: '\e80a'; } /* '' */
-.icon-failed:before { content: '\e80b'; } /* '' */
-.icon-file:before { content: '\e80c'; } /* '' */
-.icon-find:before { content: '\e80d'; } /* '' */
-.icon-folder:before { content: '\e80e'; } /* '' */
-.icon-force:before { content: '\e80f'; } /* '' */
-.icon-go:before { content: '\e810'; } /* '' */
-.icon-import:before { content: '\e811'; } /* '' */
-.icon-info:before { content: '\e812'; } /* '' */
-.icon-launch:before { content: '\e813'; } /* '' */
-.icon-missing:before { content: '\e814'; } /* '' */
-.icon-network-off:before { content: '\e815'; } /* '' */
-.icon-network-on:before { content: '\e816'; } /* '' */
-.icon-pause:before { content: '\e817'; } /* '' */
-.icon-remsegment:before { content: '\e818'; } /* '' */
-.icon-rename:before { content: '\e819'; } /* '' */
-.icon-save:before { content: '\e81a'; } /* '' */
-.icon-settings:before { content: '\e81b'; } /* '' */
-.icon-top:before { content: '\e81c'; } /* '' */
-.icon-unchecked:before { content: '\e81d'; } /* '' */
-.icon-unlimited:before { content: '\e81e'; } /* '' */
-.icon-link:before { content: '\e81f'; } /* '' */
-.icon-up:before { content: '\e820'; } /* '' */
-.icon-privacy:before { content: '\e821'; } /* '' */
-.icon-tags:before { content: '\e822'; } /* '' */
-.icon-attention:before { content: '\e823'; } /* '' */
-.icon-notification:before { content: '\e824'; } /* '' */
-.icon-file-video:before { content: '\e825'; } /* '' */
-.icon-file-generic:before { content: '\e826'; } /* '' */
-.icon-question-dark:before { content: '\e827'; } /* '' */
-.icon-forward:before { content: '\e828'; } /* '' */
-.icon-filter:before { content: '\f0b0'; } /* '' */
-.icon-donate:before { content: '\f0d6'; } /* '' */
-.icon-file-doc:before { content: '\f0f6'; } /* '' */
-.icon-interface:before { content: '\f108'; } /* '' */
-.icon-folder-1:before { content: '\f115'; } /* '' */
-.icon-sort-asc:before { content: '\f15d'; } /* '' */
-.icon-sort-desc:before { content: '\f15e'; } /* '' */
-.icon-file-pdf:before { content: '\f1c1'; } /* '' */
-.icon-file-word:before { content: '\f1c2'; } /* '' */
-.icon-file-image:before { content: '\f1c5'; } /* '' */
-.icon-file-archive:before { content: '\f1c6'; } /* '' */
-.icon-file-audio:before { content: '\f1c7'; } /* '' */
-.icon-toggle-off:before { content: '\f204'; } /* '' */
-.icon-toggle-on:before { content: '\f205'; } /* '' */
-.icon-server:before { content: '\f233'; } /* '' */
-.icon-question-light:before { content: '\f29c'; } /* '' */
+
+.icon-add:before {
+  content: "\e800";
+} /* '' */
+.icon-addsegment:before {
+  content: "\e801";
+} /* '' */
+.icon-bottom:before {
+  content: "\e802";
+} /* '' */
+.icon-picture:before {
+  content: "\e803";
+} /* '' */
+.icon-circle:before {
+  content: "\e804";
+} /* '' */
+.icon-delete:before {
+  content: "\e805";
+} /* '' */
+.icon-done:before {
+  content: "\e806";
+} /* '' */
+.icon-down:before {
+  content: "\e807";
+} /* '' */
+.icon-download:before {
+  content: "\e808";
+} /* '' */
+.icon-dupe:before {
+  content: "\e809";
+} /* '' */
+.icon-error:before {
+  content: "\e80a";
+} /* '' */
+.icon-failed:before {
+  content: "\e80b";
+} /* '' */
+.icon-file:before {
+  content: "\e80c";
+} /* '' */
+.icon-find:before {
+  content: "\e80d";
+} /* '' */
+.icon-folder:before {
+  content: "\e80e";
+} /* '' */
+.icon-force:before {
+  content: "\e80f";
+} /* '' */
+.icon-go:before {
+  content: "\e810";
+} /* '' */
+.icon-import:before {
+  content: "\e811";
+} /* '' */
+.icon-info:before {
+  content: "\e812";
+} /* '' */
+.icon-launch:before {
+  content: "\e813";
+} /* '' */
+.icon-missing:before {
+  content: "\e814";
+} /* '' */
+.icon-network-off:before {
+  content: "\e815";
+} /* '' */
+.icon-network-on:before {
+  content: "\e816";
+} /* '' */
+.icon-pause:before {
+  content: "\e817";
+} /* '' */
+.icon-remsegment:before {
+  content: "\e818";
+} /* '' */
+.icon-rename:before {
+  content: "\e819";
+} /* '' */
+.icon-save:before {
+  content: "\e81a";
+} /* '' */
+.icon-settings:before {
+  content: "\e81b";
+} /* '' */
+.icon-top:before {
+  content: "\e81c";
+} /* '' */
+.icon-unchecked:before {
+  content: "\e81d";
+} /* '' */
+.icon-unlimited:before {
+  content: "\e81e";
+} /* '' */
+.icon-link:before {
+  content: "\e81f";
+} /* '' */
+.icon-up:before {
+  content: "\e820";
+} /* '' */
+.icon-privacy:before {
+  content: "\e821";
+} /* '' */
+.icon-tags:before {
+  content: "\e822";
+} /* '' */
+.icon-attention:before {
+  content: "\e823";
+} /* '' */
+.icon-notification:before {
+  content: "\e824";
+} /* '' */
+.icon-file-video:before {
+  content: "\e825";
+} /* '' */
+.icon-file-generic:before {
+  content: "\e826";
+} /* '' */
+.icon-question-dark:before {
+  content: "\e827";
+} /* '' */
+.icon-forward:before {
+  content: "\e828";
+} /* '' */
+.icon-filter:before {
+  content: "\f0b0";
+} /* '' */
+.icon-donate:before {
+  content: "\f0d6";
+} /* '' */
+.icon-file-doc:before {
+  content: "\f0f6";
+} /* '' */
+.icon-interface:before {
+  content: "\f108";
+} /* '' */
+.icon-folder-1:before {
+  content: "\f115";
+} /* '' */
+.icon-sort-asc:before {
+  content: "\f15d";
+} /* '' */
+.icon-sort-desc:before {
+  content: "\f15e";
+} /* '' */
+.icon-file-pdf:before {
+  content: "\f1c1";
+} /* '' */
+.icon-file-word:before {
+  content: "\f1c2";
+} /* '' */
+.icon-file-image:before {
+  content: "\f1c5";
+} /* '' */
+.icon-file-archive:before {
+  content: "\f1c6";
+} /* '' */
+.icon-file-audio:before {
+  content: "\f1c7";
+} /* '' */
+.icon-toggle-off:before {
+  content: "\f204";
+} /* '' */
+.icon-toggle-on:before {
+  content: "\f205";
+} /* '' */
+.icon-server:before {
+  content: "\f233";
+} /* '' */
+.icon-question-light:before {
+  content: "\f29c";
+} /* '' */
 
 @media (min-resolution: 144dpi) {
-  [class^="icon-file-"]:before, [class*=" icon-file-"]:before {
+  [class^="icon-file-"]:before,
+  [class*=" icon-file-"]:before {
     font-weight: bold !important;
   }
 }
@@ -201,9 +321,11 @@ html, body {
   color: rgb(202, 81, 198);
 }
 
-body, html {
+body,
+html {
   font: message-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu",
+    "Helvetica Neue", sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -218,7 +340,10 @@ html#popup > body {
   background: var(--popup-bgcolor);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font: caption;
   font-weight: bold;
 }
@@ -258,7 +383,11 @@ section {
 }
 
 .virtualtable-column:active {
-  background-image: linear-gradient(to top, rgba(0,0,0,0.03), rgba(128,128,128,0.1));
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.03),
+    rgba(128, 128, 128, 0.1)
+  );
 }
 
 th.virtualtable {
@@ -285,8 +414,12 @@ td.virtualtable {
   font-size: 12px;
   align-items: stretch;
   justify-items: center;
-  background: linear-gradient(to bottom, rgba(128,128,128,0.1) 0%,rgba(0,0,0,0) 100%);
-  border-top: 1px solid rgba(128,128,128,0.6);
+  background: linear-gradient(
+    to bottom,
+    rgba(128, 128, 128, 0.1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-top: 1px solid rgba(128, 128, 128, 0.6);
   display: flex;
   margin-bottom: 1ex;
   overflow: auto;
@@ -313,7 +446,7 @@ td.virtualtable {
   flex-grow: 3;
   margin-right: 2ex;
   padding-right: 1ex;
-  border-right: 1px dotted rgba(128,128,128,0.6);
+  border-right: 1px dotted rgba(128, 128, 128, 0.6);
 }
 
 #statusPrefs {
@@ -339,7 +472,7 @@ td.virtualtable {
   outline: none;
   position: absolute;
   top: 0;
-  width:100%;
+  width: 100%;
 }
 
 .dropdown input {
@@ -368,7 +501,6 @@ td.virtualtable {
   padding-top: 1ex;
   padding-bottom: 1ex;
 }
-
 
 @supports (not (-moz-appearance: none)) {
   .dropdown select {
@@ -479,4 +611,9 @@ input {
   background: var(--general-input-bgcolor);
   border: inherit;
   padding: 2px;
+}
+
+.modal-dialog {
+  color: var(--modal-color);
+  background: var(--modal-bgcolor);
 }
