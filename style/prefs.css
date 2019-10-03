@@ -1,7 +1,8 @@
 /* License: gpl-v2 */
-@import 'common.css';
+@import "common.css";
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -18,7 +19,8 @@ article {
 
 #tabs {
   display: flex;
-  background: url(icon64.png) 1em 50%/32px 32px no-repeat, var(--tile-url) repeat-x, var(--toolbar-bg-color);
+  background: url(icon64.png) 1em 50%/32px 32px no-repeat,
+    var(--tile-url) repeat-x, var(--toolbar-bg-color);
   padding-left: calc(2em + 32px);
   color: var(--general-bgcolor);
 }
@@ -55,7 +57,8 @@ input.tab {
 #tabsel-network:checked ~ #tabs #tabel-network {
   color: var(--general-color) !important;
   background: var(--general-bgcolor);
-  border-top: var(--toolbar-border-width) solid var(--toolbar-active-border-color);
+  border-top: var(--toolbar-border-width) solid
+    var(--toolbar-active-border-color);
 }
 
 #tabs > label {
@@ -69,7 +72,8 @@ input.tab {
 }
 
 #tabs > label:hover:not(:checked) {
-  border-top: var(--toolbar-border-width) solid var(--toolbar-hover-border-color);
+  border-top: var(--toolbar-border-width) solid
+    var(--toolbar-hover-border-color);
   background: var(--toolbar-hover-background);
 }
 
@@ -101,7 +105,7 @@ input.tab {
   text-align: center;
 }
 
-.buttons > button{
+.buttons > button {
   margin: 0 2em;
 }
 
@@ -119,6 +123,18 @@ fieldset {
   flex-direction: column;
   max-width: 60em;
   padding: 1.2em;
+}
+
+.optiongroups,
+fieldset > label {
+  display: flex;
+  align-items: center;
+}
+
+fieldset > label > input,
+fieldset > label > select {
+  margin-left: 1ex;
+  margin-right: 1ex;
 }
 
 legend {
@@ -144,4 +160,25 @@ legend {
   grid-template-columns: auto 1fr;
   grid-column-gap: 1em;
   grid-row-gap: 1ex;
+}
+
+.optiongroups {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1ex;
+}
+
+.optiongroups > div,
+.optiongroups > div > label {
+  display: flex;
+  align-items: center;
+}
+.optiongroups input {
+  margin-left: 1em;
+  margin-right: 0.7ex;
+}
+
+hr {
+  width: 100%;
 }
