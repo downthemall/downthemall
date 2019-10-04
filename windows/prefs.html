@@ -43,20 +43,21 @@
   <article id="tab-general" class="tab">
     <fieldset>
       <legend data-i18n="pref.ui">UI</legend>
-      <div id="pref-button-type">
+      <div class="optiongroups">
         <label data-i18n="pref-button-type"></label>
-        <label><input type="radio" name="pref-button-type" value="popup"> <span data-i18n="pref-button-type-popup"></span></label>
-        <label><input type="radio" name="pref-button-type" value="dta"> <span data-i18n="pref-button-type-dta"></span></label>
-        <label><input type="radio" name="pref-button-type" value="turbo"> <span data-i18n="pref-button-type-turbo"></span></label>
-        <label><input type="radio" name="pref-button-type" value="manager"> <span data-i18n="pref-button-type-manager"></span></label>
-      </div>
-      <hr>
-      <div id="pref-theme">
+        <div id="pref-button-type">
+          <label><input type="radio" name="pref-button-type" value="popup"> <span data-i18n="pref-button-type-popup"></span></label>
+          <label><input type="radio" name="pref-button-type" value="dta"> <span data-i18n="pref-button-type-dta"></span></label>
+          <label><input type="radio" name="pref-button-type" value="turbo"> <span data-i18n="pref-button-type-turbo"></span></label>
+          <label><input type="radio" name="pref-button-type" value="manager"> <span data-i18n="pref-button-type-manager"></span></label>
+        </div>
         <label data-i18n="pref-theme"></label>
-        <label><input type="radio" name="pref-theme" value="default"> <span data-i18n="pref-theme-default"></span></label>
-        <label><input type="radio" name="pref-theme" value="light"> <span data-i18n="pref-theme-light"></span></label>
-        <label><input type="radio" name="pref-theme" value="dark"> <span data-i18n="pref-theme-dark"></span></label>
-      </div>
+        <div id="pref-theme">
+          <label><input type="radio" name="pref-theme" value="default"> <span data-i18n="pref-theme-default"></span></label>
+          <label><input type="radio" name="pref-theme" value="light"> <span data-i18n="pref-theme-light"></span></label>
+          <label><input type="radio" name="pref-theme" value="dark"> <span data-i18n="pref-theme-dark"></span></label>
+          </div>
+        </div>
       <hr>
       <label><input type="checkbox" id="pref-manager-in-popup"> <span data-i18n="pref-manager-in-popup"></span></label>
       <label><input type="checkbox" id="pref-finish-notification"> <span data-i18n="pref-finish-notification"></span></label>
@@ -88,7 +89,8 @@
     </fieldset>
     <fieldset>
       <legend>Translations</legend>
-      <label>Language:
+      <label>
+        <span>Language:</span>
         <select id="languages">
           <option value="default">Browser default</option>
         </select>
@@ -130,14 +132,16 @@
   </article>
 
   <article id="tab-network" class="tab">
-    <fieldset id="network-general">
+    <fieldset>
       <legend data-i18n="pref.netglobal"></legend>
-      <label data-i18n="pref-concurrent-downloads">Concurrent downloads</label>
-      <input id="pref-concurrent-downloads" type="number" min="1" max="10">
-      <label data-i18n="pref-retries"></label>
-      <input id="pref-retries" type="number" min="0" max="100">
-      <label data-i18n="pref-retry-time"></label>
-      <input id="pref-retry-time" type="number" min="1" max="600">
+      <div id="network-general">
+        <label data-i18n="pref-concurrent-downloads">Concurrent downloads</label>
+        <input id="pref-concurrent-downloads" type="number" min="1" max="10">
+        <label data-i18n="pref-retries"></label>
+        <input id="pref-retries" type="number" min="0" max="100">
+        <label data-i18n="pref-retry-time"></label>
+        <input id="pref-retry-time" type="number" min="1" max="600">
+      </div>
     </fieldset>
     <table id="limits" data-singleselect="true">
       <tr>
