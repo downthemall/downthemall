@@ -666,7 +666,7 @@
     "description": "option text"
   },
   "pref_theme_default": {
-    "message": "システム/ブラウザ",
+    "message": "システム/ブラウザのテーマ",
     "description": "option text"
   },
   "pref_theme_light": {
