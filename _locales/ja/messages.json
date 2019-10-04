@@ -574,23 +574,23 @@
     "description": "Preferences/General"
   },
   "pref_button_type": {
-    "message": "DownThemAll! アイコンクリック時:",
+    "message": "DownThemAll! ｱｲｺﾝｸﾘｯｸ時:",
     "description": "label"
   },
   "pref_button_type_dta": {
-    "message": "DownThemAll! 選択画面",
+    "message": "ﾀﾞｳﾝﾛｰﾄﾞ選択画面",
     "description": "label"
   },
   "pref_button_type_manager": {
-    "message": "マネージャを開く",
+    "message": "ﾏﾈｰｼﾞｬを開く",
     "description": "label"
   },
   "pref_button_type_popup": {
-    "message": "メニュー展開",
+    "message": "ﾒﾆｭｰ展開",
     "description": "label"
   },
   "pref_button_type_turbo": {
-    "message": "OneClick! ダウンロード",
+    "message": "OneClick! ﾀﾞｳﾝﾛｰﾄﾞ",
     "description": "label"
   },
   "pref_concurrent_downloads": {
