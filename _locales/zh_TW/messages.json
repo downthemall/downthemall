@@ -657,6 +657,22 @@
     "message": "試著從網頁文字尋找連結〈較慢〉",
     "description": "Preferences/General"
   },
+  "pref_theme": {
+    "message": "主題：",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "暗色",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "系統 / 瀏覽器",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "亮色",
+    "description": "option text"
+  },
   "pref_ui": {
     "message": "操作介面",
     "description": "Preferences/General; group text"
