@@ -657,6 +657,22 @@
     "message": "Versuche Text-Links in Webseiten zu finden (langsamer)",
     "description": "Preferences/General"
   },
+  "pref_theme": {
+    "message": "Theme:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Dunkel",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "System/Browser",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Hell",
+    "description": "option text"
+  },
   "pref_ui": {
     "message": "Benutzeroberfläche",
     "description": "Preferences/General; group text"

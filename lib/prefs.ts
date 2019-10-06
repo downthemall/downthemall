@@ -99,6 +99,5 @@ export class PrefWatcher {
 
   changed(prefs: any, key: string, value: any) {
     this.value = value;
-    return true;
   }
 }

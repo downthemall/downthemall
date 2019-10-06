@@ -657,6 +657,22 @@
     "message": "Bandyti tinklalapio tekste rasti nuorodas (lėčiau)",
     "description": "Preferences/General"
   },
+  "pref_theme": {
+    "message": "Tema:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Tamsi",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "Sistemos/Naršyklės",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Šviesi",
+    "description": "option text"
+  },
   "pref_ui": {
     "message": "Naudotojo sąsaja",
     "description": "Preferences/General; group text"

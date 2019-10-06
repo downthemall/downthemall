@@ -113,4 +113,29 @@ describe("BatchGenerator", function() {
     expect(items[0]).to.equal(gen.preview);
     expect(gen.hasInvalid).to.be.true;
   });
+
+  it("characters", function() {
+    const gen = new BatchGenerator("abc[a:c].lol[1].b");
+    const items = Array.from(gen);
+    expect(items).to.deep.equal([
+      "abca.lol[1].b",
+      "abcb.lol[1].b",
+      "abcc.lol[1].b",
+    ]);
+    expect(items.length).to.equal(gen.length);
+    expect(items[0]).to.equal(gen.preview);
+  });
+
+  it("characters two", function() {
+    const gen = new BatchGenerator("abc[D:G].lol[1].b");
+    const items = Array.from(gen);
+    expect(items).to.deep.equal([
+      "abcD.lol[1].b",
+      "abcE.lol[1].b",
+      "abcF.lol[1].b",
+      "abcG.lol[1].b",
+    ]);
+    expect(items.length).to.equal(gen.length);
+    expect(items[0]).to.equal(gen.preview);
+  });
 });

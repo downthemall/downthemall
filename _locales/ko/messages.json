@@ -191,6 +191,22 @@
     "message": "삭제",
     "description": "button text"
   },
+  "deletefiles": {
+    "message": "파일 삭제",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "삭제",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "정말 다음 파일(들)을 삭제하시겠습니까?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "파일 삭제",
+    "description": "messagebox title"
+  },
   "description": {
     "message": "설명",
     "description": "Description (keep it short); e.g. the description column in select"
@@ -275,9 +291,33 @@
     "message": "잘못된 URL",
     "description": "Error message; single window"
   },
+  "error_noabsolutepath": {
+    "message": "하위 폴더의 절대 경로는 브라우저에서 지원되지 않습니다",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "하위 폴더의 점(.)은 브라우저에서 지원되지 않습니다",
+    "description": "Error Message; select/single window"
+  },
   "error_noItemsSelected": {
     "message": "선택된 항목 없음",
     "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "파일로 내보내기",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "aria2 리스트로 내보내기",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "메타링크로 내보내기",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "텍스트로 내보내기",
+    "description": "menu text"
   },
   "extensionDescription": {
     "message": "브라우저용 대량 다운로더",
@@ -330,6 +370,10 @@
   "force_start": {
     "message": "강제 시작",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "파일에서 가져오기",
+    "description": "menu text"
   },
   "information_title": {
     "message": "정보",
@@ -529,16 +573,32 @@
     "message": "새 다운로드를 즉시 시작하는 대신 일시중지로 추가",
     "description": "Preferences/General"
   },
+  "pref_button_type": {
+    "message": "DownThemAll! 버튼:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "DownThemAll! 선택",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "관리자 열기",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "팝업 메뉴",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "OneClick!",
+    "description": "label"
+  },
   "pref_concurrent_downloads": {
     "message": "동시 다운로드",
     "description": "Preferences/Network"
   },
   "pref_finish_notification": {
     "message": "다운로드 대기열이 끝나면 알림 표시",
-    "description": "Preferences/General"
-  },
-  "pref_global_turbo": {
-    "message": "브라우저 버튼을 OneClick!으로 작동",
     "description": "Preferences/General"
   },
   "pref_hide_context": {
@@ -548,6 +608,10 @@
   "pref_manager": {
     "message": "관리자",
     "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "새 팝업 창에 관리자 열기",
+    "description": "checkbox text"
   },
   "pref_manager_tooltip": {
     "message": "관리자 탭에서 툴팁 표시",
@@ -573,9 +637,21 @@
     "message": "다시 시작한 후 누락된 다운로드 제거",
     "description": "Preferences/General"
   },
+  "pref_retries": {
+    "message": "일시적인 오류에 대한 다운로드 재시도 횟수",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "재시도 간격 (분)",
+    "description": "pref text"
+  },
   "pref_show_urls": {
     "message": "이름 대신 URL 표시",
     "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "소리 재생",
+    "description": "checkbox text"
   },
   "pref_text_links": {
     "message": "웹 사이트 텍스트에서 링크를 찾도록 시도 (느림)",
@@ -895,6 +971,20 @@
     "message": "계속",
     "description": "Action for resuming a download"
   },
+  "retrying": {
+    "message": "재시도중",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "재시도중 - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
   "running": {
     "message": "실행중",
     "description": "Status text"
@@ -942,6 +1032,18 @@
   "set_mask": {
     "message": "이름 바꾸기 마스크 설정",
     "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "새 이름 바꾸기 마스크 설정",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "참조 페이지 설정",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "새 참조 페이지 설정",
+    "description": "dialog text"
   },
   "single_batchexamples": {
     "message": "일괄 처리가 지원됩니다, 예:",
@@ -1123,6 +1225,14 @@
     "message": "새 다운로드가 시작되지 않습니다",
     "description": "Status bar tooltip; manager network icon"
   },
+  "subfolder": {
+    "message": "하위 폴더",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "다운로드 디렉토리 내의 이 하위 폴더에 파일을 저장합니다",
+    "description": "placeholder text within an input box"
+  },
   "title": {
     "message": "제목",
     "description": "Column text; Title label (short)"
@@ -1166,5 +1276,9 @@
   "useonlyonce": {
     "message": "한번만",
     "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "사용자 취소",
+    "description": "Error message"
   }
 }

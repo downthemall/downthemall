@@ -121,28 +121,41 @@ class Gatherer {
 
   *collectImageInternal(img: HTMLImageElement) {
     try {
-      const src = img.currentSrc || img.src;
-      const item = this.makeItem(src, img);
-      if (item) {
-        item.fileName = "";
-        item.description = item.title;
-        yield item;
-      }
-
-      const {srcset} = img;
-      if (!srcset) {
-        return;
-      }
-      const imgs = srcset.split(",").flatMap(e => {
-        const idx = e.lastIndexOf(" ");
-        return (idx > 0 ? e.slice(0, idx) : e).trim();
-      });
-      for (const i of imgs) {
-        const item = this.makeItem(i, img);
+      {
+        const {src} = img;
+        const item = this.makeItem(src, img);
         if (item) {
           item.fileName = "";
           item.description = item.title;
           yield item;
+        }
+      }
+      {
+        const {currentSrc} = img;
+        const item = this.makeItem(currentSrc, img);
+        if (item) {
+          item.fileName = "";
+          item.description = item.title;
+          yield item;
+        }
+      }
+
+      {
+        const {srcset} = img;
+        if (!srcset) {
+          return;
+        }
+        const imgs = srcset.split(",").flatMap(e => {
+          const idx = e.lastIndexOf(" ");
+          return (idx > 0 ? e.slice(0, idx) : e).trim();
+        });
+        for (const i of imgs) {
+          const item = this.makeItem(i, img);
+          if (item) {
+            item.fileName = "";
+            item.description = item.title;
+            yield item;
+          }
         }
       }
     }
