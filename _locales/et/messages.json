@@ -657,6 +657,22 @@
     "message": "Ürita leida linke veebisaidi tekstist (aeglasem)",
     "description": "Preferences/General"
   },
+  "pref_theme": {
+    "message": "Teema:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Tume",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "Süsteem/Veebilehitseja",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Hele",
+    "description": "option text"
+  },
   "pref_ui": {
     "message": "Kasutajaliides",
     "description": "Preferences/General; group text"
