@@ -657,6 +657,22 @@
     "message": "Tenter de trouver des liens dans le texte du site (lent)",
     "description": "Preferences/General"
   },
+  "pref_theme": {
+    "message": "Thème:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Sombre",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "Système/Navigateur",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Clair",
+    "description": "option text"
+  },
   "pref_ui": {
     "message": "Interface utilisateur",
     "description": "Preferences/General; group text"
