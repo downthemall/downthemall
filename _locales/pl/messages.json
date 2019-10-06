@@ -156,7 +156,7 @@
     "description": "Filter label for the Archives filter"
   },
   "deffilter_aud": {
-    "message": "Audio (mp3, flac, wav, …)",
+    "message": "Dźwięk (mp3, flac, wav, …)",
     "description": "Filter label for the Audio filter"
   },
   "deffilter_bin": {
@@ -656,6 +656,22 @@
   "pref_text_links": {
     "message": "Spróbuj znaleźć linki w treści strony internetowej (wolniejsze)",
     "description": "Preferences/General"
+  },
+  "pref_theme": {
+    "message": "Motyw:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Ciemny",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "Systemowy/Przeglądarki",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Jasny",
+    "description": "option text"
   },
   "pref_ui": {
     "message": "Interfejs Użytkownika",
