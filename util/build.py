@@ -27,7 +27,7 @@ LICENSED = set((".css", ".html", ".js", "*.ts"))
 IGNORED = set((".DS_Store", "Thumbs.db"))
 
 PERM_IGNORED_FX = set(("downloads.shelf", "webRequest", "webRequestBlocking"))
-PERM_IGNORED_CHROME = set(("menus", "sessions"))
+PERM_IGNORED_CHROME = set(("menus", "sessions", "theme"))
 
 SCRIPTS = [
   "yarn build:regexps",

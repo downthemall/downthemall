@@ -107,7 +107,7 @@ body > * {
   padding: 0;
   padding-left: calc(2em + 32px);
   color: black;
-  background: url(icon32.png) 1em 0/32px 32px no-repeat, url(tile.png) repeat-x, var(--toolbar-bg-color);
+  background: url(icon32.png) 1em 0/32px 32px no-repeat, var(--tile-url) repeat-x, var(--toolbar-bg-color);
   font: caption;
   font-size: 150%;
   font-weight: bold;
@@ -117,7 +117,7 @@ body > * {
 }
 @media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi) {
   #tabs {
-    background: url(icon64.png) 1em 50%/32px 32px no-repeat, url(tile.png) repeat-x, var(--toolbar-bg-color);
+    background: url(icon64.png) 1em 50%/32px 32px no-repeat, var(--tile-url) repeat-x, var(--toolbar-bg-color);
   }
 }
 
@@ -145,27 +145,27 @@ body > * {
   -webkit-user-select: none;
   user-select: none;
   background: var(--toolbar-bg-color);
-  color: white;
+  color: var(--general-color);
   min-width: 10em;
   padding: 1ex;
   padding-left: 1em;
   cursor: pointer;
   border: 0;
   border-top: var(--toolbar-border-width) solid transparent;
-  border-left: 1px solid rgba(255,255,255,0.3);
-  border-right: 1px solid rgba(255,255,255,0.3);
+  border-left: var(--toolbar-border);
+  border-right: var(--toolbar-border);
   transition: border 1s;
 }
 
 .tab:not(.active):not(.disabled):hover {
   border-top: var(--toolbar-border-width) solid var(--toolbar-hover-border-color);
-  color: rgb(255, 226, 167);
+  color: var(--general-color);
   background: var(--toolbar-hover-background);
 }
 
 .tab.active {
-  color: black;
-  background: white;
+  color: var(--general-color);
+  background: var(--table-head-bgcolor);
   border-top: var(--toolbar-border-width) solid var(--toolbar-active-border-color);
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;

@@ -191,6 +191,22 @@
     "message": "Entfernen",
     "description": "button text"
   },
+  "deletefiles": {
+    "message": "Dateien löschen",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Löschen",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Wirklich die folgenden Dateien löschen?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Dateien Löschen",
+    "description": "messagebox title"
+  },
   "description": {
     "message": "Beschreibung",
     "description": "Description (keep it short); e.g. the description column in select"
@@ -275,9 +291,33 @@
     "message": "Ungültige URL",
     "description": "Error message; single window"
   },
+  "error_noabsolutepath": {
+    "message": "Absolute Pfade für Unterverzeichnisse sind durch Browser nicht unterstützt",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Punkte (.) in Unterverzeichnissen sind durch Browser nicht unterstützt",
+    "description": "Error Message; select/single window"
+  },
   "error_noItemsSelected": {
     "message": "Nichts ausgewählt",
     "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "In Datei exportieren",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Als aria2 Liste exportieren",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Als Metalink exportieren",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Als Text exportieren",
+    "description": "menu text"
   },
   "extensionDescription": {
     "message": "Der Massen-Downloader für Deinen Browser",
@@ -330,6 +370,10 @@
   "force_start": {
     "message": "Start erzwingen",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "Aus Datei importieren",
+    "description": "menu text"
   },
   "information_title": {
     "message": "Information",
@@ -442,7 +486,7 @@
     "description": "Action for moving a download up"
   },
   "nagging_message": {
-    "message": "Du hast bisher $DOWNLOADS$ Downloads mit DownThemAll! hinzugefügt. Als regelmäßiger Benutzer können Sie eine Spende in Betracht ziehen um die Weiterentwicklung zu unterstützen. Danke!",
+    "message": "Sie haben bisher $DOWNLOADS$ Downloads mit DownThemAll! hinzugefügt. Als regelmäßiger Benutzer können Sie eine Spende in Betracht ziehen um die Weiterentwicklung zu unterstützen. Danke!",
     "description": "Donation nagging message; displayed as a notification bar in manager",
     "placeholders": {
       "downloads": {
@@ -529,16 +573,32 @@
     "message": "Neue Downloads immer pausiert hinzufügen, anstatt sie direkt zu starten",
     "description": "Preferences/General"
   },
+  "pref_button_type": {
+    "message": "DownThemAll! Button:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "DownThemAll! Auswahl",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Manager öffnen",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Popup-Menü",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "OneClick!",
+    "description": "label"
+  },
   "pref_concurrent_downloads": {
     "message": "Gleichzeitige Downloads",
     "description": "Preferences/Network"
   },
   "pref_finish_notification": {
     "message": "Benachrichtigung anzeigen, wenn die Warteschlange fertig heruntergeladen ist",
-    "description": "Preferences/General"
-  },
-  "pref_global_turbo": {
-    "message": "Browser Button soll OneClick! sein",
     "description": "Preferences/General"
   },
   "pref_hide_context": {
@@ -548,6 +608,10 @@
   "pref_manager": {
     "message": "Manager",
     "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "Manager in neuem Fenster öffnen",
+    "description": "checkbox text"
   },
   "pref_manager_tooltip": {
     "message": "Keine Tooltips im Manager-Tab anzeigen",
@@ -573,13 +637,41 @@
     "message": "Fehlende Downloads nach einem Neustart automatisch entfernen",
     "description": "Preferences/General"
   },
+  "pref_retries": {
+    "message": "Anzahl der Neuversuche bei vorübergehenden Fehlern",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Neuversuch Alle (in Minuten)",
+    "description": "pref text"
+  },
   "pref_show_urls": {
     "message": "URLs anstelle von Namen anzeigen",
     "description": "Preferences/General"
   },
+  "pref_sounds": {
+    "message": "Sounds abspielen",
+    "description": "checkbox text"
+  },
   "pref_text_links": {
     "message": "Versuche Text-Links in Webseiten zu finden (langsamer)",
     "description": "Preferences/General"
+  },
+  "pref_theme": {
+    "message": "Theme:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Dunkel",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "System/Browser",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Hell",
+    "description": "option text"
   },
   "pref_ui": {
     "message": "Benutzeroberfläche",
@@ -895,6 +987,20 @@
     "message": "Fortsetzen",
     "description": "Action for resuming a download"
   },
+  "retrying": {
+    "message": "Neuversuch",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Neuversuch - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
   "running": {
     "message": "Laufend",
     "description": "Status text"
@@ -942,6 +1048,18 @@
   "set_mask": {
     "message": "Umbenennungsmaske setzen",
     "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Neue Umbenennungsmaske setzen",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Referrer setzen",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Neuen Referrer setzen",
+    "description": "dialog text"
   },
   "single_batchexamples": {
     "message": "Batches sind unterstützt, z.B.:",
@@ -1123,6 +1241,14 @@
     "message": "Neue Downloads werden nicht gestartet",
     "description": "Status bar tooltip; manager network icon"
   },
+  "subfolder": {
+    "message": "Unterverzeichnis:",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Dateien in diesem Unterverzeichnis im Download-Ordner speichern",
+    "description": "placeholder text within an input box"
+  },
   "title": {
     "message": "Titel",
     "description": "Column text; Title label (short)"
@@ -1166,5 +1292,9 @@
   "useonlyonce": {
     "message": "Einmalig",
     "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Benutzerabbruch",
+    "description": "Error message"
   }
 }

@@ -2,6 +2,7 @@
 // License: MIT
 
 import { localize } from "../lib/i18n";
+import "./theme";
 
 declare let browser: any;
 declare let chrome: any;

@@ -25,6 +25,7 @@ import { ItemDelta } from "../lib/select";
 // eslint-disable-next-line no-unused-vars
 import { TableConfig } from "../uikit/lib/config";
 import { validateSubFolder as validateSubfolder } from "../lib/util";
+import "./theme";
 
 const PORT: RawPort = runtime.connect(null, { name: "select" });
 

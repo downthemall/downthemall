@@ -197,7 +197,6 @@ export default class Renamer {
     // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self: any = this;
     const baseMask = subfolder ? `${subfolder}/${mask}` : mask;
-    console.log(mask, subfolder, baseMask);
     return sanitizePath(baseMask.replace(REPLACE_EXPR, function(type: string) {
       let prop = type.substr(1, type.length - 2);
       const flat = prop.startsWith("flat");

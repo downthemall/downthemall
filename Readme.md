@@ -1,3 +1,7 @@
+
+![DownThemAll!](https://raw.githubusercontent.com/downthemall/downthemall/master/style/icon96.png)
+
+
 # DownThemAll! WE
 
 The DownThemAll! WebExtension.

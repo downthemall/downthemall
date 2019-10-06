@@ -101,7 +101,10 @@ export async function select(links: BaseItem[], media: BaseItem[]) {
   tracker.track(window.id, null);
   try {
     const port = await Promise.race<Port>([
-      new Promise<Port>(resolve => Bus.oncePort("select", resolve)),
+      new Promise<Port>(resolve => Bus.oncePort("select", port => {
+        resolve(port);
+        return true;
+      })),
       timeout<Port>(5 * 1000)]);
     if (!port.isSelf) {
       throw Error("Invalid sender connected");

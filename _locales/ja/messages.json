@@ -8,7 +8,7 @@
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
   "addpaused": {
-    "message": "一時停止状態で追加",
+    "message": "待機状態で追加",
     "description": "Action: Add paused"
   },
   "add_download": {
@@ -20,15 +20,15 @@
     "description": "Button text (adding filters, limits and such)"
   },
   "add_paused_once": {
-    "message": "今回は一時停止で追加",
+    "message": "今回は待機状態で追加",
     "description": "Checkbox label"
   },
   "add_paused_question": {
-    "message": "この決定を覚えて、今後新しいダウンロードを常に一時停止で追加しますか？",
+    "message": "この決定を覚えて、今後新しいダウンロードを常に待機状態で追加しますか？",
     "description": "Messagebox text"
   },
   "add_paused_title": {
-    "message": "常に一時停止で追加しますか？",
+    "message": "常に待機状態で追加しますか？",
     "description": "Title for the add-paused dialog"
   },
   "ask_again_later": {
@@ -570,27 +570,27 @@
     "description": "Window/tab title; Preferences"
   },
   "pref_add_paused": {
-    "message": "すぐに開始せず、新しいダウンロードを一時停止状態で追加する",
+    "message": "すぐに開始せず、新しいダウンロードを待機状態で追加する",
     "description": "Preferences/General"
   },
   "pref_button_type": {
-    "message": "DownThemAll! アイコンクリック時:",
+    "message": "DownThemAll! ｱｲｺﾝｸﾘｯｸ時:",
     "description": "label"
   },
   "pref_button_type_dta": {
-    "message": "DownThemAll! 選択画面",
+    "message": "ﾀﾞｳﾝﾛｰﾄﾞ選択画面",
     "description": "label"
   },
   "pref_button_type_manager": {
-    "message": "マネージャを開く",
+    "message": "ﾏﾈｰｼﾞｬを開く",
     "description": "label"
   },
   "pref_button_type_popup": {
-    "message": "メニュー展開",
+    "message": "ﾒﾆｭｰ展開",
     "description": "label"
   },
   "pref_button_type_turbo": {
-    "message": "OneClick! ダウンロード",
+    "message": "OneClick! ﾀﾞｳﾝﾛｰﾄﾞ",
     "description": "label"
   },
   "pref_concurrent_downloads": {
@@ -654,8 +654,24 @@
     "description": "checkbox text"
   },
   "pref_text_links": {
-    "message": "Webサイトの文字列でリンクを見つけてみる (但し、遅い)",
+    "message": "Webサイトの文字列でリンクを抽出する (但し、遅い)",
     "description": "Preferences/General"
+  },
+  "pref_theme": {
+    "message": "テーマ:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "ダーク",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "システム/ブラウザのテーマ",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "ライト",
+    "description": "option text"
   },
   "pref_ui": {
     "message": "ユーザーインターフェイス",
@@ -820,7 +836,7 @@
     "description": "Messagebox text"
   },
   "remove_selected_downloads": {
-    "message": "選択を削除",
+    "message": "選択した項目を削除",
     "description": "Menu text"
   },
   "rename": {

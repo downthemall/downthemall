@@ -54,6 +54,9 @@ export class Preroller {
   }
 
   get shouldPreroll() {
+    if (CHROME) {
+      return false;
+    }
     const {uURL, renamer} = this.download;
     const {pathname, search, host} = uURL;
     if (PREROLL_NOPE.has(host)) {
@@ -167,39 +170,15 @@ export class Preroller {
       rv.mime = type.essence;
     }
 
-    const {p_ext: ext} = this.download.renamer;
     const dispHeader = headers.get("content-disposition");
     if (dispHeader) {
       const file = CDPARSER.parse(dispHeader);
       // Sanitize
       rv.name = sanitizePath(file.replace(/[/\\]+/g, "-"));
     }
-    else if (!ext || PREROLL_SEARCHEXTS.has(ext.toLocaleLowerCase())) {
-      const {searchParams} = this.download.uURL;
-      let detected = "";
-      for (const [, value] of searchParams) {
-        if (!NAME_TESTER.test(value)) {
-          continue;
-        }
-        const p = parsePath(value);
-        if (!p.base || !p.ext) {
-          continue;
-        }
-        if (!MimeDB.hasExtension(p.ext)) {
-          continue;
-        }
-        if (rv.mime) {
-          const mime = MimeDB.getMime(rv.mime);
-          if (mime && !mime.extensions.has(p.ext.toLowerCase())) {
-            continue;
-          }
-        }
-        const sanitized = sanitizePath(p.name);
-        if (sanitized.length <= detected.length) {
-          continue;
-        }
-        detected = sanitized;
-      }
+    else {
+      const detected = Preroller.maybeFindNameFromSearchParams(
+        this.download, rv);
       if (detected) {
         rv.name = detected;
       }
@@ -230,5 +209,44 @@ export class Preroller {
     /* eslint-enable no-magic-numbers */
 
     return rv;
+  }
+
+
+  static maybeFindNameFromSearchParams(
+      download: Download, res: PrerollResults) {
+    const {p_ext: ext} = download.renamer;
+    if (ext && !PREROLL_SEARCHEXTS.has(ext.toLocaleLowerCase())) {
+      return undefined;
+    }
+    return Preroller.findNameFromSearchParams(download.uURL, res.mime);
+  }
+
+  static findNameFromSearchParams(url: URL, mimetype?: string) {
+    const {searchParams} = url;
+    let detected = "";
+    for (const [, value] of searchParams) {
+      if (!NAME_TESTER.test(value)) {
+        continue;
+      }
+      const p = parsePath(value);
+      if (!p.base || !p.ext) {
+        continue;
+      }
+      if (!MimeDB.hasExtension(p.ext)) {
+        continue;
+      }
+      if (mimetype) {
+        const mime = MimeDB.getMime(mimetype);
+        if (mime && !mime.extensions.has(p.ext.toLowerCase())) {
+          continue;
+        }
+      }
+      const sanitized = sanitizePath(p.name);
+      if (sanitized.length <= detected.length) {
+        continue;
+      }
+      detected = sanitized;
+    }
+    return detected;
   }
 }

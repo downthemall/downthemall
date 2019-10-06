@@ -11,272 +11,6 @@
     "message": "Pridėti kaip pristabdytą",
     "description": "Action: Add paused"
   },
-  "cancel": {
-    "message": "Atsisakyti",
-    "description": "Button text: Cancel"
-  },
-  "canceled": {
-    "message": "Atšaukta",
-    "description": "Download status text"
-  },
-  "colConnections": {
-    "message": "Lygiagrečios jungtys",
-    "description": "Table column in prefs/network"
-  },
-  "colDomain": {
-    "message": "Domenas",
-    "description": "Table column in manager"
-  },
-  "colETA": {
-    "message": "Numat. laikas",
-    "description": "Table column in manager"
-  },
-  "colNameURL": {
-    "message": "Pavadinimas/URL",
-    "description": "Table column in manager"
-  },
-  "colPercent": {
-    "message": "%",
-    "description": "Table column in manager"
-  },
-  "colProgress": {
-    "message": "Eiga",
-    "description": "Table column in manager"
-  },
-  "colSegments": {
-    "message": "Segmentai",
-    "description": "Table column in manager"
-  },
-  "colSize": {
-    "message": "Dydis",
-    "description": "Table column in manager"
-  },
-  "colSpeed": {
-    "message": "Greitis",
-    "description": "Table column in manager"
-  },
-  "CRASH": {
-    "message": "Vidinė naršyklės klaida",
-    "description": "Error Message"
-  },
-  "delete": {
-    "message": "Trinti",
-    "description": "button text"
-  },
-  "description": {
-    "message": "Aprašymas",
-    "description": "Description (keep it short); e.g. the description column in select"
-  },
-  "donate": {
-    "message": "Paaukoti!",
-    "description": "Donate button"
-  },
-  "done": {
-    "message": "Baigta",
-    "description": "Status text"
-  },
-  "download": {
-    "message": "Parsisiuntimas",
-    "description": "Download (noun); e.g. Download column in select"
-  },
-  "extensionDescription": {
-    "message": "Masinio parsisiuntimo programa jūsų naršyklėje",
-    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
-  },
-  "fastfiltering": {
-    "message": "Greitas filtravimas",
-    "description": "Label for Fast Filtering input"
-  },
-  "FILE_FAILED": {
-    "message": "Failo prieigos klaida",
-    "description": "Error Message"
-  },
-  "finishing": {
-    "message": "Baigiama",
-    "description": "Status text"
-  },
-  "links": {
-    "message": "Nuorodos",
-    "description": "Links tab label (short); select window"
-  },
-  "mask": {
-    "message": "Kaukė",
-    "description": "Renaming mask (short); used in e.g. select"
-  },
-  "media": {
-    "message": "Media",
-    "description": "Media label (short)"
-  },
-  "missing": {
-    "message": "Nėra",
-    "description": "Status text in manager"
-  },
-  "NETWORK_FAILED": {
-    "message": "Tinklo triktis",
-    "description": "Error Message"
-  },
-  "ok": {
-    "message": "Gerai",
-    "description": "Button text; Used in message boxes"
-  },
-  "paused": {
-    "message": "Pristabdyta",
-    "description": "Status text; manager"
-  },
-  "queued": {
-    "message": "Laukia",
-    "description": "Status text"
-  },
-  "referrer": {
-    "message": "Šaltinis",
-    "description": "Label for \"Referrer\""
-  },
-  "remember": {
-    "message": "Atsiminti šį sprendimą",
-    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
-  },
-  "rename": {
-    "message": "Pervardinti",
-    "description": "UI for renaming; currently unused"
-  },
-  "renmask": {
-    "message": "Pervardinimo kaukė",
-    "description": "Renaming mask (long)"
-  },
-  "reset": {
-    "message": "Atkurti",
-    "description": "Button text; pref window"
-  },
-  "running": {
-    "message": "Vyksta",
-    "description": "Status text"
-  },
-  "save": {
-    "message": "Išsaugoti",
-    "description": "Button text; e.g. prefs/Network"
-  },
-  "search": {
-    "message": "Ieškoti…",
-    "description": "Placeholder text; manager status search field"
-  },
-  "SERVER_BAD_CONTENT": {
-    "message": "Nerasta",
-    "description": "Error message"
-  },
-  "SERVER_FAILED": {
-    "message": "Serverio klaida",
-    "description": "Error message"
-  },
-  "SERVER_FORBIDDEN": {
-    "message": "Draudžiama",
-    "description": "Error message"
-  },
-  "SERVER_UNAUTHORIZED": {
-    "message": "Nesankcionuota",
-    "description": "Error message"
-  },
-  "sizeB": {
-    "message": "$S$B",
-    "description": "Size formatting; bytes",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100b"
-      }
-    }
-  },
-  "sizeGB": {
-    "message": "$S$GB",
-    "description": "Size formatting; giga bytes",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.200GB"
-      }
-    }
-  },
-  "sizeKB": {
-    "message": "$S$KB",
-    "description": "Size formatting; kilo bytes",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.2KB"
-      }
-    }
-  },
-  "sizeMB": {
-    "message": "$S$MB",
-    "description": "Size formatting; mega bytes",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.22MB"
-      }
-    }
-  },
-  "sizePB": {
-    "message": "$S$PB",
-    "description": "Size formatting; peta bytes (you never know)",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.212PB"
-      }
-    }
-  },
-  "sizeTB": {
-    "message": "$S$TB",
-    "description": "Size formatting; tera bytes (you never know)",
-    "placeholders": {
-      "s": {
-        "content": "$1",
-        "example": "100.002TB"
-      }
-    }
-  },
-  "speedB": {
-    "message": "$SPEED$b/s",
-    "description": "Speed formatting; bytes",
-    "placeholders": {
-      "speed": {
-        "content": "$1",
-        "example": "100b/s"
-      }
-    }
-  },
-  "speedKB": {
-    "message": "$SPEED$KB/s",
-    "description": "Speed formatting; kilo bytes",
-    "placeholders": {
-      "speed": {
-        "content": "$1",
-        "example": "100.1KB/s"
-      }
-    }
-  },
-  "speedMB": {
-    "message": "$SPEED$MB/s",
-    "description": "Speed formatting; mega bytes",
-    "placeholders": {
-      "speed": {
-        "content": "$1",
-        "example": "100.20MB/s"
-      }
-    }
-  },
-  "title": {
-    "message": "Antraštė",
-    "description": "Column text; Title label (short)"
-  },
-  "unlimited": {
-    "message": "Neribojama",
-    "description": "Option text; Prefs/Network"
-  },
-  "useonlyonce": {
-    "message": "Naud. tik kartą",
-    "description": "Label for Use-Once checkboxes"
-  },
   "add_download": {
     "message": "Pridėti parsisiuntimą",
     "description": "Action for adding a download"
@@ -329,6 +63,14 @@
     "message": "Paketinis parsisiuntimas",
     "description": "Messagebox title for batch confirmations"
   },
+  "cancel": {
+    "message": "Atsisakyti",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "Atšaukta",
+    "description": "Download status text"
+  },
   "cancel_download": {
     "message": "Atsisakyti",
     "description": "Action to cancel downloads, e.g. from the context menu"
@@ -345,6 +87,42 @@
     "message": "Pasirinkti pažymėtus elementus",
     "description": "Menu text"
   },
+  "colConnections": {
+    "message": "Lygiagrečios jungtys",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "Domenas",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "Numat. laikas",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "Pavadinimas/URL",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "Eiga",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Segmentai",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Dydis",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Greitis",
+    "description": "Table column in manager"
+  },
   "conflict_overwrite": {
     "message": "Perrašyti",
     "description": "Option text; prefs/general"
@@ -356,6 +134,10 @@
   "conflict_rename": {
     "message": "Pervardinti",
     "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "Vidinė naršyklės klaida",
+    "description": "Error Message"
   },
   "create_filter": {
     "message": "Kurti filtrą",
@@ -405,25 +187,57 @@
     "message": "Video (mp4, webm, mkv, …)",
     "description": "Filter label for the Videos filter"
   },
+  "delete": {
+    "message": "Trinti",
+    "description": "button text"
+  },
+  "deletefiles": {
+    "message": "Šalinti failus",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Šalinti",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Tikrai norite ištrinti šiuos failus?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Šalinti failus",
+    "description": "messagebox title"
+  },
+  "description": {
+    "message": "Aprašymas",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
   "disable_other_filters": {
     "message": "Išjungti kitus",
     "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "Paaukoti!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Baigta",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "Parsisiuntimas",
+    "description": "Download (noun); e.g. Download column in select"
   },
   "download_verb": {
     "message": "Parsisiųsti",
     "description": "Download (verb/action); e.g. in single and select buttons"
   },
-  "dta_regular_all": {
-    "message": "DownThemAll! - Visoms kortelėms",
-    "description": "Menu text"
-  },
-  "dta_turbo_all": {
-    "message": "OneClick! - Visoms kortelėms",
-    "description": "Menu text"
-  },
   "dta_regular": {
     "message": "DownThemAll!",
     "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "DownThemAll! - Visoms kortelėms",
+    "description": "Menu text"
   },
   "dta_regular_image": {
     "message": "Išsaugoti vaizdą su DownThemAll!",
@@ -444,6 +258,10 @@
   "dta_turbo": {
     "message": "OneClick!",
     "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "OneClick! - Visoms kortelėms",
+    "description": "Menu text"
   },
   "dta_turbo_image": {
     "message": "Išsaugoti vaizdą su OneClick!",
@@ -473,13 +291,49 @@
     "message": "Klaidingas URL",
     "description": "Error message; single window"
   },
+  "error_noabsolutepath": {
+    "message": "Naršyklės nepalaiko absoliučių kelių pakatalogiams",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Naršyklės nepalaiko taškų (.) pakatalogiams",
+    "description": "Error Message; select/single window"
+  },
   "error_noItemsSelected": {
     "message": "Nieko nepasirinkta",
     "description": "Error Message; select window"
   },
+  "export": {
+    "message": "Eksportuoti į failą",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Eksportuoti kaip aria2 sąrašą",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Eksportuoti kaip Metalink",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Eksportuoti kaip tekstą",
+    "description": "menu text"
+  },
+  "extensionDescription": {
+    "message": "Masinio parsisiuntimo programa jūsų naršyklėje",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "Greitas filtravimas",
+    "description": "Label for Fast Filtering input"
+  },
   "fastfilter_placeholder": {
     "message": "Pakaitos simbolių išraiška arba reguliari išraiška",
     "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "Failo prieigos klaida",
+    "description": "Error Message"
   },
   "filter_at_least_one": {
     "message": "Privalote nurodyti bent vieną filtro tipą!",
@@ -497,6 +351,10 @@
     "message": "Filtro etiketė",
     "description": "Message box label"
   },
+  "filter_types": {
+    "message": "Filtrų tipai",
+    "description": "Message box label"
+  },
   "filter_type_link": {
     "message": "Nuorodos filtras",
     "description": "Message box checkbox label"
@@ -505,13 +363,17 @@
     "message": "Media filtras",
     "description": "Message box checkbox label"
   },
-  "filter_types": {
-    "message": "Filtrų tipai",
-    "description": "Message box label"
+  "finishing": {
+    "message": "Baigiama",
+    "description": "Status text"
   },
   "force_start": {
     "message": "Pradėti priverstinai",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "Importuoti iš failo",
+    "description": "menu text"
   },
   "information_title": {
     "message": "Informacija",
@@ -557,6 +419,14 @@
     "message": "Apribota iki",
     "description": "Label text; used in prefs/network"
   },
+  "links": {
+    "message": "Nuorodos",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "Menedžeris",
+    "description": "Menu text"
+  },
   "manager_status_items": {
     "message": "Baigta $COMPLETE$ iš $TOTAL$ parsisiuntimų ($SHOWING$ rodoma), $RUNNING$ vyksta",
     "description": "Status bar text; manager",
@@ -579,17 +449,25 @@
       }
     }
   },
-  "manager_short": {
-    "message": "Menedžeris",
-    "description": "Menu text"
-  },
   "manager_title": {
     "message": "DownThemAll! menedžeris",
     "description": "Window/tab title"
   },
+  "mask": {
+    "message": "Kaukė",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
   "mask_default": {
     "message": "Numatytoji kaukė",
     "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "Media",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Nėra",
+    "description": "Status text in manager"
   },
   "move_bottom": {
     "message": "Į pabaigą",
@@ -617,17 +495,21 @@
       }
     }
   },
+  "NETWORK_FAILED": {
+    "message": "Tinklo triktis",
+    "description": "Error Message"
+  },
   "never_ask_again": {
     "message": "Daugiau manęs neklausti",
     "description": "Donation button"
   },
-  "no_links": {
-    "message": "Nuorodų nerasta!",
-    "description": "Notification text"
-  },
   "noitems_label": {
     "message": "Nėra pažymėtų elementų",
     "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "Nuorodų nerasta!",
+    "description": "Notification text"
   },
   "numitems_label": {
     "message": "$ITEMS$ pažymėtų elementų…",
@@ -638,6 +520,10 @@
         "example": "1000"
       }
     }
+  },
+  "ok": {
+    "message": "Gerai",
+    "description": "Button text; Used in message boxes"
   },
   "open_directory": {
     "message": "Atverti katalogą",
@@ -663,69 +549,13 @@
     "message": "Tinklas",
     "description": "Pref tab text"
   },
+  "paused": {
+    "message": "Pristabdyta",
+    "description": "Status text; manager"
+  },
   "pause_download": {
     "message": "Pristabdyti",
     "description": "Action for pausing a download"
-  },
-  "pref_add_paused": {
-    "message": "Naujus parsisiuntimus pridėti kaip pristabdytus, o ne paleisti juos iš karto",
-    "description": "Preferences/General"
-  },
-  "pref_concurrent_downloads": {
-    "message": "Lygiagretūs siuntimai",
-    "description": "Preferences/Network"
-  },
-  "pref_finish_notification": {
-    "message": "Rodyti pranešimą, kai eilėje neliks parsisiuntimų",
-    "description": "Preferences/General"
-  },
-  "pref_global_turbo": {
-    "message": "Naršyklės mygtukas turėtų būti OneClick!",
-    "description": "Preferences/General"
-  },
-  "pref_hide_context": {
-    "message": "Kontekstiniame meniu nerodyti bendrųjų elementų",
-    "description": "Preferences/General"
-  },
-  "pref_manager_tooltip": {
-    "message": "Rodyti patarimus Menedžerio kortelėje",
-    "description": "Preferences/General"
-  },
-  "pref_open_manager_on_queue": {
-    "message": "Atidaryti Menedžerio kortelę po parsisiuntimo pridėjimo",
-    "description": "Preferences/General"
-  },
-  "pref_queue_notification": {
-    "message": "Rodyti pranešimą po naujų parsisiuntimų pridėjimo",
-    "description": "Preferences/General"
-  },
-  "pref_remove_missing_on_init": {
-    "message": "Šalinti nepavykusius parsisiuntimus po restarto",
-    "description": "Preferences/General"
-  },
-  "pref_show_urls": {
-    "message": "Vietoje pavadinimų rodyti URL",
-    "description": "Preferences/General"
-  },
-  "pref_text_links": {
-    "message": "Bandyti tinklalapio tekste rasti nuorodas (lėčiau)",
-    "description": "Preferences/General"
-  },
-  "pref_manager": {
-    "message": "Menedžeris",
-    "description": "Preferences/General; group text"
-  },
-  "pref_netglobal": {
-    "message": "Globalūs tinklo apribojimai",
-    "description": "Preferences/General; group text"
-  },
-  "pref_queueing": {
-    "message": "Eilėje esantys parsisiuntimai",
-    "description": "Preferences/General; group text"
-  },
-  "pref_ui": {
-    "message": "Naudotojo sąsaja",
-    "description": "Preferences/General; group text"
   },
   "prefs_conflicts": {
     "message": "Jei toks failas jau yra",
@@ -739,9 +569,117 @@
     "message": "DownThemAll! nuostatos",
     "description": "Window/tab title; Preferences"
   },
-  "queue_finished": {
-    "message": "Visi parsisiuntimai baigti",
-    "description": "Notification text"
+  "pref_add_paused": {
+    "message": "Naujus parsisiuntimus pridėti kaip pristabdytus, o ne paleisti juos iš karto",
+    "description": "Preferences/General"
+  },
+  "pref_button_type": {
+    "message": "DownThemAll! mygtukas:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "DownThemAll! pasirinkimas",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Atverti Menedžerį",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Iškylantis meniu",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "OneClick!",
+    "description": "label"
+  },
+  "pref_concurrent_downloads": {
+    "message": "Lygiagretūs siuntimai",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "Rodyti pranešimą, kai eilėje neliks parsisiuntimų",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "Kontekstiniame meniu nerodyti bendrųjų elementų",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "Menedžeris",
+    "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "Atverti Menedžerį naujame iškylančiame lange",
+    "description": "checkbox text"
+  },
+  "pref_manager_tooltip": {
+    "message": "Rodyti patarimus Menedžerio kortelėje",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "Globalūs tinklo apribojimai",
+    "description": "Preferences/General; group text"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "Atidaryti Menedžerio kortelę po parsisiuntimo pridėjimo",
+    "description": "Preferences/General"
+  },
+  "pref_queueing": {
+    "message": "Eilėje esantys parsisiuntimai",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queue_notification": {
+    "message": "Rodyti pranešimą po naujų parsisiuntimų pridėjimo",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "Šalinti nepavykusius parsisiuntimus po restarto",
+    "description": "Preferences/General"
+  },
+  "pref_retries": {
+    "message": "Pakartotinių parsisiuntimų skaičius esant laikinoms klaidoms",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Kartoti kas (minutėmis)",
+    "description": "pref text"
+  },
+  "pref_show_urls": {
+    "message": "Vietoje pavadinimų rodyti URL",
+    "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "Groti garsus",
+    "description": "checkbox text"
+  },
+  "pref_text_links": {
+    "message": "Bandyti tinklalapio tekste rasti nuorodas (lėčiau)",
+    "description": "Preferences/General"
+  },
+  "pref_theme": {
+    "message": "Tema:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Tamsi",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "Sistemos/Naršyklės",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Šviesi",
+    "description": "option text"
+  },
+  "pref_ui": {
+    "message": "Naudotojo sąsaja",
+    "description": "Preferences/General; group text"
+  },
+  "queued": {
+    "message": "Laukia",
+    "description": "Status text"
   },
   "queued_download": {
     "message": "Laukia 1 parsisiuntimas!",
@@ -756,6 +694,18 @@
         "example": "100"
       }
     }
+  },
+  "queue_finished": {
+    "message": "Visi parsisiuntimai baigti",
+    "description": "Notification text"
+  },
+  "referrer": {
+    "message": "Šaltinis",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "Atsiminti šį sprendimą",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
   },
   "remove_all_complete_downloads": {
     "message": "Pašalinti visus baigtus",
@@ -831,10 +781,6 @@
     "message": "Pašalinti parsisiuntimą",
     "description": "Action for removing a download, no matter what state"
   },
-  "remove_download_question": {
-    "message": "Norite pašalinti pažymėtą parsisiuntimą?",
-    "description": "Messagebox text"
-  },
   "remove_downloads": {
     "message": "Pašalinti parsisiuntimus",
     "description": "Menu text"
@@ -842,6 +788,10 @@
   "remove_downloads_title": {
     "message": "Ar tikrai norite pašalinti parsisiuntimus?",
     "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "Norite pašalinti pažymėtą parsisiuntimą?",
+    "description": "Messagebox text"
   },
   "remove_failed_downloads": {
     "message": "Pašalinti nepavykusius",
@@ -888,6 +838,10 @@
   "remove_selected_downloads": {
     "message": "Pašalinti pažymėtus",
     "description": "Menu text"
+  },
+  "rename": {
+    "message": "Pervardinti",
+    "description": "UI for renaming; currently unused"
   },
   "renamer_batch": {
     "message": "Paketo numeris",
@@ -1005,6 +959,14 @@
     "message": "Pridėjimo data - Metai",
     "description": "Mask text; see mask button"
   },
+  "renmask": {
+    "message": "Pervardinimo kaukė",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "Atkurti",
+    "description": "Button text; pref window"
+  },
   "reset_confirmations": {
     "message": "Atkurti atsimintus patvirtinimus",
     "description": "Button text; pref/General"
@@ -1025,6 +987,32 @@
     "message": "Tęsti",
     "description": "Action for resuming a download"
   },
+  "retrying": {
+    "message": "Pakartotinai bandoma",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Pakartotinai bandoma - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
+  "running": {
+    "message": "Vyksta",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Išsaugoti",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Ieškoti…",
+    "description": "Placeholder text; manager status search field"
+  },
   "select_all": {
     "message": "Pažymėti viską",
     "description": "Menu text; e.g. select context"
@@ -1041,9 +1029,37 @@
     "message": "DownThemAll! - Pasirinkite parsisiuntimus",
     "description": "Title of the select window"
   },
+  "SERVER_BAD_CONTENT": {
+    "message": "Nerasta",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Serverio klaida",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Draudžiama",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "Nesankcionuota",
+    "description": "Error message"
+  },
   "set_mask": {
     "message": "Nurodykite pervardinimo kaukę",
     "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Nurodykite naują pervardinimo kaukę",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Nurodyti šaltinį",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Nurodykite naują šaltinį",
+    "description": "dialog text"
   },
   "single_batchexamples": {
     "message": "Palaikomi paketai, pvz.:",
@@ -1057,23 +1073,55 @@
     "message": "DownThemAll! - Pridėti nuorodą",
     "description": "Title of single window"
   },
-  "size_progress": {
-    "message": "$WRITTEN$ iš $TOTAL$",
-    "description": "Status text; manager size column",
+  "sizeB": {
+    "message": "$S$B",
+    "description": "Size formatting; bytes",
     "placeholders": {
-      "total": {
-        "content": "$2",
-        "example": ""
-      },
-      "written": {
+      "s": {
         "content": "$1",
-        "example": ""
+        "example": "100b"
       }
     }
   },
-  "size_unknown": {
-    "message": "Nežinomas",
-    "description": "Status text; manager size column"
+  "sizeGB": {
+    "message": "$S$GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
   },
   "sizes_huge": {
     "message": "Milžiniškas (> $HIGH$)",
@@ -1127,6 +1175,64 @@
       }
     }
   },
+  "sizeTB": {
+    "message": "$S$TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ iš $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "Nežinomas",
+    "description": "Status text; manager size column"
+  },
+  "speedB": {
+    "message": "$SPEED$b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
   "statusNetwork_active_title": {
     "message": "Bus pradėti nauji parsisiuntimai",
     "description": "Status bar tooltip; manager network icon"
@@ -1134,6 +1240,18 @@
   "statusNetwork_inactive_title": {
     "message": "Nauji parsisiuntimai nebus pradėti",
     "description": "Status bar tooltip; manager network icon"
+  },
+  "subfolder": {
+    "message": "Pakatalogis:",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Išsaugoti failus šiame parsisiuntimų katalogo pakatalogyje",
+    "description": "placeholder text within an input box"
+  },
+  "title": {
+    "message": "Antraštė",
+    "description": "Column text; Title label (short)"
   },
   "toggle_selected_items": {
     "message": "Sukeisti pažymėtų elementų pasirinkimą",
@@ -1166,5 +1284,17 @@
   "uncheck_selected_items": {
     "message": "Panaikinti pasirinkimą pažymėtiems elementams",
     "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Neribojama",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Naud. tik kartą",
+    "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Nutraukta naudotojo",
+    "description": "Error message"
   }
 }

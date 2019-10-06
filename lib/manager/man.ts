@@ -82,6 +82,10 @@ export class Manager extends EventEmitter {
 
     downloads.onChanged.addListener(this.onChanged.bind(this));
     downloads.onErased.addListener(this.onErased.bind(this));
+    if (CHROME && downloads.onDeterminingFilename) {
+      downloads.onDeterminingFilename.addListener(
+        this.onDeterminingFilename.bind(this));
+    }
 
     Bus.onPort("manager", (port: Port) => {
       const mport = new ManagerPort(this, port);
@@ -89,6 +93,7 @@ export class Manager extends EventEmitter {
         this.ports.delete(mport);
       });
       this.ports.add(mport);
+      return true;
     });
     Limits.on("changed", () => {
       this.resetScheduler();
@@ -157,6 +162,20 @@ export class Manager extends EventEmitter {
     this.manIds.delete(downloadId);
   }
 
+  onDeterminingFilename(state: any, suggest: Function) {
+    const download = this.manIds.get(state.id);
+    if (!download) {
+      return;
+    }
+    try {
+      download.updatefromSuggestion(state);
+    }
+    finally {
+      const suggestion = {filename: download.dest.full};
+      suggest(suggestion);
+    }
+  }
+
   async resetScheduler() {
     this.scheduler = null;
     await this.startNext();
@@ -221,6 +240,9 @@ export class Manager extends EventEmitter {
     if (SOUNDS.value) {
       const audio = new Audio(runtime.getURL("/style/done.opus"));
       audio.addEventListener("canplaythrough", () => audio.play());
+      audio.addEventListener("ended", () => document.body.removeChild(audio));
+      audio.addEventListener("error", () => document.body.removeChild(audio));
+      document.body.appendChild(audio);
     }
     if (FINISH_NOTIFICATION.value) {
       new Notification(null, _("queue-finished"));
