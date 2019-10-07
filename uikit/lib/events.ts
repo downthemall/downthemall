@@ -104,7 +104,7 @@ export class EventEmitter {
     for (const e of Array.from(handlers)) {
       try {
         // eslint-disable-next-line prefer-spread
-        handled = handled || !!e.apply(null, args);
+        handled = !!e.apply(null, args) || handled;
       }
       catch (ex) {
         console.error(`Event handler ${e} for ${event} failed`, ex.toString(), ex.stack, ex);
