@@ -93,7 +93,6 @@ export class Manager extends EventEmitter {
         this.ports.delete(mport);
       });
       this.ports.add(mport);
-      return true;
     });
     Limits.on("changed", () => {
       this.resetScheduler();

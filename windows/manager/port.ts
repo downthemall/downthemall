@@ -4,6 +4,7 @@
 import { EventEmitter } from "../../lib/events";
 // eslint-disable-next-line no-unused-vars
 import { runtime, RawPort } from "../../lib/browser";
+import { WindowState } from "../windowstate";
 
 const PORT = new class Port extends EventEmitter {
   port: RawPort | null;
@@ -14,6 +15,7 @@ const PORT = new class Port extends EventEmitter {
     if (!this.port) {
       throw new Error("Could not connect");
     }
+    new WindowState(this.port);
     this.port.onMessage.addListener((msg: any) => {
       if (typeof msg === "string") {
         this.emit(msg);

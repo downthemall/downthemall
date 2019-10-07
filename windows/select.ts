@@ -898,4 +898,3 @@ addEventListener("beforeunload", function() {
 });
 
 new WindowState(PORT);
-

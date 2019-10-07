@@ -6,6 +6,10 @@ import { getManager } from "./manager/man";
 import DEFAULT_ICONS from "../data/icons.json";
 import { Prefs } from "./prefs";
 import { _ } from "./i18n";
+import { WindowStateTracker } from "./windowstatetracker";
+// eslint-disable-next-line no-unused-vars
+import { Port, Bus } from "./bus";
+import { timeout } from "./util";
 
 const DONATE_URL = "https://www.downthemall.org/howto/donate/";
 const DONATE_LANG_URLS = Object.freeze(new Map([
@@ -114,11 +118,34 @@ export async function openManager(focus = true) {
       await windows.update(tab.windowId, {focused: true});
       return;
     }
-    const windowOptions = {
+
+    const tracker = new WindowStateTracker("manager", {
+      minWidth: 700,
+      minHeight: 500,
+    });
+    await tracker.init();
+    const windowOptions = tracker.getOptions({
       url,
       type: "popup",
-    };
-    await windows.create(windowOptions);
+    });
+    const window = await windows.create(windowOptions);
+    tracker.track(window.id, null);
+    try {
+      const port = await Promise.race<Port>([
+        new Promise<Port>(resolve => Bus.oncePort("manager", port => {
+          resolve(port);
+          return true;
+        })),
+        timeout<Port>(5 * 1000)]);
+      if (!port.isSelf) {
+        throw Error("Invalid sender connected");
+      }
+      tracker.track(window.id, port);
+    }
+    catch (ex) {
+      console.error("couldn't track manager", ex);
+    }
+
     return;
   }
   if (focus) {
