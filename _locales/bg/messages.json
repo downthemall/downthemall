@@ -642,7 +642,7 @@
     "description": "pref text"
   },
   "pref_retry_time": {
-    "message": "Опит на всеки (в минути)",
+    "message": "Нов опит на всеки (в минути)",
     "description": "pref text"
   },
   "pref_show_urls": {
@@ -656,6 +656,22 @@
   "pref_text_links": {
     "message": "Опит за намиране на връзки в текста на уебсайта (по-бавно)",
     "description": "Preferences/General"
+  },
+  "pref_theme": {
+    "message": "Тема:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Тъмна",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "Системна/Браузър",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Светла",
+    "description": "option text"
   },
   "pref_ui": {
     "message": "Потребителски интерфейс",
