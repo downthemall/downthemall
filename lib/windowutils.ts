@@ -1,7 +1,7 @@
 "use strict";
 // License: MIT
 
-import { windows, tabs, runtime } from "../lib/browser";
+import { windows, tabs, runtime, CHROME } from "../lib/browser";
 import { getManager } from "./manager/man";
 import DEFAULT_ICONS from "../data/icons.json";
 import { Prefs } from "./prefs";
@@ -129,8 +129,11 @@ export async function openManager(focus = true) {
       type: "popup",
     });
     const window = await windows.create(windowOptions);
-    tracker.track(window.id, null);
+    tracker.track(window.id);
     try {
+      if (!CHROME) {
+        windows.update(window.id, tracker.getOptions({}));
+      }
       const port = await Promise.race<Port>([
         new Promise<Port>(resolve => Bus.oncePort("manager", port => {
           resolve(port);

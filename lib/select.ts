@@ -9,7 +9,7 @@ import { donate, openPrefs, openUrls } from "./windowutils";
 // eslint-disable-next-line no-unused-vars
 import { filters, FAST, Filter } from "./filters";
 import { WindowStateTracker } from "./windowstatetracker";
-import { windows } from "./browser";
+import { windows, CHROME } from "./browser";
 // eslint-disable-next-line no-unused-vars
 import { BaseItem } from "./item";
 
@@ -98,8 +98,11 @@ export async function select(links: BaseItem[], media: BaseItem[]) {
     type: "popup",
   });
   const window = await windows.create(windowOptions);
-  tracker.track(window.id, null);
+  tracker.track(window.id);
   try {
+    if (!CHROME) {
+      windows.update(window.id, tracker.getOptions({}));
+    }
     const port = await Promise.race<Port>([
       new Promise<Port>(resolve => Bus.oncePort("select", port => {
         resolve(port);

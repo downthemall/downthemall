@@ -16,6 +16,16 @@ const PORT = new class Port extends EventEmitter {
       throw new Error("Could not connect");
     }
     new WindowState(this.port);
+    addEventListener("beforeunload", () => {
+      if (this.port) {
+        this.port.postMessage({
+          msg: "unload",
+          left: window.screenX,
+          top: window.screenY
+        });
+      }
+    });
+
     this.port.onMessage.addListener((msg: any) => {
       if (typeof msg === "string") {
         this.emit(msg);

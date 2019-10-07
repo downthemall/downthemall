@@ -6,7 +6,7 @@ import { Bus, Port } from "./bus";
 import { WindowStateTracker } from "./windowstatetracker";
 import { Promised, timeout } from "./util";
 import { donate } from "./windowutils";
-import { windows } from "./browser";
+import { windows, CHROME } from "./browser";
 // eslint-disable-next-line no-unused-vars
 import { BaseItem } from "./item";
 
@@ -21,8 +21,11 @@ export async function single(item: BaseItem | null) {
     type: "popup",
   });
   const window = await windows.create(windowOptions);
-  tracker.track(window.id, null);
+  tracker.track(window.id);
   try {
+    if (!CHROME) {
+      windows.update(window.id, tracker.getOptions({}));
+    }
     const port: Port = await Promise.race<Port>([
       new Promise<Port>(resolve => Bus.oncePort("single", port => {
         resolve(port);

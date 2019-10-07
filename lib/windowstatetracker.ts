@@ -3,6 +3,8 @@
 
 import { Prefs } from "./prefs";
 import { windows } from "./browser";
+// eslint-disable-next-line no-unused-vars
+import { Port } from "./bus";
 
 
 const VALID_WINDOW_STATES = Object.freeze(new Set(["normal", "maximized"]));
@@ -80,34 +82,48 @@ export class WindowStateTracker {
     if (!this.windowId) {
       return;
     }
-    const window = await windows.get(this.windowId);
-    if (!VALID_WINDOW_STATES.has(window.state)) {
-      return;
+    try {
+      const window = await windows.get(this.windowId);
+      if (!VALID_WINDOW_STATES.has(window.state)) {
+        return;
+      }
+      const previous = JSON.stringify(this);
+      this.width = window.width;
+      this.height = window.height;
+      this.left = window.left;
+      this.top = window.top;
+      this.state = window.state;
+      this.validate();
+      if (previous === JSON.stringify(this)) {
+        // Nothing changed
+        return;
+      }
+      await this.save();
     }
-    const previous = JSON.stringify(this);
-    this.width = window.width;
-    this.height = window.height;
-    this.left = window.left;
-    this.top = window.top;
-    this.state = window.state;
-    this.validate();
-    if (previous === JSON.stringify(this)) {
-      // Nothing changed
-      return;
+    catch {
+      // ignored
     }
-    await this.save();
   }
 
-  track(windowId: number, port: any) {
+  track(windowId: number, port?: Port) {
     if (port) {
       port.on("resized", this.update);
+      port.on("unload", e => this.finalize(e));
+      port.on("disconnect", this.finalize.bind(this));
     }
     this.windowId = windowId;
   }
 
-  async finalize() {
+  async finalize(state?: any) {
+    if (state) {
+      this.left = state.left;
+      this.top = state.top;
+    }
     await this.update();
     this.windowId = 0;
+    if (state) {
+      await this.save();
+    }
   }
 
   async save() {
