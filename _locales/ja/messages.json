@@ -654,7 +654,7 @@
     "description": "checkbox text"
   },
   "pref_text_links": {
-    "message": "Webサイトの文字列でリンクを抽出する (但し、遅い)",
+    "message": "Webサイトの文字列からリンクを抽出する (但し、遅い)",
     "description": "Preferences/General"
   },
   "pref_theme": {
