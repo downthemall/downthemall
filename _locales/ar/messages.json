@@ -657,6 +657,22 @@
     "message": "حاوِل البحث عن الروابط في نص موقع الوِب (أبطأ)",
     "description": "Preferences/General"
   },
+  "pref_theme": {
+    "message": "السمة:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "داكنة",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "النظام/المتصفح",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "فاتحة",
+    "description": "option text"
+  },
   "pref_ui": {
     "message": "واجهة المستخدم",
     "description": "Preferences/General; group text"
