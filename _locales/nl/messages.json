@@ -657,6 +657,22 @@
     "message": "Probeer links te vinden in de tekst van de website (langzamer)",
     "description": "Preferences/General"
   },
+  "pref_theme": {
+    "message": "Thema:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Donker",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "Systeem/Browser",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Licht",
+    "description": "option text"
+  },
   "pref_ui": {
     "message": "Gebruikersinterface",
     "description": "Preferences/General; group text"
