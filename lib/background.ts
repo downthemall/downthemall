@@ -152,9 +152,14 @@ runtime.onInstalled.addListener(({reason, previousVersion}: OnInstalled) => {
   const {version} = runtime.getManifest();
   const major = getMajor(version);
   const prevMajor = getMajor(previousVersion);
-  if (reason === "install" || (reason === "update" && major !== prevMajor)) {
+  if (reason === "update" && major !== prevMajor) {
     tabs.create({
       url: `https://about.downthemall.org/changelog/?cur=${major}&prev=${prevMajor}`,
+    });
+  }
+  else if (reason === "install") {
+    tabs.create({
+      url: `https://about.downthemall.org/4.0/?cur=${major}`,
     });
   }
 });
