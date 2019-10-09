@@ -122,6 +122,8 @@ export class DownloadItem extends EventEmitter {
 
   public currentName: string;
 
+  public currentFull: string;
+
   public ext?: string;
 
   public position: number;

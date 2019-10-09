@@ -191,6 +191,7 @@ export class BaseDownload {
     rv.destPath = dest.path;
     rv.destFull = dest.full;
     rv.currentName = this.browserName || rv.destName || rv.finalName;
+    rv.currentFull = `${dest.path}/${rv.currentName}`;
     rv.error = this.error;
     rv.ext = this.renamer.p_ext;
     rv.retries = this.retries;

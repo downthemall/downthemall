@@ -182,7 +182,7 @@ export class Tooltip {
     }
     const icon = item.largeIcon;
     this.icon.className = icon;
-    this.name.textContent = item.destFull;
+    this.name.textContent = item.currentFull;
     this.from.textContent = item.usable;
     this.size.textContent = item.fmtSize;
     this.date.textContent = new Date(item.startDate).toLocaleString();
