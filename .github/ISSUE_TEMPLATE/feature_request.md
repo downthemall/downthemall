@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest a feature or an idea for DownThemAll!
 title: ''
 labels: ''
 assignees: ''
