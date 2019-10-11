@@ -41,7 +41,6 @@ import { IconCache } from "../../lib/iconcache";
 import * as imex from "../../lib/imex";
 // eslint-disable-next-line no-unused-vars
 import { BaseItem } from "../../lib/item";
-import { API } from "../../lib/api";
 
 const TREE_CONFIG_VERSION = 2;
 const RUNNING_TIMEOUT = 1000;
@@ -1204,7 +1203,7 @@ export class DownloadTable extends VirtualTable {
         if (!items || !items.length) {
           return;
         }
-        API.regular(items, []);
+        PORT.post("import", {items});
       };
       reader.readAsText(picker.files[0], "utf-8");
     };

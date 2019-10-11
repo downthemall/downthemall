@@ -9,6 +9,8 @@ import { BaseDownload } from "./basedownload";
 import { Manager } from "./man";
 // eslint-disable-next-line no-unused-vars
 import { Port } from "../bus";
+// eslint-disable-next-line no-unused-vars
+import { BaseItem } from "../item";
 
 type SID = {sid: number};
 type SIDS = {
@@ -41,6 +43,9 @@ export class ManagerPort {
     });
     port.on("prefs", () => {
       openPrefs();
+    });
+    port.on("import", ({items}: {items: BaseItem[]}) => {
+      API.regular(items, []);
     });
     port.on("all", () => this.sendAll());
     port.on("removeSids", this.onMsgRemoveSids);
