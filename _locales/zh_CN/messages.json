@@ -657,6 +657,22 @@
     "message": "尝试在网站文本中寻找链接（较慢）",
     "description": "Preferences/General"
   },
+  "pref_theme": {
+    "message": "主题：",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "深邃",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "系统/浏览器",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "明亮",
+    "description": "option text"
+  },
   "pref_ui": {
     "message": "用户界面",
     "description": "Preferences/General; group text"
