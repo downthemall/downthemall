@@ -61,6 +61,9 @@ export class Manager extends EventEmitter {
   private deadlineTimer: number;
 
   constructor() {
+    if (!document.location.href.includes("background")) {
+      throw new Error("Not on background");
+    }
     super();
     this.active = true;
     this.shouldReload = false;
