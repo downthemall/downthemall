@@ -606,6 +606,11 @@ ul.context-menu ul {
   background: var(--menu-bgcolor-hover);
 }
 
+html.dark .context-menu-item.disabled,
+html.dark .context-menu-item.disabled > * {
+  opacity: 0.7;
+}
+
 input {
   color: var(--general-input-color);
   background: var(--general-input-bgcolor);
