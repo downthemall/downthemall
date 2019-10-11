@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Create a report to help us improve DownThemAll!
 title: ''
 labels: ''
 assignees: ''
@@ -8,9 +8,9 @@ assignees: ''
 ---
 
 **Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+ - OS: [e.g. Windows 10, macOS, Linux (distribution, desktop environment)]
+ - Browser and version: [e.g. Firefox 42, Chrome 70, Opera 15, Seamonkey 2.16]
+ - DownThemAll! version: [e.g. 4.2, 3.0, latest]
 
 **Describe the bug**
 A clear and concise description of what the bug is.
