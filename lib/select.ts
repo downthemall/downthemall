@@ -14,6 +14,7 @@ import { windows, CHROME } from "./browser";
 import { BaseItem } from "./item";
 
 interface BaseMatchedItem extends BaseItem {
+  sidx?: number;
   matched?: string | null;
   prevMatched?: string | null;
 }
@@ -29,6 +30,7 @@ function computeSelection(
     onlyFast: boolean): ItemDelta[] {
   let ws = items.map((item, idx: number) => {
     item.idx = item.idx || idx;
+    item.sidx = item.sidx || idx;
     const {matched = null} = item;
     item.prevMatched = matched;
     item.matched = null;
@@ -52,7 +54,7 @@ function computeSelection(
   }
   return items.filter(item => item.prevMatched !== item.matched).map(item => {
     return {
-      idx: item.idx,
+      idx: item.sidx as number,
       matched: item.matched
     };
   });

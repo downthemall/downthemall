@@ -138,7 +138,7 @@ class ItemCollection {
   constructor(items: BaseMatchedItem[]) {
     this.items = items;
     this.assignRows();
-    this.indexes = new Map(items.map(i => [i.idx, i]));
+    this.indexes = new Map(items.map((i, idx) => [idx, i]));
   }
 
   assignRows() {
@@ -161,9 +161,9 @@ class ItemCollection {
 
   get checkedIndexes() {
     const rv: number[] = [];
-    this.items.forEach(function (item) {
+    this.items.forEach(function(item, idx) {
       if (item.matched && item.matched !== "unmanual") {
-        rv.push(item.idx);
+        rv.push(idx);
       }
     });
     return rv;
