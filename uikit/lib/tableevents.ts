@@ -45,10 +45,10 @@ export class TableEvents extends BaseTable {
       "scroll", debounce(this.scrolled.bind(this), SCROLL_DEBOUNCE), {
         passive: true
       });
+    body.addEventListener("contextmenu", this.contextmenu.bind(this), true);
 
     table.addEventListener("keypress", this.keypressed.bind(this), true);
     table.addEventListener("keydown", this.keypressed.bind(this), true);
-    table.addEventListener("contextmenu", this.contextmenu.bind(this), true);
 
     selectionGrippy.addEventListener("click", this.grippyClicked.bind(this));
   }

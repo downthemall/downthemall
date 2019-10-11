@@ -571,9 +571,7 @@ export class DownloadTable extends VirtualTable {
     ctx.on("dismissed", () => this.table.focus());
 
     this.on("contextmenu", (tree, event) => {
-      if (!this.selection.empty) {
-        this.showContextMenu(event);
-      }
+      this.showContextMenu(event);
       return true;
     });
 
