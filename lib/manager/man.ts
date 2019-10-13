@@ -16,7 +16,7 @@ import { Download } from "./download";
 import { ManagerPort } from "./port";
 import { Scheduler } from "./scheduler";
 import { Limits } from "./limits";
-import { downloads, runtime, webRequest, CHROME } from "../browser";
+import { downloads, runtime, webRequest, CHROME, OPERA } from "../browser";
 
 const US = runtime.getURL("");
 
@@ -240,7 +240,7 @@ export class Manager extends EventEmitter {
     if (this.notifiedFinished || this.running.size || this.retrying.size) {
       return;
     }
-    if (SOUNDS.value) {
+    if (SOUNDS.value && !OPERA) {
       const audio = new Audio(runtime.getURL("/style/done.opus"));
       audio.addEventListener("canplaythrough", () => audio.play());
       audio.addEventListener("ended", () => document.body.removeChild(audio));

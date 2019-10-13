@@ -19,7 +19,7 @@ import { iconForPath, visible } from "../lib/windowutils";
 import { VirtualTable } from "../uikit/lib/table";
 import { Icons } from "./icons";
 import { $ } from "./winutil";
-import { runtime, storage } from "../lib/browser";
+import { runtime, storage, OPERA } from "../lib/browser";
 import "./theme";
 
 const ICON_BASE_SIZE = 16;
@@ -558,7 +558,14 @@ addEventListener("DOMContentLoaded", async () => {
   new BoolPref("pref-manager-in-popup", "manager-in-popup");
   new BoolPref("pref-queue-notification", "queue-notification");
   new BoolPref("pref-finish-notification", "finish-notification");
-  new BoolPref("pref-sounds", "sounds");
+  // XXX: #125
+  const sounds = new BoolPref("pref-sounds", "sounds");
+  if (OPERA) {
+    const sp = sounds.elem.parentElement;
+    if (sp) {
+      sp.style.display = "none";
+    }
+  }
   new BoolPref("pref-hide-context", "hide-context");
   new BoolPref("pref-tooltip", "tooltip");
   new BoolPref("pref-open-manager-on-queue", "open-manager-on-queue");

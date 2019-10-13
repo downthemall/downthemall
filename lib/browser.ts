@@ -117,3 +117,4 @@ export const {windows} = polyfill;
 export const {theme} = polyfill;
 
 export const CHROME = navigator.appVersion.includes("Chrome/");
+export const OPERA = navigator.appVersion.includes("OPR/");

@@ -25,6 +25,8 @@ RELEASE_ID = "{DDC359D1-844A-42a7-9AA1-88A850A938A8}"
 UNCOMPRESSABLE = set((".png", ".jpg", ".zip", ".woff2"))
 LICENSED = set((".css", ".html", ".js", "*.ts"))
 IGNORED = set((".DS_Store", "Thumbs.db"))
+# XXX: #125
+IGNORED_OPERA = set(("done.opus", "error.opus"))
 
 PERM_IGNORED_FX = set(("downloads.shelf", "webRequest", "webRequestBlocking"))
 PERM_IGNORED_CHROME = set(("menus", "sessions", "theme"))
@@ -45,17 +47,17 @@ def check_licenses():
         raise Exception(f"No license in {file}")
 
 
-def files():
+def files(additional_ignored):
   p = Path("")
   for pattern in FILES:
     for file in sorted(p.glob(pattern)):
-      if file.name in IGNORED or not file.is_file():
+      if file.name in IGNORED or file.name in additional_ignored or not file.is_file():
         continue
       yield file
 
-def build(out, manifest):
+def build(out, manifest, additional_ignored=set()):
   with ZipFile(out, "w", compression=ZIP_DEFLATED, allowZip64=False, compresslevel=2) as zp:
-    for file in files():
+    for file in files(additional_ignored):
       if str(file) == "manifest.json":
         buf = manifest
       else:
@@ -101,7 +103,7 @@ def build_firefox(args):
   build(out, json.dumps(infos, indent=2).encode("utf-8"))
 
   
-def build_chrome(args):
+def build_chromium(args, pkg, additional_ignored=set()):
   now = datetime.now().strftime("%Y%m%d%H%M%S")
   with open("manifest.json") as manip:
     infos = json.load(manip, object_pairs_hook=OrderedDict)
@@ -117,15 +119,15 @@ def build_chrome(args):
     infos["version_name"] = f"{version}-{args.mode}"
     infos["short_name"] = infos.get("name")
     infos["name"] = f"{infos.get('name')} {args.mode}"
-  
+
   infos["permissions"] = [p for p in infos.get("permissions") if not p in PERM_IGNORED_CHROME]
-  out = Path("web-ext-artifacts") / f"dta-{version}-{args.mode}-crx.zip"
+  out = Path("web-ext-artifacts") / f"dta-{version}-{args.mode}-{pkg}.zip"
   if not out.parent.exists():
     out.parent.mkdir()
   if out.exists():
     out.unlink()
   print("Output", out)
-  build(out, json.dumps(infos, indent=2).encode("utf-8"))
+  build(out, json.dumps(infos, indent=2).encode("utf-8"), additional_ignored=additional_ignored)
 
 def main():
   from argparse import ArgumentParser
@@ -140,7 +142,8 @@ def main():
     else:
       run([script], shell=True)
   build_firefox(args)
-  build_chrome(args)
+  build_chromium(args, "crx")
+  build_chromium(args, "opr", IGNORED_OPERA)
   print("DONE.")
 
 if __name__ == "__main__":
