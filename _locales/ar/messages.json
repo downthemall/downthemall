@@ -8,7 +8,7 @@
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
   "addpaused": {
-    "message": "أضِفها ملبثة",
+    "message": "أضف تحميل متوقف",
     "description": "Action: Add paused"
   },
   "add_download": {
@@ -20,7 +20,7 @@
     "description": "Button text (adding filters, limits and such)"
   },
   "add_paused_once": {
-    "message": "أضِفها ملبثة حاليًا فقط",
+    "message": "أضِف التحميل المتوقف هذه المرة فقط",
     "description": "Checkbox label"
   },
   "add_paused_question": {
