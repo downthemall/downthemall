@@ -4,7 +4,7 @@
     "description": "Lanuage Name in your language"
   },
   "language_code": {
-    "message": "ar-EG",
+    "message": "ar",
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
   "addpaused": {
