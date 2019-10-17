@@ -4,7 +4,7 @@
     "description": "Lanuage Name in your language"
   },
   "language_code": {
-    "message": "ar",
+    "message": "ar-EG",
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
   "addpaused": {
@@ -24,11 +24,11 @@
     "description": "Checkbox label"
   },
   "add_paused_question": {
-    "message": "أتريد تذكر خيارك وإضافة التنزيلات الجديدة ملبثة من الآن فصاعدًا؟",
+    "message": "أتريد تذكر خيارك وإضافة التنزيلات الجديدة المتوقفة من الآن فصاعدًا؟",
     "description": "Messagebox text"
   },
   "add_paused_title": {
-    "message": "أنضيفها ملبثة دومًا؟",
+    "message": "إضافة التنزيلات المتوقفة دوما؟",
     "description": "Title for the add-paused dialog"
   },
   "ask_again_later": {
@@ -56,11 +56,11 @@
     "description": "Messagebox info text for batch confirmations"
   },
   "batch_single": {
-    "message": "كتنزيل واحد",
+    "message": "تنزيل واحد",
     "description": "Button text for batch confirmation"
   },
   "batch_title": {
-    "message": "كدفعة تنزيلات",
+    "message": "دفعة تنزيلات",
     "description": "Messagebox title for batch confirmations"
   },
   "cancel": {
@@ -84,7 +84,7 @@
     "description": "Checkbox label text for decision confirmations"
   },
   "check_selected_items": {
-    "message": "أشّر العناصر المحددة",
+    "message": "افحص العناصر المحددة",
     "description": "Menu text"
   },
   "colConnections": {
@@ -144,7 +144,7 @@
     "description": "Button text; Create filter dialog; prefs/filters"
   },
   "custom_filename": {
-    "message": "خصّص اسم الملف",
+    "message": "اسم ملف مخصص",
     "description": "Label text; single window"
   },
   "deffilter_all": {
@@ -152,7 +152,7 @@
     "description": "Filter label for the All files filter"
   },
   "deffilter_arch": {
-    "message": "الأرشيفات (zip،‏ rar،‏ 7z، …)",
+    "message": "الملفات المضغوطة (zip،‏ rar،‏ 7z، …)",
     "description": "Filter label for the Archives filter"
   },
   "deffilter_aud": {
@@ -240,7 +240,7 @@
     "description": "Menu text"
   },
   "dta_regular_image": {
-    "message": "احفظ الألسنة عبر ”نزّلها كلها!“",
+    "message": "احفظ الصورة عبر ”نزّلها كلها!“",
     "description": "Menu text"
   },
   "dta_regular_link": {
@@ -550,11 +550,11 @@
     "description": "Pref tab text"
   },
   "paused": {
-    "message": "ملبث",
+    "message": "متوقف",
     "description": "Status text; manager"
   },
   "pause_download": {
-    "message": "ألبِث",
+    "message": "إيقاف التنزيل",
     "description": "Action for pausing a download"
   },
   "prefs_conflicts": {
@@ -582,11 +582,11 @@
     "description": "label"
   },
   "pref_button_type_manager": {
-    "message": "يفتح المدير",
+    "message": "افتح مدير التنزيلات",
     "description": "label"
   },
   "pref_button_type_popup": {
-    "message": "يعرض القائمة",
+    "message": "قائمة منبثقة",
     "description": "label"
   },
   "pref_button_type_turbo": {
