@@ -50,6 +50,7 @@ let Subfolder: Dropdown;
 type DELTAS = {deltaLinks: ItemDelta[]; deltaMedia: ItemDelta[]};
 
 interface BaseMatchedItem extends BaseItem {
+  backIdx: number;
   matched?: string | null;
   rowid: number;
 }
@@ -138,6 +139,7 @@ class ItemCollection {
   constructor(items: BaseMatchedItem[]) {
     this.items = items;
     this.assignRows();
+    this.items.forEach((item, idx) => item.backIdx = idx);
     this.indexes = new Map(items.map((i, idx) => [idx, i]));
   }
 
@@ -159,11 +161,11 @@ class ItemCollection {
     return rv;
   }
 
-  get checkedIndexes() {
+  get checkedBackIndexes() {
     const rv: number[] = [];
-    this.items.forEach(function(item, idx) {
+    this.items.forEach(function(item) {
       if (item.matched && item.matched !== "unmanual") {
-        rv.push(idx);
+        rv.push(item.backIdx);
       }
     });
     return rv;
@@ -679,7 +681,7 @@ async function download(paused = false) {
     const subfolder = Subfolder.value;
     validateSubfolder(subfolder);
 
-    const items = Table.items.checkedIndexes;
+    const items = Table.items.checkedBackIndexes;
     if (!items.length) {
       throw new Error("error.noItemsSelected");
     }
