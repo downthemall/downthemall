@@ -80,7 +80,7 @@
     "description": "Error message when an input field is empty but has to have a value"
   },
   "change_later_reminder": {
-    "message": "Du kan ændre denne indstillinger under Indstillinger senere",
+    "message": "Du kan altid ændre dette valg under indstillinger",
     "description": "Checkbox label text for decision confirmations"
   },
   "check_selected_items": {
@@ -732,7 +732,7 @@
     "description": "Action for removing complete downloads"
   },
   "remove_complete_downloads_question": {
-    "message": "Vil du rydde alle færdiggjorte downloads?",
+    "message": "Vil du rydde op i alle færdiggjorte downloads?",
     "description": "Messagebox text"
   },
   "remove_complete_filter_downloads_question": {
@@ -786,7 +786,7 @@
     "description": "Menu text"
   },
   "remove_downloads_title": {
-    "message": "Er du sikker på, du vil rydde downloads?",
+    "message": "Er du sikker på, du vil rydde op i downloads?",
     "description": "Messagebox title; manager"
   },
   "remove_download_question": {
@@ -816,7 +816,7 @@
     "description": "Menu text"
   },
   "remove_missing_downloads_question": {
-    "message": "Vil du rydde alle manglende downloads?",
+    "message": "Vil du rydde op i alle manglende downloads?",
     "description": "Messagebox text"
   },
   "remove_paused_downloads": {
