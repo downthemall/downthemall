@@ -46,6 +46,11 @@
 
 html.dark {
   --add-color: lightblue;
+  --error-color: rgb(130, 3, 22);
+  --running-color: #67a041;
+  --finishing-color: #4bb111;
+  --done-color: #006f00;
+  --pause-color: #cf9308;
   --general-bgcolor: #2a2a2e;
   --general-border-color: rgb(85, 85, 85);
   --general-button-bgcolor-hover: black;
