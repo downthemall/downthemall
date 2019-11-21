@@ -108,7 +108,7 @@ export function importText(data: string) {
   if (data.includes(NS_METALINK_RFC5854)) {
     return importMeta4(data);
   }
-  const splitter = /(.+)\n|(.+)$/g;
+  const splitter = /(?:(.|\r)+)\n|(.+)$/g;
   const spacer = /^\s+/;
   let match;
   let current: BaseItem | undefined = undefined;
