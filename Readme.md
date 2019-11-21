@@ -1,5 +1,5 @@
 
-![DownThemAll!](https://raw.githubusercontent.com/downthemall/downthemall/master/style/icon96.png)
+![DownThemAll!](https://raw.githubusercontent.com/downthemall/downthemall/master/style/icon128.png)
 
 
 # DownThemAll! WE
