@@ -56,7 +56,7 @@ def files(additional_ignored):
       yield file
 
 def build(out, manifest, additional_ignored=set()):
-  with ZipFile(out, "w", compression=ZIP_DEFLATED, allowZip64=False, compresslevel=2) as zp:
+  with ZipFile(out, "w", compression=ZIP_DEFLATED, allowZip64=False) as zp:
     for file in files(additional_ignored):
       if str(file) == "manifest.json":
         buf = manifest
@@ -70,7 +70,7 @@ def build(out, manifest, additional_ignored=set()):
       if file.suffix in UNCOMPRESSABLE:
         zp.writestr(zinfo, buf, compress_type=ZIP_STORED)
       else:
-        zp.writestr(zinfo, buf, compress_type=ZIP_DEFLATED, compresslevel=2)
+        zp.writestr(zinfo, buf, compress_type=ZIP_DEFLATED)
       print(file)
 
 
