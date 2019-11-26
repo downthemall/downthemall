@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "util/build.py",
+    "build:cleanup": "rm -rf bundles",
     "build:bundles": "webpack",
     "build:regexps": "node util/makexregexps.js > data/xregexps.json",
     "stats": "cloc --vcs=git --exclude-lang=Markdown,SVG",
