@@ -1270,7 +1270,7 @@
     "description": "Tooltip text; manager/downloads; source URL"
   },
   "tooltip_size": {
-    "message": "BoyutÇ",
+    "message": "Boyut:",
     "description": "Tooltip text; manager/downloads"
   },
   "tooltip_speed_average": {
