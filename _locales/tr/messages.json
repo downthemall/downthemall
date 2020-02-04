@@ -96,7 +96,7 @@
     "description": "Table column in manager"
   },
   "colETA": {
-    "message": "Doğu Zamanı",
+    "message": "Kalan Süre",
     "description": "Table column in manager"
   },
   "colNameURL": {
