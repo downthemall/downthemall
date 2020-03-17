@@ -1,7 +1,7 @@
 {
   "language": {
     "message": "Deutsch",
-    "description": "Lanuage Name in your language"
+    "description": "Language Name in your language"
   },
   "language_code": {
     "message": "de",
@@ -24,7 +24,7 @@
     "description": "Checkbox label"
   },
   "add_paused_question": {
-    "message": "Soll sich diese Entscheidung gemerkt werden und neue Downloads von jetzt an immer pausiert hinzugefügt werden?",
+    "message": "Diese Entscheidung speichern und neue Downloads von jetzt an immer pausiert hinzufügen?",
     "description": "Messagebox text"
   },
   "add_paused_title": {
@@ -36,11 +36,11 @@
     "description": "Button text"
   },
   "batch_batch": {
-    "message": "Als Batch downloaden",
+    "message": "Als Stapelverarbeitung downloaden",
     "description": "Button text"
   },
   "batch_desc": {
-    "message": "Die aktuelle URL scheint Anweisungen für einen Batch zu enthalten.",
+    "message": "Die aktuelle URL scheint Anweisungen für eine Stapelverarbeitung zu enthalten.",
     "description": ""
   },
   "batch_items": {
@@ -52,15 +52,15 @@
     "description": "Messagebox info text for batch confirmations"
   },
   "batch_question": {
-    "message": "Als Batch oder einfachen Download hinzufügen?",
+    "message": "Als Stapelverarbeitung oder als einfachen Download hinzufügen?",
     "description": "Messagebox info text for batch confirmations"
   },
   "batch_single": {
-    "message": "Einfacher Download",
+    "message": "Einzelner Download",
     "description": "Button text for batch confirmation"
   },
   "batch_title": {
-    "message": "Batch Download",
+    "message": "Stapelverarbeitung",
     "description": "Messagebox title for batch confirmations"
   },
   "cancel": {
@@ -84,7 +84,7 @@
     "description": "Checkbox label text for decision confirmations"
   },
   "check_selected_items": {
-    "message": "Ausgewählte Einträge markieren",
+    "message": "markierte Einträge auswählen",
     "description": "Menu text"
   },
   "colConnections": {
@@ -228,7 +228,7 @@
     "description": "Download (noun); e.g. Download column in select"
   },
   "download_verb": {
-    "message": "Download",
+    "message": "herunterladen",
     "description": "Download (verb/action); e.g. in single and select buttons"
   },
   "dta_regular": {
@@ -328,7 +328,7 @@
     "description": "Label for Fast Filtering input"
   },
   "fastfilter_placeholder": {
-    "message": "Platzhalter-Ausdruck oder Regular Expression",
+    "message": "Platzhalter-Ausdruck oder regulärer Ausdruck",
     "description": "Placeholder for fastfilter inputs"
   },
   "FILE_FAILED": {
@@ -348,11 +348,11 @@
     "description": "Message box label"
   },
   "filter_label": {
-    "message": "Filter-Titel",
+    "message": "Filter-Bezeichnung",
     "description": "Message box label"
   },
   "filter_types": {
-    "message": "Filter Typen",
+    "message": "Filter-Typen",
     "description": "Message box label"
   },
   "filter_type_link": {
@@ -360,11 +360,11 @@
     "description": "Message box checkbox label"
   },
   "filter_type_media": {
-    "message": "Medien Filter",
+    "message": "Medien-Filter",
     "description": "Message box checkbox label"
   },
   "finishing": {
-    "message": "Beenden",
+    "message": "Beende",
     "description": "Status text"
   },
   "force_start": {
@@ -416,7 +416,7 @@
     "description": "Short for PageUp-key"
   },
   "limited_to": {
-    "message": "Begrenzt auf",
+    "message": "Begrenzen auf",
     "description": "Label text; used in prefs/network"
   },
   "links": {
@@ -614,7 +614,7 @@
     "description": "checkbox text"
   },
   "pref_manager_tooltip": {
-    "message": "Keine Tooltips im Manager-Tab anzeigen",
+    "message": "Tooltips im Manager-Tab anzeigen",
     "description": "Preferences/General"
   },
   "pref_netglobal": {
@@ -622,7 +622,7 @@
     "description": "Preferences/General; group text"
   },
   "pref_open_manager_on_queue": {
-    "message": "Den Manager öffnen nachdem neue Downloads zur Warteschlange hinzugefügt wurden",
+    "message": "Den Manager öffnen, nachdem neue Downloads zur Warteschlange hinzugefügt wurden",
     "description": "Preferences/General"
   },
   "pref_queueing": {
@@ -642,7 +642,7 @@
     "description": "pref text"
   },
   "pref_retry_time": {
-    "message": "Neuversuch Alle (in Minuten)",
+    "message": "Erneut versuchen alle (in Minuten)",
     "description": "pref text"
   },
   "pref_show_urls": {
@@ -650,7 +650,7 @@
     "description": "Preferences/General"
   },
   "pref_sounds": {
-    "message": "Sounds abspielen",
+    "message": "Töne abspielen",
     "description": "checkbox text"
   },
   "pref_text_links": {
@@ -658,7 +658,7 @@
     "description": "Preferences/General"
   },
   "pref_theme": {
-    "message": "Theme:",
+    "message": "Farbschema:",
     "description": "label text"
   },
   "pref_theme_dark": {
@@ -720,11 +720,11 @@
     "description": "Messagebox text"
   },
   "remove_batch_downloads": {
-    "message": "Aktuellen Batch entfernen",
+    "message": "Aktuelle Stapelverarbeitung entfernen",
     "description": "Menu text"
   },
   "remove_batch_downloads_question": {
-    "message": "Wirklich alle Downloads vom aktuellen Batch entfernen?",
+    "message": "Wirklich alle Downloads der aktuellen Stapelverarbeitung entfernen?",
     "description": "Messagebox text"
   },
   "remove_complete_downloads": {
@@ -754,7 +754,7 @@
     "description": "Menu text"
   },
   "remove_domain_complete_downloads_question": {
-    "message": "Wirklich alle fertigen Downloads mit Domain \"$DOMAIN$\" entfernen?",
+    "message": "Wirklich alle fertigen Downloads der Domain \"$DOMAIN$\" entfernen?",
     "description": "Messagebox text",
     "placeholders": {
       "domain": {
@@ -768,7 +768,7 @@
     "description": "Menu text"
   },
   "remove_domain_downloads_question": {
-    "message": "Wirklich alle Downloads mit Domain \"$DOMAIN$\" entfernen?",
+    "message": "Wirklich alle Downloads der Domain \"$DOMAIN$\" entfernen?",
     "description": "Messagebox text",
     "placeholders": {
       "domain": {
@@ -812,11 +812,11 @@
     }
   },
   "remove_missing": {
-    "message": "Fehlende Downloads entfernen",
+    "message": "Nicht vorhandene Downloads entfernen",
     "description": "Menu text"
   },
   "remove_missing_downloads_question": {
-    "message": "Wirklich alle fehlenden Downloads entfernen?",
+    "message": "Wirklich alle nicht vorhandene Downloads entfernen?",
     "description": "Messagebox text"
   },
   "remove_paused_downloads": {
@@ -844,15 +844,15 @@
     "description": "UI for renaming; currently unused"
   },
   "renamer_batch": {
-    "message": "Batch Nummer",
+    "message": "Stapelverarbeitungs-Nummer",
     "description": "Mask text; see mask button"
   },
   "renamer_d": {
-    "message": "Datum hinzugefügt - Tag",
+    "message": "Datum: hinzugefügt - Tag",
     "description": "Mask text; see mask button"
   },
   "renamer_date": {
-    "message": "Datum hinzugefügt",
+    "message": "Datum: hinzugefügt",
     "description": "Mask text; see mask button"
   },
   "renamer_domain": {
@@ -864,7 +864,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_hh": {
-    "message": "Datum hinzugefügt - Stunde",
+    "message": "Datum: hinzugefügt - Stunde",
     "description": "Mask text; see mask button"
   },
   "renamer_host": {
@@ -872,7 +872,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_idx": {
-    "message": "Fortlaufende Nummer im Batch",
+    "message": "Fortlaufende Nummer der Stapelverarbeitung",
     "description": "Mask text; see mask button"
   },
   "renamer_info": {
@@ -880,11 +880,11 @@
     "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
   },
   "renamer_m": {
-    "message": "Datum hinzugefügt - Monat",
+    "message": "Datum: hinzugefügt - Monat",
     "description": "Mask text; see mask button"
   },
   "renamer_mm": {
-    "message": "Datum hinzugefügt - Minute",
+    "message": "Datum: hinzugefügt - Minute",
     "description": "Mask text; see mask button"
   },
   "renamer_name": {
@@ -892,7 +892,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_num": {
-    "message": "Alias für \"batch\"",
+    "message": "Alias für \"Stapelverarbeitung\"",
     "description": "Mask text; see mask button"
   },
   "renamer_qstring": {
@@ -932,7 +932,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_ss": {
-    "message": "Datum hinzugefügt - Sekunde",
+    "message": "Datum: hinzugefügt - Sekunde",
     "description": "Mask text; see mask button"
   },
   "renamer_subdirs": {
@@ -956,7 +956,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_y": {
-    "message": "Datum hinzugefügt - Jahr",
+    "message": "Datum: hinzugefügt - Jahr",
     "description": "Mask text; see mask button"
   },
   "renmask": {
@@ -976,11 +976,11 @@
     "description": "Messagebox text; pref/General"
   },
   "reset_layouts": {
-    "message": "Benutzeroberflächenanpassungen zurücksetzen",
+    "message": "Änderungen der Benutzeroberfläche zurücksetzen",
     "description": "Button text; pref/General"
   },
   "reset_layouts_done": {
-    "message": "Alle gemerkten Benutzeroberflächenanpassungen zurückgesetzt! Tabs/Fenster müssen neu geladen werden.",
+    "message": "Alle gemerkten Anpassungen der Benutzeroberfläche zurückgesetzt! Tabs/Fenster müssen neu geladen werden.",
     "description": "Messagebox text; pref/General"
   },
   "resume_download": {
@@ -988,7 +988,7 @@
     "description": "Action for resuming a download"
   },
   "retrying": {
-    "message": "Neuversuch",
+    "message": "neuer Versuch",
     "description": "Status text"
   },
   "retrying_error": {
@@ -1046,23 +1046,23 @@
     "description": "Error message"
   },
   "set_mask": {
-    "message": "Umbenennungsmaske setzen",
+    "message": "Umbenennungsmaske festlegen",
     "description": "Menu text; select window"
   },
   "set_mask_text": {
-    "message": "Neue Umbenennungsmaske setzen",
+    "message": "Neue Umbenennungsmaske festlegen",
     "description": "dialog text"
   },
   "set_referrer": {
-    "message": "Referrer setzen",
+    "message": "Referrer festlegen",
     "description": "menu text"
   },
   "set_referrer_text": {
-    "message": "Neuen Referrer setzen",
+    "message": "Neuen Referrer festlegen",
     "description": "dialog text"
   },
   "single_batchexamples": {
-    "message": "Batches sind unterstützt, z.B.:",
+    "message": "Stapelverarbeitung wird unterstützt, z.B.:",
     "description": "Header text; single window"
   },
   "single_header": {
