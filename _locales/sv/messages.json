@@ -1,0 +1,1224 @@
+{
+  "language": {
+    "message": "Svenska (SV)",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "sv",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "addpaused": {
+    "message": "Lägg till pausad",
+    "description": "Action: Add paused"
+  },
+  "add_download": {
+    "message": "Lägg till hämtning",
+    "description": "Action for adding a download"
+  },
+  "add_new": {
+    "message": "Lägg till ny",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add_paused_once": {
+    "message": "Lägg bara till pausad den här gången",
+    "description": "Checkbox label"
+  },
+  "add_paused_question": {
+    "message": "Vill du komma ihåg detta beslut och alltid lägga till nya hämtningar pausade från och med nu?",
+    "description": "Messagebox text"
+  },
+  "add_paused_title": {
+    "message": "Lägg alltid till pausad?",
+    "description": "Title for the add-paused dialog"
+  },
+  "ask_again_later": {
+    "message": "Fråga mig igen senare",
+    "description": "Button text"
+  },
+  "batch_batch": {
+    "message": "Batch hämtning",
+    "description": "Button text"
+  },
+  "batch_desc": {
+    "message": "Den aktuella webbadressen verkar innehålla instruktioner för en batch-hämtning.",
+    "description": ""
+  },
+  "batch_items": {
+    "message": "Antal poster:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_preview": {
+    "message": "Förhandsgranskning:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_question": {
+    "message": "Vill du lägga till detta som ett batch eller som en enda hämtning?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_single": {
+    "message": "Enstaka hämtning",
+    "description": "Button text for batch confirmation"
+  },
+  "batch_title": {
+    "message": "Batch hämtning",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "Avbryt",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "Avbruten",
+    "description": "Download status text"
+  },
+  "cancel_download": {
+    "message": "Avbryt",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "cannot_be_empty": {
+    "message": "Det här fältet kan inte vara tomt",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change_later_reminder": {
+    "message": "Du kan senare ändra detta beslut i Inställningarna",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check_selected_items": {
+    "message": "Markera valda Objekt",
+    "description": "Menu text"
+  },
+  "colConnections": {
+    "message": "Samtidiga anslutningar",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "Domän",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "Ber. tid",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "Namn/Webbadress",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "Förlopp",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Segment",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Storlek",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Hastighet",
+    "description": "Table column in manager"
+  },
+  "conflict_overwrite": {
+    "message": "Skriv över",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_prompt": {
+    "message": "Skriv",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_rename": {
+    "message": "Byt namn",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "Internt webbläsarfel",
+    "description": "Error Message"
+  },
+  "create_filter": {
+    "message": "Skapa filter",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom_filename": {
+    "message": "Anpassat filnamn",
+    "description": "Label text; single window"
+  },
+  "deffilter_all": {
+    "message": "Alla filer",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter_arch": {
+    "message": "Arkiv (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter_aud": {
+    "message": "Ljud (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter_bin": {
+    "message": "Programvara (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter_doc": {
+    "message": "Dokument (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter_img": {
+    "message": "Bilder (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter_imggif": {
+    "message": "GIF-bilder",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter_imgjpg": {
+    "message": "JPEG-bilder",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter_imgpng": {
+    "message": "PNG-bilder",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter_vid": {
+    "message": "Videor (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "Ta bort",
+    "description": "button text"
+  },
+  "deletefiles": {
+    "message": "Ta bort filer",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Ta bort",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Är du säker på att du vill ta bort följande filer?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Ta bort filer",
+    "description": "messagebox title"
+  },
+  "description": {
+    "message": "Beskrivning",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable_other_filters": {
+    "message": "Inaktivera andra",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "Donera!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Klar",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "Hämta",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download_verb": {
+    "message": "Hämta",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta_regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "DownThemAll! - Alla flikar",
+    "description": "Menu text"
+  },
+  "dta_regular_image": {
+    "message": "Spara bild med DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_regular_link": {
+    "message": "Spara länk med DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_regular_media": {
+    "message": "Spara media med DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_regular_selection": {
+    "message": "Spara val med DownThemAll!",
+    "description": "Menu text"
+  },
+  "dta_turbo": {
+    "message": "OneClick!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "OneClick! - Alla flikar",
+    "description": "Menu text"
+  },
+  "dta_turbo_image": {
+    "message": "Spara bild med OneClick!",
+    "description": "Menu text"
+  },
+  "dta_turbo_link": {
+    "message": "Spara länk med OneClick!",
+    "description": "Menu text"
+  },
+  "dta_turbo_media": {
+    "message": "Spara media med OneClick!",
+    "description": "Menu text"
+  },
+  "dta_turbo_selection": {
+    "message": "Spara val med OneClick!",
+    "description": "Menu text"
+  },
+  "error_invalidURL": {
+    "message": "Ogiltig webbadress",
+    "description": "Error message; single window"
+  },
+  "error_noabsolutepath": {
+    "message": "Absoluta sökvägar för undermappar stöds inte av webbläsare",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Punkter (.) i undermappar stöds inte av webbläsare",
+    "description": "Error Message; select/single window"
+  },
+  "error_noItemsSelected": {
+    "message": "Inga valda objekt",
+    "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "Exportera till fil",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Exportera som aria2-lista",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Exportera som metalänk",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Exportera som text",
+    "description": "menu text"
+  },
+  "extensionDescription": {
+    "message": "Bulkhämtaren för din webbläsare",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "Snabb filtrering",
+    "description": "Label for Fast Filtering input"
+  },
+  "fastfilter_placeholder": {
+    "message": "Jokertecken eller reguljärt uttryck",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "Fil åtkomst fel",
+    "description": "Error Message"
+  },
+  "filter_at_least_one": {
+    "message": "Du måste välja minst en filtertyp!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter_create_title": {
+    "message": "Skapa nytt filter",
+    "description": "Message box title"
+  },
+  "filter_expression": {
+    "message": "Filteruttryck",
+    "description": "Message box label"
+  },
+  "filter_label": {
+    "message": "Filteretikett",
+    "description": "Message box label"
+  },
+  "filter_types": {
+    "message": "filtertyper",
+    "description": "Message box label"
+  },
+  "filter_type_link": {
+    "message": "Länkfilter",
+    "description": "Message box checkbox label"
+  },
+  "filter_type_media": {
+    "message": "Mediefilter",
+    "description": "Message box checkbox label"
+  },
+  "finishing": {
+    "message": "Efterbehandling",
+    "description": "Status text"
+  },
+  "force_start": {
+    "message": "Tvinga start",
+    "description": "Menu text"
+  },
+  "import": {
+    "message": "Importera från fil",
+    "description": "menu text"
+  },
+  "information_title": {
+    "message": "Information",
+    "description": "Used in message boxes"
+  },
+  "invalid_domain_pref": {
+    "message": "Ogiltig domän",
+    "description": "Error message in prefs/network"
+  },
+  "invert_selection": {
+    "message": "Invertera urval",
+    "description": "Menu text"
+  },
+  "key_alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key_ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key_delete": {
+    "message": "Del",
+    "description": "Short for Delete-key"
+  },
+  "key_end": {
+    "message": "End",
+    "description": "Short for End-key"
+  },
+  "key_home": {
+    "message": "Home",
+    "description": "Short for home key"
+  },
+  "key_pagedown": {
+    "message": "PageDown",
+    "description": "Short for pagedown-key"
+  },
+  "key_pageup": {
+    "message": "PageUp",
+    "description": "Short for PageUp-key"
+  },
+  "limited_to": {
+    "message": "Begränsad till",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "Länkar",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "Hanterare",
+    "description": "Menu text"
+  },
+  "manager_status_items": {
+    "message": "Slutförde $COMPLETE$ av $TOTAL$ hämtningar ($SHOWING$ visade), $RUNNING$ körs",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_title": {
+    "message": "DownThemAll! Hanterare",
+    "description": "Window/tab title"
+  },
+  "media": {
+    "message": "Media",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Saknas",
+    "description": "Status text in manager"
+  },
+  "move_bottom": {
+    "message": "Nederst",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move_down": {
+    "message": "Ner",
+    "description": "Action for moving a download down"
+  },
+  "move_top": {
+    "message": "Överst",
+    "description": "Action for moving a download to the top"
+  },
+  "move_up": {
+    "message": "Upp",
+    "description": "Action for moving a download up"
+  },
+  "nagging_message": {
+    "message": "Du har lagt till $DOWNLOADS$ hämtningar med DownThemAll! hittills! Som en vanlig användare kanske du vill överväga en donation för att stöda vidareutveckling. Tackar!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "Nätverksfel",
+    "description": "Error Message"
+  },
+  "never_ask_again": {
+    "message": "Fråga mig inte igen",
+    "description": "Donation button"
+  },
+  "noitems_label": {
+    "message": "Inga valda objekt",
+    "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "Inga länkar hittades!",
+    "description": "Notification text"
+  },
+  "numitems_label": {
+    "message": "$ITEMS$ objekt valda…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "OK",
+    "description": "Button text; Used in message boxes"
+  },
+  "open_directory": {
+    "message": "Öppna mapp",
+    "description": "Menu text; manager context"
+  },
+  "open_file": {
+    "message": "Öppna fil",
+    "description": "Menu text; manager context"
+  },
+  "open_link": {
+    "message": "Öppna länk",
+    "description": "Menu text; select window"
+  },
+  "options_filters": {
+    "message": "Filter",
+    "description": "Pref tab text"
+  },
+  "options_general": {
+    "message": "Allmänt",
+    "description": "Pref tab text"
+  },
+  "options_network": {
+    "message": "Nätverk",
+    "description": "Pref tab text"
+  },
+  "paused": {
+    "message": "Pausad",
+    "description": "Status text; manager"
+  },
+  "pause_download": {
+    "message": "Pausa",
+    "description": "Action for pausing a download"
+  },
+  "prefs_conflicts": {
+    "message": "När en fil finns",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "Inställningar",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "DownThemAll! Inställningar",
+    "description": "Window/tab title; Preferences"
+  },
+  "pref_add_paused": {
+    "message": "Lägg till nya hämtningar pausade, istället för att starta dem omedelbart",
+    "description": "Preferences/General"
+  },
+  "pref_button_type": {
+    "message": "DownThemAll! knapp:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "DownThemAll! urval",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Öppna hanterare",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Popupmeny",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "OneClick!",
+    "description": "label"
+  },
+  "pref_concurrent_downloads": {
+    "message": "Samtidiga hämtningar",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "Visa en avisering när kön är färdig med hämtningen",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "Visa inte allmänna snabbmenyalternativ",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "Hanterare",
+    "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "Öppna chef i ett nytt popup-fönster",
+    "description": "checkbox text"
+  },
+  "pref_manager_tooltip": {
+    "message": "Visa verktygstips i Hanterarens flikar",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "Globala nätverksgränser",
+    "description": "Preferences/General; group text"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "Öppna fliken Hanterare efter köat några hämtningar",
+    "description": "Preferences/General"
+  },
+  "pref_queueing": {
+    "message": "Köande hämtningar",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queue_notification": {
+    "message": "Visa en avisering när nya hämtningar sätts i kö",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "Ta bort saknade hämtningar efter en omstart",
+    "description": "Preferences/General"
+  },
+  "pref_retries": {
+    "message": "Antal omförsök av hämtningar på tillfälliga fel",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Försök igen varje (i minuter)",
+    "description": "pref text"
+  },
+  "pref_show_urls": {
+    "message": "Visa webbadresser istället för namn",
+    "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "Spela ljud",
+    "description": "checkbox text"
+  },
+  "pref_text_links": {
+    "message": "Försök hitta länkar i webbplatstexten (långsammare)",
+    "description": "Preferences/General"
+  },
+  "pref_theme": {
+    "message": "Tema:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Mörkt",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "System/Webbläsare",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Ljust",
+    "description": "option text"
+  },
+  "pref_ui": {
+    "message": "Användargränssnitt",
+    "description": "Preferences/General; group text"
+  },
+  "queued": {
+    "message": "Köade",
+    "description": "Status text"
+  },
+  "queued_download": {
+    "message": "Köade 1 hämtning!",
+    "description": "Notification text; single download"
+  },
+  "queued_downloads": {
+    "message": "Köade $COUNT$ hämtningar!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "queue_finished": {
+    "message": "Hämningskön är klar",
+    "description": "Notification text"
+  },
+  "remember": {
+    "message": "Kom ihåg detta beslut",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove_all_complete_downloads": {
+    "message": "Ta bort alla färdiga",
+    "description": "Menu text"
+  },
+  "remove_all_downloads": {
+    "message": "Ta bort alla",
+    "description": "Menu text"
+  },
+  "remove_all_downloads_question": {
+    "message": "Vill du ta bort ALLA hämtningar?",
+    "description": "Messagebox text"
+  },
+  "remove_batch_downloads": {
+    "message": "Ta bort aktuell batch",
+    "description": "Menu text"
+  },
+  "remove_batch_downloads_question": {
+    "message": "Vill du ta bort alla hämtningar från samma batch som den valda hämtningen?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads": {
+    "message": "Ta bort färdiga hämtningar",
+    "description": "Action for removing complete downloads"
+  },
+  "remove_complete_downloads_question": {
+    "message": "Vill du ta bort alla färdiga hämtningar?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_filter_downloads_question": {
+    "message": "Vill du ta bort alla färdiga hämtningar som matchar filtret \"$FILTER$\"?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "message": "Vill du ta bort alla färdiga hämtningar i det aktuella valet?",
+    "description": "Messagebox text"
+  },
+  "remove_domain_complete_downloads": {
+    "message": "Borttagning färdig från aktuell domän",
+    "description": "Menu text"
+  },
+  "remove_domain_complete_downloads_question": {
+    "message": "Vill du ta bort alla färdiga hämtningar från domänen \"$DOMAIN$\"?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "message": "Ta bort aktuell domän",
+    "description": "Menu text"
+  },
+  "remove_domain_downloads_question": {
+    "message": "Vill du ta bort alla hämtningar från domänen \"$DOMAIN$\"?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "message": "Ta bort hämtning",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove_downloads": {
+    "message": "Ta bort hämtningar",
+    "description": "Menu text"
+  },
+  "remove_downloads_title": {
+    "message": "Är du säker på att du vill ta bort hämtningar?",
+    "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "Vill du ta bort valda hämtningar?",
+    "description": "Messagebox text"
+  },
+  "remove_failed_downloads": {
+    "message": "Borttagning misslyckades",
+    "description": "Menu text"
+  },
+  "remove_failed_downloads_question": {
+    "message": "Vill du ta bort alla misslyckade hämtningar?",
+    "description": "Messagebox text"
+  },
+  "remove_filter_downloads_question": {
+    "message": "Vill du ta bort alla hämtningar som matchar filtret \"$FILTER$\"?",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "message": "Rensa saknade hämtningar",
+    "description": "Menu text"
+  },
+  "remove_missing_downloads_question": {
+    "message": "Vill du rensa alla saknade hämtningar?",
+    "description": "Messagebox text"
+  },
+  "remove_paused_downloads": {
+    "message": "Ta tort pausade",
+    "description": "Menu text"
+  },
+  "remove_paused_downloads_question": {
+    "message": "Vill du ta bort alla pausade hämtningar?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_complete_downloads": {
+    "message": "Ta bort färdiga i valet",
+    "description": "Menu text"
+  },
+  "remove_selected_complete_downloads_question": {
+    "message": "Vill du ta bort alla färdiga hämtningar i det aktuella valet?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_downloads": {
+    "message": "Ta bort balda",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "Byt namn",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer_batch": {
+    "message": "Batchnummer",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_d": {
+    "message": "Datum tillagd - Dag",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_date": {
+    "message": "Datum tillagd",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_domain": {
+    "message": "Domännamn (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ext": {
+    "message": "Filändelse",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_hh": {
+    "message": "Datum tillagd -  Timme",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_host": {
+    "message": "Värdnamn",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_idx": {
+    "message": "Objektnummer inom batch",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_info": {
+    "message": "Lägga till \"flat\", såsom *flatsubdirs* kommer att ersätta alla snedstreck i värdet, vilket inte skapar mappar",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer_m": {
+    "message": "Datum tillagd - Månad",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_mm": {
+    "message": "Datum tillagd - Minut",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_name": {
+    "message": "Filnamn",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_num": {
+    "message": "Alias för *batch*",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_qstring": {
+    "message": "Frågesträng",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ss": {
+    "message": "Datum tillagd - Sekund",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_subdirs": {
+    "message": "Sökväg",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_text": {
+    "message": "Beskrivningstext",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "Titeltext",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_url": {
+    "message": "Webbadress (utan protokoll)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_y": {
+    "message": "Datum tillagd - År",
+    "description": "Mask text; see mask button"
+  },
+  "reset": {
+    "message": "Återställ",
+    "description": "Button text; pref window"
+  },
+  "reset_confirmations": {
+    "message": "Återställ ihågkomna bekräftelser",
+    "description": "Button text; pref/General"
+  },
+  "reset_confirmations_done": {
+    "message": "Alla tidigare ihågkomna bekräftelser har återställts!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset_layouts": {
+    "message": "Återställ anpassningar på användargränssnittet",
+    "description": "Button text; pref/General"
+  },
+  "reset_layouts_done": {
+    "message": "Alla tidigare ihågkomna layout-anpassningar har återställts! Du kan behöva uppdatera fönster/flikar.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume_download": {
+    "message": "Återuppta",
+    "description": "Action for resuming a download"
+  },
+  "retrying": {
+    "message": "Försöker igen",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Försöker igen - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
+  "running": {
+    "message": "Körs",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Spara",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Sök…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select_all": {
+    "message": "Välj alla",
+    "description": "Menu text; e.g. select context"
+  },
+  "select_checked": {
+    "message": "Välj markerade",
+    "description": "Menu text; select context"
+  },
+  "select_none": {
+    "message": "Välj inga",
+    "description": "Menu text; select context"
+  },
+  "select_title": {
+    "message": "DownThemAll! - Välj dina hämtningar",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "Hittades inte",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Serverfel",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Förbjuden",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "Obehörig",
+    "description": "Error message"
+  },
+  "single_batchexamples": {
+    "message": "Batcher stöds, exempelvis:",
+    "description": "Header text; single window"
+  },
+  "single_header": {
+    "message": "Ange en hämtningswebbadress (länk) och andra alternativ",
+    "description": "Header text; single window"
+  },
+  "single_title": {
+    "message": "DownThemAll! - Lägg till en länk",
+    "description": "Title of single window"
+  },
+  "sizeB": {
+    "message": "$S$B",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes_huge": {
+    "message": "Enorm (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "message": "Stor ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "message": "Medium ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "message": "Liten ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ av $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "Okänd",
+    "description": "Status text; manager size column"
+  },
+  "speedB": {
+    "message": "$SPEED$b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "message": "Nya hämtningar kommer att startas",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork_inactive_title": {
+    "message": "Inga nya hämtningar kommer att startas",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "subfolder": {
+    "message": "Undermapp:",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Placera filer i denna undermapp i din hämtningsmapp",
+    "description": "placeholder text within an input box"
+  },
+  "title": {
+    "message": "Titel",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle_selected_items": {
+    "message": "Växla kontroll för valda objekt",
+    "description": "Menu text; select"
+  },
+  "tooltip_date": {
+    "message": "Datum tillagd",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_eta": {
+    "message": "Återstående:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip_from": {
+    "message": "Från:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip_size": {
+    "message": "Storlek:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_average": {
+    "message": "Genomsnittlig:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_current": {
+    "message": "Aktuell:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck_selected_items": {
+    "message": "Avmarkera valda objekt",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Obegränsad",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Användning en gång",
+    "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Användaren avbröt",
+    "description": "Error message"
+  }
+}
