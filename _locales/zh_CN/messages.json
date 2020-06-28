@@ -1262,7 +1262,7 @@
     "description": "Tooltip text; manager/downloads"
   },
   "tooltip_eta": {
-    "message": "重命名：",
+    "message": "剩余时间：",
     "description": "Tooltip text; manager/downloads; Time"
   },
   "tooltip_from": {
