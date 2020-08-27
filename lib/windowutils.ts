@@ -30,7 +30,7 @@ export async function mostRecentBrowser(incognito: boolean): Promise<any> {
   }
   catch {
     try {
-      window = await windows.getlastFocused();
+      window = await windows.getLastFocused();
       if (window.type !== "normal") {
         throw new Error("not a normal window");
       }
