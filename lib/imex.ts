@@ -81,6 +81,14 @@ function importMeta4(data: string) {
       if (mask) {
         item.mask = mask;
       }
+      const description = file.querySelector("description");
+      if (description && description.textContent) {
+        item.description = description.textContent.trim();
+      }
+      const title = file.getElementsByTagNameNS(NS_DTA, "title");
+      if (title && title[0] && title[0].textContent) {
+        item.title = title[0].textContent;
+      }
       items.push(item);
     }
     catch (ex) {
@@ -94,9 +102,9 @@ function parseKV(current: BaseItem, line: string) {
   const [k, v] = line.split("=", 2);
   switch (k.toLocaleLowerCase().trim()) {
   case "referer": {
-    const rurls = getTextLinks(v);
-    if (rurls && rurls.length) {
-      current.referrer = rurls.pop();
+    const refererUrls = getTextLinks(v);
+    if (refererUrls && refererUrls.length) {
+      current.referrer = refererUrls.pop();
       current.usableReferrer = decodeURIComponent(current.referrer || "");
     }
     break;
@@ -203,9 +211,9 @@ class MetalinkExporter {
     ));
 
     for (const item of items) {
-      const aitem = item as any;
+      const anyItem = item as any;
       const f = document.createElementNS(NS_METALINK_RFC5854, "file");
-      f.setAttribute("name", aitem.currentName);
+      f.setAttribute("name", anyItem.currentName);
       if (item.batch) {
         f.setAttributeNS(NS_DTA, "num", item.batch.toString());
       }
@@ -225,13 +233,19 @@ class MetalinkExporter {
         f.appendChild(n);
       }
 
+      if (item.title) {
+        const n = document.createElementNS(NS_DTA, "title");
+        n.textContent = item.title;
+        f.appendChild(n);
+      }
+
       const u = document.createElementNS(NS_METALINK_RFC5854, "url");
       u.textContent = item.url;
       f.appendChild(u);
 
-      if (aitem.totalSize > 0) {
+      if (anyItem.totalSize > 0) {
         const s = document.createElementNS(NS_METALINK_RFC5854, "size");
-        s.textContent = aitem.totalSize.toString();
+        s.textContent = anyItem.totalSize.toString();
         f.appendChild(s);
       }
       root.appendChild(f);
