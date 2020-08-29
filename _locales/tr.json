@@ -1,0 +1,1300 @@
+{
+  "language": {
+    "message": "Türkçe TR)",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "tr-TR",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "addpaused": {
+    "message": "Duraklatılmış ekle",
+    "description": "Action: Add paused"
+  },
+  "add_download": {
+    "message": "İndirme Ekle",
+    "description": "Action for adding a download"
+  },
+  "add_new": {
+    "message": "Yeni Ekle",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add_paused_once": {
+    "message": "Bu sefer yalnızca duraklatılmış olarak ekle",
+    "description": "Checkbox label"
+  },
+  "add_paused_question": {
+    "message": "Bu kararı hatırlamak ve her zaman bundan sonra duraklatılmış yeni indirmeler eklemek ister misiniz?",
+    "description": "Messagebox text"
+  },
+  "add_paused_title": {
+    "message": "Her zaman duraklatılmış olarak eklensin mi?",
+    "description": "Title for the add-paused dialog"
+  },
+  "ask_again_later": {
+    "message": "Bana daha sonra tekrar sor",
+    "description": "Button text"
+  },
+  "batch_batch": {
+    "message": "Toplu İndir",
+    "description": "Button text"
+  },
+  "batch_desc": {
+    "message": "Geçerli URL, toplu indirme için talimatlar içeriyor gibi görünüyor.",
+    "description": ""
+  },
+  "batch_items": {
+    "message": "Öge sayısı:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_preview": {
+    "message": "Ön izleme:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_question": {
+    "message": "Bunu toplu olarak mı yoksa tek indirme olarak mı eklemek istiyorsunuz?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_single": {
+    "message": "Tek İndir",
+    "description": "Button text for batch confirmation"
+  },
+  "batch_title": {
+    "message": "Toplu İndirme",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "İptal Et",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "İptal Edildi",
+    "description": "Download status text"
+  },
+  "cancel_download": {
+    "message": "İptal Et",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "cannot_be_empty": {
+    "message": "Bu alan boş olamaz",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change_later_reminder": {
+    "message": "Bu kararı daha sonra Tercihler bölümünde değiştirebilirsiniz",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check_selected_items": {
+    "message": "Seçilen Ögeleri Kontrol Et",
+    "description": "Menu text"
+  },
+  "colConnections": {
+    "message": "Eşzamanlı Bağlantılar",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "Alan Adı",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "Tahmini Süre",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "Ad/URL",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "İlerleme",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Parçalar",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Boyut",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Hız",
+    "description": "Table column in manager"
+  },
+  "conflict_overwrite": {
+    "message": "Üzerine Yaz",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_prompt": {
+    "message": "Komut istemi",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_rename": {
+    "message": "Yeniden Adlandır",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "Dahili Tarayıcı Hatası",
+    "description": "Error Message"
+  },
+  "create_filter": {
+    "message": "Filtre Oluştur",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom_filename": {
+    "message": "Özel Dosya Adı",
+    "description": "Label text; single window"
+  },
+  "deffilter_all": {
+    "message": "Tüm dosyalar",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter_arch": {
+    "message": "Arşivler (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter_aud": {
+    "message": "Ses (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter_bin": {
+    "message": "Yazılım (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter_doc": {
+    "message": "Belgeler (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter_img": {
+    "message": "Görseller (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter_imggif": {
+    "message": "GIF Resimleri",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter_imgjpg": {
+    "message": "JPEG Resimleri",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter_imgpng": {
+    "message": "PNG Resimleri",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter_vid": {
+    "message": "Videolar (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "Sil",
+    "description": "button text"
+  },
+  "deletefiles": {
+    "message": "Dosyaları Sil",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Sil",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Aşağıdaki dosyaları silmek istediğinizden emin misiniz?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Dosyaları Sil",
+    "description": "messagebox title"
+  },
+  "description": {
+    "message": "Açıklama",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable_other_filters": {
+    "message": "Diğerlerini devre dışı bırak",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "Bağışta Bulunun!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Bitti",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "İndirme",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download_verb": {
+    "message": "İndir",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta_regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "DownThemAll! - Tüm Sekmeler",
+    "description": "Menu text"
+  },
+  "dta_regular_image": {
+    "message": "DownThemAll ile Görüntüyü Kaydet!",
+    "description": "Menu text"
+  },
+  "dta_regular_link": {
+    "message": "DownThemAll ile Bağlantıyı Kaydet!",
+    "description": "Menu text"
+  },
+  "dta_regular_media": {
+    "message": "DownThemAll ile Medyayı Kaydet!",
+    "description": "Menu text"
+  },
+  "dta_regular_selection": {
+    "message": "DownThemAll ile Seçimi Kaydet!",
+    "description": "Menu text"
+  },
+  "dta_turbo": {
+    "message": "OneClick!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "OneClick! - Tüm Sekmeler",
+    "description": "Menu text"
+  },
+  "dta_turbo_image": {
+    "message": "OneClick ile Görüntüyü Kaydet!",
+    "description": "Menu text"
+  },
+  "dta_turbo_link": {
+    "message": "OneClick ile Bağlantıyı Kaydet!",
+    "description": "Menu text"
+  },
+  "dta_turbo_media": {
+    "message": "OneClick ile Medyayı Kaydet!",
+    "description": "Menu text"
+  },
+  "dta_turbo_selection": {
+    "message": "OneClick ile Seçimi Kaydet!",
+    "description": "Menu text"
+  },
+  "error_invalidMask": {
+    "message": "Geçersiz Yeniden Adlandırma Maskesi",
+    "description": "Error message; single/select window"
+  },
+  "error_invalidReferrer": {
+    "message": "Geçersiz Yönlendiren",
+    "description": "Error message; single window"
+  },
+  "error_invalidURL": {
+    "message": "Geçersiz URL",
+    "description": "Error message; single window"
+  },
+  "error_noabsolutepath": {
+    "message": "Alt klasörler için mutlak yollar tarayıcılar tarafından desteklenmez",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Alt klasörlerdeki noktalar (.) tarayıcılar tarafından desteklenmez",
+    "description": "Error Message; select/single window"
+  },
+  "error_noItemsSelected": {
+    "message": "Hiçbir öğe seçilmedi",
+    "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "Dosyaya Aktar",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Aria2 Listesi Olarak Dışa Aktar",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Metalink Olarak Dışa Aktar",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Metin Olarak Dışa Aktar",
+    "description": "menu text"
+  },
+  "extensionDescription": {
+    "message": "Tarayıcınız için Toplu İndirme",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "Hızlı Filtreleme",
+    "description": "Label for Fast Filtering input"
+  },
+  "fastfilter_placeholder": {
+    "message": "Joker karakter ifadesi veya normal ifade",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "Dosya Erişim Hatası",
+    "description": "Error Message"
+  },
+  "filter_at_least_one": {
+    "message": "En az bir filtre türü seçmelisiniz!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter_create_title": {
+    "message": "Yeni Filtre Oluştur",
+    "description": "Message box title"
+  },
+  "filter_expression": {
+    "message": "Filtre-İfade",
+    "description": "Message box label"
+  },
+  "filter_label": {
+    "message": "Filtre-Etiket",
+    "description": "Message box label"
+  },
+  "filter_types": {
+    "message": "Filtre-Türler",
+    "description": "Message box label"
+  },
+  "filter_type_link": {
+    "message": "Bağlantı Filtresi",
+    "description": "Message box checkbox label"
+  },
+  "filter_type_media": {
+    "message": "Medya Filtresi",
+    "description": "Message box checkbox label"
+  },
+  "finishing": {
+    "message": "Tamamlanıyor",
+    "description": "Status text"
+  },
+  "force_start": {
+    "message": "Zorla Başlatma",
+    "description": "Menu text"
+  },
+  "import": {
+    "message": "Dosyadan İçe Aktar",
+    "description": "menu text"
+  },
+  "information_title": {
+    "message": "Bilgi",
+    "description": "Used in message boxes"
+  },
+  "invalid_domain_pref": {
+    "message": "Geçersiz alan adı",
+    "description": "Error message in prefs/network"
+  },
+  "invert_selection": {
+    "message": "Zıt seçim",
+    "description": "Menu text"
+  },
+  "key_alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key_ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key_delete": {
+    "message": "Del",
+    "description": "Short for Delete-key"
+  },
+  "key_end": {
+    "message": "End",
+    "description": "Short for End-key"
+  },
+  "key_home": {
+    "message": "Home",
+    "description": "Short for home key"
+  },
+  "key_pagedown": {
+    "message": "PageDown",
+    "description": "Short for pagedown-key"
+  },
+  "key_pageup": {
+    "message": "PageUp",
+    "description": "Short for PageUp-key"
+  },
+  "limited_to": {
+    "message": "Sınırlı",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "Bağlantılar",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "Yönetici",
+    "description": "Menu text"
+  },
+  "manager_status_items": {
+    "message": "Tamamlandı $COMPLETE$/$TOTAL$ indirme ($SHOWING$ görüntüleniyor), $RUNNING$ çalışıyor",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_title": {
+    "message": "DownThemAll! Yöneticisi",
+    "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "Maskele",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask_default": {
+    "message": "Varsayılan Maske",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "Medya",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Eksik",
+    "description": "Status text in manager"
+  },
+  "move_bottom": {
+    "message": "Alta Taşı",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move_down": {
+    "message": "Aşağı Taşı",
+    "description": "Action for moving a download down"
+  },
+  "move_top": {
+    "message": "Üste Taşı",
+    "description": "Action for moving a download to the top"
+  },
+  "move_up": {
+    "message": "Yukarı Taşı",
+    "description": "Action for moving a download up"
+  },
+  "nagging_message": {
+    "message": "DownThemAll! ile şimdiye kadar $DOWNLOADS$ indirme eklediniz! Normal bir kullanıcı olarak, daha fazla gelişimi desteklemek için bir bağış düşünebilirsiniz. Teşekkürler!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "Ağ Hatası",
+    "description": "Error Message"
+  },
+  "never_ask_again": {
+    "message": "Bana tekrar sorma",
+    "description": "Donation button"
+  },
+  "noitems_label": {
+    "message": "Hiçbir öğe seçilmedi",
+    "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "Bağlantı bulunamadı!",
+    "description": "Notification text"
+  },
+  "numitems_label": {
+    "message": "$ITEMS$ öğe seçildi…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "TAMAM",
+    "description": "Button text; Used in message boxes"
+  },
+  "open_directory": {
+    "message": "Dizini Aç",
+    "description": "Menu text; manager context"
+  },
+  "open_file": {
+    "message": "Dosyayı Aç",
+    "description": "Menu text; manager context"
+  },
+  "open_link": {
+    "message": "Bağlantıyı Aç",
+    "description": "Menu text; select window"
+  },
+  "options_filters": {
+    "message": "Filtreler",
+    "description": "Pref tab text"
+  },
+  "options_general": {
+    "message": "Genel",
+    "description": "Pref tab text"
+  },
+  "options_network": {
+    "message": "Ağ",
+    "description": "Pref tab text"
+  },
+  "paused": {
+    "message": "Duraklatıldı",
+    "description": "Status text; manager"
+  },
+  "pause_download": {
+    "message": "Duraklat",
+    "description": "Action for pausing a download"
+  },
+  "prefs_conflicts": {
+    "message": "Bir dosya olduğunda",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "Tercihler",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "DownThemAll! Tercihleri",
+    "description": "Window/tab title; Preferences"
+  },
+  "pref_add_paused": {
+    "message": "Hemen başlatmak yerine duraklatılmış yeni indirmeler ekle",
+    "description": "Preferences/General"
+  },
+  "pref_button_type": {
+    "message": "DownThemAll! düğmesi:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "DownThemAll! seçimi",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Yöneticiyi Aç",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Açılır menü",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "OneClick!",
+    "description": "label"
+  },
+  "pref_concurrent_downloads": {
+    "message": "Eşzamanlı indirmeler",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "Kuyruk indirmeyi bitirdiğinde bildirim göster",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "Genel içerik menüsü öğelerini gösterme",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "Yönetici",
+    "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "Yöneticiyi yeni bir açılır pencerede aç",
+    "description": "checkbox text"
+  },
+  "pref_manager_tooltip": {
+    "message": "Yönetici sekmelerinde araç ipuçlarını göster",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "Global Ağ Sınırları",
+    "description": "Preferences/General; group text"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "Bazı indirmeleri sıraladıktan sonra Yönetici sekmesini açın",
+    "description": "Preferences/General"
+  },
+  "pref_queueing": {
+    "message": "Kuruktaki İndirmeler",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queue_notification": {
+    "message": "Yeni indirmeleri sıraya koyarken bildirim göster",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "Yeniden başlattıktan sonra eksik indirmeleri kaldır",
+    "description": "Preferences/General"
+  },
+  "pref_retries": {
+    "message": "Geçici hatalarda tekrar indirme deneme sayısı",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Her birini tekrar deneyin (dakika olarak)",
+    "description": "pref text"
+  },
+  "pref_show_urls": {
+    "message": "Adlar yerine URL'leri göster",
+    "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "Ses çal",
+    "description": "checkbox text"
+  },
+  "pref_text_links": {
+    "message": "Web sitesi metninde bağlantılar bulmaya çalış (daha yavaş)",
+    "description": "Preferences/General"
+  },
+  "pref_theme": {
+    "message": "Tema:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Karanlık",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "Sistem/Tarayıcı",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Açık",
+    "description": "option text"
+  },
+  "pref_ui": {
+    "message": "Kullanıcı Arayüzü",
+    "description": "Preferences/General; group text"
+  },
+  "queued": {
+    "message": "Kuyrukta",
+    "description": "Status text"
+  },
+  "queued_download": {
+    "message": "1 indirme kuyrukta!",
+    "description": "Notification text; single download"
+  },
+  "queued_downloads": {
+    "message": "$COUNT$ indirme kuyrukta!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "queue_finished": {
+    "message": "İndirme kuyruğu tamamlandı",
+    "description": "Notification text"
+  },
+  "referrer": {
+    "message": "Yönlendiren",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "Bu kararı hatırla",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove_all_complete_downloads": {
+    "message": "Tamamlananların Tümünü Kaldır",
+    "description": "Menu text"
+  },
+  "remove_all_downloads": {
+    "message": "Tümünü Kaldır",
+    "description": "Menu text"
+  },
+  "remove_all_downloads_question": {
+    "message": "TÜM indirmeleri kaldırmak istiyor musunuz?",
+    "description": "Messagebox text"
+  },
+  "remove_batch_downloads": {
+    "message": "Geçerli Yığını Kaldır",
+    "description": "Menu text"
+  },
+  "remove_batch_downloads_question": {
+    "message": "Seçili olan indirme ile aynı yığındaki tüm indirmeleri kaldırmak istiyor musunuz?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads": {
+    "message": "Tamamlanan İndirmeleri Kaldır",
+    "description": "Action for removing complete downloads"
+  },
+  "remove_complete_downloads_question": {
+    "message": "Tüm indirilenleri kaldırmak istiyor musunuz?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_filter_downloads_question": {
+    "message": "'$FILTER$' filtresiyle eşleşen tüm indirmeleri kaldırmak istiyor musunuz?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "message": "Geçerli seçimdeki tamamlanan tüm indirmeleri kaldırmak istiyor musunuz?",
+    "description": "Messagebox text"
+  },
+  "remove_domain_complete_downloads": {
+    "message": "Mevcut Alan Adından Tamamlananları Kaldır",
+    "description": "Menu text"
+  },
+  "remove_domain_complete_downloads_question": {
+    "message": "'$DOMAIN$' alan adından tüm indirmeleri kaldırmak istiyor musunuz?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "message": "Mevcut Alan Adını Kaldır",
+    "description": "Menu text"
+  },
+  "remove_domain_downloads_question": {
+    "message": "'$DOMAIN$' alan adından tüm indirmeleri kaldırmak istiyor musunuz?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "message": "İndirmeyi Kaldır",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove_downloads": {
+    "message": "İndirilenleri Kaldır",
+    "description": "Menu text"
+  },
+  "remove_downloads_title": {
+    "message": "İndirilenleri kaldırmak istediğinizden emin misiniz?",
+    "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "Seçilen indirmeleri kaldırmak istiyor musunuz?",
+    "description": "Messagebox text"
+  },
+  "remove_failed_downloads": {
+    "message": "Başarızları Kaldır",
+    "description": "Menu text"
+  },
+  "remove_failed_downloads_question": {
+    "message": "Başarısız olan tüm indirmeleri kaldırmak istiyor musunuz?",
+    "description": "Messagebox text"
+  },
+  "remove_filter_downloads_question": {
+    "message": "'$FILTER$' filtresiyle eşleşen tüm indirmeleri kaldırmak istiyor musunuz?",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "message": "Eksik İndirmeleri Sil",
+    "description": "Menu text"
+  },
+  "remove_missing_downloads_question": {
+    "message": "Tüm eksik indirmeleri silmek istiyor musunuz?",
+    "description": "Messagebox text"
+  },
+  "remove_paused_downloads": {
+    "message": "Duraklatılanları Sil",
+    "description": "Menu text"
+  },
+  "remove_paused_downloads_question": {
+    "message": "Duraklatılan tüm indirmeleri silmek istiyor musunuz?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_complete_downloads": {
+    "message": "Seçimdeki Tamamlananları Sil",
+    "description": "Menu text"
+  },
+  "remove_selected_complete_downloads_question": {
+    "message": "Geçerli seçimdeki tamamlanan tüm indirmeleri silmek istiyor musunuz?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_downloads": {
+    "message": "Seçilenleri Sil",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "Yeniden Adlandır",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer_batch": {
+    "message": "Yığın Numarası",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_d": {
+    "message": "Eklenme Tarihi - Gün",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_date": {
+    "message": "Eklenme Tarihi",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_domain": {
+    "message": "Alan Adı (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ext": {
+    "message": "Dosya Uzantısı",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_hh": {
+    "message": "Eklenme Tarihi - Saat",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_host": {
+    "message": "Host Adı",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_idx": {
+    "message": "Yığın içindeki öğe numarası",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_info": {
+    "message": "'flatsubdirs' gibi 'flat' eklenmesi, değerdeki tüm eğik çizgilerin yerini alacak, böylece dizin oluşturmayacak",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer_m": {
+    "message": "Eklenme Tarihi - Ay",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_mm": {
+    "message": "Eklenme Tarihi - Dakika",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_name": {
+    "message": "Dosya Adı",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_num": {
+    "message": "*Yığın* için takma ad",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_qstring": {
+    "message": "Sorgu Dizesi",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ref": {
+    "message": "Yönlendiren",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refdomain": {
+    "message": "Yönlendiren Alan Adı (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refext": {
+    "message": "Yönlendiren Dosya Uzantısı",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refhost": {
+    "message": "Yönlendiren Host Adı",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refname": {
+    "message": "Yönlendiren Dosya Adı",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refqstring": {
+    "message": "Yönlendiren Sorgu Dizesi",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refsubdirs": {
+    "message": "Yönlendiren Yol",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refurl": {
+    "message": "Yönlendiren URL (protokol olmadan)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ss": {
+    "message": "Eklenme Tarihi - Saniye",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_subdirs": {
+    "message": "Yol",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_tags": {
+    "message": "Maske Etiketlerini Yeniden Adlandırma",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_text": {
+    "message": "Açıklama Metni",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "Başlık Metni",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_url": {
+    "message": "URL (protokol olmadan)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_y": {
+    "message": "Eklenme Tarihi - Yıl",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "Maske yeniden adlandırılıyor",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "Sıfırla",
+    "description": "Button text; pref window"
+  },
+  "reset_confirmations": {
+    "message": "Hatırlanan onayları sıfırla",
+    "description": "Button text; pref/General"
+  },
+  "reset_confirmations_done": {
+    "message": "Daha önce hatırlanan tüm onaylar sıfırlandı!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset_layouts": {
+    "message": "Kullanıcı arayüzü özelleştirmelerini sıfırla",
+    "description": "Button text; pref/General"
+  },
+  "reset_layouts_done": {
+    "message": "Daha önce hatırlanan tüm düzen özelleştirmeleri sıfırlandı! Pencereleri ya da sekmeleri yeniden yüklemeniz gerekebilir.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume_download": {
+    "message": "Devam Et",
+    "description": "Action for resuming a download"
+  },
+  "retrying": {
+    "message": "Yeniden deneniyor",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Yeniden deneniyor - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
+  "running": {
+    "message": "Çalışıyor",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Kaydet",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Ara…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select_all": {
+    "message": "Tümünü Seç",
+    "description": "Menu text; e.g. select context"
+  },
+  "select_checked": {
+    "message": "İşaretliyi Seç",
+    "description": "Menu text; select context"
+  },
+  "select_none": {
+    "message": "Hiçbirini Seçme",
+    "description": "Menu text; select context"
+  },
+  "select_title": {
+    "message": "DownThemAll! - İndirilenlerinizi seçin",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "Bulunamadı",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Sunucu Hatası",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Yasak",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "Yetkisiz",
+    "description": "Error message"
+  },
+  "set_mask": {
+    "message": "Yeniden Adlandırma Maskesini Ayarla",
+    "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Yeni bir yeniden adlandırma maskesi ayarlayın",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Yönlendiren Ayarla",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Yeni bir yönlendiren ayarlayın",
+    "description": "dialog text"
+  },
+  "single_batchexamples": {
+    "message": "Yığınlar desteklenir, örn.:",
+    "description": "Header text; single window"
+  },
+  "single_header": {
+    "message": "Bir indirme URL'si (bağlantı) ve diğer seçenekleri girin",
+    "description": "Header text; single window"
+  },
+  "single_title": {
+    "message": "DownThemAll! - Bir bağlantı ekle",
+    "description": "Title of single window"
+  },
+  "sizeB": {
+    "message": "$S$B",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes_huge": {
+    "message": "Çok Büyük (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "message": "Büyük ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "message": "Orta ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "message": "Küçük ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ / $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "Bilinmeyen",
+    "description": "Status text; manager size column"
+  },
+  "speedB": {
+    "message": "$SPEED$b/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "message": "Yeni İndirmeler başlatılacak",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork_inactive_title": {
+    "message": "Yeni İndirmeler başlamayacak",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "subfolder": {
+    "message": "Alt klasör:",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Dosyaları indirme dizininizdeki bu alt klasöre yerleştirin",
+    "description": "placeholder text within an input box"
+  },
+  "title": {
+    "message": "Başlık",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle_selected_items": {
+    "message": "Seçilen Öğeleri Kontrol Etmeyi Aç/Kapat",
+    "description": "Menu text; select"
+  },
+  "tooltip_date": {
+    "message": "Eklenme tarihi:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_eta": {
+    "message": "Kalan:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip_from": {
+    "message": "Gönderen:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip_size": {
+    "message": "Boyut:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_average": {
+    "message": "Ortalama:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_current": {
+    "message": "Mevcut:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck_selected_items": {
+    "message": "Seçilen Öğelerin İşaretini Kaldır",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Sınırsız",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Bir Kez Kullan",
+    "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Kullanıcı Tarafından İptal Edildi",
+    "description": "Error message"
+  }
+}
