@@ -27,6 +27,7 @@ import {
 } from "./browser";
 import { Bus } from "./bus";
 import { filterInSitu } from "./util";
+import { DB } from "./db";
 
 
 const menus = typeof (_menus) !== "undefined" && _menus || _cmenus;
@@ -660,6 +661,13 @@ locale.then(() => {
       };
       sessions.onChanged.addListener(sessionRemover);
       await sessionRemover();
+    }
+
+    try {
+      await DB.init();
+    }
+    catch (ex) {
+      console.error("dbinit", ex.toString(), ex.message, ex.stack, ex);
     }
 
     await Prefs.set("last-run", new Date());

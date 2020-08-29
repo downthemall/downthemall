@@ -1,4 +1,5 @@
 "use strict";
+// License: MIT
 
 // eslint-disable-next-line no-unused-vars
 import { BaseItem } from "./item";
@@ -6,12 +7,17 @@ import { BaseItem } from "./item";
 import { Download } from "./manager/download";
 import { RUNNING, QUEUED, RETRYING } from "./manager/state";
 
-// License: MIT
-
 const VERSION = 1;
 const STORE = "queue";
 
-export const DB = new class DB {
+interface Database {
+  init(): Promise<void>;
+  saveItems(items: Download[]): Promise<unknown>;
+  deleteItems(items: any[]): Promise<void>;
+  getAll(): Promise<BaseItem[]>;
+}
+
+export class IDB implements Database {
   private db?: IDBDatabase;
 
   constructor() {
@@ -106,7 +112,7 @@ export const DB = new class DB {
     return await new Promise(this.saveItemsInternal.bind(this, items));
   }
 
-  deleteItemsInternal(items: any[], resolve: Function, reject: Function) {
+  deleteItemsInternal(items: any[], resolve: () => void, reject: Function) {
     if (!items || !items.length || !this.db) {
       resolve();
       return;
@@ -138,5 +144,71 @@ export const DB = new class DB {
     }
     await this.init();
     await new Promise(this.deleteItemsInternal.bind(this, items));
+  }
+}
+
+class MemoryDB implements Database {
+  private counter = 1;
+
+  private items = new Map();
+
+  init(): Promise<void> {
+    return Promise.resolve();
+  }
+
+  saveItems(items: Download[]) {
+    for (const item of items) {
+      if (item.private) {
+        continue;
+      }
+      if (!item.dbId) {
+        item.dbId = ++this.counter;
+      }
+      this.items.set(item.dbId, item.toJSON());
+    }
+    return Promise.resolve();
+  }
+
+  deleteItems(items: any[]) {
+    for (const item of items) {
+      if (!("dbId" in item)) {
+        continue;
+      }
+      this.items.delete(item.dbId);
+    }
+    return Promise.resolve();
+  }
+
+  getAll(): Promise<BaseItem[]> {
+    return Promise.resolve(Array.from(this.items.values()));
+  }
+}
+
+export const DB = new class DBWrapper implements Database {
+  saveItems(items: Download[]): Promise<unknown> {
+    return this.db.saveItems(items);
+  }
+
+  deleteItems(items: any[]): Promise<void> {
+    return this.db.deleteItems(items);
+  }
+
+  getAll(): Promise<BaseItem[]> {
+    return this.db.getAll();
+  }
+
+  private db: Database;
+
+  async init() {
+    try {
+      this.db = new IDB();
+      await this.db.init();
+    }
+    catch (ex) {
+      console.warn(
+        "Failed to initialize idb backend, using memory db fallback", ex);
+      this.db = new MemoryDB();
+      await this.db.init();
+    }
   }
 }();
