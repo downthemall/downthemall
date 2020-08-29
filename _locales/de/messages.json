@@ -36,11 +36,11 @@
     "description": "Button text"
   },
   "batch_batch": {
-    "message": "Als Stapelverarbeitung downloaden",
+    "message": "Als Batch downloaden",
     "description": "Button text"
   },
   "batch_desc": {
-    "message": "Die aktuelle URL scheint Anweisungen für eine Stapelverarbeitung zu enthalten.",
+    "message": "Die aktuelle URL scheint Anweisungen für einen Batch zu enthalten.",
     "description": ""
   },
   "batch_items": {
@@ -52,7 +52,7 @@
     "description": "Messagebox info text for batch confirmations"
   },
   "batch_question": {
-    "message": "Als Stapelverarbeitung oder als einfachen Download hinzufügen?",
+    "message": "Als Batch oder als einfachen Download hinzufügen?",
     "description": "Messagebox info text for batch confirmations"
   },
   "batch_single": {
@@ -60,7 +60,7 @@
     "description": "Button text for batch confirmation"
   },
   "batch_title": {
-    "message": "Stapelverarbeitung",
+    "message": "Batch",
     "description": "Messagebox title for batch confirmations"
   },
   "cancel": {
@@ -228,7 +228,7 @@
     "description": "Download (noun); e.g. Download column in select"
   },
   "download_verb": {
-    "message": "herunterladen",
+    "message": "Herunterladen",
     "description": "Download (verb/action); e.g. in single and select buttons"
   },
   "dta_regular": {
@@ -720,11 +720,11 @@
     "description": "Messagebox text"
   },
   "remove_batch_downloads": {
-    "message": "Aktuelle Stapelverarbeitung entfernen",
+    "message": "Aktuellen Batch entfernen",
     "description": "Menu text"
   },
   "remove_batch_downloads_question": {
-    "message": "Wirklich alle Downloads der aktuellen Stapelverarbeitung entfernen?",
+    "message": "Wirklich alle Downloads des aktuellen Batch entfernen?",
     "description": "Messagebox text"
   },
   "remove_complete_downloads": {
@@ -844,7 +844,7 @@
     "description": "UI for renaming; currently unused"
   },
   "renamer_batch": {
-    "message": "Stapelverarbeitungs-Nummer",
+    "message": "Batch-Nummer",
     "description": "Mask text; see mask button"
   },
   "renamer_d": {
@@ -872,7 +872,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_idx": {
-    "message": "Fortlaufende Nummer der Stapelverarbeitung",
+    "message": "Fortlaufende Nummer des Batch",
     "description": "Mask text; see mask button"
   },
   "renamer_info": {
@@ -892,7 +892,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_num": {
-    "message": "Alias für \"Stapelverarbeitung\"",
+    "message": "Alias für \"Batch\"",
     "description": "Mask text; see mask button"
   },
   "renamer_qstring": {
@@ -1062,7 +1062,7 @@
     "description": "dialog text"
   },
   "single_batchexamples": {
-    "message": "Stapelverarbeitung wird unterstützt, z.B.:",
+    "message": "Stapelverarbeitung (Batch) wird unterstützt, z.B.:",
     "description": "Header text; single window"
   },
   "single_header": {

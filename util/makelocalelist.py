@@ -6,7 +6,7 @@ langs = sorted(Path("_locales").glob("**/messages.json"), key=lambda p: p.parent
 all = {}
 for m in langs:
   loc = m.parent.name
-  with m.open("r") as mp:
+  with m.open("r", encoding="utf-8") as mp:
     lang = json.load(mp).get("language").get("message")
   if not lang:
     raise Exception(f"{m}: no language")
