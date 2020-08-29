@@ -108,8 +108,13 @@ export class MenuItem extends MenuItemBase {
     super(owner, id, text, options);
     this.disabled = options.disabled === "true";
     this.elem.setAttribute("aria-role", "menuitem");
-    this.elem.addEventListener(
-      "click", () => this.owner.emit("clicked", this.id, this.autoHide));
+    this.clicked = this.clicked.bind(this);
+    this.elem.addEventListener("click", this.clicked);
+    this.elem.addEventListener("contextmenu", this.clicked);
+  }
+
+  clicked() {
+    this.owner.emit("clicked", this.id, this.autoHide);
   }
 
   get disabled() {

@@ -890,7 +890,6 @@ addEventListener("DOMContentLoaded", function dom() {
 
 addEventListener("contextmenu", event => {
   event.preventDefault();
-  event.stopPropagation();
   return false;
 });
 
