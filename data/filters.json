@@ -15,7 +15,7 @@
 	"deffilter-aud": {
 		"label": "Audio",
 		"expr": "/\\.(?:mp3|wav|og(?:g|a)|flac|midi?|rm|aac|wma|mka|ape|opus)$/i",
-		"type": 1,
+		"type": 3,
 		"active": false,
 		"icon": "mp3"
 	},
