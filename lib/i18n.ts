@@ -40,11 +40,11 @@ class Entry {
     this.message = entry.message.replace(/\$[A-Z0-9]+\$/g, (r: string) => {
       hit = true;
       const id = r.substr(1, r.length - 2).toLocaleLowerCase();
-      const pholder = entry.placeholders[id];
-      if (!pholder || !pholder.content) {
+      const placeholder = entry.placeholders[id];
+      if (!placeholder || !placeholder.content) {
         throw new Error(`Invalid placeholder: ${id}`);
       }
-      return `${pholder.content}$`;
+      return `${placeholder.content}$`;
     });
     if (!hit) {
       throw new Error("Not entry-able");
@@ -123,13 +123,14 @@ async function fetchLanguage(code: string) {
 }
 
 
-async function loadCached() {
+async function loadCached(): Promise<any> {
   const cached = await lf.getItem<string>(CACHE_KEY);
   if (!cached) {
     return null;
   }
   const parsed = JSON.parse(cached);
-  if (Array.isArray(parsed)) {
+  if (!Array.isArray(parsed) || !parsed[0].CRASH || !parsed[0].CRASH.message) {
+    console.warn("rejecting cached locales", parsed);
     return null;
   }
   return parsed;
@@ -195,7 +196,7 @@ async function load(): Promise<Localization> {
         await lf.setItem(CACHE_KEY, JSON.stringify(valid));
       }
       if (!valid.length) {
-        throw new Error("Could not lood ANY of these locales");
+        throw new Error("Could not load ANY of these locales");
       }
 
       const custom = await lf.getItem<string>(CUSTOM_KEY);
@@ -241,7 +242,7 @@ locale.then(l => {
 /**
  * Localize a message
  * @param {string} id Identifier of the string to localize
- * @param {string[]} [subst] Message substituations
+ * @param {string[]} [subst] Message substitutions
  * @returns {string} Localized message
  */
 export function _(id: string, ...subst: any[]) {
