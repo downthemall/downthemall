@@ -191,6 +191,22 @@
     "message": "Smazat",
     "description": "button text"
   },
+  "deletefiles": {
+    "message": "Odstranit soubory",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Odstranit",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Opravdu chcete odstranit následující soubory?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Odstranit soubory",
+    "description": "messagebox title"
+  },
   "description": {
     "message": "Popis",
     "description": "Description (keep it short); e.g. the description column in select"
@@ -275,9 +291,33 @@
     "message": "Neplatná URL adresa",
     "description": "Error message; single window"
   },
+  "error_noabsolutepath": {
+    "message": "Absolutní formát cest pro podsložky není prohlížečem podporovaný",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Tečky (.) v podsložkách nejsou prohlížečem podporované",
+    "description": "Error Message; select/single window"
+  },
   "error_noItemsSelected": {
     "message": "Nic není vybráno",
     "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "Exportovat do souboru",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Exportovat jako seznam aria2",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Exportovat jako metalink",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Exportovat jako text",
+    "description": "menu text"
   },
   "extensionDescription": {
     "message": "Správce stahování pro Váš prohlížeč",
@@ -330,6 +370,10 @@
   "force_start": {
     "message": "Vynutit spuštění",
     "description": "Menu text"
+  },
+  "import": {
+    "message": "Importovat ze souboru",
+    "description": "menu text"
   },
   "information_title": {
     "message": "Informace",
@@ -529,16 +573,32 @@
     "message": "Přidávat nová stahování pozastavená",
     "description": "Preferences/General"
   },
+  "pref_button_type": {
+    "message": "Tlačítko DownThemAll!:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "DownThemAll! selektor",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Otevřít Manažera",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Nabídka",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "OneClick!",
+    "description": "label"
+  },
   "pref_concurrent_downloads": {
     "message": "Souběžná stahování",
     "description": "Preferences/Network"
   },
   "pref_finish_notification": {
     "message": "Zobrazit oznámení po dokončení fronty stahování",
-    "description": "Preferences/General"
-  },
-  "pref_global_turbo": {
-    "message": "Tlačítho na liště je OneClick!",
     "description": "Preferences/General"
   },
   "pref_hide_context": {
@@ -549,8 +609,12 @@
     "message": "Manažer",
     "description": "Preferences/General; group text"
   },
+  "pref_manager_in_popup": {
+    "message": "Otevřít Manažera v novém vyskakovacím okně",
+    "description": "checkbox text"
+  },
   "pref_manager_tooltip": {
-    "message": "Zobrazovat popisky v záložkách Manažeru",
+    "message": "Zobrazovat popisky v záložkách Manažera",
     "description": "Preferences/General"
   },
   "pref_netglobal": {
@@ -558,7 +622,7 @@
     "description": "Preferences/General; group text"
   },
   "pref_open_manager_on_queue": {
-    "message": "Otevřít záložku Manažeru po zařazení stahování do fronty",
+    "message": "Otevřít záložku Manažera po zařazení stahování do fronty",
     "description": "Preferences/General"
   },
   "pref_queueing": {
@@ -573,13 +637,41 @@
     "message": "Odebrat chybějící stahování po restartu",
     "description": "Preferences/General"
   },
+  "pref_retries": {
+    "message": "Počet pokusů o stažení při dočasných chybách",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Interval opakování (v minutách)",
+    "description": "pref text"
+  },
   "pref_show_urls": {
     "message": "Zobrazit URL adresy místo názvů souborů",
     "description": "Preferences/General"
   },
+  "pref_sounds": {
+    "message": "Přehrát zvuky",
+    "description": "checkbox text"
+  },
   "pref_text_links": {
     "message": "Vyhledat odkazy v textu stránky (pomalejší)",
     "description": "Preferences/General"
+  },
+  "pref_theme": {
+    "message": "Motiv:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Tmavý",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "Systémový/Výchozí",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Světlý",
+    "description": "option text"
   },
   "pref_ui": {
     "message": "Uživatelské rozhraní",
@@ -895,6 +987,20 @@
     "message": "Pokračovat",
     "description": "Action for resuming a download"
   },
+  "retrying": {
+    "message": "Opakuji",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Opakuji - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
   "running": {
     "message": "Probíhá",
     "description": "Status text"
@@ -942,6 +1048,18 @@
   "set_mask": {
     "message": "Nastavit masku přejmenování",
     "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Nastavte novou masku přejmenování",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Nastavit odkázání",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Nastavit novou odkazující stránku",
+    "description": "dialog text"
   },
   "single_batchexamples": {
     "message": "Jsou podporována dávková stahování, například:",
@@ -1123,6 +1241,14 @@
     "message": "Nová stahování nebudou spuštěna",
     "description": "Status bar tooltip; manager network icon"
   },
+  "subfolder": {
+    "message": "Podsložka:",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Umístí soubory v této podložce uvnitř vaší složky stahování",
+    "description": "placeholder text within an input box"
+  },
   "title": {
     "message": "Popisek",
     "description": "Column text; Title label (short)"
@@ -1166,5 +1292,9 @@
   "useonlyonce": {
     "message": "Použít pouze jednou",
     "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Zrušeno uživatelem",
+    "description": "Error message"
   }
 }
