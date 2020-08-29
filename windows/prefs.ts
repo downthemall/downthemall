@@ -665,7 +665,7 @@ addEventListener("DOMContentLoaded", async () => {
       });
       await saveCustomLocale(text);
 
-      if (confirm("Imported your file.\nWant to relaod the extension now?")) {
+      if (confirm("Imported your file.\nWant to reload the extension now?")) {
         runtime.reload();
       }
     }

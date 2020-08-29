@@ -16,7 +16,7 @@ import {
   DONE,
   FORCABLE,
   MISSING,
-  PAUSABLE,
+  PAUSEABLE,
   PAUSED,
   QUEUED,
   RUNNING,
@@ -235,7 +235,7 @@ export class Download extends BaseDownload {
   }
 
   async pause(retry?: boolean) {
-    if (!(PAUSABLE & this.state)) {
+    if (!(PAUSEABLE & this.state)) {
       return;
     }
 
@@ -277,7 +277,7 @@ export class Download extends BaseDownload {
       await downloads.cancel(id);
     }
     catch (ex) {
-      // ingored
+      // ignored
     }
     await new Promise(r => setTimeout(r, 1000));
     try {
@@ -285,7 +285,7 @@ export class Download extends BaseDownload {
     }
     catch (ex) {
       console.error(id, ex.toString(), ex);
-      // ingored
+      // ignored
     }
   }
 
@@ -399,7 +399,7 @@ export class Download extends BaseDownload {
     }
   }
 
-  updatefromSuggestion(state: any) {
+  updateFromSuggestion(state: any) {
     const res: PrerollResults = {};
     if (state.mime) {
       res.mime = state.mime;

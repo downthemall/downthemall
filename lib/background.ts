@@ -667,7 +667,7 @@ locale.then(() => {
       await DB.init();
     }
     catch (ex) {
-      console.error("dbinit", ex.toString(), ex.message, ex.stack, ex);
+      console.error("db init", ex.toString(), ex.message, ex.stack, ex);
     }
 
     await Prefs.set("last-run", new Date());

@@ -91,11 +91,11 @@ export class Manager extends EventEmitter {
     }
 
     Bus.onPort("manager", (port: Port) => {
-      const mport = new ManagerPort(this, port);
+      const managerPort = new ManagerPort(this, port);
       port.on("disconnect", () => {
-        this.ports.delete(mport);
+        this.ports.delete(managerPort);
       });
-      this.ports.add(mport);
+      this.ports.add(managerPort);
       return true;
     });
     Limits.on("changed", () => {
@@ -126,7 +126,7 @@ export class Manager extends EventEmitter {
     // Do not wait for the scheduler
     this.resetScheduler();
 
-    this.emit("inited");
+    this.emit("initialized");
     setTimeout(() => this.checkMissing(), MISSING_TIMEOUT);
     runtime.onUpdateAvailable.addListener(() => {
       if (this.running.size) {
@@ -171,7 +171,7 @@ export class Manager extends EventEmitter {
       return;
     }
     try {
-      download.updatefromSuggestion(state);
+      download.updateFromSuggestion(state);
     }
     finally {
       const suggestion = {filename: download.dest.full};
@@ -358,8 +358,8 @@ export class Manager extends EventEmitter {
       this.startNext().catch(console.error);
     }
     else if (newState === RUNNING) {
-      // Usually we already added it. Buit if a user uses the built-in
-      // download manager to resart
+      // Usually we already added it. But if a user uses the built-in
+      // download manager to restart
       // a download, we have not, so make sure it is added either way
       this.running.add(download);
     }
@@ -417,17 +417,18 @@ export class Manager extends EventEmitter {
   sorted(sids: number[]) {
     try {
       // Construct new items
-      const csids = new Map(this.sids);
+      const currentSids = new Map(this.sids);
       let items = mapFilterInSitu(sids, sid => {
-        const item = csids.get(sid);
+        const item = currentSids.get(sid);
         if (!item) {
           return null;
         }
-        csids.delete(sid);
+        currentSids.delete(sid);
         return item;
       }, e => !!e);
-      if (csids.size) {
-        items = items.concat(sort(Array.from(csids.values()), i => i.position));
+      if (currentSids.size) {
+        items = items.concat(
+          sort(Array.from(currentSids.values()), i => i.position));
       }
       this.items = items;
       this.setPositions();

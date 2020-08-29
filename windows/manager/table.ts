@@ -790,7 +790,7 @@ export class DownloadTable extends VirtualTable {
     const items = this.getSelectedItems();
     const states = items.reduce((p, c) => p |= c.state, 0);
 
-    if (!(states & DownloadState.PAUSABLE)) {
+    if (!(states & DownloadState.PAUSEABLE)) {
       this.pauseAction.disabled = true;
     }
 
@@ -828,7 +828,7 @@ export class DownloadTable extends VirtualTable {
   }
 
   pauseDownloads() {
-    const sids = this.getSelectedSids(DownloadState.PAUSABLE);
+    const sids = this.getSelectedSids(DownloadState.PAUSEABLE);
     if (!sids.length) {
       return;
     }
