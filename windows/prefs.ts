@@ -641,10 +641,11 @@ addEventListener("DOMContentLoaded", async () => {
   $<HTMLInputElement>("#loadCustomLocale").addEventListener("click", () => {
     customLocale.click();
   });
-  $<HTMLInputElement>("#clearCustomLocale").addEventListener("click", () => {
-    saveCustomLocale(undefined);
-    runtime.reload();
-  });
+  $<HTMLInputElement>("#clearCustomLocale").
+    addEventListener("click", async () => {
+      await saveCustomLocale(undefined);
+      runtime.reload();
+    });
   customLocale.addEventListener("change", async () => {
     if (!customLocale.files || !customLocale.files.length) {
       return;
@@ -662,7 +663,8 @@ addEventListener("DOMContentLoaded", async () => {
         reader.onerror = reject;
         reader.readAsText(file);
       });
-      saveCustomLocale(text);
+      await saveCustomLocale(text);
+
       if (confirm("Imported your file.\nWant to relaod the extension now?")) {
         runtime.reload();
       }

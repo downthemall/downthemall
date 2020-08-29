@@ -4,9 +4,11 @@
 import { downloads, CHROME } from "./browser";
 import { EventEmitter } from "../uikit/lib/events";
 import { PromiseSerializer } from "./pserializer";
+import lf from "localforage";
 
-const VERSION = 1;
+
 const STORE = "iconcache";
+
 // eslint-disable-next-line no-magic-numbers
 const CACHE_SIZES = CHROME ? [16, 32] : [16, 32, 64, 127];
 
@@ -48,35 +50,15 @@ const SYNONYMS = Object.freeze(new Map<string, string>([
 ]));
 
 export const IconCache = new class IconCache extends EventEmitter {
-  private db: Promise<IDBDatabase>;
+  private db = lf.createInstance({name: STORE});
 
   private cache: Map<string, string>;
 
   constructor() {
     super();
-    this.db = this.init();
     this.cache = new Map();
     this.get = PromiseSerializer.wrapNew(8, this, this.get);
     this.set = PromiseSerializer.wrapNew(1, this, this.set);
-  }
-
-  private async init() {
-    return await new Promise<IDBDatabase>((resolve, reject) => {
-      const req = indexedDB.open(STORE, VERSION);
-      req.onupgradeneeded = evt => {
-        const db = req.result;
-        switch (evt.oldVersion) {
-        case 0: {
-          db.createObjectStore(STORE);
-          break;
-        }
-        }
-      };
-      req.onerror = ex => reject(ex);
-      req.onsuccess = () => {
-        resolve(req.result);
-      };
-    });
   }
 
   private normalize(ext: string) {
@@ -95,36 +77,25 @@ export const IconCache = new class IconCache extends EventEmitter {
     if (rv) {
       return rv;
     }
-    const db = await this.db;
     rv = this.cache.get(sext);
     if (rv) {
       return rv;
     }
-    return await new Promise<string | undefined>(resolve => {
-      const trans = db.transaction(STORE, "readonly");
-      trans.onerror = () => resolve(undefined);
-      const store = trans.objectStore(STORE);
-      const req = store.get(sext);
-      req.onerror = () => resolve(undefined);
-      req.onsuccess = () => {
-        const rv = this.cache.get(sext);
-        if (rv) {
-          resolve(rv);
-          return;
-        }
-        let {result} = req;
-        if (!result) {
-          resolve(undefined);
-          return;
-        }
-        if (typeof req.result !== "string") {
-          result = URL.createObjectURL(result).toString();
-        }
-        this.cache.set(sext, result);
-        this.cache.set(ext, "");
-        resolve(result);
-      };
-    });
+    let result = await this.db.getItem<any>(sext);
+    if (!result) {
+      return this.cache.get(sext);
+    }
+    rv = this.cache.get(sext);
+    if (rv) {
+      return rv;
+    }
+    if (typeof result !== "string") {
+      result = URL.createObjectURL(result).toString();
+    }
+
+    this.cache.set(sext, result);
+    this.cache.set(ext, "");
+    return result;
   }
 
   async set(ext: string, manId: number) {
@@ -145,18 +116,9 @@ export const IconCache = new class IconCache extends EventEmitter {
     }
     for (const {size, icon} of urls) {
       this.cache.set(`${ext}-${size}`, URL.createObjectURL(icon));
+      await this.db.setItem(`${ext}-${size}`, icon);
     }
     this.cache.set(ext, "");
-    const db = await this.db;
-    await new Promise((resolve, reject) => {
-      const trans = db.transaction(STORE, "readwrite");
-      trans.onerror = reject;
-      trans.oncomplete = resolve;
-      const store = trans.objectStore(STORE);
-      for (const {size, icon} of urls) {
-        store.put(icon, `${ext}-${size}`);
-      }
-    });
     this.emit("cached", ext);
   }
 }();

@@ -35,6 +35,7 @@
   "dependencies": {
     "@types/psl": "^1.1.0",
     "@types/whatwg-mimetype": "^2.1.0",
+    "localforage": "^1.9.0",
     "psl": "^1.4.0",
     "webextension-polyfill": "^0.5.0",
     "whatwg-mimetype": "^2.3.0"
