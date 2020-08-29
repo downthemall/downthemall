@@ -2,7 +2,7 @@
 // License: MIT
 
 export function $<T extends HTMLElement>(
-    q: string, el?: HTMLElement | DocumentFragment): T {
+    q: string, el?: HTMLElement | DocumentFragment | Document): T {
   if (!el) {
     el = document;
   }
