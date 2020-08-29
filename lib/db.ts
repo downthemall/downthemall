@@ -6,6 +6,8 @@ import { BaseItem } from "./item";
 // eslint-disable-next-line no-unused-vars
 import { Download } from "./manager/download";
 import { RUNNING, QUEUED, RETRYING } from "./manager/state";
+import { storage } from "./browser";
+import { sort } from "./sorting";
 
 const VERSION = 1;
 const STORE = "queue";
@@ -147,6 +149,48 @@ export class IDB implements Database {
   }
 }
 
+class StorageDB implements Database {
+  private counter = 1;
+
+  async init(): Promise<void> {
+    const {db = null} = await storage.local.get("db");
+    if (!db || !db.counter) {
+      return;
+    }
+    this.counter = db.counter;
+  }
+
+  async saveItems(items: Download[]) {
+    const db: any = {items: []};
+    for (const item of items) {
+      if (!item.dbId) {
+        item.dbId = ++this.counter;
+      }
+      db.items.push(item.toJSON());
+    }
+    db.counter = this.counter;
+    await storage.local.set({db});
+  }
+
+  async deleteItems(items: any[]): Promise<void> {
+    const gone = new Set(items.map(i => i.dbId));
+    const {db = null} = await storage.local.get("db");
+    if (!db) {
+      return;
+    }
+    db.items = db.items.filter((i: any) => !gone.has(i.dbId));
+    await storage.local.set({db});
+  }
+
+  async getAll() {
+    const {db = null} = await storage.local.get("db");
+    if (!db || !Array.isArray(db.items)) {
+      return [];
+    }
+    return sort(db.items, (i: any) => i.position) as BaseItem[];
+  }
+}
+
 class MemoryDB implements Database {
   private counter = 1;
 
@@ -206,9 +250,17 @@ export const DB = new class DBWrapper implements Database {
     }
     catch (ex) {
       console.warn(
-        "Failed to initialize idb backend, using memory db fallback", ex);
-      this.db = new MemoryDB();
-      await this.db.init();
+        "Failed to initialize idb backend, using storage db fallback", ex);
+      try {
+        this.db = new StorageDB();
+        await this.db.init();
+      }
+      catch (ex) {
+        console.warn(
+          "Failed to initialize storage backend, using memory db fallback", ex);
+        this.db = new MemoryDB();
+        await this.db.init();
+      }
     }
   }
 }();
