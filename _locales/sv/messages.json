@@ -20,7 +20,7 @@
     "description": "Button text (adding filters, limits and such)"
   },
   "add_paused_once": {
-    "message": "Lägg bara till pausad den här gången",
+    "message": "Lägg bara till pausad denna gång",
     "description": "Checkbox label"
   },
   "add_paused_question": {
@@ -36,7 +36,7 @@
     "description": "Button text"
   },
   "batch_batch": {
-    "message": "Batch hämtning",
+    "message": "Batch-hämtning",
     "description": "Button text"
   },
   "batch_desc": {
@@ -76,7 +76,7 @@
     "description": "Action to cancel downloads, e.g. from the context menu"
   },
   "cannot_be_empty": {
-    "message": "Det här fältet kan inte vara tomt",
+    "message": "Detta fält kan inte vara tomt",
     "description": "Error message when an input field is empty but has to have a value"
   },
   "change_later_reminder": {
@@ -84,7 +84,7 @@
     "description": "Checkbox label text for decision confirmations"
   },
   "check_selected_items": {
-    "message": "Markera valda Objekt",
+    "message": "Markera valda objekt",
     "description": "Menu text"
   },
   "colConnections": {
@@ -279,6 +279,14 @@
     "message": "Spara val med OneClick!",
     "description": "Menu text"
   },
+  "error_invalidMask": {
+    "message": "Ogiltigt nytt namn på mask",
+    "description": "Error message; single/select window"
+  },
+  "error_invalidReferrer": {
+    "message": "Ogiltig hänvisning",
+    "description": "Error message; single window"
+  },
   "error_invalidURL": {
     "message": "Ogiltig webbadress",
     "description": "Error message; single window"
@@ -444,6 +452,14 @@
   "manager_title": {
     "message": "DownThemAll! Hanterare",
     "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "Mask",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask_default": {
+    "message": "Standardmask",
+    "description": "Status text; Used in the mask column, select window"
   },
   "media": {
     "message": "Media",
@@ -683,6 +699,10 @@
     "message": "Hämningskön är klar",
     "description": "Notification text"
   },
+  "referrer": {
+    "message": "Hänvisning",
+    "description": "Label for \"Referrer\""
+  },
   "remember": {
     "message": "Kom ihåg detta beslut",
     "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
@@ -879,12 +899,48 @@
     "message": "Frågesträng",
     "description": "Mask text; see mask button"
   },
+  "renamer_ref": {
+    "message": "Hänvisning",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refdomain": {
+    "message": "Hänvisningsdomännamn (TLD)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refext": {
+    "message": "Hänvisningsfiländelse",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refhost": {
+    "message": "Hänvisningsvärdnamn",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refname": {
+    "message": "Hänvisningsfilnamn",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refqstring": {
+    "message": "Hänvisningsförfrågesträng",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refsubdirs": {
+    "message": "Hänvisningssökväg",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refurl": {
+    "message": "Hänvisningswebbadress (utan protokoll)",
+    "description": "Mask text; see mask button"
+  },
   "renamer_ss": {
     "message": "Datum tillagd - Sekund",
     "description": "Mask text; see mask button"
   },
   "renamer_subdirs": {
     "message": "Sökväg",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_tags": {
+    "message": "Byt namn på masktaggar",
     "description": "Mask text; see mask button"
   },
   "renamer_text": {
@@ -902,6 +958,10 @@
   "renamer_y": {
     "message": "Datum tillagd - År",
     "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "Byt namn på mask",
+    "description": "Renaming mask (long)"
   },
   "reset": {
     "message": "Återställ",
@@ -984,6 +1044,22 @@
   "SERVER_UNAUTHORIZED": {
     "message": "Obehörig",
     "description": "Error message"
+  },
+  "set_mask": {
+    "message": "Ställ in nytt namn på mask",
+    "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Ställ in en nytt namn på mask",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Ställ in hänvisning",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Ställ in ny hänvisning",
+    "description": "dialog text"
   },
   "single_batchexamples": {
     "message": "Batcher stöds, exempelvis:",
