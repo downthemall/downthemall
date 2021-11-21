@@ -18,7 +18,7 @@ let Table: DownloadTable;
 const LOADED = new Promise(resolve => {
   addEventListener("load", function dom() {
     removeEventListener("load", dom);
-    resolve();
+    resolve(true);
   });
 });
 
