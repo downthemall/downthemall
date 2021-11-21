@@ -114,7 +114,10 @@ function checkBrowser() {
 
 async function fetchLanguage(code: string) {
   try {
-    console.log("trying to fetch", code);
+    if (code === "en") {
+      return english;
+    }
+
     const resp = await fetch(`/_locales/${code}/messages.json`);
     const json = await resp.json();
     if (!json || !json.CRASH || !json.CRASH.message) {
