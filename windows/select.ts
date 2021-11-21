@@ -5,7 +5,7 @@ import { VirtualTable } from "../uikit/lib/table";
 import ModalDialog from "../uikit/lib/modal";
 import { ContextMenu } from "./contextmenu";
 import { iconForPath } from "../lib/windowutils";
-import { _, localize } from "../lib/i18n";
+import { _, localize, locale } from "../lib/i18n";
 import { Prefs } from "../lib/prefs";
 import { MASK, FASTFILTER, SUBFOLDER } from "../lib/recentlist";
 import { WindowState } from "./windowstate";
@@ -808,7 +808,7 @@ async function init() {
 const LOADED = new Promise(resolve => {
   addEventListener("load", function dom() {
     removeEventListener("load", dom);
-    resolve();
+    locale.then(() => resolve(true));
   });
 });
 
