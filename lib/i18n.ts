@@ -66,7 +66,7 @@ class Localization {
     this.strings = new Map();
     const mapLanguage = (lang: any) => {
       for (const [id, entry] of Object.entries<JSONEntry>(lang)) {
-        if (!entry.message) {
+        if (!id || !entry || !entry.message) {
           continue;
         }
         try {
