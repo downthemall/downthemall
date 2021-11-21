@@ -32,9 +32,6 @@ module.exports = {
     if (request === "crypto") {
       return callback(null, "crypto");
     }
-    if (/_locales.*messages\.json/.test(request)) {
-      return callback(null, "null");
-    }
     return callback();
   },
   output: {

@@ -3,6 +3,7 @@
 
 import {memoize} from "./memoize";
 import langs from "../_locales/all.json";
+import english from "../_locales/en/messages.json";
 import { sorted, naturalCaseCompare } from "./sorting";
 import lf from "localforage";
 
@@ -216,16 +217,12 @@ async function load(): Promise<Localization> {
     }
     catch (ex) {
       console.error("Failed to load locale", ex.toString(), ex.stack, ex);
-      return new Localization({});
+
+      return new Localization(english);
     }
   }
   catch {
-    // We might be running under node for tests
-
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const messages = require("../_locales/en/messages.json");
-
-    return new Localization(messages);
+    return new Localization(english);
   }
 }
 
