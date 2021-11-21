@@ -79,7 +79,7 @@ The output is located in `web-ext-artifacts`.
 ### The AMO Editors tl;dr guide
 
   1. Install the requirements.
-  2. `yarn && python3 build/util.py --mode=release`
+  2. `yarn && python3 util/build.py --mode=release`
   3. Have a look in `web-ext-artifacts/dta-*-fx.zip`
 
 ### Patches
