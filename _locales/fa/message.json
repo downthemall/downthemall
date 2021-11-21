@@ -1,0 +1,1300 @@
+{
+  "language": {
+    "message": "فارسی",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "fa",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "addpaused": {
+    "message": "افزودن به صورت مکث شده",
+    "description": "Action: Add paused"
+  },
+  "add_download": {
+    "message": "افزودن دانلود",
+    "description": "Action for adding a download"
+  },
+  "add_new": {
+    "message": "افزودن جدید",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add_paused_once": {
+    "message": "فقط مکث شده را حالا اضافه کن",
+    "description": "Checkbox label"
+  },
+  "add_paused_question": {
+    "message": "آیا تمایل دارید که این انتخاب ذخیره شده و از این به بعد دانلودهای جدید به صورت مکث شده اضافه شوند؟",
+    "description": "Messagebox text"
+  },
+  "add_paused_title": {
+    "message": "همیشه به صورت مکث شده؟",
+    "description": "Title for the add-paused dialog"
+  },
+  "ask_again_later": {
+    "message": "بعدا دوباره از من بپرس",
+    "description": "Button text"
+  },
+  "batch_batch": {
+    "message": "دانلود دسته ای",
+    "description": "Button text"
+  },
+  "batch_desc": {
+    "message": "به نظر می رسد آدرس فعلی حاوی دستورالعمل هایی برای دانلود دسته ای است",
+    "description": ""
+  },
+  "batch_items": {
+    "message": ":تعداد موارد",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_preview": {
+    "message": ":پیشنمایش",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_question": {
+    "message": "آیا می خواهید این را به صورت دانلود دسته ای اضافه کنید یا به شکل یک دانلود تکی؟",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_single": {
+    "message": "دانلود تکی",
+    "description": "Button text for batch confirmation"
+  },
+  "batch_title": {
+    "message": "دانلود دسته ای",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "لغو",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "لغو شده",
+    "description": "Download status text"
+  },
+  "cancel_download": {
+    "message": "لغو",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "cannot_be_empty": {
+    "message": "این کادر نمیتواند خالی باشد",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change_later_reminder": {
+    "message": "شما میتوانید بعدا این انتخاب را در تنظیمات تغییر دهید",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check_selected_items": {
+    "message": "موارد انتخاب شده را بررسی کنید",
+    "description": "Menu text"
+  },
+  "colConnections": {
+    "message": "اتصالات همزمان",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "دامنه",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "زمان تخمین زده شده",
+    "description": "Table column in manager"
+  },
+  "colNameURL": {
+    "message": "نام/آدرس",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "پیشرفت",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "بخشها",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "اندازه",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "سرعت",
+    "description": "Table column in manager"
+  },
+  "conflict_overwrite": {
+    "message": "جایگزینی",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_prompt": {
+    "message": "فوری",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_rename": {
+    "message": "تغییر نام",
+    "description": "Option text; prefs/general"
+  },
+  "CRASH": {
+    "message": "خطای داخلی مرورگر",
+    "description": "Error Message"
+  },
+  "create_filter": {
+    "message": "ساخت فیلتر",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom_filename": {
+    "message": "نام سفارشی",
+    "description": "Label text; single window"
+  },
+  "deffilter_all": {
+    "message": "تمام فایلها",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter_arch": {
+    "message": "فشرده (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter_aud": {
+    "message": "صوتی (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter_bin": {
+    "message": "نرم افزار (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter_doc": {
+    "message": "اسناد (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter_img": {
+    "message": "تصاویر (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter_imggif": {
+    "message": "GIF تصاویر",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter_imgjpg": {
+    "message": "JPEG تصاویر",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter_imgpng": {
+    "message": "PNG تصاویر",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter_vid": {
+    "message": "ویدیوها (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "حذف",
+    "description": "button text"
+  },
+  "deletefiles": {
+    "message": "حذف فایل ها",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "حذف",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "آیا از حذف این فایل ها اطمینان دارید؟",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "حذف فایل ها",
+    "description": "messagebox title"
+  },
+  "description": {
+    "message": "توضیحات",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable_other_filters": {
+    "message": "غیر فعال کردن بقیه",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "کمک کردن",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "انجام",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "دانلود",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download_verb": {
+    "message": "دانلود",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta_regular": {
+    "message": "DownThemAll!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "‫DownThemAll - همه زبانه ها",
+    "description": "Menu text"
+  },
+  "dta_regular_image": {
+    "message": "‫ذخیر تصویر با DownThemAll",
+    "description": "Menu text"
+  },
+  "dta_regular_link": {
+    "message": "‫‫ذخیر پیوند با DownThemAll",
+    "description": "Menu text"
+  },
+  "dta_regular_media": {
+    "message": "‫ذخیر رسانه با DownThemAll",
+    "description": "Menu text"
+  },
+  "dta_regular_selection": {
+    "message": "‫ذخیر انتخاب شده با DownThemAll",
+    "description": "Menu text"
+  },
+  "dta_turbo": {
+    "message": "تک کلیک",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "تک کلیک - همه زبانه ها",
+    "description": "Menu text"
+  },
+  "dta_turbo_image": {
+    "message": "‫ذخیر تصویر با تک کلیک",
+    "description": "Menu text"
+  },
+  "dta_turbo_link": {
+    "message": "ذخیر پیوند با تک کلیک",
+    "description": "Menu text"
+  },
+  "dta_turbo_media": {
+    "message": "ذخیر رسانه با تک کلیک",
+    "description": "Menu text"
+  },
+  "dta_turbo_selection": {
+    "message": "ذخیر انتخاب شده با تک کلیک",
+    "description": "Menu text"
+  },
+  "error_invalidMask": {
+    "message": "ماسک تغییر نام نامعتبر",
+    "description": "Error message; single/select window"
+  },
+  "error_invalidReferrer": {
+    "message": "ارجاع دهنده نامعتبر",
+    "description": "Error message; single window"
+  },
+  "error_invalidURL": {
+    "message": "آدرس نامعتبر",
+    "description": "Error message; single window"
+  },
+  "error_noabsolutepath": {
+    "message": "مسیرهای مطلق برای زیر پوشه ها توسط مرورگرها پشتیبانی نمی شوند",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "نقطه ها برای زیر پوشه ها توسط مرورگرها پشتیبانی نمی شوند",
+    "description": "Error Message; select/single window"
+  },
+  "error_noItemsSelected": {
+    "message": "موردی انتخاب نشده است",
+    "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "خروجی گرفتن به فایل",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "‫خروجی گرفتن به صورت لیست aria2",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "خروجی گرفتن به متالینک",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "خروجی گرفتن به فایل متنی",
+    "description": "menu text"
+  },
+  "extensionDescription": {
+    "message": "‫Mass Downloader برای مرورگر شما",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "فیلتر کردن سریع",
+    "description": "Label for Fast Filtering input"
+  },
+  "fastfilter_placeholder": {
+    "message": "Wildcard expression یا regular expression",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "خطای دسترسی به فایل",
+    "description": "Error Message"
+  },
+  "filter_at_least_one": {
+    "message": "شما باید حداقل یک نوع فیلتر را انتخاب کنید",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter_create_title": {
+    "message": "ساخت فیلتر جدید",
+    "description": "Message box title"
+  },
+  "filter_expression": {
+    "message": "اصطلاح فیلتر",
+    "description": "Message box label"
+  },
+  "filter_label": {
+    "message": "برچسب فیلتر",
+    "description": "Message box label"
+  },
+  "filter_types": {
+    "message": "نوع فیلتر",
+    "description": "Message box label"
+  },
+  "filter_type_link": {
+    "message": "فیلتر لینک",
+    "description": "Message box checkbox label"
+  },
+  "filter_type_media": {
+    "message": "فیلتر رسانه",
+    "description": "Message box checkbox label"
+  },
+  "finishing": {
+    "message": "پایان",
+    "description": "Status text"
+  },
+  "force_start": {
+    "message": "شروع اجباری",
+    "description": "Menu text"
+  },
+  "import": {
+    "message": "وارد کردن از فایل",
+    "description": "menu text"
+  },
+  "information_title": {
+    "message": "اطلاعات",
+    "description": "Used in message boxes"
+  },
+  "invalid_domain_pref": {
+    "message": "دامنه نامعتبر",
+    "description": "Error message in prefs/network"
+  },
+  "invert_selection": {
+    "message": "معکوس کردن انتخاب",
+    "description": "Menu text"
+  },
+  "key_alt": {
+    "message": "Alt",
+    "description": "Short for Alt-Key"
+  },
+  "key_ctrl": {
+    "message": "Ctrl",
+    "description": "Short for Ctrl-Key"
+  },
+  "key_delete": {
+    "message": "Del",
+    "description": "Short for Delete-key"
+  },
+  "key_end": {
+    "message": "End",
+    "description": "Short for End-key"
+  },
+  "key_home": {
+    "message": "Home",
+    "description": "Short for home key"
+  },
+  "key_pagedown": {
+    "message": "PageDown",
+    "description": "Short for pagedown-key"
+  },
+  "key_pageup": {
+    "message": "PageUp",
+    "description": "Short for PageUp-key"
+  },
+  "limited_to": {
+    "message": "محدود به",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "لینک ها",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "مدیریت",
+    "description": "Menu text"
+  },
+  "manager_status_items": {
+    "message": "‫$COMPLETE$ از $TOTAL$ دانلود تکمیل شده ($SHOWING$ نمایش داده) $RUNNING$ اجرا",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_title": {
+    "message": "‫DownThemAll مدیریت",
+    "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "ماسک",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask_default": {
+    "message": "ماسک پیشفرض",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "رسانه",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "جا افتاده",
+    "description": "Status text in manager"
+  },
+  "move_bottom": {
+    "message": "انتها",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move_down": {
+    "message": "پایین",
+    "description": "Action for moving a download down"
+  },
+  "move_top": {
+    "message": "ابتدا",
+    "description": "Action for moving a download to the top"
+  },
+  "move_up": {
+    "message": "بالا",
+    "description": "Action for moving a download up"
+  },
+  "nagging_message": {
+    "message": "‫شما تابحال $DOWNLOADS$ دانلود با DownThemAll انجام داده اید، به عنوان یک کاربر ممکن است بخواهید کمک مالی را برای حمایت از توسعه بیشتر این افزونه در نظر بگیرید. با تشکر!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "مشکل شبکه",
+    "description": "Error Message"
+  },
+  "never_ask_again": {
+    "message": "دوباره از من نپرس",
+    "description": "Donation button"
+  },
+  "noitems_label": {
+    "message": "موردی انتخاب نشده",
+    "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "لینکی پیدا نشد",
+    "description": "Notification text"
+  },
+  "numitems_label": {
+    "message": "‫$ITEMS$ مورد انتخاب شده…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "تایید",
+    "description": "Button text; Used in message boxes"
+  },
+  "open_directory": {
+    "message": "باز کردن پوشه",
+    "description": "Menu text; manager context"
+  },
+  "open_file": {
+    "message": "باز کردن فایل",
+    "description": "Menu text; manager context"
+  },
+  "open_link": {
+    "message": "باز کردن لینک",
+    "description": "Menu text; select window"
+  },
+  "options_filters": {
+    "message": "فیلترها",
+    "description": "Pref tab text"
+  },
+  "options_general": {
+    "message": "عمومی",
+    "description": "Pref tab text"
+  },
+  "options_network": {
+    "message": "شبکه",
+    "description": "Pref tab text"
+  },
+  "paused": {
+    "message": "مکث کرده",
+    "description": "Status text; manager"
+  },
+  "pause_download": {
+    "message": "مکث",
+    "description": "Action for pausing a download"
+  },
+  "prefs_conflicts": {
+    "message": "هنگام موجود بودن فایل",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "تنظیمات",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "‫DownThemAll تنظیمات",
+    "description": "Window/tab title; Preferences"
+  },
+  "pref_add_paused": {
+    "message": "به جای شروع فوری دانلودهای جدید، موقتاً متوقف شده باشند",
+    "description": "Preferences/General"
+  },
+  "pref_button_type": {
+    "message": ":‫DownThemAll دکمه",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "‫DownThemAll منتخب",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "باز کردن مدیریت",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "منوی بازشو",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "تک کلیک",
+    "description": "label"
+  },
+  "pref_concurrent_downloads": {
+    "message": "دانلود همزمان",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "با پایان صف دانلود، اعلانی را نشان دهید",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "موارد عمومی منوی زمینه را نشان ندهید",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "مدیریت",
+    "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "مدیریت را در یک پنجره بازشو باز کنید",
+    "description": "checkbox text"
+  },
+  "pref_manager_tooltip": {
+    "message": "نکات راهنما را در زبانه های مدیریت نشان دهید",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "محدودیت های شبکه سراسری",
+    "description": "Preferences/General; group text"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "بعد از صف بندی کردن دانلودها، زبانه مدیریت را باز کنید",
+    "description": "Preferences/General"
+  },
+  "pref_queueing": {
+    "message": "صف بندی کردن دانلودها",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queue_notification": {
+    "message": "هنگام ایجاد صف برای دانلودهای جدید، اعلانی را نشان دهید",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "پس از شروع مجدد، دانلودهای جا افتاده را حذف کنید",
+    "description": "Preferences/General"
+  },
+  "pref_retries": {
+    "message": "تعداد سعی مجدد در دانلود در مورد خطاهای موقتی",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "سعی مجدد (به دقیقه)",
+    "description": "pref text"
+  },
+  "pref_show_urls": {
+    "message": "به جای نام، نشانی های اینترنتی را نشان دهید",
+    "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "پخش صداها",
+    "description": "checkbox text"
+  },
+  "pref_text_links": {
+    "message": "سعی کنید پیوندها را در متن وب سایت پیدا کنید (کندتر)",
+    "description": "Preferences/General"
+  },
+  "pref_theme": {
+    "message": ":قالب",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "تیره",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "سیستم/مرورگر",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "روشن",
+    "description": "option text"
+  },
+  "pref_ui": {
+    "message": "رابط کاربری",
+    "description": "Preferences/General; group text"
+  },
+  "queued": {
+    "message": "صف",
+    "description": "Status text"
+  },
+  "queued_download": {
+    "message": "یک دانلود در صف",
+    "description": "Notification text; single download"
+  },
+  "queued_downloads": {
+    "message": "‫$COUNT$ دانلود در صف",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "queue_finished": {
+    "message": "صف دانلود به پایان رسید",
+    "description": "Notification text"
+  },
+  "referrer": {
+    "message": "ارجاع دهنده",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "این انتخاب را به خاطر بسپار",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove_all_complete_downloads": {
+    "message": "حذف همه کامل شده ها",
+    "description": "Menu text"
+  },
+  "remove_all_downloads": {
+    "message": "حذف همه",
+    "description": "Menu text"
+  },
+  "remove_all_downloads_question": {
+    "message": "آیا می خواهید همه دانلودها را حذف کنید؟",
+    "description": "Messagebox text"
+  },
+  "remove_batch_downloads": {
+    "message": "دسته فعلی را حذف کنید",
+    "description": "Menu text"
+  },
+  "remove_batch_downloads_question": {
+    "message": "آیا می خواهید همه دانلودها را از همان دسته دانلود که در حال حاضر انتخاب شده حذف کنید؟",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads": {
+    "message": "حذف دانلودهای کامل شده",
+    "description": "Action for removing complete downloads"
+  },
+  "remove_complete_downloads_question": {
+    "message": "آیا می خواهید همه دانلودهای کامل شده را حذف کنید؟",
+    "description": "Messagebox text"
+  },
+  "remove_complete_filter_downloads_question": {
+    "message": "‫آیا می خواهید همه دانلودهای کامل شده منطبق با فیلتر '$FILTER$' را حذف کنید؟",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "message": "آیا می خواهید تمام دانلودهای کامل شده را در انتخاب فعلی حذف کنید؟",
+    "description": "Messagebox text"
+  },
+  "remove_domain_complete_downloads": {
+    "message": "حذف کامل شده ها از دامنه فعلی",
+    "description": "Menu text"
+  },
+  "remove_domain_complete_downloads_question": {
+    "message": "‫آیا می خواهید تمام دانلودهای کامل شده از دامنه '$DOMAIN$' را حذف کنید؟",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "message": "دامنه فعلی را حذف کنید",
+    "description": "Menu text"
+  },
+  "remove_domain_downloads_question": {
+    "message": "‫آیا می خواهید تمام دانلودها از دامنه '$DOMAIN$' را حذف کنید؟",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "message": "حذف دانلود",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove_downloads": {
+    "message": "حذف دانلودها",
+    "description": "Menu text"
+  },
+  "remove_downloads_title": {
+    "message": "آیا از حذف دانلودها مطمئن هستید؟",
+    "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "آیا می خواهید دانلودهای انتخاب شده را حذف کنید؟",
+    "description": "Messagebox text"
+  },
+  "remove_failed_downloads": {
+    "message": "حذف ناموفق ها",
+    "description": "Menu text"
+  },
+  "remove_failed_downloads_question": {
+    "message": "آیا می خواهید همه دانلودهای ناموفق را حذف کنید؟",
+    "description": "Messagebox text"
+  },
+  "remove_filter_downloads_question": {
+    "message": "‫آیا می خواهید همه دانلودهای منطبق با فیلتر '$FILTER$' را حذف کنید؟",
+    "description": "Mesagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "message": "دانلودهای جا افتاده را پاک کنید",
+    "description": "Menu text"
+  },
+  "remove_missing_downloads_question": {
+    "message": "آیا می خواهید همه دانلودهای جا افتاده را پاک کنید؟",
+    "description": "Messagebox text"
+  },
+  "remove_paused_downloads": {
+    "message": "حذف مکث شده ها",
+    "description": "Menu text"
+  },
+  "remove_paused_downloads_question": {
+    "message": "آیا می خواهید همه دانلودهای مکث شده را حذف کنید؟",
+    "description": "Messagebox text"
+  },
+  "remove_selected_complete_downloads": {
+    "message": "حذف کامل شده ها از انتخاب شده ها",
+    "description": "Menu text"
+  },
+  "remove_selected_complete_downloads_question": {
+    "message": "آیا می خواهید تمام دانلودهای کامل شده را از انتخاب شده های فعلی حذف کنید؟",
+    "description": "Messagebox text"
+  },
+  "remove_selected_downloads": {
+    "message": "حذف انتخاب شده",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "تغییر نام",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer_batch": {
+    "message": "شماره دسته ای",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_d": {
+    "message": "تاریخ اضافه شده - روز",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_date": {
+    "message": "تاریخ اضافه شده",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_domain": {
+    "message": "نام دامنه (دامنه ریشه)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ext": {
+    "message": "پسوند فایل",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_hh": {
+    "message": "تاریخ اضافه شده - ساعت",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_host": {
+    "message": "نام هاست",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_idx": {
+    "message": "شماره مورد در دسته",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_info": {
+    "message": "‫اضافه کردن 'flat' ، مانند  *flatsubdirs*  جایگزین تمام برشهای مقدار خواهد شد، بنابراین پوشه ایجاد نمی شود",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer_m": {
+    "message": "تاریخ افزودن - ماه",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_mm": {
+    "message": "تاریخ اضافه شده - دقیقه",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_name": {
+    "message": "نام فایل",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_num": {
+    "message": "* نام مستعار برای * دسته",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_qstring": {
+    "message": "رشته کوئری",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ref": {
+    "message": "ارجاع دهنده",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refdomain": {
+    "message": "نام دامنه ارجاع دهنده (دامنه ریشه)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refext": {
+    "message": "پسوند فایل ارجاع دهنده",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refhost": {
+    "message": "نام هاست ارجاع دهنده",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refname": {
+    "message": "نام فایل ارجاع دهنده",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refqstring": {
+    "message": "ارجاع دهنده رشته کوئری",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refsubdirs": {
+    "message": "مسیر ارجاع دهنده",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refurl": {
+    "message": "آدرس ارجاع دهنده (بدون پروتکل)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ss": {
+    "message": "تاریخ اضافه شده - ثانیه",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_subdirs": {
+    "message": "مسیر",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_tags": {
+    "message": "برچسب های ماسک تغییر نام",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_text": {
+    "message": "متن توضیحات",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "متن عنوان",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_url": {
+    "message": "آدرس (بدون پروتکل)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_y": {
+    "message": "تاریخ اضافه شده - سال",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "ماسک تغییر نام",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "بازنشانی",
+    "description": "Button text; pref window"
+  },
+  "reset_confirmations": {
+    "message": "تأییدهای به خاطر سپرده شده را بازنشانی کنید",
+    "description": "Button text; pref/General"
+  },
+  "reset_confirmations_done": {
+    "message": "تمام تأییدیه های به خاطر سپرده شده مجدداً بازنشانی شده اند",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset_layouts": {
+    "message": "سفارشی سازی های رابط کاربر را بازنشانی کنید",
+    "description": "Button text; pref/General"
+  },
+  "reset_layouts_done": {
+    "message": "تمام لایه های سفارشی سازی شده که قبلاً به خاطر سپرده شده است، بازنشانی شده اند ممکن است لازم باشد پنجره ها / زبانه ها را بارگزاری مجدد کنید",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume_download": {
+    "message": "ادامه",
+    "description": "Action for resuming a download"
+  },
+  "retrying": {
+    "message": "سعی مجدد",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "‫سعی مجدد - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
+  "running": {
+    "message": "در حال اجرا",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "ذخیره",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "…جستجو",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select_all": {
+    "message": "انتخاب همه",
+    "description": "Menu text; e.g. select context"
+  },
+  "select_checked": {
+    "message": "انتخاب علامت زده ها",
+    "description": "Menu text; select context"
+  },
+  "select_none": {
+    "message": "انتخاب هیچکدام",
+    "description": "Menu text; select context"
+  },
+  "select_title": {
+    "message": "‫DownThemAll - دانلودهای خود را انتخاب کنید",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "پیدا نشد",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "خطای سرور",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "ممنوع",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "غیر مجاز",
+    "description": "Error message"
+  },
+  "set_mask": {
+    "message": "تنظیم ماسک تغییر نام",
+    "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "یک ماسک تغییر نام جدید تنظیم کنید",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "تنظیم ارجاع دهنده",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "تنظیم یک ارجاع دهنده جدید",
+    "description": "dialog text"
+  },
+  "single_batchexamples": {
+    "message": ":دسته پشتیبانی می شود، به عنوان مثال",
+    "description": "Header text; single window"
+  },
+  "single_header": {
+    "message": "یک آدرس دانلود (پیوند) و سایر گزینه ها را وارد کنید",
+    "description": "Header text; single window"
+  },
+  "single_title": {
+    "message": "‫DownThemAll - اضافه کردن پیوند",
+    "description": "Title of single window"
+  },
+  "sizeB": {
+    "message": "$S$بایت",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$گیگابایت",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$کیلوبایت",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$مگابایت",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$پتابایت",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes_huge": {
+    "message": "(> $HIGH$) کلان",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "message": "($LOW$ - $HIGH$) بزرگ",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "message": "($LOW$ - $HIGH$) متوسط",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "message": "($LOW$ - $HIGH$) کوچک",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$ترابایت",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "‫$WRITTEN$ از $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "ناشناس",
+    "description": "Status text; manager size column"
+  },
+  "speedB": {
+    "message": "$SPEED$بایت/ثانیه",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$کیلوبایت/ثانیه",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$مگابایت/ثانیه",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "message": "دانلودهای جدید شروع می شوند",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork_inactive_title": {
+    "message": "هیچ دانلود جدیدی شروع نمی شود",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "subfolder": {
+    "message": ":زیرپوشه",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "فایلها را در این زیر پوشه در فهرست دانلود خود قرار دهید",
+    "description": "placeholder text within an input box"
+  },
+  "title": {
+    "message": "عنوان",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle_selected_items": {
+    "message": "تغییر وضعیت برای موارد انتخاب شده",
+    "description": "Menu text; select"
+  },
+  "tooltip_date": {
+    "message": ":تاریخ اضافه شده",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_eta": {
+    "message": ":باقیمانده",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip_from": {
+    "message": ":از",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip_size": {
+    "message": ":اندازه",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_average": {
+    "message": ":میانگین",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_current": {
+    "message": ":فعلی",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck_selected_items": {
+    "message": "علامت موارد انتخاب شده را بردارید",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "نامحدود",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "یک بار استفاده کنید",
+    "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "لغو شده توسط کاربر",
+    "description": "Error message"
+  }
+}
