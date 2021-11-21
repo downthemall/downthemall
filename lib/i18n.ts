@@ -20,7 +20,6 @@ export function getCurrentLanguage() {
 declare let browser: any;
 declare let chrome: any;
 
-const CACHE_KEY = "_cached_locales";
 const CUSTOM_KEY = "_custom_locale";
 
 const normalizer = /[^A-Za-z0-9_]/g;
@@ -115,26 +114,19 @@ function checkBrowser() {
 
 async function fetchLanguage(code: string) {
   try {
+    console.log("trying to fetch", code);
     const resp = await fetch(`/_locales/${code}/messages.json`);
-    return await resp.json();
-  }
-  catch {
-    return null;
-  }
-}
+    const json = await resp.json();
+    if (!json || !json.CRASH || !json.CRASH.message) {
+      throw new Error(`Fetch returned invalid locale for: ${code}`);
+    }
 
-
-async function loadCached(): Promise<any> {
-  const cached = await lf.getItem<string>(CACHE_KEY);
-  if (!cached) {
+    return json;
+  }
+  catch (ex) {
+    console.error("bad locale", code, ex);
     return null;
   }
-  const parsed = JSON.parse(cached);
-  if (!Array.isArray(parsed) || !parsed[0].CRASH || !parsed[0].CRASH.message) {
-    console.warn("rejecting cached locales", parsed);
-    return null;
-  }
-  return parsed;
 }
 
 async function loadRawLocales() {
@@ -191,11 +183,7 @@ async function load(): Promise<Localization> {
       }
       CURRENT = currentLang;
       // en is the base locale
-      let valid = await loadCached();
-      if (!valid) {
-        valid = await loadRawLocales();
-        await lf.setItem(CACHE_KEY, JSON.stringify(valid));
-      }
+      const valid = await loadRawLocales();
       if (!valid.length) {
         throw new Error("Could not load ANY of these locales");
       }
