@@ -1,7 +1,6 @@
 
 ![DownThemAll!](https://raw.githubusercontent.com/downthemall/downthemall/master/style/icon128.png)
 
-
 # DownThemAll! WE
 
 The DownThemAll! WebExtension.
@@ -33,11 +32,11 @@ If you would like to help out translating DTA, please see our [translation guide
 
 ### Requirements
 
- - [node](https://nodejs.org/en/)
- - [yarn](https://yarnpkg.com/)
- - [python3](https://www.python.org/) >= 3.6 (to build zips)
- - [web-ext](https://www.npmjs.com/package/web-ext) (for development ease)
- 
+- [node](https://nodejs.org/en/)
+- [yarn](https://yarnpkg.com/)
+- [python3](https://www.python.org/) >= 3.6 (to build zips)
+- [web-ext](https://www.npmjs.com/package/web-ext) (for development ease)
+
 ### Setup
 
 You will want to run `yarn` to install the development dependencies such as webpack first.
@@ -46,7 +45,7 @@ You will want to run `yarn` to install the development dependencies such as webp
 
 Just use your favorite text editor to edit the files.
 
-You will want to run`yarn watch`.
+You will want to run `yarn watch`.
 This will run the webpack bundler in watch mode, transpiling the TypeScript to Javascript and updating bundles as you change the source.
 
 Please note: You have to run `yarn watch` or `yarn build` (at least once) as it builds the actual script bundles.
@@ -73,16 +72,15 @@ If you want to generate release builds like the ones that are eventually release
 
 The output is located in `web-ext-artifacts`.
 
- - `-fx.zip` are Firefox builds
- - `-crx.zip` are Chrome/Chromium builds
- - `-opr.zip` are Opera builds (essentially like the Chrome one, but without sounds)
+- `-fx.zip` are Firefox builds
+- `-crx.zip` are Chrome/Chromium builds
+- `-opr.zip` are Opera builds (essentially like the Chrome one, but without sounds)
 
 ### The AMO Editors tl;dr guide
 
   1. Install the requirements.
   2. `yarn && python3 build/util.py --mode=release`
   3. Have a look in `web-ext-artifacts/dta-*-fx.zip`
-
 
 ### Patches
 
@@ -95,9 +93,9 @@ Please submit your patches as Pull Requests, and rebase your commits onto the cu
 The code base is comparatively large for a WebExtension, with over 11K sloc of typescript.
 It isn't as well organized as it should be in some places; hope you don't mind.
 
-* `uikit/` - The base User Interface Kit, which currently consists of
-  * the `VirtualTable` implementation, aka that interactive HTML table with columns, columns resizing and hiding, etc you see in the Manager, Select and Preferences windows/tabs
-  * the `ContextMenu` and related classes that drive the HTML-based context menus
-* `lib/` - The "backend stuff" and assorted library routines and classes.
-* `windows/` - The "frontend stuff" so all the HTML and corresponding code to make that HTML into something interactive
-* `style/` - CSS and images
+- `uikit/` - The base User Interface Kit, which currently consists of
+  - the `VirtualTable` implementation, aka that interactive HTML table with columns, columns resizing and hiding, etc you see in the Manager, Select and Preferences windows/tabs
+  - the `ContextMenu` and related classes that drive the HTML-based context menus
+- `lib/` - The "backend stuff" and assorted library routines and classes.
+- `windows/` - The "frontend stuff" so all the HTML and corresponding code to make that HTML into something interactive
+- `style/` - CSS and images
