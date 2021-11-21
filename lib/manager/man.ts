@@ -168,15 +168,21 @@ export class Manager extends EventEmitter {
   onDeterminingFilename(state: any, suggest: Function) {
     const download = this.manIds.get(state.id);
     if (!download) {
-      return;
+      return false;
     }
+
     try {
       download.updateFromSuggestion(state);
     }
     finally {
-      const suggestion = {filename: download.dest.full};
+      const suggestion = {
+        filename: download.dest.full,
+        conflictAction: download.conflictAction
+      };
       suggest(suggestion);
     }
+
+    return false;
   }
 
   async resetScheduler() {

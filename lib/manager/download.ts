@@ -47,11 +47,11 @@ export class Download extends BaseDownload {
 
   public position: number;
 
-  public error: string;
-
   public dbId: number;
 
   public deadline: number;
+
+  public conflictAction: string;
 
   constructor(manager: Manager, options: any) {
     super(options);
@@ -129,8 +129,9 @@ export class Download extends BaseDownload {
           return;
         }
       }
+      this.conflictAction = await Prefs.get("conflict-action");
       const options: DownloadOptions = {
-        conflictAction: await Prefs.get("conflict-action"),
+        conflictAction: this.conflictAction,
         saveAs: false,
         url: this.url,
         headers: [],
