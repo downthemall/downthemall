@@ -256,7 +256,7 @@
     "description": "Menu text"
   },
   "dta_turbo": {
-    "message": "OneClick!",
+    "message": "UnClic!",
     "description": "OneClick! action; Menu text"
   },
   "dta_turbo_all": {
@@ -404,7 +404,7 @@
     "description": "Short for End-key"
   },
   "key_home": {
-    "message": "Home",
+    "message": "Accueil",
     "description": "Short for home key"
   },
   "key_pagedown": {
@@ -590,7 +590,7 @@
     "description": "label"
   },
   "pref_button_type_turbo": {
-    "message": "OneClick!",
+    "message": "UnClic!",
     "description": "label"
   },
   "pref_concurrent_downloads": {
@@ -724,7 +724,7 @@
     "description": "Menu text"
   },
   "remove_batch_downloads_question": {
-    "message": "Do you want to remove all downloads from the same batch as the currently selected download?",
+    "message": "Voulez-vous supprimer tous les téléchargements du même lot que le téléchargement actuellement sélectionné ?",
     "description": "Messagebox text"
   },
   "remove_complete_downloads": {
