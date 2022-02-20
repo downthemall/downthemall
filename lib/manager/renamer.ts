@@ -95,11 +95,11 @@ export default class Renamer {
 
   get p_qstring() {
     const {search} = this.d.uURL;
-    return search && search.substr(1).replace(/\/+/g, "-");
+    return search && search.slice(1).replace(/\/+/g, "-");
   }
 
   get p_url() {
-    return this.d.usable.substr(this.d.uURL.protocol.length + 2);
+    return this.d.usable.slice(this.d.uURL.protocol.length + 2);
   }
 
   get p_batch() {
@@ -164,11 +164,11 @@ export default class Renamer {
       return null;
     }
     const {search} = ref;
-    return search && search.substr(1).replace(/\/+/g, "-");
+    return search && search.slice(1).replace(/\/+/g, "-");
   }
 
   get p_refurl() {
-    return this.d.usableReferrer.substr(
+    return this.d.usableReferrer.slice(
       this.d.uReferrer.protocol.length + 2);
   }
 
@@ -202,10 +202,10 @@ export default class Renamer {
     const self: any = this;
     const baseMask = subfolder ? `${subfolder}/${mask}` : mask;
     return sanitizePath(baseMask.replace(REPLACE_EXPR, function(type: string) {
-      let prop = type.substr(1, type.length - 2);
+      let prop = type.slice(1, -1);
       const flat = prop.startsWith("flat");
       if (flat) {
-        prop = prop.substr(4);
+        prop = prop.slice(4);
       }
       prop = `p_${prop}`;
       let rv = (prop in self) ?

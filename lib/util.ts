@@ -176,8 +176,8 @@ export const parsePath = memoize(function parsePath(
   let base = name;
   let ext = "";
   if (idx >= 0) {
-    base = sanitizePath(name.substr(0, idx));
-    ext = sanitizePath(name.substr(idx + 1));
+    base = sanitizePath(name.slice(0, idx));
+    ext = sanitizePath(name.slice(idx + 1));
   }
 
   for (let i = 0; i < pieces.length;) {

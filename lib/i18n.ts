@@ -39,7 +39,7 @@ class Entry {
     let hit = false;
     this.message = entry.message.replace(/\$[A-Z0-9]+\$/g, (r: string) => {
       hit = true;
-      const id = r.substr(1, r.length - 2).toLocaleLowerCase();
+      const id = r.slice(1, -1).toLocaleLowerCase();
       const placeholder = entry.placeholders[id];
       if (!placeholder || !placeholder.content) {
         throw new Error(`Invalid placeholder: ${id}`);
@@ -53,7 +53,7 @@ class Entry {
 
   localize(args: any[]) {
     return this.message.replace(/\$\d+\$/g, (r: string) => {
-      const idx = parseInt(r.substr(1, r.length - 2), 10) - 1;
+      const idx = parseInt(r.slice(1, -1), 10) - 1;
       return args[idx] || "";
     });
   }
@@ -271,8 +271,8 @@ function localize_<T extends HTMLElement | DocumentFragment>(elem: T): T {
         }
         continue;
       }
-      const attr = piece.substr(0, idx).trim();
-      piece = piece.substr(idx + 1).trim();
+      const attr = piece.substring(0, idx).trim();
+      piece = piece.slice(idx + 1).trim();
       el.setAttribute(attr, _(piece));
     }
   }
