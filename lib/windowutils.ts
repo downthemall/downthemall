@@ -195,7 +195,7 @@ export function iconForPath(path: string, size = DEFAULT_ICON_SIZE) {
   if (file) {
     const idx = file.lastIndexOf(".");
     if (idx > 0) {
-      file = `file${file.substr(idx)}`;
+      file = `file${file.slice(idx)}`;
       file.replace(/\?.*?/g, "");
     }
     else {
