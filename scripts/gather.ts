@@ -103,6 +103,8 @@ class Gatherer {
   }
 
   collectLink(a: HTMLAnchorElement) {
+    const pageTitle = document.title;
+    console.log(`Page title: ${pageTitle}`);
     try {
       const item = this.makeItem(a.href, a);
       if (!item) {
@@ -111,6 +113,7 @@ class Gatherer {
       urlToUsable(item, item.url);
       item.fileName = sanitize(a.getAttribute("download"));
       item.description = extractDescription(a);
+      item.pageTitle = pageTitle;
       return item;
     }
     catch (ex) {

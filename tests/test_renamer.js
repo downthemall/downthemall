@@ -22,6 +22,7 @@ const OPTS = {
   mask: "*name*.*ext*",
   description: "desc / ript.ion .",
   title: " *** TITLE *** ",
+  pageTitle: " *** PAGE TITLE *** "
 };
 
 const dl = new BaseDownload(OPTS);
@@ -276,6 +277,15 @@ describe("Renamer", function() {
       expect(dest.base).to.equal("20180701T121112");
       expect(dest.ext).to.equal("");
       expect(dest.path).to.equal("");
+    });
+    
+    it("*host*/*pagetitle*/*name*.*ext*", function() {
+      const dest = makeOne("*host*/*pagetitle*/*name*.*ext*");
+      expect(dest.full).to.equal("www.example.co.uk/_ PAGE TITLE _/filenäme.extension");
+      expect(dest.name).to.equal("filenäme.extension");
+      expect(dest.base).to.equal("filenäme");
+      expect(dest.ext).to.equal("extension");
+      expect(dest.path).to.equal("www.example.co.uk/_ PAGE TITLE _");
     });
   }
 });

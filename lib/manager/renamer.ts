@@ -77,6 +77,10 @@ export default class Renamer {
     return this.d.title;
   }
 
+  get p_pagetitle() {
+    return this.d.pageTitle;
+  }
+
   get p_host() {
     return this.d.uURL.host;
   }

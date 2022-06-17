@@ -35,6 +35,7 @@ const SAVEDPROPS = [
   "prerolled",
   // other options
   "private",
+  "pageTitle",
   // db
   "manId",
   "dbId",
@@ -69,6 +70,8 @@ export class BaseDownload {
   public uURL: URLd;
 
   public url: string;
+
+  public pageTitle?: string;
 
   public usable: string;
 
