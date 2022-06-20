@@ -20,7 +20,7 @@
     "description": "Button text (adding filters, limits and such)"
   },
   "add_paused_once": {
-    "message": "فقط مکث شده را حالا اضافه کن",
+    "message": "فقط حالا به صورت مکث شده اضافه کن",
     "description": "Checkbox label"
   },
   "add_paused_question": {
@@ -116,7 +116,7 @@
     "description": "Table column in manager"
   },
   "colSize": {
-    "message": "اندازه",
+    "message": "حجم",
     "description": "Table column in manager"
   },
   "colSpeed": {
@@ -156,7 +156,7 @@
     "description": "Filter label for the Archives filter"
   },
   "deffilter_aud": {
-    "message": "صوتی (mp3, flac, wav, …)",
+    "message": "صوت ها (mp3, flac, wav, …)",
     "description": "Filter label for the Audio filter"
   },
   "deffilter_bin": {
@@ -236,23 +236,23 @@
     "description": "Regular dta action; Menu text"
   },
   "dta_regular_all": {
-    "message": "‫DownThemAll - همه زبانه ها",
+    "message": "DownThemAll - همه زبانه ها",
     "description": "Menu text"
   },
   "dta_regular_image": {
-    "message": "‫ذخیر تصویر با DownThemAll",
+    "message": "ذخیره تصویر با DownThemAll",
     "description": "Menu text"
   },
   "dta_regular_link": {
-    "message": "‫‫ذخیر پیوند با DownThemAll",
+    "message": "DownThemAll ذخیره پیوند با",
     "description": "Menu text"
   },
   "dta_regular_media": {
-    "message": "‫ذخیر رسانه با DownThemAll",
+    "message": "DownThemAll ذخیره رسانه با",
     "description": "Menu text"
   },
   "dta_regular_selection": {
-    "message": "‫ذخیر انتخاب شده با DownThemAll",
+    "message": "DownThemAll ذخیره انتخاب شده با",
     "description": "Menu text"
   },
   "dta_turbo": {
@@ -264,19 +264,19 @@
     "description": "Menu text"
   },
   "dta_turbo_image": {
-    "message": "‫ذخیر تصویر با تک کلیک",
+    "message": "ذخیره تصویر با تک کلیک",
     "description": "Menu text"
   },
   "dta_turbo_link": {
-    "message": "ذخیر پیوند با تک کلیک",
+    "message": "ذخیره پیوند با تک کلیک",
     "description": "Menu text"
   },
   "dta_turbo_media": {
-    "message": "ذخیر رسانه با تک کلیک",
+    "message": "ذخیره رسانه با تک کلیک",
     "description": "Menu text"
   },
   "dta_turbo_selection": {
-    "message": "ذخیر انتخاب شده با تک کلیک",
+    "message": "ذخیره انتخاب شده با تک کلیک",
     "description": "Menu text"
   },
   "error_invalidMask": {
@@ -308,7 +308,7 @@
     "description": "menu text"
   },
   "export_aria2": {
-    "message": "‫خروجی گرفتن به صورت لیست aria2",
+    "message": "aria2 خروجی گرفتن به صورت لیست",
     "description": "menu text"
   },
   "export_metalink": {
@@ -320,7 +320,7 @@
     "description": "menu text"
   },
   "extensionDescription": {
-    "message": "‫Mass Downloader برای مرورگر شما",
+    "message": "Mass Downloader برای مرورگر شما",
     "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
   },
   "fastfiltering": {
@@ -344,7 +344,7 @@
     "description": "Message box title"
   },
   "filter_expression": {
-    "message": "اصطلاح فیلتر",
+    "message": "اصلاح فیلتر",
     "description": "Message box label"
   },
   "filter_label": {
@@ -428,7 +428,7 @@
     "description": "Menu text"
   },
   "manager_status_items": {
-    "message": "‫$COMPLETE$ از $TOTAL$ دانلود تکمیل شده ($SHOWING$ نمایش داده) $RUNNING$ اجرا",
+    "message": "تعداد $COMPLETE$ از $TOTAL$ دانلود تکمیل شده ($SHOWING$ در حال نمایش) $RUNNING$ در حال دانلود",
     "description": "Status bar text; manager",
     "placeholders": {
       "complete": {
@@ -450,7 +450,7 @@
     }
   },
   "manager_title": {
-    "message": "‫DownThemAll مدیریت",
+    "message": "DownThemAll مدیریت",
     "description": "Window/tab title"
   },
   "mask": {
@@ -486,7 +486,7 @@
     "description": "Action for moving a download up"
   },
   "nagging_message": {
-    "message": "‫شما تابحال $DOWNLOADS$ دانلود با DownThemAll انجام داده اید، به عنوان یک کاربر ممکن است بخواهید کمک مالی را برای حمایت از توسعه بیشتر این افزونه در نظر بگیرید. با تشکر!",
+    "message": "انجام داده اید، به عنوان یک کاربر ممکن است بخواهید کمک مالی را برای حمایت از توسعه بیشتر این افزونه در نظر بگیرید. با تشکر DownThemAll دانلود با $DOWNLOADS$ شما تابحال",
     "description": "Donation nagging message; displayed as a notification bar in manager",
     "placeholders": {
       "downloads": {
@@ -512,7 +512,7 @@
     "description": "Notification text"
   },
   "numitems_label": {
-    "message": "‫$ITEMS$ مورد انتخاب شده…",
+    "message": "مورد انتخاب شده $ITEMS$",
     "description": "Status bar text in select; Number of items selected (label)",
     "placeholders": {
       "items": {
@@ -566,7 +566,7 @@
     "description": "Menu text; Preferences"
   },
   "prefs_title": {
-    "message": "‫DownThemAll تنظیمات",
+    "message": "DownThemAll تنظیمات",
     "description": "Window/tab title; Preferences"
   },
   "pref_add_paused": {
@@ -574,11 +574,11 @@
     "description": "Preferences/General"
   },
   "pref_button_type": {
-    "message": ":‫DownThemAll دکمه",
+    "message": ":DownThemAll دکمه",
     "description": "label"
   },
   "pref_button_type_dta": {
-    "message": "‫DownThemAll منتخب",
+    "message": "DownThemAll منتخب",
     "description": "label"
   },
   "pref_button_type_manager": {
@@ -686,7 +686,7 @@
     "description": "Notification text; single download"
   },
   "queued_downloads": {
-    "message": "‫$COUNT$ دانلود در صف",
+    "message": "$COUNT$ دانلود در صف",
     "description": "Notification text; multiple downloads",
     "placeholders": {
       "count": {
@@ -736,7 +736,7 @@
     "description": "Messagebox text"
   },
   "remove_complete_filter_downloads_question": {
-    "message": "‫آیا می خواهید همه دانلودهای کامل شده منطبق با فیلتر '$FILTER$' را حذف کنید؟",
+    "message": "را حذف کنید؟ '$FILTER$' آیا می خواهید همه دانلودهای کامل شده منطبق با فیلتر",
     "description": "Messagebox text",
     "placeholders": {
       "filter": {
@@ -754,7 +754,7 @@
     "description": "Menu text"
   },
   "remove_domain_complete_downloads_question": {
-    "message": "‫آیا می خواهید تمام دانلودهای کامل شده از دامنه '$DOMAIN$' را حذف کنید؟",
+    "message": "را حذف کنید؟ '$DOMAIN$' آیا می خواهید تمام دانلودهای کامل شده از دامنه",
     "description": "Messagebox text",
     "placeholders": {
       "domain": {
@@ -768,7 +768,7 @@
     "description": "Menu text"
   },
   "remove_domain_downloads_question": {
-    "message": "‫آیا می خواهید تمام دانلودها از دامنه '$DOMAIN$' را حذف کنید؟",
+    "message": "را حذف کنید؟ '$DOMAIN$' آیا می خواهید تمام دانلودها از دامنه",
     "description": "Messagebox text",
     "placeholders": {
       "domain": {
@@ -802,7 +802,7 @@
     "description": "Messagebox text"
   },
   "remove_filter_downloads_question": {
-    "message": "‫آیا می خواهید همه دانلودهای منطبق با فیلتر '$FILTER$' را حذف کنید؟",
+    "message": "را حذف کنید؟ '$FILTER$' آیا می خواهید همه دانلودها منطبق با فیلتر",
     "description": "Mesagebox text",
     "placeholders": {
       "filter": {
@@ -876,7 +876,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_info": {
-    "message": "‫اضافه کردن 'flat' ، مانند  *flatsubdirs*  جایگزین تمام برشهای مقدار خواهد شد، بنابراین پوشه ایجاد نمی شود",
+    "message": "جایگزین تمام برشهای مقدار خواهد شد، بنابراین پوشه ایجاد نمی شود *flatsubdirs* مانند 'flat'اضافه کردن",
     "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
   },
   "renamer_m": {
@@ -992,7 +992,7 @@
     "description": "Status text"
   },
   "retrying_error": {
-    "message": "‫سعی مجدد - $ERROR$",
+    "message": "سعی مجدد - $ERROR$",
     "description": "status text",
     "placeholders": {
       "error": {
@@ -1026,7 +1026,7 @@
     "description": "Menu text; select context"
   },
   "select_title": {
-    "message": "‫DownThemAll - دانلودهای خود را انتخاب کنید",
+    "message": "DownThemAll - دانلودهای خود را انتخاب کنید",
     "description": "Title of the select window"
   },
   "SERVER_BAD_CONTENT": {
@@ -1070,7 +1070,7 @@
     "description": "Header text; single window"
   },
   "single_title": {
-    "message": "‫DownThemAll - اضافه کردن پیوند",
+    "message": "DownThemAll - اضافه کردن پیوند",
     "description": "Title of single window"
   },
   "sizeB": {
@@ -1186,7 +1186,7 @@
     }
   },
   "size_progress": {
-    "message": "‫$WRITTEN$ از $TOTAL$",
+    "message": "دریافت $WRITTEN$ از $TOTAL$",
     "description": "Status text; manager size column",
     "placeholders": {
       "total": {
@@ -1200,11 +1200,11 @@
     }
   },
   "size_unknown": {
-    "message": "ناشناس",
+    "message": "نامشخص",
     "description": "Status text; manager size column"
   },
   "speedB": {
-    "message": "$SPEED$بایت/ثانیه",
+    "message": "سرعت $SPEED$ بایت/ثانیه",
     "description": "Speed formatting; bytes",
     "placeholders": {
       "speed": {
@@ -1214,7 +1214,7 @@
     }
   },
   "speedKB": {
-    "message": "$SPEED$کیلوبایت/ثانیه",
+    "message": "سرعت $SPEED$ کیلوبایت/ثانیه",
     "description": "Speed formatting; kilo bytes",
     "placeholders": {
       "speed": {
@@ -1224,7 +1224,7 @@
     }
   },
   "speedMB": {
-    "message": "$SPEED$مگابایت/ثانیه",
+    "message": "سرعت $SPEED$ مگابایت/ثانیه",
     "description": "Speed formatting; mega bytes",
     "placeholders": {
       "speed": {
@@ -1270,7 +1270,7 @@
     "description": "Tooltip text; manager/downloads; source URL"
   },
   "tooltip_size": {
-    "message": ":اندازه",
+    "message": ":حجم",
     "description": "Tooltip text; manager/downloads"
   },
   "tooltip_speed_average": {
