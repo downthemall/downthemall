@@ -12,7 +12,7 @@
     "build:bundles": "webpack",
     "build:regexps": "node util/makexregexps.js > data/xregexps.json",
     "stats": "cloc --vcs=git --exclude-lang=Markdown,SVG",
-    "test": "LANG=en mocha -r ts-node/register -r chai/register-expect tests",
+    "test": "LANG=en mocha -r ts-node/register -r chai/register-expect.js tests",
     "watch": "webpack --watch",
     "webext": "web-ext run -i 'lib/*' -i '**/node_modules/**' --bc -p ../dtalite.p --keep-profile-changes"
   },
