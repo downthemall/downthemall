@@ -149,7 +149,11 @@ export class BaseDownload {
   }
 
   get finalName() {
-    return this.serverName || this.fileName || this.urlName || "index.html";
+    return this.fileName ||
+      this.serverName ||
+      this.browserName ||
+      this.urlName ||
+      "index.html";
   }
 
   get currentName() {
