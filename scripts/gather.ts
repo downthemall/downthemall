@@ -5,6 +5,7 @@ import { getTextLinks } from "../lib/textlinks";
 import { runtime } from "../lib/browser";
 
 const REG_CLEAN = /[\s\t\r\n\v]+/g;
+const pageTitle = document.title;
 
 const baseURL = function() {
 const base = document.querySelector("base[href]");
@@ -271,6 +272,7 @@ class Gatherer {
       return {
         url: url.href,
         title,
+        pageTitle,
         private: this.private
       };
     }

@@ -10,6 +10,7 @@ export interface BaseItem {
   referrer?: string;
   usableReferrer?: string;
   description?: string;
+  pageTitle?: string;
   title?: string;
   fileName?: string;
   batch?: number;
@@ -24,7 +25,7 @@ export interface BaseItem {
 
 const OPTIONPROPS = Object.freeze([
   "referrer", "usableReferrer",
-  "description", "title",
+  "description", "title", "pageTitle",
   "fileName",
   "batch", "idx",
   "mask",
