@@ -14,7 +14,7 @@ export interface BaseItem {
   title?: string;
   fileName?: string;
   batch?: number;
-  idx: number;
+  idx?: number;
   mask?: string;
   subfolder?: string;
   startDate?: number;
