@@ -1,13 +1,13 @@
 "use strict";
 // License: MIT
 
-import { extension, notifications } from "./browser";
+import { runtime, notifications } from "./browser";
 
 import {EventEmitter} from "./events";
 
 const DEFAULTS = {
   type: "basic",
-  iconUrl: extension.getURL("/style/icon64.png"),
+  iconUrl: runtime.getURL("/style/icon64.png"),
   title: "DownThemAll!",
   message: "message",
 };
