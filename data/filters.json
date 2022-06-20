@@ -7,7 +7,7 @@
 	},
 	"deffilter-arch": {
 		"label": "Archives",
-		"expr": "/\\.(?:z(?:ip|[0-9]{2})|r(?:ar|[0-9]{2})|jar|bz2|gz|tar|rpm|7z(?:ip)?|lzma|xz)$/i",
+		"expr": "/\\.(?:z(?:ip|[0-9]{2,})|r(?:ar|[0-9]{2,})|jar|bz2|gz|tar|rpm|7z(?:ip)?|lzma|xz)$/i",
 		"type": 1,
 		"active": false,
 		"icon": "zip"
@@ -63,7 +63,7 @@
 	},
 	"deffilter-vid": {
 		"label": "Videos",
-		"expr": "/\\.(?:mpeg|ra?m|avi|mp(?:g|e|4)|mov|divx|asf|qt|wmv|m\\dv|rv|vob|asx|ogm|ogv|webm|flv|mkv|f4v|m4v)$/i",
+		"expr": "/\\.(?:mpeg|ra?m|avi|mp(?:g|e|4)|mov|divx|asf|qt|wmv|m\\dv|rv|vob|asx|ogm|ogv|webm|flv|mkv|f4v|m4v|swf)$/i",
 		"type": 3,
 		"active": true,
 		"icon": "mkv"
