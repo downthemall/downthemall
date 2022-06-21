@@ -895,6 +895,10 @@
     "message": "*batch* alternatyva",
     "description": "Mask text; see mask button"
   },
+  "renamer_pagetitle": {
+    "message": "Puslapio antraštės tekstas",
+    "description": "Mask text; see mask button"
+  },
   "renamer_qstring": {
     "message": "Užklausos eilutė",
     "description": "Mask text; see mask button"
