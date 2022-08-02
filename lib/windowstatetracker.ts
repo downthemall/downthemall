@@ -116,8 +116,12 @@ export class WindowStateTracker {
 
   async finalize(state?: any) {
     if (state) {
-      this.left = state.left;
-      this.top = state.top;
+      if (state.left > 0) {
+        this.left = state.left;
+      }
+      if (state.top > 0) {
+        this.top = state.top;
+      }
     }
     await this.update();
     this.windowId = 0;
