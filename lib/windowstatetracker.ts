@@ -66,10 +66,6 @@ export class WindowStateTracker {
         result.top = this.top;
         result.left = this.left;
       }
-      else {
-        result.top = 0;
-        result.left = 0;
-      }
     }
     return result;
   }
@@ -119,7 +115,7 @@ export class WindowStateTracker {
   }
 
   async finalize(state?: any) {
-    if (state && state.left >= 0 && state.top >= 0) {
+    if (state) {
       this.left = state.left;
       this.top = state.top;
     }
