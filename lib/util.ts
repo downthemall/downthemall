@@ -59,7 +59,6 @@ export function sanitizePathGeneric(path: string) {
     replace(/>+/g, "▶").
     replace(/"+/g, "'").
     replace(/\|+/g, "¦").
-    replace(/#+/g, "♯").
     replace(/[.\s]+$/g, "").
     trim();
 }

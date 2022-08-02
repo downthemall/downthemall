@@ -176,9 +176,9 @@ describe("Renamer", function() {
     it("*url*", function() {
       const dest = makeOne("*url*");
       expect(dest.full).to.equal(
-        "www.example.co.uk/test/path/dir/filenäme.extension_q=1&d=a/b♯ref");
-      expect(dest.name).to.equal("b♯ref");
-      expect(dest.base).to.equal("b♯ref");
+        "www.example.co.uk/test/path/dir/filenäme.extension_q=1&d=a/b#ref");
+      expect(dest.name).to.equal("b#ref");
+      expect(dest.base).to.equal("b#ref");
       expect(dest.ext).to.equal("");
       expect(dest.path).to.equal(
         "www.example.co.uk/test/path/dir/filenäme.extension_q=1&d=a");
@@ -187,11 +187,11 @@ describe("Renamer", function() {
     it("*flaturl*", function() {
       const dest = makeOne("*flaturl*");
       expect(dest.full).to.equal(
-        "www.example.co.uk-test-path-dir-filenäme.extension_q=1&d=a-b♯ref");
+        "www.example.co.uk-test-path-dir-filenäme.extension_q=1&d=a-b#ref");
       expect(dest.name).to.equal(
-        "www.example.co.uk-test-path-dir-filenäme.extension_q=1&d=a-b♯ref");
+        "www.example.co.uk-test-path-dir-filenäme.extension_q=1&d=a-b#ref");
       expect(dest.base).to.equal("www.example.co.uk-test-path-dir-filenäme");
-      expect(dest.ext).to.equal("extension_q=1&d=a-b♯ref");
+      expect(dest.ext).to.equal("extension_q=1&d=a-b#ref");
       expect(dest.path).to.equal("");
     });
 
@@ -234,21 +234,21 @@ describe("Renamer", function() {
     it("*refurl*", function() {
       const dest = makeOne("*refurl*");
       expect(dest.full).to.equal(
-        "www2.example.net/ref/path/dir/rfilename.rextension_r=1&d=2♯rref");
-      expect(dest.name).to.equal("rfilename.rextension_r=1&d=2♯rref");
+        "www2.example.net/ref/path/dir/rfilename.rextension_r=1&d=2#rref");
+      expect(dest.name).to.equal("rfilename.rextension_r=1&d=2#rref");
       expect(dest.base).to.equal("rfilename");
-      expect(dest.ext).to.equal("rextension_r=1&d=2♯rref");
+      expect(dest.ext).to.equal("rextension_r=1&d=2#rref");
       expect(dest.path).to.equal("www2.example.net/ref/path/dir");
     });
 
     it("*flatrefurl*", function() {
       const dest = makeOne("*flatrefurl*");
       expect(dest.full).to.equal(
-        "www2.example.net-ref-path-dir-rfilename.rextension_r=1&d=2♯rref");
+        "www2.example.net-ref-path-dir-rfilename.rextension_r=1&d=2#rref");
       expect(dest.name).to.equal(
-        "www2.example.net-ref-path-dir-rfilename.rextension_r=1&d=2♯rref");
+        "www2.example.net-ref-path-dir-rfilename.rextension_r=1&d=2#rref");
       expect(dest.base).to.equal("www2.example.net-ref-path-dir-rfilename");
-      expect(dest.ext).to.equal("rextension_r=1&d=2♯rref");
+      expect(dest.ext).to.equal("rextension_r=1&d=2#rref");
       expect(dest.path).to.equal("");
     });
 
