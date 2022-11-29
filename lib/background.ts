@@ -627,40 +627,50 @@ locale.then(() => {
 
   (async function init() {
     const urlBase = runtime.getURL("");
-    history.onVisited.addListener(({url}: {url: string}) => {
-      if (!url || !url.startsWith(urlBase)) {
-        return;
+    try {
+      history.onVisited.addListener(({url}: {url: string}) => {
+        if (!url || !url.startsWith(urlBase)) {
+          return;
+        }
+        history.deleteUrl({url});
+      });
+      const results: {url?: string}[] = await history.search({text: urlBase});
+      for (const {url} of results) {
+        if (!url) {
+          continue;
+        }
+        history.deleteUrl({url});
       }
-      history.deleteUrl({url});
-    });
-    const results: {url?: string}[] = await history.search({text: urlBase});
-    for (const {url} of results) {
-      if (!url) {
-        continue;
-      }
-      history.deleteUrl({url});
+    }
+    catch (ex) {
+      console.error("Failed to clean history", ex);
     }
 
     if (!CHROME) {
-      const sessionRemover = async () => {
-        for (const s of await sessions.getRecentlyClosed()) {
-          if (s.tab) {
-            if (s.tab.url.startsWith(urlBase)) {
-              await sessions.forgetClosedTab(s.tab.windowId, s.tab.sessionId);
+      try {
+        const sessionRemover = async () => {
+          for (const s of await sessions.getRecentlyClosed()) {
+            if (s.tab) {
+              if (s.tab.url.startsWith(urlBase)) {
+                await sessions.forgetClosedTab(s.tab.windowId, s.tab.sessionId);
+              }
+              continue;
             }
-            continue;
+            if (!s.window || !s.window.tabs || s.window.tabs.length > 1) {
+              continue;
+            }
+            const [tab] = s.window.tabs;
+            if (tab.url.startsWith(urlBase)) {
+              await sessions.forgetClosedWindow(s.window.sessionId);
+            }
           }
-          if (!s.window || !s.window.tabs || s.window.tabs.length > 1) {
-            continue;
-          }
-          const [tab] = s.window.tabs;
-          if (tab.url.startsWith(urlBase)) {
-            await sessions.forgetClosedWindow(s.window.sessionId);
-          }
-        }
-      };
-      sessions.onChanged.addListener(sessionRemover);
-      await sessionRemover();
+        };
+        sessions.onChanged.addListener(sessionRemover);
+        await sessionRemover();
+      }
+      catch (ex) {
+        console.error("failed to install session remover", ex);
+      }
     }
 
     try {
