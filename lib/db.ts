@@ -229,21 +229,27 @@ class MemoryDB implements Database {
 }
 
 export const DB = new class DBWrapper implements Database {
-  saveItems(items: Download[]): Promise<unknown> {
+  async saveItems(items: Download[]): Promise<unknown> {
+    await this.init();
     return this.db.saveItems(items);
   }
 
-  deleteItems(items: any[]): Promise<void> {
+  async deleteItems(items: any[]): Promise<void> {
+    await this.init();
     return this.db.deleteItems(items);
   }
 
-  getAll(): Promise<BaseItem[]> {
+  async getAll(): Promise<BaseItem[]> {
+    await this.init();
     return this.db.getAll();
   }
 
   private db: Database;
 
   async init() {
+    if (this.db) {
+      return;
+    }
     try {
       this.db = new IDB();
       await this.db.init();
