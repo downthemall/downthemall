@@ -25,6 +25,15 @@ function parseNum(
   return defaultValue + 1;
 }
 
+function urlToUsable(u: string) {
+  try {
+    return decodeURIComponent(u);
+  }
+  catch (ex) {
+    return u || "";
+  }
+}
+
 function importMeta4(data: string) {
   const parser = new DOMParser();
   const document = parser.parseFromString(data, "text/xml");
@@ -68,14 +77,14 @@ function importMeta4(data: string) {
       const idx = parseNum(file, "idx", 0, NS_DTA);
       const item: BaseItem = {
         url: url.url.toString(),
-        usable: decodeURIComponent(url.url.toString()),
+        usable: urlToUsable(url.url.toString()),
         batch,
         idx
       };
       const ref = file.getAttributeNS(NS_DTA, "referrer");
       if (ref) {
         item.referrer = ref;
-        item.usableReferrer = decodeURIComponent(ref);
+        item.usableReferrer = urlToUsable(ref);
       }
       const mask = file.getAttributeNS(NS_DTA, "mask");
       if (mask) {
@@ -105,7 +114,7 @@ function parseKV(current: BaseItem, line: string) {
     const refererUrls = getTextLinks(v);
     if (refererUrls && refererUrls.length) {
       current.referrer = refererUrls.pop();
-      current.usableReferrer = decodeURIComponent(current.referrer || "");
+      current.usableReferrer = urlToUsable(current.referrer || "");
     }
     break;
   }
@@ -141,7 +150,7 @@ export function importText(data: string) {
       }
       current = {
         url: urls[0],
-        usable: decodeURIComponent(urls[0]),
+        usable: urlToUsable(urls[0]),
         idx: ++idx
       };
       items.push(current);
