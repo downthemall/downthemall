@@ -38,6 +38,8 @@ export class Manager extends EventEmitter {
 
   public active: boolean;
 
+  public installedNameListener: boolean;
+
   private notifiedFinished: boolean;
 
   private readonly saveQueue: CoalescedUpdate<Download>;
@@ -66,6 +68,7 @@ export class Manager extends EventEmitter {
     }
     super();
     this.active = true;
+    this.installedNameListener = false;
     this.shouldReload = false;
     this.notifiedFinished = true;
     this.items = [];
@@ -85,10 +88,7 @@ export class Manager extends EventEmitter {
 
     downloads.onChanged.addListener(this.onChanged.bind(this));
     downloads.onErased.addListener(this.onErased.bind(this));
-    if (CHROME && downloads.onDeterminingFilename) {
-      downloads.onDeterminingFilename.addListener(
-        this.onDeterminingFilename.bind(this));
-    }
+    this.onDeterminingFilename = this.onDeterminingFilename.bind(this);
 
     Bus.onPort("manager", (port: Port) => {
       const managerPort = new ManagerPort(this, port);
@@ -217,9 +217,22 @@ export class Manager extends EventEmitter {
     }
   }
 
+  maybeInstallNameListener() {
+    if (this.installedNameListener ||
+      !CHROME ||
+      !downloads.onDeterminingFilename) {
+      return;
+    }
+    downloads.onDeterminingFilename.addListener(this.onDeterminingFilename);
+    this.installedNameListener = true;
+  }
+
   async startDownload(download: Download) {
     // Add to running first, so we don't confuse the scheduler and other parts
     this.running.add(download);
+
+    this.maybeInstallNameListener();
+
     setShelfEnabled(false);
     await download.start();
     this.notifiedFinished = false;
@@ -229,6 +242,13 @@ export class Manager extends EventEmitter {
     if (this.running.size) {
       return;
     }
+
+    if (this.installedNameListener && downloads.onDeterminingFilename) {
+      downloads.onDeterminingFilename.removeListener(
+        this.onDeterminingFilename);
+      this.installedNameListener = false;
+    }
+
     this.maybeNotifyFinished();
     if (this.shouldReload) {
       this.saveQueue.trigger();
