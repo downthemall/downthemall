@@ -170,6 +170,18 @@ export class Preroller {
       rv.mime = type.essence;
     }
 
+    if (res.redirected) {
+      try {
+        const {name} = parsePath(new URL(res.url));
+        if (name) {
+          rv.name = name;
+        }
+      }
+      catch (ex) {
+        console.error("failed to parse path from redirect", ex);
+      }
+    }
+
     const dispHeader = headers.get("content-disposition");
     if (dispHeader) {
       const file = CDPARSER.parse(dispHeader);
