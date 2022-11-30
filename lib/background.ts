@@ -650,18 +650,24 @@ locale.then(() => {
       try {
         const sessionRemover = async () => {
           for (const s of await sessions.getRecentlyClosed()) {
-            if (s.tab) {
-              if (s.tab.url.startsWith(urlBase)) {
-                await sessions.forgetClosedTab(s.tab.windowId, s.tab.sessionId);
+            try {
+              if (s.tab && s.tab.url && s.tab.sessionId) {
+                if (s.tab.url.startsWith(urlBase)) {
+                  await sessions.forgetClosedTab(
+                    s.tab.windowId, s.tab.sessionId);
+                }
+                continue;
               }
-              continue;
+              if (!s.window || !s.window.tabs || s.window.tabs.length > 1) {
+                continue;
+              }
+              const [tab] = s.window.tabs;
+              if (tab.url.startsWith(urlBase) && s.window.sessionId) {
+                await sessions.forgetClosedWindow(s.window.sessionId);
+              }
             }
-            if (!s.window || !s.window.tabs || s.window.tabs.length > 1) {
-              continue;
-            }
-            const [tab] = s.window.tabs;
-            if (tab.url.startsWith(urlBase)) {
-              await sessions.forgetClosedWindow(s.window.sessionId);
+            catch (ex) {
+              console.error("failed to remove session entry", ex);
             }
           }
         };
