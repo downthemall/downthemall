@@ -352,7 +352,7 @@
     "description": "Message box label"
   },
   "filter_types": {
-    "message": "filtertyper",
+    "message": "Filtertyper",
     "description": "Message box label"
   },
   "filter_type_link": {
@@ -610,11 +610,11 @@
     "description": "Preferences/General; group text"
   },
   "pref_manager_in_popup": {
-    "message": "Öppna chef i ett nytt popup-fönster",
+    "message": "Öppna hanteraren i ett nytt popup-fönster",
     "description": "checkbox text"
   },
   "pref_manager_tooltip": {
-    "message": "Visa verktygstips i Hanterarens flikar",
+    "message": "Visa verktygstips i hanterarens flikar",
     "description": "Preferences/General"
   },
   "pref_netglobal": {
@@ -638,7 +638,7 @@
     "description": "Preferences/General"
   },
   "pref_retries": {
-    "message": "Antal omförsök av hämtningar på tillfälliga fel",
+    "message": "Antal omförsök av hämtningar vid tillfälliga fel",
     "description": "pref text"
   },
   "pref_retry_time": {
@@ -893,6 +893,10 @@
   },
   "renamer_num": {
     "message": "Alias för *batch*",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_pagetitle": {
+    "message": "Sidans titeltext",
     "description": "Mask text; see mask button"
   },
   "renamer_qstring": {
