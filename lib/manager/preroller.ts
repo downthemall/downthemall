@@ -183,12 +183,20 @@ export class Preroller {
     }
 
     const dispHeader = headers.get("content-disposition");
+    let validDispHeader = false;
+
     if (dispHeader) {
       const file = CDPARSER.parse(dispHeader);
-      // Sanitize
-      rv.name = sanitizePath(file.replace(/[/\\]+/g, "-"));
+      if (file && file.length) {
+        const name = sanitizePath(file.replace(/[/\\]+/g, "-"));
+        if (name && name.length) {
+          rv.name = name;
+          validDispHeader = true;
+        }
+      }
     }
-    else {
+
+    if (!validDispHeader) {
       const detected = Preroller.maybeFindNameFromSearchParams(
         this.download, rv);
       if (detected) {
