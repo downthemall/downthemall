@@ -107,7 +107,7 @@ body > * {
   padding: 0;
   padding-left: calc(2em + 32px);
   color: black;
-  background: url(icon32.png) 1em 0/32px 32px no-repeat, var(--tile-url) repeat-x, var(--toolbar-bg-color);
+  background: url(icon32.png) 1em center/32px 32px no-repeat, var(--tile-url) repeat-x, var(--toolbar-bg-color);
   font: caption;
   font-size: 150%;
   font-weight: bold;
