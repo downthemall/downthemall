@@ -15,10 +15,10 @@
   --menu-bgcolor-hover: #2283fb;
   --table-bgcolor: white;
   --table-head-bgcolor: white;
-  --toolbar-bg-color: rgb(248, 134, 6);
+  --toolbar-bg-color: rgb(248, 134, 6, 0.5);
   --toolbar-active-border-color: #478de7;
   --toolbar-hover-border-color: red;
-  --toolbar-hover-background: rgb(247, 149, 37);
+  --toolbar-hover-background: rgb(247, 149, 37, 0.8);
   --toolbar-border-width: 2px;
   --toolbar-border: 1px solid rgba(255, 255, 255, 0.5);
   --add-color: navy;
