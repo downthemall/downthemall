@@ -4,7 +4,6 @@
 import { TYPE_LINK, TYPE_MEDIA } from "./constants";
 import { filters } from "./filters";
 import { Prefs } from "./prefs";
-import { lazy } from "./util";
 // eslint-disable-next-line no-unused-vars
 import { Item, makeUniqueItems, BaseItem } from "./item";
 import { getManager } from "./manager/man";
@@ -34,6 +33,12 @@ export const API = new class APIImpl {
     const {subfolder = SUBFOLDER.current} = options;
 
     const {paused = false} = options;
+
+    let currentBatch = parseInt(await Prefs.get("currentBatch", 0), 10) || 0;
+    if (!isFinite(currentBatch) || ++currentBatch >= MAX_BATCH) {
+      currentBatch = 1;
+    }
+
     const defaults: any = {
       _idx: 0,
       get idx() {
@@ -50,16 +55,9 @@ export const API = new class APIImpl {
       mask,
       subfolder,
       date: Date.now(),
+      batch: currentBatch,
       paused
     };
-    let currentBatch = await Prefs.get("currentBatch", 0);
-    const initialBatch = currentBatch;
-    lazy(defaults, "batch", () => {
-      if (++currentBatch >= MAX_BATCH) {
-        currentBatch = 0;
-      }
-      return currentBatch;
-    });
     items = items.map(i => {
       delete i.idx;
       return new Item(i, defaults);
@@ -67,9 +65,10 @@ export const API = new class APIImpl {
     if (!items) {
       return;
     }
-    if (initialBatch !== currentBatch) {
-      await Prefs.set("currentBatch", currentBatch);
-    }
+
+    await Prefs.set("currentBatch", currentBatch);
+    await Prefs.save();
+
     const manager = await getManager();
     await manager.addNewDownloads(items);
     if (await Prefs.get("queue-notification")) {
