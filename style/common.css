@@ -616,13 +616,6 @@ html.dark .context-menu-item.disabled > * {
   opacity: 0.7;
 }
 
-input {
-  color: var(--general-input-color);
-  background: var(--general-input-bgcolor);
-  border: inherit;
-  padding: 2px;
-}
-
 .modal-dialog {
   color: var(--modal-color);
   background: var(--modal-bgcolor);
