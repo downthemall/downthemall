@@ -12,8 +12,8 @@ import { BaseItem } from "./item";
 
 export async function single(item: BaseItem | null) {
   const tracker = new WindowStateTracker("single", {
-    minWidth: 700,
-    minHeight: 500
+    minWidth: 750,
+    minHeight: 550
   });
   await tracker.init();
   const windowOptions = tracker.getOptions({
