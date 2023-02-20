@@ -149,29 +149,31 @@
         <th data-hideable="false" id="colConnection" data-i18n="colConnections" width="33%">Connections</th>
       </tr>
     </table>
-    <div id="limit-edit" class="hidden">
-      <label for="limit-edit-domain" data-i18n="colDomain">Domain</label>
-      <input id="limit-edit-domain" minlength="1">
-      <label for="limit-edit-concurrent" data-i18n="colConnections">Connections</label>
-      <div id="limit-concurrent-box" class="limit-selector">
-        <label>
-          <input type="radio" name="limit-edit-concurrent" id="limit-edit-concurrent-unlimited">
-          <span data-i18n="unlimited"></span>
-        </label>
-        <label>
-          <input type="radio" name="limit-edit-concurrent" id="limit-edit-concurrent-limited">
-          <span data-i18n="limited-to"></span>
-          <input type="number" min="1" max="16" id="limit-edit-concurrent-limit">
-        </label>
+    <fieldset id="limit-set">
+      <div id="limit-edit" class="hidden">
+        <label for="limit-edit-domain" data-i18n="colDomain">Domain</label>
+        <input id="limit-edit-domain" minlength="1">
+        <label for="limit-edit-concurrent" data-i18n="colConnections">Connections</label>
+        <div id="limit-concurrent-box" class="limit-selector">
+          <label>
+            <input type="radio" name="limit-edit-concurrent" id="limit-edit-concurrent-unlimited">
+            <span data-i18n="unlimited"></span>
+          </label>
+          <label>
+            <input type="radio" name="limit-edit-concurrent" id="limit-edit-concurrent-limited">
+            <span data-i18n="limited-to"></span>
+            <input type="number" min="1" max="16" id="limit-edit-concurrent-limit">
+          </label>
+        </div>
+        <div class="button-box">
+          <button id="limit-save" data-i18n="save"></button>
+          <button id="limit-delete" data-i18n="delete"></button>
+        </div>
       </div>
-      <div class="button-box">
-        <button id="limit-save" data-i18n="save"></button>
-        <button id="limit-delete" data-i18n="delete"></button>
+      <div id="limit-buttons" class="buttons">
+        <button id="limit-create" data-i18n="add-new">Add New</button>
       </div>
-    </div>
-    <div id="limit-buttons" class="buttons">
-      <button id="limit-create" data-i18n="add-new">Add New</button>
-    </div>
+    </fieldset>
   </article>
 
   <template id="create-filter-template">

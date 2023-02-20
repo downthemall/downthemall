@@ -96,6 +96,10 @@ input.tab {
   justify-items: stretch;
 }
 
+#limit-set {
+  max-width: none;
+}
+
 .button-box {
   grid-row-end: span 2;
 }
