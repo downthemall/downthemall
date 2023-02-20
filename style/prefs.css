@@ -186,3 +186,7 @@ legend {
 hr {
   width: 100%;
 }
+
+label > span {
+  user-select: none;
+}
