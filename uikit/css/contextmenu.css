@@ -22,7 +22,7 @@ ul.context-menu ul {
 .context-menu-item {
   cursor: default;
   display: flex;
-  padding: 4px 1ex;
+  padding: 5px 1em;
   vertical-align: middle;
 }
 .context-menu-item > * {
@@ -57,14 +57,20 @@ ul.context-menu ul {
 .context-menu-separator > * {
   display: none !important;
 }
+
 .context-menu-icon {
+  display: inline-flex;
   font-size: 16px !important;
   width: 16px;
   height: 16px;
   padding: 0;
   margin: 0;
-  margin-right: 4px;
 }
+
+.context-menu-no-icon {
+  display: none !important;
+}
+
 .context-menu-text {
   flex: 1 1;
   margin-right: 1ex;

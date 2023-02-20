@@ -89,6 +89,10 @@ export class MenuItemBase {
     if (this.icon) {
       this.iconElem.classList.add(...this.icon.split(" "));
     }
+    else {
+      this.iconElem.classList.add("context-menu-no-icon");
+    }
+
     this.textElem.textContent = this.text;
     this.textElem.className = "context-menu-text";
 
