@@ -32,8 +32,8 @@ ul.context-menu ul {
   margin: auto;
 }
 
-.context-menu-item:hover:not(.context-menu-seperator),
-.context-menu-item:hover:not(.context-menu-seperator) > * {
+.context-menu-item:hover:not(.context-menu-separator),
+.context-menu-item:hover:not(.context-menu-separator) > * {
   background: #2283fb;
   color: white !important;
 }
@@ -44,7 +44,7 @@ ul.context-menu ul {
   pointer-events: none;
 }
 
-.context-menu-seperator {
+.context-menu-separator {
   border-bottom: 1px solid darkgray;
   box-shadow: 0px 1px 0px 0px rgba(220,220,220,0.5);
   margin-left: 1ex;
@@ -54,7 +54,7 @@ ul.context-menu ul {
   padding: 0;
   pointer-events: none;
 }
-.context-menu-seperator > * {
+.context-menu-separator > * {
   display: none !important;
 }
 .context-menu-icon {

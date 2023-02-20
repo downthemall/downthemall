@@ -606,8 +606,8 @@ ul.context-menu ul {
   background: var(--menu-bgcolor);
 }
 
-.context-menu-item:hover:not(.context-menu-seperator),
-.context-menu-item:hover:not(.context-menu-seperator) > * {
+.context-menu-item:hover:not(.context-menu-separator),
+.context-menu-item:hover:not(.context-menu-separator) > * {
   background: var(--menu-bgcolor-hover);
 }
 

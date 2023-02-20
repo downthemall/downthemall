@@ -5,7 +5,7 @@
 import {
   ContextMenu,
   MenuItem,
-  MenuSeperatorItem,
+  MenuSeparatorItem,
   // eslint-disable-next-line no-unused-vars
   MenuItemBase,
   // eslint-disable-next-line no-unused-vars
@@ -149,7 +149,7 @@ export class MenuFilter extends ItemFilter {
   addItem(text: string, callback?: Function, checked?: boolean) {
     const id = `ctx-menufilter-item-${this.items.size.toString()}`;
     if (text === "-") {
-      const item = new MenuSeperatorItem(this.menu, id);
+      const item = new MenuSeparatorItem(this.menu, id);
       this.items.set(id, {item, callback});
       return;
     }

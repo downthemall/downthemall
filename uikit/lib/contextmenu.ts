@@ -126,7 +126,7 @@ export class MenuItem extends MenuItemBase {
   }
 }
 
-export class MenuSeperatorItem extends MenuItemBase {
+export class MenuSeparatorItem extends MenuItemBase {
   constructor(owner: ContextMenu, id = "") {
     super(owner, id, "", {});
     this.elem.setAttribute("aria-role", "menuitem");
@@ -135,7 +135,7 @@ export class MenuSeperatorItem extends MenuItemBase {
 
   materialize() {
     super.materialize();
-    this.elem.classList.add("context-menu-seperator");
+    this.elem.classList.add("context-menu-separator");
   }
 }
 
@@ -307,6 +307,7 @@ export class ContextMenu extends EventEmitter {
     if (this.elem.parentElement) {
       this.elem.parentElement.removeChild(this.elem);
     }
+
     delete this.elem;
     this.items.length = 0;
   }
@@ -437,7 +438,7 @@ export class ContextMenu extends EventEmitter {
       let item = null;
       const ce = child as HTMLElement;
       if (joined === "-") {
-        item = new MenuSeperatorItem(this, child.id);
+        item = new MenuSeparatorItem(this, child.id);
       }
       else if (sub) {
         item = new SubMenuItem(this, child.id, joined, ce.dataset);
