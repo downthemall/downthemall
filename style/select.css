@@ -191,11 +191,13 @@ body > * {
 .filters-container.active {
   display: grid;
 }
+
 .filters-container > label {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  user-select: none;
 }
 
 .virtualtable-column[data-sortdir="asc"] .virtualtable-column-icon:before {
