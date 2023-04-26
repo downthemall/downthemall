@@ -159,7 +159,7 @@ export async function openManager(focus = true) {
   }
 }
 
-export async function openUrls(urls: string, incognito: boolean) {
+export async function openUrls(urls: string[], incognito: boolean) {
   const window = await mostRecentBrowser(incognito);
   for (const url of urls) {
     try {
@@ -232,7 +232,7 @@ export function visible(el: Element | string) {
         return;
       }
       obs.disconnect();
-      resolve();
+      resolve(undefined);
     });
     obs.observe(elem);
   });
