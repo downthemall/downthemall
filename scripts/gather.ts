@@ -143,15 +143,33 @@ class Gatherer {
 
       {
         const {srcset} = img;
-        if (!srcset) {
-          return;
+        if (srcset) {
+          const imgs = srcset.split(",").flatMap(e => {
+            const idx = e.lastIndexOf(" ");
+            return (idx > 0 ? e.slice(0, idx) : e).trim();
+          });
+          for (const i of imgs) {
+            const item = this.makeItem(i, img);
+            if (item) {
+              item.fileName = "";
+              item.description = item.title;
+              yield item;
+            }
+          }
         }
-        const imgs = srcset.split(",").flatMap(e => {
-          const idx = e.lastIndexOf(" ");
-          return (idx > 0 ? e.slice(0, idx) : e).trim();
-        });
-        for (const i of imgs) {
-          const item = this.makeItem(i, img);
+      }
+
+      // lazy loading target
+      {
+        let dataUrl = (img.dataset &&
+          (img.dataset.src || img.dataset.source)) || null;
+        if (!dataUrl || dataUrl.trim() === "") {
+          const parent = img.parentElement;
+          dataUrl = (parent && parent.dataset &&
+            (parent.dataset.src || parent.dataset.source)) || null;
+        }
+        if (dataUrl) {
+          const item = this.makeItem(dataUrl, img);
           if (item) {
             item.fileName = "";
             item.description = item.title;
