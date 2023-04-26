@@ -42,7 +42,6 @@ module.exports = {
   stats: {
     hash: true,
     timings: true,
-    maxModules: 2,
   },
   watchOptions: {
     ignored: /node_modules|bundles/
@@ -53,7 +52,9 @@ module.exports = {
   },
   optimization: {
     minimize: false,
-    namedModules: true,
+    moduleIds: "named",
+    chunkIds: "named",
+    mangleExports: false,
     splitChunks: {
       chunks: chunk => {
         return !chunk.name.startsWith("content-");
