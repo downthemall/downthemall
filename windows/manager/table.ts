@@ -8,7 +8,7 @@ import {
   // eslint-disable-next-line no-unused-vars
   SubMenuItem
 } from "../contextmenu";
-import { iconForPath } from "../../lib/windowutils";
+import { iconForPath, openUrls } from "../../lib/windowutils";
 import { formatSpeed, formatSize, formatTimeDelta } from "../../lib/formatters";
 import { filters } from "../../lib/filters";
 import { _ } from "../../lib/i18n";
@@ -419,6 +419,10 @@ export class DownloadTable extends VirtualTable {
 
   private readonly deleteFilesAction: Broadcaster;
 
+  private readonly copyURLAction: Broadcaster;
+
+  private readonly openURLAction: Broadcaster;
+
   private readonly moveTopAction: Broadcaster;
 
   private readonly moveUpAction: Broadcaster;
@@ -601,6 +605,12 @@ export class DownloadTable extends VirtualTable {
     this.deleteFilesAction = new Broadcaster("ctx-delete-files");
     this.deleteFilesAction.onaction = this.deleteFiles.bind(this);
 
+    this.copyURLAction = new Broadcaster("ctx-copy-url");
+    this.copyURLAction.onaction = this.copyURL.bind(this);
+
+    this.openURLAction = new Broadcaster("ctx-open-url");
+    this.openURLAction.onaction = this.openURL.bind(this);
+
     const moveAction = (method: string) => {
       if (this.selection.empty) {
         return;
@@ -633,6 +643,8 @@ export class DownloadTable extends VirtualTable {
       this.openFileAction,
       this.openDirectoryAction,
       this.deleteFilesAction,
+      this.copyURLAction,
+      this.openURLAction,
     ]);
 
     this.on(
@@ -912,6 +924,31 @@ export class DownloadTable extends VirtualTable {
       }
     }));
     this.removeDownloadsInternal(sids);
+  }
+
+  copyURL() {
+    if (this.focusRow < 0 || !navigator.clipboard ||
+      !navigator.clipboard.writeText) {
+      return;
+    }
+    const item = this.downloads.filtered[this.focusRow];
+    if (!item || !item.url) {
+      return;
+    }
+
+    navigator.clipboard.writeText(item.url);
+  }
+
+  openURL() {
+    if (this.focusRow < 0) {
+      return;
+    }
+    const item = this.downloads.filtered[this.focusRow];
+    if (!item || !item.url) {
+      return;
+    }
+
+    openUrls([item.url], false);
   }
 
   removeDownloadsInternal(sids?: number[]) {

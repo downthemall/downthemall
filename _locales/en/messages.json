@@ -159,6 +159,10 @@
     "description": "Option text; prefs/general",
     "message": "Rename"
   },
+  "copy_download_url": {
+    "description": "User action (menu item) to copy a download URL in the manage",
+    "message": "Copy Download Link"
+  },
   "create_filter": {
     "description": "Button text; Create filter dialog; prefs/filters",
     "message": "Create Filter"
@@ -899,10 +903,6 @@
     "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!",
     "message": "Adding 'flat', such as *flatsubdirs* will replace all slashes in the value, thus not creating directories"
   },
-  "renamer_pagetitle": {
-    "description": "Mask text; see mask button",
-    "message": "Page title text"
-  },
   "renamer_m": {
     "description": "Mask text; see mask button",
     "message": "Date Added - Month"
@@ -918,6 +918,10 @@
   "renamer_num": {
     "description": "Mask text; see mask button",
     "message": "Alias for *batch*"
+  },
+  "renamer_pagetitle": {
+    "description": "Mask text; see mask button",
+    "message": "Page title text"
   },
   "renamer_qstring": {
     "description": "Mask text; see mask button",
