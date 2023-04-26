@@ -71,7 +71,7 @@ def main():
             try:
                 with open("messages.json.tmp", "w", encoding="utf-8") as outp:
                     json.dump(data, outp, sort_keys=True, indent=2, ensure_ascii=False)
-                os.rename("messages.json.tmp", "_locales/en/messages.json")
+                os.replace("messages.json.tmp", "_locales/en/messages.json")
             finally:
                 try:
                     os.unlink("messages.json.tmp")
