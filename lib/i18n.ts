@@ -39,7 +39,7 @@ class Entry {
     let hit = false;
     this.message = entry.message.replace(/\$[A-Z0-9]+\$/g, (r: string) => {
       hit = true;
-      const id = r.slice(1, -1).toLocaleLowerCase();
+      const id = r.slice(1, -1).toLocaleLowerCase("en-US");
       const placeholder = entry.placeholders[id];
       if (!placeholder || !placeholder.content) {
         throw new Error(`Invalid placeholder: ${id}`);
