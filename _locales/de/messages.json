@@ -1,7 +1,7 @@
 {
   "language": {
     "message": "Deutsch",
-    "description": "Language Name in your language"
+    "description": "Lanuage Name in your language"
   },
   "language_code": {
     "message": "de",
@@ -134,6 +134,10 @@
   "conflict_rename": {
     "message": "Umbenennen",
     "description": "Option text; prefs/general"
+  },
+  "copy_download_url": {
+    "message": "Download-Link kopieren",
+    "description": "User action (menu item) to copy a download URL in the manage"
   },
   "CRASH": {
     "message": "Interner Browser Fehler",
