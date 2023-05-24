@@ -51,12 +51,12 @@ export const MimeDB = new class MimeDB {
   }
 
   getPrimary(mime: string) {
-    const info = this.mimeToExts.get(mime.trim().toLocaleLowerCase());
+    const info = this.mimeToExts.get(mime.trim().toLocaleLowerCase("en-US"));
     return info ? info.primary : "";
   }
 
   getMime(mime: string) {
-    return this.mimeToExts.get(mime.trim().toLocaleLowerCase());
+    return this.mimeToExts.get(mime.trim().toLocaleLowerCase("en-US"));
   }
 
   hasExtension(ext: string) {

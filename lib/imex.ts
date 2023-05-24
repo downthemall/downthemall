@@ -109,7 +109,7 @@ function importMeta4(data: string) {
 
 function parseKV(current: BaseItem, line: string) {
   const [k, v] = line.split("=", 2);
-  switch (k.toLocaleLowerCase().trim()) {
+  switch (k.toLocaleLowerCase("en-US").trim()) {
   case "referer": {
     const refererUrls = getTextLinks(v);
     if (refererUrls && refererUrls.length) {

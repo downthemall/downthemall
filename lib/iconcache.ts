@@ -62,7 +62,7 @@ export const IconCache = new class IconCache extends EventEmitter {
   }
 
   private normalize(ext: string) {
-    ext = ext.toLocaleLowerCase();
+    ext = ext.toLocaleLowerCase("en-US");
     return SYNONYMS.get(ext) || ext;
   }
 

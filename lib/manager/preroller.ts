@@ -235,7 +235,7 @@ export class Preroller {
   static maybeFindNameFromSearchParams(
       download: Download, res: PrerollResults) {
     const {p_ext: ext} = download.renamer;
-    if (ext && !PREROLL_SEARCHEXTS.has(ext.toLocaleLowerCase())) {
+    if (ext && !PREROLL_SEARCHEXTS.has(ext.toLocaleLowerCase("en-US"))) {
       return undefined;
     }
     return Preroller.findNameFromSearchParams(download.uURL, res.mime);
