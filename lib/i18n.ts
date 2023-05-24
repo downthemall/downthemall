@@ -24,6 +24,8 @@ const CUSTOM_KEY = "_custom_locale";
 
 const normalizer = /[^A-Za-z0-9_]/g;
 
+const DEF_LANGS = new Map<string, string>([["zh", "zh_CN"], ["pt", "pt_PT"]]);
+
 interface JSONEntry {
   message: string;
   placeholders: any;
@@ -162,6 +164,13 @@ async function loadRawLocales() {
   }
 
   const valid = Array.from(langs).filter(e => ALL_LANGS.has(e));
+  if (valid.length === 1) {
+    for (const [def, mapped] of DEF_LANGS.entries()) {
+      if (langs.has(def)) {
+        valid.push(mapped);
+      }
+    }
+  }
   const fetched = await Promise.all(Array.from(valid, fetchLanguage));
   return fetched.filter(e => !!e);
 }
