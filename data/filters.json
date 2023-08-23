@@ -63,7 +63,7 @@
 	},
 	"deffilter-vid": {
 		"label": "Videos",
-		"expr": "/\\.(?:mpeg|ra?m|avi|mp(?:g|e|4)|mov|divx|asf|qt|wmv|m\\dv|rv|vob|asx|ogm|ogv|webm|flv|mkv|f4v|m4v|swf)$/i",
+		"expr": "/\\.(?:mpeg|ra?m|avi|av1|mp(?:g|e|4)|mov|divx|asf|qt|wmv|m\\dv|rv|vob|asx|ogm|ogv|webm|flv|mkv|f4v|m4v|swf)$/i",
 		"type": 3,
 		"active": true,
 		"icon": "mkv"

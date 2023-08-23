@@ -366,6 +366,7 @@
     "video/ts": "ts",
     "video/webm": "webm",
     "video/wmv": "wmv",
+    "video/AV1": "av1",
     "video/x-3gp": "3gpp",
     "video/x-3gpp": "3gpp",
     "video/x-asf": "asx",
