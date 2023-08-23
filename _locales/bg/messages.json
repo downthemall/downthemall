@@ -135,6 +135,10 @@
     "message": "Преименуване",
     "description": "Option text; prefs/general"
   },
+  "copy_download_url": {
+    "message": "Копиране на връзката за изтегляне",
+    "description": "User action (menu item) to copy a download URL in the manage"
+  },
   "CRASH": {
     "message": "Вътрешна грешка на браузъра",
     "description": "Error Message"
@@ -893,6 +897,10 @@
   },
   "renamer_num": {
     "message": "Псевдоним за *batch*",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_pagetitle": {
+    "message": "Заглавие на страницата",
     "description": "Mask text; see mask button"
   },
   "renamer_qstring": {
