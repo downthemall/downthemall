@@ -35,7 +35,7 @@
 	},
 	"deffilter-img": {
 		"label": "Images",
-		"expr": "/\\.(?:jp(?:e?g|e|2)|gif|png|tiff?|bmp|ico|heic|heif|webp|jxr|wdp|dng|cr2|arw)$/i",
+		"expr": "/\\.(?:jp(?:e?g|e|2)|gif|png|tiff?|bmp|ico|heic|heif|webp|avif|jxr|wdp|dng|cr2|arw)$/i",
 		"type": 3,
 		"active": false,
 		"icon": "jpg"

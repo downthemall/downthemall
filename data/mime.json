@@ -276,6 +276,7 @@
     "image/vnd.wap.wbmp": "wbmp",
     "image/wbmp": "wbmp",
     "image/webp": "webp",
+    "image/avif": "avif",
     "image/x-bmp": "bmp",
     "image/x-gif": "gif",
     "image/x-heic": "heic",
