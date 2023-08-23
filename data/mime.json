@@ -237,6 +237,7 @@
     "audio/mp3": "mp3",
     "audio/mpeg": "mp3",
     "audio/ogg": "ogg",
+    "audio/opus": "opus",
     "audio/ra": "ra",
     "audio/realaudio": "ra",
     "audio/x-kar": "mid",
