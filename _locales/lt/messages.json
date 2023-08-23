@@ -135,6 +135,10 @@
     "message": "Pervardinti",
     "description": "Option text; prefs/general"
   },
+  "copy_download_url": {
+    "message": "Kopijuoti parsisiuntimo nuorodą",
+    "description": "User action (menu item) to copy a download URL in the manage"
+  },
   "CRASH": {
     "message": "Vidinė naršyklės klaida",
     "description": "Error Message"
