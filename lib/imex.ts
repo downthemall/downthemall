@@ -90,6 +90,11 @@ function importMeta4(data: string) {
       if (mask) {
         item.mask = mask;
       }
+      const subfolder = file.getAttributeNS(NS_DTA, "subfolder");
+      if (subfolder && subfolder !== "") {
+        item.subfolder = subfolder;
+      }
+
       const description = file.querySelector("description");
       if (description && description.textContent) {
         item.description = description.textContent.trim();
@@ -234,6 +239,9 @@ class MetalinkExporter {
       }
       if (item.mask) {
         f.setAttributeNS(NS_DTA, "mask", item.mask);
+      }
+      if (item.subfolder && item.subfolder !== "") {
+        f.setAttributeNS(NS_DTA, "subfolder", item.subfolder);
       }
 
       if (item.description) {
