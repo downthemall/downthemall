@@ -570,6 +570,7 @@ export class DownloadTable extends VirtualTable {
     ctx.on("ctx-export-aria2", () => this.exportDownloads(imex.aria2Exporter));
     ctx.on("ctx-export-metalink",
       () => this.exportDownloads(imex.metalinkExporter));
+    ctx.on("ctx-export-json", () => this.exportDownloads(imex.jsonExporter));
 
     ctx.on("dismissed", () => this.table.focus());
 
@@ -1226,7 +1227,7 @@ export class DownloadTable extends VirtualTable {
   importDownloads() {
     const picker = document.createElement("input");
     picker.setAttribute("type", "file");
-    picker.setAttribute("accept", "text/*,.txt,.lst,.metalink,.meta4");
+    picker.setAttribute("accept", "text/*,.txt,.lst,.metalink,.meta4,.json");
     picker.onchange = () => {
       if (!picker.files || !picker.files.length) {
         return;

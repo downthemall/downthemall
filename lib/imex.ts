@@ -126,10 +126,74 @@ function parseKV(current: BaseItem, line: string) {
   }
 }
 
+function importJSON(data: string) {
+  const items = JSON.parse(data);
+  if (!Array.isArray(items) || !items[0] || !items[0].url) {
+    throw new Error("Invalid JSON provided");
+  }
+  const rv = [];
+  for (const i of items) {
+    try {
+      const url = new URL(i.url);
+      const item: BaseItem = {
+        url: url.toString(),
+        usable: urlToUsable(url.toString()),
+      };
+
+      if (i.referer && i.referer !== "") {
+        const referrer = new URL(i.referer).toString();
+        item.referrer = referrer;
+        item.referrer = urlToUsable(referrer);
+      }
+
+      if (i.subfolder && i.subfolder !== "") {
+        item.subfolder = i.subfolder;
+      }
+
+      if (i.mask && i.mask !== "") {
+        item.mask = i.mask;
+      }
+
+      if (i.batch && Number.isFinite(i.batch) && i.batch > 0) {
+        item.batch = i.batch;
+      }
+      if (i.idx && Number.isFinite(i.idx) && i.idx > 0) {
+        item.idx = i.idx;
+      }
+
+      if (i.title && i.title !== "") {
+        item.title = i.title;
+      }
+      if (i.description && i.description !== "") {
+        item.description = i.description;
+      }
+      if (i.pageTitle && i.pageTitle !== "") {
+        item.pageTitle = i.pageTitle;
+      }
+      if (i.startDate && Number.isFinite(i.startDate) && i.startDate > 0) {
+        item.startDate = i.startDate;
+      }
+
+      rv.push(item);
+    }
+    catch (ex) {
+      console.error("Failed to parse JSON import item", i);
+    }
+  }
+  return rv;
+}
+
 export function importText(data: string) {
   if (data.includes(NS_METALINK_RFC5854)) {
     return importMeta4(data);
   }
+  try {
+    return importJSON(data);
+  }
+  catch (ex) {
+    console.log("probably not json");
+  }
+
   const splitter = /((?:.|\r)+)\n|(.+)$/g;
   const spacer = /^\s+/;
   let match;
@@ -173,7 +237,7 @@ export interface Exporter {
   getText(items: BaseItem[]): string;
 }
 
-class TextExporter {
+class TextExporter implements Exporter {
   readonly fileName: string;
 
   constructor() {
@@ -189,7 +253,7 @@ class TextExporter {
   }
 }
 
-class Aria2Exporter {
+class Aria2Exporter implements Exporter {
   readonly fileName: string;
 
   constructor() {
@@ -208,7 +272,7 @@ class Aria2Exporter {
   }
 }
 
-class MetalinkExporter {
+class MetalinkExporter implements Exporter {
   readonly fileName: string;
 
   constructor() {
@@ -273,6 +337,36 @@ class MetalinkExporter {
   }
 }
 
+class JSONExporter implements Exporter {
+  readonly fileName: string;
+
+  constructor() {
+    this.fileName = "links.json";
+  }
+
+  getText(items: BaseItem[]): string {
+    const rv = items.map(_item => {
+      const item = _item as any;
+      const serialized = {
+        url: item.url,
+        name: item.currentName,
+        subfolder: item.subfolder || "",
+        batch: item.batch || 0,
+        idx: item.idx || 0,
+        referrer: item.referer || "",
+        mask: item.mask || "*name*.*ext",
+        title: item.title || "",
+        pageTitle: item.pageTitle || "",
+        description: item.description || "",
+        startDate: item.startDate,
+      };
+      return serialized;
+    });
+    return JSON.stringify(rv, undefined, 2);
+  }
+}
+
 export const textExporter = new TextExporter();
 export const aria2Exporter = new Aria2Exporter();
 export const metalinkExporter = new MetalinkExporter();
+export const jsonExporter = new JSONExporter();

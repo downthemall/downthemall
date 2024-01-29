@@ -339,6 +339,10 @@
     "description": "menu text",
     "message": "Export As Metalink"
   },
+  "export_json": {
+    "description": "menu text",
+    "message": "Export As JSON"
+  },
   "export_text": {
     "description": "menu text",
     "message": "Export As Text"
