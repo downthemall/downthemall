@@ -315,6 +315,10 @@
     "message": "Als aria2 Liste exportieren",
     "description": "menu text"
   },
+  "export_json": {
+    "message": "Als JSON exportieren",
+    "description": "menu text"
+  },
   "export_metalink": {
     "message": "Als Metalink exportieren",
     "description": "menu text"
