@@ -212,7 +212,9 @@ export class Preroller {
       rv.error = "SERVER_BAD_CONTENT";
     }
     else if (status === 403) {
-      rv.error = "SERVER_FORBIDDEN";
+      // Disable for now
+      // seems some servers will refuse range requests but not full requests
+      //rv.error = "SERVER_FORBIDDEN";
     }
     else if (status === 402 || status === 407) {
       rv.error = "SERVER_UNAUTHORIZED";
