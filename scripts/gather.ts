@@ -120,17 +120,48 @@ class Gatherer {
     return null;
   }
 
-  *collectImageInternal(img: HTMLImageElement) {
-    try {
-      {
-        const {src} = img;
-        const item = this.makeItem(src, img);
+  *collectSingleSourceInternal(el: HTMLImageElement | HTMLSourceElement) {
+    // regular source handling
+    {
+      const {src} = el;
+      if (src) {
+        const item = this.makeItem(src, el);
         if (item) {
           item.fileName = "";
           item.description = item.title;
           yield item;
         }
       }
+    }
+
+    // srcset handling
+    {
+      const {srcset} = el;
+      if (srcset) {
+        const imgs = srcset.split(",").flatMap(e => {
+          const idx = e.lastIndexOf(" ");
+          return (idx > 0 ? e.slice(0, idx) : e).trim();
+        });
+        for (const i of imgs) {
+          const item = this.makeItem(i, el);
+          if (item) {
+            item.fileName = "";
+            item.description = item.title;
+            yield item;
+          }
+        }
+      }
+    }
+  }
+
+  *collectImageInternal(img: HTMLImageElement) {
+    try {
+      // general handling
+      for (const item of this.collectSingleSourceInternal(img)) {
+        yield item;
+      }
+
+      // currentSrc handling
       {
         const {currentSrc} = img;
         const item = this.makeItem(currentSrc, img);
@@ -141,20 +172,12 @@ class Gatherer {
         }
       }
 
-      {
-        const {srcset} = img;
-        if (srcset) {
-          const imgs = srcset.split(",").flatMap(e => {
-            const idx = e.lastIndexOf(" ");
-            return (idx > 0 ? e.slice(0, idx) : e).trim();
-          });
-          for (const i of imgs) {
-            const item = this.makeItem(i, img);
-            if (item) {
-              item.fileName = "";
-              item.description = item.title;
-              yield item;
-            }
+      // lazy-loading / <picture>
+      if (img.parentElement instanceof HTMLPictureElement) {
+        const sourceEls = img.parentElement.querySelectorAll("source");
+        for (const sourceEl of sourceEls) {
+          for (const item of this.collectSingleSourceInternal(sourceEl)) {
+            yield item;
           }
         }
       }
