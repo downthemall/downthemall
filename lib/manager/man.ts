@@ -25,6 +25,7 @@ const DIRTY_TIMEOUT = 100;
 // eslint-disable-next-line no-magic-numbers
 const MISSING_TIMEOUT = 12 * 1000;
 const RELOAD_TIMEOUT = 10 * 1000;
+const FINISH_NOTIFICATION_PAUSE = 10 * 1000;
 
 const setShelfEnabled = downloads.setShelfEnabled || function() {
   // ignored
@@ -41,6 +42,8 @@ export class Manager extends EventEmitter {
   public installedNameListener: boolean;
 
   private notifiedFinished: boolean;
+
+  private lastFinishNotification: number;
 
   private readonly saveQueue: CoalescedUpdate<Download>;
 
@@ -274,7 +277,11 @@ export class Manager extends EventEmitter {
       document.body.appendChild(audio);
     }
     if (FINISH_NOTIFICATION.value) {
-      new Notification(null, _("queue-finished"));
+      if (!this.lastFinishNotification ||
+        Date.now() > this.lastFinishNotification + FINISH_NOTIFICATION_PAUSE) {
+        new Notification(null, _("queue-finished"));
+        this.lastFinishNotification = Date.now();
+      }
     }
     this.notifiedFinished = true;
   }
