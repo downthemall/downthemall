@@ -135,6 +135,10 @@
     "message": "Yeniden Adlandır",
     "description": "Option text; prefs/general"
   },
+  "copy_download_url": {
+    "message": "İndirme Bağlantısını Kopyala",
+    "description": "User action (menu item) to copy a download URL in the manage"
+  },
   "CRASH": {
     "message": "Dahili Tarayıcı Hatası",
     "description": "Error Message"
@@ -309,6 +313,10 @@
   },
   "export_aria2": {
     "message": "Aria2 Listesi Olarak Dışa Aktar",
+    "description": "menu text"
+  },
+  "export_json": {
+    "message": "JSON Olarak Dışa Aktar",
     "description": "menu text"
   },
   "export_metalink": {
@@ -893,6 +901,10 @@
   },
   "renamer_num": {
     "message": "*Yığın* için takma ad",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_pagetitle": {
+    "message": "Sayfa başlığı metni",
     "description": "Mask text; see mask button"
   },
   "renamer_qstring": {
