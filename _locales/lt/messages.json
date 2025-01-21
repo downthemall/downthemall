@@ -315,6 +315,10 @@
     "message": "Eksportuoti kaip aria2 sąrašą",
     "description": "menu text"
   },
+  "export_json": {
+    "message": "Eksportuoti kaip JSON",
+    "description": "menu text"
+  },
   "export_metalink": {
     "message": "Eksportuoti kaip Metalink",
     "description": "menu text"
