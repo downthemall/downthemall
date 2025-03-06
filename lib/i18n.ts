@@ -308,5 +308,5 @@ export async function saveCustomLocale(data?: string) {
     return;
   }
   new Localization(JSON.parse(data));
-  await localStorage.setItem(CUSTOM_KEY, data);
+  await lf.setItem(CUSTOM_KEY, data);
 }

@@ -61,6 +61,7 @@ export class ManagerPort {
     port.on("pause", ({sids}: SIDS) => this.manager.pauseDownloads(sids));
     port.on("cancel", ({sids}: SIDS) => this.manager.cancelDownloads(sids));
     port.on("missing", ({sid}: SID) => this.manager.setMissing(sid));
+    port.on("ping", () => port.post("pong"));
 
     this.port.on("disconnect", () => {
       this.manager.off("dirty", this.onDirty);
@@ -70,9 +71,6 @@ export class ManagerPort {
       delete this.manager;
       delete this.port;
     });
-
-    this.port.post("active", this.manager.active);
-    this.sendAll();
   }
 
   onDirty(items: BaseDownload[]) {
@@ -87,7 +85,13 @@ export class ManagerPort {
     this.manager.removeBySids(sids);
   }
 
-  sendAll() {
-    this.port.post("all", this.manager.getMsgItems());
+  async sendAll() {
+    const items = await this.manager.getMsgItems();
+    this.port.post("all", items);
+    this.port.post("active", this.manager.active);
+  }
+
+  resume() {
+    this.port?.resume();
   }
 }

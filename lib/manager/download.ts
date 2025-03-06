@@ -59,6 +59,7 @@ export class Download extends BaseDownload {
     this.start = PromiseSerializer.wrapNew(1, this, this.start);
     this.removed = false;
     this.position = -1;
+    this.updateStateFromBrowser().catch(console.error);
   }
 
   markDirty() {
@@ -150,12 +151,6 @@ export class Download extends BaseDownload {
         options.headers.push({
           name: "Referer",
           value: this.referrer
-        });
-      }
-      else if (CHROME) {
-        options.headers.push({
-          name: "X-DTA-ID",
-          value: this.sessionId.toString(),
         });
       }
       if (this.manId) {
@@ -354,7 +349,13 @@ export class Download extends BaseDownload {
 
   async updateStateFromBrowser() {
     try {
+      if (!this.manId) {
+        return;
+      }
       const state = (await downloads.search({id: this.manId})).pop();
+      if (!state) {
+        throw Error(`No state for ${this.manId}: ${this}`);
+      }
       const {filename, error} = state;
       const path = parsePath(filename);
       this.browserName = path.name;

@@ -10,6 +10,10 @@ export class Port extends EventEmitter {
 
   private disconnected = false;
 
+  private paused = false;
+
+  private pausedMessages: any[] = [];
+
   constructor(port: RawPort) {
     super();
     this.port = port;
@@ -27,6 +31,20 @@ export class Port extends EventEmitter {
     }
     port.onMessage.addListener(this.onMessage.bind(this));
     port.onDisconnect.addListener(this.disconnect.bind(this));
+  }
+
+  suspend() {
+    this.paused = true;
+  }
+
+  resume() {
+    if (!this.paused) {
+      return;
+    }
+
+    this.paused = false;
+    this.pausedMessages.forEach(m => this.passMessage(m));
+    this.pausedMessages.length = 0;
   }
 
   disconnect() {
@@ -77,6 +95,17 @@ export class Port extends EventEmitter {
     }
     if (Array.isArray(message)) {
       message.forEach(this.onMessage, this);
+      return;
+    }
+    if (this.paused) {
+      this.pausedMessages.push(message);
+      return;
+    }
+    this.passMessage(message);
+  }
+
+  passMessage(message: any) {
+    if (!this.port) {
       return;
     }
     if (Object.keys(message).includes("msg")) {

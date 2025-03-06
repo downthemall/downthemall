@@ -1,0 +1,1 @@
+importScripts("bundles/common.js", "bundles/background.js");

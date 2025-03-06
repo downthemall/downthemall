@@ -127,6 +127,8 @@ addEventListener("DOMContentLoaded", function dom() {
     $("#filter").focus();
     return true;
   });
+
+  PORT.post("all");
 });
 
 addEventListener("contextmenu", event => {

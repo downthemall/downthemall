@@ -4,7 +4,7 @@
 import { EventEmitter } from "../events";
 import { Notification } from "../notifications";
 import { DB } from "../db";
-import { QUEUED, CANCELED, RUNNING, RETRYING } from "./state";
+import { QUEUED, CANCELED, RUNNING, RETRYING, DONE, FINISHING } from "./state";
 // eslint-disable-next-line no-unused-vars
 import { Bus, Port } from "../bus";
 import { sort } from "../sorting";
@@ -16,7 +16,8 @@ import { Download } from "./download";
 import { ManagerPort } from "./port";
 import { Scheduler } from "./scheduler";
 import { Limits } from "./limits";
-import { downloads, runtime, webRequest, CHROME, OPERA } from "../browser";
+import { downloads, runtime, CHROME, OPERA } from "../browser";
+import { playAudio } from "../audio";
 
 const US = runtime.getURL("");
 
@@ -65,10 +66,13 @@ export class Manager extends EventEmitter {
 
   private deadlineTimer: number;
 
+  private initialChangeIds: number[] = [];
+
+  private initialEraseIds: number[] = [];
+
+  private initialized = false;
+
   constructor() {
-    if (!document.location.href.includes("background")) {
-      throw new Error("Not on background");
-    }
     super();
     this.active = true;
     this.installedNameListener = false;
@@ -89,29 +93,45 @@ export class Manager extends EventEmitter {
 
     this.startNext = PromiseSerializer.wrapNew(1, this, this.startNext);
 
-    downloads.onChanged.addListener(this.onChanged.bind(this));
-    downloads.onErased.addListener(this.onErased.bind(this));
+    this.onChangedInitial = this.onChangedInitial.bind(this);
+    this.onChanged = this.onChanged.bind(this);
+    this.onErasedInitial = this.onErasedInitial.bind(this);
+    this.onErased = this.onErased.bind(this);
     this.onDeterminingFilename = this.onDeterminingFilename.bind(this);
 
-    Bus.onPort("manager", (port: Port) => {
+    downloads.onChanged.addListener(this.onChangedInitial);
+    downloads.onErased.addListener(this.onErasedInitial);
+
+    // Setup the port
+    const handleNewPort = (port: Port) => {
       const managerPort = new ManagerPort(this, port);
       port.on("disconnect", () => {
         this.ports.delete(managerPort);
       });
+      if (!this.initialized) {
+        port.suspend();
+      }
       this.ports.add(managerPort);
       return true;
-    });
+    };
+    Bus.onPort("manager", handleNewPort);
+
     Limits.on("changed", () => {
       this.resetScheduler();
     });
 
+    /**
+     * Fixme
+     */
+    /*
     if (CHROME) {
       webRequest.onBeforeSendHeaders.addListener(
         this.stuffReferrer.bind(this),
         {urls: ["<all_urls>"]},
-        ["blocking", "requestHeaders", "extraHeaders"]
+        ["requestHeaders", "extraHeaders"]
       );
     }
+    */
   }
 
   async init() {
@@ -126,10 +146,6 @@ export class Manager extends EventEmitter {
       this.items.push(rv);
     });
 
-    // Do not wait for the scheduler
-    this.resetScheduler();
-
-    this.emit("initialized");
     setTimeout(() => this.checkMissing(), MISSING_TIMEOUT);
     runtime.onUpdateAvailable.addListener(() => {
       if (this.running.size) {
@@ -138,6 +154,25 @@ export class Manager extends EventEmitter {
       }
       runtime.reload();
     });
+
+    downloads.onChanged.removeListener(this.onChangedInitial);
+    downloads.onErased.removeListener(this.onErasedInitial);
+    downloads.onChanged.addListener(this.onChanged);
+    downloads.onErased.addListener(this.onErased);
+    this.initialChangeIds.forEach(id => this.onChanged({id}));
+    this.initialChangeIds.length = 0;
+    this.initialEraseIds.forEach(id => this.onErased(id));
+    this.initialEraseIds.length = 0;
+
+    // Do not wait for the scheduler
+    this.resetScheduler();
+
+    this.emit("initialized");
+    this.initialized = true;
+
+    // Resume ports
+    this.ports.forEach(p => p.resume());
+
     return this;
   }
 
@@ -151,12 +186,24 @@ export class Manager extends EventEmitter {
     this.remove(filterInSitu(missing, e => !!e));
   }
 
+  onChangedInitial(changes: {id: number}) {
+    if (changes && isFinite(changes.id)) {
+      this.initialChangeIds.push(changes.id);
+    }
+  }
+
   onChanged(changes: {id: number}) {
     const item = this.manIds.get(changes.id);
     if (!item) {
       return;
     }
     item.updateStateFromBrowser();
+  }
+
+  onErasedInitial(downloadId: number) {
+    if (downloadId !== undefined) {
+      this.initialEraseIds.push(downloadId);
+    }
   }
 
   onErased(downloadId: number) {
@@ -235,7 +282,6 @@ export class Manager extends EventEmitter {
     this.running.add(download);
 
     this.maybeInstallNameListener();
-
     setShelfEnabled(false);
     await download.start();
     this.notifiedFinished = false;
@@ -270,11 +316,7 @@ export class Manager extends EventEmitter {
       return;
     }
     if (SOUNDS.value && !OPERA) {
-      const audio = new Audio(runtime.getURL("/style/done.opus"));
-      audio.addEventListener("canplaythrough", () => audio.play());
-      audio.addEventListener("ended", () => document.body.removeChild(audio));
-      audio.addEventListener("error", () => document.body.removeChild(audio));
-      document.body.appendChild(audio);
+      playAudio("done");
     }
     if (FINISH_NOTIFICATION.value) {
       if (!this.lastFinishNotification ||
@@ -400,6 +442,12 @@ export class Manager extends EventEmitter {
       if (newState === RETRYING) {
         this.addRetry(download);
       }
+      else if (newState === FINISHING) {
+        setShelfEnabled(false);
+      }
+      else if (newState === DONE) {
+        setShelfEnabled(false);
+      }
       this.startNext().catch(console.error);
     }
   }
@@ -508,7 +556,9 @@ export class Manager extends EventEmitter {
     this.emit("active", this.active);
   }
 
-  getMsgItems() {
+  async getMsgItems() {
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
+    await manager;
     return this.items.map(e => e.toMsg());
   }
 
@@ -538,12 +588,8 @@ export class Manager extends EventEmitter {
   }
 }
 
-let inited: Promise<Manager>;
+const manager: Promise<Manager> = new Manager().init();
 
 export function getManager() {
-  if (!inited) {
-    const man = new Manager();
-    inited = man.init();
-  }
-  return inited;
+  return manager;
 }
