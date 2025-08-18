@@ -106,10 +106,14 @@ export class Manager extends EventEmitter {
     });
 
     if (CHROME) {
+      // In MV3 service workers blocking webRequest listeners are not allowed.
+      // Remove the "blocking" opt-in so the extension remains compatible.
+      // Note: this disables modifying headers synchronously; the Referer
+      // rewriting behavior will not run under MV3. See migration notes.
       webRequest.onBeforeSendHeaders.addListener(
         this.stuffReferrer.bind(this),
         {urls: ["<all_urls>"]},
-        ["blocking", "requestHeaders", "extraHeaders"]
+        ["requestHeaders", "extraHeaders"]
       );
     }
   }
