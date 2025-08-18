@@ -20,7 +20,8 @@ module.exports = {
     ]
   },
   entry: {
-    "background": "./lib/background.ts",
+  "service_worker": ["./lib/background.ts"],
+  "background": "./lib/background.ts",
     "manager": "./windows/manager.ts",
     "select": "./windows/select.ts",
     "single": "./windows/single.ts",
@@ -57,7 +58,11 @@ module.exports = {
     mangleExports: false,
     splitChunks: {
       chunks: chunk => {
-        return !chunk.name.startsWith("content-");
+        // keep content scripts and service_worker out of shared common chunk
+        if (chunk.name && (chunk.name.startsWith("content-") || chunk.name === "service_worker")) {
+          return false;
+        }
+        return true;
       },
       minChunks: 2,
       name: "common",

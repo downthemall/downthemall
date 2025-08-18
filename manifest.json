@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "DownThemAll!",
   "version": "4.13.1",
 
@@ -9,7 +9,9 @@
 
   "default_locale": "en",
 
-  "content_security_policy": "script-src 'self'; style-src 'self' 'unsafe-inline'; img-src data: blob: 'self'; connect-src data: blob: http: https: 'self'; default-src 'self'",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; style-src 'self' 'unsafe-inline'; img-src data: blob: 'self'; connect-src data: blob: http: https: 'self'; default-src 'self'"
+  },
 
   "icons": {
     "16": "style/icon16.png",
@@ -21,7 +23,6 @@
   },
 
   "permissions": [
-    "<all_urls>",
     "contextMenus",
     "downloads",
     "downloads.open",
@@ -34,19 +35,18 @@
     "tabs",
     "theme",
     "webNavigation",
-    "webRequest",
-    "webRequestBlocking"
+    "webRequest"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
   ],
 
   "background": {
-    "scripts": [
-      "bundles/common.js",
-      "bundles/background.js"
-    ]
+    "service_worker": "bundles/service_worker.js"
   },
 
-  "browser_action": {
-    "browser_style": true,
+  "action": {
     "default_popup": "windows/popup.html",
     "default_icon": {
       "16": "style/icon16.png",

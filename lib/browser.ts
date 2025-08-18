@@ -100,7 +100,11 @@ export interface OnInstalled {
   readonly temporary: boolean;
 }
 
+// Expose both `browserAction` and `action` so code written for either API
+// will work across Manifest V2 and V3 environments. Some modules import
+// `browserAction as action` so keep the original name too.
 export const {browserAction} = polyfill;
+export const {action} = polyfill;
 export const {contextMenus} = polyfill;
 export const {downloads}: {downloads: Downloads} = polyfill;
 export const {extension} = polyfill;
