@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build:bundles",
+      "type": "npm",
+      "script": "build:bundles",
+      "problemMatcher": []
+    },
+    {
+      "label": "webext",
+      "type": "npm",
+      "script": "webext",
+      "problemMatcher": []
+    }
+  ]
+}

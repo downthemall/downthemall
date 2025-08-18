@@ -1,0 +1,54 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Launch Chrome with extension (build first)",
+      "preLaunchTask": "build:bundles",
+      "runtimeArgs": [
+        "--disable-extensions-except",
+        "${workspaceFolder}",
+        "--load-extension",
+        "${workspaceFolder}"
+      ],
+      "url": "${input:launchUrl}",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Launch Firefox (web-ext)",
+      "preLaunchTask": "webext",
+      "reAttach": true,
+      "url": "${input:launchUrl}",
+      "pathMappings": [
+        {
+          "url": "webpack:///./",
+          "path": "${workspaceFolder}"
+        }
+      ]
+    },
+    {
+      "type": "pwa-chrome",
+      "request": "attach",
+      "name": "Attach to running Chrome (remote debugging)",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Launch Page in Chrome (open URL)",
+      "url": "${input:launchUrl}",
+      "webRoot": "${workspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "launchUrl",
+      "description": "URL to open in the browser (e.g. http://localhost:3000 or about:blank)"
+    }
+  ]
+}
