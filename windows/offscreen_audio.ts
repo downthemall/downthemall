@@ -2,6 +2,9 @@
 
 declare let chrome: any;
 
+// License: MIT
+
+// This is a helper for offscreen audio
 
 document.addEventListener("DOMContentLoaded", () => {
   const name = new URL(document.location.href).searchParams.get("name");

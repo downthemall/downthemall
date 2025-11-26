@@ -1,7 +1,11 @@
 "use strict";
-// License: MIT
 
 declare let chrome: any;
+
+// License: MIT
+
+// This is the main background script used by the service_worker
+// See service_worker.js
 
 import { ALLOWED_SCHEMES, TRANSFERABLE_PROPERTIES } from "./constants";
 import { API } from "./api";
@@ -84,6 +88,7 @@ async function runContentJob(tab: Tab, file: string, msg: any) {
   }
 }
 
+// License: MIT
 type SelectionOptions = {
   selectionOnly: boolean;
   allTabs: boolean;
