@@ -11,6 +11,7 @@ from zipfile import (ZipFile, ZipInfo, ZIP_DEFLATED, ZIP_STORED)
 
 FILES = [
   "manifest.json",
+  "service_worker.js",
   "_locales/**/*",
   "bundles/*",
   "style/*",
