@@ -155,6 +155,7 @@ export class MenuFilter extends ItemFilter {
     }
     const item = new MenuItem(this.menu, id, text, {
       autoHide: "false",
+      icon: "fake-check-mark"
     });
     item.iconElem.textContent = checked ? "✓" : "";
     this.items.set(id, {item, callback});

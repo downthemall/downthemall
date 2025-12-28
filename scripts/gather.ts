@@ -173,7 +173,7 @@ class Gatherer {
       }
 
       // lazy-loading / <picture>
-      if (img.parentElement instanceof HTMLPictureElement) {
+      if (img.parentElement && img.parentElement.querySelectorAll) {
         const sourceEls = img.parentElement.querySelectorAll("source");
         for (const sourceEl of sourceEls) {
           for (const item of this.collectSingleSourceInternal(sourceEl)) {

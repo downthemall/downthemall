@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "DownThemAll!",
-  "version": "4.13.1",
+  "version": "4.14.2",
 
   "description": "__MSG_extensionDescription__",
   "homepage_url": "https://downthemall.org/",
@@ -67,6 +67,9 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "dtalite@downthemall.org",
+      "data_collection_permissions": {
+        "required": ["none"]
+      },
       "strict_min_version": "67.0"
     }
   }

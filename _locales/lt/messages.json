@@ -87,6 +87,10 @@
     "message": "Pasirinkti pažymėtus elementus",
     "description": "Menu text"
   },
+  "clear_filter": {
+    "message": "Išvalyti filtrą",
+    "description": "Manager-Column-Menu: Clear filter"
+  },
   "colConnections": {
     "message": "Lygiagrečios jungtys",
     "description": "Table column in prefs/network"
@@ -98,6 +102,10 @@
   "colETA": {
     "message": "Numat. laikas",
     "description": "Table column in manager"
+  },
+  "colFileExtension": {
+    "message": "Failo plėtinys",
+    "description": "Column header for the File Extension column in the select window"
   },
   "colNameURL": {
     "message": "Pavadinimas/URL",
@@ -390,6 +398,10 @@
   "invalid_domain_pref": {
     "message": "Neteisingas domenas",
     "description": "Error message in prefs/network"
+  },
+  "invert_filter": {
+    "message": "Invertuoti filtrą",
+    "description": "Manager-Column-Menu: Invert filter"
   },
   "invert_selection": {
     "message": "Invertuoti pažymėjimą",
@@ -1214,6 +1226,14 @@
   "size_unknown": {
     "message": "Nežinomas",
     "description": "Status text; manager size column"
+  },
+  "sort_ascending": {
+    "message": "Rikiuoti didėjančiai",
+    "description": "Menu label (e.g. Manager-Column Filters)"
+  },
+  "sort_descending": {
+    "message": "Rikiuoti mažėjančiai",
+    "description": "Menu label (e.g. Manager-Column Filters)"
   },
   "speedB": {
     "message": "$SPEED$b/s",

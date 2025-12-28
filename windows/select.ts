@@ -24,7 +24,7 @@ import { BaseItem } from "../lib/item";
 import { ItemDelta } from "../lib/select";
 // eslint-disable-next-line no-unused-vars
 import { TableConfig } from "../uikit/lib/config";
-import { validateSubFolder as validateSubfolder } from "../lib/util";
+import { parsePath, validateSubFolder as validateSubfolder } from "../lib/util";
 import "./theme";
 
 const PORT: RawPort = runtime.connect(null, { name: "select" });
@@ -37,6 +37,7 @@ const COL_TITLE = 2;
 const COL_DESC = 3;
 const COL_MASK = 4;
 const COL_REFERRER = 5;
+const COL_FILE_EXTENSION = 6;
 
 const ICON_BASE_SIZE = 16;
 const NUM_FILTER_CLASSES = 8;
@@ -53,6 +54,7 @@ interface BaseMatchedItem extends BaseItem {
   backIdx: number;
   matched?: string | null;
   rowid: number;
+  guessedExtension?: string | null;
 }
 
 function clearErrors() {
@@ -276,6 +278,7 @@ class SelectionTable extends VirtualTable {
       ["colTitle", item => [item.title, item.usable]],
       ["colDescription", item => [item.description, item.usable]],
       ["colMask", item => [item.mask, item.usable]],
+      ["colFileExtension", item => [this.guessFileExtension(item), item.usable]]
     ]);
 
     this.on("config-changed", () => {
@@ -636,6 +639,14 @@ class SelectionTable extends VirtualTable {
     return _("mask.default");
   }
 
+  getFileExtension(idx: number) {
+    const item = this.items.at(idx);
+    if (!item) {
+      return "";
+    }
+    return this.guessFileExtension(item);
+  }
+
   getCellText(rowid: number, colid: number) {
     switch (colid) {
     case COL_DOWNLOAD:
@@ -653,6 +664,9 @@ class SelectionTable extends VirtualTable {
     case COL_MASK:
       return this.getMaskText(rowid);
 
+    case COL_FILE_EXTENSION:
+      return this.getFileExtension(rowid);
+
     default:
       return "";
     }
@@ -669,6 +683,27 @@ class SelectionTable extends VirtualTable {
     this.items.at(rowid).matched = value ? "manual" : "unmanual";
     this.invalidateRow(rowid);
     this.updateStatus();
+  }
+
+  guessFileExtension(item: BaseMatchedItem) {
+    if (item.guessedExtension !== undefined) {
+      return item.guessedExtension;
+    }
+
+    item.guessedExtension = "";
+    if (item.fileName) {
+      const parsed = parsePath(item.fileName);
+      if (parsed) {
+        item.guessedExtension = parsed.ext;
+        return item.guessedExtension;
+      }
+    }
+
+    const parsed = parsePath(item.usable);
+    if (parsed) {
+      item.guessedExtension = parsed.ext;
+    }
+    return item.guessedExtension;
   }
 }
 

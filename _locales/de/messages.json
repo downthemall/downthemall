@@ -87,6 +87,10 @@
     "message": "markierte Einträge auswählen",
     "description": "Menu text"
   },
+  "clear_filter": {
+    "message": "Filter zurücksetzen",
+    "description": "Manager-Column-Menu: Clear filter"
+  },
   "colConnections": {
     "message": "Gleichzeitige Verbindungen",
     "description": "Table column in prefs/network"
@@ -98,6 +102,10 @@
   "colETA": {
     "message": "Verbl. Zeit",
     "description": "Table column in manager"
+  },
+  "colFileExtension": {
+    "message": "Dateierweiterung",
+    "description": "Column header for the File Extension column in the select window"
   },
   "colNameURL": {
     "message": "Name/URL",
@@ -390,6 +398,10 @@
   "invalid_domain_pref": {
     "message": "Ungültige Domain",
     "description": "Error message in prefs/network"
+  },
+  "invert_filter": {
+    "message": "Filter umkehren",
+    "description": "Manager-Column-Menu: Invert filter"
   },
   "invert_selection": {
     "message": "Auswahl umkehren",
@@ -1214,6 +1226,14 @@
   "size_unknown": {
     "message": "Unbekannt",
     "description": "Status text; manager size column"
+  },
+  "sort_ascending": {
+    "message": "Aufsteigend sortieren",
+    "description": "Menu label (e.g. Manager-Column Filters)"
+  },
+  "sort_descending": {
+    "message": "Absteigend sortieren",
+    "description": "Menu label (e.g. Manager-Column Filters)"
   },
   "speedB": {
     "message": "$SPEED$b/s",

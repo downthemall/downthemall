@@ -174,7 +174,7 @@ export class TableEvents extends BaseTable {
         ctx,
         id,
         col.spanElem.textContent || "",
-        {autoHide: "false"});
+        {autoHide: "false", icon: "fake-grippy-icon"});
       ctx.add(item);
       item.iconElem.textContent = col.visible ? "✓" : " ";
       ctx.on(id, async () => {

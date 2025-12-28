@@ -111,6 +111,10 @@
     "description": "Menu text",
     "message": "Check Selected Items"
   },
+  "clear_filter": {
+    "description": "Manager-Column-Menu: Clear filter",
+    "message": "Clear filter"
+  },
   "colConnections": {
     "description": "Table column in prefs/network",
     "message": "Concurrent Connections"
@@ -122,6 +126,10 @@
   "colETA": {
     "description": "Table column in manager",
     "message": "Est. Time"
+  },
+  "colFileExtension": {
+    "description": "Column header for the File Extension column in the select window",
+    "message": "File Extension"
   },
   "colNameURL": {
     "description": "Table column in manager",
@@ -335,13 +343,13 @@
     "description": "menu text",
     "message": "Export As aria2 List"
   },
-  "export_metalink": {
-    "description": "menu text",
-    "message": "Export As Metalink"
-  },
   "export_json": {
     "description": "menu text",
     "message": "Export As JSON"
+  },
+  "export_metalink": {
+    "description": "menu text",
+    "message": "Export As Metalink"
   },
   "export_text": {
     "description": "menu text",
@@ -406,6 +414,10 @@
   "invalid_domain_pref": {
     "description": "Error message in prefs/network",
     "message": "Invalid domain"
+  },
+  "invert_filter": {
+    "description": "Manager-Column-Menu: Invert filter",
+    "message": "Invert filter"
   },
   "invert_selection": {
     "description": "Menu text",
@@ -1218,6 +1230,14 @@
         "example": "1MB"
       }
     }
+  },
+  "sort_ascending": {
+    "description": "Menu label (e.g. Manager-Column Filters)",
+    "message": "Sort ascending"
+  },
+  "sort_descending": {
+    "description": "Menu label (e.g. Manager-Column Filters)",
+    "message": "Sort descending"
   },
   "speedB": {
     "description": "Speed formatting; bytes",
