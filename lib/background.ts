@@ -6,7 +6,8 @@ import { API } from "./api";
 import { Finisher, makeUniqueItems } from "./item";
 import { Prefs } from "./prefs";
 import { _, locale } from "./i18n";
-import { openPrefs, openManager } from "./windowutils";
+import { openPrefs } from "./windowutils";
+import { openManager } from "./manager/man";
 import { filters } from "./filters";
 import { getManager } from "./manager/man";
 import {

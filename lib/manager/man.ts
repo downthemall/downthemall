@@ -10,15 +10,18 @@ import { Bus, Port } from "../bus";
 import { sort } from "../sorting";
 import { Prefs, PrefWatcher } from "../prefs";
 import { _ } from "../i18n";
-import { CoalescedUpdate, mapFilterInSitu, filterInSitu } from "../util";
+import { CoalescedUpdate, mapFilterInSitu, filterInSitu, timeout } from "../util";
 import { PromiseSerializer } from "../pserializer";
 import { Download } from "./download";
 import { ManagerPort } from "./port";
 import { Scheduler } from "./scheduler";
 import { Limits } from "./limits";
-import { downloads, runtime, webRequest, CHROME, OPERA } from "../browser";
+import { downloads, runtime, webRequest, CHROME, OPERA, tabs, windows } from "../browser";
+import { WindowStateTracker } from "../windowstatetracker";
+import { openInTabOrFocus, maybeOpenInTab } from "../windowutils";
 
 const US = runtime.getURL("");
+const MANAGER_URL = "/windows/manager.html";
 
 const AUTOSAVE_TIMEOUT = 2000;
 const DIRTY_TIMEOUT = 100;
@@ -547,3 +550,68 @@ export function getManager() {
   }
   return inited;
 }
+
+export async function openManager(focus = true) {
+  try {
+    await getManager();
+  }
+  catch (ex) {
+    console.error(ex.toString(), ex);
+  }
+  const url = runtime.getURL(MANAGER_URL);
+  const openInPopup = await Prefs.get("manager-in-popup");
+  if (openInPopup) {
+    const etabs = await tabs.query({
+      url
+    });
+    if (etabs.length) {
+      if (!focus) {
+        return;
+      }
+      const tab = etabs.pop();
+      await tabs.update(tab.id, { active: true });
+      await windows.update(tab.windowId, { focused: true });
+      return;
+    }
+
+    const tracker = new WindowStateTracker("manager", {
+      minWidth: 700,
+      minHeight: 500,
+    });
+    await tracker.init();
+    const windowOptions = tracker.getOptions({
+      url,
+      type: "popup",
+    });
+    const window = await windows.create(windowOptions);
+    tracker.track(window.id);
+    try {
+      if (!CHROME) {
+        windows.update(window.id, tracker.getOptions({}));
+      }
+      const port = await Promise.race<Port>([
+        new Promise<Port>(resolve => Bus.oncePort("manager", port => {
+          resolve(port);
+          return true;
+        })),
+        timeout<Port>(5 * 1000)
+      ]);
+      if (!port.isSelf) {
+        throw Error("Invalid sender connected");
+      }
+      tracker.track(window.id, port);
+    }
+    catch (ex) {
+      console.error("couldn't track manager", ex);
+    }
+
+    return;
+  }
+  if (focus) {
+    await openInTabOrFocus(runtime.getURL(MANAGER_URL), false);
+  }
+  else {
+    await maybeOpenInTab(runtime.getURL(MANAGER_URL), false);
+  }
+}
+

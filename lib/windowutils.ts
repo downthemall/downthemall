@@ -1,21 +1,14 @@
 "use strict";
 // License: MIT
 
-import { windows, tabs, runtime, CHROME } from "../lib/browser";
-import { getManager } from "./manager/man";
+import { windows, tabs, runtime } from "../lib/browser";
 import DEFAULT_ICONS from "../data/icons.json";
-import { Prefs } from "./prefs";
 import { _ } from "./i18n";
-import { WindowStateTracker } from "./windowstatetracker";
-// eslint-disable-next-line no-unused-vars
-import { Port, Bus } from "./bus";
-import { timeout } from "./util";
 
 const DONATE_URL = "https://www.downthemall.org/howto/donate/";
 const DONATE_LANG_URLS = Object.freeze(new Map([
   ["de", "https://www.downthemall.org/howto/donate/spenden/"],
 ]));
-const MANAGER_URL = "/windows/manager.html";
 
 export async function mostRecentBrowser(incognito: boolean): Promise<any> {
   let window;
@@ -94,69 +87,6 @@ export async function donate() {
 
 export async function openPrefs() {
   await runtime.openOptionsPage();
-}
-
-export async function openManager(focus = true) {
-  try {
-    await getManager();
-  }
-  catch (ex) {
-    console.error(ex.toString(), ex);
-  }
-  const url = runtime.getURL(MANAGER_URL);
-  const openInPopup = await Prefs.get("manager-in-popup");
-  if (openInPopup) {
-    const etabs = await tabs.query({
-      url
-    });
-    if (etabs.length) {
-      if (!focus) {
-        return;
-      }
-      const tab = etabs.pop();
-      await tabs.update(tab.id, {active: true});
-      await windows.update(tab.windowId, {focused: true});
-      return;
-    }
-
-    const tracker = new WindowStateTracker("manager", {
-      minWidth: 700,
-      minHeight: 500,
-    });
-    await tracker.init();
-    const windowOptions = tracker.getOptions({
-      url,
-      type: "popup",
-    });
-    const window = await windows.create(windowOptions);
-    tracker.track(window.id);
-    try {
-      if (!CHROME) {
-        windows.update(window.id, tracker.getOptions({}));
-      }
-      const port = await Promise.race<Port>([
-        new Promise<Port>(resolve => Bus.oncePort("manager", port => {
-          resolve(port);
-          return true;
-        })),
-        timeout<Port>(5 * 1000)]);
-      if (!port.isSelf) {
-        throw Error("Invalid sender connected");
-      }
-      tracker.track(window.id, port);
-    }
-    catch (ex) {
-      console.error("couldn't track manager", ex);
-    }
-
-    return;
-  }
-  if (focus) {
-    await openInTabOrFocus(runtime.getURL(MANAGER_URL), false);
-  }
-  else {
-    await maybeOpenInTab(runtime.getURL(MANAGER_URL), false);
-  }
 }
 
 export async function openUrls(urls: string[], incognito: boolean) {
