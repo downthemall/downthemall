@@ -87,6 +87,10 @@
     "message": "Отмятане на избраните елементи",
     "description": "Menu text"
   },
+  "clear_filter": {
+    "message": "Изчистване на филтъра",
+    "description": "Manager-Column-Menu: Clear filter"
+  },
   "colConnections": {
     "message": "Едновременни връзки",
     "description": "Table column in prefs/network"
@@ -98,6 +102,10 @@
   "colETA": {
     "message": "Оставащо време",
     "description": "Table column in manager"
+  },
+  "colFileExtension": {
+    "message": "Файлово разширение",
+    "description": "Column header for the File Extension column in the select window"
   },
   "colNameURL": {
     "message": "Име/URL адрес",
@@ -315,6 +323,10 @@
     "message": "Изнасяне като списък за aria2",
     "description": "menu text"
   },
+  "export_json": {
+    "message": "Изнасяне като JSON",
+    "description": "menu text"
+  },
   "export_metalink": {
     "message": "Изнасяне като мета-връзки",
     "description": "menu text"
@@ -386,6 +398,10 @@
   "invalid_domain_pref": {
     "message": "Невалиден домейн",
     "description": "Error message in prefs/network"
+  },
+  "invert_filter": {
+    "message": "Обръщане на филтъра",
+    "description": "Manager-Column-Menu: Invert filter"
   },
   "invert_selection": {
     "message": "Обръщане на избора",
@@ -1210,6 +1226,14 @@
   "size_unknown": {
     "message": "Неизвестен",
     "description": "Status text; manager size column"
+  },
+  "sort_ascending": {
+    "message": "Възоходящо сортиране",
+    "description": "Menu label (e.g. Manager-Column Filters)"
+  },
+  "sort_descending": {
+    "message": "Низходящо сортиране",
+    "description": "Menu label (e.g. Manager-Column Filters)"
   },
   "speedB": {
     "message": "$SPEED$b/s",

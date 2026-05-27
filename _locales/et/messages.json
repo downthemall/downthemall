@@ -87,6 +87,10 @@
     "message": "Märgista valitud üksused",
     "description": "Menu text"
   },
+  "clear_filter": {
+    "message": "Tühjenda filter",
+    "description": "Manager-Column-Menu: Clear filter"
+  },
   "colConnections": {
     "message": "Samaaegseid allalaadimisi",
     "description": "Table column in prefs/network"
@@ -98,6 +102,10 @@
   "colETA": {
     "message": "Hinnanguline aeg",
     "description": "Table column in manager"
+  },
+  "colFileExtension": {
+    "message": "Faililaiend",
+    "description": "Column header for the File Extension column in the select window"
   },
   "colNameURL": {
     "message": "Nimi/URL",
@@ -134,6 +142,10 @@
   "conflict_rename": {
     "message": "Nimeta ümber",
     "description": "Option text; prefs/general"
+  },
+  "copy_download_url": {
+    "message": "Kopeeri allalaadimise link",
+    "description": "User action (menu item) to copy a download URL in the manage"
   },
   "CRASH": {
     "message": "Sisemise lehitseja viga",
@@ -311,6 +323,10 @@
     "message": "Ekspordi aria2 loendina",
     "description": "menu text"
   },
+  "export_json": {
+    "message": "Ekspordi JSON-ina",
+    "description": "menu text"
+  },
   "export_metalink": {
     "message": "Ekspordi metalingina",
     "description": "menu text"
@@ -382,6 +398,10 @@
   "invalid_domain_pref": {
     "message": "Vigane domeen",
     "description": "Error message in prefs/network"
+  },
+  "invert_filter": {
+    "message": "Pööra filter",
+    "description": "Manager-Column-Menu: Invert filter"
   },
   "invert_selection": {
     "message": "Pööra valik",
@@ -895,6 +915,10 @@
     "message": "Sildi *batch* pseudonüüm",
     "description": "Mask text; see mask button"
   },
+  "renamer_pagetitle": {
+    "message": "Lehe pealkiri",
+    "description": "Mask text; see mask button"
+  },
   "renamer_qstring": {
     "message": "Päringusõne",
     "description": "Mask text; see mask button"
@@ -1202,6 +1226,14 @@
   "size_unknown": {
     "message": "Teadmata",
     "description": "Status text; manager size column"
+  },
+  "sort_ascending": {
+    "message": "Tõusev järjestus",
+    "description": "Menu label (e.g. Manager-Column Filters)"
+  },
+  "sort_descending": {
+    "message": "Laskuv järjestus",
+    "description": "Menu label (e.g. Manager-Column Filters)"
   },
   "speedB": {
     "message": "$SPEED$ b/s",

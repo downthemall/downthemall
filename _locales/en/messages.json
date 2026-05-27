@@ -842,7 +842,7 @@
     "message": "Do you want to remove all failed downloads?"
   },
   "remove_filter_downloads_question": {
-    "description": "Mesagebox text",
+    "description": "Messagebox text",
     "message": "Do you want to remove all downloads matching the '$FILTER$' filter?",
     "placeholders": {
       "filter": {

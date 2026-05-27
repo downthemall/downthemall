@@ -52,7 +52,7 @@
     "description": "Messagebox info text for batch confirmations"
   },
   "batch_question": {
-    "message": "Vill du lägga till detta som ett batch eller som en enda hämtning?",
+    "message": "Vill du lägga till detta som en batchhämtning eller som en enda hämtning?",
     "description": "Messagebox info text for batch confirmations"
   },
   "batch_single": {
@@ -60,7 +60,7 @@
     "description": "Button text for batch confirmation"
   },
   "batch_title": {
-    "message": "Batch hämtning",
+    "message": "Batchhämtning",
     "description": "Messagebox title for batch confirmations"
   },
   "cancel": {
@@ -128,7 +128,7 @@
     "description": "Option text; prefs/general"
   },
   "conflict_prompt": {
-    "message": "Skriv",
+    "message": "Fråga efter namn",
     "description": "Option text; prefs/general"
   },
   "conflict_rename": {
@@ -332,7 +332,7 @@
     "description": "Placeholder for fastfilter inputs"
   },
   "FILE_FAILED": {
-    "message": "Fil åtkomst fel",
+    "message": "Filåtkomstfel",
     "description": "Error Message"
   },
   "filter_at_least_one": {
@@ -622,7 +622,7 @@
     "description": "Preferences/General; group text"
   },
   "pref_open_manager_on_queue": {
-    "message": "Öppna fliken Hanterare efter köat några hämtningar",
+    "message": "Öppna fliken Hanterare efter att några hämtningar har köats",
     "description": "Preferences/General"
   },
   "pref_queueing": {
@@ -696,7 +696,7 @@
     }
   },
   "queue_finished": {
-    "message": "Hämningskön är klar",
+    "message": "Hämtningskön är klar",
     "description": "Notification text"
   },
   "referrer": {
@@ -750,7 +750,7 @@
     "description": "Messagebox text"
   },
   "remove_domain_complete_downloads": {
-    "message": "Borttagning färdig från aktuell domän",
+    "message": "Ta bort färdiga från aktuell domän",
     "description": "Menu text"
   },
   "remove_domain_complete_downloads_question": {
@@ -794,7 +794,7 @@
     "description": "Messagebox text"
   },
   "remove_failed_downloads": {
-    "message": "Borttagning misslyckades",
+    "message": "Ta bort misslyckade hämtningar",
     "description": "Menu text"
   },
   "remove_failed_downloads_question": {
@@ -820,7 +820,7 @@
     "description": "Messagebox text"
   },
   "remove_paused_downloads": {
-    "message": "Ta tort pausade",
+    "message": "Ta bort pausade",
     "description": "Menu text"
   },
   "remove_paused_downloads_question": {
@@ -836,7 +836,7 @@
     "description": "Messagebox text"
   },
   "remove_selected_downloads": {
-    "message": "Ta bort balda",
+    "message": "Ta bort valda",
     "description": "Menu text"
   },
   "rename": {
@@ -876,7 +876,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_info": {
-    "message": "Lägga till \"flat\", såsom *flatsubdirs* kommer att ersätta alla snedstreck i värdet, vilket inte skapar mappar",
+    "message": "Om du lägger till \"flat\", till exempel flatsubdirs, ersätts alla snedstreck i värdet så att inga mappar skapas",
     "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
   },
   "renamer_m": {
@@ -984,7 +984,7 @@
     "description": "Button text; pref/General"
   },
   "reset_layouts_done": {
-    "message": "Alla tidigare ihågkomna layout-anpassningar har återställts! Du kan behöva uppdatera fönster/flikar.",
+    "message": "Alla tidigare ihågkomna layoutanpassningar har återställts! Du kan behöva uppdatera fönster/flikar.",
     "description": "Messagebox text; pref/General"
   },
   "resume_download": {

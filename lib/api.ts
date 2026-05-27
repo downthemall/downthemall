@@ -11,7 +11,7 @@ import { select } from "./select";
 import { single } from "./single";
 import { Notification } from "./notifications";
 import { MASK, FASTFILTER, SUBFOLDER } from "./recentlist";
-import { openManager } from "./windowutils";
+import { openManager } from "./manager/man";
 import { _ } from "./i18n";
 
 const MAX_BATCH = 10000;
