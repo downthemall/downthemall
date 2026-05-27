@@ -87,6 +87,10 @@
     "message": "Marcar elementos seleccionados",
     "description": "Menu text"
   },
+  "clear_filter": {
+    "message": "Borrar filtro",
+    "description": "Manager-Column-Menu: Clear filter"
+  },
   "colConnections": {
     "message": "Conexiones simultáneas",
     "description": "Table column in prefs/network"
@@ -98,6 +102,10 @@
   "colETA": {
     "message": "Tiempo restante",
     "description": "Table column in manager"
+  },
+  "colFileExtension": {
+    "message": "Extensión del fichero",
+    "description": "Column header for the File Extension column in the select window"
   },
   "colNameURL": {
     "message": "Nombre/URL",
@@ -315,6 +323,10 @@
     "message": "Exportar como lista aria2",
     "description": "menu text"
   },
+  "export_json": {
+    "message": "Exportar como JSON",
+    "description": "menu text"
+  },
   "export_metalink": {
     "message": "Exportar como Metalink",
     "description": "menu text"
@@ -386,6 +398,10 @@
   "invalid_domain_pref": {
     "message": "Dominio incorrecto",
     "description": "Error message in prefs/network"
+  },
+  "invert_filter": {
+    "message": "Invertir filtro",
+    "description": "Manager-Column-Menu: Invert filter"
   },
   "invert_selection": {
     "message": "Invertir selección",
@@ -1210,6 +1226,14 @@
   "size_unknown": {
     "message": "Desconocido",
     "description": "Status text; manager size column"
+  },
+  "sort_ascending": {
+    "message": "Orden ascendente",
+    "description": "Menu label (e.g. Manager-Column Filters)"
+  },
+  "sort_descending": {
+    "message": "Orden descendente",
+    "description": "Menu label (e.g. Manager-Column Filters)"
   },
   "speedB": {
     "message": "$SPEED$b/s",
