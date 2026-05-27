@@ -823,7 +823,7 @@
   },
   "remove_filter_downloads_question": {
     "message": "Искате ли да бъдат премахнати всички изтегляния съвпадащи с '$FILTER$' филтъра?",
-    "description": "Mesagebox text",
+    "description": "Messagebox text",
     "placeholders": {
       "filter": {
         "content": "$1",
@@ -1228,7 +1228,7 @@
     "description": "Status text; manager size column"
   },
   "sort_ascending": {
-    "message": "Възоходящо сортиране",
+    "message": "Възходящо сортиране",
     "description": "Menu label (e.g. Manager-Column Filters)"
   },
   "sort_descending": {
