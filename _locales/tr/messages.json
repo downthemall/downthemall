@@ -87,6 +87,10 @@
     "message": "Seçilen Ögeleri Kontrol Et",
     "description": "Menu text"
   },
+  "clear_filter": {
+    "message": "Filtreyi temizle",
+    "description": "Manager-Column-Menu: Clear filter"
+  },
   "colConnections": {
     "message": "Eşzamanlı Bağlantılar",
     "description": "Table column in prefs/network"
@@ -98,6 +102,10 @@
   "colETA": {
     "message": "Tahmini Süre",
     "description": "Table column in manager"
+  },
+  "colFileExtension": {
+    "message": "Dosya uzantısı",
+    "description": "Column header for the File Extension column in the select window"
   },
   "colNameURL": {
     "message": "Ad/URL",
@@ -134,6 +142,10 @@
   "conflict_rename": {
     "message": "Yeniden Adlandır",
     "description": "Option text; prefs/general"
+  },
+  "copy_download_url": {
+    "message": "İndirme bağlantısını kopyala",
+    "description": "User action (menu item) to copy a download URL in the manage"
   },
   "CRASH": {
     "message": "Dahili Tarayıcı Hatası",
@@ -311,6 +323,10 @@
     "message": "Aria2 Listesi Olarak Dışa Aktar",
     "description": "menu text"
   },
+  "export_json": {
+    "message": "JSON olarak dışa aktar",
+    "description": "menu text"
+  },
   "export_metalink": {
     "message": "Metalink Olarak Dışa Aktar",
     "description": "menu text"
@@ -382,6 +398,10 @@
   "invalid_domain_pref": {
     "message": "Geçersiz alan adı",
     "description": "Error message in prefs/network"
+  },
+  "invert_filter": {
+    "message": "Filtreyi tersine çevir",
+    "description": "Manager-Column-Menu: Invert filter"
   },
   "invert_selection": {
     "message": "Zıt seçim",
@@ -895,6 +915,10 @@
     "message": "*Yığın* için takma ad",
     "description": "Mask text; see mask button"
   },
+  "renamer_pagetitle": {
+    "message": "Sayfa başlığı metni",
+    "description": "Mask text; see mask button"
+  },
   "renamer_qstring": {
     "message": "Sorgu Dizesi",
     "description": "Mask text; see mask button"
@@ -1202,6 +1226,14 @@
   "size_unknown": {
     "message": "Bilinmeyen",
     "description": "Status text; manager size column"
+  },
+  "sort_ascending": {
+    "message": "Artan",
+    "description": "Menu label (e.g. Manager-Column Filters)"
+  },
+  "sort_descending": {
+    "message": "Azalan",
+    "description": "Menu label (e.g. Manager-Column Filters)"
   },
   "speedB": {
     "message": "$SPEED$b/s",
