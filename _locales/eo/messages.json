@@ -1,0 +1,1332 @@
+{
+  "language": {
+    "message": "Esperanto",
+    "description": "Lanuage Name in your language"
+  },
+  "language_code": {
+    "message": "eo",
+    "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
+  },
+  "addpaused": {
+    "message": "Aldonu paŭzita",
+    "description": "Action: Add paused"
+  },
+  "add_download": {
+    "message": "Aldonu elŝuton",
+    "description": "Action for adding a download"
+  },
+  "add_new": {
+    "message": "Aldonu novaĵon",
+    "description": "Button text (adding filters, limits and such)"
+  },
+  "add_paused_once": {
+    "message": "Nur aldonu paŭzita tiun ĉi fojon",
+    "description": "Checkbox label"
+  },
+  "add_paused_question": {
+    "message": "Ĉu vi volas memori tiun ĉi decidon kaj ĉiam aldoni novajn elŝutojn paŭzitaj denun?",
+    "description": "Messagebox text"
+  },
+  "add_paused_title": {
+    "message": "Ĉiam aldonu paŭzita?",
+    "description": "Title for the add-paused dialog"
+  },
+  "ask_again_later": {
+    "message": "Demandu min denove poste",
+    "description": "Button text"
+  },
+  "batch_batch": {
+    "message": "Staploelŝuto",
+    "description": "Button text"
+  },
+  "batch_desc": {
+    "message": "La nuna URL-o ŝajnas enhavi instrukciojn por staploelŝuto.",
+    "description": ""
+  },
+  "batch_items": {
+    "message": "Nombro da aĵoj:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_preview": {
+    "message": "Antaŭrigardo:",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_question": {
+    "message": "Ĉu vi volas aldoni tiun ĉi kiel staploelŝuto aŭ unuopelŝuto?",
+    "description": "Messagebox info text for batch confirmations"
+  },
+  "batch_single": {
+    "message": "Unuopelŝuto",
+    "description": "Button text for batch confirmation"
+  },
+  "batch_title": {
+    "message": "Staploelŝuto",
+    "description": "Messagebox title for batch confirmations"
+  },
+  "cancel": {
+    "message": "Nuligu",
+    "description": "Button text: Cancel"
+  },
+  "canceled": {
+    "message": "Nuligita",
+    "description": "Download status text"
+  },
+  "cancel_download": {
+    "message": "Nuligu",
+    "description": "Action to cancel downloads, e.g. from the context menu"
+  },
+  "cannot_be_empty": {
+    "message": "Tiu ĉi kampo ne povas esti malplena",
+    "description": "Error message when an input field is empty but has to have a value"
+  },
+  "change_later_reminder": {
+    "message": "Vi povas poste ŝanĝi tiun ĉi decidon en la Preferoj",
+    "description": "Checkbox label text for decision confirmations"
+  },
+  "check_selected_items": {
+    "message": "Marku elektitajn aĵojn",
+    "description": "Menu text"
+  },
+  "clear_filter": {
+    "message": "Purigu filtrilon",
+    "description": "Manager-Column-Menu: Clear filter"
+  },
+  "colConnections": {
+    "message": "Dumaj konektoj",
+    "description": "Table column in prefs/network"
+  },
+  "colDomain": {
+    "message": "Retregiono",
+    "description": "Table column in manager"
+  },
+  "colETA": {
+    "message": "Taksita tempo",
+    "description": "Table column in manager"
+  },
+  "colFileExtension": {
+    "message": "Dosiernomosufikso",
+    "description": "Column header for the File Extension column in the select window"
+  },
+  "colNameURL": {
+    "message": "Nomo/URL-o",
+    "description": "Table column in manager"
+  },
+  "colPercent": {
+    "message": "%-o",
+    "description": "Table column in manager"
+  },
+  "colProgress": {
+    "message": "Progreso",
+    "description": "Table column in manager"
+  },
+  "colSegments": {
+    "message": "Segmentoj",
+    "description": "Table column in manager"
+  },
+  "colSize": {
+    "message": "Grandeco",
+    "description": "Table column in manager"
+  },
+  "colSpeed": {
+    "message": "Rapideco",
+    "description": "Table column in manager"
+  },
+  "conflict_overwrite": {
+    "message": "Superskribu",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_prompt": {
+    "message": "Demandu",
+    "description": "Option text; prefs/general"
+  },
+  "conflict_rename": {
+    "message": "Renomu",
+    "description": "Option text; prefs/general"
+  },
+  "copy_download_url": {
+    "message": "Kopiu elŝutoligilon",
+    "description": "User action (menu item) to copy a download URL in the manage"
+  },
+  "CRASH": {
+    "message": "Internretumileraro",
+    "description": "Error Message"
+  },
+  "create_filter": {
+    "message": "Kreu filtrilon",
+    "description": "Button text; Create filter dialog; prefs/filters"
+  },
+  "custom_filename": {
+    "message": "Proprodosiernomo",
+    "description": "Label text; single window"
+  },
+  "deffilter_all": {
+    "message": "Ĉiuj dosieroj",
+    "description": "Filter label for the All files filter"
+  },
+  "deffilter_arch": {
+    "message": "Arĥivujoj (zip, rar, 7z, …)",
+    "description": "Filter label for the Archives filter"
+  },
+  "deffilter_aud": {
+    "message": "Sonodosieroj (mp3, flac, wav, …)",
+    "description": "Filter label for the Audio filter"
+  },
+  "deffilter_bin": {
+    "message": "Programaroj (exe, msi, …)",
+    "description": "Filter label for the Software filter"
+  },
+  "deffilter_doc": {
+    "message": "Dokumentoj (pdf, odf, docx, …)",
+    "description": "Filter label for the Documents filter"
+  },
+  "deffilter_img": {
+    "message": "Bildoj (jpeg, png, gif, …)",
+    "description": "Filter label for the Images filter"
+  },
+  "deffilter_imggif": {
+    "message": "GIF-bildoj",
+    "description": "Filter label for the GIF filter"
+  },
+  "deffilter_imgjpg": {
+    "message": "JPEG-bildoj",
+    "description": "Filter label for the JPEG filter"
+  },
+  "deffilter_imgpng": {
+    "message": "PNG-bildoj",
+    "description": "Filter label for the PNG filter"
+  },
+  "deffilter_vid": {
+    "message": "Filmoj (mp4, webm, mkv, …)",
+    "description": "Filter label for the Videos filter"
+  },
+  "delete": {
+    "message": "Forigu",
+    "description": "button text"
+  },
+  "deletefiles": {
+    "message": "Forigu dosierojn",
+    "description": "menu action"
+  },
+  "deletefiles_button": {
+    "message": "Forigu",
+    "description": "button text"
+  },
+  "deletefiles_text": {
+    "message": "Ĉu vi certas, ke vi volas forigi la sekvajn dosierojn?",
+    "description": "messagebox text"
+  },
+  "deletefiles_title": {
+    "message": "Forigu dosierojn",
+    "description": "messagebox title"
+  },
+  "description": {
+    "message": "Priskribo",
+    "description": "Description (keep it short); e.g. the description column in select"
+  },
+  "disable_other_filters": {
+    "message": "Malŝaltu aliajn",
+    "description": "Checkbox label. Keep it short"
+  },
+  "donate": {
+    "message": "Donacu!",
+    "description": "Donate button"
+  },
+  "done": {
+    "message": "Farita",
+    "description": "Status text"
+  },
+  "download": {
+    "message": "Elŝuto",
+    "description": "Download (noun); e.g. Download column in select"
+  },
+  "download_verb": {
+    "message": "Elŝutu",
+    "description": "Download (verb/action); e.g. in single and select buttons"
+  },
+  "dta_regular": {
+    "message": "DownThemAll-o!",
+    "description": "Regular dta action; Menu text"
+  },
+  "dta_regular_all": {
+    "message": "DownThemAll-o! - ĉiuj langetoj",
+    "description": "Menu text"
+  },
+  "dta_regular_image": {
+    "message": "Konservu bildon per DownThemAll-o!",
+    "description": "Menu text"
+  },
+  "dta_regular_link": {
+    "message": "Konservu ligilon per DownThemAll-o!",
+    "description": "Menu text"
+  },
+  "dta_regular_media": {
+    "message": "Konservu rimedon per DownThemAll-o!",
+    "description": "Menu text"
+  },
+  "dta_regular_selection": {
+    "message": "Konservu elekton per DownThemAll-o!",
+    "description": "Menu text"
+  },
+  "dta_turbo": {
+    "message": "UnuKlako!",
+    "description": "OneClick! action; Menu text"
+  },
+  "dta_turbo_all": {
+    "message": "UnuKlako! - ĉiuj langetoj",
+    "description": "Menu text"
+  },
+  "dta_turbo_image": {
+    "message": "Konservu bildon per UnuKlako!",
+    "description": "Menu text"
+  },
+  "dta_turbo_link": {
+    "message": "Konservu ligilon per UnuKlako!",
+    "description": "Menu text"
+  },
+  "dta_turbo_media": {
+    "message": "Konservu rimedon per UnuKlako!",
+    "description": "Menu text"
+  },
+  "dta_turbo_selection": {
+    "message": "Konservu elekton per UnuKlako!",
+    "description": "Menu text"
+  },
+  "error_invalidMask": {
+    "message": "Nevalida Renomanta Masko",
+    "description": "Error message; single/select window"
+  },
+  "error_invalidReferrer": {
+    "message": "Nevalida referero",
+    "description": "Error message; single window"
+  },
+  "error_invalidURL": {
+    "message": "Nevalida URL-o",
+    "description": "Error message; single window"
+  },
+  "error_noabsolutepath": {
+    "message": "Absolutaj dosierirejoj por subdosierujoj ne estas subtenita je retumiloj",
+    "description": "Error Message; select/single window"
+  },
+  "error_nodotsinpath": {
+    "message": "Punktoj (.) en subdosierujoj ne estas subtenita je retumiloj",
+    "description": "Error Message; select/single window"
+  },
+  "error_noItemsSelected": {
+    "message": "Neniuj aĵoj elektita",
+    "description": "Error Message; select window"
+  },
+  "export": {
+    "message": "Eksportu al dosiero",
+    "description": "menu text"
+  },
+  "export_aria2": {
+    "message": "Eksportu kiel aria2-listo",
+    "description": "menu text"
+  },
+  "export_json": {
+    "message": "Eksportu kiel JSON-dosiero",
+    "description": "menu text"
+  },
+  "export_metalink": {
+    "message": "Eksportu kiel Metaligilo",
+    "description": "menu text"
+  },
+  "export_text": {
+    "message": "Eksportu kiel teksto",
+    "description": "menu text"
+  },
+  "extensionDescription": {
+    "message": "La amaselŝutilo por via retumilo",
+    "description": "DownThemAll! tagline, displayed in about:addons; Please do NOT refer to a specific browser such as firefox, as we will probably support more than one"
+  },
+  "fastfiltering": {
+    "message": "Rapida Filtranto",
+    "description": "Label for Fast Filtering input"
+  },
+  "fastfilter_placeholder": {
+    "message": "Ajnosigna esprimo aŭ regula esprimo",
+    "description": "Placeholder for fastfilter inputs"
+  },
+  "FILE_FAILED": {
+    "message": "Dosieratingeraro",
+    "description": "Error Message"
+  },
+  "filter_at_least_one": {
+    "message": "Vi devas elekti almenaŭ unu filtriltipon!",
+    "description": "Error message when no filter types are selected for a filter in the preferences UI"
+  },
+  "filter_create_title": {
+    "message": "Kreu novan filtrilon",
+    "description": "Message box title"
+  },
+  "filter_expression": {
+    "message": "Filtrilesprimo",
+    "description": "Message box label"
+  },
+  "filter_label": {
+    "message": "Filtriletikedo",
+    "description": "Message box label"
+  },
+  "filter_types": {
+    "message": "Filtriltipoj",
+    "description": "Message box label"
+  },
+  "filter_type_link": {
+    "message": "Ligilfiltrilo",
+    "description": "Message box checkbox label"
+  },
+  "filter_type_media": {
+    "message": "Rimedfiltrilo",
+    "description": "Message box checkbox label"
+  },
+  "finishing": {
+    "message": "Finanta",
+    "description": "Status text"
+  },
+  "force_start": {
+    "message": "Devigu komenci",
+    "description": "Menu text"
+  },
+  "import": {
+    "message": "Importu el dosiero",
+    "description": "menu text"
+  },
+  "information_title": {
+    "message": "Informo",
+    "description": "Used in message boxes"
+  },
+  "invalid_domain_pref": {
+    "message": "Nevalida retregiono",
+    "description": "Error message in prefs/network"
+  },
+  "invert_filter": {
+    "message": "Inversigu filtrilon",
+    "description": "Manager-Column-Menu: Invert filter"
+  },
+  "invert_selection": {
+    "message": "Inversigu elekton",
+    "description": "Menu text"
+  },
+  "key_alt": {
+    "message": "Alt-klavo",
+    "description": "Short for Alt-Key"
+  },
+  "key_ctrl": {
+    "message": "Stirklavo",
+    "description": "Short for Ctrl-Key"
+  },
+  "key_delete": {
+    "message": "Forigoklavo",
+    "description": "Short for Delete-key"
+  },
+  "key_end": {
+    "message": "Finoklavo",
+    "description": "Short for End-key"
+  },
+  "key_home": {
+    "message": "Hejmklavo",
+    "description": "Short for home key"
+  },
+  "key_pagedown": {
+    "message": "PaĝoSub-klavo",
+    "description": "Short for pagedown-key"
+  },
+  "key_pageup": {
+    "message": "PaĝoSuper-klavo",
+    "description": "Short for PageUp-key"
+  },
+  "limited_to": {
+    "message": "Limita je",
+    "description": "Label text; used in prefs/network"
+  },
+  "links": {
+    "message": "Ligiloj",
+    "description": "Links tab label (short); select window"
+  },
+  "manager_short": {
+    "message": "Administranto",
+    "description": "Menu text"
+  },
+  "manager_status_items": {
+    "message": "Kompletigita $COMPLETE$ el $TOTAL$ elŝuto[j] ($SHOWING$ montrita[j]), $RUNNING$ rulanta[j]",
+    "description": "Status bar text; manager",
+    "placeholders": {
+      "complete": {
+        "content": "$1",
+        "example": "10"
+      },
+      "running": {
+        "content": "$4",
+        "example": "4"
+      },
+      "showing": {
+        "content": "$3",
+        "example": "90"
+      },
+      "total": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "manager_title": {
+    "message": "DownThemAll-o!-administranto",
+    "description": "Window/tab title"
+  },
+  "mask": {
+    "message": "Masko",
+    "description": "Renaming mask (short); used in e.g. select"
+  },
+  "mask_default": {
+    "message": "Defaŭlta masko",
+    "description": "Status text; Used in the mask column, select window"
+  },
+  "media": {
+    "message": "Rimedo",
+    "description": "Media label (short)"
+  },
+  "missing": {
+    "message": "Mankanta",
+    "description": "Status text in manager"
+  },
+  "move_bottom": {
+    "message": "Fundo",
+    "description": "Action for moving a download to the bottom"
+  },
+  "move_down": {
+    "message": "Malsupren",
+    "description": "Action for moving a download down"
+  },
+  "move_top": {
+    "message": "Supro",
+    "description": "Action for moving a download to the top"
+  },
+  "move_up": {
+    "message": "Supren",
+    "description": "Action for moving a download up"
+  },
+  "nagging_message": {
+    "message": "Vi estas aldonita $DOWNLOADS$ elŝuto[j]n kun DownThemAll-o! dume! Kiel regula uzanto vi povus konsideri donacon por subteni pluan disvolvadon. Dankon!",
+    "description": "Donation nagging message; displayed as a notification bar in manager",
+    "placeholders": {
+      "downloads": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "NETWORK_FAILED": {
+    "message": "Reta Miso",
+    "description": "Error Message"
+  },
+  "never_ask_again": {
+    "message": "Ne demandu min denove",
+    "description": "Donation button"
+  },
+  "noitems_label": {
+    "message": "Neniuj aĵoj elektita",
+    "description": "Status bar text in select"
+  },
+  "no_links": {
+    "message": "Neniuj ligiloj trovita!",
+    "description": "Notification text"
+  },
+  "numitems_label": {
+    "message": "$ITEMS$ aĵo[j] elektita…",
+    "description": "Status bar text in select; Number of items selected (label)",
+    "placeholders": {
+      "items": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "ok": {
+    "message": "Enorde",
+    "description": "Button text; Used in message boxes"
+  },
+  "open_directory": {
+    "message": "Malfermu dosierujon",
+    "description": "Menu text; manager context"
+  },
+  "open_file": {
+    "message": "Malfermu dosieron",
+    "description": "Menu text; manager context"
+  },
+  "open_link": {
+    "message": "Malfermu ligilon",
+    "description": "Menu text; select window"
+  },
+  "options_filters": {
+    "message": "Filtriloj",
+    "description": "Pref tab text"
+  },
+  "options_general": {
+    "message": "Ĝeneralo",
+    "description": "Pref tab text"
+  },
+  "options_network": {
+    "message": "Reto",
+    "description": "Pref tab text"
+  },
+  "paused": {
+    "message": "Paŭzita",
+    "description": "Status text; manager"
+  },
+  "pause_download": {
+    "message": "Paŭzu",
+    "description": "Action for pausing a download"
+  },
+  "prefs_conflicts": {
+    "message": "Kiam dosiero ekzistas",
+    "description": "Preferences/General; group text"
+  },
+  "prefs_short": {
+    "message": "Preferoj",
+    "description": "Menu text; Preferences"
+  },
+  "prefs_title": {
+    "message": "DownThemAll-o!-preferoj",
+    "description": "Window/tab title; Preferences"
+  },
+  "pref_add_paused": {
+    "message": "Aldonu novajn elŝutojn paŭzita, anstataŭ komenci irin tuj",
+    "description": "Preferences/General"
+  },
+  "pref_button_type": {
+    "message": "DownThemAll-o!-butono:",
+    "description": "label"
+  },
+  "pref_button_type_dta": {
+    "message": "DownThemAll-o!-elekto",
+    "description": "label"
+  },
+  "pref_button_type_manager": {
+    "message": "Malfermu administranton",
+    "description": "label"
+  },
+  "pref_button_type_popup": {
+    "message": "Ŝprucmenuo",
+    "description": "label"
+  },
+  "pref_button_type_turbo": {
+    "message": "UnuKlako!",
+    "description": "label"
+  },
+  "pref_concurrent_downloads": {
+    "message": "Dumaj elŝutoj",
+    "description": "Preferences/Network"
+  },
+  "pref_finish_notification": {
+    "message": "Montru sciigon kiam la atendovico finas elŝuti",
+    "description": "Preferences/General"
+  },
+  "pref_hide_context": {
+    "message": "Ne montru ĝeneralajn kuntekstmenuaĵojn",
+    "description": "Preferences/General"
+  },
+  "pref_manager": {
+    "message": "Administranto",
+    "description": "Preferences/General; group text"
+  },
+  "pref_manager_in_popup": {
+    "message": "Malfermu administranton en nova ŝprucfenestro",
+    "description": "checkbox text"
+  },
+  "pref_manager_tooltip": {
+    "message": "Montru ilotipojn en Administranto-langetoj",
+    "description": "Preferences/General"
+  },
+  "pref_netglobal": {
+    "message": "Globaj retlimoj",
+    "description": "Preferences/General; group text"
+  },
+  "pref_open_manager_on_queue": {
+    "message": "Malfermu la Administranto-langeton post atendovicigi kelkajn elŝutojn",
+    "description": "Preferences/General"
+  },
+  "pref_queueing": {
+    "message": "Atendovicigi elŝutojn",
+    "description": "Preferences/General; group text"
+  },
+  "pref_queue_notification": {
+    "message": "Montru sciigon kiam atendovicigi novajn elŝutojn",
+    "description": "Preferences/General"
+  },
+  "pref_remove_missing_on_init": {
+    "message": "Forigu mankantajn elŝutojn post rekomenco",
+    "description": "Preferences/General"
+  },
+  "pref_retries": {
+    "message": "Nombro da reprovoj da elŝutoj post iamaj eraroj",
+    "description": "pref text"
+  },
+  "pref_retry_time": {
+    "message": "Reprovu ĉiu (en minutoj)",
+    "description": "pref text"
+  },
+  "pref_show_urls": {
+    "message": "Montru URL-ojn anstataŭ nomojn",
+    "description": "Preferences/General"
+  },
+  "pref_sounds": {
+    "message": "Sonigu",
+    "description": "checkbox text"
+  },
+  "pref_text_links": {
+    "message": "Provu trovi ligilojn en la retejteksto (pli malrapida)",
+    "description": "Preferences/General"
+  },
+  "pref_theme": {
+    "message": "Etoso:",
+    "description": "label text"
+  },
+  "pref_theme_dark": {
+    "message": "Malhela",
+    "description": "option text"
+  },
+  "pref_theme_default": {
+    "message": "Sistema/Retumila",
+    "description": "option text"
+  },
+  "pref_theme_light": {
+    "message": "Hela",
+    "description": "option text"
+  },
+  "pref_ui": {
+    "message": "Uzantinterfaco",
+    "description": "Preferences/General; group text"
+  },
+  "queued": {
+    "message": "Atendovicigita",
+    "description": "Status text"
+  },
+  "queued_download": {
+    "message": "Atendovicigita 1 elŝuton!",
+    "description": "Notification text; single download"
+  },
+  "queued_downloads": {
+    "message": "Atendovicigita $COUNT$ elŝutojn!",
+    "description": "Notification text; multiple downloads",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
+  "queue_finished": {
+    "message": "La elŝutatendovicigo estas finita",
+    "description": "Notification text"
+  },
+  "referrer": {
+    "message": "Referero",
+    "description": "Label for \"Referrer\""
+  },
+  "remember": {
+    "message": "Memoru tiun ĉi decidon",
+    "description": "Checkbox text for confirmation, e.g. when removing a download in manager"
+  },
+  "remove_all_complete_downloads": {
+    "message": "Forigu ĉiujn kompletigitajn",
+    "description": "Menu text"
+  },
+  "remove_all_downloads": {
+    "message": "Forigu ĉiujn",
+    "description": "Menu text"
+  },
+  "remove_all_downloads_question": {
+    "message": "Ĉu vi volas forigi ĈIUJN elŝutojn?",
+    "description": "Messagebox text"
+  },
+  "remove_batch_downloads": {
+    "message": "Forigu nunan staplon",
+    "description": "Menu text"
+  },
+  "remove_batch_downloads_question": {
+    "message": "Ĉu vi volas forigi ĉiujn elŝutojn el la sama staplo kiel la nune elektita elŝuto?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_downloads": {
+    "message": "Forigu kompletigitajn elŝutojn",
+    "description": "Action for removing complete downloads"
+  },
+  "remove_complete_downloads_question": {
+    "message": "Ĉu vi volas forigi ĉiujn kompletigitajn elŝutojn?",
+    "description": "Messagebox text"
+  },
+  "remove_complete_filter_downloads_question": {
+    "message": "Ĉu vi volas forigi ĉiujn kompletigitajn elŝutojn kongruantaj kun la '$FILTER$' filtrilo?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_complete_selection_downloads_question": {
+    "message": "Ĉu vi volas forigi ĉiujn kompletigitajn elŝutojn en la nuna elekto?",
+    "description": "Messagebox text"
+  },
+  "remove_domain_complete_downloads": {
+    "message": "Forigu kompletigitajn el nuna retregiono",
+    "description": "Menu text"
+  },
+  "remove_domain_complete_downloads_question": {
+    "message": "Ĉu vi volas forigi ĉiujn kompletigitajn elŝutojn el '$DOMAIN$' retregiono?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_domain_downloads": {
+    "message": "Forigu nunan retregionon",
+    "description": "Menu text"
+  },
+  "remove_domain_downloads_question": {
+    "message": "Ĉu vi volas forigi ĉiujn elŝutojn el '$DOMAIN$' retregiono?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.org"
+      }
+    }
+  },
+  "remove_download": {
+    "message": "Forigu elŝuton",
+    "description": "Action for removing a download, no matter what state"
+  },
+  "remove_downloads": {
+    "message": "Forigu elŝutojn",
+    "description": "Menu text"
+  },
+  "remove_downloads_title": {
+    "message": "Ĉu vi certas, ke vi volas forigi elŝutojn?",
+    "description": "Messagebox title; manager"
+  },
+  "remove_download_question": {
+    "message": "Ĉu vi volas forigi elektitajn elŝutojn?",
+    "description": "Messagebox text"
+  },
+  "remove_failed_downloads": {
+    "message": "Forigu misitajn",
+    "description": "Menu text"
+  },
+  "remove_failed_downloads_question": {
+    "message": "Ĉu vi volas forigi ĉiujn misitajn elŝutojn?",
+    "description": "Messagebox text"
+  },
+  "remove_filter_downloads_question": {
+    "message": "Ĉu vi volas forigi ĉiujn elŝutojn kongruantaj kun la '$FILTER$' filtrilo?",
+    "description": "Messagebox text",
+    "placeholders": {
+      "filter": {
+        "content": "$1",
+        "example": "JPEG Images"
+      }
+    }
+  },
+  "remove_missing": {
+    "message": "Purigu mankantajn elŝutojn",
+    "description": "Menu text"
+  },
+  "remove_missing_downloads_question": {
+    "message": "Ĉu vi volas purigi ĉiujn mankantajn elŝutojn?",
+    "description": "Messagebox text"
+  },
+  "remove_paused_downloads": {
+    "message": "Forigu paŭzitajn",
+    "description": "Menu text"
+  },
+  "remove_paused_downloads_question": {
+    "message": "Ĉu vi volas forigi ĉiujn paŭzitajn elŝutojn?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_complete_downloads": {
+    "message": "Forigu kompletigitajn en elekto",
+    "description": "Menu text"
+  },
+  "remove_selected_complete_downloads_question": {
+    "message": "Ĉu vi volas forigi ĉiujn kompletigitajn elŝutojn en la nuna elekto?",
+    "description": "Messagebox text"
+  },
+  "remove_selected_downloads": {
+    "message": "Forigu elektitajn",
+    "description": "Menu text"
+  },
+  "rename": {
+    "message": "Renomu",
+    "description": "UI for renaming; currently unused"
+  },
+  "renamer_batch": {
+    "message": "Staplonumero",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_d": {
+    "message": "Dato aldonita - Tago",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_date": {
+    "message": "Dato aldonita",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_domain": {
+    "message": "Retregiona nomo (ĉefretregiono)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ext": {
+    "message": "Dosiernomosufikso",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_hh": {
+    "message": "Dato aldonita - Horo",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_host": {
+    "message": "Ĉefkomputilnomo",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_idx": {
+    "message": "Aĵnombro ene de staplo",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_info": {
+    "message": "Aldoni 'flat', kiaj ekzemple *flatsubdirs* anstataŭos ĉiujn oblikvojn en la valoro, tiele ne krei dosierujojn",
+    "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
+  },
+  "renamer_m": {
+    "message": "Dato aldonita - Monato",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_mm": {
+    "message": "Dato aldonita - Minuto",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_name": {
+    "message": "Dosiernomo",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_num": {
+    "message": "Alinomo por *batch*",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_pagetitle": {
+    "message": "Paĝotitolteksto",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_qstring": {
+    "message": "Informmendosignoĉeno",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ref": {
+    "message": "Referero",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refdomain": {
+    "message": "Referera retregiona nomo (ĉefretregiono)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refext": {
+    "message": "Refererdosiernomosufikso",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refhost": {
+    "message": "Refererĉefkomputilnomo",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refname": {
+    "message": "Refererdosiernomo",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refqstring": {
+    "message": "Refererinformmendosignoĉeno",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refsubdirs": {
+    "message": "Refererdosierirejo",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_refurl": {
+    "message": "Referera URL-o (sen protokolo)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_ss": {
+    "message": "Dato aldonita - Sekundo",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_subdirs": {
+    "message": "Dosierirejo",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_tags": {
+    "message": "Renomantaj maskoetikedoj",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_text": {
+    "message": "Priskribteksto",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_title": {
+    "message": "Titolteksto",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_url": {
+    "message": "URL-o (sen protokolo)",
+    "description": "Mask text; see mask button"
+  },
+  "renamer_y": {
+    "message": "Dato aldonita - Jaro",
+    "description": "Mask text; see mask button"
+  },
+  "renmask": {
+    "message": "Renomanta masko",
+    "description": "Renaming mask (long)"
+  },
+  "reset": {
+    "message": "Purigu",
+    "description": "Button text; pref window"
+  },
+  "reset_confirmations": {
+    "message": "Purigu memoritajn konfirmojn",
+    "description": "Button text; pref/General"
+  },
+  "reset_confirmations_done": {
+    "message": "Ĉiuj antaŭe memoritaj konfirmoj estis purigitaj!",
+    "description": "Messagebox text; pref/General"
+  },
+  "reset_layouts": {
+    "message": "Purigu uzantinterfacajn agordojn",
+    "description": "Button text; pref/General"
+  },
+  "reset_layouts_done": {
+    "message": "Ĉiuj antaŭe memoritaj aranĝagordojn estis purigitaj! Vi eble devus reŝargi fenestrojn/langetojn.",
+    "description": "Messagebox text; pref/General"
+  },
+  "resume_download": {
+    "message": "Daŭrigu",
+    "description": "Action for resuming a download"
+  },
+  "retrying": {
+    "message": "Reprovi",
+    "description": "Status text"
+  },
+  "retrying_error": {
+    "message": "Reprovi - $ERROR$",
+    "description": "status text",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Server Error"
+      }
+    }
+  },
+  "running": {
+    "message": "Ruli",
+    "description": "Status text"
+  },
+  "save": {
+    "message": "Konservu",
+    "description": "Button text; e.g. prefs/Network"
+  },
+  "search": {
+    "message": "Serĉu…",
+    "description": "Placeholder text; manager status search field"
+  },
+  "select_all": {
+    "message": "Elektu ĉiujn",
+    "description": "Menu text; e.g. select context"
+  },
+  "select_checked": {
+    "message": "Elektu markitajn",
+    "description": "Menu text; select context"
+  },
+  "select_none": {
+    "message": "Elektu neniujn",
+    "description": "Menu text; select context"
+  },
+  "select_title": {
+    "message": "DownThemAll-o! - Elektu viajn elŝutojn",
+    "description": "Title of the select window"
+  },
+  "SERVER_BAD_CONTENT": {
+    "message": "Ne trovita",
+    "description": "Error message"
+  },
+  "SERVER_FAILED": {
+    "message": "Servileraro",
+    "description": "Error message"
+  },
+  "SERVER_FORBIDDEN": {
+    "message": "Malpermesita",
+    "description": "Error message"
+  },
+  "SERVER_UNAUTHORIZED": {
+    "message": "Malsankciita",
+    "description": "Error message"
+  },
+  "set_mask": {
+    "message": "Alĝustigu renomantan maskon",
+    "description": "Menu text; select window"
+  },
+  "set_mask_text": {
+    "message": "Alĝustigu novan renomantan maskon",
+    "description": "dialog text"
+  },
+  "set_referrer": {
+    "message": "Alĝustigu refereron",
+    "description": "menu text"
+  },
+  "set_referrer_text": {
+    "message": "Alĝustigu novan refereron",
+    "description": "dialog text"
+  },
+  "single_batchexamples": {
+    "message": "Staploj estas subtenitaj, ekz.:",
+    "description": "Header text; single window"
+  },
+  "single_header": {
+    "message": "Enigu elŝutan URL-on (ligilon) kaj aliajn elektojn",
+    "description": "Header text; single window"
+  },
+  "single_title": {
+    "message": "DownThemAll-o! - Aldonu ligilon",
+    "description": "Title of single window"
+  },
+  "sizeB": {
+    "message": "$S$ B",
+    "description": "Size formatting; bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100b"
+      }
+    }
+  },
+  "sizeGB": {
+    "message": "$S$ GB",
+    "description": "Size formatting; giga bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.200GB"
+      }
+    }
+  },
+  "sizeKB": {
+    "message": "$S$ KB",
+    "description": "Size formatting; kilo bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.2KB"
+      }
+    }
+  },
+  "sizeMB": {
+    "message": "$S$ MB",
+    "description": "Size formatting; mega bytes",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.22MB"
+      }
+    }
+  },
+  "sizePB": {
+    "message": "$S$ PB",
+    "description": "Size formatting; peta bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.212PB"
+      }
+    }
+  },
+  "sizes_huge": {
+    "message": "Grandega (> $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$1",
+        "example": "1GB"
+      }
+    }
+  },
+  "sizes_large": {
+    "message": "Granda ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_medium": {
+    "message": "Meza ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizes_small": {
+    "message": "Malgranda ($LOW$ - $HIGH$)",
+    "description": "Menu text; manager size column dropdown",
+    "placeholders": {
+      "high": {
+        "content": "$2",
+        "example": "10MB"
+      },
+      "low": {
+        "content": "$1",
+        "example": "1MB"
+      }
+    }
+  },
+  "sizeTB": {
+    "message": "$S$ TB",
+    "description": "Size formatting; tera bytes (you never know)",
+    "placeholders": {
+      "s": {
+        "content": "$1",
+        "example": "100.002TB"
+      }
+    }
+  },
+  "size_progress": {
+    "message": "$WRITTEN$ da $TOTAL$",
+    "description": "Status text; manager size column",
+    "placeholders": {
+      "total": {
+        "content": "$2",
+        "example": ""
+      },
+      "written": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "size_unknown": {
+    "message": "Nekonata",
+    "description": "Status text; manager size column"
+  },
+  "sort_ascending": {
+    "message": "Ordigu suprenirante",
+    "description": "Menu label (e.g. Manager-Column Filters)"
+  },
+  "sort_descending": {
+    "message": "Ordigu subenirante",
+    "description": "Menu label (e.g. Manager-Column Filters)"
+  },
+  "speedB": {
+    "message": "$SPEED$ B/s",
+    "description": "Speed formatting; bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100b/s"
+      }
+    }
+  },
+  "speedKB": {
+    "message": "$SPEED$ KB/s",
+    "description": "Speed formatting; kilo bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.1KB/s"
+      }
+    }
+  },
+  "speedMB": {
+    "message": "$SPEED$ MB/s",
+    "description": "Speed formatting; mega bytes",
+    "placeholders": {
+      "speed": {
+        "content": "$1",
+        "example": "100.20MB/s"
+      }
+    }
+  },
+  "statusNetwork_active_title": {
+    "message": "Novaj elŝutoj estos komencita",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "statusNetwork_inactive_title": {
+    "message": "Neniuj novaj elŝutoj estos komencita",
+    "description": "Status bar tooltip; manager network icon"
+  },
+  "subfolder": {
+    "message": "Subdosierujo:",
+    "description": "label text"
+  },
+  "subfolder_placeholder": {
+    "message": "Metu dosierojn en tiu ĉi subdosierujo ene de via elŝutdosierujo",
+    "description": "placeholder text within an input box"
+  },
+  "title": {
+    "message": "Titolo",
+    "description": "Column text; Title label (short)"
+  },
+  "toggle_selected_items": {
+    "message": "Baskulu markon por elektitaj aĵoj",
+    "description": "Menu text; select"
+  },
+  "tooltip_date": {
+    "message": "Dato aldonita:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_eta": {
+    "message": "Cetera:",
+    "description": "Tooltip text; manager/downloads; Time"
+  },
+  "tooltip_from": {
+    "message": "El:",
+    "description": "Tooltip text; manager/downloads; source URL"
+  },
+  "tooltip_size": {
+    "message": "Grandeco:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_average": {
+    "message": "Meznombro:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "tooltip_speed_current": {
+    "message": "Nuna:",
+    "description": "Tooltip text; manager/downloads"
+  },
+  "uncheck_selected_items": {
+    "message": "Malmarku elektitajn aĵojn",
+    "description": "Menu text; select"
+  },
+  "unlimited": {
+    "message": "Senlimita",
+    "description": "Option text; Prefs/Network"
+  },
+  "useonlyonce": {
+    "message": "Uzu unufoje",
+    "description": "Label for Use-Once checkboxes"
+  },
+  "USER_CANCELED": {
+    "message": "Nuligita je uzanto",
+    "description": "Error message"
+  }
+}
