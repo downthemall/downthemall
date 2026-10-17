@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "DownThemAll!",
-  "version": "4.15.1",
+  "version": "4.16.1",
 
   "description": "__MSG_extensionDescription__",
   "homepage_url": "https://downthemall.org/",
