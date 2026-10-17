@@ -8,7 +8,7 @@
     "description": "Language code the locale will use, e.g. de or en-GB or pt-BR"
   },
   "addpaused": {
-    "message": "Lägg till pausad",
+    "message": "Lägg till som pausad",
     "description": "Action: Add paused"
   },
   "add_download": {
@@ -20,15 +20,15 @@
     "description": "Button text (adding filters, limits and such)"
   },
   "add_paused_once": {
-    "message": "Lägg bara till pausad denna gång",
+    "message": "Lägg bara till som pausad den här gången",
     "description": "Checkbox label"
   },
   "add_paused_question": {
-    "message": "Vill du komma ihåg detta beslut och alltid lägga till nya hämtningar pausade från och med nu?",
+    "message": "Vill du komma ihåg detta beslut och alltid lägga till nya hämtningar som pausade från och med nu?",
     "description": "Messagebox text"
   },
   "add_paused_title": {
-    "message": "Lägg alltid till pausad?",
+    "message": "Lägg alltid till som pausad?",
     "description": "Title for the add-paused dialog"
   },
   "ask_again_later": {
@@ -36,11 +36,11 @@
     "description": "Button text"
   },
   "batch_batch": {
-    "message": "Batch-hämtning",
+    "message": "Batchhämtning",
     "description": "Button text"
   },
   "batch_desc": {
-    "message": "Den aktuella webbadressen verkar innehålla instruktioner för en batch-hämtning.",
+    "message": "Den aktuella webbadressen verkar innehålla instruktioner för en batchhämtning.",
     "description": ""
   },
   "batch_items": {
@@ -96,7 +96,7 @@
     "description": "Table column in manager"
   },
   "colETA": {
-    "message": "Ber. tid",
+    "message": "Uppsk. tid",
     "description": "Table column in manager"
   },
   "colNameURL": {
@@ -280,7 +280,7 @@
     "description": "Menu text"
   },
   "error_invalidMask": {
-    "message": "Ogiltigt nytt namn på mask",
+    "message": "Ogiltig namnmall",
     "description": "Error message; single/select window"
   },
   "error_invalidReferrer": {
@@ -450,15 +450,15 @@
     }
   },
   "manager_title": {
-    "message": "DownThemAll! Hanterare",
+    "message": "DownThemAll! - Hanterare",
     "description": "Window/tab title"
   },
   "mask": {
-    "message": "Mask",
+    "message": "Namnmall",
     "description": "Renaming mask (short); used in e.g. select"
   },
   "mask_default": {
-    "message": "Standardmask",
+    "message": "Standardnamnmall",
     "description": "Status text; Used in the mask column, select window"
   },
   "media": {
@@ -486,7 +486,7 @@
     "description": "Action for moving a download up"
   },
   "nagging_message": {
-    "message": "Du har lagt till $DOWNLOADS$ hämtningar med DownThemAll! hittills! Som en vanlig användare kanske du vill överväga en donation för att stöda vidareutveckling. Tackar!",
+    "message": "Du har lagt till $DOWNLOADS$ hämtningar med DownThemAll! hittills! Som regelbunden användare kanske du vill överväga en donation för att stödja den fortsatta utvecklingen. Tack!",
     "description": "Donation nagging message; displayed as a notification bar in manager",
     "placeholders": {
       "downloads": {
@@ -566,11 +566,11 @@
     "description": "Menu text; Preferences"
   },
   "prefs_title": {
-    "message": "DownThemAll! Inställningar",
+    "message": "DownThemAll! - Inställningar",
     "description": "Window/tab title; Preferences"
   },
   "pref_add_paused": {
-    "message": "Lägg till nya hämtningar pausade, istället för att starta dem omedelbart",
+    "message": "Lägg till nya hämtningar pausade i stället för att starta dem omedelbart",
     "description": "Preferences/General"
   },
   "pref_button_type": {
@@ -598,7 +598,7 @@
     "description": "Preferences/Network"
   },
   "pref_finish_notification": {
-    "message": "Visa en avisering när kön är färdig med hämtningen",
+    "message": "Visa en avisering när hämtningskön är klar",
     "description": "Preferences/General"
   },
   "pref_hide_context": {
@@ -622,7 +622,7 @@
     "description": "Preferences/General; group text"
   },
   "pref_open_manager_on_queue": {
-    "message": "Öppna fliken Hanterare efter att några hämtningar har köats",
+    "message": "Öppna fliken Hanterare när hämtningar har lagts i kö",
     "description": "Preferences/General"
   },
   "pref_queueing": {
@@ -646,7 +646,7 @@
     "description": "pref text"
   },
   "pref_show_urls": {
-    "message": "Visa webbadresser istället för namn",
+    "message": "Visa webbadresser i stället för namn",
     "description": "Preferences/General"
   },
   "pref_sounds": {
@@ -678,15 +678,15 @@
     "description": "Preferences/General; group text"
   },
   "queued": {
-    "message": "Köade",
+    "message": "I kö",
     "description": "Status text"
   },
   "queued_download": {
-    "message": "Köade 1 hämtning!",
+    "message": "1 hämtning har lagts i kö!",
     "description": "Notification text; single download"
   },
   "queued_downloads": {
-    "message": "Köade $COUNT$ hämtningar!",
+    "message": "$COUNT$ hämtningar har lagts i kö!",
     "description": "Notification text; multiple downloads",
     "placeholders": {
       "count": {
@@ -803,7 +803,7 @@
   },
   "remove_filter_downloads_question": {
     "message": "Vill du ta bort alla hämtningar som matchar filtret \"$FILTER$\"?",
-    "description": "Mesagebox text",
+    "description": "Messagebox text",
     "placeholders": {
       "filter": {
         "content": "$1",
@@ -848,11 +848,11 @@
     "description": "Mask text; see mask button"
   },
   "renamer_d": {
-    "message": "Datum tillagd - Dag",
+    "message": "Tillagt datum - dag",
     "description": "Mask text; see mask button"
   },
   "renamer_date": {
-    "message": "Datum tillagd",
+    "message": "Tillagt datum",
     "description": "Mask text; see mask button"
   },
   "renamer_domain": {
@@ -864,7 +864,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_hh": {
-    "message": "Datum tillagd -  Timme",
+    "message": "Tillagt datum - timme",
     "description": "Mask text; see mask button"
   },
   "renamer_host": {
@@ -880,11 +880,11 @@
     "description": "Mask text; see mask button; do NOT translate any mentions of \"flat\"!"
   },
   "renamer_m": {
-    "message": "Datum tillagd - Månad",
+    "message": "Tillagt datum - månad",
     "description": "Mask text; see mask button"
   },
   "renamer_mm": {
-    "message": "Datum tillagd - Minut",
+    "message": "Tillagt datum - minut",
     "description": "Mask text; see mask button"
   },
   "renamer_name": {
@@ -936,7 +936,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_ss": {
-    "message": "Datum tillagd - Sekund",
+    "message": "Tillagt datum - sekund",
     "description": "Mask text; see mask button"
   },
   "renamer_subdirs": {
@@ -944,7 +944,7 @@
     "description": "Mask text; see mask button"
   },
   "renamer_tags": {
-    "message": "Byt namn på masktaggar",
+    "message": "Taggar för namnmall",
     "description": "Mask text; see mask button"
   },
   "renamer_text": {
@@ -960,11 +960,11 @@
     "description": "Mask text; see mask button"
   },
   "renamer_y": {
-    "message": "Datum tillagd - År",
+    "message": "Tillagt datum - år",
     "description": "Mask text; see mask button"
   },
   "renmask": {
-    "message": "Byt namn på mask",
+    "message": "Namnmall",
     "description": "Renaming mask (long)"
   },
   "reset": {
@@ -1050,11 +1050,11 @@
     "description": "Error message"
   },
   "set_mask": {
-    "message": "Ställ in nytt namn på mask",
+    "message": "Ställ in namnmall",
     "description": "Menu text; select window"
   },
   "set_mask_text": {
-    "message": "Ställ in en nytt namn på mask",
+    "message": "Ställ in en ny namnmall",
     "description": "dialog text"
   },
   "set_referrer": {
@@ -1258,11 +1258,11 @@
     "description": "Column text; Title label (short)"
   },
   "toggle_selected_items": {
-    "message": "Växla kontroll för valda objekt",
+    "message": "Växla markering för valda objekt",
     "description": "Menu text; select"
   },
   "tooltip_date": {
-    "message": "Datum tillagd",
+    "message": "Tillagt datum",
     "description": "Tooltip text; manager/downloads"
   },
   "tooltip_eta": {
@@ -1294,7 +1294,7 @@
     "description": "Option text; Prefs/Network"
   },
   "useonlyonce": {
-    "message": "Användning en gång",
+    "message": "Använd endast en gång",
     "description": "Label for Use-Once checkboxes"
   },
   "USER_CANCELED": {
