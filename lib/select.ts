@@ -92,10 +92,10 @@ function filtersToDescs(filters: Filter[]) {
 }
 
 export async function select(
-  links: BaseItem[], media: BaseItem[], sourceUrl?: string) {
+    links: BaseItem[], media: BaseItem[], sourceUrl?: string) {
   const domain = getDomain(sourceUrl);
   const savedSettings = domain ? await loadDomainSettings(domain) : null;
-  const applySettings = !!(savedSettings && savedSettings.autoApply);
+  const applySettings = savedSettings && savedSettings.autoApply;
   const fm = await filters();
   const tracker = new WindowStateTracker("select", {
     minWidth: 700,

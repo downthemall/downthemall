@@ -39,7 +39,7 @@ export async function loadDomainSettings(domain: string) {
     return null;
   }
   return {
-    type: typeof settings.type === "string" ? settings.type : "links",
+    type: settings.type === "media" ? "media" : "links",
     activeFilters: Array.isArray(settings.activeFilters) ?
       settings.activeFilters.filter((id: any) => typeof id === "string") : [],
     fast: typeof settings.fast === "string" ? settings.fast : "",
