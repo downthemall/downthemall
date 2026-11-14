@@ -92,7 +92,7 @@ export const API = new class APIImpl {
     return true;
   }
 
-  async turbo(links: BaseItem[], media: BaseItem[]) {
+  async turbo(links: BaseItem[], media: BaseItem[], sourceUrl?: string) {
     if (!this.sanity(links, media)) {
       return false;
     }
@@ -105,7 +105,7 @@ export const API = new class APIImpl {
     })();
     const selected = makeUniqueItems([items]);
     if (!selected.length) {
-      return await this.regular(links, media);
+      return await this.regular(links, media, sourceUrl);
     }
     return await this.queue(selected, {paused: await Prefs.get("add-paused")});
   }
@@ -129,11 +129,11 @@ export const API = new class APIImpl {
     return await this.queue(selected, options);
   }
 
-  async regular(links: BaseItem[], media: BaseItem[]) {
+  async regular(links: BaseItem[], media: BaseItem[], sourceUrl?: string) {
     if (!this.sanity(links, media)) {
       return false;
     }
-    const {items, options} = await select(links, media);
+    const {items, options} = await select(links, media, sourceUrl);
     return this.regularInternal(items, options);
   }
 

@@ -91,10 +91,10 @@ type SelectionOptions = {
 
 
 class Handler {
-  async processResults(turbo = false, results: any[]) {
+  async processResults(turbo = false, results: any[], sourceUrl?: string) {
     const links = this.makeUnique(results, "links");
     const media = this.makeUnique(results, "media");
-    await API[turbo ? "turbo" : "regular"](links, media);
+    await API[turbo ? "turbo" : "regular"](links, media, sourceUrl);
   }
 
   makeUnique(results: any[], what: string) {
@@ -131,7 +131,7 @@ class Handler {
       const results = await Promise.all(selectedTabs.
         map((tab: any) => runContentJob(tab, GATHER, gatherOptions)));
 
-      await this.processResults(options.turbo, results.flat());
+      await this.processResults(options.turbo, results.flat(), options.tab.url);
     }
     catch (ex) {
       console.error(ex.toString(), ex.stack, ex);
