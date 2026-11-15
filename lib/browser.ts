@@ -20,6 +20,7 @@ export interface MessageSender {
 export interface Tab {
   readonly id?: number;
   readonly incognito?: boolean;
+  readonly url?: string;
 }
 
 export interface MenuClickInfo {

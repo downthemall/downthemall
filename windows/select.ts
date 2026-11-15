@@ -749,8 +749,10 @@ async function download(paused = false) {
         maskOnce: $<HTMLInputElement>("#maskOnceCheck").checked,
         fast: FastFilter.value,
         fastOnce: $<HTMLInputElement>("#fastOnceCheck").checked,
+        onlyFast: $<HTMLInputElement>("#fastDisableOthers").checked,
         subfolder,
         subfolderOnce: $<HTMLInputElement>("#subfolderOnceCheck").checked,
+        autoApplyDomain: $<HTMLInputElement>("#domainSettingsCheck").checked,
       }
     });
   }
@@ -889,28 +891,44 @@ addEventListener("DOMContentLoaded", function dom() {
     try {
       await LOADED;
       switch (msg.msg) {
-      case "items": {
-        const {type = "links", links = [], media = []} = msg.data;
-        const treeConfig = JSON.parse(
-          await Prefs.get("tree-config-select", "{}"));
-        requestAnimationFrame(() => {
-          Table = new SelectionTable(treeConfig, type, links, media);
-        });
-        return;
-      }
+        case "items": {
+          const {
+            type = "links",
+            links = [],
+            media = [],
+            domain = false,
+            settings = null
+          } = msg.data;
+          $("#domainSettingsLabel").style.display = domain ? "" : "none";
+          $<HTMLInputElement>("#domainSettingsCheck").checked =
+            !!(settings && settings.autoApply);
+          if (settings) {
+            Mask.value = settings.mask;
+            FastFilter.value = settings.fast;
+            Subfolder.value = settings.subfolder;
+            $<HTMLInputElement>("#fastDisableOthers").checked =
+              settings.onlyFast;
+          }
+          const treeConfig = JSON.parse(
+            await Prefs.get("tree-config-select", "{}"));
+          requestAnimationFrame(() => {
+            Table = new SelectionTable(treeConfig, type, links, media);
+          });
+          return;
+        }
 
-      case "filters":
-        setFilters(msg.data);
-        return;
+        case "filters":
+          setFilters(msg.data);
+          return;
 
-      case "item-delta":
-        requestAnimationFrame(() => {
-          Table.applyDeltas(msg.data);
-        });
-        return;
+        case "item-delta":
+          requestAnimationFrame(() => {
+            Table.applyDeltas(msg.data);
+          });
+          return;
 
-      default:
-        throw Error("Unhandled message");
+        default:
+          throw Error("Unhandled message");
       }
     }
     catch (ex) {

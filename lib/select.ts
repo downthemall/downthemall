@@ -11,6 +11,9 @@ import { filters, FAST, Filter } from "./filters";
 import { WindowStateTracker } from "./windowstatetracker";
 import { windows, CHROME } from "./browser";
 // eslint-disable-next-line no-unused-vars
+import { DomainSettings, getDomain, loadDomainSettings, saveDomainSettings }
+  from "./domainsettings";
+// eslint-disable-next-line no-unused-vars
 import { BaseItem } from "./item";
 
 interface BaseMatchedItem extends BaseItem {
@@ -88,7 +91,11 @@ function filtersToDescs(filters: Filter[]) {
   return filters.map(f => f.descriptor);
 }
 
-export async function select(links: BaseItem[], media: BaseItem[]) {
+export async function select(
+    links: BaseItem[], media: BaseItem[], sourceUrl?: string) {
+  const domain = getDomain(sourceUrl);
+  const savedSettings = domain ? await loadDomainSettings(domain) : null;
+  const applySettings = savedSettings && savedSettings.autoApply;
   const fm = await filters();
   const tracker = new WindowStateTracker("select", {
     minWidth: 700,
@@ -116,14 +123,35 @@ export async function select(links: BaseItem[], media: BaseItem[]) {
     }
     tracker.track(window.id, port);
 
-    const overrides = new Map();
-    let fast: Filter | null = null;
-    let onlyFast: false;
-    try {
-      fast = await fm.getFastFilter();
+    const overrides = new Map<string, boolean>();
+    if (applySettings && savedSettings) {
+      const activeFilters = new Set(savedSettings.activeFilters);
+      for (const filter of fm.all) {
+        if (typeof filter.id === "string") {
+          overrides.set(filter.id, activeFilters.has(filter.id));
+        }
+      }
     }
-    catch (ex) {
-      // ignored
+    let fast: Filter | null = null;
+    let onlyFast = false;
+    if (applySettings && savedSettings) {
+      try {
+        fast = savedSettings.fast ?
+          fm.getFastFilterFor(savedSettings.fast) : null;
+      }
+      catch (ex) {
+        console.error("Failed to load saved domain fast filter", ex);
+        fast = null;
+      }
+      ({ onlyFast } = savedSettings);
+    }
+    else {
+      try {
+        fast = await fm.getFastFilter();
+      }
+      catch (ex) {
+        // ignored
+      }
     }
 
     const sendFilters = function(delta = false) {
@@ -202,21 +230,46 @@ export async function select(links: BaseItem[], media: BaseItem[]) {
     try {
       fm.on("changed", () => sendFilters(true));
       sendFilters(false);
-      const type = await Prefs.get("last-type", "links");
-      port.post("items", {type, links, media});
-      const {items, options} = await done;
+      let type = await Prefs.get("last-type", "links");
+      if (applySettings && savedSettings) {
+        ({ type } = savedSettings);
+      }
+      port.post("items", {
+        type,
+        links,
+        media,
+        domain: !!domain,
+        settings: applySettings ? savedSettings : null,
+      });
+      const { items, options } = await done;
+      const activeFilters = computeActiveFilters(fm.all, overrides).
+        map(filter => filter.id).filter(id => typeof id === "string") as string[];
+      if (domain) {
+        const settings: DomainSettings = {
+          type: options.type || "links",
+          activeFilters,
+          fast: options.fast || "",
+          onlyFast: options.onlyFast === true,
+          mask: options.mask || "",
+          subfolder: options.subfolder || "",
+          autoApply: options.autoApplyDomain === true,
+        };
+        await saveDomainSettings(domain, settings);
+      }
       const selectedIndexes = new Set<number>(items);
       const selectedList = (options.type === "links" ? links : media);
       const selectedItems = selectedList.filter(
         (item: BaseItem, idx: number) => selectedIndexes.has(idx));
-      for (const [filter, override] of overrides) {
-        const f = fm.get(filter);
-        if (f) {
-          f.active = override;
+      if (!applySettings) {
+        for (const [filter, override] of overrides) {
+          const f = fm.get(filter);
+          if (f) {
+            f.active = override;
+          }
         }
+        await fm.save();
       }
-      await fm.save();
-      return {items: selectedItems, options};
+      return { items: selectedItems, options };
     }
     finally {
       fm.off("changed", sendFilters);

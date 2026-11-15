@@ -535,12 +535,33 @@ class Filters extends EventEmitter {
     this.regenerate();
   }
 
-  async filterItemsByType(items: BaseItem[], type: number) {
+  async filterItemsByType(
+      items: BaseItem[], type: number,
+      overrides?: {activeFilters: string[]; fast: string; onlyFast: boolean}) {
     const matcher = this.typeMatchers.get(type);
-    const fast = await this.getFastFilter();
-    return items.filter(function(item) {
+    let fast: Filter | null;
+    if (overrides) {
+      fast = overrides.fast ? this.getFastFilterFor(overrides.fast) : null;
+    }
+    else {
+      fast = await this.getFastFilter();
+    }
+    const activeFilters = overrides ? new Set(overrides.activeFilters) : null;
+    const {filters} = this;
+    return items.filter(item => {
       if (fast && fast.matchItem(item)) {
         return true;
+      }
+      if (overrides) {
+        if (overrides.onlyFast) {
+          return false;
+        }
+        return filters.some((filter: Filter) => {
+          return typeof filter.id === "string" &&
+            !!activeFilters && activeFilters.has(filter.id) &&
+            !!(filter.type & type) &&
+            filter.matchItem(item);
+        });
       }
       return matcher && matcher.matchItem(item);
     });

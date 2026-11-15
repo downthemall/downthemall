@@ -1328,5 +1328,9 @@
   "useonlyonce": {
     "description": "Label for Use-Once checkboxes",
     "message": "Use Once"
+  },
+  "use_domain_settings": {
+    "description": "Checkbox label",
+    "message": "Automatically use these settings for future downloads from this domain"
   }
 }

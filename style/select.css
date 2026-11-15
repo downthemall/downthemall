@@ -235,6 +235,10 @@ body > * {
   justify-self: flex-start;
 }
 
+#domainSettingsLabel {
+  grid-column: 1 / -1;
+}
+
 #btnDownload {
   font-weight: bold;
 }

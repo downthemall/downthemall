@@ -13,6 +13,7 @@ import { Notification } from "./notifications";
 import { MASK, FASTFILTER, SUBFOLDER } from "./recentlist";
 import { openManager } from "./manager/man";
 import { _ } from "./i18n";
+import { getDomain, loadDomainSettings } from "./domainsettings";
 
 const MAX_BATCH = 10000;
 
@@ -92,22 +93,41 @@ export const API = new class APIImpl {
     return true;
   }
 
-  async turbo(links: BaseItem[], media: BaseItem[]) {
+  async turbo(links: BaseItem[], media: BaseItem[], sourceUrl?: string) {
     if (!this.sanity(links, media)) {
       return false;
     }
-    const type = await Prefs.get("last-type", "links");
-    const items = await (async () => {
-      if (type === "links") {
-        return await API.filter(links, TYPE_LINK);
-      }
-      return await API.filter(media, TYPE_MEDIA);
-    })();
+
+    const domain = getDomain(sourceUrl);
+    const savedSettings = domain ? await loadDomainSettings(domain) : null;
+    const domainSettings = savedSettings && savedSettings.autoApply ?
+      savedSettings : null;
+
+    const type = domainSettings ?
+      domainSettings.type : await Prefs.get("last-type", "links");
+    const selectedType = type === "links" ? TYPE_LINK : TYPE_MEDIA;
+    const sourceItems = type === "links" ? links : media;
+    const fm = await filters();
+    const items = await fm.filterItemsByType(
+      sourceItems, selectedType, domainSettings ? {
+        activeFilters: domainSettings.activeFilters,
+        fast: domainSettings.fast,
+        onlyFast: domainSettings.onlyFast,
+      } : undefined);
     const selected = makeUniqueItems([items]);
     if (!selected.length) {
-      return await this.regular(links, media);
+      return await this.regular(links, media, sourceUrl);
     }
-    return await this.queue(selected, {paused: await Prefs.get("add-paused")});
+
+    const options: QueueOptions = {
+      paused: await Prefs.get("add-paused"),
+    };
+    if (domainSettings) {
+      options.mask = domainSettings.mask;
+      options.subfolder = domainSettings.subfolder;
+    }
+
+    return await this.queue(selected, options);
   }
 
   async regularInternal(selected: BaseItem[], options: any) {
@@ -129,11 +149,11 @@ export const API = new class APIImpl {
     return await this.queue(selected, options);
   }
 
-  async regular(links: BaseItem[], media: BaseItem[]) {
+  async regular(links: BaseItem[], media: BaseItem[], sourceUrl?: string) {
     if (!this.sanity(links, media)) {
       return false;
     }
-    const {items, options} = await select(links, media);
+    const {items, options} = await select(links, media, sourceUrl);
     return this.regularInternal(items, options);
   }
 
